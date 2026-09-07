@@ -17,8 +17,6 @@ import com.anrstudio.template.ads.RemoteConfigUtils
 import com.anrstudio.template.ui.component.language.LanguageActivity
 import com.anrstudio.template.ui.component.onboarding.OnBoardingActivity
 import com.anrstudio.template.ui.component.splash.SplashActivity
-import com.anrstudio.template.ui.component.uninstall.ConfirmUninstallActivity
-import com.anrstudio.template.ui.component.uninstall.SurveyActivity
 import com.google.android.gms.ads.MobileAds
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
@@ -77,9 +75,6 @@ class GlobalApp : AdsMultiDexApplication() {
         AppOpenManager.getInstance().disableAppResumeWithActivity(SplashActivity::class.java)
         AppOpenManager.getInstance().disableAppResumeWithActivity(LanguageActivity::class.java)
         AppOpenManager.getInstance().disableAppResumeWithActivity(OnBoardingActivity::class.java)
-        AppOpenManager.getInstance()
-            .disableAppResumeWithActivity(ConfirmUninstallActivity::class.java)
-        AppOpenManager.getInstance().disableAppResumeWithActivity(SurveyActivity::class.java)
         ANRAdSdk.getInstance().prepareLoadingAdsDialogLayout = R.layout.layout_prepare_ads
         ANRAdSdk.getInstance().resumeLoadingDialogLayout = R.layout.layout_welcome_back
     }

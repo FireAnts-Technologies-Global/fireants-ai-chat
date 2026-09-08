@@ -11,10 +11,10 @@ import android.widget.LinearLayout
 import androidx.core.view.updateLayoutParams
 import com.anrstudio.ads.admob.Admob
 import com.anrstudio.ads.ads.wrapper.ApNativeAd
-import com.facebook.shimmer.ShimmerFrameLayout
-import com.anrstudio.template.R
 import com.anrstudio.template.ui.bases.ext.dpToPx
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.android.gms.ads.nativead.NativeAdView
+import com.pegas.aura.aigirlfriend.soul.R
 
 fun populateNativeAdView(
     activity: Activity,

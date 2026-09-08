@@ -8,16 +8,15 @@ import android.os.Handler
 import android.util.Log
 import android.widget.Toast
 import com.anrstudio.ads.admob.AppOpenManager
-import com.anrstudio.template.BuildConfig
-import com.anrstudio.template.R
 import com.anrstudio.template.app.AppConstants
 import com.anrstudio.template.app.ResumeAdsEntryRule
-import com.anrstudio.template.databinding.ActivitySettingBinding
 import com.anrstudio.template.ui.bases.BaseActivity
 import com.anrstudio.template.ui.bases.ext.click
-
 import com.anrstudio.template.ui.bases.ext.showRateDialog
 import com.anrstudio.template.utils.Routes
+import com.pegas.aura.aigirlfriend.soul.BuildConfig
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.databinding.ActivitySettingBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

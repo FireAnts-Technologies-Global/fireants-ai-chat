@@ -4,8 +4,8 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.Intent
 import android.provider.Settings
-import com.anrstudio.template.databinding.DialogNoInternetBinding
 import com.anrstudio.template.ui.bases.ext.click
+import com.pegas.aura.aigirlfriend.soul.databinding.DialogNoInternetBinding
 
 class NoInternetDialog(private val activity: Activity) {
     private var dialog: Dialog? = null

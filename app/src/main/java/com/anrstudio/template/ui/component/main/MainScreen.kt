@@ -1,0 +1,136 @@
+package com.anrstudio.template.ui.component.main
+
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import com.anrstudio.template.ads.AdRemoteConfig
+import com.anrstudio.template.ads.AdsManager
+import com.anrstudio.template.ads.banner_all
+import com.anrstudio.template.ui.bases.compose.component.BannerAdView
+import com.anrstudio.template.ui.bases.compose.component.MainBottomBar
+import com.anrstudio.template.ui.bases.compose.theme.appVerticalGradientBackground
+import com.anrstudio.template.ui.bases.ext.findActivity
+import com.anrstudio.template.ui.bases.navigation.AppRoutes
+import com.anrstudio.template.ui.bases.navigation.MainNavHost
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.CommonTopBar
+
+@Composable
+fun MainScreen(
+    rootNavController: NavHostController,
+    viewModel: MainViewModel = hiltViewModel()
+) {
+    val bottomNavController = rememberNavController()
+    val context = LocalContext.current
+    val navBackStackEntry by bottomNavController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
+    val showBottomBar = currentRoute in mainTabs.map { it.route }
+
+    MaterialTheme {
+        Scaffold(
+            containerColor = Color.Transparent,
+            contentWindowInsets = WindowInsets(0, 0, 0, 0),
+            topBar = {
+                if (showBottomBar) {
+                    MainTopBar(
+                        rootNavController = rootNavController,
+                        viewModel = viewModel
+                    )
+                }
+            },
+            bottomBar = {
+                Column {
+                    MainBottomBar(
+                        tabs = mainTabs,
+                        currentRoute = currentRoute,
+                        onTabSelected = { tab ->
+                            if (tab.route == AppRoutes.CREATE_CHARACTER) {
+                                val activity = context.findActivity()
+                                if (activity != null) {
+                                    AdsManager.loadInterAndShowInterHome(activity) {
+                                        rootNavController.navigate(tab.route)
+                                    }
+                                } else {
+                                    rootNavController.navigate(tab.route)
+                                }
+                            } else {
+                                bottomNavController.navigate(tab.route) {
+                                    popUpTo(bottomNavController.graph.findStartDestination().id) {
+                                        saveState = true
+                                    }
+                                    launchSingleTop = true
+                                    restoreState = true
+                                }
+                            }
+                        }
+                    )
+                    BannerAdView(
+                        adUnitId = AdRemoteConfig.banner_all.id,
+                        isEnabled = AdRemoteConfig.banner_all.isEnable,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+            }
+        ) { paddingValues ->
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .appVerticalGradientBackground()
+                    .padding(paddingValues)
+            ) {
+                MainNavHost(
+                    navController = bottomNavController,
+                    rootNavController = rootNavController
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun MainTopBar(
+    rootNavController: NavHostController,
+    viewModel: MainViewModel
+) {
+    val coinBalance = viewModel.coinBalance.collectAsStateWithLifecycle().value
+
+    CommonTopBar(
+        title = "AURA",
+        coinCount = coinBalance,
+        onAddCoinClick = {
+            rootNavController.navigate(AppRoutes.MAIN_STORE)
+        },
+        onTrophyClick = {
+            rootNavController.navigate(AppRoutes.SUBSCRIPTION)
+        }
+    )
+}
+
+@Preview(
+    name = "Main Screen",
+    showBackground = true,
+    showSystemUi = true
+)
+@Composable
+private fun MainScreenPreview() {
+    val navController = rememberNavController()
+    MainScreen(
+        rootNavController = navController,
+    )
+}

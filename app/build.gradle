@@ -6,6 +6,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
+    id 'org.jetbrains.kotlin.plugin.compose'
 }
 
 apply from: 'variants-signing.gradle'
@@ -13,8 +14,27 @@ apply from: 'variants-signing.gradle'
 android {
     compileSdk compile_sdk_version
 
+    def customStoreFile = project.findProperty("AI_GIRL_STORE_FILE")
+    def customStorePassword = project.findProperty("AI_GIRL_STORE_PASSWORD")
+    def customKeyAlias = project.findProperty("AI_GIRL_KEY_ALIAS")
+    def customKeyPassword = project.findProperty("AI_GIRL_KEY_PASSWORD")
+    def hasCustomSigning = [customStoreFile, customStorePassword, customKeyAlias, customKeyPassword].every {
+        it != null && it.toString().trim()
+    }
+
+    signingConfigs {
+        if (hasCustomSigning) {
+            fireants {
+                storeFile rootProject.file(customStoreFile.toString())
+                storePassword customStorePassword.toString()
+                keyAlias customKeyAlias.toString()
+                keyPassword customKeyPassword.toString()
+            }
+        }
+    }
+
     defaultConfig {
-        applicationId "com.anrstudio.template"
+        applicationId "com.pegas.aura.aigirlfriend.soul"
         minSdkVersion min_sdk_version
         targetSdk target_sdk_version
         versionCode 100
@@ -26,6 +46,9 @@ android {
         buildConfigField "String", "ANRSTUDIO_ADS_VERSION", "\"$anrstudio_ads_sdk\""
         buildConfigField "String", "PLAY_SERVICES_ADS_VERSION", "\"$play_services_ads_version\""
         buildConfigField "String", "GDPR_MODULE_VERSION", "\"$anrstudio_consent\""
+        buildConfigField "String", "BASE_URL", "\"https://api-chat.fireants.vn/api/v1/\""
+        def revenueCatPublicApiKey = project.findProperty("REVENUECAT_ANDROID_PUBLIC_API_KEY")?.toString()?.trim() ?: ""
+        buildConfigField "String", "REVENUECAT_PUBLIC_API_KEY", "\"${revenueCatPublicApiKey}\""
     }
 
     bundle {
@@ -87,8 +110,9 @@ android {
         dataBinding = true
         viewBinding = true
         buildConfig = true
+        compose = true
     }
-    namespace 'com.anrstudio.template'
+    namespace 'com.pegas.aura.aigirlfriend.soul'
 }
 
 dependencies {
@@ -162,6 +186,7 @@ dependencies {
 
     // Billing
     implementation "com.android.billingclient:billing:$billing_version"
+    implementation "com.revenuecat.purchases:purchases:$revenuecat_version"
 
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidx_lifecycle_version"
@@ -183,4 +208,19 @@ dependencies {
 
     // ShapeView
     implementation 'io.github.impeterwayne:shape-view:1.0.0'
+
+
+    implementation platform("androidx.compose:compose-bom:$compose_bom_version")
+    implementation "androidx.compose.ui:ui"
+    implementation "androidx.compose.ui:ui-tooling-preview"
+    implementation "androidx.compose.foundation:foundation"
+    implementation "androidx.compose.material3:material3"
+    implementation "androidx.compose.material:material-icons-extended:$material_icons_extended_version"
+    implementation "androidx.activity:activity-compose:$activity_compose_version"
+    implementation "androidx.navigation:navigation-compose:$nav_version"
+    implementation "androidx.hilt:hilt-navigation-compose:$hilt_navigation_compose_version"
+    implementation "io.coil-kt:coil-compose:$coil_compose_version"
+    implementation("com.airbnb.android:lottie-compose:6.7.1")
+    debugImplementation "androidx.compose.ui:ui-tooling"
+    implementation("dev.chrisbanes.haze:haze:1.7.2")
 }

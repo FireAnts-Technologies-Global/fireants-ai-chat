@@ -18,12 +18,12 @@ import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.anrstudio.template.R
 import com.anrstudio.template.app.AppConstants
 import com.anrstudio.template.data.pref.AppSharedPref
 import com.anrstudio.template.data.pref.AppSharedPreferencesApp
 import com.anrstudio.template.utils.ANRTrackingHelper
 import com.anrstudio.template.utils.Routes
+import com.pegas.aura.aigirlfriend.soul.R
 import java.util.Locale
 import javax.inject.Inject
 

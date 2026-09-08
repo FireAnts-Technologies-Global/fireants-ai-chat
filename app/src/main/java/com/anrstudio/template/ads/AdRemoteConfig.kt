@@ -1,7 +1,7 @@
 package com.anrstudio.template.ads
 
 import android.content.Context
-import com.anrstudio.template.BuildConfig
+import com.pegas.aura.aigirlfriend.soul.BuildConfig
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import timber.log.Timber
@@ -145,63 +145,45 @@ data class AdRemoteConfig(
     val banner_splash: AdUnitConfig
         get() = getAdUnit("banner_splash")
 
-    val open_resume: AdUnitConfig
-        get() = getAdUnit("open_resume")
+    val native_language: AdUnitConfig
+        get() = getAdUnit("native_language")
 
-    val native_language_1: AdUnitConfig
-        get() = getAdUnit("native_language_1")
+    val native_language_click: AdUnitConfig
+        get() = getAdUnit("native_language_click")
 
-    val native_language_1_click: AdUnitConfig
-        get() = getAdUnit("native_language_1_click")
+    val native_onboarding_fullscreen12: AdUnitConfig
+        get() = getAdUnit("native_onboarding_fullscreen12")
 
-    val native_language_2: AdUnitConfig
-        get() = getAdUnit("native_language_2")
+    val native_onboarding_fullscreen23: AdUnitConfig
+        get() = getAdUnit("native_onboarding_fullscreen23")
 
-    val native_language_2_click: AdUnitConfig
-        get() = getAdUnit("native_language_2_click")
+    val inter_home: AdUnitConfig
+        get() = getAdUnit("inter_home")
 
-    val native_onboarding_1_1: AdUnitConfig
-        get() = getAdUnit("native_onboarding_1_1")
+    val native_onboarding_page4: AdUnitConfig
+        get() = getAdUnit("native_onboarding_page4")
 
-    val native_onboarding_2_1: AdUnitConfig
-        get() = getAdUnit("native_onboarding_2_1")
+    val banner_all: AdUnitConfig
+        get() = getAdUnit("banner_all")
 
-    val native_onboarding_1_4: AdUnitConfig
-        get() = getAdUnit("native_onboarding_1_4")
+    val native_full_all: AdUnitConfig
+        get() = getAdUnit("native_full_all")
 
-    val native_onboarding_2_4: AdUnitConfig
-        get() = getAdUnit("native_onboarding_2_4")
+    val native_welcome_back: AdUnitConfig
+        get() = getAdUnit("native_welcome_back")
 
-    val native_onboarding_fullscreen_1_1: AdUnitConfig
-        get() = getAdUnit("native_onboarding_fullscreen_1_1")
+    val inter_welcome_back: AdUnitConfig
+        get() = getAdUnit("inter_welcome_back")
 
-    val native_onboarding_fullscreen_2_1: AdUnitConfig
-        get() = getAdUnit("native_onboarding_fullscreen_2_1")
+    val inter_back: AdUnitConfig
+        get() = getAdUnit("inter_back")
 
-    val native_onboarding_fullscreen_1_3: AdUnitConfig
-        get() = getAdUnit("native_onboarding_fullscreen_1_3")
+    val banner_chat: AdUnitConfig
+        get() = getAdUnit("banner_chat")
 
-    val native_onboarding_fullscreen_2_3: AdUnitConfig
-        get() = getAdUnit("native_onboarding_fullscreen_2_3")
+    val reward_checkin: AdUnitConfig
+        get() = getAdUnit("reward_checkin")
 
-    val inter_onboarding: AdUnitConfig
-        get() = getAdUnit("inter_onboarding")
-
-    val banner_home: AdUnitConfig
-        get() = getAdUnit("banner_home")
-
-    val native_home: AdUnitConfig
-        get() = getAdUnit("native_home")
-
-    val native_survey: AdUnitConfig
-        get() = getAdUnit("native_survey")
-
-    val native_confirm_uninstall: AdUnitConfig
-        get() = getAdUnit("native_confirm_uninstall")
-
-    val native_welcome: AdUnitConfig
-        get() = getAdUnit("native_welcome")
-
-    val inter_welcome: AdUnitConfig
-        get() = getAdUnit("inter_welcome")
+    val reward_addcoin: AdUnitConfig
+        get() = getAdUnit("reward_addcoin")
 }

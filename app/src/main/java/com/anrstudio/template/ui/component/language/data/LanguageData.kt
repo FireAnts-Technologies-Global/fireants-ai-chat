@@ -2,7 +2,7 @@ package com.anrstudio.template.ui.component.language.data
 
 import android.content.res.Resources
 import android.os.Build
-import com.anrstudio.template.R
+import com.pegas.aura.aigirlfriend.soul.R
 
 object LanguageData {
 

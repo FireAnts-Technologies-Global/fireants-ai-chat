@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':signature-lib'
 rootProject.name = "fireants-ai-chat"

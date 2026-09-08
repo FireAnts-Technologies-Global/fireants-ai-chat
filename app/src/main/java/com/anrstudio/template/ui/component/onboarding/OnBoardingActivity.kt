@@ -7,15 +7,11 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.anrstudio.ads.ads.ANRAdSdk
 import com.anrstudio.ads.billing.AppPurchase
-import com.anrstudio.template.R
 import com.anrstudio.template.ads.AdRemoteConfig
 import com.anrstudio.template.ads.AdsManager
 import com.anrstudio.template.ads.RemoteConfigUtils
-import com.anrstudio.template.ads.native_onboarding_fullscreen_1_1
-import com.anrstudio.template.ads.native_onboarding_fullscreen_1_3
-import com.anrstudio.template.ads.native_onboarding_fullscreen_2_1
-import com.anrstudio.template.ads.native_onboarding_fullscreen_2_3
-import com.anrstudio.template.databinding.ActivityOnboardingBinding
+import com.anrstudio.template.ads.native_onboarding_fullscreen12
+import com.anrstudio.template.ads.native_onboarding_fullscreen23
 import com.anrstudio.template.ui.bases.BaseActivity
 import com.anrstudio.template.ui.bases.NavigationBarConfig
 import com.anrstudio.template.ui.bases.ext.isNetwork
@@ -24,6 +20,8 @@ import com.anrstudio.template.ui.component.onboarding.model.NativeFullPlacement
 import com.anrstudio.template.ui.component.onboarding.model.OnboardingItem
 import com.anrstudio.template.ui.component.onboarding.viewmodel.OnboardingViewModel
 import com.anrstudio.template.utils.Routes
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.databinding.ActivityOnboardingBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.abs
 
@@ -55,7 +53,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
             }
 
             if (appSharedPref.firstOnBoarding)
-                AdRemoteConfig.native_onboarding_fullscreen_1_1 else AdRemoteConfig.native_onboarding_fullscreen_2_1
+                AdRemoteConfig.native_onboarding_fullscreen12 else AdRemoteConfig.native_onboarding_fullscreen12
             if (ANRAdSdk.getInstance()
                     .shouldDisplayNativeOnboardingFull1
             ) {
@@ -67,7 +65,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
             }
 
             if (appSharedPref.firstOnBoarding)
-                AdRemoteConfig.native_onboarding_fullscreen_1_3 else AdRemoteConfig.native_onboarding_fullscreen_2_3
+                AdRemoteConfig.native_onboarding_fullscreen23 else AdRemoteConfig.native_onboarding_fullscreen23
             if (ANRAdSdk.getInstance()
                     .shouldDisplayNativeOnboardingFull2
             ) {
@@ -140,7 +138,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 title = R.string.onboarding_title_1,
                 description = R.string.onboarding_des_1,
                 textButton = R.string.next,
-                imageResId = R.drawable.ic_vietnamese,
+                imageResId = R.drawable.img_ob_1,
                 positionIndicator = 0,
                 isHasNativeOnPage1 = true
             )
@@ -153,7 +151,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 title = R.string.onboarding_title_2,
                 description = R.string.onboarding_des_2,
                 textButton = R.string.next,
-                imageResId = R.drawable.ic_vietnamese,
+                imageResId = R.drawable.img_ob_2,
                 positionIndicator = 1
             )
         )
@@ -165,7 +163,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 title = R.string.onboarding_title_3,
                 description = R.string.onboarding_des_3,
                 textButton = R.string.next,
-                imageResId = R.drawable.ic_vietnamese,
+                imageResId = R.drawable.img_ob_3,
                 positionIndicator = 2,
 
                 )
@@ -176,7 +174,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 title = R.string.onboarding_title_4,
                 description = R.string.onboarding_des_4,
                 textButton = R.string.next,
-                imageResId = R.drawable.ic_vietnamese,
+                imageResId = R.drawable.img_ob_4,
                 positionIndicator = 3,
                 isHasNativeOnPage4 = true
             )
@@ -187,12 +185,12 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
     private fun addNativeFullPageIfEligible(placement: NativeFullPlacement) {
         val config = when (placement) {
             NativeFullPlacement.AFTER_PAGE_1 ->
-                if (appSharedPref.firstOnBoarding) AdRemoteConfig.native_onboarding_fullscreen_1_1
-                else AdRemoteConfig.native_onboarding_fullscreen_2_1
+                if (appSharedPref.firstOnBoarding) AdRemoteConfig.native_onboarding_fullscreen12
+                else AdRemoteConfig.native_onboarding_fullscreen12
 
             NativeFullPlacement.AFTER_PAGE_2 ->
-                if (appSharedPref.firstOnBoarding) AdRemoteConfig.native_onboarding_fullscreen_1_3
-                else AdRemoteConfig.native_onboarding_fullscreen_2_3
+                if (appSharedPref.firstOnBoarding) AdRemoteConfig.native_onboarding_fullscreen23
+                else AdRemoteConfig.native_onboarding_fullscreen23
         }
         val shouldDisplay = when (placement) {
             NativeFullPlacement.AFTER_PAGE_1 -> ANRAdSdk.getInstance()

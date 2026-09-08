@@ -5,13 +5,13 @@ import android.os.Handler
 import android.os.Looper
 import com.anrstudio.consent.ANRConsentCallback
 import com.anrstudio.consent.ANRConsentManager
-import com.anrstudio.template.BuildConfig
 import com.anrstudio.template.app.AppConstants
 import com.anrstudio.template.data.pref.AppSharedPref
 import com.anrstudio.template.utils.ANRTrackingHelper
 import com.anrstudio.template.utils.ANRTrackingHelper.logEvent
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.FormError
+import com.pegas.aura.aigirlfriend.soul.BuildConfig
 
 class ConsentHandler(
     private val activity: Activity,

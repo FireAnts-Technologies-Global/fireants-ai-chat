@@ -58,4 +58,278 @@
     <string name="dont_miss">Before you uninstall, consider keeping the app for the tools and settings you already set up.</string>
     <string name="over92">Many users keep the app because it remains useful over time.</string>
     <string name="start">Start</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_network_unavailable">Please check your internet connection and try again.</string>
+    <string name="error_auth_session_expired">Your session has expired. Please try again.</string>
+    <string name="error_auth_unavailable">We could not complete authentication right now. Please try again.</string>
+    <string name="create_error_title">Unable to create character</string>
+    <string name="error_insufficient_coins">Insufficient Coins</string>
+    <string name="store_product_not_found">Product not found</string>
+    <string name="store_purchase_processing">Purchase successful. Coins are still processing, please refresh in a moment.</string>
+    <string name="store_vip_activated">VIP Membership activated successfully!</string>
+    <string name="store_vip_processing">Purchase successful. VIP status is still processing, please refresh in a moment.</string>
+    <string name="store_duration_month">per month</string>
+    <string name="store_duration_year">per year</string>
+    <string name="store_vip_desc_month">Monthly VIP access with daily coin rewards</string>
+    <string name="store_vip_desc_year">Yearly VIP access with daily rewards and premium features</string>
+    <string name="store_vip_benefit_1">Bonus 500 Coins for each daily login</string>
+    <string name="store_vip_benefit_2">Bonus 750 Coins for each daily login</string>
+    <string name="store_vip_benefit_3">Enjoy all your VIP membership benefits</string>
+    <string name="store_vip_footer_month">Auto-renews monthly. Cancel anytime.</string>
+    <string name="store_vip_footer_year">Auto-renews annually. Cancel anytime in Google Play.</string>
+    <string name="store_purchase_cancelled">Purchase cancelled</string>
+    <string name="store_restoring_purchases">Restoring purchases...</string>
+    <string name="store_restore_success">Purchases restored successfully!</string>
+    <string name="store_coins_credited">Coins credited successfully! Balance: %1$d</string>
+    <string name="no_credits_left">No credits left</string>
+    <string name="balance_format">Balance: %1$d</string>
+    <string name="upgrade_pro">Upgrade Pro</string>
+    <string name="coins">Coins</string>
+    <string name="buy_coins">Buy coins</string>
+    <string name="main_tab_discover">Discover</string>
+    <string name="main_tab_reward">Reward</string>
+    <string name="main_tab_add">Add</string>
+    <string name="main_tab_chats">Chats</string>
+    <string name="main_tab_mission">Mission</string>
+    <string name="rate_now">Rate now</string>
+    <string name="not_now">Not now</string>
+    <string name="rate_us_on_the_google_play">Rate us on the Google Play!</string>
+    <string name="enjoying_ai_chat">Enjoying AI Chat?</string>
+    <string name="feedback_reason_hint">Reason (e.g. crash, slow, bad UI...)</string>
+    <string name="feedback_description_hint">Details or suggestions...</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="character_detail_hot">HOT</string>
+    <string name="home_create_assistant_title">Find your own assistant</string>
+    <string name="home_create_assistant_subtitle">A sanctuary of soulful AI companions</string>
+    <string name="home_create_assistant_action">Create your AI</string>
+    <string name="home_empty_characters">No characters available right now.</string>
+    <string name="home_error_title">Unable to load content</string>
+    <string name="chat_list_my_ai">My AI</string>
+    <string name="chat_delete_confirm">Delete</string>
+    <string name="chat_delete_success">Chat deleted successfully</string>
+    <string name="chat_error_title">Unable to load chat</string>
+    <string name="you_don_have_any_AI_assistant_yet">You don\\\'t have any AI assistant yet</string>
+    <string name="explore_custom_assistants_or_create_a_unique_soulmate_specifically_tailored_to_you_">Explore custom assistants or create a unique soulmate specifically tailored to you.</string>
+    <string name="create_now">Create now</string>
+    <string name="chat_delete_title">Delete chat?</string>
+    <string name="chat_delete_message">Are you sure you want to delete this chat? This action cannot be undone.</string>
+    <string name="image_generation_failed">Image generation failed</string>
+    <string name="image_task_was_not_created">Image task was not created</string>
+    <string name="create_select_personality_hobby">Create select personality hobby</string>
+    <string name="create_enter_name">Create enter name</string>
+    <string name="create_enter_description">Create enter description</string>
+    <string name="create_screen_title">Create Character</string>
+    <string name="create_generate_cost">Generate %1$d</string>
+    <string name="create_step_label_format">STEP %1$d OF %2$d: %3$s</string>
+    <string name="create_step_general_setup">GENERAL SETUP</string>
+    <string name="create_step_appearance_details">APPEARANCE DETAILS</string>
+    <string name="create_step_hair_customization">HAIR CUSTOMIZATION</string>
+    <string name="create_step_personality_identity">PERSONALITY &amp; IDENTITY</string>
+    <string name="create_companion_gender">Companion Gender</string>
+    <string name="create_gender_girls">Girls</string>
+    <string name="create_gender_guys">Guys</string>
+    <string name="create_gender_trans">Trans</string>
+    <string name="create_visual_style">Visual Style</string>
+    <string name="create_style_realistic">Realistic</string>
+    <string name="create_style_anime">Anime</string>
+    <string name="create_describe_to_create">Describe to create</string>
+    <string name="create_prompt_hint">E.g., A sweet companion who loves midnight star-gazing...</string>
+    <string name="create_companion_ethnicity">Companion Ethnicity</string>
+    <string name="create_ethnicity_white">White</string>
+    <string name="create_ethnicity_asian">Asian</string>
+    <string name="create_ethnicity_black">Black</string>
+    <string name="create_ethnicity_latina">Latina</string>
+    <string name="create_age">Age</string>
+    <string name="create_skin_tone">Skin Tone</string>
+    <string name="create_hair_color">Hair Color</string>
+    <string name="create_hair_blonde">Blonde</string>
+    <string name="create_hair_black">Black</string>
+    <string name="create_hair_copper">Copper</string>
+    <string name="create_hair_blue">Blue</string>
+    <string name="create_hair_purple">Purple</string>
+    <string name="create_hair_red">Red</string>
+    <string name="create_companion_name">Companion Name</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Personality &amp; Social background</string>
+    <string name="create_personality">Personality</string>
+    <string name="create_occupation">Occupation</string>
+    <string name="create_hobbies">Hobbies</string>
+    <string name="create_relationships">Relationships</string>
+    <string name="next_step">Next Step</string>
+    <string name="reward_your_progress">Your Progress</string>
+    <string name="reward_check_in_today">Check In Today</string>
+    <string name="reward_checked_in_today">Checked In Today</string>
+    <string name="reward_earn_rewards">Earn Rewards</string>
+    <string name="reward_daily_ads">Daily Reward Ads</string>
+    <string name="reward_daily_ads_desc">+%1$d Coins per ad</string>
+    <string name="reward_watch_ads_format">Watch Ads (%1$d/10)</string>
+    <string name="reward_ads_unavailable">There are currently no ads. Please try again in a few minutes.</string>
+    <string name="reward_vip_unlocked">VIP Member</string>
+    <string name="reward_vip_unlocked_desc">Ad-free experience active</string>
+    <string name="reward_claimed_title">Reward Claimed!</string>
+    <string name="reward_claimed_desc">Your daily check-in reward has been added to your inventory.</string>
+    <string name="reward_claimed_coin_format">+%1$d Coins</string>
+    <string name="reward_processing">Reward is processing. Your balance will update shortly.</string>
+    <string name="reward_day_format">Day %1$d</string>
+    <string name="continue_">Continue</string>
+    <string name="mission_ritual_chronicle">Ritual Chronicle</string>
+    <string name="mission_ritual_chronicle_desc">Review your completed cosmic alignments and accumulated coin payouts.</string>
+    <string name="mission_total_quests">TOTAL QUESTS</string>
+    <string name="mission_completed_format">%1$d Completed</string>
+    <string name="mission_coin_obtained">COINS OBTAINED</string>
+    <string name="mission_tab_mission">Mission</string>
+    <string name="mission_tab_history">History</string>
+    <string name="mission_no_active">No active missions right now.</string>
+    <string name="mission_coins_earned_format">+%1$d Coins</string>
+    <string name="mission_type_daily_login">Daily Login</string>
+    <string name="mission_type_watch_ad">Watch Ad</string>
+    <string name="mission_type_play_game">Play Game</string>
+    <string name="mission_type_online">Online 5 Min</string>
+    <string name="mission_type_share">Share to Friend</string>
+    <string name="mission_type_reward_claim">Reward Claim</string>
+    <string name="mission_type_iap_purchase">Coins Added</string>
+    <string name="mission_history_footer_stardust">Mortal deeds older than 30 days dissolve into stardust</string>
+    <string name="first_day">First Day</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="option_none">None</string>
+    <string name="options_done">Done</string>
+    <string name="reward_error_title">Unable to load rewards</string>
+    <string name="ads_loading_label">Ads loading</string>
+
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Friendly</item>
+        <item>Caring</item>
+        <item>Shy</item>
+        <item>Outgoing</item>
+        <item>Mysterious</item>
+        <item>Intelligent</item>
+        <item>Humorous</item>
+        <item>Affectionate</item>
+        <item>Adventurous</item>
+        <item>Confident</item>
+        <item>Energetic</item>
+        <item>Calm</item>
+        <item>Creative</item>
+        <item>Ambitious</item>
+        <item>Empathetic</item>
+        <item>Loyal</item>
+        <item>Optimistic</item>
+        <item>Pessimistic</item>
+        <item>Sarcastic</item>
+        <item>Stubborn</item>
+        <item>Sensual</item>
+        <item>Playful</item>
+        <item>Dominant</item>
+        <item>Submissive</item>
+        <item>Spiritual</item>
+        <item>Practical</item>
+        <item>Dreamy</item>
+        <item>Rebellious</item>
+        <item>Traditional</item>
+        <item>Protective</item>
+    </string-array>
+
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Designer</item>
+        <item>Consultant</item>
+        <item>Doctor</item>
+        <item>Nurse</item>
+        <item>Engineer</item>
+        <item>Artist</item>
+        <item>Musician</item>
+        <item>Chef</item>
+        <item>Police Officer</item>
+        <item>Entrepreneur</item>
+        <item>Billionaire CEO</item>
+        <item>Model</item>
+        <item>Actor</item>
+        <item>Writer</item>
+        <item>Athlete</item>
+        <item>Scientist</item>
+        <item>Programmer</item>
+        <item>Lawyer</item>
+        <item>Architect</item>
+        <item>Designer</item>
+        <item>Photographer</item>
+        <item>Journalist</item>
+        <item>Pilot</item>
+        <item>Flight Attendant</item>
+        <item>Barista</item>
+        <item>Librarian</item>
+        <item>Freelancer</item>
+        <item>Influencer</item>
+        <item>Unemployed</item>
+        <item>Detective</item>
+    </string-array>
+
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Reading</item>
+        <item>Gaming</item>
+        <item>Traveling</item>
+        <item>Cooking</item>
+        <item>Sports</item>
+        <item>Music</item>
+        <item>Photography</item>
+        <item>Painting</item>
+        <item>Gardening</item>
+        <item>Movies</item>
+        <item>Anime</item>
+        <item>Cosplay</item>
+        <item>Dancing</item>
+        <item>Singing</item>
+        <item>Writing</item>
+        <item>Shopping</item>
+        <item>Fitness</item>
+        <item>Yoga</item>
+        <item>Meditation</item>
+        <item>Hiking</item>
+        <item>Camping</item>
+        <item>Fishing</item>
+        <item>Crafting</item>
+        <item>Fashion</item>
+        <item>Technology</item>
+        <item>Astrology</item>
+        <item>Gardening</item>
+        <item>Volunteering</item>
+        <item>Cars</item>
+        <item>History</item>
+    </string-array>
+
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Friend</item>
+        <item>Best Friend</item>
+        <item>Girlfriend</item>
+        <item>Boyfriend</item>
+        <item>Wife</item>
+        <item>Husband</item>
+        <item>Sister</item>
+        <item>Brother</item>
+        <item>Travel Partner</item>
+        <item>Adventure Partner</item>
+        <item>Mentor</item>
+        <item>Coworker</item>
+        <item>Boss</item>
+        <item>Employee</item>
+        <item>Classmate</item>
+        <item>Guide</item>
+        <item>Learner</item>
+        <item>Stranger</item>
+        <item>Roommate</item>
+        <item>Neighbor</item>
+        <item>Ex-Partner</item>
+        <item>Childhood Friend</item>
+        <item>Secret Admirer</item>
+        <item>Rival</item>
+        <item>Maid</item>
+        <item>Butler</item>
+        <item>Host</item>
+        <item>Companion</item>
+        <item>Soulmate</item>
+        <item>Acquaintance</item>
+    </string-array>
 </resources>

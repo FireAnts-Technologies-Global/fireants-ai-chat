@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.anrstudio.template.databinding.ItemLanguageBinding
 import com.anrstudio.template.ui.component.language.data.LanguageModel
 import com.bumptech.glide.Glide
+import com.pegas.aura.aigirlfriend.soul.databinding.ItemLanguageBinding
 
 class LanguageAdapter(
     private val context: Context,

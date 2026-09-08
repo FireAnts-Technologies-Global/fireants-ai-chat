@@ -6,11 +6,11 @@ import android.os.Looper
 import android.widget.FrameLayout
 import androidx.databinding.ViewDataBinding
 import com.anrstudio.ads.billing.AppPurchase
-import com.anrstudio.template.R
 import com.anrstudio.template.ads.AdUnitConfig
 import com.anrstudio.template.ads.AdsManager
 import com.anrstudio.template.ui.bases.ext.goneView
 import com.anrstudio.template.ui.bases.ext.visibleView
+import com.pegas.aura.aigirlfriend.soul.R
 
 data class BannerConfig(
     val adUnitConfig: AdUnitConfig = AdUnitConfig(

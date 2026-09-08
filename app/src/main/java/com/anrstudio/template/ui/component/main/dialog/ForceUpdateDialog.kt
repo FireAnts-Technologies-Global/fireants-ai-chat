@@ -4,12 +4,12 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.Intent
 import android.net.Uri
-import com.bumptech.glide.Glide
-import com.anrstudio.template.BuildConfig
-import com.anrstudio.template.R
 import com.anrstudio.template.data.model.ForceUpdateConfig
-import com.anrstudio.template.databinding.DialogForceUpdateBinding
 import com.anrstudio.template.ui.bases.ext.click
+import com.bumptech.glide.Glide
+import com.pegas.aura.aigirlfriend.soul.BuildConfig
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.databinding.DialogForceUpdateBinding
 import timber.log.Timber
 
 class ForceUpdateDialog(private val activity: Activity) {

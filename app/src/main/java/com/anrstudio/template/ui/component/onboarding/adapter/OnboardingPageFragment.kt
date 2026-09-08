@@ -4,11 +4,8 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.MutableLiveData
 import com.anrstudio.ads.ads.wrapper.ApNativeAd
-import com.bumptech.glide.Glide
-import com.anrstudio.template.R
 import com.anrstudio.template.ads.AdsManager
 import com.anrstudio.template.ads.populateNativeAdView
-import com.anrstudio.template.databinding.FragmentOnboardingPageBinding
 import com.anrstudio.template.ui.bases.BaseFragment
 import com.anrstudio.template.ui.bases.ext.click
 import com.anrstudio.template.ui.bases.ext.goneView
@@ -18,6 +15,9 @@ import com.anrstudio.template.ui.bases.ext.visibleView
 import com.anrstudio.template.ui.component.onboarding.model.NativeFullPlacement
 import com.anrstudio.template.ui.component.onboarding.model.OnboardingItem
 import com.anrstudio.template.ui.component.onboarding.viewmodel.OnboardingViewModel
+import com.bumptech.glide.Glide
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.databinding.FragmentOnboardingPageBinding
 
 class OnboardingPageFragment : BaseFragment<FragmentOnboardingPageBinding>() {
 

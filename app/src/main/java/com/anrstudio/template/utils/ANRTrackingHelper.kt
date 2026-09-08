@@ -5,6 +5,7 @@ import android.util.Log
 import com.google.firebase.Firebase
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.analytics
+import com.google.firebase.analytics.logEvent
 
 
 /**
@@ -83,6 +84,25 @@ object ANRTrackingHelper {
         )
         return this
     }
+
+    fun addScreenTrackCompose(screenName: String): ANRTrackingHelper {
+        Firebase.analytics.logEvent(screenName, null)
+        Firebase.analytics.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW) {
+            param(FirebaseAnalytics.Param.SCREEN_NAME, screenName)
+            param(FirebaseAnalytics.Param.SCREEN_CLASS, screenName)
+        }
+        return this
+    }
+
+    fun fromScreenToScreenCompose(fromScreen: String, toScreen: String): ANRTrackingHelper {
+        Firebase.analytics.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW) {
+            param(FirebaseAnalytics.Param.SCREEN_NAME, toScreen)
+            param(FirebaseAnalytics.Param.SCREEN_CLASS, toScreen)
+            param("from_screen", fromScreen)
+        }
+        return this
+    }
+
 
     object Params
 }

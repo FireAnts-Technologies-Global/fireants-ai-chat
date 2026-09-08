@@ -2,10 +2,10 @@ package com.anrstudio.template.ui.component.splash
 
 import android.annotation.SuppressLint
 import android.os.CountDownTimer
+import androidx.activity.viewModels
 import com.anrstudio.ads.admob.Admob
 import com.anrstudio.ads.ads.ANRAdSdk
 import com.anrstudio.ads.funtion.AdCallback
-import com.anrstudio.template.R
 import com.anrstudio.template.ads.AdRemoteConfig
 import com.anrstudio.template.ads.AdUnitConfig
 import com.anrstudio.template.ads.AdsManager
@@ -15,19 +15,25 @@ import com.anrstudio.template.ads.banner_splash
 import com.anrstudio.template.ads.inter_splash
 import com.anrstudio.template.app.AppConstants
 import com.anrstudio.template.app.GlobalApp
-import com.anrstudio.template.databinding.ActivitySplashBinding
 import com.anrstudio.template.ui.bases.BannerConfig
 import com.anrstudio.template.ui.bases.BaseActivityWithBanner
 import com.anrstudio.template.ui.bases.ConsentHandler
 import com.anrstudio.template.ui.bases.StatusBarConfig
 import com.anrstudio.template.ui.bases.ext.goneView
 import com.anrstudio.template.ui.bases.ext.isNetwork
+import com.anrstudio.template.ui.bases.ext.showToastByString
+import com.anrstudio.template.ui.component.splash.viewmodel.SplashViewModel
+import com.anrstudio.template.ui.model.asString
 import com.anrstudio.template.utils.Routes
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.databinding.ActivitySplashBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @SuppressLint("CustomSplashScreen")
 @AndroidEntryPoint
 class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteConfigUtils.Listener {
+    private val viewModel: SplashViewModel by viewModels()
+    private var authBootstrapFinished = false
 
     override var bannerConfig: BannerConfig = BannerConfig(
         adUnitConfig = AdUnitConfig(
@@ -50,6 +56,15 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
     override fun initViews() {
         super.initViews()
+        observeAuthBootstrap()
+        viewModel.bootstrapAuth(
+            hasAccessToken = appSharedPref.accessToken.isNotBlank(),
+            hasRefreshToken = appSharedPref.refreshToken.isNotBlank(),
+            hasResumeGuestToken = appSharedPref.resumeGuestToken.isNotBlank(),
+            hasNetwork = isNetwork()
+        )
+        appSharedPref.isRateShownInSession = false
+        appSharedPref.openAppCount += 1
         AdsManager.clearAll()
         RemoteConfigUtils.init(this, this)
         consentHandler = ConsentHandler(
@@ -66,6 +81,17 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
     }
 
+    private fun observeAuthBootstrap() {
+        viewModel.authBootstrapFinished.observe(this) { finished ->
+            authBootstrapFinished = finished == true
+        }
+        viewModel.authBootstrapError.observe(this) { error ->
+            if (error == null) return@observe
+            showToastByString(error.asString(this))
+            viewModel.onAuthBootstrapErrorHandled()
+        }
+    }
+
 
     private fun loadingRemoteConfig() {
         val totalTime = AppConstants.DEFAULT_TIME_SPLASH
@@ -75,7 +101,7 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
             override fun onTick(millisUntilFinished: Long) {
                 val elapsed = totalTime - millisUntilFinished
                 mBinding.progressSplash.progress = (elapsed * 100 / totalTime).toInt()
-                if (getConfigSuccess && millisUntilFinished < AppConstants.DEFAULT_LIMIT_TIME_SPLASH) {
+                if (getConfigSuccess && authBootstrapFinished && millisUntilFinished < AppConstants.DEFAULT_LIMIT_TIME_SPLASH) {
                     checkRemoteConfigResult()
                     cancel()
                 }
@@ -118,6 +144,7 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
                         super.onNextAction()
                         moveActivity()
                     }
+
                 })
         } else {
             moveActivity()

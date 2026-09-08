@@ -5,7 +5,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
-import com.anrstudio.template.R
+import com.pegas.aura.aigirlfriend.soul.R
 
 class LoadingDotsTextView @JvmOverloads constructor(
     context: Context,

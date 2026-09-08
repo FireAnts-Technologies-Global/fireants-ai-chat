@@ -1,6 +1,8 @@
 package com.anrstudio.template.ui.bases.ext
 
+import android.app.Activity
 import android.content.Context
+import android.content.ContextWrapper
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.net.ConnectivityManager
@@ -19,6 +21,16 @@ fun Context.canTouch(): Boolean {
     mLastClickTime = SystemClock.elapsedRealtime()
     return true
 }
+
+fun Context.findActivity(): Activity? {
+    var context = this
+    while (context is ContextWrapper) {
+        if (context is Activity) return context
+        context = context.baseContext
+    }
+    return null
+}
+
 
 fun Context.showToastByString(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

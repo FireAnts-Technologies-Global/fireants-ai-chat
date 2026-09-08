@@ -12,9 +12,9 @@ import android.view.Window
 import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.anrstudio.template.R
 import com.anrstudio.template.data.pref.AppSharedPref
 import com.anrstudio.template.data.pref.BaseDialogEntryPoint
+import com.pegas.aura.aigirlfriend.soul.R
 import dagger.hilt.EntryPoints
 import java.util.Locale
 

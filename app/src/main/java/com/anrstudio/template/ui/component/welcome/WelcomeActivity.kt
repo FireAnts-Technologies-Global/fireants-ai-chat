@@ -1,15 +1,15 @@
 package com.anrstudio.template.ui.component.welcome
 
 import com.anrstudio.ads.ads.wrapper.ApNativeAd
-import com.anrstudio.template.R
 import com.anrstudio.template.ads.AdsManager
 import com.anrstudio.template.ads.populateNativeAdView
-import com.anrstudio.template.databinding.ActivityWelcomeBinding
 import com.anrstudio.template.ui.bases.BaseActivity
 import com.anrstudio.template.ui.bases.ext.click
 import com.anrstudio.template.ui.bases.ext.goneView
 import com.anrstudio.template.ui.bases.ext.isNetwork
 import com.anrstudio.template.ui.bases.ext.visibleView
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.databinding.ActivityWelcomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

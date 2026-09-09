@@ -234,8 +234,7 @@ private fun HistoryCharacterCard(
                 onClick = onClick
             ),
         shape = RoundedCornerShape(SdpR_18),
-        colors = CardDefaults.cardColors(containerColor = Color161127),
-        border = BorderStroke(SdpR_1, Color14000000)
+        colors = CardDefaults.cardColors(containerColor = ColorD9D9D9),
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             LoadingAsyncImage(
@@ -252,8 +251,8 @@ private fun HistoryCharacterCard(
                         Brush.verticalGradient(
                             colorStops = arrayOf(
                                 0.0f to Color.Transparent,
-                                0.45f to Color.Transparent,
-                                1.0f to Color66000000
+                                0.55f to Color.Transparent,
+                                1.0f to ColorFFFFFF
                             )
                         )
                     )
@@ -265,16 +264,16 @@ private fun HistoryCharacterCard(
                     .padding(SdpR_8)
                     .align(Alignment.TopStart)
                     .background(
-                        color = if (isHot) ColorED4DA4 else ColorFFB03A,
-                        shape = RoundedCornerShape(SdpR_6)
+                        color = if (isHot) ColorFF41A3 else ColorFFBF92,
+                        shape = RoundedCornerShape(SdpR_100)
                     )
-                    .padding(horizontal = SdpR_6, vertical = SdpR_2)
+                    .padding(horizontal = SdpR_10, vertical = SdpR_5)
             ) {
                 Text(
                     text = if (isHot) stringResource(R.string.character_detail_hot) else stringResource(R.string.character_badge_new),
-                    fontFamily = ManropeBold,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_8.nonScaledSp,
+                    fontFamily = ManropeExtraBold,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = SdpR_10.nonScaledSp,
                     color = if (isHot) ColorFFFFFF else Color663A1C
                 )
             }
@@ -284,13 +283,13 @@ private fun HistoryCharacterCard(
                     .align(Alignment.BottomStart)
                     .fillMaxWidth()
                     .padding(horizontal = SdpR_10, vertical = SdpR_10),
-                verticalArrangement = Arrangement.spacedBy(SdpR_2)
+                verticalArrangement = Arrangement.spacedBy(SdpR_8)
             ) {
                 Text(
                     text = displayName,
                     fontFamily = ManropeBold,
                     fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_14.nonScaledSp,
+                    fontSize = SdpR_15.nonScaledSp,
                     color = ColorFFFFFF,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
@@ -301,9 +300,9 @@ private fun HistoryCharacterCard(
                         text = character.description,
                         fontFamily = ManropeRegular,
                         fontWeight = FontWeight.Normal,
-                        fontSize = SdpR_10.nonScaledSp,
-                        lineHeight = SdpR_12.nonScaledSp,
-                        color = ColorF2FFFFFF,
+                        fontSize = SdpR_12.nonScaledSp,
+                        lineHeight = SdpR_18.nonScaledSp,
+                        color = Color6B5E80,
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis
                     )

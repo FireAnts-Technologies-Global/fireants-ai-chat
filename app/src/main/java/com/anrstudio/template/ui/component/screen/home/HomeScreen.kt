@@ -51,6 +51,7 @@ fun HomeScreen(
     fromScreen: String? = null,
     onOpenCharacterDetail: (String) -> Unit = {},
     onCreateAssistant: () -> Unit = {},
+    onSeeAll: () -> Unit = {},
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     LaunchedEffect(viewModel) {
@@ -80,7 +81,8 @@ fun HomeScreen(
             onLoadMore = {
                 onIntent(HomeIntent.LoadMore)
             },
-            onCreateAssistant = onCreateAssistant
+            onCreateAssistant = onCreateAssistant,
+            onSeeAll = onSeeAll
         )
     }
 }
@@ -90,7 +92,8 @@ private fun HomeContent(
     state: HomeUiState,
     onOpenCharacterDetail: (String) -> Unit = {},
     onLoadMore: () -> Unit = {},
-    onCreateAssistant: () -> Unit = {}
+    onCreateAssistant: () -> Unit = {},
+    onSeeAll: () -> Unit = {}
 ) {
     val topAssistants = remember(state.characters) {
         state.characters
@@ -108,7 +111,6 @@ private fun HomeContent(
         if (remaining.isNotEmpty()) remaining else state.characters
     }
 
-    var showAllGrid by remember { mutableStateOf(false) }
     val listState = rememberLazyListState()
 
     val shouldLoadMore = remember(state.hasNextPage, state.isLoadingMore, state.error) {
@@ -189,53 +191,8 @@ private fun HomeContent(
                             RecommendSection(
                                 characters = recommendCharacters,
                                 onCharacterClick = onOpenCharacterDetail,
-                                onSeeAllClick = {
-                                    showAllGrid = !showAllGrid
-                                }
+                                onSeeAllClick = onSeeAll
                             )
-                        }
-
-                        if (showAllGrid) {
-                            item(key = "all_characters_header") {
-                                Row(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(horizontal = SdpR_16),
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Text(
-                                        text = stringResource(R.string.home_all_characters),
-                                        fontFamily = OutfitBold,
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = SdpR_18.nonScaledSp,
-                                        color = ColorFDFDFD
-                                    )
-                                }
-                            }
-
-                            items(
-                                items = recommendCharacters.chunked(2),
-                                key = { row -> row.firstOrNull()?.id ?: "" }
-                            ) { rowItems ->
-                                Row(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(horizontal = SdpR_16),
-                                    horizontalArrangement = Arrangement.spacedBy(SdpR_12)
-                                ) {
-                                    rowItems.forEach { character ->
-                                        Box(modifier = Modifier.weight(1f)) {
-                                            CharacterCard(
-                                                character = character,
-                                                onClick = { onOpenCharacterDetail(character.slug) }
-                                            )
-                                        }
-                                    }
-                                    if (rowItems.size == 1) {
-                                        Spacer(modifier = Modifier.weight(1f))
-                                    }
-                                }
-                            }
                         }
 
                         if (state.isLoadingMore) {

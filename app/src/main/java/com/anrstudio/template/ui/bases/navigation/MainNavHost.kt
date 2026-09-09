@@ -40,6 +40,12 @@ fun MainNavHost(
                         context,
                         AppRoutes.CREATE_CHARACTER
                     )
+                },
+                onSeeAll = {
+                    rootNavController.navigateWithHomeInterstitial(
+                        context,
+                        AppRoutes.HISTORIES
+                    )
                 }
             )
         }

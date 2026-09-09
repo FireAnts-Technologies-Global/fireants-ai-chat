@@ -10,6 +10,7 @@ object AppRoutes {
     const val MAIN_MISSION = "main_mission"
     const val MAIN_STORE = "main_store"
     const val SUBSCRIPTION = "subscription"
+    const val HISTORIES = "histories"
 
     const val CREATE_CHARACTER = "create_character"
     const val CHARACTER_DETAIL = "character_detail"

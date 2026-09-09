@@ -125,6 +125,8 @@
     <string name="store_vip_footer_month">Auto-renews monthly. Cancel anytime.</string>
     <string name="store_vip_footer_year">Auto-renews annually. Cancel anytime in Google Play.</string>
     <string name="character_detail_hot">HOT</string>
+    <string name="character_badge_new">NEW</string>
+    <string name="histories_title">Histories</string>
     <string name="character_detail_intimacy_title">Connection Progress</string>
     <string name="character_detail_level_format">Level %1$d</string>
     <string name="character_detail_intimacy_hint">Each message adds up to +%1$d connection points</string>

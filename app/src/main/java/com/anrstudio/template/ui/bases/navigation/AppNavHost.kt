@@ -9,11 +9,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.pegas.aura.aigirlfriend.soul.ui.ads.navigateWithHomeInterstitial
 import com.pegas.aura.aigirlfriend.soul.ui.ads.popBackStackWithBackInterstitial
 import com.pegas.aura.aigirlfriend.soul.ui.component.main.MainScreen
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.CharacterDetailScreen
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.chatroom.ChatRoomScreen
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.creat.CreateScreen
+import com.pegas.aura.aigirlfriend.soul.ui.component.screen.histories.HistoriesScreen
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.store.StoreScreen
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.subscription.SubscriptionScreen
 
@@ -67,6 +69,21 @@ fun AppNavHost(
                         if (rootNavController.previousBackStackEntry != null) {
                             rootNavController.popBackStack()
                         }
+                    }
+                )
+            }
+
+            composable(AppRoutes.HISTORIES) {
+                HistoriesScreen(
+                    fromScreen = rootNavController.previousBackStackEntry?.destination?.route,
+                    onBack = {
+                        rootNavController.popBackStackWithBackInterstitial(context)
+                    },
+                    onOpenCharacterDetail = { slug ->
+                        rootNavController.navigateWithHomeInterstitial(
+                            context,
+                            AppRoutes.characterDetail(slug)
+                        )
                     }
                 )
             }

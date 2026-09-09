@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginEnd="8dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="13dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/ad_icon"
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="2dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="13dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/ad_headline"
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:layout_marginTop="12dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="13dp"
             tools:text="ad body" />
 
@@ -106,7 +106,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/bg_native_language"
             android:textAllCaps="false"
-            android:textColor="#ffffff"
+            android:textColor="@color/black"
             android:textSize="16dp"
             tools:text="Install" />
     </LinearLayout>

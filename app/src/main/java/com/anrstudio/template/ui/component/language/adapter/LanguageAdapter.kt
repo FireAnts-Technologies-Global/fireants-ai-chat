@@ -34,7 +34,6 @@ class LanguageAdapter(
             if (binding.rbLanguageSelected.isChecked != isSelected) {
                 binding.rbLanguageSelected.isChecked = isSelected
             }
-            binding.item.strokeColor = if (isSelected) Color.BLACK else Color.TRANSPARENT
         }
     }
 

@@ -1,5 +1,6 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.welcome
 
+import com.bumptech.glide.Glide
 import com.fireants.adsdk.ads.wrapper.ApNativeAd
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ads.AdsManager
@@ -20,6 +21,7 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
 
     override fun initViews() {
         super.initViews()
+        Glide.with(this@WelcomeActivity).load(R.drawable.bg_splash).centerCrop().into(mBinding.imgBg)
         showWelcomeAdLoading()
         AdsManager.loadNativeWelcome(this, R.layout.layout_native_welcome)
         AdsManager.loadInterWelcome(this)

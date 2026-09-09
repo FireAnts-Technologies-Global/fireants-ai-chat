@@ -25,6 +25,7 @@ import com.pegas.aura.aigirlfriend.soul.ads.banner_all
 import com.pegas.aura.aigirlfriend.soul.ui.ads.navigateWithHomeInterstitial
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.BannerAdView
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.CommonTopBar
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.navigation.AppRoutes
 import com.pegas.aura.aigirlfriend.soul.ui.bases.navigation.MainNavHost
@@ -54,16 +55,29 @@ fun MainScreen(
                 }
             },
             bottomBar = {
-                Column {
+                if (showBottomBar) {
+                    Column(
+                        modifier = Modifier.padding(
+                            start = SdpR_12,
+                            end = SdpR_12,
+                            bottom = SdpR_12
+                        )
+                    ) {
                         MainBottomBar(
                             tabs = mainTabs,
                             currentRoute = currentRoute,
                             onTabSelected = { tab ->
                                 if (tab.route == AppRoutes.CREATE_CHARACTER) {
-                                    rootNavController.navigateWithHomeInterstitial(context, tab.route)
+                                    rootNavController.navigateWithHomeInterstitial(
+                                        context,
+                                        tab.route
+                                    )
                                 } else {
                                     bottomNavController.navigate(tab.route) {
-                                        popUpTo(bottomNavController.graph.findStartDestination().id) {
+                                        popUpTo(
+                                            bottomNavController.graph
+                                                .findStartDestination().id
+                                        ) {
                                             saveState = true
                                         }
                                         launchSingleTop = true
@@ -72,11 +86,7 @@ fun MainScreen(
                                 }
                             }
                         )
-                    BannerAdView(
-                        adUnitId = AdRemoteConfig.banner_all.id,
-                        isEnabled = AdRemoteConfig.banner_all.isEnable,
-                        modifier = Modifier.fillMaxWidth()
-                    )
+                    }
                 }
             }
         ) { paddingValues ->
@@ -84,7 +94,7 @@ fun MainScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .appSplashBackground()
-                    .padding(paddingValues)
+                    .padding(top = paddingValues.calculateTopPadding())
             ) {
                 MainNavHost(
                     navController = bottomNavController,

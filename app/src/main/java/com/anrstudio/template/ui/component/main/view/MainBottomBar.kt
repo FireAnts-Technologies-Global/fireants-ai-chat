@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -23,23 +24,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color756582
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorF1CBB7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeMedium
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeSemiBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_22
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_74
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.main.MainTab
 
 
@@ -54,7 +46,10 @@ fun MainBottomBar(
         modifier = Modifier
             .fillMaxWidth()
             .height(SdpR_74)
-            .background(Color08030F),
+            .background(
+                color = ColorFFFFFF,
+                shape = RoundedCornerShape(SdpR_32)
+            ),
         verticalAlignment = Alignment.CenterVertically
     ) {
         tabs.forEach { tab ->
@@ -74,7 +69,7 @@ private fun RowScope.BottomBarItem(
     onClick: () -> Unit
 ) {
     val tint by animateColorAsState(
-        targetValue = if (selected) ColorF1CBB7 else Color756582,
+        targetValue = if (selected) ColorB957E8 else Color6F6794,
         label = "bottomBarTint"
     )
 
@@ -86,14 +81,20 @@ private fun RowScope.BottomBarItem(
         Box(
             modifier = Modifier
                 .weight(1f)
-                .height(SdpR_48),
+                .height(SdpR_56),
             contentAlignment = Alignment.Center
         ) {
             Box(
                 modifier = Modifier
-                    .size(SdpR_48)
+                    .size(SdpR_56)
                     .background(
-                        color = ColorF1CBB7,
+                        brush = Brush.horizontalGradient(
+                            colors = listOf(
+                                Color(0xFFD94BEE),
+                                Color(0xFFF84DB5),
+                                Color(0xFFFF6B8A)
+                            )
+                        ),
                         shape = CircleShape
                     )
                     .clickable(
@@ -106,8 +107,8 @@ private fun RowScope.BottomBarItem(
                 Icon(
                     painter = painterResource(R.drawable.ic_add),
                     contentDescription = stringResource(tab.label),
-                    modifier = Modifier.size(SdpR_22),
-                    tint = Color08030F
+                    modifier = Modifier.size(SdpR_48),
+                    tint = Color.Unspecified
                 )
             }
         }
@@ -149,10 +150,9 @@ private fun RowScope.BottomBarItem(
                 text = stringResource(tab.label),
                 color = tint,
                 fontSize = SdpR_10.nonScaledSp,
-                style = MaterialTheme.typography.labelMedium,
-                fontFamily = if (selected) ManropeSemiBold else ManropeMedium,
+                fontFamily = if (selected) ManropeBold else ManropeMedium,
                 fontWeight = if (selected) {
-                    FontWeight.SemiBold
+                    FontWeight.Bold
                 } else {
                     FontWeight.Medium
                 },
@@ -165,7 +165,6 @@ private fun RowScope.BottomBarItem(
 @Preview(
     name = "Main Bottom Bar",
     showBackground = true,
-    backgroundColor = 0xFF08030F
 )
 @Composable
 private fun MainBottomBarPreview() {

@@ -4,7 +4,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -42,6 +44,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
@@ -85,7 +88,8 @@ private fun MissionContent(
             .appSplashBackground()
     ) {
         Scaffold(
-            containerColor = Color.Transparent
+            containerColor = Color.Transparent,
+            contentWindowInsets = WindowInsets(0, 0, 0, 0)
         ) { paddingValues ->
             Column(
                 modifier = Modifier
@@ -123,6 +127,7 @@ private fun MissionContent(
                                 .fillMaxWidth()
                                 .weight(1f),
                             state = historyListState,
+                            contentPadding = PaddingValues(bottom = SdpR_100),
                             verticalArrangement = Arrangement.spacedBy(SdpR_8)
                         ) {
                             items(
@@ -177,6 +182,7 @@ private fun MissionContent(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .weight(1f)
+                                .padding(bottom = SdpR_100)
                                 .background(
                                     color = Color150F25,
                                     shape = RoundedCornerShape(radius)

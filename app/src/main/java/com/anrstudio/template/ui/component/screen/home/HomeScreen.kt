@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -32,6 +33,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.CharacterCard
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.CreateAssistantBanner
@@ -110,7 +112,8 @@ private fun HomeContent(
     }
 
     Scaffold(
-        containerColor = Color.Transparent
+        containerColor = Color.Transparent,
+        contentWindowInsets = WindowInsets(0, 0, 0, 0)
     ) { paddingValues ->
         Box(
             modifier = Modifier
@@ -140,7 +143,7 @@ private fun HomeContent(
                             start = SdpR_16,
                             top = SdpR_12,
                             end = SdpR_16,
-                            bottom = SdpR_20
+                            bottom = SdpR_100
                         ),
                         verticalArrangement = Arrangement.spacedBy(SdpR_12),
                         horizontalArrangement = Arrangement.spacedBy(SdpR_12)

@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -59,6 +61,8 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_280
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_86
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.ActionConfirmationDialog
@@ -134,13 +138,14 @@ private fun ChatListContent(
     val listState = rememberLazyListState()
 
     Scaffold(
-        containerColor = Color.Transparent
+        containerColor = Color.Transparent,
+        contentWindowInsets = WindowInsets(0, 0, 0, 0)
     ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(SdpR_16),
+                .padding(start = SdpR_16, end = SdpR_16, top = SdpR_16),
             verticalArrangement = Arrangement.spacedBy(SdpR_12)
         ) {
             when {
@@ -159,7 +164,8 @@ private fun ChatListContent(
                     Column(
                         modifier = Modifier
                             .weight(1f)
-                            .fillMaxWidth(),
+                            .fillMaxWidth()
+                            .padding(bottom = SdpR_86),
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center
                     ) {
@@ -220,8 +226,11 @@ private fun ChatListContent(
 
                 else -> {
                     LazyColumn(
-                        modifier = Modifier.weight(1f),
+                        modifier = Modifier
+                            .weight(1f)
+                            .fillMaxWidth(),
                         state = listState,
+                        contentPadding = PaddingValues(bottom = SdpR_100),
                         verticalArrangement = Arrangement.spacedBy(SdpR_8)
                     ) {
                         items(

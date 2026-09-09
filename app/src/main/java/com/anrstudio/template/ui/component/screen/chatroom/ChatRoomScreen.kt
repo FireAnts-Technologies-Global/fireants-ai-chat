@@ -266,20 +266,6 @@ private fun ChatRoomContent(
                 )
             }
 
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(
-                        brush = Brush.verticalGradient(
-                            colorStops = arrayOf(
-                                0f to ColorB30B0616,
-                                0.4f to Color00160C2C,
-                                0.75f to ColorD907030D,
-                                1f to ColorF207030D
-                            )
-                        )
-                    )
-            )
 
             Column(
                 modifier = Modifier

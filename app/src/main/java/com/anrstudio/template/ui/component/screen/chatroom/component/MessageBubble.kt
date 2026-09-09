@@ -35,23 +35,7 @@ import androidx.compose.ui.unit.dp
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.conversation.ConversationMessage
 import com.pegas.aura.aigirlfriend.soul.domain.model.conversation.ConversationMessageRole
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color433440
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color6B5E80
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color990C051A
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.custom.LoadingAsyncImage
 import kotlinx.coroutines.delay
 import java.text.SimpleDateFormat
@@ -97,11 +81,11 @@ internal fun MessageBubble(
                 .widthIn(max = maxBubbleWidth),
             shape = RoundedCornerShape(SdpR_16),
             colors = CardDefaults.cardColors(
-                containerColor = Color990C051A
+                containerColor = ColorD9FFFFFF
             ),
             border = BorderStroke(
                 width = SdpR_1,
-                color = Color433440
+                color = ColorE8C3AC
             )
         ) {
             Column(
@@ -123,8 +107,7 @@ internal fun MessageBubble(
 
                 Text(
                     text = message.content.take(visibleCharacterCount),
-                    style = MaterialTheme.typography.bodyLarge,
-                    color = ColorFDFDFD,
+                    color = Color1A0A2E,
                     fontFamily = ManropeRegular,
                     fontWeight = FontWeight.Normal,
                     fontSize = SdpR_14.nonScaledSp
@@ -161,14 +144,14 @@ internal fun AssistantMessageHeader(
             fontFamily = OutfitBold,
             fontWeight = FontWeight.Bold,
             fontSize = SdpR_13.nonScaledSp,
-            color = ColorE8C3AC
+            color = Color9B6E8A
         )
         Spacer(modifier = Modifier.weight(1f))
         Text(
             text = formattedTime ?: stringResource(R.string.chat_message_just_now),
             fontFamily = ManropeRegular,
             fontSize = SdpR_12.nonScaledSp,
-            color = Color6B5E80
+            color = ColorB0A0C0
         )
     }
 }

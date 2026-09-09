@@ -306,7 +306,7 @@ private fun ChatTitleContent(
                     fontFamily = ManropeMedium,
                     fontWeight = FontWeight.Medium,
                     fontSize = SdpR_11.nonScaledSp,
-                    color = ColorF1CBB7,
+                    color = ColorFFFFFF,
                     maxLines = 1
                 )
             }

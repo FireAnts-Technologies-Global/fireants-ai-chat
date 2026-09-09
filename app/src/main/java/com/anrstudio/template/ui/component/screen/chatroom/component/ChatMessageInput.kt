@@ -24,7 +24,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color.Companion.White
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
@@ -35,22 +37,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color090514
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color6B5E80
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color7C6765
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorF1CBB7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_34
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.chatroom.CHAT_MESSAGE_MAX_LENGTH
 
 @Composable
@@ -78,20 +65,20 @@ internal fun ChatMessageInput(
         modifier = Modifier
             .fillMaxWidth()
             .height(SdpR_48)
-            .background(White.copy(alpha = 0.05f), inputShape)
-            .border(SdpR_1, White.copy(alpha = 0.14f), inputShape)
+            .background(ColorD9FFFFFF, inputShape)
+            .border(SdpR_1, ColorE8C3AC, inputShape)
             .padding(horizontal = SdpR_12),
         enabled = !isSending,
         singleLine = true,
         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Send),
         keyboardActions = KeyboardActions(onSend = { submitMessage() }),
         textStyle = TextStyle(
-            color = ColorFDFDFD,
+            color = Color1A0A2E,
             fontFamily = ManropeRegular,
             fontWeight = FontWeight.Normal,
             fontSize = SdpR_13.nonScaledSp
         ),
-        cursorBrush = SolidColor(ColorF1CBB7),
+        cursorBrush = SolidColor(ColorDC60FF),
         decorationBox = { innerTextField ->
             Row(
                 modifier = Modifier.fillMaxSize(),
@@ -115,11 +102,13 @@ internal fun ChatMessageInput(
                     innerTextField()
                 }
 
+                val sendButtonBrush = if (sendEnabled) SendButtonEnabledBrush else SendButtonDisabledBrush
+
                 Box(
                     modifier = Modifier
                         .size(SdpR_34)
                         .background(
-                            color = if (sendEnabled) ColorF1CBB7 else Color7C6765,
+                            brush = sendButtonBrush,
                             shape = CircleShape
                         )
                         .clickable(
@@ -137,7 +126,7 @@ internal fun ChatMessageInput(
                             imageVector = Icons.Rounded.ArrowUpward,
                             contentDescription = stringResource(R.string.chat_send),
                             modifier = Modifier.size(SdpR_16),
-                            tint = Color090514
+                            tint = ColorFFFFFF
                         )
                     }
                 }
@@ -145,6 +134,26 @@ internal fun ChatMessageInput(
         }
     )
 }
+
+private val SendButtonEnabledBrush = Brush.linearGradient(
+    colors = listOf(
+        ColorDC60FF,
+        ColorFF41BC,
+        ColorFF8040
+    ),
+    start = Offset(0f, Float.POSITIVE_INFINITY),
+    end = Offset(Float.POSITIVE_INFINITY, 0f)
+)
+
+private val SendButtonDisabledBrush = Brush.linearGradient(
+    colors = listOf(
+        Color(0xFFF1A8EB),
+        Color(0xFFFA98D9),
+        Color(0xFFFCAEA4)
+    ),
+    start = Offset(0f, Float.POSITIVE_INFINITY),
+    end = Offset(Float.POSITIVE_INFINITY, 0f)
+)
 
 @Preview(
     name = "Empty",

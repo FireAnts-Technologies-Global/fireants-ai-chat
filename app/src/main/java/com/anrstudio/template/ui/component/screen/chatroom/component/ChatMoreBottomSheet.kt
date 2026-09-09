@@ -33,25 +33,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color161127
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorF1CBB7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFF6A6A
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitMedium
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_18
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_40
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.ActionConfirmationDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.ReportConfirmationDialog
 
@@ -74,7 +56,7 @@ internal fun ChatMoreBottomSheet(
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        containerColor = Color161127,
+        containerColor = ColorFFFFFF,
         contentColor = ColorFDFDFD,
         scrimColor = Color.Black.copy(alpha = 0.68f),
         shape = RoundedCornerShape(
@@ -183,18 +165,12 @@ private fun ChatMoreSheetContent(
                 fontFamily = OutfitBold,
                 fontWeight = FontWeight.Bold,
                 fontSize = SdpR_20.nonScaledSp,
-                color = ColorFDFDFD
+                color = Color1A1A2E
             )
 
             ActionsSheetCloseButton(onClick = onDismiss)
         }
 
-//        ChatMoreItem(
-//            title = stringResource(R.string.chat_more_favorite),
-//            iconRes = R.drawable.ic_chat_favorite,
-//            onClick = onFavoriteClick
-//        )
-//        ChatMoreDivider()
         if (showCustomBackground) {
             ChatMoreItem(
                 title = stringResource(R.string.chat_more_custom_background),
@@ -226,7 +202,7 @@ private fun ChatMoreItem(
     isDestructive: Boolean = false,
     onClick: () -> Unit
 ) {
-    val contentColor = if (isDestructive) ColorFF6A6A else ColorFDFDFD
+    val contentColor = if (isDestructive) ColorFF6A6A else Color1A1A2E
 
     Row(
         modifier = Modifier
@@ -252,7 +228,7 @@ private fun ChatMoreItem(
                 painter = painterResource(iconRes),
                 contentDescription = null,
                 modifier = Modifier.size(SdpR_18),
-                tint = if (isDestructive) ColorFF6A6A else ColorF1CBB7
+                tint = if (isDestructive) ColorFF6A6A else Color000000
             )
         }
 
@@ -286,12 +262,12 @@ private fun ChatMoreDivider() {
 
 @Preview(
     showBackground = true,
-    backgroundColor = 0xFF08030F,
+    backgroundColor = 0xFFFFFF,
     widthDp = 430
 )
 @Composable
 private fun ChatMoreSheetContentPreview() {
-    Box(modifier = Modifier.background(Color08030F)) {
+    Box(modifier = Modifier.background(ColorFFFFFF)) {
         ChatMoreSheetContent(
             onDismiss = {},
             onFavoriteClick = {},

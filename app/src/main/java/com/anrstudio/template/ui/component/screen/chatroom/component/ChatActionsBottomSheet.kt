@@ -1,5 +1,6 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.chatroom.component
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -29,13 +31,15 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import coil.compose.AsyncImage
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.conversation.QuickPrompt
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color000000
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color161127
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFFFFF
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitSemiBold
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
@@ -61,7 +65,7 @@ internal fun ChatActionsBottomSheet(
 ) {
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        containerColor = Color161127,
+        containerColor = ColorFFFFFF,
         contentColor = ColorFDFDFD,
         scrimColor = Color.Black.copy(alpha = 0.68f),
         shape = RoundedCornerShape(
@@ -103,10 +107,12 @@ internal fun ChatActionsBottomSheet(
                     fontFamily = OutfitBold,
                     fontWeight = FontWeight.Bold,
                     fontSize = SdpR_18.nonScaledSp,
-                    color = ColorFDFDFD
+                    color = Color000000
                 )
 
-                ActionsSheetCloseButton(onClick = onDismiss)
+                ActionsSheetCloseButton(
+                    onClick = onDismiss
+                )
             }
 
             LazyVerticalGrid(
@@ -119,7 +125,9 @@ internal fun ChatActionsBottomSheet(
                 items(quickPrompts) { item ->
                     ChatActionGridItem(
                         item = item,
-                        onClick = { content -> onActionClick(item.id, content) }
+                        onClick = { content ->
+                            onActionClick(item.id, content)
+                        }
                     )
                 }
             }
@@ -127,13 +135,13 @@ internal fun ChatActionsBottomSheet(
     }
 }
 
-
 @Composable
 private fun ChatActionGridItem(
     item: QuickPrompt,
     onClick: (String) -> Unit
 ) {
     val title = item.title.ifEmpty { "Action" }
+
     val fallbackIconRes = when (title.lowercase()) {
         "care" -> R.drawable.img_action_care
         "hug" -> R.drawable.img_action_hug
@@ -148,13 +156,23 @@ private fun ChatActionGridItem(
 
     Column(
         modifier = Modifier
+            .fillMaxWidth()
+            .background(
+                color = Color(0xFFFDF8FF),
+                shape = RoundedCornerShape(SdpR_32)
+            )
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
-                onClick = { onClick(item.content) }
+                onClick = {
+                    onClick(item.content)
+                }
             )
-            .padding(vertical = SdpR_8),
-        horizontalAlignment = Alignment.CenterHorizontally,
+            .padding(
+                horizontal = SdpR_12,
+                vertical = SdpR_16
+            ),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         AsyncImage(
             model = item.icon,
@@ -166,30 +184,44 @@ private fun ChatActionGridItem(
             fallback = painterResource(fallbackIconRes)
         )
 
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center
-        ) {
-            Text(
-                text = title,
-                fontFamily = OutfitSemiBold,
-                fontSize = SdpR_14.nonScaledSp,
-                color = ColorFDFDFD
+        Spacer(
+            modifier = Modifier.height(SdpR_8)
+        )
+
+        Text(
+            text = title,
+            fontFamily = OutfitSemiBold,
+            fontSize = SdpR_14.nonScaledSp,
+            color = Color000000,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+
+        if (item.coinCost > 0) {
+            Spacer(
+                modifier = Modifier.height(SdpR_4)
             )
-            
-            if (item.coinCost > 0) {
-                androidx.compose.foundation.layout.Spacer(modifier = Modifier.width(SdpR_4))
-                androidx.compose.foundation.Image(
+
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Image(
                     painter = painterResource(R.drawable.img_coin),
                     contentDescription = null,
                     modifier = Modifier.size(SdpR_12)
                 )
-                androidx.compose.foundation.layout.Spacer(modifier = Modifier.width(SdpR_4))
+
+                Spacer(
+                    modifier = Modifier.width(SdpR_4)
+                )
+
                 Text(
                     text = item.coinCost.toString(),
                     fontFamily = OutfitSemiBold,
                     fontSize = SdpR_14.nonScaledSp,
-                    color = ColorFDFDFD
+                    color = Color000000,
+                    maxLines = 1
                 )
             }
         }
@@ -227,6 +259,14 @@ private fun ChatActionsBottomSheetPreview() {
                     title = "Hug",
                     content = "*hugs*",
                     sortOrder = 2
+                ),
+                QuickPrompt(
+                    id = "3",
+                    icon = "",
+                    coinCost = 30,
+                    title = "Electrify",
+                    content = "*electrifies*",
+                    sortOrder = 3
                 )
             ),
             onDismiss = {}

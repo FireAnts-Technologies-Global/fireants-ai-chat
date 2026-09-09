@@ -59,7 +59,7 @@ internal fun ChatBackgroundBottomSheet(
 ) {
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        containerColor = Color161127,
+        containerColor = ColorFFFFFF,
         contentColor = ColorFDFDFD,
         scrimColor = Color.Black.copy(alpha = 0.68f),
         shape = RoundedCornerShape(
@@ -90,7 +90,7 @@ internal fun ChatBackgroundBottomSheet(
                     fontFamily = OutfitBold,
                     fontWeight = FontWeight.Bold,
                     fontSize = SdpR_20.nonScaledSp,
-                    color = ColorFDFDFD,
+                    color = Color000000,
                     modifier = Modifier.weight(1f)
                 )
 

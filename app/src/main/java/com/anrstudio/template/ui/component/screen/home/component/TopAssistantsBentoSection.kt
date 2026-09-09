@@ -4,6 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -179,7 +180,11 @@ private fun Top1HeroCard(
     val hazeState = remember { HazeState() }
 
     Card(
-        modifier = modifier.clickable(onClick = onClick),
+        modifier = modifier.clickable(
+            interactionSource = remember { MutableInteractionSource() },
+            indication = null,
+            onClick = onClick
+        ),
         shape = RoundedCornerShape(SdpR_20),
         colors = CardDefaults.cardColors(containerColor = ColorFFFFFF),
         border = BorderStroke(SdpR_1, Color14000000)
@@ -269,7 +274,11 @@ private fun TopHorizontalCard(
     modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = modifier.clickable(onClick = onClick),
+        modifier = modifier.clickable(
+            interactionSource = remember { MutableInteractionSource() },
+            indication = null,
+            onClick = onClick
+        ),
         shape = RoundedCornerShape(SdpR_20),
         colors = CardDefaults.cardColors(containerColor = ColorFFFFFF),
     ) {

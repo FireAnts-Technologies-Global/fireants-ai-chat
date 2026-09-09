@@ -3,6 +3,7 @@ package com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,6 +23,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -80,7 +82,11 @@ fun RecommendSection(
                 fontWeight = FontWeight.SemiBold,
                 fontSize = SdpR_12.nonScaledSp,
                 color = ColorB440F2,
-                modifier = Modifier.clickable(onClick = onSeeAllClick)
+                modifier = Modifier.clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null,
+                    onClick = onSeeAllClick
+                )
             )
         }
 
@@ -113,7 +119,11 @@ private fun RecommendCharacterCard(
         modifier = modifier
             .width(SdpR_145)
             .height(SdpR_195)
-            .clickable(onClick = onClick),
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = onClick
+            ),
         shape = RoundedCornerShape(SdpR_20),
         colors = CardDefaults.cardColors(containerColor = Color161127),
     ) {

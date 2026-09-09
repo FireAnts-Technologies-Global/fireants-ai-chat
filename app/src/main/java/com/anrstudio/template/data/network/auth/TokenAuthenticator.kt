@@ -96,10 +96,20 @@ class TokenAuthenticator @Inject constructor(
     private fun retryWith(response: Response, accessToken: String): Request? {
         if (accessToken.isBlank()) return null
         val path = response.request.url.encodedPath
-        val bearer = authPayloadFactory.buildAccessBearer(response.request.method, normalizePath(path), accessToken) ?: return null
+        val authResult = authPayloadFactory.buildAccessBearerResult(response.request.method, normalizePath(path), accessToken)
+        val bearer = authResult.bearer ?: return null
         return response.request.newBuilder()
             .header("X-Package-Name", authInfoProvider.packageName)
             .header("Authorization", "Bearer $bearer")
+            .tag(
+                AuthDebugInfo::class.java,
+                AuthDebugInfo(
+                    payloadJson = authResult.payloadJson,
+                    signature = authResult.signature,
+                    bearerLength = bearer.length,
+                    bearerToken = bearer
+                )
+            )
             .build()
     }
 

@@ -5,6 +5,12 @@ import com.squareup.moshi.Moshi
 import javax.inject.Inject
 import javax.inject.Singleton
 
+data class AuthBearerResult(
+    val bearer: String?,
+    val payloadJson: String?,
+    val signature: String?
+)
+
 @Singleton
 class AuthPayloadFactory @Inject constructor(
     private val authInfoProvider: AuthInfoProvider
@@ -13,7 +19,7 @@ class AuthPayloadFactory @Inject constructor(
     private val moshi = Moshi.Builder().build()
     private val adapter = moshi.adapter(Map::class.java)
 
-    fun buildGuestBearer(method: String, path: String, displayName: String? = null): String? {
+    fun buildGuestBearerResult(method: String, path: String, displayName: String? = null): AuthBearerResult {
         val payload = linkedMapOf<String, Any?>(
             "timestamp" to System.currentTimeMillis(),
             "method" to method,
@@ -25,12 +31,12 @@ class AuthPayloadFactory @Inject constructor(
         if (authInfoProvider.resumeGuestToken.isNotBlank()) {
             payload["resumeGuestToken"] = authInfoProvider.resumeGuestToken
         }
-        return encrypt(payload)
+        return encryptWithResult(payload)
     }
 
-    fun buildRefreshBearer(method: String, path: String, refreshToken: String = authInfoProvider.refreshToken): String? {
-        if (refreshToken.isBlank()) return null
-        return encrypt(
+    fun buildRefreshBearerResult(method: String, path: String, refreshToken: String = authInfoProvider.refreshToken): AuthBearerResult {
+        if (refreshToken.isBlank()) return AuthBearerResult(null, null, null)
+        return encryptWithResult(
             linkedMapOf(
                 "refreshToken" to refreshToken,
                 "timestamp" to System.currentTimeMillis(),
@@ -40,9 +46,9 @@ class AuthPayloadFactory @Inject constructor(
         )
     }
 
-    fun buildAccessBearer(method: String, path: String, accessToken: String = authInfoProvider.accessToken): String? {
-        if (accessToken.isBlank()) return null
-        return encrypt(
+    fun buildAccessBearerResult(method: String, path: String, accessToken: String = authInfoProvider.accessToken): AuthBearerResult {
+        if (accessToken.isBlank()) return AuthBearerResult(null, null, null)
+        return encryptWithResult(
             linkedMapOf(
                 "accessToken" to accessToken,
                 "timestamp" to System.currentTimeMillis(),
@@ -51,6 +57,15 @@ class AuthPayloadFactory @Inject constructor(
             )
         )
     }
+
+    fun buildGuestBearer(method: String, path: String, displayName: String? = null): String? =
+        buildGuestBearerResult(method, path, displayName).bearer
+
+    fun buildRefreshBearer(method: String, path: String, refreshToken: String = authInfoProvider.refreshToken): String? =
+        buildRefreshBearerResult(method, path, refreshToken).bearer
+
+    fun buildAccessBearer(method: String, path: String, accessToken: String = authInfoProvider.accessToken): String? =
+        buildAccessBearerResult(method, path, accessToken).bearer
 
     @Volatile
     var lastPayloadJson: String? = null
@@ -61,20 +76,20 @@ class AuthPayloadFactory @Inject constructor(
     @Volatile
     var lastEncryptedBearer: String? = null
 
-    private fun encrypt(payload: Map<String, Any?>): String? {
+    private fun encryptWithResult(payload: Map<String, Any?>): AuthBearerResult {
         val json = adapter.toJson(payload)
         val context = com.pegas.aura.aigirlfriend.soul.app.GlobalApp.instance
         val signature = AppSignatureHelper.getSignatureHash(context)
 
         lastPayloadJson = json
         lastSignature = signature
-        
+
         if (signature.isNullOrBlank() || signature == "null" || signature == "error") {
             lastEncryptedBearer = null
-            return null
+            return AuthBearerResult(null, json, signature)
         }
         val encrypted = AuthAesEncryptor.encryptPayload(json, signature)
         lastEncryptedBearer = encrypted
-        return encrypted
+        return AuthBearerResult(encrypted, json, signature)
     }
 }

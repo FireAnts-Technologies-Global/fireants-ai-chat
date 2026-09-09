@@ -29,4 +29,23 @@ object AuthAesEncryptor {
         val encrypted = cipher.doFinal(payloadJson.toByteArray(Charsets.UTF_8))
         return Base64.encodeToString(ivBytes + encrypted, Base64.NO_WRAP)
     }
+
+    fun decryptPayload(encryptedBase64: String, certificate: String): Result<String> {
+        return runCatching {
+            val allBytes = Base64.decode(encryptedBase64, Base64.NO_WRAP)
+            require(allBytes.size > 16) { "Encrypted payload length must be > 16 bytes (actual: ${allBytes.size})" }
+            val ivBytes = allBytes.copyOfRange(0, 16)
+            val cipherBytes = allBytes.copyOfRange(16, allBytes.size)
+
+            val keyBytes = MessageDigest.getInstance("SHA-256")
+                .digest(certificate.trim().toByteArray(Charsets.UTF_8))
+            val secretKeySpec = SecretKeySpec(keyBytes, "AES")
+
+            val cipher = Cipher.getInstance("AES/CBC/PKCS7Padding")
+            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, IvParameterSpec(ivBytes))
+
+            val decrypted = cipher.doFinal(cipherBytes)
+            String(decrypted, Charsets.UTF_8)
+        }
+    }
 }

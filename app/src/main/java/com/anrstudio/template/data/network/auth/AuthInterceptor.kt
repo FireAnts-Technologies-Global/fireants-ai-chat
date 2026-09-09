@@ -18,17 +18,18 @@ class AuthInterceptor @Inject constructor(
         val builder = request.newBuilder()
             .header("X-Package-Name", authInfoProvider.packageName)
 
-        val bearer = when {
+        val authResult = when {
             AuthRoute.isAppConfig(path) -> null
-            AuthRoute.isGuest(path) -> authPayloadFactory.buildGuestBearer(
+            AuthRoute.isGuest(path) -> authPayloadFactory.buildGuestBearerResult(
                 method = request.method,
                 path = AuthRoute.GUEST_LOGIN,
                 displayName = authInfoProvider.clientId
             )
-            AuthRoute.isRefresh(path) -> authPayloadFactory.buildRefreshBearer(request.method, AuthRoute.REFRESH)
-            else -> authPayloadFactory.buildAccessBearer(request.method, normalizePath(path))
+            AuthRoute.isRefresh(path) -> authPayloadFactory.buildRefreshBearerResult(request.method, AuthRoute.REFRESH)
+            else -> authPayloadFactory.buildAccessBearerResult(request.method, normalizePath(path))
         }
 
+        val bearer = authResult?.bearer
         if (!bearer.isNullOrBlank()) {
             builder.header("Authorization", "Bearer $bearer")
         }
@@ -36,9 +37,10 @@ class AuthInterceptor @Inject constructor(
         builder.tag(
             AuthDebugInfo::class.java,
             AuthDebugInfo(
-                payloadJson = authPayloadFactory.lastPayloadJson,
-                signature = authPayloadFactory.lastSignature,
-                bearerLength = bearer?.length
+                payloadJson = authResult?.payloadJson,
+                signature = authResult?.signature,
+                bearerLength = bearer?.length,
+                bearerToken = bearer
             )
         )
 

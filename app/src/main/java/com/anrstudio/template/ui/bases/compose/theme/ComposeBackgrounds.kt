@@ -25,3 +25,12 @@ fun Modifier.appVerticalGradientBackground(): Modifier = background(
     )
 )
 
+val AppButtonVerticalGradient: Brush = Brush.verticalGradient(
+    colors = listOf(
+        ColorDC60FF,
+        ColorFF41BC,
+        ColorFF8040
+    )
+)
+
+

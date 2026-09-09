@@ -30,23 +30,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color8B5CF6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD84DB7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitExtraBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_22
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_39
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
 internal fun CreateAssistantBanner(
@@ -57,16 +41,9 @@ internal fun CreateAssistantBanner(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(160.dp)
+            .height(SdpR_250)
             .clip(RoundedCornerShape(SdpR_24))
-            .background(
-                Brush.horizontalGradient(
-                    listOf(
-                        ColorD84DB7.copy(alpha = 0.42f),
-                        Color08030F
-                    )
-                )
-            )
+
     ) {
         backgroundPainter?.let {
             Image(
@@ -80,7 +57,6 @@ internal fun CreateAssistantBanner(
         Box(
             modifier = Modifier
                 .matchParentSize()
-                .background(Color08030F.copy(alpha = 0.18f))
         )
 
         Column(
@@ -90,24 +66,25 @@ internal fun CreateAssistantBanner(
         ) {
             Text(
                 text = stringResource(R.string.home_create_assistant_title),
-                style = MaterialTheme.typography.headlineSmall,
-                fontFamily = OutfitExtraBold,
+                fontFamily = LoraBold,
                 fontWeight = FontWeight.ExtraBold,
-                fontSize = SdpR_22.nonScaledSp,
-                color = ColorFDFDFD
+                fontSize = SdpR_24.nonScaledSp,
+                lineHeight = SdpR_26.nonScaledSp,
+                color = Color21164F
             )
             Text(
                 text = stringResource(R.string.home_create_assistant_subtitle),
-                style = MaterialTheme.typography.bodyMedium,
                 fontFamily = ManropeRegular,
-                fontSize = SdpR_13.nonScaledSp,
-                color = ColorFDFDFD
+                fontWeight = FontWeight.Normal,
+                fontSize = SdpR_14.nonScaledSp,
+                lineHeight = SdpR_14.nonScaledSp,
+                color = Color21164F
             )
             Spacer(modifier = Modifier.height(SdpR_16))
             Button(
                 onClick = onCreateClick,
                 modifier = Modifier
-                    .height(SdpR_39)
+                    .height(SdpR_35)
                     .background(
                         brush = Brush.horizontalGradient(
                             colors = listOf(
@@ -129,9 +106,9 @@ internal fun CreateAssistantBanner(
             ) {
                 Text(
                     text = stringResource(R.string.home_create_assistant_action),
-                    fontFamily = OutfitBold,
+                    fontFamily = ManropeBold,
                     fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_13.nonScaledSp,
+                    fontSize = SdpR_14.nonScaledSp,
                     color = ColorFDFDFD
                 )
                 Spacer(modifier = Modifier.width(SdpR_8))
@@ -148,14 +125,12 @@ internal fun CreateAssistantBanner(
 @Preview(
     name = "Create assistant banner",
     showBackground = true,
-    backgroundColor = 0xFF08030F,
     widthDp = 430
 )
 @Composable
 private fun CreateAssistantBannerPreview() {
     Box(
         modifier = Modifier
-            .background(Color08030F)
             .padding(SdpR_16)
     ) {
         CreateAssistantBanner(

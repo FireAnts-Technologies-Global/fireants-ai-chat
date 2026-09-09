@@ -49,8 +49,8 @@
     <string name="reward_error_title">Unable to load rewards</string>
     <string name="home_error_title">Unable to load content</string>
     <string name="home_empty_characters">No characters available right now.</string>
-    <string name="home_create_assistant_title">Find your own assistant</string>
-    <string name="home_create_assistant_subtitle">A sanctuary of soulful AI companions</string>
+    <string name="home_create_assistant_title">Find someone\nwho gets you</string>
+    <string name="home_create_assistant_subtitle">Create your own AI companion and\nbuild a meaningful connection.</string>
     <string name="home_create_assistant_action">Create your AI</string>
     <string name="setting_back">Back</string>
     <string name="promo_code_title" translatable="false">Redeem Code</string>

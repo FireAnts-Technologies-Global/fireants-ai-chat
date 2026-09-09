@@ -1,5 +1,6 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.home
 
+import com.pegas.aura.aigirlfriend.soul.domain.model.character.Character
 import com.pegas.aura.aigirlfriend.soul.domain.model.common.AppResult
 import com.pegas.aura.aigirlfriend.soul.domain.model.common.PaginationQuery
 import com.pegas.aura.aigirlfriend.soul.domain.usecase.character.GetCharactersUseCase
@@ -54,6 +55,8 @@ class HomeViewModel @Inject constructor(
                     isLoading = true,
                     isLoadingMore = false,
                     characters = emptyList(),
+                    topAssistants = emptyList(),
+                    recommendCharacters = emptyList(),
                     currentPage = 0,
                     hasNextPage = true,
                     error = null
@@ -72,9 +75,13 @@ class HomeViewModel @Inject constructor(
                 }
 
                 is AppResult.Success -> {
+                    val items = result.data.items
+                    val (top, recommend) = partitionCharacters(items)
                     updateState {
                         copy(
-                            characters = result.data.items,
+                            characters = items,
+                            topAssistants = top,
+                            recommendCharacters = recommend,
                             currentPage = result.data.page,
                             hasNextPage = result.data.hasNext,
                             isLoading = false,
@@ -116,10 +123,14 @@ class HomeViewModel @Inject constructor(
                 }
 
                 is AppResult.Success -> {
+                    val combined = (currentState.characters + result.data.items)
+                        .distinctBy { it.id }
+                    val (top, recommend) = partitionCharacters(combined)
                     updateState {
                         copy(
-                            characters = (characters + result.data.items)
-                                .distinctBy { it.id },
+                            characters = combined,
+                            topAssistants = top,
+                            recommendCharacters = recommend,
                             currentPage = result.data.page,
                             hasNextPage = result.data.hasNext,
                             isLoadingMore = false,
@@ -129,6 +140,21 @@ class HomeViewModel @Inject constructor(
                 }
             }
         }
+    }
+
+    private fun partitionCharacters(characters: List<Character>): Pair<List<Character>, List<Character>> {
+        val topAssistants = characters
+            .sortedWith(
+                compareByDescending<Character> { it.ratingStars ?: 0.0 }
+                    .thenByDescending { it.ratingCount }
+                    .thenByDescending { it.likes }
+            )
+            .take(3)
+
+        val topIds = topAssistants.map { it.id }.toSet()
+        val remaining = characters.filter { it.id !in topIds }
+        val recommendCharacters = if (remaining.isNotEmpty()) remaining else characters
+        return topAssistants to recommendCharacters
     }
 
     private companion object {

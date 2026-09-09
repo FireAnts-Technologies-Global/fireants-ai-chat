@@ -39,9 +39,9 @@ internal fun CharacterInfoSection(
             Column(verticalArrangement = Arrangement.spacedBy(SdpR_8)) {
                 Text(
                     text = stringResource(R.string.character_detail_about, character.name),
-                    fontFamily = ManropeBold,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_18.nonScaledSp,
+                    fontFamily = ManropeSemiBold,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = SdpR_16.nonScaledSp,
                     color = Color110640
                 )
 
@@ -49,7 +49,7 @@ internal fun CharacterInfoSection(
                     text = character.description,
                     fontFamily = ManropeRegular,
                     fontWeight = FontWeight.Normal,
-                    fontSize = SdpR_14.nonScaledSp,
+                    fontSize = SdpR_13.nonScaledSp,
                     lineHeight = SdpR_20.nonScaledSp,
                     color = Color6B5E80
                 )
@@ -60,9 +60,9 @@ internal fun CharacterInfoSection(
             Column(verticalArrangement = Arrangement.spacedBy(SdpR_10)) {
                 Text(
                     text = stringResource(R.string.character_detail_personality_traits),
-                    fontFamily = ManropeBold,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_18.nonScaledSp,
+                    fontFamily = ManropeSemiBold,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = SdpR_16.nonScaledSp,
                     color = Color110640
                 )
 

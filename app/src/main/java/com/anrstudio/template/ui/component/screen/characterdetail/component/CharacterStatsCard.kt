@@ -40,14 +40,16 @@ internal fun CharacterStatsCard(
             .fillMaxWidth()
             .padding(horizontal = SdpR_16)
             .shadow(
-                elevation = SdpR_4,
-                shape = RoundedCornerShape(SdpR_20),
+                elevation = SdpR_8,
+                shape = RoundedCornerShape(SdpR_24),
                 clip = false
             )
-            .clip(RoundedCornerShape(SdpR_20))
+            .clip(RoundedCornerShape(SdpR_24))
             .background(ColorFFFFFF)
-            .border(BorderStroke(SdpR_1, ColorE9DDF2), RoundedCornerShape(SdpR_20))
-            .padding(horizontal = SdpR_12, vertical = SdpR_14),
+            .padding(
+                horizontal = SdpR_12,
+                vertical = SdpR_14
+            ),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -60,23 +62,23 @@ internal fun CharacterStatsCard(
                 painter = painterResource(R.drawable.ic_chat),
                 contentDescription = null,
                 tint = ColorED4DA4,
-                modifier = Modifier.size(SdpR_20)
+                modifier = Modifier.size(SdpR_22)
             )
-            Spacer(modifier = Modifier.width(SdpR_8))
+            Spacer(modifier = Modifier.width(SdpR_12))
             Column {
                 Text(
                     text = formatLikes(character.likes),
                     fontFamily = ManropeBold,
                     fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_15.nonScaledSp,
-                    color = Color110640
+                    fontSize = SdpR_17.nonScaledSp,
+                    color = Color171044
                 )
                 Text(
                     text = stringResource(R.string.character_detail_chats),
                     fontFamily = ManropeRegular,
                     fontWeight = FontWeight.Normal,
                     fontSize = SdpR_11.nonScaledSp,
-                    color = Color6B5E80
+                    color = Color6F6898
                 )
             }
         }
@@ -90,24 +92,24 @@ internal fun CharacterStatsCard(
                 painter = painterResource(R.drawable.ic_chat_favorite_fill),
                 contentDescription = null,
                 tint = ColorFFB03A,
-                modifier = Modifier.size(SdpR_20)
+                modifier = Modifier.size(SdpR_22)
             )
-            Spacer(modifier = Modifier.width(SdpR_8))
+            Spacer(modifier = Modifier.width(SdpR_12))
             Column {
                 val rating = String.format(Locale.getDefault(), "%.1f", character.ratingStars ?: 4.9)
                 Text(
                     text = rating,
                     fontFamily = ManropeBold,
                     fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_15.nonScaledSp,
-                    color = Color110640
+                    fontSize = SdpR_17.nonScaledSp,
+                    color = Color171044
                 )
                 Text(
                     text = stringResource(R.string.character_detail_rating),
                     fontFamily = ManropeRegular,
                     fontWeight = FontWeight.Normal,
                     fontSize = SdpR_11.nonScaledSp,
-                    color = Color6B5E80
+                    color = Color6F6898
                 )
             }
         }
@@ -118,26 +120,26 @@ internal fun CharacterStatsCard(
             horizontalArrangement = Arrangement.Center
         ) {
             Image(
-                painter = painterResource(R.drawable.img_trophy),
+                painter = painterResource(R.drawable.ic_popular),
                 contentDescription = null,
-                modifier = Modifier.size(SdpR_20)
+                modifier = Modifier.size(SdpR_22)
             )
-            Spacer(modifier = Modifier.width(SdpR_8))
+            Spacer(modifier = Modifier.width(SdpR_12))
             Column {
                 val rank = character.sort.takeIf { it > 0 } ?: 1
                 Text(
                     text = stringResource(R.string.character_detail_rank_format, rank),
                     fontFamily = ManropeBold,
                     fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_15.nonScaledSp,
-                    color = Color110640
+                    fontSize = SdpR_17.nonScaledSp,
+                    color = Color171044
                 )
                 Text(
                     text = stringResource(R.string.character_detail_most_popular),
                     fontFamily = ManropeRegular,
                     fontWeight = FontWeight.Normal,
                     fontSize = SdpR_11.nonScaledSp,
-                    color = Color6B5E80
+                    color = Color6F6898
                 )
             }
         }

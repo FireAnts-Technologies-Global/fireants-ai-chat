@@ -8,6 +8,8 @@ data class HomeUiState(
     override val isLoading: Boolean = false,
     override val error: PublicError? = null,
     val characters: List<Character> = emptyList(),
+    val topAssistants: List<Character> = emptyList(),
+    val recommendCharacters: List<Character> = emptyList(),
     val isLoadingMore: Boolean = false,
     val currentPage: Int = 0,
     val hasNextPage: Boolean = true,

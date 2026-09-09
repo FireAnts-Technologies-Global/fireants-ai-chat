@@ -1,5 +1,7 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.home
 
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -95,21 +97,8 @@ private fun HomeContent(
     onCreateAssistant: () -> Unit = {},
     onSeeAll: () -> Unit = {}
 ) {
-    val topAssistants = remember(state.characters) {
-        state.characters
-            .sortedWith(
-                compareByDescending<Character> { it.ratingStars ?: 0.0 }
-                    .thenByDescending { it.ratingCount }
-                    .thenByDescending { it.likes }
-            )
-            .take(3)
-    }
-
-    val topIds = remember(topAssistants) { topAssistants.map { it.id }.toSet() }
-    val recommendCharacters = remember(state.characters, topIds) {
-        val remaining = state.characters.filter { it.id !in topIds }
-        if (remaining.isNotEmpty()) remaining else state.characters
-    }
+    val topAssistants = if (state.topAssistants.isNotEmpty()) state.topAssistants else state.characters.take(3)
+    val recommendCharacters = if (state.recommendCharacters.isNotEmpty()) state.recommendCharacters else state.characters
 
     val listState = rememberLazyListState()
 
@@ -147,21 +136,26 @@ private fun HomeContent(
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
-            when {
-                state.isLoading -> {
+            Crossfade(
+                targetState = state.isLoading,
+                animationSpec = tween(durationMillis = 250),
+                label = "HomeLoadingCrossfade"
+            ) { isLoading ->
+                if (isLoading) {
                     Box(
-                        modifier = Modifier.align(Alignment.Center),
+                        modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
                         ImageLoadingLottie(size = SdpR_32)
                     }
-                }
-
-                state.characters.isEmpty() -> {
-                    HomeEmptyContent(modifier = Modifier.align(Alignment.Center))
-                }
-
-                else -> {
+                } else if (state.characters.isEmpty()) {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        HomeEmptyContent()
+                    }
+                } else {
                     LazyColumn(
                         state = listState,
                         modifier = Modifier.fillMaxSize(),

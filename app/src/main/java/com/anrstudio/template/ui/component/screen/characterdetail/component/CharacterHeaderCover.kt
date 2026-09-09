@@ -86,21 +86,20 @@ internal fun CharacterHeaderCover(
                     text = displayName,
                     fontFamily = ManropeBold,
                     fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_26.nonScaledSp,
-                    color = Color110640
+                    fontSize = SdpR_27.nonScaledSp,
+                    color = Color000000
                 )
 
                 Box(
                     modifier = Modifier
-                        .size(SdpR_18)
-                        .background(color = ColorFF41A3, shape = CircleShape),
+                        .size(SdpR_20),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
-                        painter = painterResource(R.drawable.ic_check),
+                        painter = painterResource(R.drawable.ic_check_detail),
                         contentDescription = "Verified",
-                        tint = ColorFFFFFF,
-                        modifier = Modifier.size(SdpR_10)
+                        tint = Color.Unspecified,
+                        modifier = Modifier.size(SdpR_20)
                     )
                 }
             }
@@ -110,7 +109,7 @@ internal fun CharacterHeaderCover(
                     text = subtitle,
                     fontFamily = ManropeRegular,
                     fontWeight = FontWeight.Normal,
-                    fontSize = SdpR_14.nonScaledSp,
+                    fontSize = SdpR_13.nonScaledSp,
                     color = Color6B5E80
                 )
             }

@@ -18,26 +18,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.character.CharacterProgress
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color271E38
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color6B5E80
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
 internal fun IntimacyProgressCard(
@@ -53,11 +41,16 @@ internal fun IntimacyProgressCard(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = SdpR_12)
-            .clip(RoundedCornerShape(SdpR_16))
-            .background(Color150F25)
-            .border(BorderStroke(SdpR_1, Color322D41), RoundedCornerShape(SdpR_16))
-            .padding(SdpR_12)
+            .padding(horizontal = SdpR_16)
+            .shadow(
+                elevation = SdpR_2,
+                shape = RoundedCornerShape(SdpR_20),
+                clip = false
+            )
+            .clip(RoundedCornerShape(SdpR_20))
+            .background(ColorFFFFFF)
+            .border(BorderStroke(SdpR_1, ColorE9DDF2), RoundedCornerShape(SdpR_20))
+            .padding(SdpR_16)
     ) {
         Column(verticalArrangement = Arrangement.spacedBy(SdpR_12)) {
             Row(
@@ -67,22 +60,29 @@ internal fun IntimacyProgressCard(
             ) {
                 Text(
                     text = stringResource(R.string.character_detail_intimacy_title),
-                    fontFamily = OutfitBold,
+                    fontFamily = ManropeBold,
                     fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_13.nonScaledSp,
-                    color = ColorFDFDFD
+                    fontSize = SdpR_16.nonScaledSp,
+                    color = Color110640
                 )
 
                 val levelText = stringResource(R.string.character_detail_level_format, level)
                 val title = progress?.relationshipTitle ?: "Stranger"
-                val suffixText = " • $title"
-                Text(
-                    text = "$levelText$suffixText",
-                    fontFamily = ManropeBold,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = SdpR_13.nonScaledSp,
-                    color = ColorE8C3AC
-                )
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(SdpR_100))
+                        .background(ColorE9DDF2.copy(alpha = 0.5f))
+                        .border(BorderStroke(SdpR_1, ColorE9DDF2), RoundedCornerShape(SdpR_100))
+                        .padding(horizontal = SdpR_10, vertical = SdpR_4)
+                ) {
+                    Text(
+                        text = "$levelText • $title",
+                        fontFamily = ManropeBold,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = SdpR_12.nonScaledSp,
+                        color = ColorED4DA4
+                    )
+                }
             }
 
             Box(
@@ -90,7 +90,7 @@ internal fun IntimacyProgressCard(
                     .fillMaxWidth()
                     .height(SdpR_8)
                     .clip(CircleShape)
-                    .background(Color271E38)
+                    .background(ColorE9DDF2.copy(alpha = 0.6f))
             ) {
                 if (progressFraction > 0f) {
                     Box(
@@ -99,7 +99,13 @@ internal fun IntimacyProgressCard(
                             .fillMaxHeight()
                             .clip(CircleShape)
                             .background(
-                                ColorE8C3AC
+                                brush = Brush.horizontalGradient(
+                                    colors = listOf(
+                                        ColorDC60FF,
+                                        ColorFF41BC,
+                                        ColorFF8040
+                                    )
+                                )
                             )
                     )
                 }
@@ -115,8 +121,7 @@ internal fun IntimacyProgressCard(
     }
 }
 
-
-@Preview(showBackground = true, backgroundColor = 0xFF08030F)
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 private fun IntimacyProgressCardPreview() {
     IntimacyProgressCard(

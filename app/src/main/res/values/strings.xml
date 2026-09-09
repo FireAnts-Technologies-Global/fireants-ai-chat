@@ -131,6 +131,13 @@
     <string name="character_detail_level_format">Level %1$d</string>
     <string name="character_detail_intimacy_hint">Each message adds up to +%1$d connection points</string>
     <string name="character_detail_exclusive_gallery">Character Gallery</string>
+    <string name="character_detail_exclusive_photo_gallery">Exclusive Photo Gallery</string>
+    <string name="character_detail_about">About %1$s</string>
+    <string name="character_detail_chats">Chats</string>
+    <string name="character_detail_rating">Rating</string>
+    <string name="character_detail_most_popular">Most Popular</string>
+    <string name="character_detail_rank_format">Top %1$d</string>
+    <string name="character_detail_personality_traits">Personality &amp; Traits</string>
     <string name="character_detail_coins_format">%1$d COINS</string>
     <string name="character_detail_purchase_success">Background unlocked successfully!</string>
     <string name="continue_">Continue</string>

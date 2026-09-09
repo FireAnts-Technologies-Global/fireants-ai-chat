@@ -1,0 +1,163 @@
+package com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.component
+
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.domain.model.character.Character
+import com.pegas.aura.aigirlfriend.soul.domain.model.character.CharacterCategorySummary
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
+import java.util.Locale
+
+@Composable
+internal fun CharacterStatsCard(
+    character: Character,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = SdpR_16)
+            .shadow(
+                elevation = SdpR_4,
+                shape = RoundedCornerShape(SdpR_20),
+                clip = false
+            )
+            .clip(RoundedCornerShape(SdpR_20))
+            .background(ColorFFFFFF)
+            .border(BorderStroke(SdpR_1, ColorE9DDF2), RoundedCornerShape(SdpR_20))
+            .padding(horizontal = SdpR_12, vertical = SdpR_14),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Row(
+            modifier = Modifier.weight(1f),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Icon(
+                painter = painterResource(R.drawable.ic_chat),
+                contentDescription = null,
+                tint = ColorED4DA4,
+                modifier = Modifier.size(SdpR_20)
+            )
+            Spacer(modifier = Modifier.width(SdpR_8))
+            Column {
+                Text(
+                    text = formatLikes(character.likes),
+                    fontFamily = ManropeBold,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = SdpR_15.nonScaledSp,
+                    color = Color110640
+                )
+                Text(
+                    text = stringResource(R.string.character_detail_chats),
+                    fontFamily = ManropeRegular,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = SdpR_11.nonScaledSp,
+                    color = Color6B5E80
+                )
+            }
+        }
+
+        Row(
+            modifier = Modifier.weight(1f),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Icon(
+                painter = painterResource(R.drawable.ic_chat_favorite_fill),
+                contentDescription = null,
+                tint = ColorFFB03A,
+                modifier = Modifier.size(SdpR_20)
+            )
+            Spacer(modifier = Modifier.width(SdpR_8))
+            Column {
+                val rating = String.format(Locale.getDefault(), "%.1f", character.ratingStars ?: 4.9)
+                Text(
+                    text = rating,
+                    fontFamily = ManropeBold,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = SdpR_15.nonScaledSp,
+                    color = Color110640
+                )
+                Text(
+                    text = stringResource(R.string.character_detail_rating),
+                    fontFamily = ManropeRegular,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = SdpR_11.nonScaledSp,
+                    color = Color6B5E80
+                )
+            }
+        }
+
+        Row(
+            modifier = Modifier.weight(1.1f),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Image(
+                painter = painterResource(R.drawable.img_trophy),
+                contentDescription = null,
+                modifier = Modifier.size(SdpR_20)
+            )
+            Spacer(modifier = Modifier.width(SdpR_8))
+            Column {
+                val rank = character.sort.takeIf { it > 0 } ?: 1
+                Text(
+                    text = stringResource(R.string.character_detail_rank_format, rank),
+                    fontFamily = ManropeBold,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = SdpR_15.nonScaledSp,
+                    color = Color110640
+                )
+                Text(
+                    text = stringResource(R.string.character_detail_most_popular),
+                    fontFamily = ManropeRegular,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = SdpR_11.nonScaledSp,
+                    color = Color6B5E80
+                )
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFF5F5F5)
+@Composable
+private fun CharacterStatsCardPreview() {
+    CharacterStatsCard(
+        character = Character(
+            id = "1",
+            name = "Luna",
+            slug = "luna",
+            image = null,
+            description = "Dreamer",
+            task = "Poet",
+            likes = 12400,
+            ratingStars = 4.9,
+            sort = 1
+        )
+    )
+}

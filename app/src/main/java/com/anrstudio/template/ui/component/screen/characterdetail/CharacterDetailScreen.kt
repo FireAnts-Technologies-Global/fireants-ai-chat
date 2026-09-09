@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -41,13 +42,14 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.BannerAdView
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.CommonTopBar
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.CommonTopBarStyle
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseScreen
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFFFFF
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_150
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
 import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.showRateDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.component.CharacterDetailBottomBar
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.component.CharacterHeaderCover
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.component.CharacterInfoSection
+import com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.component.CharacterStatsCard
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.component.ExclusivePhotoGallery
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.component.IntimacyProgressCard
 
@@ -128,29 +130,29 @@ private fun CharacterDetailContent(
                 1f
             } else {
                 (
-                        lazyListState.firstVisibleItemScrollOffset /
-                                collapseThresholdPx
-                        ).coerceIn(0f, 1f)
+                    lazyListState.firstVisibleItemScrollOffset /
+                        collapseThresholdPx
+                ).coerceIn(0f, 1f)
             }
         }
     }
 
-    androidx.compose.foundation.layout.Column(
+    Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color08030F)
+            .background(ColorFFFFFF)
             .navigationBarsPadding()
     ) {
         Scaffold(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f),
-            containerColor = Color08030F
+            containerColor = ColorFFFFFF
         ) { paddingValues ->
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color08030F)
+                    .background(ColorFFFFFF)
                     .padding(paddingValues)
             ) {
                 state.characterDetail?.let { fullDetail ->
@@ -165,12 +167,12 @@ private fun CharacterDetailContent(
                 CommonTopBar(
                     title = state.character?.name.orEmpty(),
                     style = CommonTopBarStyle.CHARACTER_DETAIL,
-                    showActions = true,
+                    showActions = false,
                     onBack = onBack,
                     modifier = Modifier
                         .align(Alignment.TopCenter)
                         .background(
-                            Color08030F.copy(alpha = collapseProgress)
+                            ColorFFFFFF.copy(alpha = collapseProgress)
                         )
                         .statusBarsPadding()
                 )
@@ -213,6 +215,10 @@ private fun CharacterDetailBody(
         }
 
         item {
+            CharacterStatsCard(character = character)
+        }
+
+        item {
             CharacterInfoSection(character = character)
         }
 
@@ -236,7 +242,7 @@ private fun CharacterDetailBody(
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFF08030F)
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 private fun CharacterDetailContentPreview() {
     CharacterDetailContent(

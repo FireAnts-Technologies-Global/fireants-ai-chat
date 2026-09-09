@@ -25,16 +25,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color161127
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitSemiBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_72
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import kotlinx.coroutines.delay
 
 @Composable
@@ -58,9 +49,9 @@ fun LoadingDialog(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color161127)
+                    .background(ColorFFFFFF)
                     .border(
-                        width = 1.dp,
+                        width = 0.dp,
                         color = Color322D41,
                         shape = RoundedCornerShape(SdpR_24)
                     )
@@ -68,7 +59,7 @@ fun LoadingDialog(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(SdpR_12)
             ) {
-                ImageLoadingLottie(size = SdpR_72)
+                ImageLoadingLottie(size = SdpR_32)
                 AnimatedLoadingText(baseText = loadingText)
             }
         }
@@ -88,7 +79,7 @@ private fun AnimatedLoadingText(baseText: String) {
 
     Text(
         text = "$baseText${".".repeat(dotCount)}",
-        color = ColorFFFFFF,
+        color = Color000000,
         fontFamily = OutfitSemiBold,
         fontWeight = FontWeight.SemiBold,
         fontSize = SdpR_12.nonScaledSp,

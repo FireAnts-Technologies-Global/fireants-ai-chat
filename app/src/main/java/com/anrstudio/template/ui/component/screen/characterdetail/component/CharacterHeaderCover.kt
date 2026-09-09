@@ -1,45 +1,31 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.component
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.character.Character
 import com.pegas.aura.aigirlfriend.soul.domain.model.character.CharacterCategorySummary
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_30
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_36
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_90
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.custom.LoadingAsyncImage
 
 @Composable
@@ -47,103 +33,104 @@ internal fun CharacterHeaderCover(
     character: Character,
     modifier: Modifier = Modifier
 ) {
+    val displayName = if (character.age != null) {
+        "${character.name}, ${character.age}"
+    } else {
+        character.name
+    }
+
+    val subtitle = listOfNotNull(
+        character.task.takeIf { it.isNotBlank() },
+        character.category?.name.takeIf { !it.isNullOrBlank() }
+    ).joinToString(" • ")
+
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(bottom = SdpR_36)
+            .aspectRatio(0.92f)
     ) {
+        LoadingAsyncImage(
+            imageUrl = character.image,
+            contentDescription = character.name,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
+
         Box(
             modifier = Modifier
-                .fillMaxWidth()
-                .aspectRatio(1.1f)
-        ) {
-            LoadingAsyncImage(
-                imageUrl = character.image,
-                contentDescription = character.name,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
-
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(
-                        Brush.verticalGradient(
-                            colors = listOf(
-                                Color.Transparent,
-                                Color08030F.copy(alpha = 0.5f),
-                                Color08030F
-                            ),
-                            startY = 100f
+                .fillMaxSize()
+                .background(
+                    Brush.verticalGradient(
+                        colorStops = arrayOf(
+                            0.0f to Color.Transparent,
+                            0.50f to Color.Transparent,
+                            0.80f to ColorFFFFFF.copy(alpha = 0.65f),
+                            1.0f to ColorFFFFFF
                         )
                     )
-            )
+                )
+        )
 
-            if (character.isHot) {
+        Column(
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .fillMaxWidth()
+                .padding(horizontal = SdpR_16, vertical = SdpR_8),
+            verticalArrangement = Arrangement.spacedBy(SdpR_4)
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(SdpR_8)
+            ) {
+                Text(
+                    text = displayName,
+                    fontFamily = ManropeBold,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = SdpR_26.nonScaledSp,
+                    color = Color110640
+                )
+
                 Box(
                     modifier = Modifier
-                        .align(Alignment.BottomEnd)
-                        .padding(end = SdpR_16, bottom = SdpR_8)
-                        .clip(RoundedCornerShape(SdpR_100))
-                        .background(ColorD65A98)
-                        .padding(horizontal = SdpR_12, vertical = SdpR_4),
+                        .size(SdpR_18)
+                        .background(color = ColorFF41A3, shape = CircleShape),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(
-                        text = stringResource(R.string.character_detail_hot),
-                        color = ColorFDFDFD,
-                        fontFamily = OutfitBold,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = SdpR_12.nonScaledSp
+                    Icon(
+                        painter = painterResource(R.drawable.ic_check),
+                        contentDescription = "Verified",
+                        tint = ColorFFFFFF,
+                        modifier = Modifier.size(SdpR_10)
                     )
                 }
             }
-        }
 
-        Box(
-            modifier = Modifier
-                .align(Alignment.BottomStart)
-                .offset(x = SdpR_16, y = SdpR_30)
-                .size(SdpR_90)
-                .clip(CircleShape)
-                .border(SdpR_2, ColorE8C3AC, CircleShape)
-                .background(Color08030F)
-        ) {
-            LoadingAsyncImage(
-                imageUrl = character.image,
-                contentDescription = character.name,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
+            if (subtitle.isNotBlank()) {
+                Text(
+                    text = subtitle,
+                    fontFamily = ManropeRegular,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = SdpR_14.nonScaledSp,
+                    color = Color6B5E80
+                )
+            }
         }
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFF08030F)
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 private fun CharacterHeaderCoverPreview() {
     CharacterHeaderCover(
-        character = previewCharacter()
+        character = Character(
+            id = "1",
+            name = "Luna",
+            slug = "luna",
+            image = null,
+            description = "Dreamer",
+            task = "Dreamy soul",
+            age = 21,
+            category = CharacterCategorySummary("1", "Poet", "poet", 1)
+        )
     )
 }
-
-private fun previewCharacter() = Character(
-    id = "1",
-    name = "Luna",
-    slug = "luna",
-    image = null,
-    description = "Dreamer",
-    task = "Soulmate",
-    tags = listOf("Empathetic", "Cozy", "Dreamer"),
-    age = 21,
-    gender = "FEMALE",
-    categoryId = "cat1",
-    category = CharacterCategorySummary("cat1", "Anime", "anime", 1),
-    sort = 1,
-    isHot = true,
-    likes = 14200,
-    ratingStars = 4.9,
-    ratingCount = 120,
-    createdAt = "",
-    updatedAt = ""
-)

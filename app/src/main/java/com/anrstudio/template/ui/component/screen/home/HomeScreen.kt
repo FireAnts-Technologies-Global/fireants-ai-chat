@@ -153,7 +153,7 @@ private fun HomeContent(
                         modifier = Modifier.align(Alignment.Center),
                         contentAlignment = Alignment.Center
                     ) {
-                        ImageLoadingLottie(size = SdpR_56)
+                        ImageLoadingLottie(size = SdpR_32)
                     }
                 }
 
@@ -203,7 +203,7 @@ private fun HomeContent(
                                         .padding(vertical = SdpR_12),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    ImageLoadingLottie(size = SdpR_32)
+                                    ImageLoadingLottie(size = SdpR_16)
                                 }
                             }
                         }

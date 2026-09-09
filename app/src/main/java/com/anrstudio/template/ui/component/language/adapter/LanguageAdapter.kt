@@ -1,18 +1,16 @@
-package com.anrstudio.template.ui.component.language.adapter
+package com.pegas.aura.aigirlfriend.soul.ui.component.language.adapter
 
-import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.anrstudio.template.databinding.ItemLanguageBinding
-import com.anrstudio.template.ui.component.language.data.LanguageModel
 import com.bumptech.glide.Glide
+import com.pegas.aura.aigirlfriend.soul.databinding.ItemLanguageBinding
+import com.pegas.aura.aigirlfriend.soul.ui.component.language.data.LanguageModel
 
 class LanguageAdapter(
-    private val context: Context,
     private val onItemLanguageClick: (LanguageModel) -> Unit
 ) : ListAdapter<LanguageModel, LanguageAdapter.LanguageViewHolder>(
     LanguageDiffCallback()
@@ -26,11 +24,10 @@ class LanguageAdapter(
             binding.tvLanguageName.text = item.name
             toggleSelected(item.selected)
 
-            Glide.with(context).load(item.imageResId).into(binding.imgFlag)
-
             binding.root.setOnClickListener {
                 onItemLanguageClick(item)
             }
+            Glide.with(binding.root.context).load(item.imageResId).into(binding.imgFlag)
         }
 
         fun toggleSelected(isSelected: Boolean) {

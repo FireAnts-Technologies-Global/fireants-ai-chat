@@ -1,4 +1,4 @@
-package com.anrstudio.template.data.pref
+package com.pegas.aura.aigirlfriend.soul.data.pref
 
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn

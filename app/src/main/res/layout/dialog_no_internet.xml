@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.anrstudio.template.ui.component.custom.BlurLoadingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.pegas.aura.aigirlfriend.soul.ui.component.custom.BlurLoadingLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,77 +22,70 @@
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_250sdp"
+            android:layout_width="@dimen/_290sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/rounded_dialog">
+            android:background="@drawable/bg_dialog_surface"
+            android:padding="@dimen/_20sdp">
 
             <ImageView
                 android:id="@+id/animNoInternet"
-                android:layout_width="@dimen/_80sdp"
-                android:layout_height="0dp"
-                android:elevation="8dp"
+                android:layout_width="@dimen/_72sdp"
+                android:layout_height="@dimen/_72sdp"
+                android:background="@drawable/bg_dialog_icon"
+                android:contentDescription="@null"
                 android:padding="@dimen/_16sdp"
                 android:src="@drawable/ic_no_internet"
-                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/no_internet" />
+                app:tint="@color/setting_accent" />
 
             <TextView
                 android:id="@+id/txtNoInternet"
-                style="@style/text_bold_16"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_16sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/outfit_bold"
                 android:gravity="center"
+                android:includeFontPadding="false"
                 android:text="@string/no_internet_title"
-                android:textColor="@color/textPrimary"
+                android:textColor="@color/setting_text_primary"
+                android:textSize="@dimen/_18ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/animNoInternet" />
 
             <TextView
                 android:id="@+id/txtNoInternetDesc"
-                style="@style/text_regular_12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_16sdp"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/manrope_regular"
                 android:gravity="center"
+                android:includeFontPadding="false"
                 android:text="@string/no_internet_message"
-                android:textColor="@color/textPrimary"
+                android:textColor="@color/setting_text_secondary"
+                android:textSize="@dimen/_11ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtNoInternet" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/btnOpenSettings"
-                style="@style/text_bold_12"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_16sdp"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:layout_marginEnd="@dimen/_16sdp"
-                android:layout_marginBottom="@dimen/_16sdp"
-                android:backgroundTint="@color/color_button"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@drawable/bg_dialog_primary_button"
+                android:fontFamily="@font/outfit_bold"
                 android:gravity="center"
+                android:includeFontPadding="false"
                 android:text="@string/open_settings"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/setting_text_primary"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtNoInternetDesc" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </eightbitlab.com.blurview.BlurView>
-
-</com.anrstudio.template.ui.component.custom.BlurLoadingLayout>
-
+</com.pegas.aura.aigirlfriend.soul.ui.component.custom.BlurLoadingLayout>

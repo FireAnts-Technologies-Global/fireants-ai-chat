@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.component.language.data
+package com.pegas.aura.aigirlfriend.soul.ui.component.language.data
 
 data class LanguageModel(
     val name: String,

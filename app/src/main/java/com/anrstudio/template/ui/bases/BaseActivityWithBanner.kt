@@ -1,16 +1,16 @@
-package com.anrstudio.template.ui.bases
+package com.pegas.aura.aigirlfriend.soul.ui.bases
 
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.FrameLayout
 import androidx.databinding.ViewDataBinding
-import com.anrstudio.ads.billing.AppPurchase
-import com.anrstudio.template.R
-import com.anrstudio.template.ads.AdUnitConfig
-import com.anrstudio.template.ads.AdsManager
-import com.anrstudio.template.ui.bases.ext.goneView
-import com.anrstudio.template.ui.bases.ext.visibleView
+import com.fireants.adsdk.billing.AppPurchase
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ads.AdUnitConfig
+import com.pegas.aura.aigirlfriend.soul.ads.AdsManager
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.goneView
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.visibleView
 
 data class BannerConfig(
     val adUnitConfig: AdUnitConfig = AdUnitConfig(
@@ -60,7 +60,13 @@ abstract class BaseActivityWithBanner<VB : ViewDataBinding> : BaseActivity<VB>()
 
     override fun onResume() {
         super.onResume()
-        reloadBannerIfNeeded()
+        if (!shouldShowBanner()) {
+            val frAds = findViewById<FrameLayout>(R.id.fr_banner)
+            frAds?.removeAllViews()
+            cleanupHandler()
+        } else {
+            reloadBannerIfNeeded()
+        }
     }
 
     override fun onPause() {

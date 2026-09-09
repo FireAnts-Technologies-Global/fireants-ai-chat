@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.component.setting
+package com.pegas.aura.aigirlfriend.soul.ui.component.setting
 
 import android.content.Context
 import android.content.Intent
@@ -7,39 +7,95 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.widget.Toast
-import com.anrstudio.ads.admob.AppOpenManager
-import com.anrstudio.template.BuildConfig
-import com.anrstudio.template.R
-import com.anrstudio.template.app.AppConstants
-import com.anrstudio.template.app.ResumeAdsEntryRule
-import com.anrstudio.template.databinding.ActivitySettingBinding
-import com.anrstudio.template.ui.bases.BaseActivity
-import com.anrstudio.template.ui.bases.ext.click
-
-import com.anrstudio.template.ui.bases.ext.showRateDialog
-import com.anrstudio.template.utils.Routes
+import androidx.lifecycle.lifecycleScope
+import com.fireants.adsdk.admob.AppOpenManager
+import com.pegas.aura.aigirlfriend.soul.BuildConfig
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.app.AppConstants
+import com.pegas.aura.aigirlfriend.soul.app.ResumeAdsEntryRule
+import com.pegas.aura.aigirlfriend.soul.databinding.ActivitySettingBinding
+import com.pegas.aura.aigirlfriend.soul.domain.model.common.AppResult
+import com.pegas.aura.aigirlfriend.soul.domain.usecase.promo.RedeemPromoCodeUseCase
+import com.pegas.aura.aigirlfriend.soul.ui.bases.BaseActivity
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.click
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.showRateDialog
+import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.DialogRedeemPromoCode
+import com.pegas.aura.aigirlfriend.soul.utils.Routes
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class SettingActivity : BaseActivity<ActivitySettingBinding>() {
+
+    @Inject
+    lateinit var redeemPromoCodeUseCase: RedeemPromoCodeUseCase
+
+    private var titleClickCount = 0
+    private var lastTitleClickTime = 0L
+
     override fun getLayoutActivity(): Int = R.layout.activity_setting
 
     override fun onClickViews() {
         super.onClickViews()
         mBinding.apply {
             imvBack.click { finish() }
+            tvSettingTitle.setOnClickListener { handleTitleEasterEgg() }
             rltLanguage.click {
                 val bundle = Bundle()
                 bundle.putBoolean(AppConstants.KEY_SETTING, true)
                 Routes.startLanguageActivity(this@SettingActivity, bundle)
             }
             rltRate.click { initRate() }
-            rltFeedback.click { sendFeedback(BuildConfig.email_feedback) }
             rltShare.click { shareApp(this@SettingActivity) }
             rltPolicy.click {
                 openPrivacyPolicy()
             }
         }
+    }
+
+    private fun handleTitleEasterEgg() {
+        val now = System.currentTimeMillis()
+        if (now - lastTitleClickTime > 2000L) {
+            titleClickCount = 1
+        } else {
+            titleClickCount++
+        }
+        lastTitleClickTime = now
+
+        if (titleClickCount >= 7) {
+            titleClickCount = 0
+            showRedeemPromoCodeDialog()
+        }
+    }
+
+    private fun showRedeemPromoCodeDialog() {
+        val dialog = DialogRedeemPromoCode(this) { code, d ->
+            d.setLoading(true)
+            lifecycleScope.launch {
+                when (val result = redeemPromoCodeUseCase(code)) {
+                    is AppResult.Success -> {
+                        d.setLoading(false)
+                        d.dismiss()
+                        val coins = result.data.coinsAwarded
+                        val message = if (coins > 0) {
+                            getString(R.string.promo_code_success_coins, coins)
+                        } else {
+                            getString(R.string.promo_code_success)
+                        }
+                        Toast.makeText(this@SettingActivity, message, Toast.LENGTH_LONG).show()
+                    }
+
+                    is AppResult.Failure -> {
+                        d.setLoading(false)
+                        val errorMsg = result.error.customMessage
+                            ?: getString(R.string.error_generic)
+                        d.showError(errorMsg)
+                    }
+                }
+            }
+        }
+        dialog.show()
     }
 
     private fun initRate() {
@@ -81,7 +137,11 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
     private fun openPrivacyPolicy() {
         val privacyPolicyUrl = AppConstants.LINK_PRIVACY_POLICY
         if (privacyPolicyUrl.isBlank()) {
-            Toast.makeText(this, "Privacy Policy URL is not configured", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                getString(R.string.setting_privacy_not_configured),
+                Toast.LENGTH_SHORT
+            ).show()
             return
         }
         try {
@@ -91,12 +151,20 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
                 startActivity(browserIntent)
                 disableAdsResume()
             } else {
-                Toast.makeText(this, "No app available to open this link", Toast.LENGTH_SHORT)
+                Toast.makeText(
+                    this,
+                    getString(R.string.setting_no_app_open_link),
+                    Toast.LENGTH_SHORT
+                )
                     .show()
             }
         } catch (e: Exception) {
             Log.e("SettingActivity", "Error opening privacy policy", e)
-            Toast.makeText(this, "Unable to open Privacy Policy", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                getString(R.string.setting_unable_open_privacy),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 

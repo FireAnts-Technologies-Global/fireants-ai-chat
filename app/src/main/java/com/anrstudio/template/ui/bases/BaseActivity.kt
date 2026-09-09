@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.bases
+package com.pegas.aura.aigirlfriend.soul.ui.bases
 
 import android.content.Context
 import android.content.res.Configuration
@@ -18,12 +18,12 @@ import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.anrstudio.template.R
-import com.anrstudio.template.app.AppConstants
-import com.anrstudio.template.data.pref.AppSharedPref
-import com.anrstudio.template.data.pref.AppSharedPreferencesApp
-import com.anrstudio.template.utils.ANRTrackingHelper
-import com.anrstudio.template.utils.Routes
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.app.AppConstants
+import com.pegas.aura.aigirlfriend.soul.data.pref.AppSharedPref
+import com.pegas.aura.aigirlfriend.soul.data.pref.AppSharedPreferencesApp
+import com.pegas.aura.aigirlfriend.soul.utils.FireAntsTrackingHelper
+import com.pegas.aura.aigirlfriend.soul.utils.Routes
 import java.util.Locale
 import javax.inject.Inject
 
@@ -225,7 +225,7 @@ abstract class BaseActivity<VB : ViewDataBinding> : AppCompatActivity() {
     }
 
     private fun logScreenTracking() {
-        ANRTrackingHelper.addScreenTrack(this::class.java.simpleName)
+        FireAntsTrackingHelper.addScreenTrack(this::class.java.simpleName)
         if (intent.getStringExtra(AppConstants.KEY_TRACKING_SCREEN_FROM) != null) {
             Routes.addTrackingMoveScreen(
                 intent.getStringExtra(AppConstants.KEY_TRACKING_SCREEN_FROM).toString(),

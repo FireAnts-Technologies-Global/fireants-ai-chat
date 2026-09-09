@@ -1,23 +1,23 @@
-package com.anrstudio.template.app
+package com.pegas.aura.aigirlfriend.soul.app
 
 import android.annotation.SuppressLint
 import android.app.Activity
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.anrstudio.ads.admob.Admob
-import com.anrstudio.ads.admob.AppOpenManager
-import com.anrstudio.ads.ads.ANRAdSdk
-import com.anrstudio.ads.application.AdsMultiDexApplication
-import com.anrstudio.ads.config.ANRAdSdkConfig
-import com.anrstudio.ads.config.AppsFlyerConfig
-import com.anrstudio.config.ANRConfig
-import com.anrstudio.template.BuildConfig
-import com.anrstudio.template.R
-import com.anrstudio.template.ads.AdRemoteConfig
-import com.anrstudio.template.ads.RemoteConfigUtils
-import com.anrstudio.template.ui.component.language.LanguageActivity
-import com.anrstudio.template.ui.component.onboarding.OnBoardingActivity
-import com.anrstudio.template.ui.component.splash.SplashActivity
+import com.fireants.adsdk.admob.Admob
+import com.fireants.adsdk.admob.AppOpenManager
+import com.fireants.adsdk.ads.FireAntsAdSdk
+import com.fireants.adsdk.application.AdsMultiDexApplication
+import com.fireants.adsdk.config.AppsFlyerConfig
+import com.fireants.adsdk.config.FireAntsAdSdkConfig
+import com.fireants.devconfig.FireAntsDevConfig
 import com.google.android.gms.ads.MobileAds
+import com.pegas.aura.aigirlfriend.soul.BuildConfig
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ads.AdRemoteConfig
+import com.pegas.aura.aigirlfriend.soul.ads.RemoteConfigUtils
+import com.pegas.aura.aigirlfriend.soul.ui.component.language.LanguageActivity
+import com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.OnBoardingActivity
+import com.pegas.aura.aigirlfriend.soul.ui.component.splash.SplashActivity
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
@@ -33,14 +33,13 @@ class GlobalApp : AdsMultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-        ANRConfig.init(
+        FireAntsDevConfig.init(
             context = this,
-            anrstudioAdsVersion = BuildConfig.ANRSTUDIO_ADS_VERSION,
+            fireantsAdsVersion = BuildConfig.ANR_STUDIO_VERSION,
             playServicesAdsVersion = BuildConfig.PLAY_SERVICES_ADS_VERSION,
             gdprModuleVersion = BuildConfig.GDPR_MODULE_VERSION
         )
         MobileAds.initialize(this) {}
-
         instance = this
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
@@ -48,7 +47,6 @@ class GlobalApp : AdsMultiDexApplication() {
         initAdRemoteConfig()
         initAds()
 
-        // Unconditionally register lifecycle observer and callbacks so dynamic welcome/resume toggling works during testing
         ProcessLifecycleOwner.get().lifecycle.addObserver(AppLifecycleObserver())
         registerActivityLifecycleCallbacks(AppActivityLifecycleCallbacks())
     }
@@ -60,26 +58,26 @@ class GlobalApp : AdsMultiDexApplication() {
     private fun initAds() {
 
         val environment =
-            if (BuildConfig.DEBUG) ANRAdSdkConfig.ENVIRONMENT_DEVELOP else ANRAdSdkConfig.ENVIRONMENT_PRODUCTION
-        mANRAdSdkConfig = ANRAdSdkConfig(this, environment)
-        mANRAdSdkConfig.listDeviceTest = listOf("E7E351334096B4438C0A70C135BDDBF2")
+            if (BuildConfig.DEBUG) FireAntsAdSdkConfig.ENVIRONMENT_DEVELOP else FireAntsAdSdkConfig.ENVIRONMENT_PRODUCTION
+        mFireAntsAdSdkConfig = FireAntsAdSdkConfig(this, environment)
         val appsFlyerConfig =
             AppsFlyerConfig(true, resources.getString(R.string.appsflyer_key), BuildConfig.DEBUG)
-        mANRAdSdkConfig.appsFlyerConfig = appsFlyerConfig
-        mANRAdSdkConfig.facebookClientToken =
+        mFireAntsAdSdkConfig.appsFlyerConfig = appsFlyerConfig
+        mFireAntsAdSdkConfig.facebookClientToken =
             resources.getString(R.string.facebook_client_token)
         applyInterstitialInterval(RemoteConfigUtils.DEFAULT_INTER_INTERVAL_SECONDS)
-        ANRAdSdk.getInstance().init(this, mANRAdSdkConfig)
+        mFireAntsAdSdkConfig.idAdResume = ""
+        FireAntsAdSdk.getInstance().init(this, mFireAntsAdSdkConfig)
         Admob.getInstance().setDisableAdResumeWhenClickAds(true)
         Admob.getInstance().setOpenActivityAfterShowInterAds(true)
         AppOpenManager.getInstance().disableAppResumeWithActivity(SplashActivity::class.java)
         AppOpenManager.getInstance().disableAppResumeWithActivity(LanguageActivity::class.java)
         AppOpenManager.getInstance().disableAppResumeWithActivity(OnBoardingActivity::class.java)
-        ANRAdSdk.getInstance().prepareLoadingAdsDialogLayout = R.layout.layout_prepare_ads
-        ANRAdSdk.getInstance().resumeLoadingDialogLayout = R.layout.layout_welcome_back
+        FireAntsAdSdk.getInstance().prepareLoadingAdsDialogLayout = R.layout.layout_prepare_ads
+        FireAntsAdSdk.getInstance().resumeLoadingDialogLayout = R.layout.layout_welcome_back
     }
 
     fun applyInterstitialInterval(intervalSeconds: Int) {
-        mANRAdSdkConfig.intervalInterstitialAd = intervalSeconds
+        mFireAntsAdSdkConfig.intervalInterstitialAd = intervalSeconds
     }
 }

@@ -10,7 +10,7 @@
         android:id="@+id/ad_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="#000101"
         android:orientation="vertical">
 
         <!-- Block 3: Media -->
@@ -18,9 +18,9 @@
             android:id="@+id/ad_media"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="8dp" />
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/_8sdp" />
 
         <!-- Block 1: Icon & Headline Group -->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,9 +37,9 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="@null"
                 android:src="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/ad_icon"
@@ -61,8 +61,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginEnd="8dp"
-                android:textColor="#000000"
-                android:textSize="13dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/ad_icon"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -76,8 +76,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="2dp"
-                android:textColor="#000000"
-                android:textSize="13dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/ad_headline"
                 app:layout_constraintStart_toStartOf="@id/ad_icon"
@@ -92,21 +92,21 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:layout_marginBottom="12dp"
-            android:textColor="#000000"
-            android:textSize="13dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             tools:text="ad body" />
 
         <!-- Block 4: CTA Button -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ad_call_to_action"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="42dp"
             android:layout_marginHorizontal="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/bg_btn_native_cta"
             android:textAllCaps="false"
-            android:textColor="#ffffff"
+            android:textColor="@color/black"
             android:textSize="16dp"
             tools:text="Install" />
     </LinearLayout>

@@ -1,6 +1,8 @@
-package com.anrstudio.template.ui.bases.ext
+package com.pegas.aura.aigirlfriend.soul.ui.bases.ext
 
+import android.app.Activity
 import android.content.Context
+import android.content.ContextWrapper
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.net.ConnectivityManager
@@ -11,6 +13,15 @@ import androidx.annotation.StringRes
 
 internal const val CHECK_TIME_MULTI_CLICK = 500
 private var mLastClickTime: Long = 0
+
+fun Context.findActivity(): Activity? {
+    var context = this
+    while (context is ContextWrapper) {
+        if (context is Activity) return context
+        context = context.baseContext
+    }
+    return if (context is Activity) context else null
+}
 
 fun Context.canTouch(): Boolean {
     if (SystemClock.elapsedRealtime() - mLastClickTime < CHECK_TIME_MULTI_CLICK) {

@@ -1,17 +1,17 @@
-package com.anrstudio.template.ui.bases
+package com.pegas.aura.aigirlfriend.soul.ui.bases
 
 import android.app.Activity
 import android.os.Handler
 import android.os.Looper
-import com.anrstudio.consent.ANRConsentCallback
-import com.anrstudio.consent.ANRConsentManager
-import com.anrstudio.template.BuildConfig
-import com.anrstudio.template.app.AppConstants
-import com.anrstudio.template.data.pref.AppSharedPref
-import com.anrstudio.template.utils.ANRTrackingHelper
-import com.anrstudio.template.utils.ANRTrackingHelper.logEvent
+import com.fireants.consent.FireAntsAdConsentCallback
+import com.fireants.consent.FireAntsAdConsentManager
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.FormError
+import com.pegas.aura.aigirlfriend.soul.BuildConfig
+import com.pegas.aura.aigirlfriend.soul.app.AppConstants
+import com.pegas.aura.aigirlfriend.soul.data.pref.AppSharedPref
+import com.pegas.aura.aigirlfriend.soul.utils.FireAntsTrackingHelper
+import com.pegas.aura.aigirlfriend.soul.utils.FireAntsTrackingHelper.logEvent
 
 class ConsentHandler(
     private val activity: Activity,
@@ -20,7 +20,7 @@ class ConsentHandler(
     private val onConsentFlowCompleted: (canPersonalized: Boolean) -> Unit,
     private val onConsentSuccess: ((canPersonalized: Boolean) -> Unit)? = null,
     private val onNotUsingAdConsent: (() -> Unit)? = null
-) : ANRConsentCallback {
+) : FireAntsAdConsentCallback {
     private var canPersonalized = true
     private var consentCallbackHandled = false
     private val consentTimeoutHandler = Handler(Looper.getMainLooper())
@@ -39,7 +39,7 @@ class ConsentHandler(
             consentTimeoutRunnable,
             AppConstants.DEFAULT_TIME_OUT_GDPR
         )
-        ANRConsentManager.loadAndShowConsent(true, this)
+        FireAntsAdConsentManager.loadAndShowConsent(true, this)
     }
 
     fun clear() {
@@ -93,52 +93,52 @@ class ConsentHandler(
         logEvent(getDisplayConsentEvent(), null)
     }
 
-    override fun testDeviceID(): String = "ED3576D8FCF2F8C52AD8E98B4CFA4005"
+    override fun testDeviceID(): String = "11D324E490651D9B6C6C596EC9E14324"
 
     private fun handleConsentSelection() {
         if (canPersonalized) {
             logEvent(getAgreeConsentEvent(), null)
             appSharedPref.isConfirmConsent = true
         } else {
-            ANRConsentManager.resetConsentDialog()
+            FireAntsAdConsentManager.resetConsentDialog()
             logEvent(getRefuseConsentEvent(), null)
         }
         onConsentSuccess?.invoke(canPersonalized) ?: onConsentFlowCompleted(canPersonalized)
     }
 
     private fun getLoadConsentEvent(): String = when (trackingSuffix) {
-        1 -> ANRTrackingHelper.LOAD_CONSENT_1
-        2 -> ANRTrackingHelper.LOAD_CONSENT_2
-        else -> ANRTrackingHelper.LOAD_CONSENT_1
+        1 -> FireAntsTrackingHelper.LOAD_CONSENT_1
+        2 -> FireAntsTrackingHelper.LOAD_CONSENT_2
+        else -> FireAntsTrackingHelper.LOAD_CONSENT_1
     }
 
     private fun getDisplayConsentEvent(): String = when (trackingSuffix) {
-        1 -> ANRTrackingHelper.DISPLAY_CONSENT_1
-        2 -> ANRTrackingHelper.DISPLAY_CONSENT_2
-        else -> ANRTrackingHelper.DISPLAY_CONSENT_1
+        1 -> FireAntsTrackingHelper.DISPLAY_CONSENT_1
+        2 -> FireAntsTrackingHelper.DISPLAY_CONSENT_2
+        else -> FireAntsTrackingHelper.DISPLAY_CONSENT_1
     }
 
     private fun getNotUsingDisplayConsentEvent(): String = when (trackingSuffix) {
-        1 -> ANRTrackingHelper.NOT_USING_DISPLAY_CONSENT_1
-        2 -> ANRTrackingHelper.NOT_USING_DISPLAY_CONSENT_2
-        else -> ANRTrackingHelper.NOT_USING_DISPLAY_CONSENT_1
+        1 -> FireAntsTrackingHelper.NOT_USING_DISPLAY_CONSENT_1
+        2 -> FireAntsTrackingHelper.NOT_USING_DISPLAY_CONSENT_2
+        else -> FireAntsTrackingHelper.NOT_USING_DISPLAY_CONSENT_1
     }
 
     private fun getAgreeConsentEvent(): String = when (trackingSuffix) {
-        1 -> ANRTrackingHelper.AGREE_CONSENT_1
-        2 -> ANRTrackingHelper.AGREE_CONSENT_2
-        else -> ANRTrackingHelper.AGREE_CONSENT_1
+        1 -> FireAntsTrackingHelper.AGREE_CONSENT_1
+        2 -> FireAntsTrackingHelper.AGREE_CONSENT_2
+        else -> FireAntsTrackingHelper.AGREE_CONSENT_1
     }
 
     private fun getRefuseConsentEvent(): String = when (trackingSuffix) {
-        1 -> ANRTrackingHelper.REFUSE_CONSENT_1
-        2 -> ANRTrackingHelper.REFUSE_CONSENT_2
-        else -> ANRTrackingHelper.REFUSE_CONSENT_1
+        1 -> FireAntsTrackingHelper.REFUSE_CONSENT_1
+        2 -> FireAntsTrackingHelper.REFUSE_CONSENT_2
+        else -> FireAntsTrackingHelper.REFUSE_CONSENT_1
     }
 
     private fun getConsentErrorEvent(): String = when (trackingSuffix) {
-        1 -> ANRTrackingHelper.CONSENT_ERROR_1
-        2 -> ANRTrackingHelper.CONSENT_ERROR_2
-        else -> ANRTrackingHelper.CONSENT_ERROR_1
+        1 -> FireAntsTrackingHelper.CONSENT_ERROR_1
+        2 -> FireAntsTrackingHelper.CONSENT_ERROR_2
+        else -> FireAntsTrackingHelper.CONSENT_ERROR_1
     }
 }

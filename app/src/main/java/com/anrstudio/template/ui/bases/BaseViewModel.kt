@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.bases
+package com.pegas.aura.aigirlfriend.soul.ui.bases
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

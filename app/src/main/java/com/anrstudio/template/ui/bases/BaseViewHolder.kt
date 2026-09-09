@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.bases
+package com.pegas.aura.aigirlfriend.soul.ui.bases
 
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView

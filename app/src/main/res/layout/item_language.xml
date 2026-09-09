@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_12sdp"
-        app:cardBackgroundColor="#ffffff"
-        app:cardCornerRadius="@dimen/_40sdp"
+        app:cardBackgroundColor="#11101E"
+        app:cardCornerRadius="14dp"
         app:cardElevation="0dp"
         app:rippleColor="#10000000"
         app:strokeColor="@android:color/transparent"
@@ -32,7 +32,8 @@
                 android:layout_height="@dimen/_24sdp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_vietnamese" />
+                tools:src="@drawable/ic_vietnamese" />
+
             <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/rbLanguageSelected"
                 android:layout_width="@dimen/_28sdp"
@@ -47,16 +48,16 @@
                 android:scaleY="1.15" />
 
             <TextView
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_8sdp"
                 android:id="@+id/tvLanguageName"
-                android:layout_toStartOf="@+id/rbLanguageSelected"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toStartOf="@+id/rbLanguageSelected"
                 android:layout_toEndOf="@id/imgFlag"
-                android:textColor="@color/black"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_13sdp"
-                android:textStyle="bold"
                 tools:text="English" />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>

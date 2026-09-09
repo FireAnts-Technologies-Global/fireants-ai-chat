@@ -1,15 +1,15 @@
-package com.anrstudio.template.ui.component.welcome
+package com.pegas.aura.aigirlfriend.soul.ui.component.welcome
 
-import com.anrstudio.ads.ads.wrapper.ApNativeAd
-import com.anrstudio.template.R
-import com.anrstudio.template.ads.AdsManager
-import com.anrstudio.template.ads.populateNativeAdView
-import com.anrstudio.template.databinding.ActivityWelcomeBinding
-import com.anrstudio.template.ui.bases.BaseActivity
-import com.anrstudio.template.ui.bases.ext.click
-import com.anrstudio.template.ui.bases.ext.goneView
-import com.anrstudio.template.ui.bases.ext.isNetwork
-import com.anrstudio.template.ui.bases.ext.visibleView
+import com.fireants.adsdk.ads.wrapper.ApNativeAd
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ads.AdsManager
+import com.pegas.aura.aigirlfriend.soul.ads.populateNativeAdView
+import com.pegas.aura.aigirlfriend.soul.databinding.ActivityWelcomeBinding
+import com.pegas.aura.aigirlfriend.soul.ui.bases.BaseActivity
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.click
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.goneView
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.isNetwork
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.visibleView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -53,12 +53,12 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
     private fun showWelcomeAdLoading() {
         mBinding.frAds.visibleView()
         mBinding.frAdContent.goneView()
-        mBinding.shimmerAds.shimmerNativeLarge.visibleView()
-        mBinding.shimmerAds.shimmerNativeLarge.startShimmer()
+        mBinding.shimmerAds.shimmerNativeSmall.visibleView()
+        mBinding.shimmerAds.shimmerNativeSmall.startShimmer()
     }
 
     private fun hideWelcomeAd() {
-        mBinding.shimmerAds.shimmerNativeLarge.stopShimmer()
+        mBinding.shimmerAds.shimmerNativeSmall.stopShimmer()
         mBinding.frAdContent.goneView()
         mBinding.frAds.goneView()
     }
@@ -74,7 +74,7 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
             this,
             ad,
             mBinding.frAdContent,
-            mBinding.shimmerAds.shimmerNativeLarge
+            mBinding.shimmerAds.shimmerNativeSmall
         )
     }
 }

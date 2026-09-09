@@ -1,4 +1,4 @@
-package com.anrstudio.template.data.model
+package com.pegas.aura.aigirlfriend.soul.data.model
 
 import androidx.annotation.Keep
 

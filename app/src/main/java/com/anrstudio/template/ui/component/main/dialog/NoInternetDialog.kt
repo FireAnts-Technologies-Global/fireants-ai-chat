@@ -1,11 +1,11 @@
-package com.anrstudio.template.ui.component.main.dialog
+package com.pegas.aura.aigirlfriend.soul.ui.component.main.dialog
 
 import android.app.Activity
 import android.app.Dialog
 import android.content.Intent
 import android.provider.Settings
-import com.anrstudio.template.databinding.DialogNoInternetBinding
-import com.anrstudio.template.ui.bases.ext.click
+import com.pegas.aura.aigirlfriend.soul.databinding.DialogNoInternetBinding
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.click
 
 class NoInternetDialog(private val activity: Activity) {
     private var dialog: Dialog? = null

@@ -1,4 +1,4 @@
-package com.anrstudio.template.utils
+package com.pegas.aura.aigirlfriend.soul.utils
 
 import android.widget.ImageView
 import android.widget.TextView

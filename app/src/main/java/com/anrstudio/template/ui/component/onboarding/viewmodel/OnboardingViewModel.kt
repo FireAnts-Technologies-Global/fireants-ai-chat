@@ -1,9 +1,9 @@
-package com.anrstudio.template.ui.component.onboarding.viewmodel
+package com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.anrstudio.template.ui.bases.BaseViewModel
+import com.pegas.aura.aigirlfriend.soul.ui.bases.BaseViewModel
 import kotlinx.coroutines.launch
 
 class OnboardingViewModel : BaseViewModel() {

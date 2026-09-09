@@ -1,4 +1,4 @@
-package com.anrstudio.template.utils
+package com.pegas.aura.aigirlfriend.soul.utils
 
 import android.content.Context
 import android.content.Context.CONNECTIVITY_SERVICE

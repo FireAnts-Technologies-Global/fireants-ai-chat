@@ -1,23 +1,23 @@
-package com.anrstudio.template.ui.component.onboarding.adapter
+package com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.adapter
 
 import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.MutableLiveData
-import com.anrstudio.ads.ads.wrapper.ApNativeAd
 import com.bumptech.glide.Glide
-import com.anrstudio.template.R
-import com.anrstudio.template.ads.AdsManager
-import com.anrstudio.template.ads.populateNativeAdView
-import com.anrstudio.template.databinding.FragmentOnboardingPageBinding
-import com.anrstudio.template.ui.bases.BaseFragment
-import com.anrstudio.template.ui.bases.ext.click
-import com.anrstudio.template.ui.bases.ext.goneView
-import com.anrstudio.template.ui.bases.ext.invisibleView
-import com.anrstudio.template.ui.bases.ext.parcelable
-import com.anrstudio.template.ui.bases.ext.visibleView
-import com.anrstudio.template.ui.component.onboarding.model.NativeFullPlacement
-import com.anrstudio.template.ui.component.onboarding.model.OnboardingItem
-import com.anrstudio.template.ui.component.onboarding.viewmodel.OnboardingViewModel
+import com.fireants.adsdk.ads.wrapper.ApNativeAd
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ads.AdsManager
+import com.pegas.aura.aigirlfriend.soul.ads.populateNativeAdView
+import com.pegas.aura.aigirlfriend.soul.databinding.FragmentOnboardingPageBinding
+import com.pegas.aura.aigirlfriend.soul.ui.bases.BaseFragment
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.click
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.goneView
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.invisibleView
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.parcelable
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.visibleView
+import com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.model.NativeFullPlacement
+import com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.model.OnboardingItem
+import com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.viewmodel.OnboardingViewModel
 
 class OnboardingPageFragment : BaseFragment<FragmentOnboardingPageBinding>() {
 

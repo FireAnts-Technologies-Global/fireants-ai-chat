@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.bases.ext
+package com.pegas.aura.aigirlfriend.soul.ui.bases.ext
 
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
 

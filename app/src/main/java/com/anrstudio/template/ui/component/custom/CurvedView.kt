@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.component.custom
+package com.pegas.aura.aigirlfriend.soul.ui.component.custom
 
 import android.content.Context
 import android.graphics.Canvas

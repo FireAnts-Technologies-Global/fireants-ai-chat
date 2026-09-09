@@ -1,9 +1,9 @@
-package com.anrstudio.template.ui.component.onboarding.model
+package com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.model
 
 import android.os.Parcelable
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.anrstudio.template.R
+import com.pegas.aura.aigirlfriend.soul.R
 import kotlinx.parcelize.Parcelize
 
 enum class NativeFullPlacement {

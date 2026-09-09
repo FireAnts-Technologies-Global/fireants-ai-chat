@@ -1,9 +1,9 @@
-package com.anrstudio.template.app
+package com.pegas.aura.aigirlfriend.soul.app
 
-import com.anrstudio.template.ads.AdRemoteConfig
-import com.anrstudio.template.ads.inter_welcome
-import com.anrstudio.template.ads.native_welcome
-import com.anrstudio.template.ads.open_resume
+
+import com.pegas.aura.aigirlfriend.soul.ads.AdRemoteConfig
+import com.pegas.aura.aigirlfriend.soul.ads.inter_welcome_back
+import com.pegas.aura.aigirlfriend.soul.ads.native_welcome_back
 
 enum class ResumeAdsEntryMode {
     OPEN_RESUME,
@@ -16,11 +16,10 @@ object ResumeAdsEntryRule {
         if (!AdRemoteConfig.isInitialized()) return ResumeAdsEntryMode.NONE
 
         val canUseWelcome =
-            AdRemoteConfig.native_welcome.isEnable && AdRemoteConfig.inter_welcome.isEnable
+            AdRemoteConfig.native_welcome_back.isEnable && AdRemoteConfig.inter_welcome_back.isEnable
         if (canUseWelcome) return ResumeAdsEntryMode.WELCOME
 
-        val canUseOpenResume = AdRemoteConfig.open_resume.isEnable
-        return if (canUseOpenResume) ResumeAdsEntryMode.OPEN_RESUME else ResumeAdsEntryMode.NONE
+        return ResumeAdsEntryMode.NONE
     }
 
     fun shouldEnableOpenResume(): Boolean = currentMode() == ResumeAdsEntryMode.OPEN_RESUME

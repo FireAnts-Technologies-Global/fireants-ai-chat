@@ -1,4 +1,4 @@
-package com.anrstudio.template.ads
+package com.pegas.aura.aigirlfriend.soul.ads
 
 import android.app.Activity
 import android.graphics.Color
@@ -9,12 +9,12 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import androidx.core.view.updateLayoutParams
-import com.anrstudio.ads.admob.Admob
-import com.anrstudio.ads.ads.wrapper.ApNativeAd
 import com.facebook.shimmer.ShimmerFrameLayout
-import com.anrstudio.template.R
-import com.anrstudio.template.ui.bases.ext.dpToPx
+import com.fireants.adsdk.admob.Admob
+import com.fireants.adsdk.ads.wrapper.ApNativeAd
 import com.google.android.gms.ads.nativead.NativeAdView
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.dpToPx
 
 fun populateNativeAdView(
     activity: Activity,

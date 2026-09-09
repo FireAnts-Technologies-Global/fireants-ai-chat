@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.bases.ext
+package com.pegas.aura.aigirlfriend.soul.ui.bases.ext
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -45,7 +45,7 @@ private fun clearTopFragment(fm: FragmentManager?) {
         val count = it.backStackEntryCount
         for (i in 0 until count) {
             val tag = it.getBackStackEntryAt(count - 1).name
-            var f = it.findFragmentByTag(tag)
+            it.findFragmentByTag(tag)
             it.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         }
     }

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'org.jetbrains.kotlin.plugin.compose'
     id 'com.google.devtools.ksp'
     id 'dagger.hilt.android.plugin'
     id 'kotlin-parcelize'
@@ -13,19 +14,41 @@ apply from: 'variants-signing.gradle'
 android {
     compileSdk compile_sdk_version
 
+    def customStoreFile = project.findProperty("AI_GIRL_STORE_FILE")
+    def customStorePassword = project.findProperty("AI_GIRL_STORE_PASSWORD")
+    def customKeyAlias = project.findProperty("AI_GIRL_KEY_ALIAS")
+    def customKeyPassword = project.findProperty("AI_GIRL_KEY_PASSWORD")
+    def hasCustomSigning = [customStoreFile, customStorePassword, customKeyAlias, customKeyPassword].every {
+        it != null && it.toString().trim()
+    }
+
+    signingConfigs {
+        if (hasCustomSigning) {
+            fireants {
+                storeFile rootProject.file(customStoreFile.toString())
+                storePassword customStorePassword.toString()
+                keyAlias customKeyAlias.toString()
+                keyPassword customKeyPassword.toString()
+            }
+        }
+    }
+
     defaultConfig {
-        applicationId "com.anrstudio.template"
+        applicationId "com.pegas.aura.aigirlfriend.soul"
         minSdkVersion min_sdk_version
         targetSdk target_sdk_version
-        versionCode 100
-        versionName "1.0.0"
+        versionCode 107
+        versionName "1.0.7"
 
         def formattedDate = new Date().format('MM.dd.yyyy')
-        archivesBaseName = "AI_CHAT_v${versionName}_v${versionCode}_${formattedDate}"
+        archivesBaseName = "AI_Girl_Friend_Project_v${versionName}_v${versionCode}_${formattedDate}"
 
-        buildConfigField "String", "ANRSTUDIO_ADS_VERSION", "\"$anrstudio_ads_sdk\""
+        buildConfigField "String", "ANR_STUDIO_VERSION", "\"$fireants_ads_sdk\""
         buildConfigField "String", "PLAY_SERVICES_ADS_VERSION", "\"$play_services_ads_version\""
-        buildConfigField "String", "GDPR_MODULE_VERSION", "\"$anrstudio_consent\""
+        buildConfigField "String", "GDPR_MODULE_VERSION", "\"$fireants_consent\""
+        buildConfigField "String", "BASE_URL", "\"https://api-chat.fireants.vn/api/v1/\""
+        def revenueCatPublicApiKey = project.findProperty("REVENUECAT_ANDROID_PUBLIC_API_KEY")?.toString()?.trim() ?: ""
+        buildConfigField "String", "REVENUECAT_PUBLIC_API_KEY", "\"${revenueCatPublicApiKey}\""
     }
 
     bundle {
@@ -41,12 +64,14 @@ android {
         def DEV_MODE = "DEV_MODE"
 
         debug {
-            buildConfigField "String", "email_feedback", "\"glorymobile88@gmail.com\""
+            buildConfigField "String", "email_feedback", "\"longtq2609@gmail.com\""
             manifestPlaceholders = [app_id: "ca-app-pub-3940256099942544~3347511713"]
             buildConfigField "Boolean", "build_debug", "true"
             buildConfigField(BOOLEAN, DEV_MODE, TRUE)
-            versionNameSuffix '-dev'
             minifyEnabled false
+            if (hasCustomSigning) {
+                signingConfig signingConfigs.fireants
+            }
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             firebaseCrashlytics {
                 mappingFileUploadEnabled false
@@ -54,8 +79,8 @@ android {
         }
 
         release {
-            buildConfigField "String", "email_feedback", "\"glorymobile88@gmail.com\""
-            manifestPlaceholders = [app_id: "ca-app-pub-3940256099942544~3347511713"]
+            buildConfigField "String", "email_feedback", "\"longtq2609@gmail.com\""
+            manifestPlaceholders = [app_id: "ca-app-pub-7988764211742191~9467888915"]
             buildConfigField "Boolean", "build_debug", "false"
             buildConfigField(BOOLEAN, DEV_MODE, FALSE)
             shrinkResources true
@@ -64,7 +89,7 @@ android {
             firebaseCrashlytics {
                 mappingFileUploadEnabled true
             }
-            signingConfig signingConfigs.debug
+            signingConfig hasCustomSigning ? signingConfigs.fireants : signingConfigs.debug
         }
     }
 
@@ -87,14 +112,15 @@ android {
         dataBinding = true
         viewBinding = true
         buildConfig = true
+        compose = true
     }
-    namespace 'com.anrstudio.template'
+    namespace 'com.pegas.aura.aigirlfriend.soul'
 }
 
 dependencies {
-    implementation 'com.anrstudio:config:1.0.3'
-    implementation "com.anrstudio:consent:$anrstudio_consent"
-    implementation "com.anrstudio:ads:$anrstudio_ads_sdk"
+    implementation 'com.fireants:dev-config:1.0.1'
+    implementation "com.fireants:consent:$fireants_consent"
+    implementation "com.fireants:ads:$fireants_ads_sdk"
 
     // Local AAR modules
     implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'])
@@ -162,11 +188,13 @@ dependencies {
 
     // Billing
     implementation "com.android.billingclient:billing:$billing_version"
+    implementation "com.revenuecat.purchases:purchases:$revenuecat_version"
 
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidx_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_version"
     implementation "androidx.fragment:fragment-ktx:$androidx_fragment_ktx_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_runtime_compose_version"
 
     // Lottie
     implementation "com.airbnb.android:lottie:$lottie_version"
@@ -183,4 +211,19 @@ dependencies {
 
     // ShapeView
     implementation 'io.github.impeterwayne:shape-view:1.0.0'
+
+    // Compose
+    implementation platform("androidx.compose:compose-bom:$compose_bom_version")
+    implementation "androidx.compose.ui:ui"
+    implementation "androidx.compose.ui:ui-tooling-preview"
+    implementation "androidx.compose.foundation:foundation"
+    implementation "androidx.compose.material3:material3"
+    implementation "androidx.compose.material:material-icons-extended:$material_icons_extended_version"
+    implementation "androidx.activity:activity-compose:$activity_compose_version"
+    implementation "androidx.navigation:navigation-compose:$nav_version"
+    implementation "androidx.hilt:hilt-navigation-compose:$hilt_navigation_compose_version"
+    implementation "io.coil-kt:coil-compose:$coil_compose_version"
+    implementation("com.airbnb.android:lottie-compose:6.7.1")
+    debugImplementation "androidx.compose.ui:ui-tooling"
+    implementation("dev.chrisbanes.haze:haze:1.7.2")
 }

@@ -1,14 +1,14 @@
-package com.anrstudio.template.ads
+package com.pegas.aura.aigirlfriend.soul.ads
 
 import android.content.Context
-import com.anrstudio.template.BuildConfig
-import com.anrstudio.template.app.AppConstants.DEFAULT_TIME_DELAY_SHOW_LANGUAGE_DONE_BUTTON
-import com.anrstudio.template.app.GlobalApp
-import com.anrstudio.template.data.model.ForceUpdateConfig
 import com.google.firebase.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.remoteConfig
 import com.google.firebase.remoteconfig.remoteConfigSettings
+import com.pegas.aura.aigirlfriend.soul.BuildConfig
+import com.pegas.aura.aigirlfriend.soul.app.AppConstants.DEFAULT_TIME_DELAY_SHOW_LANGUAGE_DONE_BUTTON
+import com.pegas.aura.aigirlfriend.soul.app.GlobalApp
+import com.pegas.aura.aigirlfriend.soul.data.model.ForceUpdateConfig
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 

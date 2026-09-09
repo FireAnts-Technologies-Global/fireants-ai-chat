@@ -1,4 +1,4 @@
-package com.anrstudio.template.app
+package com.pegas.aura.aigirlfriend.soul.app
 
 import android.app.Activity
 import android.app.Application

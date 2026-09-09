@@ -1,12 +1,12 @@
-package com.anrstudio.template.ui.component.onboarding.adapter
+package com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.adapter
 
 import android.annotation.SuppressLint
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.anrstudio.template.ui.component.onboarding.model.NativeFullPlacement
-import com.anrstudio.template.ui.component.onboarding.model.OnboardingItem
+import com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.model.NativeFullPlacement
+import com.pegas.aura.aigirlfriend.soul.ui.component.onboarding.model.OnboardingItem
 
 class OnboardingAdapter(
     manager: FragmentManager,

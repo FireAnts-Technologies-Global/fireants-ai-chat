@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$android_gradle_plugin_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:compose-compiler-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
         classpath "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:$ksp_version"
         classpath "com.google.gms:google-services:$google_services_version"
@@ -34,7 +35,7 @@ allprojects {
             url = uri("https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea")
         }
         maven {
-            url = uri('https://maven.pkg.github.com/anr-2609/anr-studio-config')
+            url = uri('https://maven.pkg.github.com/anr-2609/fireants-dev-config')
 
             credentials {
                 username = providers.gradleProperty('gpr.user').orNull
@@ -42,7 +43,7 @@ allprojects {
             }
         }
         maven {
-            url = uri('https://maven.pkg.github.com/anr-2609/anr-studio-consent')
+            url = uri('https://maven.pkg.github.com/anr-2609/fireants-consent')
 
             credentials {
                 username = providers.gradleProperty('gpr.user').orNull
@@ -50,7 +51,7 @@ allprojects {
             }
         }
         maven {
-            url = uri('https://maven.pkg.github.com/anr-2609/anr-studio-ads')
+            url = uri('https://maven.pkg.github.com/anr-2609/fireants-ad-sdk')
 
             credentials {
                 username = providers.gradleProperty('gpr.user').orNull

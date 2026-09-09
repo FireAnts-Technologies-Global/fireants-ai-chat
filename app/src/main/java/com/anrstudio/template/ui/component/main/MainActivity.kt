@@ -1,46 +1,63 @@
-package com.anrstudio.template.ui.component.main
+package com.pegas.aura.aigirlfriend.soul.ui.component.main
 
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.anrstudio.template.BuildConfig
-import com.anrstudio.template.R
-import com.anrstudio.template.ads.AdRemoteConfig
-import com.anrstudio.template.ads.RemoteConfigUtils
-import com.anrstudio.template.ads.banner_home
-import com.anrstudio.template.data.model.ForceUpdateConfig
-import com.anrstudio.template.databinding.ActivityMainBinding
-import com.anrstudio.template.ui.bases.BannerConfig
-import com.anrstudio.template.ui.bases.BaseActivityWithBanner
-import com.anrstudio.template.ui.bases.ConsentHandler
-import com.anrstudio.template.ui.component.main.dialog.ForceUpdateDialog
-import com.anrstudio.template.ui.component.main.dialog.NoInternetDialog
-import com.anrstudio.template.utils.ConnectionLiveData
-import com.anrstudio.template.utils.Routes
+import androidx.activity.SystemBarStyle
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
+import com.pegas.aura.aigirlfriend.soul.BuildConfig
+import com.pegas.aura.aigirlfriend.soul.ads.AdRemoteConfig
+import com.pegas.aura.aigirlfriend.soul.ads.RemoteConfigUtils
+import com.pegas.aura.aigirlfriend.soul.ads.banner_all
+import com.pegas.aura.aigirlfriend.soul.data.model.ForceUpdateConfig
+import com.pegas.aura.aigirlfriend.soul.ui.bases.BannerConfig
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ConsentHandler
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.activity.BaseComposeActivityWithBanner
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.showRateDialog
+import com.pegas.aura.aigirlfriend.soul.ui.bases.navigation.AppNavHost
+import com.pegas.aura.aigirlfriend.soul.ui.component.main.dialog.ForceUpdateDialog
+import com.pegas.aura.aigirlfriend.soul.ui.component.main.dialog.NoInternetDialog
+import com.pegas.aura.aigirlfriend.soul.ui.component.rate.RatePromptPolicy
+import com.pegas.aura.aigirlfriend.soul.utils.ConnectionLiveData
+import com.pegas.aura.aigirlfriend.soul.utils.Routes
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
 @AndroidEntryPoint
-class MainActivity : BaseActivityWithBanner<ActivityMainBinding>() {
+class MainActivity : BaseComposeActivityWithBanner() {
 
-    override val bannerConfig = BannerConfig(AdRemoteConfig.banner_home, true)
-
+    override val bannerConfig = BannerConfig(AdRemoteConfig.banner_all, false)
     private lateinit var consentHandler: ConsentHandler
     private val delayHandler = Handler(Looper.getMainLooper())
     private var delayRunnable: Runnable? = null
+    private var rateDelayRunnable: Runnable? = null
     private lateinit var noInternetDialog: NoInternetDialog
     private lateinit var forceUpdateDialog: ForceUpdateDialog
     private var cachedForceUpdateConfig: ForceUpdateConfig? = null
 
-    override fun getLayoutActivity(): Int = R.layout.activity_main
-
-    override fun initViews() {
-        super.initViews()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.light(
+                scrim = Color(0xFF0F0817).toArgb(),
+                darkScrim = Color(0xFF0F0817).toArgb()
+            )
+        )
         noInternetDialog = NoInternetDialog(this)
         forceUpdateDialog = ForceUpdateDialog(this)
         checkInternet()
         initConsentHandler()
         checkConsentStatus()
         maybeShowForceUpdateDialog()
+        delayShowRateDialogAfterEngagement()
+    }
+
+    @androidx.compose.runtime.Composable
+    override fun Content() {
+        AppNavHost(
+        )
     }
 
     private fun initConsentHandler() {
@@ -77,6 +94,7 @@ class MainActivity : BaseActivityWithBanner<ActivityMainBinding>() {
         delayHandler.postDelayed(delayRunnable!!, 5000L)
     }
 
+
     private fun checkInternet() {
         ConnectionLiveData(this).observe(this) { isNetwork ->
             if (isNetwork) {
@@ -89,6 +107,7 @@ class MainActivity : BaseActivityWithBanner<ActivityMainBinding>() {
         }
     }
 
+
     private fun maybeShowForceUpdateDialog() {
         val config = RemoteConfigUtils.getForceUpdateConfig() ?: return
         if (config.storeLink.isBlank()) return
@@ -99,6 +118,21 @@ class MainActivity : BaseActivityWithBanner<ActivityMainBinding>() {
         }
     }
 
+    private fun delayShowRateDialogAfterEngagement() {
+        rateDelayRunnable = Runnable {
+            maybeShowRateDialogAfterEngagement()
+        }
+        delayHandler.postDelayed(rateDelayRunnable!!, RatePromptPolicy.MAIN_DELAY_MS)
+    }
+
+    private fun maybeShowRateDialogAfterEngagement() {
+        if (!RatePromptPolicy.canShowAfterAppEngagement(appSharedPref)) return
+
+        RatePromptPolicy.markShownInSession(appSharedPref)
+        showRateDialog(this@MainActivity, false) {
+            appSharedPref.isRate = true
+        }
+    }
 
     override fun onDestroy() {
         super.onDestroy()
@@ -106,6 +140,9 @@ class MainActivity : BaseActivityWithBanner<ActivityMainBinding>() {
             consentHandler.clear()
         }
         delayRunnable?.let {
+            delayHandler.removeCallbacks(it)
+        }
+        rateDelayRunnable?.let {
             delayHandler.removeCallbacks(it)
         }
         noInternetDialog.dismiss()

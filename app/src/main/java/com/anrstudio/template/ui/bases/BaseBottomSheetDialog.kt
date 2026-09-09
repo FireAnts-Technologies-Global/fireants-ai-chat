@@ -1,12 +1,12 @@
-package com.anrstudio.template.ui.bases
+package com.pegas.aura.aigirlfriend.soul.ui.bases
 
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.anrstudio.template.R
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.pegas.aura.aigirlfriend.soul.R
 
 abstract class BaseBottomSheetDialog<VB : ViewDataBinding>(
     context: Context,

@@ -45,11 +45,11 @@
             android:layout_marginStart="2dp"
             android:layout_marginEnd="8dp"
             android:lines="1"
-            android:textColor="@color/textPrimary"
+            android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@id/ad_icon"
-            app:layout_constraintEnd_toStartOf="@id/ad_media"
             app:layout_constraintStart_toEndOf="@id/ad_icon"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/ad_icon"
             tools:text="Headline" />
 
@@ -60,7 +60,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="2dp"
             android:lines="1"
-            android:textColor="@color/color_9E9E9E"
+            android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/ad_headline"
@@ -68,21 +68,14 @@
             app:layout_constraintTop_toBottomOf="@id/ad_headline"
             tools:text="Ad advertiser" />
 
-        <com.google.android.gms.ads.nativead.MediaView
-            android:id="@+id/ad_media"
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/ad_app_icon" />
+
 
         <TextView
             android:id="@+id/ad_body"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/color_9E9E9E"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@id/ad_advertiser"
             app:layout_constraintStart_toStartOf="@id/ad_app_icon"
@@ -94,15 +87,16 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/bg_btn_native_cta"
             android:textAllCaps="false"
-            android:textColor="#ffffff"
+            android:textColor="@color/black"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/ad_media"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/ad_body"
-            app:layout_constraintTop_toBottomOf="@id/ad_media"
+            app:layout_constraintTop_toBottomOf="@id/ad_body"
             tools:text="Install" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.gms.ads.nativead.NativeAdView>

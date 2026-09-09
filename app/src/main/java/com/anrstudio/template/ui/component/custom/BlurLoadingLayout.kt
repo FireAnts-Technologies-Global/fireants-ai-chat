@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.component.custom
+package com.pegas.aura.aigirlfriend.soul.ui.component.custom
 
 import android.app.Activity
 import android.content.Context
@@ -8,7 +8,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.anrstudio.template.R
+import com.pegas.aura.aigirlfriend.soul.R
 import eightbitlab.com.blurview.BlurTarget
 import eightbitlab.com.blurview.BlurView
 

@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.bases
+package com.pegas.aura.aigirlfriend.soul.ui.bases
 
 open class BaseState(val msg: String? = null) {
     fun getTitle(): String =

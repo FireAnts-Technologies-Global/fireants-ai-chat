@@ -1,33 +1,40 @@
-package com.anrstudio.template.ui.component.splash
+package com.pegas.aura.aigirlfriend.soul.ui.component.splash
 
 import android.annotation.SuppressLint
 import android.os.CountDownTimer
-import com.anrstudio.ads.admob.Admob
-import com.anrstudio.ads.ads.ANRAdSdk
-import com.anrstudio.ads.funtion.AdCallback
-import com.anrstudio.template.R
-import com.anrstudio.template.ads.AdRemoteConfig
-import com.anrstudio.template.ads.AdUnitConfig
-import com.anrstudio.template.ads.AdsManager
-import com.anrstudio.template.ads.AdsManager.loadNativeLanguage
-import com.anrstudio.template.ads.RemoteConfigUtils
-import com.anrstudio.template.ads.banner_splash
-import com.anrstudio.template.ads.inter_splash
-import com.anrstudio.template.app.AppConstants
-import com.anrstudio.template.app.GlobalApp
-import com.anrstudio.template.databinding.ActivitySplashBinding
-import com.anrstudio.template.ui.bases.BannerConfig
-import com.anrstudio.template.ui.bases.BaseActivityWithBanner
-import com.anrstudio.template.ui.bases.ConsentHandler
-import com.anrstudio.template.ui.bases.StatusBarConfig
-import com.anrstudio.template.ui.bases.ext.goneView
-import com.anrstudio.template.ui.bases.ext.isNetwork
-import com.anrstudio.template.utils.Routes
+import androidx.activity.viewModels
+import com.bumptech.glide.Glide
+import com.fireants.adsdk.admob.Admob
+import com.fireants.adsdk.ads.FireAntsAdSdk
+import com.fireants.adsdk.funtion.AdCallback
+import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ads.AdRemoteConfig
+import com.pegas.aura.aigirlfriend.soul.ads.AdUnitConfig
+import com.pegas.aura.aigirlfriend.soul.ads.AdsManager
+import com.pegas.aura.aigirlfriend.soul.ads.AdsManager.loadNativeLanguage
+import com.pegas.aura.aigirlfriend.soul.ads.RemoteConfigUtils
+import com.pegas.aura.aigirlfriend.soul.ads.banner_splash
+import com.pegas.aura.aigirlfriend.soul.ads.inter_splash
+import com.pegas.aura.aigirlfriend.soul.app.AppConstants
+import com.pegas.aura.aigirlfriend.soul.app.GlobalApp
+import com.pegas.aura.aigirlfriend.soul.databinding.ActivitySplashBinding
+import com.pegas.aura.aigirlfriend.soul.ui.bases.BannerConfig
+import com.pegas.aura.aigirlfriend.soul.ui.bases.BaseActivityWithBanner
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ConsentHandler
+import com.pegas.aura.aigirlfriend.soul.ui.bases.StatusBarConfig
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.goneView
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.isNetwork
+import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.showToastByString
+import com.pegas.aura.aigirlfriend.soul.ui.component.splash.viewmodel.SplashViewModel
+import com.pegas.aura.aigirlfriend.soul.ui.model.asString
+import com.pegas.aura.aigirlfriend.soul.utils.Routes
 import dagger.hilt.android.AndroidEntryPoint
 
 @SuppressLint("CustomSplashScreen")
 @AndroidEntryPoint
 class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteConfigUtils.Listener {
+    private val viewModel: SplashViewModel by viewModels()
+    private var authBootstrapFinished = false
 
     override var bannerConfig: BannerConfig = BannerConfig(
         adUnitConfig = AdUnitConfig(
@@ -50,6 +57,16 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
     override fun initViews() {
         super.initViews()
+        Glide.with(this@SplashActivity).load(R.drawable.bg_splash).centerCrop().into(mBinding.imgBg)
+        observeAuthBootstrap()
+        viewModel.bootstrapAuth(
+            hasAccessToken = appSharedPref.accessToken.isNotBlank(),
+            hasRefreshToken = appSharedPref.refreshToken.isNotBlank(),
+            hasResumeGuestToken = appSharedPref.resumeGuestToken.isNotBlank(),
+            hasNetwork = isNetwork()
+        )
+        appSharedPref.isRateShownInSession = false
+        appSharedPref.openAppCount = appSharedPref.openAppCount + 1
         AdsManager.clearAll()
         RemoteConfigUtils.init(this, this)
         consentHandler = ConsentHandler(
@@ -66,6 +83,17 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
     }
 
+    private fun observeAuthBootstrap() {
+        viewModel.authBootstrapFinished.observe(this) { finished ->
+            authBootstrapFinished = finished == true
+        }
+        viewModel.authBootstrapError.observe(this) { error ->
+            if (error == null) return@observe
+            showToastByString(error.asString(this))
+            viewModel.onAuthBootstrapErrorHandled()
+        }
+    }
+
 
     private fun loadingRemoteConfig() {
         val totalTime = AppConstants.DEFAULT_TIME_SPLASH
@@ -75,7 +103,7 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
             override fun onTick(millisUntilFinished: Long) {
                 val elapsed = totalTime - millisUntilFinished
                 mBinding.progressSplash.progress = (elapsed * 100 / totalTime).toInt()
-                if (getConfigSuccess && millisUntilFinished < AppConstants.DEFAULT_LIMIT_TIME_SPLASH) {
+                if (getConfigSuccess && authBootstrapFinished && millisUntilFinished < AppConstants.DEFAULT_LIMIT_TIME_SPLASH) {
                     checkRemoteConfigResult()
                     cancel()
                 }
@@ -108,7 +136,7 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
         if (AdRemoteConfig.inter_splash.isEnable && isNetwork(this@SplashActivity)) {
             Admob.getInstance().setOpenActivityAfterShowInterAds(false)
-            ANRAdSdk.getInstance().loadSplashInterstitialAds(
+            FireAntsAdSdk.getInstance().loadSplashInterstitialAds(
                 this,
                 AdRemoteConfig.inter_splash.id,
                 30000,
@@ -117,6 +145,11 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
                     override fun onNextAction() {
                         super.onNextAction()
                         moveActivity()
+                    }
+
+                    override fun onAdClosed() {
+                        super.onAdClosed()
+                        AdsManager.setupTimeShowAd()
                     }
                 })
         } else {
@@ -134,7 +167,7 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
     override fun onResume() {
         super.onResume()
-        ANRAdSdk.getInstance()
+        FireAntsAdSdk.getInstance()
             .onCheckShowSplashWhenFail(this@SplashActivity, object : AdCallback() {
                 override fun onNextAction() {
                     super.onNextAction()

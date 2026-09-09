@@ -1,4 +1,4 @@
-package com.anrstudio.template.ui.bases.ext
+package com.pegas.aura.aigirlfriend.soul.ui.bases.ext
 
 import android.content.Intent
 import android.os.Build.VERSION.SDK_INT

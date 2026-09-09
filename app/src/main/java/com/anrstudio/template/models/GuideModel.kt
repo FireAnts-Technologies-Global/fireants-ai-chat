@@ -1,4 +1,4 @@
-package com.anrstudio.template.models
+package com.pegas.aura.aigirlfriend.soul.models
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

@@ -44,7 +44,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_64
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appVerticalGradientBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
 import com.pegas.aura.aigirlfriend.soul.ui.component.custom.LoadingAsyncImage
 import java.text.SimpleDateFormat
@@ -206,7 +206,7 @@ private fun ConversationHistoryItemWithImagePreview() {
         modifier = Modifier
             .fillMaxWidth()
             .background(Color08030F)
-            .appVerticalGradientBackground()
+            .appSplashBackground()
             .padding(SdpR_16)
     ) {
         ConversationHistoryItem(
@@ -240,7 +240,7 @@ private fun ConversationHistoryItemWithoutImagePreview() {
         modifier = Modifier
             .fillMaxWidth()
             .background(Color08030F)
-            .appVerticalGradientBackground()
+            .appSplashBackground()
             .padding(SdpR_16)
     ) {
         ConversationHistoryItem(

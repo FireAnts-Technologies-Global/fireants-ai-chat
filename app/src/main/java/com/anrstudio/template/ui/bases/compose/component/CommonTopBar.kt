@@ -29,6 +29,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -37,30 +39,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorF1CBB7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitExtraBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_0
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_18
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_28
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_36
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_44
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_5
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.setting.SettingActivity
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeEffect
@@ -209,22 +188,39 @@ private fun BackButton(
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
-    val interactionSource = remember {
-        MutableInteractionSource()
-    }
+    val interactionSource = remember { MutableInteractionSource() }
 
-    Icon(
-        painter = painterResource(R.drawable.ic_back_circle),
-        contentDescription = stringResource(R.string.close),
-        tint = ColorF1CBB7,
+    Box(
         modifier = modifier
             .size(SdpR_36)
+            .shadow(
+                elevation = SdpR_1,
+                shape = CircleShape,
+                clip = false
+            )
+            .background(
+                color = Color.White,
+                shape = CircleShape
+            )
+            .border(
+                width = SdpR_1,
+                color = Color(0xFFE9DDF2),
+                shape = CircleShape
+            )
             .clickable(
                 interactionSource = interactionSource,
                 indication = null,
                 onClick = onClick
-            )
-    )
+            ),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_chevron_left),
+            contentDescription = stringResource(R.string.close),
+            tint = Color(0xFFE25798),
+            modifier = Modifier.size(SdpR_15)
+        )
+    }
 }
 
 @Composable
@@ -242,10 +238,10 @@ private fun DefaultTitleContent(
             Image(
                 painter = painterResource(R.drawable.img_dot),
                 contentDescription = null,
-                modifier = Modifier.size(SdpR_16)
+                modifier = Modifier.size(SdpR_20)
             )
 
-            Spacer(modifier = Modifier.width(SdpR_8))
+            Spacer(modifier = Modifier.width(SdpR_2))
         }
 
         Text(
@@ -253,16 +249,16 @@ private fun DefaultTitleContent(
             fontSize = SdpR_20.nonScaledSp,
             style = MaterialTheme.typography.titleLarge,
             fontFamily = if (hasBackButton) {
-                OutfitExtraBold
+                ManropeExtraBold
             } else {
-                OutfitBold
+                ManropeBold
             },
             fontWeight = if (hasBackButton) {
                 FontWeight.ExtraBold
             } else {
                 FontWeight.Bold
             },
-            color = ColorFDFDFD,
+            color = Color000000,
             maxLines = 1
         )
     }
@@ -307,7 +303,7 @@ private fun ChatTitleContent(
 
                 Text(
                     text = subtitle,
-                    fontFamily = ManropeRegular,
+                    fontFamily = ManropeMedium,
                     fontWeight = FontWeight.Medium,
                     fontSize = SdpR_11.nonScaledSp,
                     color = ColorF1CBB7,
@@ -338,7 +334,7 @@ private fun DefaultTopBarActions(
         )
 
         CircleAction(
-            iconRes = R.drawable.ic_trophy,
+            iconRes = R.drawable.img_trophy,
             contentDescription = "Trophy",
             onClick = onTrophyClick
         )
@@ -384,7 +380,7 @@ private fun ChatTopBarActions(
             Icon(
                 painter = painterResource(R.drawable.ic_more),
                 contentDescription = "More",
-                tint = ColorF1CBB7,
+                tint = Color.Unspecified,
                 modifier = Modifier.size(SdpR_32)
             )
         }
@@ -402,7 +398,7 @@ fun CoinAction(
         modifier = Modifier
             .height(SdpR_28)
             .background(
-                color = Color(0x0AFFFFFF),
+                color = ColorFFFFFF,
                 shape = RoundedCornerShape(SdpR_16)
             )
             .border(
@@ -435,10 +431,10 @@ fun CoinAction(
 
         Text(
             text = coinCount.toString(),
-            fontFamily = OutfitBold,
+            fontFamily = ManropeBold,
             fontSize = SdpR_13.nonScaledSp,
             fontWeight = FontWeight.Bold,
-            color = ColorFDFDFD
+            color = Color000000
         )
 
         if (showAddButton) {
@@ -458,12 +454,17 @@ private fun AddCoinButton(
     val interactionSource = remember {
         MutableInteractionSource()
     }
-
     Box(
         modifier = Modifier
             .size(SdpR_18)
             .background(
-                color = ColorF1CBB7,
+                brush = Brush.horizontalGradient(
+                    colors = listOf(
+                        Color(0xFFD94BEE),
+                        Color(0xFFF84DB5),
+                        Color(0xFFFF6B8A)
+                    )
+                ),
                 shape = CircleShape
             )
             .clickable(
@@ -476,10 +477,10 @@ private fun AddCoinButton(
         contentAlignment = Alignment.Center
     ) {
         Icon(
-            imageVector = Icons.Rounded.Add,
+            painter = painterResource(R.drawable.ic_add_coin),
             contentDescription = null,
-            tint = Color08030F,
-            modifier = Modifier.size(SdpR_18)
+            tint = ColorFFFFFF,
+            modifier = Modifier.size(SdpR_10)
         )
     }
 }
@@ -509,7 +510,7 @@ private fun CircleAction(
         Icon(
             painter = painterResource(iconRes),
             contentDescription = contentDescription,
-            tint = ColorF1CBB7,
+            tint = Color.Unspecified,
             modifier = Modifier.size(SdpR_32)
         )
     }
@@ -517,7 +518,6 @@ private fun CircleAction(
 
 @Preview(
     showBackground = true,
-    backgroundColor = 0xFF08030F,
     widthDp = 430
 )
 @Composable
@@ -530,7 +530,6 @@ private fun CommonTopBarPreview() {
 
 @Preview(
     showBackground = true,
-    backgroundColor = 0xFF08030F,
     widthDp = 430
 )
 @Composable
@@ -544,7 +543,6 @@ private fun CommonTopBarWithBackPreview() {
 
 @Preview(
     showBackground = true,
-    backgroundColor = 0xFF08030F,
     widthDp = 430
 )
 @Composable
@@ -560,7 +558,6 @@ private fun CommonTopBarNotTitleWithBackPreview() {
 
 @Preview(
     showBackground = true,
-    backgroundColor = 0xFF08030F,
     widthDp = 430
 )
 @Composable

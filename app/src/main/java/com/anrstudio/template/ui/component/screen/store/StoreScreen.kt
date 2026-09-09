@@ -30,7 +30,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appVerticalGradientBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.findActivity
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.LoadingDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.store.component.CoinPackageItem
@@ -218,7 +218,7 @@ private fun StoreContentPreview() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .appVerticalGradientBackground()
+            .appSplashBackground()
     ) {
         StoreContent(
             state = StoreUiState(

@@ -25,7 +25,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appVerticalGradientBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.findActivity
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.reward.component.CheckInRewardDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.reward.component.ClaimRewardDialog
@@ -98,7 +98,7 @@ private fun RewardContent(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .appVerticalGradientBackground()
+            .appSplashBackground()
     ) {
         Scaffold(
             containerColor = Color.Transparent

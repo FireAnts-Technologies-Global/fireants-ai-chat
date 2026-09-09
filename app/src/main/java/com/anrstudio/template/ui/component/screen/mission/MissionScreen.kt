@@ -43,7 +43,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appVerticalGradientBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.mission.component.MissionHistoryItemCard
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.mission.component.MissionTabSelector
@@ -82,7 +82,7 @@ private fun MissionContent(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .appVerticalGradientBackground()
+            .appSplashBackground()
     ) {
         Scaffold(
             containerColor = Color.Transparent

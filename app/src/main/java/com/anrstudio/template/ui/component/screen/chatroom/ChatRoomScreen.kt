@@ -52,7 +52,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseScreen
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appVerticalGradientBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.showRateDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.custom.LoadingAsyncImage
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.chatroom.component.ChatActionsBottomSheet
@@ -570,7 +570,7 @@ private fun ChatRoomScreenPreview() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .appVerticalGradientBackground()
+            .appSplashBackground()
     ) {
 
         ChatRoomContent(

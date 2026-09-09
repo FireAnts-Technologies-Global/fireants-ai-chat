@@ -59,7 +59,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_280
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appVerticalGradientBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.ActionConfirmationDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.chatlist.component.SwipeableConversationHistoryItem
@@ -272,7 +272,7 @@ private fun ChatListScreenEmptyPreview() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .appVerticalGradientBackground()
+            .appSplashBackground()
     ) {
         Scaffold(
             modifier = Modifier.fillMaxSize(),
@@ -289,7 +289,7 @@ private fun ChatListScreenWithDataPreview() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .appVerticalGradientBackground()
+            .appSplashBackground()
     ) {
         ChatListContent(
             state = ChatListUiState(

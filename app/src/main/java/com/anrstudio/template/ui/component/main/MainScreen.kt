@@ -25,7 +25,7 @@ import com.pegas.aura.aigirlfriend.soul.ads.banner_all
 import com.pegas.aura.aigirlfriend.soul.ui.ads.navigateWithHomeInterstitial
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.BannerAdView
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.CommonTopBar
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appVerticalGradientBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.navigation.AppRoutes
 import com.pegas.aura.aigirlfriend.soul.ui.bases.navigation.MainNavHost
 import com.pegas.aura.aigirlfriend.soul.ui.component.main.view.MainBottomBar
@@ -83,7 +83,7 @@ fun MainScreen(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .appVerticalGradientBackground()
+                    .appSplashBackground()
                     .padding(paddingValues)
             ) {
                 MainNavHost(

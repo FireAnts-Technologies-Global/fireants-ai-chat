@@ -32,7 +32,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appVerticalGradientBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.CharacterCard
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.CreateAssistantBanner
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.HomeEmptyContent
@@ -205,7 +205,7 @@ private fun HomeContentPreview() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .appVerticalGradientBackground()
+            .appSplashBackground()
     ) {
         HomeContent(
             state = HomeUiState(

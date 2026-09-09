@@ -22,14 +22,7 @@ import com.pegas.aura.aigirlfriend.soul.ads.AdRemoteConfig
 import com.pegas.aura.aigirlfriend.soul.ads.banner_all
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.BannerAdView
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.CommonTopBar
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_28
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -188,12 +181,12 @@ private fun CreateContentPreview() {
         ),
         ageOptions = listOf("20", "30", "40", "50"),
         skinTones = listOf(
-            Color(0xFFFFD7B8),
-            Color(0xFFF3BD95),
-            Color(0xFFE0A56F),
-            Color(0xFFC98555),
-            Color(0xFF9F6038),
-            Color(0xFF663A1C)
+            ColorFFD7B8,
+            ColorF3BD95,
+            ColorE0A56F,
+            ColorC98555,
+            Color9F6038,
+            Color663A1C
         ),
         hairOptions = listOf(
             CreateImageOption("Blonde", com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty),

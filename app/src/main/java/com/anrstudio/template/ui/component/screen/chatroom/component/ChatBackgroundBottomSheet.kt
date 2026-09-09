@@ -33,14 +33,7 @@ import androidx.compose.ui.text.font.FontWeight
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.character.CharacterBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color000000
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color161127
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitRegular
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
@@ -147,7 +140,7 @@ private fun ChatBackgroundItemCard(
     isSelected: Boolean,
     onClick: () -> Unit
 ) {
-    val borderColor = if (isSelected) Color(0xFFFF2E93) else Color322D41
+    val borderColor = if (isSelected) ColorFF2E93 else Color322D41
     val borderWidth = if (isSelected) SdpR_2 else SdpR_1
 
     Card(

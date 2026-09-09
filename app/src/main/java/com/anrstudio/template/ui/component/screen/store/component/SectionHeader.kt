@@ -11,13 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
 fun SectionHeader(
@@ -44,7 +38,7 @@ fun SectionHeader(
             text = subtitle,
             fontFamily = ManropeRegular,
             fontSize = SdpR_12.nonScaledSp,
-            color = Color(0xFFA69EB3)
+            color = ColorA69EB3
         )
     }
 }

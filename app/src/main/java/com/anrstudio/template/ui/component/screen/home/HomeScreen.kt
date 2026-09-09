@@ -11,16 +11,27 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.pegas.aura.aigirlfriend.soul.R
@@ -28,16 +39,12 @@ import com.pegas.aura.aigirlfriend.soul.domain.model.character.Character
 import com.pegas.aura.aigirlfriend.soul.domain.model.character.CharacterCategorySummary
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseScreen
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.CharacterCard
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.CreateAssistantBanner
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.HomeEmptyContent
+import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.RecommendSection
+import com.pegas.aura.aigirlfriend.soul.ui.component.screen.home.component.TopAssistantsBentoSection
 
 @Composable
 fun HomeScreen(
@@ -73,7 +80,7 @@ fun HomeScreen(
             onLoadMore = {
                 onIntent(HomeIntent.LoadMore)
             },
-            onCreateAssistant = onCreateAssistant,
+            onCreateAssistant = onCreateAssistant
         )
     }
 }
@@ -83,15 +90,33 @@ private fun HomeContent(
     state: HomeUiState,
     onOpenCharacterDetail: (String) -> Unit = {},
     onLoadMore: () -> Unit = {},
-    onCreateAssistant: () -> Unit = {},
+    onCreateAssistant: () -> Unit = {}
 ) {
-    val gridState = rememberLazyGridState()
+    val topAssistants = remember(state.characters) {
+        state.characters
+            .sortedWith(
+                compareByDescending<Character> { it.ratingStars ?: 0.0 }
+                    .thenByDescending { it.ratingCount }
+                    .thenByDescending { it.likes }
+            )
+            .take(3)
+    }
+
+    val topIds = remember(topAssistants) { topAssistants.map { it.id }.toSet() }
+    val recommendCharacters = remember(state.characters, topIds) {
+        val remaining = state.characters.filter { it.id !in topIds }
+        if (remaining.isNotEmpty()) remaining else state.characters
+    }
+
+    var showAllGrid by remember { mutableStateOf(false) }
+    val listState = rememberLazyListState()
+
     val shouldLoadMore = remember(state.hasNextPage, state.isLoadingMore, state.error) {
         state.hasNextPage && !state.isLoadingMore && state.error == null
     }
 
     LaunchedEffect(
-        gridState,
+        listState,
         state.characters.size,
         shouldLoadMore
     ) {
@@ -100,11 +125,11 @@ private fun HomeContent(
         }
 
         snapshotFlow {
-            gridState.layoutInfo.visibleItemsInfo.lastOrNull()?.index
+            listState.layoutInfo.visibleItemsInfo.lastOrNull()?.index
         }.collect { lastVisibleIndex ->
             if (
                 lastVisibleIndex != null &&
-                lastVisibleIndex >= state.characters.lastIndex - LOAD_MORE_THRESHOLD
+                lastVisibleIndex >= (state.characters.size - LOAD_MORE_THRESHOLD)
             ) {
                 onLoadMore()
             }
@@ -131,52 +156,90 @@ private fun HomeContent(
                 }
 
                 state.characters.isEmpty() -> {
-                    HomeEmptyContent(modifier = Modifier)
+                    HomeEmptyContent(modifier = Modifier.align(Alignment.Center))
                 }
 
                 else -> {
-                    LazyVerticalGrid(
-                        columns = GridCells.Fixed(2),
-                        state = gridState,
+                    LazyColumn(
+                        state = listState,
                         modifier = Modifier.fillMaxSize(),
                         contentPadding = PaddingValues(
-                            start = SdpR_16,
                             top = SdpR_12,
-                            end = SdpR_16,
                             bottom = SdpR_100
                         ),
-                        verticalArrangement = Arrangement.spacedBy(SdpR_12),
-                        horizontalArrangement = Arrangement.spacedBy(SdpR_12)
+                        verticalArrangement = Arrangement.spacedBy(SdpR_20)
                     ) {
-                        item(
-                            key = "create_assistant_banner",
-                            span = { GridItemSpan(maxLineSpan) }
-                        ) {
+                        item(key = "create_assistant_banner") {
                             CreateAssistantBanner(
                                 backgroundPainter = painterResource(R.drawable.bg_create),
-                                onCreateClick = onCreateAssistant
+                                onCreateClick = onCreateAssistant,
+                                modifier = Modifier.padding(horizontal = SdpR_16)
                             )
                         }
 
-                        items(
-                            items = state.characters,
-                            key = { it.id },
-                            contentType = { "character" }
-                        ) { character ->
-                            CharacterCard(
-                                character = character,
-                                onClick = {
-                                    onOpenCharacterDetail(character.slug)
+                        item(key = "top_assistants_section") {
+                            TopAssistantsBentoSection(
+                                topAssistants = topAssistants,
+                                onCharacterClick = onOpenCharacterDetail,
+                                modifier = Modifier.padding(horizontal = SdpR_16)
+                            )
+                        }
+
+                        item(key = "recommend_section") {
+                            RecommendSection(
+                                characters = recommendCharacters,
+                                onCharacterClick = onOpenCharacterDetail,
+                                onSeeAllClick = {
+                                    showAllGrid = !showAllGrid
                                 }
                             )
                         }
 
+                        if (showAllGrid) {
+                            item(key = "all_characters_header") {
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = SdpR_16),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Text(
+                                        text = stringResource(R.string.home_all_characters),
+                                        fontFamily = OutfitBold,
+                                        fontWeight = FontWeight.Bold,
+                                        fontSize = SdpR_18.nonScaledSp,
+                                        color = ColorFDFDFD
+                                    )
+                                }
+                            }
+
+                            items(
+                                items = recommendCharacters.chunked(2),
+                                key = { row -> row.firstOrNull()?.id ?: "" }
+                            ) { rowItems ->
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = SdpR_16),
+                                    horizontalArrangement = Arrangement.spacedBy(SdpR_12)
+                                ) {
+                                    rowItems.forEach { character ->
+                                        Box(modifier = Modifier.weight(1f)) {
+                                            CharacterCard(
+                                                character = character,
+                                                onClick = { onOpenCharacterDetail(character.slug) }
+                                            )
+                                        }
+                                    }
+                                    if (rowItems.size == 1) {
+                                        Spacer(modifier = Modifier.weight(1f))
+                                    }
+                                }
+                            }
+                        }
+
                         if (state.isLoadingMore) {
-                            item(
-                                key = "load_more",
-                                span = { GridItemSpan(maxLineSpan) },
-                                contentType = "loading"
-                            ) {
+                            item(key = "load_more") {
                                 Box(
                                     modifier = Modifier
                                         .fillMaxWidth()

@@ -27,25 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.conversation.ConversationCharacterSummary
 import com.pegas.aura.aigirlfriend.soul.domain.model.conversation.ConversationSummary
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color6B5E80
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeMedium
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_64
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.custom.LoadingAsyncImage
 import java.text.SimpleDateFormat
 import java.util.Locale
@@ -123,7 +105,7 @@ internal fun ConversationHistoryItem(
                         Box(
                             modifier = Modifier
                                 .background(
-                                    color = Color(0xFF8A56EC).copy(alpha = 0.2f),
+                                    color = Color8A56EC.copy(alpha = 0.2f),
                                     shape = RoundedCornerShape(SdpR_4)
                                 )
                                 .padding(horizontal = SdpR_6, vertical = SdpR_2)
@@ -131,7 +113,7 @@ internal fun ConversationHistoryItem(
                             Text(
                                 text = stringResource(R.string.chat_list_my_ai),
                                 style = MaterialTheme.typography.labelSmall,
-                                color = Color(0xFFC0A3FF),
+                                color = ColorC0A3FF,
                                 fontSize = SdpR_10.nonScaledSp,
                                 fontWeight = FontWeight.Bold
                             )

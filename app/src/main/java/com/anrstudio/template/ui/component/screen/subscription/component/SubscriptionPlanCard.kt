@@ -22,23 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitExtraBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_15
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_18
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_9
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.subscription.SubscriptionPlanUiModel
 
 @Composable
@@ -47,16 +31,16 @@ fun SubscriptionPlanCard(
     isSelected: Boolean,
     onClick: () -> Unit
 ) {
-    val activeColor = Color(0xFFF1CBB7)
+    val activeColor = ColorF1CBB7
     val borderColor = when {
         plan.isActivePlan -> activeColor
         isSelected -> ColorD65A98
-        else -> Color(0xFF271E38)
+        else -> Color271E38
     }
     val bgColor = when {
-        plan.isActivePlan -> Color(0x1A4CAF50)
-        isSelected -> Color(0x1AD65A98)
-        else -> Color(0xFF1B1227)
+        plan.isActivePlan -> Color1A4CAF50
+        isSelected -> Color1AD65A98
+        else -> Color1B1227
     }
     val textColor = when {
         plan.isActivePlan -> activeColor

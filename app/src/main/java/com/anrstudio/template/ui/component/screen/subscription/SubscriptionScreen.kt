@@ -42,22 +42,7 @@ import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.app.AppConstants
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseScreen
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitExtraBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitSemiBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_28
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_3
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_40
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
@@ -146,9 +131,9 @@ fun SubscriptionScreenContent(
             .fillMaxSize()
             .background(
                 brush = Brush.verticalGradient(
-                    0.0f to Color(0xFF0B0616),
-                    0.5f to Color(0xFF160C2C),
-                    1.0f to Color(0xFF07030D)
+                    0.0f to Color0B0616,
+                    0.5f to Color160C2C,
+                    1.0f to Color07030D
                 )
             )
     ) {
@@ -215,7 +200,7 @@ fun SubscriptionScreenContent(
                             .align(Alignment.BottomCenter)
                             .background(
                                 brush = Brush.verticalGradient(
-                                    colors = listOf(Color.Transparent, Color(0xFF0B0616))
+                                    colors = listOf(Color.Transparent, Color0B0616)
                                 )
                             )
                     )
@@ -370,7 +355,7 @@ fun SubscriptionScreenContent(
                             .clip(RoundedCornerShape(SdpR_24))
                             .background(
                                 brush = Brush.horizontalGradient(
-                                    colors = listOf(Color(0xFFD25A9F), Color(0xFFBE5AD2))
+                                    colors = listOf(ColorD25A9F, ColorBE5AD2)
                                 )
                             )
                             .clickable { onSubscribeClick() },

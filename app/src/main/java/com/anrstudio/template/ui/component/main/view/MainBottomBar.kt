@@ -90,9 +90,9 @@ private fun RowScope.BottomBarItem(
                     .background(
                         brush = Brush.horizontalGradient(
                             colors = listOf(
-                                Color(0xFFD94BEE),
-                                Color(0xFFF84DB5),
-                                Color(0xFFFF6B8A)
+                                ColorD94BEE,
+                                ColorF84DB5,
+                                ColorFF6B8A
                             )
                         ),
                         shape = CircleShape

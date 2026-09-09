@@ -204,7 +204,7 @@ private fun BackButton(
             )
             .border(
                 width = SdpR_1,
-                color = Color(0xFFE9DDF2),
+                color = ColorE9DDF2,
                 shape = CircleShape
             )
             .clickable(
@@ -217,7 +217,7 @@ private fun BackButton(
         Icon(
             painter = painterResource(R.drawable.ic_chevron_left),
             contentDescription = stringResource(R.string.close),
-            tint = Color(0xFFE25798),
+            tint = ColorE25798,
             modifier = Modifier.size(SdpR_15)
         )
     }
@@ -293,7 +293,7 @@ private fun ChatTitleContent(
                         modifier = Modifier
                             .size(SdpR_6)
                             .background(
-                                color = Color(0xFF4CD137),
+                                color = Color4CD137,
                                 shape = CircleShape
                             )
                     )
@@ -403,7 +403,7 @@ fun CoinAction(
             )
             .border(
                 width = SdpR_1,
-                color = Color(0x17FFFFFF),
+                color = Color17FFFFFF,
                 shape = RoundedCornerShape(SdpR_20)
             )
             .clickable(
@@ -460,9 +460,9 @@ private fun AddCoinButton(
             .background(
                 brush = Brush.horizontalGradient(
                     colors = listOf(
-                        Color(0xFFD94BEE),
-                        Color(0xFFF84DB5),
-                        Color(0xFFFF6B8A)
+                        ColorD94BEE,
+                        ColorF84DB5,
+                        ColorFF6B8A
                     )
                 ),
                 shape = CircleShape

@@ -14,6 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseScreen
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.creat.component.CREATE_TOTAL_STEPS
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.creat.component.CreateContent
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.creat.component.CreateImageOption
@@ -158,12 +159,12 @@ private fun CreateRoute(
     )
     val ageOptions = listOf("20", "30", "40", "50")
     val skinTones = listOf(
-        Color(0xFFFFD7B8),
-        Color(0xFFF3BD95),
-        Color(0xFFE0A56F),
-        Color(0xFFC98555),
-        Color(0xFF9F6038),
-        Color(0xFF663A1C)
+        ColorFFD7B8,
+        ColorF3BD95,
+        ColorE0A56F,
+        ColorC98555,
+        Color9F6038,
+        Color663A1C
     )
     val hairOptions = listOf(
         CreateImageOption(

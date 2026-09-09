@@ -45,19 +45,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color0AFFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color0FD65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color17FFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorA197B9
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitExtraBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitSemiBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
@@ -133,9 +121,9 @@ fun CoinsBottomSheet(
                 .fillMaxWidth()
                 .background(
                     brush = Brush.verticalGradient(
-                        0.0f to Color(0xFF0B0616),
-                        0.5f to Color(0xFF160C2C),
-                        1.0f to Color(0xFF07030D)
+                        0.0f to Color0B0616,
+                        0.5f to Color160C2C,
+                        1.0f to Color07030D
                     ),
                     shape = RoundedCornerShape(topStart = SdpR_24, topEnd = SdpR_24)
                 )
@@ -150,7 +138,7 @@ fun CoinsBottomSheet(
                     modifier = Modifier
                         .size(width = 32.dp, height = 4.dp)
                         .background(
-                            color = Color(0xFFE5E5E7).copy(alpha = 0.4f),
+                            color = ColorE5E5E7.copy(alpha = 0.4f),
                             shape = RoundedCornerShape(2.dp)
                         )
                 )
@@ -360,9 +348,9 @@ private fun CoinsBottomSheetContentPreview() {
             .fillMaxWidth()
             .background(
                 brush = Brush.verticalGradient(
-                    0.0f to Color(0xFF0B0616),
-                    0.5f to Color(0xFF160C2C),
-                    1.0f to Color(0xFF07030D)
+                    0.0f to Color0B0616,
+                    0.5f to Color160C2C,
+                    1.0f to Color07030D
                 )
             )
     ) {
@@ -452,7 +440,7 @@ fun BottomSheetCoinPackageItem(
                     Spacer(modifier = Modifier.width(SdpR_4))
                     Box(
                         modifier = Modifier
-                            .background(Color(0xFF2D253A), RoundedCornerShape(SdpR_4))
+                            .background(Color2D253A, RoundedCornerShape(SdpR_4))
                             .padding(horizontal = SdpR_4, vertical = SdpR_4),
                         contentAlignment = Alignment.Center
                     ) {
@@ -480,7 +468,7 @@ fun BottomSheetCoinPackageItem(
             Box(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .background(Color(0xFF16302B), RoundedCornerShape(SdpR_6))
+                    .background(Color16302B, RoundedCornerShape(SdpR_6))
                     .padding(horizontal = SdpR_6, vertical = SdpR_4),
                 contentAlignment = Alignment.Center
             ) {
@@ -488,7 +476,7 @@ fun BottomSheetCoinPackageItem(
                     text = percentage,
                     fontFamily = OutfitBold,
                     fontSize = SdpR_7.nonScaledSp,
-                    color = Color(0xFF38D668)
+                    color = Color38D668
                 )
             }
         }

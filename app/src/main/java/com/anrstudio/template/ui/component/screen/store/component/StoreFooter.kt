@@ -19,16 +19,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.app.AppConstants
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorA197B9
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
 fun StoreFooter(
@@ -76,7 +67,7 @@ fun StoreFooter(
             text = stringResource(id = R.string.store_terms_privacy),
             fontFamily = ManropeRegular,
             fontSize = SdpR_11.nonScaledSp,
-            color = Color(0xFFA69EB3),
+            color = ColorA69EB3,
             modifier = Modifier
                 .clickable {
                     try {

@@ -49,10 +49,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.CommonTopBar
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.CommonTopBarStyle
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseScreen
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.showRateDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.custom.LoadingAsyncImage
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.chatroom.component.ChatActionsBottomSheet
@@ -275,10 +272,10 @@ private fun ChatRoomContent(
                     .background(
                         brush = Brush.verticalGradient(
                             colorStops = arrayOf(
-                                0f to Color(0xB30B0616),
-                                0.4f to Color(0x00160C2C),
-                                0.75f to Color(0xD907030D),
-                                1f to Color(0xF207030D)
+                                0f to ColorB30B0616,
+                                0.4f to Color00160C2C,
+                                0.75f to ColorD907030D,
+                                1f to ColorF207030D
                             )
                         )
                     )

@@ -7,6 +7,7 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color0F0817
 import com.pegas.aura.aigirlfriend.soul.BuildConfig
 import com.pegas.aura.aigirlfriend.soul.ads.AdRemoteConfig
 import com.pegas.aura.aigirlfriend.soul.ads.RemoteConfigUtils
@@ -41,8 +42,8 @@ class MainActivity : BaseComposeActivityWithBanner() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge(
             statusBarStyle = SystemBarStyle.light(
-                scrim = Color(0xFF0F0817).toArgb(),
-                darkScrim = Color(0xFF0F0817).toArgb()
+                scrim = Color0F0817.toArgb(),
+                darkScrim = Color0F0817.toArgb()
             )
         )
         noInternetDialog = NoInternetDialog(this)

@@ -18,15 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeMedium
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_28
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
 fun SubscriptionFeatureItem(iconRes: Int, textRes: Int) {
@@ -39,7 +31,7 @@ fun SubscriptionFeatureItem(iconRes: Int, textRes: Int) {
         Box(
             modifier = Modifier
                 .size(SdpR_28)
-                .background(Color(0xFF271531), CircleShape),
+                .background(Color271531, CircleShape),
             contentAlignment = Alignment.Center
         ) {
             Icon(

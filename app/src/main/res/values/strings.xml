@@ -52,6 +52,10 @@
     <string name="home_create_assistant_title">Find someone\nwho gets you</string>
     <string name="home_create_assistant_subtitle">Create your own AI companion and\nbuild a meaningful connection.</string>
     <string name="home_create_assistant_action">Create your AI</string>
+    <string name="home_top_assistants">Top Assistants</string>
+    <string name="home_recommend_for_you">Recommend for you</string>
+    <string name="home_see_all">See all</string>
+    <string name="home_all_characters">All Characters</string>
     <string name="setting_back">Back</string>
     <string name="promo_code_title" translatable="false">Redeem Code</string>
     <string name="promo_code_description" translatable="false">Enter your code to claim free coins.</string>

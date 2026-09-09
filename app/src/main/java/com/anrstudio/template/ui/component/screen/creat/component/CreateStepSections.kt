@@ -24,13 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_152
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_80
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
 fun GeneralSetupStep(
@@ -264,12 +258,12 @@ private fun AppearanceDetailsStepPreview() {
         ),
         ageOptions = listOf("20", "30", "40", "50"),
         skinTones = listOf(
-            Color(0xFFFFD7B8),
-            Color(0xFFF3BD95),
-            Color(0xFFE0A56F),
-            Color(0xFFC98555),
-            Color(0xFF9F6038),
-            Color(0xFF663A1C)
+            ColorFFD7B8,
+            ColorF3BD95,
+            ColorE0A56F,
+            ColorC98555,
+            Color9F6038,
+            Color663A1C
         )
     )
 }

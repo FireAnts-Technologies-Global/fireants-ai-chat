@@ -1,26 +1,31 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.reward.component
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -28,35 +33,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color161127
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color1AD4A24C
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color1E192F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color33D4A24C
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD4A24C
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitExtraBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitSemiBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_15
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_18
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_21
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_38
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_64
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_72
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_99
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppButton
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
 fun ClaimRewardDialog(
@@ -67,125 +45,137 @@ fun ClaimRewardDialog(
         onDismissRequest = onDismiss,
         properties = DialogProperties(usePlatformDefaultWidth = false)
     ) {
-        Card(
+        ClaimRewardDialogContent(
+            rewardAmount = rewardAmount,
+            onDismiss = onDismiss
+        )
+    }
+}
+
+@Composable
+fun ClaimRewardDialogContent(
+    rewardAmount: Int,
+    onDismiss: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = SdpR_24),
+        shape = RoundedCornerShape(SdpR_28),
+        colors = CardDefaults.cardColors(containerColor = ColorFFFFFF),
+        elevation = CardDefaults.cardElevation(defaultElevation = SdpR_8)
+    ) {
+        Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = SdpR_24),
-            shape = RoundedCornerShape(SdpR_24)
+                .background(ColorFFFFFF)
+                .padding(horizontal = SdpR_24, vertical = SdpR_28),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color161127)
-                    .border(
-                        width = SdpR_1,
-                        color = Color322D41,
-                        shape = RoundedCornerShape(SdpR_24)
-                    )
-                    .padding(horizontal = SdpR_24, vertical = SdpR_24),
-                horizontalAlignment = Alignment.CenterHorizontally
+            Box(
+                modifier = Modifier.size(SdpR_86),
+                contentAlignment = Alignment.Center
             ) {
                 Box(
-                    modifier = Modifier.size(SdpR_72),
+                    modifier = Modifier.size(SdpR_100),
                     contentAlignment = Alignment.Center
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .size(SdpR_64)
-                            .clip(CircleShape)
-                            .background(Color1E192F)
-                            .border(SdpR_1, Color322D41, CircleShape),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = "🏆",
-                            fontSize = SdpR_32.nonScaledSp
-                        )
-                    }
-
-                    Text(
-                        text = "✨",
-                        fontSize = SdpR_14.nonScaledSp,
-                        modifier = Modifier.align(Alignment.TopEnd)
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(SdpR_16))
-
-                Text(
-                    text = stringResource(R.string.reward_claimed_title),
-                    color = ColorFFFFFF,
-                    fontFamily = OutfitBold,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_21.nonScaledSp,
-                    textAlign = TextAlign.Center
-                )
-
-                Spacer(modifier = Modifier.height(SdpR_8))
-
-                Text(
-                    text = stringResource(R.string.reward_claimed_desc),
-                    color = ColorAFA5C3,
-                    fontFamily = OutfitRegular,
-                    fontWeight = FontWeight.Normal,
-                    fontSize = SdpR_11.nonScaledSp,
-                    textAlign = TextAlign.Center,
-                    lineHeight = SdpR_18.nonScaledSp
-                )
-
-                Spacer(modifier = Modifier.height(SdpR_18))
-
-                Box(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(SdpR_99))
-                        .background(Color1AD4A24C)
-                        .border(SdpR_1, Color33D4A24C, RoundedCornerShape(SdpR_99))
-                        .padding(horizontal = SdpR_20, vertical = SdpR_8),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "🪙 ${
-                            stringResource(
-                                R.string.reward_claimed_coin_format,
-                                rewardAmount
-                            )
-                        }",
-                        fontFamily = OutfitSemiBold,
-                        fontSize = SdpR_15.nonScaledSp,
-                        color = ColorD4A24C
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(SdpR_18))
-
-                Button(
-                    onClick = onDismiss,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(SdpR_38),
-                    shape = RoundedCornerShape(SdpR_99),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = ColorD4A24C,
-                        contentColor = Color161127
-                    )
-                ) {
-                    Text(
-                        text = stringResource(R.string.continue_),
-                        fontFamily = OutfitExtraBold,
-                        fontWeight = FontWeight.ExtraBold,
-                        fontSize = SdpR_13.nonScaledSp
+                    Icon(
+                        painter = painterResource(id = R.drawable.ic_reward_trophy),
+                        contentDescription = null,
+                        tint = Color.Unspecified,
+                        modifier = Modifier.size(SdpR_100)
                     )
                 }
             }
+
+            Spacer(modifier = Modifier.height(SdpR_20))
+
+            Text(
+                text = stringResource(R.string.reward_claimed_title),
+                color = Color(0xFF161022),
+                fontFamily = ManropeBold,
+                fontWeight = FontWeight.Bold,
+                fontSize = SdpR_24.nonScaledSp,
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.height(SdpR_8))
+
+            Text(
+                text = stringResource(R.string.reward_claimed_desc),
+                color = Color(0xFF7A6F8B),
+                fontFamily = ManropeRegular,
+                fontWeight = FontWeight.Normal,
+                fontSize = SdpR_14.nonScaledSp,
+                textAlign = TextAlign.Center,
+                lineHeight = SdpR_18.nonScaledSp,
+                modifier = Modifier.padding(horizontal = SdpR_8)
+            )
+
+            Spacer(modifier = Modifier.height(SdpR_20))
+
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(percent = 50))
+                    .background(Color(0xFFFFF9EC))
+                    .border(SdpR_1, Color(0xFFFFE7C2), RoundedCornerShape(percent = 50))
+                    .padding(horizontal = SdpR_20, vertical = SdpR_10),
+                contentAlignment = Alignment.Center
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.img_coin),
+                        contentDescription = null,
+                        modifier = Modifier.size(SdpR_20)
+                    )
+
+                    Spacer(modifier = Modifier.width(SdpR_6))
+
+                    Text(
+                        text = stringResource(R.string.reward_claimed_coin_format, rewardAmount),
+                        fontFamily = ManropeSemiBold,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = SdpR_18.nonScaledSp,
+                        color = Color(0xFFE58B00)
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(SdpR_24))
+
+            AppButton(
+                onClick = onDismiss,
+                text = stringResource(R.string.continue_),
+                textColor = ColorFFFFFF,
+                shape = RoundedCornerShape(percent = 50),
+                minHeight = SdpR_48,
+                textStyle = TextStyle(
+                    fontFamily = OutfitBold,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = SdpR_16.nonScaledSp,
+                    textAlign = TextAlign.Center
+                ),
+                modifier = Modifier.fillMaxWidth()
+            )
         }
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFF08030F)
+@Preview(showBackground = true, backgroundColor = 0x80000000, widthDp = 390)
 @Composable
 private fun ClaimRewardDialogPreview() {
-    Box(modifier = Modifier.width(430.dp)) {
-        ClaimRewardDialog(
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 32.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        ClaimRewardDialogContent(
             rewardAmount = 20,
             onDismiss = {}
         )

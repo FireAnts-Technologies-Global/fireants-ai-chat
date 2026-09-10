@@ -4,7 +4,9 @@ import androidx.compose.foundation.background
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import com.pegas.aura.aigirlfriend.soul.R
@@ -25,12 +27,13 @@ fun Modifier.appVerticalGradientBackground(): Modifier = background(
     )
 )
 
-val AppButtonVerticalGradient: Brush = Brush.verticalGradient(
+val AppButtonVerticalGradient = Brush.linearGradient(
     colors = listOf(
-        ColorDC60FF,
-        ColorFF41BC,
-        ColorFF8040
-    )
+        Color(0xFFD94BFF),
+        Color(0xFFFF3FA4),
+        Color(0xFFFF764C)
+    ),
+    start = Offset(0f, 500f),
+    end = Offset(1000f, 0f)
 )
-
 

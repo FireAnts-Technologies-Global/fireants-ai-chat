@@ -47,7 +47,6 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.mission.component.MissionHistoryItemCard
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.mission.component.MissionTabSelector
@@ -65,7 +64,8 @@ fun MissionScreen(
     BaseScreen(
         viewModel = viewModel,
         screenName = "MissionScreen",
-        fromScreen = fromScreen
+        fromScreen = fromScreen,
+        showBackground = false
     ) { state, onIntent ->
         MissionContent(
             state = state,
@@ -84,9 +84,7 @@ private fun MissionContent(
     val strokeWidth = SdpR_1
     val dash = SdpR_4
     Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .appSplashBackground()
+        modifier = Modifier.fillMaxSize()
     ) {
         Scaffold(
             containerColor = Color.Transparent,

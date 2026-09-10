@@ -43,63 +43,68 @@ fun MainScreen(
     val showBottomBar = currentRoute in mainTabs.map { it.route }
 
     MaterialTheme {
-        Scaffold(
-            containerColor = Color.Transparent,
-            contentWindowInsets = WindowInsets(0, 0, 0, 0),
-            topBar = {
-                if (showBottomBar) {
-                    MainTopBar(
-                        rootNavController = rootNavController,
-                        viewModel = viewModel
-                    )
-                }
-            },
-            bottomBar = {
-                if (showBottomBar) {
-                    Column(
-                        modifier = Modifier.padding(
-                            start = SdpR_12,
-                            end = SdpR_12,
-                            bottom = SdpR_12
-                        )
-                    ) {
-                        MainBottomBar(
-                            tabs = mainTabs,
-                            currentRoute = currentRoute,
-                            onTabSelected = { tab ->
-                                if (tab.route == AppRoutes.CREATE_CHARACTER) {
-                                    rootNavController.navigateWithHomeInterstitial(
-                                        context,
-                                        tab.route
-                                    )
-                                } else {
-                                    bottomNavController.navigate(tab.route) {
-                                        popUpTo(
-                                            bottomNavController.graph
-                                                .findStartDestination().id
-                                        ) {
-                                            saveState = true
-                                        }
-                                        launchSingleTop = true
-                                        restoreState = true
-                                    }
-                                }
-                            }
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .appSplashBackground()
+        ) {
+            Scaffold(
+                containerColor = Color.Transparent,
+                contentWindowInsets = WindowInsets(0, 0, 0, 0),
+                topBar = {
+                    if (showBottomBar) {
+                        MainTopBar(
+                            rootNavController = rootNavController,
+                            viewModel = viewModel
                         )
                     }
+                },
+                bottomBar = {
+                    if (showBottomBar) {
+                        Column(
+                            modifier = Modifier.padding(
+                                start = SdpR_12,
+                                end = SdpR_12,
+                                bottom = SdpR_12
+                            )
+                        ) {
+                            MainBottomBar(
+                                tabs = mainTabs,
+                                currentRoute = currentRoute,
+                                onTabSelected = { tab ->
+                                    if (tab.route == AppRoutes.CREATE_CHARACTER) {
+                                        rootNavController.navigateWithHomeInterstitial(
+                                            context,
+                                            tab.route
+                                        )
+                                    } else {
+                                        bottomNavController.navigate(tab.route) {
+                                            popUpTo(
+                                                bottomNavController.graph
+                                                    .findStartDestination().id
+                                            ) {
+                                                saveState = true
+                                            }
+                                            launchSingleTop = true
+                                            restoreState = true
+                                        }
+                                    }
+                                }
+                            )
+                        }
+                    }
                 }
-            }
-        ) { paddingValues ->
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .appSplashBackground()
-                    .padding(top = paddingValues.calculateTopPadding())
-            ) {
-                MainNavHost(
-                    navController = bottomNavController,
-                    rootNavController = rootNavController
-                )
+            ) { paddingValues ->
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(top = paddingValues.calculateTopPadding())
+                ) {
+                    MainNavHost(
+                        navController = bottomNavController,
+                        rootNavController = rootNavController
+                    )
+                }
             }
         }
     }

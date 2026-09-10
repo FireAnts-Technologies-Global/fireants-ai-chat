@@ -87,6 +87,7 @@ fun ChatListScreen(
         viewModel = viewModel,
         screenName = "ChatListScreen",
         fromScreen = fromScreen,
+        showBackground = false,
         errorTitleRes = R.string.chat_error_title,
         onRetryError = {
             viewModel.handleIntent(ChatListIntent.Retry)

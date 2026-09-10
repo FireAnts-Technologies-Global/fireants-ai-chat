@@ -64,6 +64,7 @@ fun HomeScreen(
         viewModel = viewModel,
         screenName = "HomeScreen",
         fromScreen = fromScreen,
+        showBackground = false,
         errorTitleRes = R.string.home_error_title,
         onRetryError = {
             viewModel.handleIntent(HomeIntent.Retry)

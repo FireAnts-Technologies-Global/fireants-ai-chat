@@ -20,35 +20,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color1B1227
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color6B5E80
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorF1CBB7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitExtraBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_22
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_26
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppButton
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppText
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppTextHorizontalGradient
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
 fun DailyProgressSection(
@@ -59,15 +44,14 @@ fun DailyProgressSection(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier
-            .fillMaxWidth()
+        modifier = modifier.fillMaxWidth()
     ) {
         Text(
             text = stringResource(R.string.reward_your_progress),
             fontFamily = OutfitBold,
-            fontSize = SdpR_14.nonScaledSp,
-            color = ColorFFFFFF,
-            modifier = Modifier.padding(bottom = SdpR_8)
+            fontSize = SdpR_16.nonScaledSp,
+            color = Color000000,
+            modifier = Modifier.padding(bottom = SdpR_12)
         )
 
         Row(
@@ -115,27 +99,27 @@ fun DailyProgressSection(
 
         Spacer(modifier = Modifier.height(SdpR_16))
 
-        val buttonBackground = if (claimedToday) Color322D41 else ColorF1CBB7
-        val buttonTextColor = if (claimedToday) ColorAFA5C3 else Color150F25
-
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(SdpR_48)
-                .clip(RoundedCornerShape(SdpR_26))
-                .background(buttonBackground)
-                .clickable(enabled = !claimedToday) { onCheckInClick() },
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                text = if (claimedToday) stringResource(R.string.reward_checked_in_today) else stringResource(
-                    R.string.reward_check_in_today
-                ),
-                fontFamily = OutfitBold,
+        AppButton(
+            onClick = onCheckInClick,
+            text = if (claimedToday) {
+                stringResource(R.string.reward_checked_in_today)
+            } else {
+                stringResource(R.string.reward_check_in_today)
+            },
+            enabled = !claimedToday,
+            disabledColor = Color(0xFFE5E5EA),
+            disabledTextColor = Color(0xFF8E8E93),
+            textColor = ColorFFFFFF,
+            shape = RoundedCornerShape(SdpR_100),
+            minHeight = SdpR_48,
+            textStyle = TextStyle(
+                fontFamily = ManropeBold,
+                fontWeight = FontWeight.Bold,
                 fontSize = SdpR_16.nonScaledSp,
-                color = buttonTextColor
-            )
-        }
+                textAlign = TextAlign.Center
+            ),
+            modifier = Modifier.fillMaxWidth()
+        )
     }
 }
 
@@ -148,32 +132,48 @@ private fun DayCardItem(
     multiplier: String?,
     modifier: Modifier = Modifier
 ) {
-    val borderColor = if (isCurrent) ColorF1CBB7 else Color322D41
-    val cardBackground = if (isCurrent) Color1B1227 else Color150F25
+    val currentBorderBrush = Brush.linearGradient(
+        colors = listOf(
+            Color(0xFFFF8040),
+            Color(0xFFFF41BC),
+            Color(0xFFDC60FF)
+        )
+    )
+
+    val borderModifier = if (isCurrent && !isClaimed) {
+        Modifier.border(
+            width = SdpR_2,
+            brush = currentBorderBrush,
+            shape = RoundedCornerShape(SdpR_16)
+        )
+    } else {
+        Modifier.border(
+            width = SdpR_1,
+            color = Color(0xFFEDE9F2),
+            shape = RoundedCornerShape(SdpR_16)
+        )
+    }
 
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(SdpR_16))
-            .background(cardBackground)
-            .border(
-                width = if (isCurrent) SdpR_2 else SdpR_1,
-                color = borderColor,
-                shape = RoundedCornerShape(SdpR_16)
-            )
-            .padding(vertical = SdpR_8, horizontal = SdpR_4)
+            .background(ColorFFFFFF)
+            .then(borderModifier)
+            .padding(vertical = SdpR_10, horizontal = SdpR_4)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = SdpR_6),
+                .padding(horizontal = SdpR_4),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             if (multiplier == null) {
-                Text(
+                AppText(
                     text = stringResource(R.string.reward_day_format, dayNumber),
                     fontFamily = OutfitBold,
                     fontSize = SdpR_11.nonScaledSp,
-                    color = if (isCurrent) ColorE8C3AC else ColorAFA5C3
+                    gradient = if (isCurrent && !isClaimed) AppTextHorizontalGradient else null,
+                    color = if (isClaimed) Color(0xFFAFA5C3) else Color(0xFF6B5E80)
                 )
             } else {
                 Row(
@@ -181,17 +181,18 @@ private fun DayCardItem(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(
+                    AppText(
                         text = stringResource(R.string.reward_day_format, dayNumber),
                         fontFamily = OutfitBold,
                         fontSize = SdpR_11.nonScaledSp,
-                        color = if (isCurrent) ColorE8C3AC else ColorAFA5C3
+                        gradient = if (isCurrent && !isClaimed) AppTextHorizontalGradient else null,
+                        color = if (isClaimed) Color(0xFFAFA5C3) else Color(0xFF6B5E80)
                     )
 
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(SdpR_4))
-                            .background(ColorD65A98)
+                            .background(Color(0xFFE91E8C))
                             .padding(
                                 horizontal = SdpR_4,
                                 vertical = SdpR_1
@@ -207,36 +208,37 @@ private fun DayCardItem(
                 }
             }
 
-            Spacer(modifier = Modifier.height(SdpR_2))
+            Spacer(modifier = Modifier.height(SdpR_6))
 
             if (multiplier != null) {
                 Image(
                     painter = painterResource(R.drawable.ic_award),
                     contentDescription = null,
+                    colorFilter = if (isClaimed) ColorFilter.tint(Color(0xFFB4B0BE)) else null,
                     modifier = Modifier.size(SdpR_22)
                 )
             } else {
                 Icon(
                     painter = painterResource(R.drawable.ic_diamond),
                     contentDescription = null,
-                    tint = if (isCurrent) ColorF1CBB7 else Color6B5E80,
+                    tint = if (isClaimed) Color(0xFFB4B0BE) else Color(0xFFFFB03A),
                     modifier = Modifier.size(SdpR_20)
                 )
             }
 
-            Spacer(modifier = Modifier.height(SdpR_2))
+            Spacer(modifier = Modifier.height(SdpR_6))
 
             Text(
                 text = "+$amount",
-                fontFamily = OutfitExtraBold,
+                fontFamily = ManropeExtraBold,
                 fontSize = SdpR_14.nonScaledSp,
-                color = if (isClaimed) Color6B5E80 else ColorFDFDFD
+                color = if (isClaimed) Color(0xFFB4B0BE) else Color000000
             )
         }
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFF08030F)
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 private fun DailyProgressSectionPreview() {
     DailyProgressSection(

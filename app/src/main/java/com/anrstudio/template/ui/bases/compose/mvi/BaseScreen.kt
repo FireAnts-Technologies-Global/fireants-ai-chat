@@ -23,6 +23,7 @@ fun <S : BaseUiState, I : Any, E : Any> BaseScreen(
     fromScreen: String? = null,
     @StringRes errorTitleRes: Int? = null,
     modifier: Modifier = Modifier,
+    showBackground: Boolean = true,
     showLoadingDialog: Boolean = false,
     loadingDialogText: String? = null,
     shouldShowLoadingDialog: (S) -> Boolean = { it.isLoading },
@@ -40,10 +41,16 @@ fun <S : BaseUiState, I : Any, E : Any> BaseScreen(
         viewModel.effect.collect { onEffect(it) }
     }
 
-    Box(
-        modifier = modifier
+    val boxModifier = if (showBackground) {
+        modifier
             .fillMaxSize()
             .appSplashBackground()
+    } else {
+        modifier.fillMaxSize()
+    }
+
+    Box(
+        modifier = boxModifier
     ) {
         content(state) { intent -> viewModel.handleIntent(intent) }
 

@@ -113,9 +113,7 @@ fun HistoriesContent(
     }
 
     Column(
-        modifier = modifier
-            .fillMaxSize()
-            .appSplashBackground()
+        modifier = modifier.fillMaxSize()
     ) {
         HistoriesTopBar(onBack = onBack)
 

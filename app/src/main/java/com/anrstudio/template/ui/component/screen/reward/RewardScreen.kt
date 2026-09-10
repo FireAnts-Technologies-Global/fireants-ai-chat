@@ -23,13 +23,16 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseScreen
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.ui.graphics.Brush
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_250
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.findActivity
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.reward.component.CheckInRewardDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.reward.component.ClaimRewardDialog
@@ -57,6 +60,7 @@ fun RewardScreen(
         viewModel = viewModel,
         screenName = "RewardScreen",
         fromScreen = fromScreen,
+        showBackground = false,
         showLoadingDialog = true,
         loadingDialogText = stringResource(R.string.ads_loading_label),
         shouldShowLoadingDialog = { it.isWatchingAd || it.isCheckingIn },
@@ -100,9 +104,7 @@ private fun RewardContent(
     val listState = rememberLazyListState()
 
     Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .appSplashBackground()
+        modifier = Modifier.fillMaxSize()
     ) {
         Scaffold(
             containerColor = Color.Transparent,

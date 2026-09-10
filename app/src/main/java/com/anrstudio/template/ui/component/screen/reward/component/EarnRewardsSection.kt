@@ -21,31 +21,26 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color000000
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color271E38
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color363144
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD4A24C
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFB03A
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeBold
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_36
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
@@ -68,19 +63,19 @@ fun EarnRewardsSection(
     ) {
         Text(
             text = stringResource(R.string.reward_earn_rewards),
-            fontFamily = ManropeBold,
-            fontSize = SdpR_14.nonScaledSp,
-            color = ColorFFFFFF,
-            modifier = Modifier.padding(bottom = SdpR_8)
+            fontFamily = OutfitBold,
+            fontSize = SdpR_16.nonScaledSp,
+            color = Color000000,
+            modifier = Modifier.padding(bottom = SdpR_12)
         )
 
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(SdpR_16))
-                .background(Color150F25)
-                .border(SdpR_1, Color322D41, RoundedCornerShape(SdpR_16))
-                .padding(vertical = SdpR_8, horizontal = SdpR_10)
+                .background(ColorFFFFFF)
+                .border(SdpR_1, Color(0xFFEDE9F2), RoundedCornerShape(SdpR_16))
+                .padding(vertical = SdpR_12, horizontal = SdpR_12)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -89,7 +84,7 @@ fun EarnRewardsSection(
                 Image(
                     painter = painterResource(id = R.drawable.ic_video),
                     contentDescription = null,
-                    modifier = Modifier.size(SdpR_32)
+                    modifier = Modifier.size(SdpR_36)
                 )
 
                 Spacer(modifier = Modifier.width(SdpR_12))
@@ -101,9 +96,9 @@ fun EarnRewardsSection(
                         text = stringResource(R.string.reward_daily_ads),
                         modifier = Modifier.basicMarquee(),
                         fontFamily = OutfitBold,
-                        fontSize = SdpR_13.nonScaledSp,
-                        lineHeight = SdpR_14.nonScaledSp,
-                        color = ColorFFFFFF,
+                        fontSize = SdpR_14.nonScaledSp,
+                        lineHeight = SdpR_16.nonScaledSp,
+                        color = Color000000,
                         maxLines = 1,
                         softWrap = false,
                         overflow = TextOverflow.Clip
@@ -134,9 +129,9 @@ fun EarnRewardsSection(
                             },
                             modifier = Modifier.basicMarquee(),
                             fontFamily = ManropeRegular,
-                            fontSize = SdpR_11.nonScaledSp,
-                            lineHeight = SdpR_12.nonScaledSp,
-                            color = ColorE8C3AC,
+                            fontSize = SdpR_12.nonScaledSp,
+                            lineHeight = SdpR_14.nonScaledSp,
+                            color = Color(0xFFB440F2),
                             maxLines = 1,
                             softWrap = false,
                             overflow = TextOverflow.Clip
@@ -159,16 +154,21 @@ fun EarnRewardsSection(
 
                 val buttonModifier = if (isVip) {
                     Modifier
-                        .clip(RoundedCornerShape(SdpR_12))
+                        .clip(RoundedCornerShape(percent = 50))
                         .background(Brush.horizontalGradient(listOf(ColorD4A24C, ColorFFB03A)))
-                        .padding(horizontal = SdpR_12, vertical = SdpR_8)
+                        .padding(horizontal = SdpR_14, vertical = SdpR_8)
                 } else {
                     Modifier
-                        .clip(RoundedCornerShape(SdpR_12))
-                        .background(if (isLimitReached || !adsConfigLoaded) Color322D41 else Color271E38)
-                        .border(SdpR_1, Color363144, RoundedCornerShape(SdpR_12))
+                        .clip(RoundedCornerShape(percent = 50))
+                        .background(
+                            if (isLimitReached || !adsConfigLoaded) {
+                                Color(0xFFF2F0F4)
+                            } else {
+                                Color(0xFFECE5F6)
+                            }
+                        )
                         .clickable(enabled = adsConfigLoaded && !isWatchingAd && !isLimitReached) { onWatchAdClick() }
-                        .padding(horizontal = SdpR_12, vertical = SdpR_8)
+                        .padding(horizontal = SdpR_14, vertical = SdpR_8)
                 }
 
                 Box(
@@ -179,7 +179,13 @@ fun EarnRewardsSection(
                         text = buttonText,
                         fontFamily = OutfitBold,
                         fontSize = SdpR_12.nonScaledSp,
-                        color = if (isVip) Color150F25 else if (isLimitReached || !adsConfigLoaded) ColorAFA5C3 else ColorFFFFFF
+                        color = if (isVip) {
+                            Color150F25
+                        } else if (isLimitReached || !adsConfigLoaded) {
+                            ColorAFA5C3
+                        } else {
+                            Color(0xFF7551B5)
+                        }
                     )
                 }
             }
@@ -187,7 +193,7 @@ fun EarnRewardsSection(
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFF08030F)
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 private fun EarnRewardsSectionPreview() {
     EarnRewardsSection(

@@ -1,6 +1,7 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.mission
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -32,25 +33,9 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseScreen
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color17FFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.mission.component.MissionHistoryItemCard
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.mission.component.MissionTabSelector
-import com.pegas.aura.aigirlfriend.soul.ui.component.screen.mission.component.RitualChronicleBanner
 
 @Composable
 fun MissionScreen(
@@ -104,12 +89,7 @@ private fun MissionContent(
                         ImageLoadingLottie(size = SdpR_32)
                     }
                 } else {
-                    RitualChronicleBanner(
-                        completedQuests = state.totalQuestsCompleted,
-                        gemsObtained = state.totalGemsObtained
-                    )
-
-                    Spacer(modifier = Modifier.height(SdpR_10))
+                    Spacer(modifier = Modifier.height(SdpR_8))
 
                     MissionTabSelector(
                         selectedTab = state.selectedTab,
@@ -118,7 +98,7 @@ private fun MissionContent(
                         }
                     )
 
-                    Spacer(modifier = Modifier.height(SdpR_10))
+                    Spacer(modifier = Modifier.height(SdpR_12))
 
                     if (state.selectedTab == MissionTab.HISTORY) {
                         LazyColumn(
@@ -144,7 +124,7 @@ private fun MissionContent(
                                         .padding(bottom = SdpR_8)
                                         .drawBehind {
                                             drawRoundRect(
-                                                color = Color17FFFFFF,
+                                                color = Color(0xFFEDE9F2),
                                                 cornerRadius = CornerRadius(
                                                     radius.toPx(),
                                                     radius.toPx()
@@ -167,7 +147,7 @@ private fun MissionContent(
                                         text = stringResource(R.string.mission_history_footer_stardust),
                                         fontFamily = ManropeRegular,
                                         fontSize = SdpR_11.nonScaledSp,
-                                        color = ColorAFA5C3
+                                        color = Color(0xFF7A6F8B)
                                     )
                                 }
                             }
@@ -183,34 +163,21 @@ private fun MissionContent(
                                 .weight(1f)
                                 .padding(bottom = SdpR_100)
                                 .background(
-                                    color = Color150F25,
+                                    color = ColorFFFFFF,
                                     shape = RoundedCornerShape(radius)
                                 )
-                                .drawBehind {
-                                    drawRoundRect(
-                                        color = Color17FFFFFF,
-                                        cornerRadius = CornerRadius(
-                                            radius.toPx(),
-                                            radius.toPx()
-                                        ),
-                                        style = Stroke(
-                                            width = strokeWidth.toPx(),
-                                            pathEffect = PathEffect.dashPathEffect(
-                                                floatArrayOf(
-                                                    dash.toPx(),
-                                                    dash.toPx()
-                                                )
-                                            )
-                                        )
-                                    )
-                                },
+                                .border(
+                                    width = SdpR_1,
+                                    color = Color(0xFFEDE9F2),
+                                    shape = RoundedCornerShape(radius)
+                                ),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
                                 text = stringResource(R.string.mission_no_active),
                                 fontFamily = ManropeRegular,
                                 fontSize = SdpR_12.nonScaledSp,
-                                color = ColorAFA5C3
+                                color = Color(0xFF7A6F8B)
                             )
                         }
                     }

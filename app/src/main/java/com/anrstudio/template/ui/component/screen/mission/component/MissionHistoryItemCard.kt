@@ -18,33 +18,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color6B5E80
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorF1CBB7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeSemiBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_15
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_36
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppText
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppTextHorizontalGradient
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.mission.MissionHistoryItemUiState
 
 @Composable
@@ -62,13 +45,13 @@ fun MissionHistoryItemCard(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(SdpR_16))
-            .background(Color150F25)
+            .background(ColorFFFFFF)
             .border(
                 width = SdpR_1,
-                color = Color322D41,
+                color = Color(0xFFEDE9F2),
                 shape = RoundedCornerShape(SdpR_16)
             )
-            .padding(SdpR_10)
+            .padding(horizontal = SdpR_14, vertical = SdpR_12)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -88,14 +71,14 @@ fun MissionHistoryItemCard(
                 Text(
                     text = titleText,
                     style = TextStyle(
-                        fontFamily = OutfitBold,
+                        fontFamily = ManropeBold,
                         fontSize = SdpR_14.nonScaledSp,
-                        lineHeight = SdpR_15.nonScaledSp,
+                        lineHeight = SdpR_16.nonScaledSp,
                         platformStyle = PlatformTextStyle(
                             includeFontPadding = false
                         )
                     ),
-                    color = ColorFFFFFF
+                    color = Color(0xFF161022)
                 )
                 Spacer(modifier = Modifier.height(SdpR_4))
 
@@ -116,14 +99,14 @@ fun MissionHistoryItemCard(
                             item.gemsEarned
                         ),
                         style = TextStyle(
-                            fontFamily = ManropeRegular,
+                            fontFamily = ManropeBold,
                             fontSize = SdpR_12.nonScaledSp,
-                            lineHeight = SdpR_13.nonScaledSp,
+                            lineHeight = SdpR_14.nonScaledSp,
                             platformStyle = PlatformTextStyle(
                                 includeFontPadding = false
                             )
                         ),
-                        color = ColorF1CBB7
+                        color = Color(0xFFE02469)
                     )
                 }
             }
@@ -138,31 +121,26 @@ fun MissionHistoryItemCard(
                     "Yesterday" -> stringResource(R.string.yesterday)
                     else -> item.timeAgo
                 }
-                Text(
+                AppText(
                     text = timeAgoText,
-                    style = TextStyle(
-                        fontFamily = ManropeSemiBold,
-                        fontSize = SdpR_12.nonScaledSp,
-                        lineHeight = SdpR_13.nonScaledSp,
-                        platformStyle = PlatformTextStyle(
-                            includeFontPadding = false
-                        )
-                    ),
-                    color = ColorAFA5C3
+                    fontFamily = ManropeSemiBold,
+                    fontSize = SdpR_12.nonScaledSp,
+                    lineHeight = SdpR_14.nonScaledSp,
+                    gradient = AppTextHorizontalGradient
                 )
                 Spacer(modifier = Modifier.height(SdpR_4))
 
                 Text(
                     text = item.exactTime,
                     style = TextStyle(
-                        fontFamily = ManropeRegular,
+                        fontFamily = ManropeBold,
                         fontSize = SdpR_10.nonScaledSp,
-                        lineHeight = SdpR_11.nonScaledSp,
+                        lineHeight = SdpR_12.nonScaledSp,
                         platformStyle = PlatformTextStyle(
                             includeFontPadding = false
                         )
                     ),
-                    color = Color6B5E80
+                    color = Color(0xFF6F6794)
                 )
             }
         }
@@ -171,7 +149,7 @@ fun MissionHistoryItemCard(
 
 @Preview(
     showBackground = true,
-    backgroundColor = 0xFF08030F
+    backgroundColor = 0xFFFFFFFF
 )
 @Composable
 private fun MissionHistoryItemCardPreview() {
@@ -179,6 +157,7 @@ private fun MissionHistoryItemCardPreview() {
         item = MissionHistoryItemUiState(
             id = "1",
             titleRes = R.string.mission_type_play_game,
+            titleRaw = null,
             gemsEarned = 15,
             timeAgo = "Today",
             exactTime = "Jan 26, 14:32"

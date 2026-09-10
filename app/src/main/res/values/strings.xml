@@ -94,9 +94,12 @@
     <string name="chat_report_confirm">Report</string>
     <string name="chat_report_success">Thank you for your report.</string>
     <string name="chat_report_hint">Explain the issue (optional)...</string>
-    <string name="you_don_have_any_AI_assistant_yet">You don\'t have any AI assistant yet</string>
-    <string name="create_now">Create now</string>
-    <string name="explore_custom_assistants_or_create_a_unique_soulmate_specifically_tailored_to_you.">Explore custom assistants or create a unique soulmate specifically tailored to you.</string>
+    <string name="chat_empty_title">No chats yet</string>
+    <string name="chat_empty_subtitle">Start a new conversation to see your chats appear here.</string>
+    <string name="chat_empty_start_chat">Start a chat</string>
+    <string name="you_don_have_any_AI_assistant_yet">No chats yet</string>
+    <string name="create_now">Start a chat</string>
+    <string name="explore_custom_assistants_or_create_a_unique_soulmate_specifically_tailored_to_you.">Start a new conversation to see your chats appear here.</string>
     <string name="actions">Actions</string>
     <string name="store_title">Store</string>
     <string name="store_top_up_coins">TOP UP COINS</string>

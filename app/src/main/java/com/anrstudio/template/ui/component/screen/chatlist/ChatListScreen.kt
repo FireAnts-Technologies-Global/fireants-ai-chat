@@ -46,26 +46,14 @@ import com.pegas.aura.aigirlfriend.soul.domain.model.conversation.ConversationCh
 import com.pegas.aura.aigirlfriend.soul.domain.model.conversation.ConversationSummary
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseScreen
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color08030F
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color090514
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_18
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_280
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_86
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.ActionConfirmationDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.screen.chatlist.component.SwipeableConversationHistoryItem
 
@@ -174,53 +162,63 @@ private fun ChatListContent(
                         Image(
                             painter = painterResource(R.drawable.img_empty),
                             contentDescription = null,
-                            modifier = Modifier.size(SdpR_280),
+                            modifier = Modifier.size(SdpR_130),
                             contentScale = ContentScale.Fit
                         )
 
                         Spacer(modifier = Modifier.height(SdpR_16))
 
                         Text(
-                            text = stringResource(R.string.you_don_have_any_AI_assistant_yet),
-                            style = MaterialTheme.typography.titleMedium,
+                            text = stringResource(R.string.chat_empty_title),
                             fontWeight = FontWeight.Bold,
-                            fontFamily = OutfitBold,
-                            color = ColorFDFDFD,
+                            fontFamily = ManropeBold,
+                            color = Color000000,
                             textAlign = TextAlign.Center,
-                            fontSize = SdpR_18.nonScaledSp,
+                            fontSize = SdpR_22.nonScaledSp,
                         )
 
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(SdpR_8))
 
                         Text(
-                            text = stringResource(R.string.explore_custom_assistants_or_create_a_unique_soulmate_specifically_tailored_to_you_),
-                            style = MaterialTheme.typography.bodyMedium,
+                            text = stringResource(R.string.chat_empty_subtitle),
                             textAlign = TextAlign.Center,
-                            color = ColorAFA5C3,
+                            color = Color756582,
                             fontWeight = FontWeight.Normal,
-                            fontFamily = OutfitRegular,
-                            fontSize = SdpR_13.nonScaledSp,
+                            fontFamily = ManropeRegular,
+                            fontSize = SdpR_14.nonScaledSp,
+                            lineHeight = SdpR_18.nonScaledSp,
+                            modifier = Modifier.padding(horizontal = SdpR_24)
                         )
 
-                        Spacer(modifier = Modifier.height(24.dp))
+                        Spacer(modifier = Modifier.height(SdpR_24))
 
-                        Button(
-                            onClick = {
-                                onCreateAssistant()
-                            },
+                        Row(
                             modifier = Modifier
-                                .fillMaxWidth()
-                                .height(SdpR_48),
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = ColorE8C3AC
-                            )
+                                .shadow(
+                                    elevation = SdpR_12,
+                                    shape = RoundedCornerShape(percent = 50),
+                                    spotColor = Color(0x26000000),
+                                    ambientColor = Color(0x14000000)
+                                )
+                                .clip(RoundedCornerShape(percent = 50))
+                                .background(ColorFFFFFF)
+                                .clickable { onCreateAssistant() }
+                                .padding(horizontal = SdpR_24, vertical = SdpR_1),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center
                         ) {
+                            Icon(
+                                painter = painterResource(R.drawable.ic_sparkle),
+                                contentDescription = null,
+                                tint = Color(0xFFB440F2),
+                                modifier = Modifier.size(SdpR_48)
+                            )
+                            Spacer(modifier = Modifier.width(SdpR_8))
                             Text(
-                                color = Color090514,
-                                fontWeight = FontWeight.Bold,
-                                fontFamily = OutfitBold,
-                                fontSize = SdpR_16.nonScaledSp,
-                                text = stringResource(R.string.create_now)
+                                text = stringResource(R.string.chat_empty_start_chat),
+                                fontFamily = ManropeSemiBold,
+                                fontSize = SdpR_15.nonScaledSp,
+                                color = Color(0xFFB440F2)
                             )
                         }
                     }
@@ -277,7 +275,7 @@ private fun ChatListContent(
 }
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@Preview(showBackground = true, backgroundColor = 0xFF08030F, widthDp = 430, heightDp = 932)
+@Preview(showBackground = true, widthDp = 430, heightDp = 932)
 @Composable
 private fun ChatListScreenEmptyPreview() {
     Box(
@@ -285,12 +283,7 @@ private fun ChatListScreenEmptyPreview() {
             .fillMaxSize()
             .appSplashBackground()
     ) {
-        Scaffold(
-            modifier = Modifier.fillMaxSize(),
-            containerColor = Color08030F
-        ) {
-            ChatListContent(state = ChatListUiState())
-        }
+        ChatListContent(state = ChatListUiState())
     }
 }
 

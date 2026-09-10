@@ -12,6 +12,7 @@ import com.pegas.aura.aigirlfriend.soul.domain.usecase.coins.WatchAdUseCase
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.mvi.BaseComposeViewModel
 import com.pegas.aura.aigirlfriend.soul.ui.reward.RewardAdsCoordinator
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import java.util.UUID
 import javax.inject.Inject
@@ -25,6 +26,12 @@ class RewardViewModel @Inject constructor(
     private val getAuthUserFlowUseCase: GetAuthUserFlowUseCase,
     private val rewardAdsCoordinator: RewardAdsCoordinator
 ) : BaseComposeViewModel<RewardUiState, RewardIntent, RewardEffect>(RewardUiState()) {
+
+    private companion object {
+        const val MIN_LOADING_TIME_ON_ERROR_MS = 1000L
+    }
+
+    private var loadCheckInJob: Job? = null
 
     init {
         observeAuthUser()
@@ -80,7 +87,9 @@ class RewardViewModel @Inject constructor(
     }
 
     private fun loadCheckInState() {
-        launchIO {
+        loadCheckInJob?.cancel()
+        loadCheckInJob = launchIO {
+            val startTime = System.currentTimeMillis()
             updateState { copy(isLoading = true, error = null) }
             val isVip = rewardAdsCoordinator.isVip()
             when (val result = getCheckInStateUseCase()) {
@@ -98,6 +107,7 @@ class RewardViewModel @Inject constructor(
                 }
 
                 is AppResult.Failure -> {
+                    ensureMinimumLoading(startTime)
                     updateState { copy(isLoading = false, error = result.error, isVip = isVip) }
                 }
             }
@@ -140,6 +150,7 @@ class RewardViewModel @Inject constructor(
 
     private fun performCheckInApiCall() {
         launchIO {
+            val startTime = System.currentTimeMillis()
             when (val result = claimCheckInUseCase()) {
                 is AppResult.Success -> {
                     val claim = result.data
@@ -154,6 +165,7 @@ class RewardViewModel @Inject constructor(
                 }
 
                 is AppResult.Failure -> {
+                    ensureMinimumLoading(startTime)
                     updateState { copy(isCheckingIn = false) }
                     sendEffect(RewardEffect.ShowToast(result.error))
                 }
@@ -164,14 +176,19 @@ class RewardViewModel @Inject constructor(
     private fun watchAd(activity: Activity) {
         if (currentState.isWatchingAd) return
 
+        updateState { copy(isWatchingAd = true) }
+
         if (!rewardAdsCoordinator.isRewardAddCoinEnabled()) {
-            sendEffect(RewardEffect.ShowMessage(R.string.reward_ads_unavailable))
+            launchIO {
+                delay(MIN_LOADING_TIME_ON_ERROR_MS)
+                updateState { copy(isWatchingAd = false) }
+                sendEffect(RewardEffect.ShowMessage(R.string.reward_ads_unavailable))
+            }
             return
         }
 
-        updateState { copy(isWatchingAd = true) }
-
         launchIO {
+            val startTime = System.currentTimeMillis()
             when (val result = getCoinBalanceUseCase()) {
                 is AppResult.Success -> {
                     applyCoinBalance(
@@ -182,10 +199,11 @@ class RewardViewModel @Inject constructor(
                         updateState { copy(isWatchingAd = false) }
                         return@launchIO
                     }
-                    showRewardAd(activity)
+                    showRewardAd(activity, startTime)
                 }
 
                 is AppResult.Failure -> {
+                    ensureMinimumLoading(startTime)
                     updateState { copy(isWatchingAd = false, adsConfigLoaded = false) }
                     sendEffect(RewardEffect.ShowToast(result.error))
                 }
@@ -193,7 +211,7 @@ class RewardViewModel @Inject constructor(
         }
     }
 
-    private fun showRewardAd(activity: Activity) {
+    private fun showRewardAd(activity: Activity, startTime: Long = System.currentTimeMillis()) {
         launchUI {
             rewardAdsCoordinator.showRewardAddCoinAd(
                 activity = activity,
@@ -202,8 +220,11 @@ class RewardViewModel @Inject constructor(
                     onUserEarnedRewardAd(activity)
                 },
                 onUnavailable = {
-                    updateState { copy(isWatchingAd = false) }
-                    sendNetworkUnavailable()
+                    launchIO {
+                        ensureMinimumLoading(startTime)
+                        updateState { copy(isWatchingAd = false) }
+                        sendNetworkUnavailable()
+                    }
                 },
                 onAdPreloaded = { isPreloaded ->
                     updateState { copy(isAdPreloaded = isPreloaded) }
@@ -315,5 +336,16 @@ class RewardViewModel @Inject constructor(
                 )
             )
         )
+    }
+
+    private suspend fun ensureMinimumLoading(
+        startedAtMillis: Long,
+        minLoadingMs: Long = MIN_LOADING_TIME_ON_ERROR_MS
+    ) {
+        val elapsed = System.currentTimeMillis() - startedAtMillis
+        val remaining = minLoadingMs - elapsed
+        if (remaining > 0) {
+            delay(remaining)
+        }
     }
 }

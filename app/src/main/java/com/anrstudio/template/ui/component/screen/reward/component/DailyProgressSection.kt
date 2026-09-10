@@ -48,8 +48,8 @@ fun DailyProgressSection(
     ) {
         Text(
             text = stringResource(R.string.reward_your_progress),
-            fontFamily = OutfitBold,
-            fontSize = SdpR_16.nonScaledSp,
+            fontFamily = ManropeBold,
+            fontSize = SdpR_14.nonScaledSp,
             color = Color000000,
             modifier = Modifier.padding(bottom = SdpR_12)
         )

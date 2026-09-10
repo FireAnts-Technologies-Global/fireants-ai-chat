@@ -31,13 +31,17 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color000000
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD4A24C
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE0D5F0
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorF0EBF8
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFB03A
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFFFFFF
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeBold
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_36
@@ -63,8 +67,8 @@ fun EarnRewardsSection(
     ) {
         Text(
             text = stringResource(R.string.reward_earn_rewards),
-            fontFamily = OutfitBold,
-            fontSize = SdpR_16.nonScaledSp,
+            fontFamily = ManropeBold,
+            fontSize = SdpR_14.nonScaledSp,
             color = Color000000,
             modifier = Modifier.padding(bottom = SdpR_12)
         )
@@ -95,8 +99,8 @@ fun EarnRewardsSection(
                     Text(
                         text = stringResource(R.string.reward_daily_ads),
                         modifier = Modifier.basicMarquee(),
-                        fontFamily = OutfitBold,
-                        fontSize = SdpR_14.nonScaledSp,
+                        fontFamily = ManropeBold,
+                        fontSize = SdpR_13.nonScaledSp,
                         lineHeight = SdpR_16.nonScaledSp,
                         color = Color000000,
                         maxLines = 1,
@@ -152,22 +156,41 @@ fun EarnRewardsSection(
                     stringResource(R.string.reward_watch_ads_format, adsWatchedToday)
                 }
 
+                val buttonShape = RoundedCornerShape(SdpR_12)
+
                 val buttonModifier = if (isVip) {
                     Modifier
-                        .clip(RoundedCornerShape(percent = 50))
-                        .background(Brush.horizontalGradient(listOf(ColorD4A24C, ColorFFB03A)))
+                        .clip(buttonShape)
+                        .background(
+                            Brush.horizontalGradient(
+                                listOf(ColorD4A24C, ColorFFB03A)
+                            )
+                        )
                         .padding(horizontal = SdpR_14, vertical = SdpR_8)
                 } else {
                     Modifier
-                        .clip(RoundedCornerShape(percent = 50))
+                        .clip(buttonShape)
                         .background(
                             if (isLimitReached || !adsConfigLoaded) {
-                                Color(0xFFF2F0F4)
+                                ColorF0EBF8
                             } else {
-                                Color(0xFFECE5F6)
+                                ColorF0EBF8
                             }
                         )
-                        .clickable(enabled = adsConfigLoaded && !isWatchingAd && !isLimitReached) { onWatchAdClick() }
+                        .border(
+                            width = SdpR_1,
+                            color = if (isLimitReached || !adsConfigLoaded) {
+                                ColorE0D5F0
+                            } else {
+                                ColorE0D5F0
+                            },
+                            shape = buttonShape
+                        )
+                        .clickable(
+                            enabled = adsConfigLoaded && !isWatchingAd && !isLimitReached
+                        ) {
+                            onWatchAdClick()
+                        }
                         .padding(horizontal = SdpR_14, vertical = SdpR_8)
                 }
 
@@ -177,7 +200,7 @@ fun EarnRewardsSection(
                 ) {
                     Text(
                         text = buttonText,
-                        fontFamily = OutfitBold,
+                        fontFamily = ManropeBold,
                         fontSize = SdpR_12.nonScaledSp,
                         color = if (isVip) {
                             Color150F25

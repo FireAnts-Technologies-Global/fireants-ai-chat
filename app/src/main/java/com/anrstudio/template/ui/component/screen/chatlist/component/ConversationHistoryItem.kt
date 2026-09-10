@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -19,32 +20,33 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
-import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.conversation.ConversationCharacterSummary
 import com.pegas.aura.aigirlfriend.soul.domain.model.conversation.ConversationSummary
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.custom.LoadingAsyncImage
 import java.text.SimpleDateFormat
+import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 
 @Composable
 internal fun ConversationHistoryItem(
     conversation: ConversationSummary,
+    hasUnread: Boolean = false,
     onClick: () -> Unit
 ) {
     val interactionSource = remember { MutableInteractionSource() }
-    val relativeTime = remember(
+    val formattedTime = remember(
         conversation.lastMessageAt,
         conversation.updatedAt,
         conversation.createdAt
     ) {
-        formatRelativeConversationTime(
+        formatConversationTime(
             conversation.lastMessageAt
                 ?: conversation.updatedAt
                 .ifBlank { conversation.createdAt }
@@ -54,11 +56,20 @@ internal fun ConversationHistoryItem(
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .shadow(
+                elevation = SdpR_4,
+                shape = RoundedCornerShape(SdpR_16),
+                spotColor = Color(0x14000000),
+                ambientColor = Color(0x0A000000)
+            )
+            .clip(RoundedCornerShape(SdpR_16))
+            .background(ColorFFFFFF)
             .clickable(
                 interactionSource = interactionSource,
                 indication = null,
                 onClick = onClick
-            ),
+            )
+            .padding(horizontal = SdpR_14, vertical = SdpR_12),
         horizontalArrangement = Arrangement.spacedBy(SdpR_12),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -66,70 +77,54 @@ internal fun ConversationHistoryItem(
             imageUrl = conversation.character?.image,
             contentDescription = conversation.character?.name,
             modifier = Modifier
-                .size(SdpR_64)
-                .clip(MaterialTheme.shapes.large)
+                .size(SdpR_48)
+                .clip(CircleShape)
         )
 
         Column(
             modifier = Modifier.weight(1f),
-            verticalArrangement = Arrangement.spacedBy(SdpR_1)
+            verticalArrangement = Arrangement.spacedBy(SdpR_4)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(SdpR_12),
+                horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
+                val characterName = conversation.character?.name ?: conversation.title ?: conversation.id
+                Text(
+                    text = characterName,
+                    modifier = Modifier.weight(1f, fill = false),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = ManropeBold,
+                    fontSize = SdpR_16.nonScaledSp,
+                    color = Color000000,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+
                 Row(
-                    modifier = Modifier.weight(1f),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(SdpR_6)
                 ) {
-                    val characterName = conversation.character?.name ?: conversation.id
-                    val titleText = if (conversation.character?.age != null) {
-                        "$characterName, ${conversation.character.age}"
-                    } else {
-                        characterName
+                    formattedTime?.let {
+                        Text(
+                            text = it,
+                            fontFamily = ManropeRegular,
+                            fontWeight = FontWeight.Normal,
+                            fontSize = SdpR_10.nonScaledSp,
+                            color = Color756582,
+                            maxLines = 1
+                        )
                     }
-                    Text(
-                        text = titleText,
-                        modifier = Modifier.weight(1f, fill = false),
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold,
-                        fontFamily = OutfitBold,
-                        fontSize = SdpR_16.nonScaledSp,
-                        color = ColorFDFDFD,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                    if (conversation.backgroundId.isNullOrBlank()) {
+
+                    if (hasUnread) {
                         Box(
                             modifier = Modifier
-                                .background(
-                                    color = Color8A56EC.copy(alpha = 0.2f),
-                                    shape = RoundedCornerShape(SdpR_4)
-                                )
-                                .padding(horizontal = SdpR_6, vertical = SdpR_2)
-                        ) {
-                            Text(
-                                text = stringResource(R.string.chat_list_my_ai),
-                                style = MaterialTheme.typography.labelSmall,
-                                color = ColorC0A3FF,
-                                fontSize = SdpR_10.nonScaledSp,
-                                fontWeight = FontWeight.Bold
-                            )
-                        }
+                                .size(SdpR_6)
+                                .background(color = Color(0xFF6C528E), shape = CircleShape)
+                        )
                     }
-                }
-
-                relativeTime?.let {
-                    Text(
-                        text = it,
-                        fontFamily = ManropeMedium,
-                        fontWeight = FontWeight.Normal,
-                        fontSize = SdpR_11.nonScaledSp,
-                        color = Color6B5E80,
-                        maxLines = 1
-                    )
                 }
             }
 
@@ -139,9 +134,9 @@ internal fun ConversationHistoryItem(
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Normal,
                     fontFamily = ManropeRegular,
-                    fontSize = SdpR_13.nonScaledSp,
-                    color = ColorAFA5C3,
-                    maxLines = 2,
+                    fontSize = SdpR_14.nonScaledSp,
+                    color = Color6F6794,
+                    maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
             }
@@ -149,7 +144,7 @@ internal fun ConversationHistoryItem(
     }
 }
 
-private fun formatRelativeConversationTime(value: String): String? {
+private fun formatConversationTime(value: String): String? {
     if (value.isBlank()) return null
 
     val normalizedValue = value.replace(
@@ -174,22 +169,22 @@ private fun formatRelativeConversationTime(value: String): String? {
         }.getOrNull()
     } ?: return null
 
-    return DateUtils.getRelativeTimeSpanString(
-        timestamp,
-        System.currentTimeMillis(),
-        DateUtils.MINUTE_IN_MILLIS
-    ).toString()
+    return if (DateUtils.isToday(timestamp)) {
+        SimpleDateFormat("h:mm a", Locale.US).format(Date(timestamp))
+    } else {
+        SimpleDateFormat("MMM d", Locale.US).format(Date(timestamp))
+    }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFF08030F, widthDp = 430)
+@Preview(showBackground = true, widthDp = 430)
 @Composable
 private fun ConversationHistoryItemWithImagePreview() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color08030F)
             .appSplashBackground()
-            .padding(SdpR_16)
+            .padding(SdpR_16),
+        verticalArrangement = Arrangement.spacedBy(SdpR_10)
     ) {
         ConversationHistoryItem(
             conversation = ConversationSummary(
@@ -197,10 +192,10 @@ private fun ConversationHistoryItemWithImagePreview() {
                 userId = "user_1",
                 characterId = "character_1",
                 title = "Late night talk",
-                lastMessagePreview = "Alo 1234",
-                lastMessageAt = "2026-07-28 22:15",
+                lastMessagePreview = "Thanks for tonight's talk...",
+                lastMessageAt = "2026-07-28 21:32",
                 createdAt = "2026-07-28 21:00",
-                updatedAt = "2026-07-28 22:15",
+                updatedAt = "2026-07-28 21:32",
                 character = ConversationCharacterSummary(
                     id = "character_1",
                     slug = "luna",
@@ -210,40 +205,29 @@ private fun ConversationHistoryItemWithImagePreview() {
                     task = "Soulmate",
                 )
             ),
+            hasUnread = true,
             onClick = {}
         )
-    }
-}
-
-@Preview(showBackground = true, backgroundColor = 0xFF08030F, widthDp = 430)
-@Composable
-private fun ConversationHistoryItemWithoutImagePreview() {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(Color08030F)
-            .appSplashBackground()
-            .padding(SdpR_16)
-    ) {
         ConversationHistoryItem(
             conversation = ConversationSummary(
                 id = "conversation_2",
                 userId = "user_1",
                 characterId = "character_2",
                 title = "Morning check-in",
-                lastMessagePreview = "Alo 123",
-                lastMessageAt = "2026-07-28 08:42",
+                lastMessagePreview = "I really enjoyed our conversation.",
+                lastMessageAt = "2026-07-28 22:15",
                 createdAt = "2026-07-28 08:00",
-                updatedAt = "2026-07-28 08:42",
+                updatedAt = "2026-07-28 22:15",
                 character = ConversationCharacterSummary(
                     id = "character_2",
-                    slug = "mia",
-                    name = "Mia",
+                    slug = "kai",
+                    name = "Kai",
                     image = null,
                     description = "Gentle and caring",
                     task = "Companion"
                 )
             ),
+            hasUnread = false,
             onClick = {}
         )
     }

@@ -231,7 +231,7 @@ private fun ChatListContent(
                             .fillMaxWidth(),
                         state = listState,
                         contentPadding = PaddingValues(bottom = SdpR_100),
-                        verticalArrangement = Arrangement.spacedBy(SdpR_8)
+                        verticalArrangement = Arrangement.spacedBy(SdpR_12)
                     ) {
                         items(
                             items = state.conversations,
@@ -287,7 +287,7 @@ private fun ChatListScreenEmptyPreview() {
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFF08030F, widthDp = 430, heightDp = 932)
+@Preview(showBackground = true, widthDp = 430, heightDp = 932)
 @Composable
 private fun ChatListScreenWithDataPreview() {
     Box(

@@ -109,7 +109,7 @@ internal fun ChatMoreBottomSheet(
                         painter = painterResource(R.drawable.ic_delete_circle),
                         contentDescription = null,
                         tint = Color.Unspecified,
-                        modifier = Modifier.size(SdpR_48)
+                        modifier = Modifier.size(SdpR_54)
                     )
                 }
             )
@@ -130,7 +130,7 @@ internal fun ChatMoreBottomSheet(
                         painter = painterResource(R.drawable.ic_flag_circle),
                         contentDescription = null,
                         tint = Color.Unspecified,
-                        modifier = Modifier.size(SdpR_48)
+                        modifier = Modifier.size(SdpR_54)
                     )
                 }
             )

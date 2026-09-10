@@ -266,7 +266,7 @@ private fun ChatListContent(
                         painter = painterResource(R.drawable.ic_delete_circle),
                         contentDescription = stringResource(R.string.chat_delete_confirm),
                         tint = Color.Unspecified,
-                        modifier = Modifier.size(SdpR_48)
+                        modifier = Modifier.size(SdpR_54)
                     )
                 }
             )

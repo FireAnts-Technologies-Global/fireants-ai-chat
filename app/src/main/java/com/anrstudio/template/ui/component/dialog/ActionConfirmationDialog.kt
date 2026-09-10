@@ -38,6 +38,8 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color363144
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color6B5E80
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE5E7EB
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorF3F4F6
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFF453A
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFF6A6A
@@ -53,6 +55,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_25
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_42
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_46
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_9
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
 
@@ -113,7 +116,7 @@ fun ActionConfirmationDialog(
                     onClick = onConfirm,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(SdpR_42),
+                        .height(SdpR_46),
                     shape = RoundedCornerShape(SdpR_16),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = ColorFF6A6A,
@@ -134,11 +137,11 @@ fun ActionConfirmationDialog(
                     onClick = onDismiss,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(SdpR_42),
+                        .height(SdpR_46),
                     shape = RoundedCornerShape(SdpR_16),
-                    border = BorderStroke(1.dp, Color363144),
+                    border = BorderStroke(1.dp, ColorE5E7EB),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = ColorFFFFFF,
+                        containerColor = ColorF3F4F6,
                         contentColor = Color000000
                     )
                 ) {

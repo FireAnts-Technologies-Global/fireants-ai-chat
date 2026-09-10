@@ -10,6 +10,7 @@ import androidx.compose.ui.res.stringResource
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.common.PublicError
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFF6A6A
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_54
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
 import com.pegas.aura.aigirlfriend.soul.ui.model.asString
 
@@ -31,7 +32,7 @@ fun ErrorRetryDialog(
                 imageVector = Icons.Outlined.Info,
                 contentDescription = null,
                 tint = ColorFF6A6A,
-                modifier = Modifier.size(SdpR_56)
+                modifier = Modifier.size(SdpR_54)
             )
         }
     )

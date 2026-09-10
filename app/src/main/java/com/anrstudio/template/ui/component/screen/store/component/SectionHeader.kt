@@ -29,16 +29,16 @@ fun SectionHeader(
     ) {
         Text(
             text = title,
-            fontFamily = OutfitBold,
+            fontFamily = ManropeBold,
             fontSize = SdpR_16.nonScaledSp,
             fontWeight = FontWeight.Bold,
-            color = ColorFDFDFD
+            color = Color(0xFF000000)
         )
         Text(
             text = subtitle,
             fontFamily = ManropeRegular,
             fontSize = SdpR_12.nonScaledSp,
-            color = ColorA69EB3
+            color = Color(0xFFA197B9)
         )
     }
 }

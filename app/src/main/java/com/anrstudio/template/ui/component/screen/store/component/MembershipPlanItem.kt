@@ -20,6 +20,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -65,15 +67,16 @@ fun MembershipPlanItem(
     modifier: Modifier = Modifier,
     isSelected: Boolean = false
 ) {
-    val borderColor = if (isSelected) ColorD65A98 else Color17FFFFFF
-    val titleColor = if (isSelected) ColorD65A98 else ColorFDFDFD
-    val priceColor = if (isSelected) ColorD65A98 else ColorFDFDFD
-    val checkIconTint = if (isSelected) ColorD65A98 else ColorE8C3AC
-    val checkBgColor = if (isSelected) Color21D65A98 else Color21E8C3AC
-    val borderWidth = if (isSelected) SdpR_2 else SdpR_1
-    val bgColor = if (isSelected) Color0FD65A98 else Color0AFFFFFF
-    val fontFamily = if (isSelected) OutfitExtraBold else OutfitBold
-    val fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.Bold
+    val isHighlighted = isBestValue || isSelected
+    val borderColor = if (isHighlighted) Color(0xFFFF4081) else Color(0xFFEAE6F2)
+    val titleColor = if (isHighlighted) Color(0xFFFF4081) else Color(0xFF1E1B24)
+    val priceColor = if (isHighlighted) Color(0xFFFF4081) else Color(0xFF1E1B24)
+    val checkIconTint = Color(0xFFFF4081)
+    val checkBgColor = Color(0xFFFFEBF2)
+    val borderWidth = if (isHighlighted) SdpR_2 else SdpR_1
+    val bgColor = if (isHighlighted) Color(0xFFFFF5F8) else Color.White
+    val fontFamily = if (isHighlighted) OutfitExtraBold else OutfitBold
+    val fontWeight = if (isHighlighted) FontWeight.ExtraBold else FontWeight.Bold
 
     Box(
         modifier = modifier
@@ -106,7 +109,9 @@ fun MembershipPlanItem(
                     Box(
                         modifier = Modifier
                             .background(
-                                color = ColorD65A98,
+                                brush = Brush.horizontalGradient(
+                                    listOf(Color(0xFFFF3377), Color(0xFFFF6E40))
+                                ),
                                 shape = RoundedCornerShape(SdpR_6)
                             )
                             .padding(horizontal = SdpR_6, vertical = SdpR_4)
@@ -116,7 +121,7 @@ fun MembershipPlanItem(
                             fontFamily = OutfitExtraBold,
                             fontSize = SdpR_7.nonScaledSp,
                             fontWeight = FontWeight.Bold,
-                            color = ColorFDFDFD
+                            color = Color.White
                         )
                     }
                 }
@@ -142,14 +147,14 @@ fun MembershipPlanItem(
                     text = stringResource(id = descriptionRes),
                     fontFamily = ManropeRegular,
                     fontSize = SdpR_12.nonScaledSp,
-                    color = ColorA197B9,
+                    color = Color(0xFF8E869E),
                     modifier = Modifier.weight(1f)
                 )
                 Text(
                     text = stringResource(id = durationLabelRes),
                     fontFamily = ManropeRegular,
                     fontSize = SdpR_11.nonScaledSp,
-                    color = ColorE5D9D9D9
+                    color = Color(0xFF8E869E)
                 )
             }
 
@@ -181,7 +186,7 @@ fun MembershipPlanItem(
                         text = stringResource(id = benefitRes),
                         fontFamily = ManropeRegular,
                         fontSize = SdpR_13.nonScaledSp,
-                        color = ColorE5D9D9D9
+                        color = Color(0xFF2D2938)
                     )
                 }
             }
@@ -192,7 +197,7 @@ fun MembershipPlanItem(
                 text = stringResource(id = footerTextRes),
                 fontFamily = ManropeRegular,
                 fontSize = SdpR_10.nonScaledSp,
-                color = ColorA197B9
+                color = Color(0xFF9E97AA)
             )
         }
     }

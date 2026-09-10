@@ -169,6 +169,7 @@ private fun StoreContent(
                     }
 
                     item(span = { GridItemSpan(maxLineSpan) }) {
+                        Spacer(modifier = Modifier.height(SdpR_12))
                         SectionHeader(
                             title = stringResource(id = R.string.store_membership_plans),
                             subtitle = stringResource(id = R.string.store_unlimited_vip)

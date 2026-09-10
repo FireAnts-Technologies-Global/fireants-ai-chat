@@ -35,20 +35,19 @@ fun StoreFooter(
             text = stringResource(id = R.string.store_restore_purchases),
             fontFamily = ManropeRegular,
             fontSize = SdpR_13.nonScaledSp,
-            color = ColorE8C3AC,
+            color = Color(0xFF332E3F),
             textDecoration = TextDecoration.Underline,
             modifier = Modifier
                 .clickable { onRestorePurchasesClick() }
                 .padding(SdpR_12)
         )
 
-
         Text(
             text = stringResource(id = R.string.store_terms_policies),
-            fontFamily = OutfitBold,
+            fontFamily = ManropeBold,
             fontSize = SdpR_13.nonScaledSp,
             fontWeight = FontWeight.Bold,
-            color = ColorFDFDFD
+            color = Color(0xFF1E1B24)
         )
 
         Spacer(modifier = Modifier.height(SdpR_6))
@@ -57,7 +56,7 @@ fun StoreFooter(
             text = stringResource(id = R.string.store_transactions_info),
             fontFamily = ManropeRegular,
             fontSize = SdpR_11.nonScaledSp,
-            color = ColorA197B9,
+            color = Color(0xFF9E97AA),
             textAlign = TextAlign.Center
         )
 
@@ -67,7 +66,7 @@ fun StoreFooter(
             text = stringResource(id = R.string.store_terms_privacy),
             fontFamily = ManropeRegular,
             fontSize = SdpR_11.nonScaledSp,
-            color = ColorA69EB3,
+            color = Color(0xFF9E97AA),
             modifier = Modifier
                 .clickable {
                     try {

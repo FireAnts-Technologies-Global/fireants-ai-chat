@@ -32,12 +32,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppText
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppTextHorizontalGradient
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color090514
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
@@ -164,8 +167,9 @@ fun IdentityOptionCard(
 ) {
     val selectedBorder = Brush.linearGradient(
         colors = listOf(
-            Color(0xFFFF4081),
-            Color(0xFFFF8E53)
+            Color(0xFFE040FB),
+            Color(0xFFFF3377),
+            Color(0xFFFF7A45)
         )
     )
     val unselectedBorder = SolidColor(Color(0xFFE5E7EB))
@@ -192,16 +196,17 @@ fun IdentityOptionCard(
             Icon(
                 painter = painterResource(id = iconRes),
                 contentDescription = title,
-                tint = if (selected) Color(0xFFFF4081) else Color(0xFF150F25),
+                tint = Color.Unspecified,
                 modifier = Modifier.size(SdpR_28)
             )
             Spacer(modifier = Modifier.height(SdpR_8))
-            Text(
+            AppText(
                 text = title,
                 fontFamily = ManropeBold,
                 fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
                 fontSize = SdpR_13.nonScaledSp,
-                color = if (selected) Color(0xFFFF4081) else Color(0xFF150F25),
+                gradient = if (selected) AppTextHorizontalGradient else null,
+                color = if (selected) Color.Unspecified else Color(0xFF150F25),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -274,16 +279,16 @@ fun SelectableImageCard(
 ) {
     val selectedBorder = Brush.linearGradient(
         colors = listOf(
-            Color(0xFFFF4081),
-            Color(0xFFFF8E53)
+            Color(0xFFDC60FF),
+            Color(0xFFFF41BC),
+            Color(0xFFFF8040),
         )
     )
-    val unselectedBorder = SolidColor(Color(0xFFE5E7EB))
+    val unselectedBorder = SolidColor(Color(0xFF29000000))
 
     Column(
         modifier = modifier
             .clip(RoundedCornerShape(SdpR_16))
-            .background(if (selected) Color(0xFFFFF0F5) else Color(0xFFF9FAFC))
             .border(
                 border = BorderStroke(
                     width = if (selected) SdpR_2 else SdpR_1,
@@ -305,16 +310,19 @@ fun SelectableImageCard(
                 .clip(RoundedCornerShape(SdpR_12))
         )
         Spacer(modifier = Modifier.height(SdpR_8))
-        Text(
+        AppText(
             text = option.title,
             fontFamily = ManropeBold,
-            fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
-            fontSize = SdpR_13.nonScaledSp,
-            color = if (selected) Color(0xFFFF4081) else Color(0xFF8E889B),
+            fontSize = SdpR_14.nonScaledSp,
+            lineHeight = SdpR_14.nonScaledSp,
+            gradient = if (selected) AppTextHorizontalGradient else null,
+            fontWeight = FontWeight.Bold,
+            color = if (selected) Color.Unspecified else Color(0xFF8E889B),
             textAlign = TextAlign.Center,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
+
     }
 }
 
@@ -400,7 +408,7 @@ fun RandomNameButton(onClick: () -> Unit = {}) {
         Icon(
             painter = painterResource(R.drawable.ic_random),
             contentDescription = null,
-            tint = Color(0xFFFF4081),
+            tint =Color.Unspecified,
             modifier = Modifier.size(SdpR_24)
         )
     }
@@ -462,19 +470,20 @@ fun PersonalityCard(
         Icon(
             painter = painterResource(id = item.iconRes),
             contentDescription = null,
-            tint = Color(0xFFFF4081),
+            tint = Color.Unspecified,
             modifier = Modifier.size(SdpR_26)
         )
         Spacer(modifier = Modifier.height(SdpR_4))
         Column {
-            Text(
+            AppText(
                 text = item.label,
                 fontFamily = ManropeSemiBold,
                 fontWeight = FontWeight.SemiBold,
-                fontSize = SdpR_12.nonScaledSp,
-                color = Color(0xFFFF4081),
+                fontSize = SdpR_11.nonScaledSp,
+                gradient = AppTextHorizontalGradient,
                 maxLines = 1
             )
+
             Spacer(modifier = Modifier.height(SdpR_2))
             Text(
                 text = item.value,

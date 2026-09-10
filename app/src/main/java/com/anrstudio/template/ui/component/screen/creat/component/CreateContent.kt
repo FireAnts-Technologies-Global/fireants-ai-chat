@@ -17,11 +17,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ads.AdRemoteConfig
 import com.pegas.aura.aigirlfriend.soul.ads.banner_all
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppText
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppTextHorizontalGradient
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.BannerAdView
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.CommonTopBar
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
@@ -98,15 +102,13 @@ fun CreateContent(
                     .fillMaxWidth()
                     .padding(horizontal = SdpR_8, vertical = SdpR_12)
             )
-
-            Text(
+            AppText(
                 text = stepLabel,
-                fontFamily = ManropeBold,
-                fontWeight = FontWeight.Bold,
-                fontSize = SdpR_12.nonScaledSp,
-                letterSpacing = 0.5.sp,
-                color = Color(0xFFFF4081)
+                fontFamily = ManropeRegular,
+                fontSize = SdpR_13.nonScaledSp,
+                gradient = AppTextHorizontalGradient,
             )
+
 
             Spacer(modifier = Modifier.height(SdpR_10))
 
@@ -178,12 +180,12 @@ private fun CreateContentPreview() {
         companionName = "Alex Thorne",
         genderOptions = listOf("Girls", "Guys", "Trans"),
         styleOptions = listOf(
-            CreateImageOption("Realistic", com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty),
-            CreateImageOption("Anime", com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty)
+            CreateImageOption("Realistic", R.drawable.img_empty),
+            CreateImageOption("Anime", R.drawable.img_empty)
         ),
         ethnicityOptions = listOf(
-            CreateImageOption("White", com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty),
-            CreateImageOption("Asian", com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty)
+            CreateImageOption("White", R.drawable.img_empty),
+            CreateImageOption("Asian", R.drawable.img_empty)
         ),
         ageOptions = listOf("20", "30", "40", "50"),
         skinTones = listOf(
@@ -195,29 +197,29 @@ private fun CreateContentPreview() {
             Color663A1C
         ),
         hairOptions = listOf(
-            CreateImageOption("Blonde", com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty),
-            CreateImageOption("Black", com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty)
+            CreateImageOption("Blonde", R.drawable.img_empty),
+            CreateImageOption("Black", R.drawable.img_empty)
         ),
         personalityItems = listOf(
             PersonalityItem(
                 "Personality",
                 "Spiritual",
-                com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty
+                R.drawable.img_empty
             ),
             PersonalityItem(
                 "Occupation",
                 "Billionaire CEO",
-                com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty
+                R.drawable.img_empty
             ),
             PersonalityItem(
                 "Hobbies",
                 "Music",
-                com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty
+                R.drawable.img_empty
             ),
             PersonalityItem(
                 "Relationships",
                 "Stranger",
-                com.pegas.aura.aigirlfriend.soul.R.drawable.img_empty
+                R.drawable.img_empty
             )
         ),
         onBack = {},

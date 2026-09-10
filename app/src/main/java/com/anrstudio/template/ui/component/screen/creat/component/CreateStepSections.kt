@@ -7,26 +7,20 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppText
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppTextHorizontalGradient
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
@@ -56,24 +50,28 @@ fun GeneralSetupStep(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(SdpR_8)
             ) {
+                val isFemale = selectedGender == girlsLabel
+                val isMale = selectedGender == guysLabel
+                val isTrans = selectedGender == transLabel
+
                 IdentityOptionCard(
                     title = girlsLabel,
-                    iconRes = R.drawable.ic_gender_female,
-                    selected = selectedGender == girlsLabel,
+                    iconRes = if (isFemale) R.drawable.ic_gender_female_selected else R.drawable.ic_gender_female,
+                    selected = isFemale,
                     modifier = Modifier.weight(1f),
                     onClick = { onGenderSelected(girlsLabel) }
                 )
                 IdentityOptionCard(
                     title = guysLabel,
-                    iconRes = R.drawable.ic_gender_male,
-                    selected = selectedGender == guysLabel,
+                    iconRes = if (isMale) R.drawable.ic_gender_male_selected else R.drawable.ic_gender_male,
+                    selected = isMale,
                     modifier = Modifier.weight(1f),
                     onClick = { onGenderSelected(guysLabel) }
                 )
                 IdentityOptionCard(
                     title = transLabel,
-                    iconRes = R.drawable.ic_gender_nonbinary,
-                    selected = selectedGender == transLabel,
+                    iconRes = if (isTrans) R.drawable.ic_gender_nonbinary_selecterd else R.drawable.ic_gender_nonbinary,
+                    selected = isTrans,
                     modifier = Modifier.weight(1f),
                     onClick = { onGenderSelected(transLabel) }
                 )
@@ -101,16 +99,17 @@ fun GeneralSetupStep(
             SectionTitle(
                 text = stringResource(R.string.create_describe_to_create),
                 action = {
-                    Text(
+                    AppText(
                         text = stringResource(R.string.create_inspire_me),
-                        fontFamily = ManropeSemiBold,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = SdpR_13.nonScaledSp,
-                        color = Color(0xFFFF4081),
+                        fontFamily = ManropeRegular,
+                        fontSize = SdpR_14.nonScaledSp,
+                        lineHeight = SdpR_14.nonScaledSp,
+                        gradient = AppTextHorizontalGradient,
                         modifier = Modifier
                             .clickable(onClick = onInspireMe)
                             .padding(vertical = SdpR_2, horizontal = SdpR_4)
                     )
+
                 }
             )
             PromptInput(

@@ -1,6 +1,7 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.bottomsheet
 
 import android.widget.Toast
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -14,6 +15,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -34,36 +36,22 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppButton
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppText
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppTextHorizontalGradient
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_18
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_21
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_40
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_9
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
 import com.pegas.aura.aigirlfriend.soul.ui.bases.ext.findActivity
 import com.pegas.aura.aigirlfriend.soul.ui.bases.navigation.AppRoutes
 import com.pegas.aura.aigirlfriend.soul.ui.bases.navigation.LocalNavController
@@ -91,6 +79,12 @@ fun CoinsBottomSheet(
         viewModel.handleIntent(StoreIntent.Initialize)
     }
 
+    LaunchedEffect(state.coinPackages) {
+        if (selectedPackageId == null && state.coinPackages.isNotEmpty()) {
+            selectedPackageId = state.coinPackages.first().id
+        }
+    }
+
     LaunchedEffect(viewModel) {
         viewModel.effect.collect { effect ->
             when (effect) {
@@ -113,37 +107,16 @@ fun CoinsBottomSheet(
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState,
-        containerColor = Color.Transparent,
+        containerColor = Color.White,
+        scrimColor = Color.Black.copy(alpha = 0.45f),
+        shape = RoundedCornerShape(topStart = SdpR_28, topEnd = SdpR_28),
         dragHandle = null
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(
-                    brush = Brush.verticalGradient(
-                        0.0f to Color0B0616,
-                        0.5f to Color160C2C,
-                        1.0f to Color07030D
-                    ),
-                    shape = RoundedCornerShape(topStart = SdpR_24, topEnd = SdpR_24)
-                )
+                .navigationBarsPadding()
         ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 22.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Box(
-                    modifier = Modifier
-                        .size(width = 32.dp, height = 4.dp)
-                        .background(
-                            color = ColorE5E5E7.copy(alpha = 0.4f),
-                            shape = RoundedCornerShape(2.dp)
-                        )
-                )
-            }
-
             CoinsBottomSheetContent(
                 state = state,
                 selectedPackageId = selectedPackageId,
@@ -168,7 +141,6 @@ fun CoinsBottomSheet(
     }
 }
 
-
 @Composable
 fun CoinsBottomSheetContent(
     state: StoreUiState,
@@ -180,36 +152,37 @@ fun CoinsBottomSheetContent(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = SdpR_18)
+            .padding(top = SdpR_20, bottom = SdpR_24)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = SdpR_12),
+                .padding(horizontal = SdpR_16),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
                 text = stringResource(id = R.string.no_credits_left),
-                fontFamily = OutfitExtraBold,
-                fontSize = SdpR_21.nonScaledSp,
-                color = ColorFDFDFD
+                fontFamily = ManropeBold,
+                fontWeight = FontWeight.Bold,
+                fontSize = SdpR_20.nonScaledSp,
+                color = Color(0xFF150F25)
             )
 
             Box(
                 modifier = Modifier
                     .border(
                         width = SdpR_1,
-                        color = Color17FFFFFF,
+                        color = Color(0xFFE5E7EB),
                         shape = RoundedCornerShape(SdpR_24)
                     )
                     .background(
-                        color = Color17FFFFFF,
+                        color = Color(0xFFF9FAFC),
                         shape = RoundedCornerShape(SdpR_24)
                     )
                     .padding(
                         horizontal = SdpR_12,
-                        vertical = SdpR_8
+                        vertical = SdpR_10
                     ),
                 contentAlignment = Alignment.Center
             ) {
@@ -217,61 +190,48 @@ fun CoinsBottomSheetContent(
                     Image(
                         painter = painterResource(id = R.drawable.img_coin),
                         contentDescription = null,
-                        modifier = Modifier.size(SdpR_13)
+                        modifier = Modifier.size(SdpR_18)
                     )
-                    Spacer(modifier = Modifier.width(SdpR_4))
+                    Spacer(modifier = Modifier.width(SdpR_6))
                     Text(
                         text = stringResource(id = R.string.balance_format, state.coinBalance),
-                        fontFamily = OutfitBold,
-                        fontSize = SdpR_10.nonScaledSp,
-                        color = ColorFDFDFD
+                        fontFamily = ManropeBold,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = SdpR_13.nonScaledSp,
+                        color = Color(0xFF150F25)
                     )
                 }
             }
         }
-        Spacer(modifier = Modifier.height(SdpR_12))
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = SdpR_16)
-                .height(SdpR_40)
-                .clip(RoundedCornerShape(SdpR_32))
-                .background(ColorD65A98)
-                .clickable {
-                    onUpgradeProClick()
-                },
-            contentAlignment = Alignment.Center
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.ic_crow),
-                    contentDescription = null,
-                    modifier = Modifier.size(SdpR_14)
-                )
-                Spacer(modifier = Modifier.width(SdpR_6))
 
-                Text(
-                    text = stringResource(id = R.string.upgrade_pro),
-                    fontFamily = OutfitBold,
-                    fontSize = SdpR_13.nonScaledSp,
-                    color = ColorFDFDFD,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-
-        }
         Spacer(modifier = Modifier.height(SdpR_16))
 
-        Text(
-            modifier = Modifier.padding(horizontal = SdpR_12),
-            text = stringResource(id = R.string.coins),
-            fontFamily = OutfitExtraBold,
-            fontSize = SdpR_9.nonScaledSp,
-            color = ColorA197B9
+        AppButton(
+            text = stringResource(id = R.string.upgrade_pro),
+            iconRes = R.drawable.ic_crow,
+            iconTint = Color.White,
+            iconSize = SdpR_16,
+            gradient = AppTextHorizontalGradient,
+            shape = RoundedCornerShape(SdpR_26),
+            minHeight = SdpR_50,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = SdpR_16),
+            onClick = onUpgradeProClick
         )
-        Spacer(modifier = Modifier.height(SdpR_8))
+
+        Spacer(modifier = Modifier.height(SdpR_20))
+
+        Text(
+            modifier = Modifier.padding(horizontal = SdpR_16),
+            text = stringResource(id = R.string.coins),
+            fontFamily = ManropeBold,
+            fontWeight = FontWeight.Bold,
+            fontSize = SdpR_12.nonScaledSp,
+            color = Color(0xFF150F25)
+        )
+
+        Spacer(modifier = Modifier.height(SdpR_10))
 
         if (state.isLoading) {
             Box(
@@ -280,21 +240,21 @@ fun CoinsBottomSheetContent(
                     .height(200.dp),
                 contentAlignment = Alignment.Center
             ) {
-                ImageLoadingLottie(size = SdpR_56)
+                ImageLoadingLottie(size = SdpR_32)
             }
         } else {
             LazyVerticalGrid(
                 columns = GridCells.Fixed(2),
                 modifier = Modifier
                     .fillMaxWidth()
-                    .heightIn(max = 400.dp),
-                contentPadding = PaddingValues(horizontal = SdpR_12),
-                verticalArrangement = Arrangement.spacedBy(SdpR_8),
-                horizontalArrangement = Arrangement.spacedBy(SdpR_8)
+                    .heightIn(max = 420.dp),
+                contentPadding = PaddingValues(horizontal = SdpR_16),
+                verticalArrangement = Arrangement.spacedBy(SdpR_10),
+                horizontalArrangement = Arrangement.spacedBy(SdpR_10)
             ) {
                 items(state.coinPackages) { pkg ->
                     BottomSheetCoinPackageItem(
-                        displayName = pkg.displayName ?: "${pkg.coinAmount} Gems",
+                        displayName = pkg.displayName ?: "${pkg.coinAmount} Coins",
                         price = pkg.priceText,
                         badge = pkg.bonusBadgeText,
                         isSelected = selectedPackageId == pkg.id,
@@ -303,32 +263,26 @@ fun CoinsBottomSheetContent(
                 }
             }
 
-            Spacer(modifier = Modifier.height(SdpR_24))
+            Spacer(modifier = Modifier.height(SdpR_20))
 
-            Box(
+            AppButton(
+                text = stringResource(id = R.string.buy_coins),
+                enabled = selectedPackageId != null,
+                gradient = AppTextHorizontalGradient,
+                disabledColor = Color(0xFFF3F4F6),
+                disabledTextColor = Color(0xFF8E889B),
+                shape = RoundedCornerShape(SdpR_26),
+                minHeight = SdpR_50,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = SdpR_16)
-                    .height(SdpR_40)
-                    .clip(RoundedCornerShape(SdpR_32))
-                    .background(if (selectedPackageId != null) ColorD65A98 else Color150F25)
-                    .clickable(enabled = selectedPackageId != null) {
-                        if (selectedPackageId != null) {
-                            onBuyClick(selectedPackageId)
-                        }
-                    },
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = stringResource(id = R.string.buy_coins),
-                    fontFamily = OutfitBold,
-                    fontSize = SdpR_13.nonScaledSp,
-                    color = if (selectedPackageId != null) ColorFDFDFD else ColorFDFDFD.copy(alpha = 0.5f),
-                    fontWeight = FontWeight.Bold
-                )
-            }
+                    .padding(horizontal = SdpR_16),
+                onClick = {
+                    if (selectedPackageId != null) {
+                        onBuyClick(selectedPackageId)
+                    }
+                }
+            )
         }
-
     }
 
     if (state.isPurchasing) {
@@ -336,41 +290,31 @@ fun CoinsBottomSheetContent(
     }
 }
 
-@androidx.compose.ui.tooling.preview.Preview(
+@Preview(
     showBackground = true,
-    backgroundColor = 0xFF08030F,
+    backgroundColor = 0xFFFFFFFF,
     widthDp = 430
 )
 @Composable
 private fun CoinsBottomSheetContentPreview() {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(
-                brush = Brush.verticalGradient(
-                    0.0f to Color0B0616,
-                    0.5f to Color160C2C,
-                    1.0f to Color07030D
-                )
+    CoinsBottomSheetContent(
+        state = StoreUiState(
+            isLoading = false,
+            coinBalance = 80,
+            coinPackages = listOf(
+                CoinPackageUiModel("1", 100, "100 Coins", null, "52.000 đ"),
+                CoinPackageUiModel("2", 220, "220 Coins", "+20 (9%)", "105.000 đ"),
+                CoinPackageUiModel("3", 550, "550 Coins", "+50 (9%)", "184.000 đ"),
+                CoinPackageUiModel("4", 1200, "1200 Coins", "+200 (17%)", "263.000 đ"),
+                CoinPackageUiModel("5", 2400, "2400 Coins", "+400 (17%)", "526.000 đ"),
+                CoinPackageUiModel("6", 5200, "5200 Coins", "+1200 (23%)", "789.000 đ")
             )
-    ) {
-        CoinsBottomSheetContent(
-            state = StoreUiState(
-                isLoading = false,
-                coinBalance = 80,
-                coinPackages = listOf(
-                    CoinPackageUiModel("1", 100, "100 Gems", null, "52.000 đ"),
-                    CoinPackageUiModel("2", 220, "220 Gems", "+20 (9%)", "105.000 đ"),
-                    CoinPackageUiModel("3", 550, "550 Gems", "+50 (9%)", "184.000 đ"),
-                    CoinPackageUiModel("4", 1200, "1200 Gems", "+200 (17%)", "263.000 đ")
-                )
-            ),
-            selectedPackageId = "2",
-            onPackageSelected = {},
-            onBuyClick = {},
-            onUpgradeProClick = {}
-        )
-    }
+        ),
+        selectedPackageId = "1",
+        onPackageSelected = {},
+        onBuyClick = {},
+        onUpgradeProClick = {}
+    )
 }
 
 @Composable
@@ -382,10 +326,6 @@ fun BottomSheetCoinPackageItem(
     modifier: Modifier = Modifier,
     isSelected: Boolean = false
 ) {
-    val borderColor = if (isSelected) ColorD65A98 else Color17FFFFFF
-    val borderWidth = if (isSelected) SdpR_2 else SdpR_1
-    val bgColor = if (isSelected) Color0FD65A98 else Color0AFFFFFF
-
     var extraAmount: String? = null
     var percentage: String? = null
     if (!badge.isNullOrBlank()) {
@@ -400,18 +340,23 @@ fun BottomSheetCoinPackageItem(
         }
     }
 
+    val selectedBorder = AppTextHorizontalGradient
+    val unselectedBorder = SolidColor(Color(0xFFE5E7EB))
+
     Box(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(SdpR_16))
-            .background(bgColor)
+            .background(if (isSelected) Color(0xFFFFF0F5) else Color.White)
             .border(
-                width = borderWidth,
-                color = borderColor,
+                border = BorderStroke(
+                    width = if (isSelected) SdpR_2 else SdpR_1,
+                    brush = if (isSelected) selectedBorder else unselectedBorder
+                ),
                 shape = RoundedCornerShape(SdpR_16)
             )
             .clickable { onClick() }
-            .padding(SdpR_10),
+            .padding(horizontal = SdpR_12, vertical = SdpR_12),
         contentAlignment = Alignment.CenterStart
     ) {
         Column(
@@ -422,45 +367,48 @@ fun BottomSheetCoinPackageItem(
                 Image(
                     painter = painterResource(id = R.drawable.img_coin),
                     contentDescription = null,
-                    modifier = Modifier.size(SdpR_13)
+                    modifier = Modifier.size(SdpR_18)
                 )
 
-                Spacer(modifier = Modifier.width(SdpR_4))
+                Spacer(modifier = Modifier.width(SdpR_6))
 
-                val numGems = displayName.substringBefore(" ")
+                val numCoins = displayName.substringBefore(" ")
                 Text(
-                    text = numGems,
-                    fontFamily = OutfitBold,
-                    fontSize = SdpR_13.nonScaledSp,
+                    text = numCoins,
+                    fontFamily = ManropeBold,
+                    fontSize = SdpR_16.nonScaledSp,
                     fontWeight = FontWeight.Bold,
-                    color = ColorFDFDFD
+                    color = Color(0xFF150F25)
                 )
 
                 if (!extraAmount.isNullOrEmpty()) {
                     Spacer(modifier = Modifier.width(SdpR_4))
                     Box(
                         modifier = Modifier
-                            .background(Color2D253A, RoundedCornerShape(SdpR_4))
-                            .padding(horizontal = SdpR_4, vertical = SdpR_4),
+                            .background(Color(0x12000000), RoundedCornerShape(SdpR_4))
+                            .padding(horizontal = SdpR_4, vertical = SdpR_2),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(
+                        AppText(
                             text = extraAmount,
-                            fontFamily = OutfitSemiBold,
-                            fontSize = SdpR_7.nonScaledSp,
-                            color = ColorE8C3AC
+                            fontFamily = ManropeSemiBold,
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = SdpR_10.nonScaledSp,
+                            gradient = AppTextHorizontalGradient,
                         )
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.height(SdpR_2))
+            Spacer(modifier = Modifier.height(SdpR_6))
 
-            Text(
+            AppText(
                 text = price,
-                fontFamily = OutfitSemiBold,
-                fontSize = SdpR_11.nonScaledSp,
-                color = ColorE8C3AC
+                fontFamily = ManropeBold,
+                fontSize = SdpR_14.nonScaledSp,
+                fontWeight = FontWeight.Bold,
+                gradient = AppTextHorizontalGradient,
+                color = if (isSelected) Color.Unspecified else Color(0xFFFF4081)
             )
         }
 
@@ -468,15 +416,16 @@ fun BottomSheetCoinPackageItem(
             Box(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .background(Color16302B, RoundedCornerShape(SdpR_6))
-                    .padding(horizontal = SdpR_6, vertical = SdpR_4),
+                    .background(Color(0x2622C55E), RoundedCornerShape(SdpR_6))
+                    .padding(horizontal = SdpR_6, vertical = SdpR_2),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = percentage,
-                    fontFamily = OutfitBold,
-                    fontSize = SdpR_7.nonScaledSp,
-                    color = Color38D668
+                    fontFamily = ManropeBold,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = SdpR_10.nonScaledSp,
+                    color = Color(0xFF4ADE80)
                 )
             }
         }

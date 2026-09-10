@@ -8,5 +8,6 @@ import javax.inject.Inject
 class GetBillingStatusUseCase @Inject constructor(
     private val billingRepository: BillingRepository
 ) {
-    suspend operator fun invoke(): AppResult<BillingStatus> = billingRepository.getBillingStatus()
+    suspend operator fun invoke(forceRefresh: Boolean = false): AppResult<BillingStatus> =
+        billingRepository.getBillingStatus(forceRefresh)
 }

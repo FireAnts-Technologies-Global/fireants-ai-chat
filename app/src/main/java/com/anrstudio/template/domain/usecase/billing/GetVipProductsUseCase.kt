@@ -8,5 +8,6 @@ import javax.inject.Inject
 class GetVipProductsUseCase @Inject constructor(
     private val billingRepository: BillingRepository
 ) {
-    suspend operator fun invoke(): AppResult<List<VipProduct>> = billingRepository.getVipProducts()
+    suspend operator fun invoke(forceRefresh: Boolean = false): AppResult<List<VipProduct>> =
+        billingRepository.getVipProducts(forceRefresh)
 }

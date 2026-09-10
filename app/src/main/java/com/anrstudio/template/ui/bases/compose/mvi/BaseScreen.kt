@@ -12,7 +12,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.common.PublicError
+import com.pegas.aura.aigirlfriend.soul.domain.model.common.PublicMessageKey
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.appSplashBackground
+import com.pegas.aura.aigirlfriend.soul.ui.component.bottomsheet.CoinsBottomSheet
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.ErrorRetryDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.LoadingDialog
 
@@ -62,8 +64,8 @@ fun <S : BaseUiState, I : Any, E : Any> BaseScreen(
 
         state.error?.let { error ->
             val dismissError = { viewModel.dismissError() }
-            if (error.messageKey == com.pegas.aura.aigirlfriend.soul.domain.model.common.PublicMessageKey.INSUFFICIENT_COINS) {
-                com.pegas.aura.aigirlfriend.soul.ui.component.bottomsheet.CoinsBottomSheet(
+            if (error.messageKey == PublicMessageKey.INSUFFICIENT_COINS) {
+               CoinsBottomSheet(
                     onDismiss = dismissError
                 )
             } else {

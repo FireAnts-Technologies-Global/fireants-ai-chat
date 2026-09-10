@@ -149,7 +149,7 @@ class BillingPurchaseCoordinator @Inject constructor(
         delayMs: Long = 2_000
     ): Boolean {
         for (attempt in 1..maxAttempts) {
-            when (val result = getBillingStatusUseCase()) {
+            when (val result = getBillingStatusUseCase(forceRefresh = true)) {
                 is AppResult.Success -> {
                     val jsonStr = result.data.vip?.json
                     if (jsonStr != null && jsonStr.contains("\"active\":true")) {

@@ -8,5 +8,6 @@ import javax.inject.Inject
 class GetCoinPackagesUseCase @Inject constructor(
     private val coinsRepository: CoinsRepository
 ) {
-    suspend operator fun invoke(): AppResult<List<CoinPackage>> = coinsRepository.getPackages()
+    suspend operator fun invoke(forceRefresh: Boolean = false): AppResult<List<CoinPackage>> =
+        coinsRepository.getPackages(forceRefresh)
 }

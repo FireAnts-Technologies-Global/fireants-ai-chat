@@ -17,7 +17,9 @@ interface CoinsRepository {
 
     suspend fun claimCheckIn(): AppResult<CoinCheckInClaim>
 
-    suspend fun getPackages(): AppResult<List<CoinPackage>>
+    suspend fun getPackages(forceRefresh: Boolean = false): AppResult<List<CoinPackage>>
+
+    fun getCachedPackages(): List<CoinPackage>? = null
 
     suspend fun getTransactions(query: PaginationQuery): AppResult<CoinTransactionPage>
 

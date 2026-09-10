@@ -11,7 +11,7 @@ interface RevenueCatRepository {
 
     suspend fun syncUserIdentity(): AppResult<Unit>
 
-    suspend fun getOfferings(): AppResult<List<RevenueCatOffering>>
+    suspend fun getOfferings(forceRefresh: Boolean = false): AppResult<List<RevenueCatOffering>>
 
     suspend fun getProducts(productIds: List<String>): AppResult<List<RevenueCatStoreProduct>>
 
@@ -20,4 +20,6 @@ interface RevenueCatRepository {
     suspend fun restorePurchases(): AppResult<RevenueCatCustomer>
 
     suspend fun purchase(activity: Activity, storeProductId: String): AppResult<RevenueCatCustomer>
+
+    fun getCachedOfferings(): List<RevenueCatOffering>? = null
 }

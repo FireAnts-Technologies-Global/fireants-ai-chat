@@ -89,7 +89,6 @@ fun CreateBottomAction(
         modifier = Modifier
             .fillMaxWidth()
             .background(Color.Transparent)
-            .padding(horizontal = SdpR_16)
             .padding(top = SdpR_8, bottom = SdpR_24)
     ) {
         val buttonGradient = Brush.horizontalGradient(

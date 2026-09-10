@@ -69,11 +69,21 @@ class RevenueCatRepositoryImpl @Inject constructor(
             Purchases.sharedInstance.awaitLogIn(userId)
         }
 
-    override suspend fun getOfferings(): AppResult<List<RevenueCatOffering>> =
-        revenueCatResult("getOfferings") {
-            ensureConfiguredForUsage()
-            Purchases.sharedInstance.awaitOfferings().all.values.map { it.toDomain() }
+    private var cachedOfferings: List<RevenueCatOffering>? = null
+
+    override fun getCachedOfferings(): List<RevenueCatOffering>? = cachedOfferings
+
+    override suspend fun getOfferings(forceRefresh: Boolean): AppResult<List<RevenueCatOffering>> {
+        if (!forceRefresh) {
+            cachedOfferings?.let { return AppResult.Success(it) }
         }
+        return revenueCatResult("getOfferings") {
+            ensureConfiguredForUsage()
+            Purchases.sharedInstance.awaitOfferings().all.values.map { it.toDomain() }.also {
+                cachedOfferings = it
+            }
+        }
+    }
 
     override suspend fun getProducts(productIds: List<String>): AppResult<List<RevenueCatStoreProduct>> =
         revenueCatResult("getProducts") {

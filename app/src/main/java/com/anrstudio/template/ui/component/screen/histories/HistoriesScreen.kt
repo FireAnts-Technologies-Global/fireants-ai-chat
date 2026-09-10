@@ -127,7 +127,7 @@ fun HistoriesContent(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
-                    ImageLoadingLottie(size = SdpR_56)
+                    ImageLoadingLottie(size = SdpR_32)
                 }
             } else {
                 LazyVerticalGrid(

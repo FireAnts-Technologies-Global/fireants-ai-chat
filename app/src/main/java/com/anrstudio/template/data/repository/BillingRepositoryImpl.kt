@@ -16,15 +16,34 @@ class BillingRepositoryImpl @Inject constructor(
     private val billingService: BillingService
 ) : BillingRepository {
 
-    override suspend fun getBillingStatus(): AppResult<BillingStatus> =
-        apiResult("getBillingStatus") {
-            billingService.getBillingStatus().requireData().toDomain()
-        }
+    private var cachedBillingStatus: BillingStatus? = null
+    private var cachedVipProducts: List<VipProduct>? = null
 
-    override suspend fun getVipProducts(): AppResult<List<VipProduct>> =
-        apiResult("getVipProducts") {
-            billingService.getVipProducts().requireData().map { it.toDomain() }
+    override fun getCachedBillingStatus(): BillingStatus? = cachedBillingStatus
+
+    override fun getCachedVipProducts(): List<VipProduct>? = cachedVipProducts
+
+    override suspend fun getBillingStatus(forceRefresh: Boolean): AppResult<BillingStatus> {
+        if (!forceRefresh) {
+            cachedBillingStatus?.let { return AppResult.Success(it) }
         }
+        return apiResult("getBillingStatus") {
+            billingService.getBillingStatus().requireData().toDomain().also {
+                cachedBillingStatus = it
+            }
+        }
+    }
+
+    override suspend fun getVipProducts(forceRefresh: Boolean): AppResult<List<VipProduct>> {
+        if (!forceRefresh) {
+            cachedVipProducts?.let { return AppResult.Success(it) }
+        }
+        return apiResult("getVipProducts") {
+            billingService.getVipProducts().requireData().map { it.toDomain() }.also {
+                cachedVipProducts = it
+            }
+        }
+    }
 }
 
 private fun BillingStatusEnvelopeDto.requireData() =

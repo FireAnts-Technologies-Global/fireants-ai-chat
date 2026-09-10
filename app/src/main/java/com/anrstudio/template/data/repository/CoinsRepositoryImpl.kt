@@ -48,10 +48,20 @@ class CoinsRepositoryImpl @Inject constructor(
             }
         }
 
-    override suspend fun getPackages(): AppResult<List<CoinPackage>> =
-        apiResult("getPackages") {
-            coinsService.getPackages().requireData().map { it.toDomain() }
+    private var cachedPackages: List<CoinPackage>? = null
+
+    override fun getCachedPackages(): List<CoinPackage>? = cachedPackages
+
+    override suspend fun getPackages(forceRefresh: Boolean): AppResult<List<CoinPackage>> {
+        if (!forceRefresh) {
+            cachedPackages?.let { return AppResult.Success(it) }
         }
+        return apiResult("getPackages") {
+            coinsService.getPackages().requireData().map { it.toDomain() }.also {
+                cachedPackages = it
+            }
+        }
+    }
 
     override suspend fun getTransactions(query: PaginationQuery): AppResult<CoinTransactionPage> =
         apiResult("getTransactions") {

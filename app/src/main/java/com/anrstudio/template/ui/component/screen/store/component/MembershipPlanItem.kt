@@ -22,37 +22,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color0AFFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color0FD65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color17FFFFFF
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color21D65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color21E8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorA197B9
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD65A98
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE5D9D9D9
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitExtraBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_10
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_18
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_7
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppText
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.AppTextHorizontalGradient
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 
 @Composable
 fun MembershipPlanItem(
@@ -67,16 +46,21 @@ fun MembershipPlanItem(
     modifier: Modifier = Modifier,
     isSelected: Boolean = false
 ) {
-    val isHighlighted = isBestValue || isSelected
-    val borderColor = if (isHighlighted) Color(0xFFFF4081) else Color(0xFFEAE6F2)
-    val titleColor = if (isHighlighted) Color(0xFFFF4081) else Color(0xFF1E1B24)
-    val priceColor = if (isHighlighted) Color(0xFFFF4081) else Color(0xFF1E1B24)
-    val checkIconTint = Color(0xFFFF4081)
-    val checkBgColor = Color(0xFFFFEBF2)
-    val borderWidth = if (isHighlighted) SdpR_2 else SdpR_1
-    val bgColor = if (isHighlighted) Color(0xFFFFF5F8) else Color.White
-    val fontFamily = if (isHighlighted) OutfitExtraBold else OutfitBold
-    val fontWeight = if (isHighlighted) FontWeight.ExtraBold else FontWeight.Bold
+    val borderBrush = if (isSelected) {
+        Brush.horizontalGradient(
+            listOf(
+                Color(0xFFE040FB),
+                Color(0xFFFF3377),
+                Color(0xFFFF7A45)
+            )
+        )
+    } else {
+        SolidColor(Color(0xFFEAE6F2))
+    }
+    val borderWidth = if (isSelected) 1.5.dp else 1.dp
+    val bgColor = if (isSelected) Color(0xFFFFF5F8) else Color.White
+    val textGradient = if (isSelected) AppTextHorizontalGradient else null
+    val textColor = if (isSelected) Color.Unspecified else Color(0xFF1E1B24)
 
     Box(
         modifier = modifier
@@ -85,7 +69,7 @@ fun MembershipPlanItem(
             .background(bgColor)
             .border(
                 width = borderWidth,
-                color = borderColor,
+                brush = borderBrush,
                 shape = RoundedCornerShape(SdpR_16)
             )
             .clickable { onClick() }
@@ -96,12 +80,13 @@ fun MembershipPlanItem(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(
+                AppText(
                     text = title,
-                    fontFamily = fontFamily,
+                    fontFamily = if (isSelected) ManropeExtraBold else ManropeBold,
                     fontSize = SdpR_16.nonScaledSp,
-                    fontWeight = fontWeight,
-                    color = titleColor
+                    fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.Bold,
+                    color = textColor,
+                    gradient = textGradient
                 )
 
                 if (isBestValue) {
@@ -110,7 +95,7 @@ fun MembershipPlanItem(
                         modifier = Modifier
                             .background(
                                 brush = Brush.horizontalGradient(
-                                    listOf(Color(0xFFFF3377), Color(0xFFFF6E40))
+                                    listOf(Color(0xFFFF3377), Color(0xFFFF7043))
                                 ),
                                 shape = RoundedCornerShape(SdpR_6)
                             )
@@ -128,12 +113,13 @@ fun MembershipPlanItem(
 
                 Spacer(modifier = Modifier.weight(1f))
 
-                Text(
+                AppText(
                     text = price,
-                    fontFamily = OutfitExtraBold,
-                    fontSize = SdpR_18.nonScaledSp,
+                    fontFamily = ManropeExtraBold,
+                    fontSize = SdpR_20.nonScaledSp,
                     fontWeight = FontWeight.Bold,
-                    color = priceColor
+                    color = textColor,
+                    gradient = textGradient
                 )
             }
 
@@ -147,40 +133,41 @@ fun MembershipPlanItem(
                     text = stringResource(id = descriptionRes),
                     fontFamily = ManropeRegular,
                     fontSize = SdpR_12.nonScaledSp,
-                    color = Color(0xFF8E869E),
+                    color = Color(0xFFA197B9),
                     modifier = Modifier.weight(1f)
                 )
                 Text(
                     text = stringResource(id = durationLabelRes),
                     fontFamily = ManropeRegular,
                     fontSize = SdpR_11.nonScaledSp,
-                    color = Color(0xFF8E869E)
+                    color = Color(0xE5000000)
                 )
             }
 
-            Spacer(modifier = Modifier.height(SdpR_16))
+            Spacer(modifier = Modifier.height(SdpR_8))
+
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(1.dp)
+                    .background(Color(0xFFF2EDF7))
+            )
+
+            Spacer(modifier = Modifier.height(SdpR_12))
 
             benefitsRes.forEach { benefitRes ->
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier.padding(bottom = SdpR_8)
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .size(SdpR_18)
-                            .background(
-                                color = checkBgColor,
-                                shape = CircleShape
-                            ),
-                        contentAlignment = Alignment.Center
-                    ) {
+
                         Icon(
-                            painter = painterResource(id = R.drawable.ic_check),
+                            painter = painterResource(id = R.drawable.ic_check_vip),
                             contentDescription = null,
-                            tint = checkIconTint,
-                            modifier = Modifier.size(SdpR_10)
+                            tint = Color.Unspecified,
+                            modifier = Modifier.size(SdpR_18)
                         )
-                    }
+
                     Spacer(modifier = Modifier.width(SdpR_8))
                     Text(
                         text = stringResource(id = benefitRes),
@@ -197,7 +184,7 @@ fun MembershipPlanItem(
                 text = stringResource(id = footerTextRes),
                 fontFamily = ManropeRegular,
                 fontSize = SdpR_10.nonScaledSp,
-                color = Color(0xFF9E97AA)
+                color = Color(0xFFA197B9)
             )
         }
     }
@@ -205,7 +192,7 @@ fun MembershipPlanItem(
 
 @Preview(
     showBackground = true,
-    backgroundColor = 0xFF08030F,
+    backgroundColor = 0xFFFFFFFF,
     widthDp = 400
 )
 @Composable
@@ -220,13 +207,14 @@ private fun MembershipPlanMonthlyPreview() {
         ),
         footerTextRes = R.string.store_vip_footer_month,
         isBestValue = false,
+        isSelected = false,
         onClick = {}
     )
 }
 
 @Preview(
     showBackground = true,
-    backgroundColor = 0xFF08030F,
+    backgroundColor = 0xFFFFFFFF,
     widthDp = 400
 )
 @Composable
@@ -242,6 +230,7 @@ private fun MembershipPlanAnnualPreview() {
         ),
         footerTextRes = R.string.store_vip_footer_year,
         isBestValue = true,
+        isSelected = true,
         onClick = {}
     )
 }

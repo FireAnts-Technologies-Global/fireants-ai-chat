@@ -17,7 +17,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import com.pegas.aura.aigirlfriend.soul.ads.AdRemoteConfig
 import com.pegas.aura.aigirlfriend.soul.ads.banner_all
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.BannerAdView
@@ -52,6 +54,7 @@ fun CreateContent(
     onGenderSelected: (String) -> Unit,
     onStyleSelected: (String) -> Unit,
     onPromptChanged: (String) -> Unit,
+    onInspireMe: () -> Unit = {},
     onEthnicitySelected: (String) -> Unit,
     onAgeSelected: (String) -> Unit,
     onSkinToneSelected: (Int) -> Unit,
@@ -93,14 +96,16 @@ fun CreateContent(
                 height = SdpR_28,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(SdpR_24)
+                    .padding(horizontal = SdpR_8, vertical = SdpR_12)
             )
 
             Text(
                 text = stepLabel,
-                fontFamily = OutfitRegular,
-                fontSize = SdpR_13.nonScaledSp,
-                color = ColorE8C3AC
+                fontFamily = ManropeBold,
+                fontWeight = FontWeight.Bold,
+                fontSize = SdpR_12.nonScaledSp,
+                letterSpacing = 0.5.sp,
+                color = Color(0xFFFF4081)
             )
 
             Spacer(modifier = Modifier.height(SdpR_10))
@@ -114,6 +119,7 @@ fun CreateContent(
                         onStyleSelected = onStyleSelected,
                         prompt = prompt,
                         onPromptChanged = onPromptChanged,
+                        onInspireMe = onInspireMe,
                         genderOptions = genderOptions,
                         styleOptions = styleOptions
                     )

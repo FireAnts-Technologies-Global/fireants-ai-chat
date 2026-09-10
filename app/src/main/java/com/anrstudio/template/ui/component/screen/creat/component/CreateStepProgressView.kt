@@ -7,30 +7,29 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_18
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_40
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_28
 
 @Composable
 fun CreateStepProgressView(
     currentStep: Int,
     modifier: Modifier = Modifier,
     totalSteps: Int = 4,
-    activeColor: Color = ColorE8C3AC,
-    inactiveColor: Color = Color322D41,
-    circleSize: Dp = SdpR_18,
-    lineWidth: Dp = SdpR_1,
+    activeColor: Color = Color(0xFFFF4081),
+    inactiveColor: Color = Color(0xFFCBD5E1),
+    circleSize: Dp = SdpR_14,
+    lineWidth: Dp = SdpR_2,
     inactiveStrokeWidth: Dp = SdpR_1,
-    lineCircleGap: Dp = SdpR_4,
-    height: Dp = SdpR_40
+    lineCircleGap: Dp = SdpR_2,
+    height: Dp = SdpR_28
 ) {
     if (totalSteps <= 0) return
 
@@ -53,14 +52,44 @@ fun CreateStepProgressView(
             val startCenterX = radius + centerDistance * index
             val endCenterX = radius + centerDistance * (index + 1)
             val isCompletedLine = index < safeCurrentStep - 1
+            val isTransitionLine = index == safeCurrentStep - 1
 
-            drawLine(
-                color = if (isCompletedLine) activeColor else inactiveColor,
-                start = Offset(startCenterX + radius + lineCircleGap.toPx(), centerY),
-                end = Offset(endCenterX - radius, centerY),
-                strokeWidth = lineWidth.toPx(),
-                cap = StrokeCap.Square
-            )
+            val lineStartX = startCenterX + radius + lineCircleGap.toPx()
+            val lineEndX = endCenterX - radius - lineCircleGap.toPx()
+
+            if (isCompletedLine) {
+                drawLine(
+                    brush = Brush.horizontalGradient(
+                        colors = listOf(Color(0xFFFF3377), Color(0xFFFF7A45)),
+                        startX = lineStartX,
+                        endX = lineEndX
+                    ),
+                    start = Offset(lineStartX, centerY),
+                    end = Offset(lineEndX, centerY),
+                    strokeWidth = lineWidth.toPx(),
+                    cap = StrokeCap.Round
+                )
+            } else if (isTransitionLine && safeCurrentStep == 1) {
+                drawLine(
+                    brush = Brush.horizontalGradient(
+                        colors = listOf(activeColor, inactiveColor.copy(alpha = 0.5f)),
+                        startX = lineStartX,
+                        endX = lineEndX
+                    ),
+                    start = Offset(lineStartX, centerY),
+                    end = Offset(lineEndX, centerY),
+                    strokeWidth = lineWidth.toPx(),
+                    cap = StrokeCap.Round
+                )
+            } else {
+                drawLine(
+                    color = inactiveColor,
+                    start = Offset(lineStartX, centerY),
+                    end = Offset(lineEndX, centerY),
+                    strokeWidth = lineWidth.toPx(),
+                    cap = StrokeCap.Round
+                )
+            }
         }
 
         for (index in 0 until totalSteps) {
@@ -69,7 +98,11 @@ fun CreateStepProgressView(
 
             if (isCompletedStep) {
                 drawCircle(
-                    color = activeColor,
+                    brush = Brush.linearGradient(
+                        colors = listOf(Color(0xFFFF3377), Color(0xFFFF5E98)),
+                        start = Offset(centerX - radius, centerY - radius),
+                        end = Offset(centerX + radius, centerY + radius)
+                    ),
                     radius = radius,
                     center = Offset(centerX, centerY)
                 )
@@ -85,7 +118,7 @@ fun CreateStepProgressView(
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFF090514, widthDp = 430)
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF, widthDp = 430)
 @Composable
 private fun CreateStepProgressViewPreview() {
     Box(modifier = Modifier.fillMaxWidth()) {

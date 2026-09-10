@@ -1,6 +1,7 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.creat
 
 import android.widget.Toast
+import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -89,9 +90,11 @@ private fun CreateRoute(
     val transLabel = stringResource(R.string.create_gender_trans)
     val realisticLabel = stringResource(R.string.create_style_realistic)
     val animeLabel = stringResource(R.string.create_style_anime)
+    val eastAsianLabel = stringResource(R.string.create_ethnicity_east_asian)
+    val southAsianLabel = stringResource(R.string.create_ethnicity_south_asian)
+    val blackLabel = stringResource(R.string.create_ethnicity_black)
     val whiteLabel = stringResource(R.string.create_ethnicity_white)
     val asianLabel = stringResource(R.string.create_ethnicity_asian)
-    val blackLabel = stringResource(R.string.create_ethnicity_black)
     val latinaLabel = stringResource(R.string.create_ethnicity_latina)
     val blondeLabel = stringResource(R.string.create_hair_blonde)
     val hairBlackLabel = stringResource(R.string.create_hair_black)
@@ -110,9 +113,11 @@ private fun CreateRoute(
         animeLabel = animeLabel
     )
     val selectedEthnicity = state.selectedEthnicity.toLabel(
+        eastAsianLabel = eastAsianLabel,
+        southAsianLabel = southAsianLabel,
+        blackLabel = blackLabel,
         whiteLabel = whiteLabel,
         asianLabel = asianLabel,
-        blackLabel = blackLabel,
         latinaLabel = latinaLabel
     )
     val selectedHair = state.selectedHair.toLabel(
@@ -128,33 +133,41 @@ private fun CreateRoute(
         CreateImageOption(
             title = realisticLabel,
             imageRes = when (state.selectedGender) {
-                CreateGender.GUYS -> R.drawable.img_guys
-                CreateGender.TRANS -> R.drawable.img_trans
+                CreateGender.GUYS -> R.drawable.img_man
+                CreateGender.TRANS -> R.drawable.img_giris
                 CreateGender.GIRLS -> R.drawable.img_giris
             }
         ),
         CreateImageOption(
             title = animeLabel,
-            imageRes = R.drawable.img_anime
+            imageRes = when (state.selectedGender) {
+                CreateGender.GUYS -> R.drawable.img_anime_man
+                CreateGender.TRANS -> R.drawable.img_anime_girl
+                CreateGender.GIRLS -> R.drawable.img_anime_girl
+            }
         )
     )
     val isGuy = state.selectedGender == CreateGender.GUYS
     val ethnicityOptions = listOf(
         CreateImageOption(
-            whiteLabel,
-            if (isGuy) R.drawable.img_white_guy else R.drawable.img_white_girl
+            eastAsianLabel,
+            if (isGuy) R.drawable.img_east_asian_man else R.drawable.img_east_asian_girl
         ),
         CreateImageOption(
-            asianLabel,
-            if (isGuy) R.drawable.img_asian_guy else R.drawable.img_asian_girl
+            southAsianLabel,
+            if (isGuy) R.drawable.img_south_asian_man else R.drawable.img_south_asian_girl
         ),
         CreateImageOption(
             blackLabel,
-            if (isGuy) R.drawable.img_back_guy else R.drawable.img_back_girl
+            if (isGuy) R.drawable.img_back_man else R.drawable.img_back_girl
+        ),
+        CreateImageOption(
+            whiteLabel,
+            if (isGuy) R.drawable.img_white_man else R.drawable.img_white_girl
         ),
         CreateImageOption(
             latinaLabel,
-            if (isGuy) R.drawable.img_latine_guy else R.drawable.img_latine_girl
+            if (isGuy) R.drawable.img_latine_man else R.drawable.img_latine_girl
         )
     )
     val ageOptions = listOf("20", "30", "40", "50")
@@ -169,25 +182,28 @@ private fun CreateRoute(
     val hairOptions = listOf(
         CreateImageOption(
             blondeLabel,
-            if (isGuy) R.drawable.img_blonde_guy else R.drawable.img_blonde_girl
+            getHairImage(state.selectedGender, CreateHairColor.BLONDE)
         ),
         CreateImageOption(
             hairBlackLabel,
-            if (isGuy) R.drawable.img_black_guy else R.drawable.img_black_girl
+            getHairImage(state.selectedGender, CreateHairColor.BLACK)
         ),
         CreateImageOption(
             copperLabel,
-            if (isGuy) R.drawable.img_copper_guy else R.drawable.img_copper_girl
+            getHairImage(state.selectedGender, CreateHairColor.COPPER)
         ),
         CreateImageOption(
             blueLabel,
-            if (isGuy) R.drawable.img_blue_guy else R.drawable.img_blue_girl
+            getHairImage(state.selectedGender, CreateHairColor.BLUE)
         ),
         CreateImageOption(
             purpleLabel,
-            if (isGuy) R.drawable.img_purple_guy else R.drawable.img_purple_girl
+            getHairImage(state.selectedGender, CreateHairColor.PURPLE)
         ),
-        CreateImageOption(redLabel, if (isGuy) R.drawable.img_red_guy else R.drawable.img_red_girl)
+        CreateImageOption(
+            redLabel,
+            getHairImage(state.selectedGender, CreateHairColor.RED)
+        )
     )
     var showPersonalitySheet by remember { mutableStateOf(false) }
     var showOccupationSheet by remember { mutableStateOf(false) }
@@ -227,6 +243,17 @@ private fun CreateRoute(
             onClick = { showRelationshipSheet = true }
         )
     )
+
+    val inspirePrompts = remember {
+        listOf(
+            "A sweet, comforting companion who loves midnight star-gazing, poetry, and brewing warm tea...",
+            "An energetic anime adventurer with a brave heart, glowing purple eyes, and a magical companion...",
+            "A chic and witty photographer who loves rainy days, vinyl records, and spontaneous road trips...",
+            "A gentle intellectual who spends hours in cozy bookstores, writing notes and sharing quiet moments...",
+            "A playful gaming enthusiast with colorful style, quick humor, and an endless love for matcha lattes..."
+        )
+    }
+    var inspireIndex by remember { mutableStateOf(0) }
 
     CreateContent(
         title = title,
@@ -279,13 +306,20 @@ private fun CreateRoute(
             )
         },
         onPromptChanged = { onIntent(CreateIntent.PromptChanged(it)) },
+        onInspireMe = {
+            val nextPrompt = inspirePrompts[inspireIndex % inspirePrompts.size]
+            inspireIndex++
+            onIntent(CreateIntent.PromptChanged(nextPrompt))
+        },
         onEthnicitySelected = {
             onIntent(
                 CreateIntent.EthnicitySelected(
                     when (it) {
-                        whiteLabel -> CreateEthnicity.WHITE
-                        asianLabel -> CreateEthnicity.ASIAN
+                        eastAsianLabel -> CreateEthnicity.EAST_ASIAN
+                        southAsianLabel -> CreateEthnicity.SOUTH_ASIAN
                         blackLabel -> CreateEthnicity.BLACK
+                        whiteLabel -> CreateEthnicity.WHITE
+                        asianLabel -> CreateEthnicity.EAST_ASIAN
                         else -> CreateEthnicity.LATINA
                     }
                 )
@@ -398,14 +432,18 @@ private fun CreateStyle.toLabel(
 }
 
 private fun CreateEthnicity.toLabel(
+    eastAsianLabel: String,
+    southAsianLabel: String,
+    blackLabel: String,
     whiteLabel: String,
     asianLabel: String,
-    blackLabel: String,
     latinaLabel: String
 ): String = when (this) {
+    CreateEthnicity.EAST_ASIAN -> eastAsianLabel
+    CreateEthnicity.SOUTH_ASIAN -> southAsianLabel
+    CreateEthnicity.BLACK -> blackLabel
     CreateEthnicity.WHITE -> whiteLabel
     CreateEthnicity.ASIAN -> asianLabel
-    CreateEthnicity.BLACK -> blackLabel
     CreateEthnicity.LATINA -> latinaLabel
 }
 
@@ -439,4 +477,37 @@ private fun createStepLabel(step: Int): String {
         CREATE_TOTAL_STEPS,
         stringResource(titleRes)
     )
+}
+
+@DrawableRes
+private fun getHairImage(
+    gender: CreateGender,
+    hairColor: CreateHairColor
+): Int = when (gender) {
+    CreateGender.GUYS -> when (hairColor) {
+        CreateHairColor.BLONDE -> R.drawable.img_blonde_man
+        CreateHairColor.BLACK -> R.drawable.img_black_man
+        CreateHairColor.COPPER -> R.drawable.img_copper_man
+        CreateHairColor.BLUE -> R.drawable.img_blue_man
+        CreateHairColor.PURPLE -> R.drawable.img_purple_man
+        CreateHairColor.RED -> R.drawable.img_red_man
+    }
+
+    CreateGender.TRANS -> when (hairColor) {
+        CreateHairColor.BLONDE -> R.drawable.img_blonde_nonbinary
+        CreateHairColor.BLACK -> R.drawable.img_black_nonbinary
+        CreateHairColor.COPPER -> R.drawable.img_copper_nonbinary
+        CreateHairColor.BLUE -> R.drawable.img_blue_nonbinary
+        CreateHairColor.PURPLE -> R.drawable.img_purple_nonbinary
+        CreateHairColor.RED -> R.drawable.img_red_nonbinary
+    }
+
+    CreateGender.GIRLS -> when (hairColor) {
+        CreateHairColor.BLONDE -> R.drawable.img_blonde_girl
+        CreateHairColor.BLACK -> R.drawable.img_black_girl
+        CreateHairColor.COPPER -> R.drawable.img_copper_girl
+        CreateHairColor.BLUE -> R.drawable.img_blue_girl
+        CreateHairColor.PURPLE -> R.drawable.img_purple_girl
+        CreateHairColor.RED -> R.drawable.img_red_girl
+    }
 }

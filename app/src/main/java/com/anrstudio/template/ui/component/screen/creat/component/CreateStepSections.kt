@@ -1,5 +1,6 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.creat.component
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -17,11 +18,13 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
@@ -34,21 +37,47 @@ fun GeneralSetupStep(
     onStyleSelected: (String) -> Unit,
     prompt: String,
     onPromptChanged: (String) -> Unit,
+    onInspireMe: () -> Unit = {},
     genderOptions: List<String>,
     styleOptions: List<CreateImageOption>
 ) {
+    val girlsLabel = stringResource(R.string.create_gender_girls)
+    val guysLabel = stringResource(R.string.create_gender_guys)
+    val transLabel = stringResource(R.string.create_gender_trans)
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(bottom = SdpR_16),
-        verticalArrangement = Arrangement.spacedBy(SdpR_12)
+        verticalArrangement = Arrangement.spacedBy(SdpR_16)
     ) {
         item {
             SectionTitle(stringResource(R.string.create_companion_gender))
-            SegmentedOptions(
-                options = genderOptions,
-                selected = selectedGender,
-                onSelected = onGenderSelected
-            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(SdpR_8)
+            ) {
+                IdentityOptionCard(
+                    title = girlsLabel,
+                    iconRes = R.drawable.ic_gender_female,
+                    selected = selectedGender == girlsLabel,
+                    modifier = Modifier.weight(1f),
+                    onClick = { onGenderSelected(girlsLabel) }
+                )
+                IdentityOptionCard(
+                    title = guysLabel,
+                    iconRes = R.drawable.ic_gender_male,
+                    selected = selectedGender == guysLabel,
+                    modifier = Modifier.weight(1f),
+                    onClick = { onGenderSelected(guysLabel) }
+                )
+                IdentityOptionCard(
+                    title = transLabel,
+                    iconRes = R.drawable.ic_gender_nonbinary,
+                    selected = selectedGender == transLabel,
+                    modifier = Modifier.weight(1f),
+                    onClick = { onGenderSelected(transLabel) }
+                )
+            }
         }
 
         item {
@@ -69,7 +98,21 @@ fun GeneralSetupStep(
         }
 
         item {
-            SectionTitle(stringResource(R.string.create_describe_to_create))
+            SectionTitle(
+                text = stringResource(R.string.create_describe_to_create),
+                action = {
+                    Text(
+                        text = stringResource(R.string.create_inspire_me),
+                        fontFamily = ManropeSemiBold,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = SdpR_13.nonScaledSp,
+                        color = Color(0xFFFF4081),
+                        modifier = Modifier
+                            .clickable(onClick = onInspireMe)
+                            .padding(vertical = SdpR_2, horizontal = SdpR_4)
+                    )
+                }
+            )
             PromptInput(
                 value = prompt,
                 onValueChange = onPromptChanged
@@ -93,7 +136,7 @@ fun AppearanceDetailsStep(
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(bottom = SdpR_16),
-        verticalArrangement = Arrangement.spacedBy(SdpR_12)
+        verticalArrangement = Arrangement.spacedBy(SdpR_20)
     ) {
         item {
             SectionTitle(stringResource(R.string.create_companion_ethnicity))
@@ -102,8 +145,8 @@ fun AppearanceDetailsStep(
                     SelectableImageCard(
                         option = option,
                         selected = option.title == selectedEthnicity,
-                        modifier = Modifier.width(SdpR_80),
-                        imageAspectRatio = 0.88f,
+                        modifier = Modifier.width(SdpR_104),
+                        imageAspectRatio = 0.95f,
                         onClick = { onEthnicitySelected(option.title) }
                     )
                 }
@@ -121,15 +164,12 @@ fun AppearanceDetailsStep(
 
         item {
             SectionTitle(stringResource(R.string.create_skin_tone))
-            LazyVerticalGrid(
-                columns = GridCells.Fixed(3),
-                modifier = Modifier.height(SdpR_152),
-                horizontalArrangement = Arrangement.spacedBy(SdpR_10),
-                verticalArrangement = Arrangement.spacedBy(SdpR_10),
-                userScrollEnabled = false
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                items(skinTones) { color ->
-                    val index = skinTones.indexOf(color)
+                skinTones.forEachIndexed { index, color ->
                     SkinToneSwatch(
                         color = color,
                         selected = selectedSkinTone == index,
@@ -150,20 +190,20 @@ fun HairCustomizationStep(
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(bottom = SdpR_16),
-        verticalArrangement = Arrangement.spacedBy(SdpR_10)
+        verticalArrangement = Arrangement.spacedBy(SdpR_12)
     ) {
         item { SectionTitle(stringResource(R.string.create_hair_color)) }
         items(hairOptions.chunked(2)) { rowOptions ->
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(SdpR_10)
+                horizontalArrangement = Arrangement.spacedBy(SdpR_12)
             ) {
                 rowOptions.forEach { option ->
                     SelectableImageCard(
                         option = option,
                         selected = option.title == selectedHair,
                         modifier = Modifier.weight(1f),
-                        imageAspectRatio = 1.42f,
+                        imageAspectRatio = 1.35f,
                         onClick = { onHairSelected(option.title) }
                     )
                 }
@@ -182,34 +222,35 @@ fun PersonalityIdentityStep(
     personalityItems: List<PersonalityItem>,
     onRandomize: () -> Unit = {}
 ) {
-    androidx.compose.foundation.layout.Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(bottom = SdpR_16),
+        verticalArrangement = Arrangement.spacedBy(SdpR_16)
     ) {
-        SectionTitle(stringResource(R.string.create_companion_name))
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(SdpR_8),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            SingleLineInput(
-                value = companionName,
-                onValueChange = onNameChanged,
-                modifier = Modifier.weight(1f)
-            )
-            RandomNameButton(onClick = onRandomize)
+        item {
+            SectionTitle(stringResource(R.string.create_companion_name))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(SdpR_8),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                SingleLineInput(
+                    value = companionName,
+                    onValueChange = onNameChanged,
+                    modifier = Modifier.weight(1f)
+                )
+                RandomNameButton(onClick = onRandomize)
+            }
         }
 
-        Spacer(modifier = Modifier.height(SdpR_14))
-        SectionTitle(stringResource(R.string.create_personality_social_background))
+        item {
+            SectionTitle(stringResource(R.string.create_personality_social_background))
+        }
 
-        personalityItems.chunked(2).forEach { rowItems ->
+        items(personalityItems.chunked(2)) { rowItems ->
             Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = SdpR_8),
-                horizontalArrangement = Arrangement.spacedBy(SdpR_8)
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(SdpR_12)
             ) {
                 rowItems.forEach { item ->
                     PersonalityCard(

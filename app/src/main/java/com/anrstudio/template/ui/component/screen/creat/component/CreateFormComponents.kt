@@ -1,5 +1,6 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.creat.component
 
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -16,6 +17,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material3.Icon
@@ -25,6 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.layout.ContentScale
@@ -33,6 +36,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color090514
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
@@ -50,6 +54,7 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitMedium
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_100
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_104
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_11
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_13
@@ -58,8 +63,11 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_26
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_28
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_38
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_40
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_44
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_48
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_52
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_56
@@ -81,12 +89,20 @@ fun CreateBottomAction(
             .padding(horizontal = SdpR_16)
             .padding(top = SdpR_8, bottom = SdpR_24)
     ) {
+        val buttonGradient = Brush.horizontalGradient(
+            colors = listOf(
+                Color(0xFFE040FB),
+                Color(0xFFFF3377),
+                Color(0xFFFF7A45)
+            )
+        )
+
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(SdpR_48)
+                .height(SdpR_52)
                 .clip(RoundedCornerShape(SdpR_26))
-                .background(ColorF1CBB7)
+                .background(buttonGradient)
                 .clickable(onClick = onClick),
             contentAlignment = Alignment.Center
         ) {
@@ -95,9 +111,10 @@ fun CreateBottomAction(
             ) {
                 Text(
                     text = text,
-                    fontFamily = OutfitBold,
+                    fontFamily = ManropeBold,
+                    fontWeight = FontWeight.Bold,
                     fontSize = SdpR_16.nonScaledSp,
-                    color = Color090514
+                    color = Color.White
                 )
                 if (isShowCoin) {
                     Spacer(modifier = Modifier.width(SdpR_6))
@@ -105,26 +122,91 @@ fun CreateBottomAction(
                     Image(
                         painter = painterResource(id = R.drawable.img_coin),
                         contentDescription = null,
-                        modifier = Modifier.size(SdpR_14)
+                        modifier = Modifier.size(SdpR_16)
                     )
                 }
-
-
             }
-
         }
     }
 }
 
 @Composable
-fun SectionTitle(text: String) {
-    Text(
-        text = text,
-        fontFamily = OutfitBold,
-        fontSize = SdpR_14.nonScaledSp,
-        color = ColorFDFDFD,
-        modifier = Modifier.padding(bottom = SdpR_8)
+fun SectionTitle(
+    text: String,
+    modifier: Modifier = Modifier,
+    action: (@Composable () -> Unit)? = null
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(bottom = SdpR_8),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            text = text,
+            fontFamily = ManropeBold,
+            fontWeight = FontWeight.Bold,
+            fontSize = SdpR_14.nonScaledSp,
+            color = Color(0xFF150F25)
+        )
+        action?.invoke()
+    }
+}
+
+@Composable
+fun IdentityOptionCard(
+    title: String,
+    @DrawableRes iconRes: Int,
+    selected: Boolean,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit
+) {
+    val selectedBorder = Brush.linearGradient(
+        colors = listOf(
+            Color(0xFFFF4081),
+            Color(0xFFFF8E53)
+        )
     )
+    val unselectedBorder = SolidColor(Color(0xFFE5E7EB))
+
+    Box(
+        modifier = modifier
+            .height(SdpR_90)
+            .clip(RoundedCornerShape(SdpR_16))
+            .background(if (selected) Color(0xFFFFF0F5) else Color(0xFFF9FAFC))
+            .border(
+                border = BorderStroke(
+                    width = if (selected) SdpR_2 else SdpR_1,
+                    brush = if (selected) selectedBorder else unselectedBorder
+                ),
+                shape = RoundedCornerShape(SdpR_16)
+            )
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Icon(
+                painter = painterResource(id = iconRes),
+                contentDescription = title,
+                tint = if (selected) Color(0xFFFF4081) else Color(0xFF150F25),
+                modifier = Modifier.size(SdpR_28)
+            )
+            Spacer(modifier = Modifier.height(SdpR_8))
+            Text(
+                text = title,
+                fontFamily = ManropeBold,
+                fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
+                fontSize = SdpR_13.nonScaledSp,
+                color = if (selected) Color(0xFFFF4081) else Color(0xFF150F25),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+        }
+    }
 }
 
 @Composable
@@ -133,30 +215,47 @@ fun SegmentedOptions(
     selected: String,
     onSelected: (String) -> Unit
 ) {
+    val selectedGradient = Brush.horizontalGradient(
+        colors = listOf(
+            Color(0xFFE040FB),
+            Color(0xFFFF3377),
+            Color(0xFFFF7A45)
+        )
+    )
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(SdpR_8)
     ) {
         options.forEach { option ->
+            val isSelected = option == selected
             Box(
                 modifier = Modifier
                     .weight(1f)
-                    .height(SdpR_38)
-                    .clip(RoundedCornerShape(SdpR_12))
-                    .background(if (option == selected) ColorD65A98 else Color150F25)
-                    .border(
-                        width = SdpR_1,
-                        color = if (option == selected) ColorD65A98 else Color322D41,
-                        shape = RoundedCornerShape(SdpR_12)
+                    .height(SdpR_40)
+                    .clip(RoundedCornerShape(SdpR_14))
+                    .then(
+                        if (isSelected) {
+                            Modifier.background(selectedGradient)
+                        } else {
+                            Modifier
+                                .background(Color(0xFFF9FAFC))
+                                .border(
+                                    width = SdpR_1,
+                                    color = Color(0xFFE5E7EB),
+                                    shape = RoundedCornerShape(SdpR_14)
+                                )
+                        }
                     )
                     .clickable { onSelected(option) },
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = option,
-                    fontFamily = OutfitBold,
+                    fontFamily = ManropeBold,
+                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
                     fontSize = SdpR_14.nonScaledSp,
-                    color = if (option == selected) Color090514 else ColorAFA5C3,
+                    color = if (isSelected) Color.White else Color(0xFF8E889B),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -170,22 +269,30 @@ fun SelectableImageCard(
     option: CreateImageOption,
     selected: Boolean,
     modifier: Modifier = Modifier,
-    imageAspectRatio: Float = 1.1f,
+    imageAspectRatio: Float = 1.15f,
     onClick: () -> Unit
 ) {
+    val selectedBorder = Brush.linearGradient(
+        colors = listOf(
+            Color(0xFFFF4081),
+            Color(0xFFFF8E53)
+        )
+    )
+    val unselectedBorder = SolidColor(Color(0xFFE5E7EB))
+
     Column(
         modifier = modifier
-            .clip(RoundedCornerShape(SdpR_12))
-            .background(Color150F25)
+            .clip(RoundedCornerShape(SdpR_16))
+            .background(if (selected) Color(0xFFFFF0F5) else Color(0xFFF9FAFC))
             .border(
                 border = BorderStroke(
                     width = if (selected) SdpR_2 else SdpR_1,
-                    color = if (selected) ColorFF5D82 else Color322D41
+                    brush = if (selected) selectedBorder else unselectedBorder
                 ),
-                shape = RoundedCornerShape(SdpR_12)
+                shape = RoundedCornerShape(SdpR_16)
             )
             .clickable(onClick = onClick)
-            .padding(SdpR_6),
+            .padding(SdpR_8),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
@@ -195,14 +302,15 @@ fun SelectableImageCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(imageAspectRatio)
-                .clip(RoundedCornerShape(SdpR_6))
+                .clip(RoundedCornerShape(SdpR_12))
         )
-        Spacer(modifier = Modifier.height(SdpR_6))
+        Spacer(modifier = Modifier.height(SdpR_8))
         Text(
             text = option.title,
-            fontFamily = OutfitBold,
-            fontSize = SdpR_14.nonScaledSp,
-            color = if (selected) ColorE8C3AC else ColorAFA5C3,
+            fontFamily = ManropeBold,
+            fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
+            fontSize = SdpR_13.nonScaledSp,
+            color = if (selected) Color(0xFFFF4081) else Color(0xFF8E889B),
             textAlign = TextAlign.Center,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
@@ -221,16 +329,16 @@ fun PromptInput(
         textStyle = MaterialTheme.typography.bodySmall.copy(
             fontFamily = ManropeRegular,
             fontSize = SdpR_13.nonScaledSp,
-            color = ColorFDFDFD
+            color = Color(0xFF150F25)
         ),
-        cursorBrush = SolidColor(ColorD65A98),
+        cursorBrush = SolidColor(Color(0xFFFF4081)),
         modifier = Modifier
             .fillMaxWidth()
-            .height(SdpR_90)
-            .clip(RoundedCornerShape(SdpR_12))
-            .background(Color150F25)
-            .border(SdpR_1, Color322D41, RoundedCornerShape(SdpR_12))
-            .padding(SdpR_12),
+            .height(SdpR_100)
+            .clip(RoundedCornerShape(SdpR_16))
+            .background(Color(0xFFF9FAFC))
+            .border(SdpR_1, Color(0xFFE5E7EB), RoundedCornerShape(SdpR_16))
+            .padding(SdpR_14),
         decorationBox = { innerTextField ->
             Box {
                 if (value.isBlank()) {
@@ -238,7 +346,7 @@ fun PromptInput(
                         text = androidx.compose.ui.res.stringResource(R.string.create_prompt_hint),
                         fontFamily = ManropeRegular,
                         fontSize = SdpR_13.nonScaledSp,
-                        color = ColorAFA5C3
+                        color = Color(0xFF9CA3AF)
                     )
                 }
                 innerTextField()
@@ -258,17 +366,18 @@ fun SingleLineInput(
         onValueChange = onValueChange,
         singleLine = true,
         textStyle = MaterialTheme.typography.bodyMedium.copy(
-            fontFamily = OutfitMedium,
-            fontSize = SdpR_13.nonScaledSp,
-            color = ColorFDFDFD
+            fontFamily = ManropeBold,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = SdpR_16.nonScaledSp,
+            color = Color(0xFF150F25)
         ),
-        cursorBrush = SolidColor(ColorD65A98),
+        cursorBrush = SolidColor(Color(0xFFFF4081)),
         modifier = modifier
             .height(SdpR_52)
-            .clip(RoundedCornerShape(SdpR_12))
-            .background(Color150F25)
-            .border(SdpR_1, Color322D41, RoundedCornerShape(SdpR_12))
-            .padding(horizontal = SdpR_14),
+            .clip(RoundedCornerShape(SdpR_16))
+            .background(Color(0xFFF9FAFC))
+            .border(SdpR_1, Color(0xFFE5E7EB), RoundedCornerShape(SdpR_16))
+            .padding(horizontal = SdpR_16),
         decorationBox = { innerTextField ->
             Box(contentAlignment = Alignment.CenterStart) {
                 innerTextField()
@@ -282,16 +391,16 @@ fun RandomNameButton(onClick: () -> Unit = {}) {
     Box(
         modifier = Modifier
             .size(SdpR_52)
-            .clip(RoundedCornerShape(SdpR_12))
+            .clip(RoundedCornerShape(SdpR_16))
             .clickable { onClick() }
-            .background(Color150F25)
-            .border(SdpR_1, Color322D41, RoundedCornerShape(SdpR_12)),
+            .background(Color.White)
+            .border(SdpR_1, Color(0xFFE5E7EB), RoundedCornerShape(SdpR_16)),
         contentAlignment = Alignment.Center
     ) {
         Icon(
             painter = painterResource(R.drawable.ic_random),
             contentDescription = null,
-            tint = ColorE8C3AC,
+            tint = Color(0xFFFF4081),
             modifier = Modifier.size(SdpR_24)
         )
     }
@@ -301,18 +410,34 @@ fun RandomNameButton(onClick: () -> Unit = {}) {
 fun SkinToneSwatch(
     color: Color,
     selected: Boolean,
+    modifier: Modifier = Modifier,
+    size: Dp = SdpR_44,
     onClick: () -> Unit
 ) {
+    val selectedBorder = Brush.linearGradient(
+        colors = listOf(
+            Color(0xFFFF4081),
+            Color(0xFFFF8E53)
+        )
+    )
+
     Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(SdpR_56)
-            .clip(RoundedCornerShape(SdpR_8))
+        modifier = modifier
+            .size(size)
+            .clip(CircleShape)
             .background(color)
-            .border(
-                width = if (selected) SdpR_2 else SdpR_1,
-                color = if (selected) ColorD65A98 else Color.Transparent,
-                shape = RoundedCornerShape(SdpR_8)
+            .then(
+                if (selected) {
+                    Modifier.border(
+                        border = BorderStroke(
+                            width = SdpR_2,
+                            brush = selectedBorder
+                        ),
+                        shape = CircleShape
+                    )
+                } else {
+                    Modifier
+                }
             )
             .clickable(onClick = onClick)
     )
@@ -326,34 +451,37 @@ fun PersonalityCard(
 ) {
     Column(
         modifier = modifier
-            .height(SdpR_100)
-            .clip(RoundedCornerShape(SdpR_12))
+            .height(SdpR_104)
+            .clip(RoundedCornerShape(SdpR_16))
             .clickable { onClick() }
-            .background(Color150F25)
-            .border(SdpR_1, Color322D41, RoundedCornerShape(SdpR_12))
-            .padding(SdpR_12),
+            .background(Color.White)
+            .border(SdpR_1, Color(0xFFE5E7EB), RoundedCornerShape(SdpR_16))
+            .padding(SdpR_14),
         verticalArrangement = Arrangement.SpaceBetween
     ) {
-        Image(
+        Icon(
             painter = painterResource(id = item.iconRes),
             contentDescription = null,
-            modifier = Modifier.size(SdpR_24)
+            tint = Color(0xFFFF4081),
+            modifier = Modifier.size(SdpR_26)
         )
         Spacer(modifier = Modifier.height(SdpR_4))
         Column {
             Text(
                 text = item.label,
                 fontFamily = ManropeSemiBold,
-                fontSize = SdpR_11.nonScaledSp,
-                color = ColorE8C3AC,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = SdpR_12.nonScaledSp,
+                color = Color(0xFFFF4081),
                 maxLines = 1
             )
+            Spacer(modifier = Modifier.height(SdpR_2))
             Text(
                 text = item.value,
                 fontFamily = ManropeBold,
                 fontSize = SdpR_14.nonScaledSp,
                 fontWeight = FontWeight.Bold,
-                color = ColorFDFDFD,
+                color = Color(0xFF150F25),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )

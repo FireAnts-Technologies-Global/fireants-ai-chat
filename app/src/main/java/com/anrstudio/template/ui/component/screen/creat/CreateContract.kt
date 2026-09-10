@@ -16,9 +16,11 @@ enum class CreateStyle {
 }
 
 enum class CreateEthnicity {
+    EAST_ASIAN,
+    SOUTH_ASIAN,
+    BLACK,
     WHITE,
     ASIAN,
-    BLACK,
     LATINA
 }
 
@@ -39,15 +41,15 @@ data class CreateUiState(
     val selectedGender: CreateGender = CreateGender.GIRLS,
     val selectedStyle: CreateStyle = CreateStyle.REALISTIC,
     val prompt: String = "",
-    val selectedEthnicity: CreateEthnicity = CreateEthnicity.WHITE,
+    val selectedEthnicity: CreateEthnicity = CreateEthnicity.EAST_ASIAN,
     val selectedAge: String = "20",
     val selectedSkinTone: Int = 0,
     val selectedHair: CreateHairColor = CreateHairColor.BLONDE,
     val companionName: String = "",
-    val selectedPersonality: String = "",
-    val selectedOccupation: String = "",
-    val selectedHobbies: List<String> = emptyList(),
-    val selectedRelationship: String = "",
+    val selectedPersonality: String = "Spiritual",
+    val selectedOccupation: String = "Billionaire CEO",
+    val selectedHobbies: List<String> = listOf("Music"),
+    val selectedRelationship: String = "Stranger",
     val imageGenCoinCost: Int = 0
 ) : BaseUiState
 

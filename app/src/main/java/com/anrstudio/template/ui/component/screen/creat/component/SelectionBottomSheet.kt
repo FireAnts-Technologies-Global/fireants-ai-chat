@@ -31,13 +31,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import com.pegas.aura.aigirlfriend.soul.R
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color161127
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitBold
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitMedium
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeBold
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ManropeMedium
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_14
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_18
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
@@ -70,9 +69,9 @@ fun SelectionBottomSheet(
             }
             onDismiss()
         },
-        containerColor = Color161127,
-        contentColor = ColorFDFDFD,
-        scrimColor = Color.Black.copy(alpha = 0.68f),
+        containerColor = Color.White,
+        contentColor = Color(0xFF150F25),
+        scrimColor = Color.Black.copy(alpha = 0.45f),
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
         shape = RoundedCornerShape(
             topStart = SdpR_24,
@@ -85,7 +84,7 @@ fun SelectionBottomSheet(
                     .width(SdpR_40)
                     .height(SdpR_4)
                     .background(
-                        color = ColorFDFDFD.copy(alpha = 0.2f),
+                        color = Color(0xFFE5E7EB),
                         shape = RoundedCornerShape(SdpR_4)
                     )
             )
@@ -111,18 +110,19 @@ fun SelectionBottomSheet(
                 Text(
                     text = title,
                     modifier = Modifier.weight(1f),
-                    fontFamily = OutfitBold,
+                    fontFamily = ManropeBold,
                     fontWeight = FontWeight.Bold,
-                    fontSize = SdpR_20.nonScaledSp,
-                    color = ColorFDFDFD
+                    fontSize = SdpR_18.nonScaledSp,
+                    color = Color(0xFF150F25)
                 )
 
                 if (isMultiSelect) {
                     Text(
                         text = stringResource(R.string.options_done),
-                        fontFamily = OutfitMedium,
+                        fontFamily = ManropeBold,
+                        fontWeight = FontWeight.Bold,
                         fontSize = SdpR_16.nonScaledSp,
-                        color = ColorE8C3AC,
+                        color = Color(0xFFFF4081),
                         modifier = Modifier
                             .clickable {
                                 onMultiOptionsSelected(localSelected.toList())
@@ -140,7 +140,7 @@ fun SelectionBottomSheet(
                 })
             }
 
-            Spacer(modifier = Modifier.height(SdpR_12))
+            Spacer(modifier = Modifier.height(SdpR_8))
 
             LazyColumn(
                 modifier = Modifier.fillMaxWidth()
@@ -173,15 +173,16 @@ fun SelectionBottomSheet(
                                     onDismiss()
                                 }
                             }
-                            .padding(vertical = SdpR_16),
+                            .padding(vertical = SdpR_14),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
                             text = option,
                             modifier = Modifier.weight(1f),
-                            fontFamily = OutfitMedium,
+                            fontFamily = if (isSelected) ManropeBold else ManropeMedium,
+                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
                             fontSize = SdpR_16.nonScaledSp,
-                            color = if (isSelected) ColorE8C3AC else ColorFDFDFD
+                            color = if (isSelected) Color(0xFFFF4081) else Color(0xFF150F25)
                         )
 
                         if (isSelected) {
@@ -189,7 +190,7 @@ fun SelectionBottomSheet(
                                 painter = painterResource(R.drawable.ic_check),
                                 contentDescription = null,
                                 modifier = Modifier.size(SdpR_20),
-                                tint = ColorE8C3AC
+                                tint = Color(0xFFFF4081)
                             )
                         }
                     }

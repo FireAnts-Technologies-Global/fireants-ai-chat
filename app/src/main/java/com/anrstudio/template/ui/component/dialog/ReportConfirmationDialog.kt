@@ -32,11 +32,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color000000
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color150F25
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color161127
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color1E192F
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color363144
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color6B5E80
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD65A98
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
@@ -85,7 +87,7 @@ fun ReportConfirmationDialog(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color161127)
+                    .background(ColorFFFFFF)
                     .border(width = 1.dp, color = Color322D41, shape = RoundedCornerShape(SdpR_24))
                     .padding(horizontal = SdpR_16, vertical = SdpR_16),
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -95,7 +97,7 @@ fun ReportConfirmationDialog(
 
                 Text(
                     text = title,
-                    color = ColorFFFFFF,
+                    color = Color000000,
                     fontFamily = OutfitBold,
                     fontWeight = FontWeight.Bold,
                     fontSize = SdpR_20.nonScaledSp,
@@ -106,7 +108,7 @@ fun ReportConfirmationDialog(
 
                 Text(
                     text = message,
-                    color = ColorAFA5C3,
+                    color = Color6B5E80,
                     fontFamily = ManropeRegular,
                     fontWeight = FontWeight.Normal,
                     fontSize = SdpR_14.nonScaledSp,
@@ -115,21 +117,20 @@ fun ReportConfirmationDialog(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Text field for user to enter report details
                 BasicTextField(
                     value = reportReason,
                     onValueChange = { reportReason = it },
                     textStyle = MaterialTheme.typography.bodySmall.copy(
                         fontFamily = ManropeRegular,
                         fontSize = SdpR_13.nonScaledSp,
-                        color = ColorFDFDFD
+                        color = Color000000
                     ),
                     cursorBrush = SolidColor(ColorD65A98),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(SdpR_90)
                         .clip(RoundedCornerShape(SdpR_12))
-                        .background(Color150F25)
+                        .background(ColorFDFDFD)
                         .border(SdpR_1, Color322D41, RoundedCornerShape(SdpR_12))
                         .padding(SdpR_12),
                     decorationBox = { innerTextField ->
@@ -139,7 +140,7 @@ fun ReportConfirmationDialog(
                                     text = hintText,
                                     fontFamily = ManropeRegular,
                                     fontSize = SdpR_13.nonScaledSp,
-                                    color = ColorAFA5C3
+                                    color = Color000000
                                 )
                             }
                             innerTextField()
@@ -178,8 +179,8 @@ fun ReportConfirmationDialog(
                     shape = RoundedCornerShape(SdpR_16),
                     border = BorderStroke(1.dp, Color363144),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color1E192F,
-                        contentColor = ColorFDFDFD
+                        containerColor = ColorFFFFFF,
+                        contentColor = Color000000
                     )
                 ) {
                     Text(

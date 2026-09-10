@@ -1,6 +1,7 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.chatroom.component
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,35 +19,27 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.character.CharacterBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitRegular
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_1
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_12
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_16
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_2
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_20
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_24
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_32
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_4
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
-import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
 import com.pegas.aura.aigirlfriend.soul.ui.component.custom.LoadingAsyncImage
+
+import androidx.compose.material3.rememberModalBottomSheetState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -57,8 +50,11 @@ internal fun ChatBackgroundBottomSheet(
     onDismiss: () -> Unit,
     onBackgroundClick: (CharacterBackground) -> Unit
 ) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
     ModalBottomSheet(
         onDismissRequest = onDismiss,
+        sheetState = sheetState,
         containerColor = ColorFFFFFF,
         contentColor = ColorFDFDFD,
         scrimColor = Color.Black.copy(alpha = 0.68f),
@@ -69,10 +65,10 @@ internal fun ChatBackgroundBottomSheet(
         dragHandle = {
             Box(
                 modifier = Modifier
-                    .padding(top = SdpR_12, bottom = SdpR_24)
-                    .size(width = SdpR_32, height = SdpR_4)
+                    .padding(top = SdpR_12, bottom = SdpR_20)
+                    .size(width = SdpR_48, height = SdpR_4)
                     .clip(RoundedCornerShape(SdpR_2))
-                    .background(Color322D41)
+                    .background(Color(0xFFE5E5EA))
             )
         }
     ) {
@@ -101,13 +97,13 @@ internal fun ChatBackgroundBottomSheet(
 
             LazyColumn(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(SdpR_8)
+                verticalArrangement = Arrangement.spacedBy(SdpR_12)
             ) {
                 items(backgrounds.chunked(3).size) { index ->
                     val rowItems = backgrounds.chunked(3)[index]
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(SdpR_8)
+                        horizontalArrangement = Arrangement.spacedBy(SdpR_12)
                     ) {
                         rowItems.forEach { bg ->
                             Box(modifier = Modifier.weight(1f)) {
@@ -140,16 +136,26 @@ private fun ChatBackgroundItemCard(
     isSelected: Boolean,
     onClick: () -> Unit
 ) {
-    val borderColor = if (isSelected) ColorFF2E93 else Color322D41
-    val borderWidth = if (isSelected) SdpR_2 else SdpR_1
+    val selectedBorder = if (isSelected) {
+        BorderStroke(
+            width = SdpR_2,
+            brush = Brush.linearGradient(
+                colors = listOf(
+                    Color(0xFFFF8040),
+                    Color(0xFFFF41BC),
+                    Color(0xFFDC60FF)
+                )
+            )
+        )
+    } else null
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .aspectRatio(0.85f),
+            .aspectRatio(2f / 3f),
         shape = RoundedCornerShape(SdpR_16),
         colors = CardDefaults.cardColors(containerColor = Color150F25),
-        border = BorderStroke(borderWidth, borderColor),
+        border = selectedBorder,
         onClick = onClick
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
@@ -157,59 +163,56 @@ private fun ChatBackgroundItemCard(
                 imageUrl = background.imageUrl,
                 contentDescription = background.name,
                 contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier
+                    .fillMaxSize()
+                    .then(
+                        if (background.isLocked) Modifier.blur(radius = 16.dp) else Modifier
+                    )
             )
 
             if (background.isLocked) {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color08030F.copy(alpha = 0.5f))
+                        .background(Color.Black.copy(alpha = 0.25f))
                 )
-            }
 
-            if (background.isLocked) {
-                Column(
+                Box(
                     modifier = Modifier
-                        .align(Alignment.Center)
-                        .clip(RoundedCornerShape(SdpR_12))
-                        .padding(horizontal = SdpR_8, vertical = SdpR_6),
-                    horizontalAlignment = Alignment.CenterHorizontally
+                        .align(Alignment.BottomCenter)
+                        .padding(bottom = SdpR_10)
                 ) {
                     if (isPurchasing) {
                         ImageLoadingLottie(size = SdpR_20)
                     } else {
-                        Icon(
-                            painter = painterResource(R.drawable.ic_lock),
-                            contentDescription = "Locked",
-                            tint = ColorE8C3AC,
-                            modifier = Modifier.size(SdpR_16)
-                        )
-                        Spacer(modifier = Modifier.height(SdpR_4))
                         val priceText = if (background.priceCoins > 0) {
-                            stringResource(
-                                R.string.character_detail_coins_format,
-                                background.priceCoins
-                            )
+                            background.priceCoins.toString()
                         } else {
-                            stringResource(
-                                R.string.character_detail_level_format,
-                                background.unlockLevel
-                            )
+                            background.unlockLevel.toString()
                         }
-                        Box(
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(SdpR_4),
                             modifier = Modifier
-                                .clip(RoundedCornerShape(SdpR_6))
-                                .background(ColorE8C3AC)
-                                .padding(horizontal = SdpR_12, vertical = SdpR_4),
-                            contentAlignment = Alignment.Center
+                                .clip(RoundedCornerShape(percent = 50))
+                                .background(
+                                    Brush.horizontalGradient(
+                                        listOf(ColorFF41BC, ColorFF8040)
+                                    )
+                                )
+                                .padding(horizontal = SdpR_10, vertical = SdpR_4)
                         ) {
                             Text(
                                 text = priceText,
-                                color = Color000000,
-                                fontFamily = OutfitRegular,
+                                color = ColorFFFFFF,
+                                fontFamily = OutfitBold,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = SdpR_12.nonScaledSp
+                            )
+                            Image(
+                                painter = painterResource(R.drawable.img_coin),
+                                contentDescription = null,
+                                modifier = Modifier.size(SdpR_14)
                             )
                         }
                     }

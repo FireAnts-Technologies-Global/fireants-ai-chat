@@ -31,10 +31,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color000000
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color161127
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color1E192F
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color322D41
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color363144
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color6B5E80
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFF453A
@@ -77,7 +79,7 @@ fun ActionConfirmationDialog(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color161127)
+                    .background(ColorFFFFFF)
                     .border(width = 1.dp, color = Color322D41, shape = RoundedCornerShape(SdpR_24))
                     .padding(horizontal = SdpR_16, vertical = SdpR_16),
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -87,7 +89,7 @@ fun ActionConfirmationDialog(
 
                 Text(
                     text = title,
-                    color = ColorFFFFFF,
+                    color = Color000000,
                     fontFamily = OutfitBold,
                     fontWeight = FontWeight.Bold,
                     fontSize = SdpR_20.nonScaledSp,
@@ -98,7 +100,7 @@ fun ActionConfirmationDialog(
 
                 Text(
                     text = message,
-                    color = ColorAFA5C3,
+                    color = Color6B5E80,
                     fontFamily = ManropeRegular,
                     fontWeight = FontWeight.Normal,
                     fontSize = SdpR_14.nonScaledSp,
@@ -136,8 +138,8 @@ fun ActionConfirmationDialog(
                     shape = RoundedCornerShape(SdpR_16),
                     border = BorderStroke(1.dp, Color363144),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color1E192F,
-                        contentColor = ColorFDFDFD
+                        containerColor = ColorFFFFFF,
+                        contentColor = Color000000
                     )
                 ) {
                     Text(

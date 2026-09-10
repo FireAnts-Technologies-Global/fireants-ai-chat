@@ -1,8 +1,7 @@
 package com.pegas.aura.aigirlfriend.soul.ui.component.screen.characterdetail.component
 
-import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,21 +12,23 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.pegas.aura.aigirlfriend.soul.R
 import com.pegas.aura.aigirlfriend.soul.domain.model.character.CharacterBackground
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.component.ImageLoadingLottie
@@ -57,11 +58,11 @@ internal fun ExclusivePhotoGallery(
             color = Color110640
         )
 
-        Column(verticalArrangement = Arrangement.spacedBy(SdpR_8)) {
+        Column(verticalArrangement = Arrangement.spacedBy(SdpR_12)) {
             backgrounds.chunked(3).forEach { rowItems ->
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(SdpR_8)
+                    horizontalArrangement = Arrangement.spacedBy(SdpR_12)
                 ) {
                     rowItems.forEach { bg ->
                         Box(modifier = Modifier.weight(1f)) {
@@ -91,10 +92,9 @@ private fun BackgroundItemCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .aspectRatio(0.85f),
+            .aspectRatio(2f / 3f),
         shape = RoundedCornerShape(SdpR_16),
-        colors = CardDefaults.cardColors(containerColor = ColorFFFFFF),
-        border = BorderStroke(SdpR_1, ColorE9DDF2),
+        colors = CardDefaults.cardColors(containerColor = Color66FFFFFF),
         onClick = onClick
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
@@ -102,69 +102,58 @@ private fun BackgroundItemCard(
                 imageUrl = background.imageUrl,
                 contentDescription = background.name,
                 contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier
+                    .fillMaxSize()
+                    .then(
+                        if (background.isLocked) Modifier.blur(radius = 16.dp) else Modifier
+                    )
             )
 
             if (background.isLocked) {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color000000.copy(alpha = 0.35f))
+                        .background(Color.Black.copy(alpha = 0.25f))
                 )
 
-                if (isPurchasing) {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        ImageLoadingLottie(size = SdpR_24)
-                    }
-                } else {
-                    Box(
-                        modifier = Modifier
-                            .align(Alignment.Center)
-                            .size(SdpR_36)
-                            .clip(CircleShape)
-                            .background(Color000000.copy(alpha = 0.4f))
-                            .border(BorderStroke(SdpR_1, ColorFFFFFF.copy(alpha = 0.3f)), CircleShape),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(
-                            painter = painterResource(R.drawable.ic_lock),
-                            contentDescription = null,
-                            tint = ColorFFFFFF,
-                            modifier = Modifier.size(SdpR_16)
-                        )
-                    }
-
-                    val priceText = if (background.priceCoins > 0) {
-                        stringResource(
-                            R.string.character_detail_coins_format,
-                            background.priceCoins
-                        )
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .padding(bottom = SdpR_10)
+                ) {
+                    if (isPurchasing) {
+                        ImageLoadingLottie(size = SdpR_20)
                     } else {
-                        stringResource(
-                            R.string.character_detail_level_format,
-                            background.unlockLevel
-                        )
-                    }
-
-                    Box(
-                        modifier = Modifier
-                            .align(Alignment.BottomCenter)
-                            .padding(bottom = SdpR_8)
-                            .clip(RoundedCornerShape(SdpR_100))
-                            .background(AppButtonVerticalGradient)
-                            .padding(horizontal = SdpR_10, vertical = SdpR_4),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = priceText,
-                            color = ColorFFFFFF,
-                            fontFamily = ManropeBold,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = SdpR_11.nonScaledSp
-                        )
+                        val priceText = if (background.priceCoins > 0) {
+                            background.priceCoins.toString()
+                        } else {
+                            background.unlockLevel.toString()
+                        }
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(SdpR_4),
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(percent = 50))
+                                .background(
+                                    Brush.horizontalGradient(
+                                        listOf(ColorFF41BC, ColorFF8040)
+                                    )
+                                )
+                                .padding(horizontal = SdpR_10, vertical = SdpR_4)
+                        ) {
+                            Text(
+                                text = priceText,
+                                color = ColorFFFFFF,
+                                fontFamily = OutfitBold,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = SdpR_12.nonScaledSp
+                            )
+                            Image(
+                                painter = painterResource(R.drawable.img_coin),
+                                contentDescription = null,
+                                modifier = Modifier.size(SdpR_14)
+                            )
+                        }
                     }
                 }
             }
@@ -179,12 +168,12 @@ private fun ExclusivePhotoGalleryPreview() {
         backgrounds = (1..10).map { index ->
             CharacterBackground(
                 id = "$index",
-                characterId = "char1",
-                name = "Bg $index",
-                imageUrl = "",
-                description = "Bg $index",
+                characterId = "char_$index",
+                name = "Background $index",
+                imageUrl = "https://example.com/bg$index.jpg",
+                description = "Background $index description",
                 priceCoins = if (index % 2 == 0) 15 else 0,
-                unlockLevel = index + 1,
+                unlockLevel = if (index % 2 == 0) 0 else 5,
                 isDefault = index == 1,
                 isLocked = index != 1,
                 isUnlocked = index == 1

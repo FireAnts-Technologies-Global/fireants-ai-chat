@@ -56,6 +56,8 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_6
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.SdpR_8
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.nonScaledSp
 
+import androidx.compose.material3.rememberModalBottomSheetState
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun ChatActionsBottomSheet(
@@ -63,8 +65,11 @@ internal fun ChatActionsBottomSheet(
     onDismiss: () -> Unit,
     onActionClick: (String, String) -> Unit = { _, _ -> }
 ) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
     ModalBottomSheet(
         onDismissRequest = onDismiss,
+        sheetState = sheetState,
         containerColor = ColorFFFFFF,
         contentColor = ColorFDFDFD,
         scrimColor = Color.Black.copy(alpha = 0.68f),

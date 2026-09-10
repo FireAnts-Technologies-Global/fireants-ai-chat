@@ -19,8 +19,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.pegas.aura.aigirlfriend.soul.R
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color000000
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color1A0A2E
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.Color990C051A
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorAFA5C3
+import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorD9FFFFFF
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorE8C3AC
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.ColorFDFDFD
 import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.OutfitRegular
@@ -49,14 +52,14 @@ internal fun ConversationStarterSuggestions(
             fontFamily = OutfitRegular,
             fontWeight = FontWeight.SemiBold,
             fontSize = SdpR_15.nonScaledSp,
-            color = ColorE8C3AC
+            color = Color000000
         )
 
         Text(
             text = stringResource(R.string.chat_starter_subtitle),
             fontFamily = OutfitRegular,
             fontSize = SdpR_12.nonScaledSp,
-            color = ColorE8C3AC
+            color = Color000000
         )
 
         suggestions.forEach { suggestion ->
@@ -71,8 +74,11 @@ internal fun ConversationStarterSuggestions(
                         onSuggestionClick(suggestion)
                     },
                 shape = RoundedCornerShape(SdpR_16),
-                color = Color990C051A,
-                border = BorderStroke(SdpR_1, Color.White.copy(alpha = 0.14f))
+                color = ColorD9FFFFFF,
+                border = BorderStroke(
+                    width = SdpR_1,
+                    color = ColorE8C3AC
+                )
             ) {
                 Text(
                     text = suggestion,
@@ -82,7 +88,7 @@ internal fun ConversationStarterSuggestions(
                     ),
                     fontFamily = OutfitRegular,
                     fontSize = SdpR_14.nonScaledSp,
-                    color = if (enabled) ColorFDFDFD else ColorAFA5C3
+                    color = if (enabled) Color1A0A2E else ColorAFA5C3
                 )
             }
         }

@@ -104,7 +104,11 @@ class ChatRoomViewModel @Inject constructor(
 
             ChatRoomIntent.Retry -> loadMessages(forceReload = true)
 
-            ChatRoomIntent.OpenCustomBackground -> loadBackgrounds()
+            ChatRoomIntent.OpenCustomBackground -> {
+                if (currentState.backgrounds.isEmpty()) {
+                    loadBackgrounds()
+                }
+            }
 
             is ChatRoomIntent.SelectBackground -> selectBackground(intent.backgroundId)
 
@@ -131,6 +135,7 @@ class ChatRoomViewModel @Inject constructor(
                 var relationshipTitle = context.getString(R.string.chat_relationship_stranger)
 
                 if (cached.characterId.isNotBlank()) {
+                    loadBackgrounds(cached.characterId)
                     when (val progressResult = getCharacterProgressUseCase(cached.characterId)) {
                         is AppResult.Success -> {
                             level = progressResult.data.level
@@ -218,6 +223,9 @@ class ChatRoomViewModel @Inject constructor(
                     var relationshipTitle = context.getString(R.string.chat_relationship_stranger)
 
                     if (characterId.isNotBlank()) {
+                        if (currentState.backgrounds.isEmpty()) {
+                            loadBackgrounds(characterId)
+                        }
                         when (val progressResult = getCharacterProgressUseCase(characterId)) {
                             is AppResult.Success -> {
                                 level = progressResult.data.level
@@ -455,8 +463,9 @@ class ChatRoomViewModel @Inject constructor(
         }
     }
 
-    private fun loadBackgrounds() {
-        val charId = currentState.characterId ?: return
+    private fun loadBackgrounds(characterId: String? = currentState.characterId) {
+        val charId = characterId ?: currentState.characterId ?: return
+        if (charId.isBlank()) return
         launchIO {
             when (val result = getCharacterBackgroundsUseCase(charId)) {
                 is AppResult.Success -> {

@@ -37,6 +37,8 @@ import com.pegas.aura.aigirlfriend.soul.ui.bases.compose.theme.*
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.ActionConfirmationDialog
 import com.pegas.aura.aigirlfriend.soul.ui.component.dialog.ReportConfirmationDialog
 
+import androidx.compose.material3.rememberModalBottomSheetState
+
 private enum class ConfirmationAction {
     DELETE_CHAT,
     REPORT
@@ -53,9 +55,11 @@ internal fun ChatMoreBottomSheet(
     showCustomBackground: Boolean = true
 ) {
     var confirmationAction by remember { mutableStateOf<ConfirmationAction?>(null) }
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
+        sheetState = sheetState,
         containerColor = ColorFFFFFF,
         contentColor = ColorFDFDFD,
         scrimColor = Color.Black.copy(alpha = 0.68f),
@@ -125,8 +129,8 @@ internal fun ChatMoreBottomSheet(
                     Icon(
                         painter = painterResource(R.drawable.ic_flag_circle),
                         contentDescription = null,
-                        tint = ColorFF6A6A,
-                        modifier = Modifier.size(SdpR_24)
+                        tint = Color.Unspecified,
+                        modifier = Modifier.size(SdpR_48)
                     )
                 }
             )

@@ -37,10 +37,11 @@ import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppButton
 import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppTextHorizontalGradient
 import com.pegas.yuki.virtual.chat.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.yuki.virtual.chat.ui.bases.compose.mvi.BaseScreen
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color161127
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color000000
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color271E38
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorAFA5C3
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorFDFDFD
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorFFFFFF
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitBold
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitRegular
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_1
@@ -324,7 +325,7 @@ private fun StoreSectionEmptyCard(
         modifier = modifier
             .fillMaxWidth()
             .background(
-                color = Color161127,
+                color = ColorFFFFFF,
                 shape = RoundedCornerShape(SdpR_12)
             )
             .border(
@@ -337,7 +338,7 @@ private fun StoreSectionEmptyCard(
     ) {
         Text(
             text = message,
-            color = ColorAFA5C3,
+            color = Color000000,
             fontFamily = OutfitRegular,
             fontSize = SdpR_13.nonScaledSp,
             textAlign = TextAlign.Center

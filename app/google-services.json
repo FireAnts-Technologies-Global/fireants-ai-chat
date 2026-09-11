@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:948379355929:android:738aa8b533b23b59db5388",
         "android_client_info": {
-          "package_name": "com.pegas.yuki.virtual.chat.dev"
+          "package_name": "com.pegas.yuki.virtual.chat"
         }
       },
       "oauth_client": [],

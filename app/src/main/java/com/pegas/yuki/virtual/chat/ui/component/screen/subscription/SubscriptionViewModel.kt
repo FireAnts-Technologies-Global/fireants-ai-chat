@@ -2,7 +2,9 @@ package com.pegas.yuki.virtual.chat.ui.component.screen.subscription
 
 import android.app.Activity
 import android.content.Context
+import android.content.res.Configuration
 import com.pegas.yuki.virtual.chat.R
+import com.pegas.yuki.virtual.chat.data.pref.AppSharedPref
 import com.pegas.yuki.virtual.chat.domain.model.billing.VipProduct
 import com.pegas.yuki.virtual.chat.domain.model.common.AppResult
 import com.pegas.yuki.virtual.chat.domain.model.revenuecat.RevenueCatStoreProduct
@@ -15,11 +17,13 @@ import com.pegas.yuki.virtual.chat.ui.billing.BillingPurchaseCoordinator
 import com.pegas.yuki.virtual.chat.ui.billing.PurchaseFlowResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import java.util.Locale
 import javax.inject.Inject
 
 @HiltViewModel
 class SubscriptionViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
+    private val appSharedPref: AppSharedPref,
     private val getVipProductsUseCase: GetVipProductsUseCase,
     private val billingRepository: BillingRepository,
     private val revenueCatRepository: RevenueCatRepository,
@@ -197,11 +201,15 @@ class SubscriptionViewModel @Inject constructor(
 
         val monthlyRc = monthlyVip?.let { findRcProduct(it.storeProductId) }
         val annualRc = annualVip?.let { findRcProduct(it.storeProductId) }
+        val localizedContext = localizedContext()
+        val selectedLocale = Locale.Builder().setLanguage(appSharedPref.languageCode).build()
+        val discountPattern = Regex("""\d+\s*%?""")
 
         val dynamicSavePercentageText = when {
             !annualVip?.badge.isNullOrBlank() -> {
                 val b = annualVip!!.badge!!.trim()
-                if (b.startsWith("SAVE", ignoreCase = true)) b else context.getString(R.string.sub_save_badge_format, b)
+                val discountText = discountPattern.find(b)?.value ?: b
+                localizedContext.getString(R.string.sub_save_badge_format, discountText)
             }
 
             monthlyRc != null && annualRc != null && monthlyRc.priceAmountMicros > 0 && annualRc.priceAmountMicros > 0 -> {
@@ -210,7 +218,7 @@ class SubscriptionViewModel @Inject constructor(
                 if (monthlyTotal > annualTotal) {
                     val percent =
                         (((monthlyTotal - annualTotal).toDouble() / monthlyTotal) * 100).toInt()
-                    if (percent > 0) context.getString(R.string.sub_save_percent_format, percent) else null
+                    if (percent > 0) localizedContext.getString(R.string.sub_save_percent_format, percent) else null
                 } else null
             }
 
@@ -220,7 +228,7 @@ class SubscriptionViewModel @Inject constructor(
         val dynamicAnnualBreakdownText = if (annualRc != null && annualRc.priceAmountMicros > 0) {
             val monthlyEquivalentMicros = annualRc.priceAmountMicros / 12
             val formatted = try {
-                val format = java.text.NumberFormat.getCurrencyInstance()
+                val format = java.text.NumberFormat.getCurrencyInstance(selectedLocale)
                 if (annualRc.currencyCode.isNotBlank()) {
                     format.currency = java.util.Currency.getInstance(annualRc.currencyCode)
                 }
@@ -234,15 +242,15 @@ class SubscriptionViewModel @Inject constructor(
                     "%.2f %s".format(amount, annualRc.currencyCode)
                 }
             }
-            context.getString(R.string.sub_billed_annually_format, formatted)
+            localizedContext.getString(R.string.sub_billed_annually_format, formatted)
         } else if (annualVip != null) {
-            context.getString(R.string.sub_billed_annually_fallback, annualVip.displayName)
+            localizedContext.getString(R.string.sub_billed_annually_fallback, annualVip.displayName)
         } else null
 
         val dynamicMonthlyBreakdownText =
             if (monthlyRc != null && monthlyRc.priceAmountMicros > 0) {
                 val formatted = try {
-                    val format = java.text.NumberFormat.getCurrencyInstance()
+                    val format = java.text.NumberFormat.getCurrencyInstance(selectedLocale)
                     if (monthlyRc.currencyCode.isNotBlank()) {
                         format.currency = java.util.Currency.getInstance(monthlyRc.currencyCode)
                     }
@@ -251,9 +259,9 @@ class SubscriptionViewModel @Inject constructor(
                 } catch (e: Exception) {
                     monthlyRc.priceFormatted
                 }
-                context.getString(R.string.sub_billed_monthly_format, formatted)
+                localizedContext.getString(R.string.sub_billed_monthly_format, formatted)
             } else if (monthlyVip != null) {
-                context.getString(R.string.sub_billed_monthly_fallback, monthlyVip.displayName)
+                localizedContext.getString(R.string.sub_billed_monthly_fallback, monthlyVip.displayName)
             } else null
 
         return vips.map { vip ->
@@ -279,6 +287,13 @@ class SubscriptionViewModel @Inject constructor(
                 monthlyBreakdownText = breakdownText
             )
         }
+    }
+
+    private fun localizedContext(): Context {
+        val locale = Locale.Builder().setLanguage(appSharedPref.languageCode).build()
+        val config = Configuration(context.resources.configuration)
+        config.setLocale(locale)
+        return context.createConfigurationContext(config)
     }
 
 

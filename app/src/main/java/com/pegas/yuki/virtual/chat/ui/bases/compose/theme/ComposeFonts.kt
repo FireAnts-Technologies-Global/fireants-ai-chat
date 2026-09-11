@@ -6,6 +6,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import com.pegas.yuki.virtual.chat.R
 
+val PlayfairDisplayBold = FontFamily(Font(R.font.playfair_display_bold))
 val ManropeLight = FontFamily(Font(R.font.manrope_light))
 val ManropeRegular = FontFamily(Font(R.font.manrope_regular))
 val ManropeMedium = FontFamily(Font(R.font.manrope_medium))

@@ -7,10 +7,13 @@ import com.pegas.yuki.virtual.chat.ui.bases.compose.mvi.BaseUiState
 data class SubscriptionPlanUiModel(
     val id: String,
     val storeProductId: String,
+    val title: String? = null,
     val isAnnual: Boolean,
     val priceText: String,
     val dailyBonusGems: String,
-    val isActivePlan: Boolean = false
+    val isActivePlan: Boolean = false,
+    val savePercentageText: String? = null,
+    val monthlyBreakdownText: String? = null
 )
 
 data class SubscriptionUiState(

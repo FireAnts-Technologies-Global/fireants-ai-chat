@@ -1,36 +1,62 @@
 package com.pegas.yuki.virtual.chat.ui.component.screen.store
 
 import android.widget.Toast
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.pegas.yuki.virtual.chat.R
+import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppButton
+import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppTextHorizontalGradient
 import com.pegas.yuki.virtual.chat.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.yuki.virtual.chat.ui.bases.compose.mvi.BaseScreen
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color161127
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color271E38
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorAFA5C3
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorFDFDFD
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitBold
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitRegular
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_1
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_12
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_120
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_13
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_16
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_18
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_20
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_24
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_32
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_56
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_40
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_48
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_8
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.appSplashBackground
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.nonScaledSp
 import com.pegas.yuki.virtual.chat.ui.bases.ext.findActivity
 import com.pegas.yuki.virtual.chat.ui.component.dialog.LoadingDialog
 import com.pegas.yuki.virtual.chat.ui.component.screen.store.component.CoinPackageItem
@@ -39,34 +65,6 @@ import com.pegas.yuki.virtual.chat.ui.component.screen.store.component.SectionHe
 import com.pegas.yuki.virtual.chat.ui.component.screen.store.component.StoreFooter
 import com.pegas.yuki.virtual.chat.ui.component.screen.store.component.StoreTopBar
 import com.pegas.yuki.virtual.chat.ui.model.asString
-
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Text
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
-import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppButton
-import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppTextHorizontalGradient
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color161127
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color271E38
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorAFA5C3
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorFDFDFD
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitBold
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitRegular
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_1
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_120
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_13
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_16
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_18
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_20
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_40
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_48
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.nonScaledSp
 
 @Composable
 fun StoreScreen(
@@ -166,7 +164,7 @@ private fun StoreContent(
                     modifier = Modifier.align(Alignment.Center),
                     contentAlignment = Alignment.Center
                 ) {
-                    ImageLoadingLottie(size = SdpR_56)
+                    ImageLoadingLottie(size = SdpR_32)
                 }
             } else if (state.coinPackages.isEmpty() && state.membershipPlans.isEmpty()) {
                 StoreEmptyContent(

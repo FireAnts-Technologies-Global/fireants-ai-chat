@@ -4,6 +4,7 @@ import android.app.Activity
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.domain.model.billing.VipProduct
 import com.pegas.yuki.virtual.chat.domain.model.common.AppResult
+import com.pegas.yuki.virtual.chat.domain.model.revenuecat.RevenueCatStoreProduct
 import com.pegas.yuki.virtual.chat.domain.repository.BillingRepository
 import com.pegas.yuki.virtual.chat.domain.repository.RevenueCatRepository
 import com.pegas.yuki.virtual.chat.domain.usecase.billing.GetBillingStatusUseCase
@@ -36,46 +37,22 @@ class SubscriptionViewModel @Inject constructor(
         loadedVipProducts = cachedVips
 
         val cachedOfferings = revenueCatRepository.getCachedOfferings() ?: emptyList()
-        val rcPrices = cachedOfferings.flatMap { it.packages }
-            .associate { it.product.id to it.product.priceFormatted }
-
-        fun findPriceForProduct(storeProductId: String): String? {
-            if (storeProductId.isBlank()) return null
-            rcPrices[storeProductId]?.let { return it }
-            return rcPrices.entries.firstOrNull { (key, _) ->
-                key.startsWith("$storeProductId:") || storeProductId.startsWith("$key:")
-            }?.value
-        }
+        val rcProducts = cachedOfferings.flatMap { it.packages }.map { it.product }
 
         val cachedBilling = billingRepository.getCachedBillingStatus()
         val jsonStr = cachedBilling?.vip?.json
+        val isVipActive =
+            jsonStr != null && (jsonStr.contains("\"active\":true") || jsonStr.contains("\"active\": true"))
         val regex = Regex("\"productId\"\\s*:\\s*\"([^\"]+)\"")
-        val activePlanStoreProductId =
+        val activePlanStoreProductId = if (isVipActive) {
             jsonStr?.let { regex.find(it) }?.groupValues?.getOrNull(1)
+        } else null
 
-        val vipUiModels = cachedVips.map {
-            val isAnnual = it.period.contains(
-                "year",
-                ignoreCase = true
-            ) || it.code.contains(
-                "year",
-                ignoreCase = true
-            ) || it.code.contains("annual", ignoreCase = true)
-
-            val realPrice = findPriceForProduct(it.storeProductId)
-            val isActive = activePlanStoreProductId != null &&
-                    (it.storeProductId == activePlanStoreProductId ||
-                            it.storeProductId.startsWith("$activePlanStoreProductId:") ||
-                            activePlanStoreProductId.startsWith("${it.storeProductId}:"))
-            SubscriptionPlanUiModel(
-                id = it.id,
-                storeProductId = it.storeProductId,
-                isAnnual = isAnnual,
-                priceText = realPrice ?: it.displayName,
-                dailyBonusGems = if (isAnnual) "750" else "500",
-                isActivePlan = isActive
-            )
-        }
+        val vipUiModels = mapVipProductsToUiModels(
+            vips = cachedVips,
+            rcProducts = rcProducts,
+            activePlanStoreProductId = activePlanStoreProductId
+        )
         val activeModel = vipUiModels.firstOrNull { it.isActivePlan }
         val defaultSelected = activeModel?.id
             ?: vipUiModels.find { it.isAnnual }?.id
@@ -127,11 +104,10 @@ class SubscriptionViewModel @Inject constructor(
             updateState { copy(isLoading = true, error = null) }
         }
         launchIO {
-            var rcPrices = emptyMap<String, String>()
+            var rcProducts = emptyList<RevenueCatStoreProduct>()
             when (val offeringsResult = revenueCatRepository.getOfferings(forceRefresh = true)) {
                 is AppResult.Success -> {
-                    rcPrices = offeringsResult.data.flatMap { it.packages }
-                        .associate { it.product.id to it.product.priceFormatted }
+                    rcProducts = offeringsResult.data.flatMap { it.packages }.map { it.product }
                 }
 
                 is AppResult.Failure -> {
@@ -143,9 +119,14 @@ class SubscriptionViewModel @Inject constructor(
             when (val billingResult = getBillingStatusUseCase(forceRefresh = true)) {
                 is AppResult.Success -> {
                     val jsonStr = billingResult.data.vip?.json
+                    val isVipActive =
+                        jsonStr != null && (jsonStr.contains("\"active\":true") || jsonStr.contains(
+                            "\"active\": true"
+                        ))
                     val regex = Regex("\"productId\"\\s*:\\s*\"([^\"]+)\"")
-                    activePlanStoreProductId =
+                    activePlanStoreProductId = if (isVipActive) {
                         jsonStr?.let { regex.find(it) }?.groupValues?.getOrNull(1)
+                    } else null
                 }
 
                 is AppResult.Failure -> {
@@ -153,40 +134,14 @@ class SubscriptionViewModel @Inject constructor(
                 }
             }
 
-            fun findPriceForProduct(storeProductId: String): String? {
-                if (storeProductId.isBlank()) return null
-                rcPrices[storeProductId]?.let { return it }
-                return rcPrices.entries.firstOrNull { (key, _) ->
-                    key.startsWith("$storeProductId:") || storeProductId.startsWith("$key:")
-                }?.value
-            }
-
             when (val vipResult = getVipProductsUseCase(forceRefresh = true)) {
                 is AppResult.Success -> {
                     loadedVipProducts = vipResult.data
-                    val vipUiModels = vipResult.data.map {
-                        val isAnnual = it.period.contains(
-                            "year",
-                            ignoreCase = true
-                        ) || it.code.contains(
-                            "year",
-                            ignoreCase = true
-                        ) || it.code.contains("annual", ignoreCase = true)
-
-                        val realPrice = findPriceForProduct(it.storeProductId)
-                        val isActive = activePlanStoreProductId != null &&
-                                (it.storeProductId == activePlanStoreProductId ||
-                                        it.storeProductId.startsWith("$activePlanStoreProductId:") ||
-                                        activePlanStoreProductId.startsWith("${it.storeProductId}:"))
-                        SubscriptionPlanUiModel(
-                            id = it.id,
-                            storeProductId = it.storeProductId,
-                            isAnnual = isAnnual,
-                            priceText = realPrice ?: it.displayName,
-                            dailyBonusGems = if (isAnnual) "750" else "500",
-                            isActivePlan = isActive
-                        )
-                    }
+                    val vipUiModels = mapVipProductsToUiModels(
+                        vips = vipResult.data,
+                        rcProducts = rcProducts,
+                        activePlanStoreProductId = activePlanStoreProductId
+                    )
                     val activeModel = vipUiModels.firstOrNull { it.isActivePlan }
                     val defaultSelected = activeModel?.id
                         ?: vipUiModels.find { it.isAnnual }?.id
@@ -209,6 +164,117 @@ class SubscriptionViewModel @Inject constructor(
                     }
                 }
             }
+        }
+    }
+
+    private fun mapVipProductsToUiModels(
+        vips: List<VipProduct>,
+        rcProducts: List<RevenueCatStoreProduct>,
+        activePlanStoreProductId: String?
+    ): List<SubscriptionPlanUiModel> {
+        fun findRcProduct(storeProductId: String): RevenueCatStoreProduct? {
+            if (storeProductId.isBlank()) return null
+            rcProducts.firstOrNull { it.id == storeProductId }?.let { return it }
+            return rcProducts.firstOrNull {
+                it.id.startsWith("$storeProductId:") ||
+                        storeProductId.startsWith("${it.id}:") ||
+                        (storeProductId.contains(":") && it.id == storeProductId.substringAfter(":")) ||
+                        (storeProductId.contains(":") && it.id == storeProductId.substringBefore(":"))
+            }
+        }
+
+        fun isAnnualPlan(vip: VipProduct): Boolean {
+            return vip.period.contains("year", ignoreCase = true) ||
+                    vip.code.contains("year", ignoreCase = true) ||
+                    vip.code.contains("annual", ignoreCase = true)
+        }
+
+        val monthlyVip = vips.firstOrNull { !isAnnualPlan(it) }
+        val annualVip = vips.firstOrNull { isAnnualPlan(it) }
+
+        val monthlyRc = monthlyVip?.let { findRcProduct(it.storeProductId) }
+        val annualRc = annualVip?.let { findRcProduct(it.storeProductId) }
+
+        val dynamicSavePercentageText = when {
+            !annualVip?.badge.isNullOrBlank() -> {
+                val b = annualVip!!.badge!!.trim()
+                if (b.startsWith("SAVE", ignoreCase = true)) b else "SAVE $b"
+            }
+
+            monthlyRc != null && annualRc != null && monthlyRc.priceAmountMicros > 0 && annualRc.priceAmountMicros > 0 -> {
+                val monthlyTotal = monthlyRc.priceAmountMicros * 12
+                val annualTotal = annualRc.priceAmountMicros
+                if (monthlyTotal > annualTotal) {
+                    val percent =
+                        (((monthlyTotal - annualTotal).toDouble() / monthlyTotal) * 100).toInt()
+                    if (percent > 0) "SAVE $percent%" else null
+                } else null
+            }
+
+            else -> null
+        }
+
+        val dynamicAnnualBreakdownText = if (annualRc != null && annualRc.priceAmountMicros > 0) {
+            val monthlyEquivalentMicros = annualRc.priceAmountMicros / 12
+            val formatted = try {
+                val format = java.text.NumberFormat.getCurrencyInstance()
+                if (annualRc.currencyCode.isNotBlank()) {
+                    format.currency = java.util.Currency.getInstance(annualRc.currencyCode)
+                }
+                format.maximumFractionDigits = 2
+                format.format(monthlyEquivalentMicros / 1_000_000.0)
+            } catch (e: Exception) {
+                val amount = monthlyEquivalentMicros / 1_000_000.0
+                if (amount % 1.0 == 0.0) {
+                    "%.0f %s".format(amount, annualRc.currencyCode)
+                } else {
+                    "%.2f %s".format(amount, annualRc.currencyCode)
+                }
+            }
+            "$formatted/month, billed annually"
+        } else if (annualVip != null) {
+            "${annualVip.displayName}, billed annually"
+        } else null
+
+        val dynamicMonthlyBreakdownText =
+            if (monthlyRc != null && monthlyRc.priceAmountMicros > 0) {
+                val formatted = try {
+                    val format = java.text.NumberFormat.getCurrencyInstance()
+                    if (monthlyRc.currencyCode.isNotBlank()) {
+                        format.currency = java.util.Currency.getInstance(monthlyRc.currencyCode)
+                    }
+                    format.maximumFractionDigits = 2
+                    format.format(monthlyRc.priceAmountMicros / 1_000_000.0)
+                } catch (e: Exception) {
+                    monthlyRc.priceFormatted
+                }
+                "$formatted/month, billed monthly"
+            } else if (monthlyVip != null) {
+                "${monthlyVip.displayName}, billed monthly"
+            } else null
+
+        return vips.map { vip ->
+            val isAnnual = isAnnualPlan(vip)
+            val rcProduct = findRcProduct(vip.storeProductId)
+            val realPrice = rcProduct?.priceFormatted
+            val isActive = activePlanStoreProductId != null &&
+                    (vip.storeProductId == activePlanStoreProductId ||
+                            vip.storeProductId.startsWith("$activePlanStoreProductId:") ||
+                            activePlanStoreProductId.startsWith("${vip.storeProductId}:"))
+            val breakdownText =
+                if (isAnnual) dynamicAnnualBreakdownText else dynamicMonthlyBreakdownText
+
+            SubscriptionPlanUiModel(
+                id = vip.id,
+                storeProductId = vip.storeProductId,
+                title = vip.displayName.takeIf { it.isNotBlank() },
+                isAnnual = isAnnual,
+                priceText = realPrice ?: vip.displayName,
+                dailyBonusGems = if (isAnnual) "750" else "500",
+                isActivePlan = isActive,
+                savePercentageText = if (isAnnual) dynamicSavePercentageText else null,
+                monthlyBreakdownText = breakdownText
+            )
         }
     }
 

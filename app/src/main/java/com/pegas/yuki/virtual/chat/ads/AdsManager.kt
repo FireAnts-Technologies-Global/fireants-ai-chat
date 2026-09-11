@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.view.LayoutInflater
+import android.view.WindowManager
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
@@ -30,9 +31,7 @@ import com.google.android.gms.ads.rewarded.RewardItem
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.ServerSideVerificationOptions
 import com.pegas.yuki.virtual.chat.ui.bases.ext.goneView
-import com.pegas.yuki.virtual.chat.ui.bases.ext.isNetwork
 import timber.log.Timber
-import kotlin.text.toLong
 
 @SuppressLint("StaticFieldLeak")
 object AdsManager {
@@ -222,65 +221,19 @@ object AdsManager {
             return
         }
 
-        val dialog = PrepareLoadingAdsDialog(context)
-        dialog.show()
-
-        var isActionCalled = false
-        fun safeAction() {
-            if (!isActionCalled) {
-                isActionCalled = true
-                dialog.dismiss()
-                onAction()
-            }
-        }
-        if (interHomeAd?.interstitialAd == null) {
-            val handler = Handler(Looper.getMainLooper())
-            val timeoutRunnable = Runnable {
-                safeAction()
-            }
-
-            handler.postDelayed(timeoutRunnable, 15_000)
-            FireAntsAdSdk.getInstance().getInterstitialAds(context, config.id, object : AdCallback() {
-                override fun onApInterstitialLoad(apInterstitialAd: ApInterstitialAd?) {
-                    super.onApInterstitialLoad(apInterstitialAd)
-                    interHomeAd = apInterstitialAd
-                    handler.removeCallbacks(timeoutRunnable)
-                    dialog.dismiss()
-                    if (apInterstitialAd != null && apInterstitialAd.isReady) {
-                        FireAntsAdSdk.getInstance()
-                            .forceShowInterstitial(
-                                context,
-                                apInterstitialAd,
-                                object : AdCallback() {
-                                    override fun onNextAction() {
-                                        super.onNextAction()
-                                        safeAction()
-                                    }
-
-                                    override fun onAdFailedToShow(adError: AdError?) {
-                                        super.onAdFailedToShow(adError)
-                                        safeAction()
-                                    }
-                                },
-                                true
-                            )
-                    } else {
-                        safeAction()
-                    }
+        val readyAd = interHomeAd
+        if (readyAd != null && readyAd.isReady) {
+            var isActionCalled = false
+            fun safeAction() {
+                if (!isActionCalled) {
+                    isActionCalled = true
+                    onAction()
                 }
-
-                override fun onAdFailedToLoad(i: LoadAdError?) {
-                    super.onAdFailedToLoad(i)
-                    handler.removeCallbacks(timeoutRunnable)
-                    safeAction()
-                }
-            })
-
-        }else{
+            }
             FireAntsAdSdk.getInstance()
                 .forceShowInterstitial(
                     context,
-                    interHomeAd,
+                    readyAd,
                     object : AdCallback() {
                         override fun onNextAction() {
                             super.onNextAction()
@@ -294,7 +247,70 @@ object AdsManager {
                     },
                     true
                 )
+            return
         }
+
+        val dialog = PrepareLoadingAdsDialog(context)
+        dialog.show()
+        dialog.window?.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+        dialog.window?.setDimAmount(0.6f)
+
+        var isActionCalled = false
+        fun safeAction() {
+            if (!isActionCalled) {
+                isActionCalled = true
+                try {
+                    if (dialog.isShowing) dialog.dismiss()
+                } catch (_: Exception) {
+                }
+                onAction()
+            }
+        }
+
+        val handler = Handler(Looper.getMainLooper())
+        val timeoutRunnable = Runnable {
+            safeAction()
+        }
+
+        handler.postDelayed(timeoutRunnable, 15_000)
+        FireAntsAdSdk.getInstance().getInterstitialAds(context, config.id, object : AdCallback() {
+            override fun onApInterstitialLoad(apInterstitialAd: ApInterstitialAd?) {
+                super.onApInterstitialLoad(apInterstitialAd)
+                interHomeAd = apInterstitialAd
+                handler.removeCallbacks(timeoutRunnable)
+                try {
+                    if (dialog.isShowing) dialog.dismiss()
+                } catch (_: Exception) {
+                }
+                if (apInterstitialAd != null && apInterstitialAd.isReady) {
+                    FireAntsAdSdk.getInstance()
+                        .forceShowInterstitial(
+                            context,
+                            apInterstitialAd,
+                            object : AdCallback() {
+                                override fun onNextAction() {
+                                    super.onNextAction()
+                                    safeAction()
+                                }
+
+                                override fun onAdFailedToShow(adError: AdError?) {
+                                    super.onAdFailedToShow(adError)
+                                    safeAction()
+                                }
+                            },
+                            false
+                        )
+                } else {
+                    safeAction()
+                }
+            }
+
+            override fun onAdFailedToLoad(i: LoadAdError?) {
+                super.onAdFailedToLoad(i)
+                handler.removeCallbacks(timeoutRunnable)
+                safeAction()
+            }
+        })
     }
 
     fun loadAndShowInterBack(context: Context, onAction: () -> Unit) {
@@ -313,65 +329,19 @@ object AdsManager {
             return
         }
 
-        val dialog = PrepareLoadingAdsDialog(context)
-        dialog.show()
-
-        var isActionCalled = false
-        fun safeAction() {
-            if (!isActionCalled) {
-                isActionCalled = true
-                dialog.dismiss()
-                onAction()
-            }
-        }
-        if (interBackAd?.interstitialAd == null) {
-            val handler = Handler(Looper.getMainLooper())
-            val timeoutRunnable = Runnable {
-                safeAction()
-            }
-
-            handler.postDelayed(timeoutRunnable, 15_000)
-            FireAntsAdSdk.getInstance().getInterstitialAds(context, config.id, object : AdCallback() {
-                override fun onApInterstitialLoad(apInterstitialAd: ApInterstitialAd?) {
-                    super.onApInterstitialLoad(apInterstitialAd)
-                    interBackAd = apInterstitialAd
-                    handler.removeCallbacks(timeoutRunnable)
-                    dialog.dismiss()
-                    if (apInterstitialAd != null && apInterstitialAd.isReady) {
-                        FireAntsAdSdk.getInstance()
-                            .forceShowInterstitial(
-                                context,
-                                apInterstitialAd,
-                                object : AdCallback() {
-                                    override fun onNextAction() {
-                                        super.onNextAction()
-                                        safeAction()
-                                    }
-
-                                    override fun onAdFailedToShow(adError: AdError?) {
-                                        super.onAdFailedToShow(adError)
-                                        safeAction()
-                                    }
-                                },
-                                true
-                            )
-                    } else {
-                        safeAction()
-                    }
+        val readyAd = interBackAd
+        if (readyAd != null && readyAd.isReady) {
+            var isActionCalled = false
+            fun safeAction() {
+                if (!isActionCalled) {
+                    isActionCalled = true
+                    onAction()
                 }
-
-                override fun onAdFailedToLoad(i: LoadAdError?) {
-                    super.onAdFailedToLoad(i)
-                    handler.removeCallbacks(timeoutRunnable)
-                    safeAction()
-                }
-            })
-
-        }else{
+            }
             FireAntsAdSdk.getInstance()
                 .forceShowInterstitial(
                     context,
-                    interBackAd,
+                    readyAd,
                     object : AdCallback() {
                         override fun onNextAction() {
                             super.onNextAction()
@@ -385,7 +355,70 @@ object AdsManager {
                     },
                     true
                 )
+            return
         }
+
+        val dialog = PrepareLoadingAdsDialog(context)
+        dialog.show()
+        dialog.window?.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+        dialog.window?.setDimAmount(0.6f)
+
+        var isActionCalled = false
+        fun safeAction() {
+            if (!isActionCalled) {
+                isActionCalled = true
+                try {
+                    if (dialog.isShowing) dialog.dismiss()
+                } catch (_: Exception) {
+                }
+                onAction()
+            }
+        }
+
+        val handler = Handler(Looper.getMainLooper())
+        val timeoutRunnable = Runnable {
+            safeAction()
+        }
+
+        handler.postDelayed(timeoutRunnable, 15_000)
+        FireAntsAdSdk.getInstance().getInterstitialAds(context, config.id, object : AdCallback() {
+            override fun onApInterstitialLoad(apInterstitialAd: ApInterstitialAd?) {
+                super.onApInterstitialLoad(apInterstitialAd)
+                interBackAd = apInterstitialAd
+                handler.removeCallbacks(timeoutRunnable)
+                try {
+                    if (dialog.isShowing) dialog.dismiss()
+                } catch (_: Exception) {
+                }
+                if (apInterstitialAd != null && apInterstitialAd.isReady) {
+                    FireAntsAdSdk.getInstance()
+                        .forceShowInterstitial(
+                            context,
+                            apInterstitialAd,
+                            object : AdCallback() {
+                                override fun onNextAction() {
+                                    super.onNextAction()
+                                    safeAction()
+                                }
+
+                                override fun onAdFailedToShow(adError: AdError?) {
+                                    super.onAdFailedToShow(adError)
+                                    safeAction()
+                                }
+                            },
+                            false
+                        )
+                } else {
+                    safeAction()
+                }
+            }
+
+            override fun onAdFailedToLoad(i: LoadAdError?) {
+                super.onAdFailedToLoad(i)
+                handler.removeCallbacks(timeoutRunnable)
+                safeAction()
+            }
+        })
     }
 
     fun loadBanner(

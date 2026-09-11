@@ -9,27 +9,34 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorAFA5C3
+import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppText
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ManropeRegular
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitRegular
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_11
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_4
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_6
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_8
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.nonScaledSp
+
+private val FinePrintColor = Color(0xFF756A8A)
 
 @Composable
 fun SubscriptionFinePrintText(
     textRes: Int,
+    textColor: Color = FinePrintColor,
     onClick: (() -> Unit)? = null
 ) {
     val rawText = stringResource(id = textRes)
     val baseModifier = Modifier
         .fillMaxWidth()
-        .padding(bottom = SdpR_8, start = SdpR_8, end = SdpR_8)
+        .padding(bottom = SdpR_6, start = SdpR_8, end = SdpR_8)
 
     val modifier = if (onClick != null) {
         baseModifier.clickable { onClick() }
@@ -39,13 +46,14 @@ fun SubscriptionFinePrintText(
 
     Row(
         modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.Top
     ) {
-        Text(
+        AppText(
             text = "•",
-            color = ColorAFA5C3,
+            color = textColor,
             fontSize = SdpR_11.nonScaledSp,
-            modifier = Modifier.padding(end = SdpR_4)
+            fontFamily = ManropeRegular,
+            modifier = Modifier.padding(end = SdpR_4, top = 1.dp)
         )
 
         val annotatedText = remember(rawText) {
@@ -103,16 +111,10 @@ fun SubscriptionFinePrintText(
 
         Text(
             text = annotatedText,
-            color = ColorAFA5C3,
+            color = textColor,
             fontFamily = OutfitRegular,
             fontSize = SdpR_11.nonScaledSp,
-            lineHeight = 13.sp
+            lineHeight = 14.sp
         )
     }
-}
-
-@androidx.compose.ui.tooling.preview.Preview
-@Composable
-fun SubscriptionFinePrintTextPreview() {
-    SubscriptionFinePrintText(textRes = com.pegas.yuki.virtual.chat.R.string.sub_fine_print_1)
 }

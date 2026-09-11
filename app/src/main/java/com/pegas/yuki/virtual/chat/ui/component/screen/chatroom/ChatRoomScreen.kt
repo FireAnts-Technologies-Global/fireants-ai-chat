@@ -47,7 +47,7 @@ import com.pegas.yuki.virtual.chat.ui.bases.compose.component.CommonTopBarStyle
 import com.pegas.yuki.virtual.chat.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.yuki.virtual.chat.ui.bases.compose.mvi.BaseScreen
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_12
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_48
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_32
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_8
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.appSplashBackground
 import com.pegas.yuki.virtual.chat.ui.bases.ext.showRateDialog
@@ -299,7 +299,7 @@ private fun ChatRoomContent(
                                 contentAlignment = Alignment.Center
                             ) {
                                 ImageLoadingLottie(
-                                    size = SdpR_48
+                                    size = SdpR_32
                                 )
                             }
                         }

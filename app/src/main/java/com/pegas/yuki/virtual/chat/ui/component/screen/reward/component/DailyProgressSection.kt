@@ -159,7 +159,7 @@ private fun DayCardItem(
         )
     )
 
-    val borderModifier = if (isCurrent && !isClaimed) {
+    val borderModifier = if (isCurrent) {
         Modifier.border(
             width = SdpR_2,
             brush = currentBorderBrush,

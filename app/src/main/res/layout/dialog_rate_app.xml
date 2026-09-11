@@ -39,7 +39,7 @@
                 android:includeFontPadding="false"
                 android:text="@string/enjoying_hd_camera"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_17ssp" />
+                android:textSize="@dimen/_15sdp" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvContent"
@@ -51,7 +51,7 @@
                 android:includeFontPadding="false"
                 android:text="@string/rate_us_on_the_google_play"
                 android:textColor="#FFAFA5C3"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_11sdp" />
 
             <com.willy.ratingbar.ScaleRatingBar
                 android:id="@+id/simpleRatingBar"
@@ -118,7 +118,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/btnRateNow"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_42sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/bg_dialog_primary_button"
                 android:clickable="true"
@@ -133,7 +133,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/btnNotNow"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_42sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/bg_btn_dialog_cancel"
                 android:clickable="true"

@@ -14,10 +14,10 @@ apply from: 'variants-signing.gradle'
 android {
     compileSdk compile_sdk_version
 
-    def customStoreFile = project.findProperty("AI_GIRL_STORE_FILE")
-    def customStorePassword = project.findProperty("AI_GIRL_STORE_PASSWORD")
-    def customKeyAlias = project.findProperty("AI_GIRL_KEY_ALIAS")
-    def customKeyPassword = project.findProperty("AI_GIRL_KEY_PASSWORD")
+    def customStoreFile = project.findProperty("AI_CHAT_STORE_FILE")
+    def customStorePassword = project.findProperty("AI_CHAT_STORE_PASSWORD")
+    def customKeyAlias = project.findProperty("AI_CHAT_KEY_ALIAS")
+    def customKeyPassword = project.findProperty("AI_CHAT_KEY_PASSWORD")
     def hasCustomSigning = [customStoreFile, customStorePassword, customKeyAlias, customKeyPassword].every {
         it != null && it.toString().trim()
     }
@@ -41,7 +41,7 @@ android {
         versionName "1.0.0"
 
         def formattedDate = new Date().format('MM.dd.yyyy')
-        archivesBaseName = "AI_Girl_Friend_Project_v${versionName}_v${versionCode}_${formattedDate}"
+        archivesBaseName = "AI_Chat_Project_v${versionName}_v${versionCode}_${formattedDate}"
 
         buildConfigField "String", "ANR_STUDIO_VERSION", "\"$fireants_ads_sdk\""
         buildConfigField "String", "PLAY_SERVICES_ADS_VERSION", "\"$play_services_ads_version\""

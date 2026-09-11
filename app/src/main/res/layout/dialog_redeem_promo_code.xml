@@ -21,7 +21,7 @@
                 android:layout_height="@dimen/_46sdp"
                 android:background="@drawable/bg_dialog_icon"
                 android:padding="@dimen/_12sdp"
-                android:src="@drawable/ic_sparkles" />
+                android:src="@drawable/ic_vector" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_title"
@@ -30,7 +30,7 @@
                 android:layout_marginTop="@dimen/_12sdp"
                 android:fontFamily="@font/outfit_bold"
                 android:text="@string/promo_code_title"
-                android:textColor="@color/setting_text_primary"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_16sdp" />
 
             <androidx.appcompat.widget.AppCompatTextView

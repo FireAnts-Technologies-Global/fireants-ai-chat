@@ -30,16 +30,6 @@
             android:paddingTop="@dimen/_16sdp"
             android:paddingBottom="@dimen/_20sdp">
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animLoading"
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_50sdp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/update" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imgForceUpdate"
@@ -47,7 +37,7 @@
                 android:layout_height="@dimen/_72sdp"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:src="@mipmap/ic_launcher"
-                app:layout_constraintTop_toBottomOf="@id/animLoading"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:shapeAppearanceOverlay="@style/rounded_corner" />
@@ -61,7 +51,7 @@
                 android:gravity="center"
                 android:includeFontPadding="false"
                 android:text="@string/we_re_better_than_ever"
-                android:textColor="@color/setting_text_primary"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_18ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

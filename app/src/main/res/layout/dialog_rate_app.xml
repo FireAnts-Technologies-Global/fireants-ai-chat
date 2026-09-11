@@ -6,125 +6,144 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:background="#aabbcc">
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_16sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_remove_bg_mode_unselected"
-            android:gravity="center"
+            android:background="@drawable/bg_dialog_surface"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_18sdp"
-            android:paddingVertical="@dimen/_18sdp">
+            android:paddingVertical="@dimen/_20sdp">
 
-            <com.willy.ratingbar.ScaleRatingBar
-                android:id="@+id/simpleRatingBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/_6sdp"
-                app:srb_clickable="true"
-                app:srb_drawableEmpty="@drawable/ic_ratingbar_star_off"
-                app:srb_drawableFilled="@drawable/ic_ratingbar_star_on"
-                app:srb_scrollable="true"
-                app:srb_stepSize="1" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_splash"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/img_logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:shapeAppearanceOverlay="@style/rounded_corner" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="5dp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:fontFamily="@font/bold"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/outfit_bold"
                 android:gravity="center"
-                android:maxLines="2"
-                android:paddingHorizontal="5dp"
+                android:includeFontPadding="false"
                 android:text="@string/enjoying_hd_camera"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17ssp" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="@dimen/_30sdp"
-                android:layout_marginVertical="10dp"
-                android:fontFamily="@font/regular"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/outfit_regular"
                 android:gravity="center"
-                android:maxLines="2"
-                android:paddingHorizontal="10dp"
+                android:includeFontPadding="false"
                 android:text="@string/rate_us_on_the_google_play"
-                android:textColor="#A7B0C0"
-                android:textSize="@dimen/_13sdp" />
+                android:textColor="#FFAFA5C3"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/simpleRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:srb_clickable="true"
+                app:srb_drawableEmpty="@drawable/ic_star_empty"
+                app:srb_drawableFilled="@drawable/ic_star_filled"
+                app:srb_numStars="5"
+                app:srb_rating="0"
+                app:srb_scrollable="true"
+                app:srb_starHeight="@dimen/_32sdp"
+                app:srb_starPadding="@dimen/_6sdp"
+                app:srb_starWidth="@dimen/_32sdp"
+                app:srb_stepSize="1" />
 
             <LinearLayout
                 android:id="@+id/layoutFeedback"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_30sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:layout_marginBottom="@dimen/_6sdp"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="gone"
+                tools:visibility="visible">
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edtReason"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_edittext_feedback"
+                    android:fontFamily="@font/outfit_regular"
                     android:hint="@string/feedback_reason_hint"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_10sdp"
                     android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="#80FFFFFF"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textColor="#FFFDFDFD"
+                    android:textColorHint="#FF6F6794"
+                    android:textSize="@dimen/_12ssp" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edtDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_8sdp"
                     android:background="@drawable/bg_edittext_feedback"
+                    android:fontFamily="@font/outfit_regular"
                     android:gravity="top"
                     android:hint="@string/feedback_description_hint"
                     android:inputType="textMultiLine"
                     android:minLines="3"
-                    android:padding="@dimen/_10sdp"
-                    android:textColor="@color/white"
-                    android:textColorHint="#80FFFFFF"
-                    android:textSize="@dimen/_12sdp" />
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:textColor="#FFFDFDFD"
+                    android:textColorHint="#FF6F6794"
+                    android:textSize="@dimen/_12ssp" />
             </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/btnRateNow"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_46sdp"
-                android:layout_marginHorizontal="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:backgroundTint="#E8C3AC"
-                android:fontFamily="@font/bold"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_dialog_primary_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/outfit_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
                 android:text="@string/rate_now"
-                android:textAllCaps="false"
-                android:textSize="@dimen/_13sdp"
-                app:cornerRadius="@dimen/_57sdp" />
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/_13ssp" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/btnNotNow"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_46sdp"
-                android:layout_marginHorizontal="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:backgroundTint="#1E1E25"
-                android:fontFamily="@font/bold"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_btn_dialog_cancel"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/outfit_semi_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
                 android:text="@string/not_now"
-                android:textAllCaps="false"
-                android:textSize="@dimen/_13sdp"
-                app:cornerRadius="@dimen/_57sdp"
-                app:strokeColor="#1FFFFFFF"
-                app:strokeWidth="1dp" />
+                android:textColor="#FFAFA5C3"
+                android:textSize="@dimen/_13ssp" />
         </LinearLayout>
     </FrameLayout>
 </layout>

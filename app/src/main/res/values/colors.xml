@@ -14,7 +14,10 @@
 
     <color name="setting_text_primary">#FFFDFDFD</color>
     <color name="setting_text_secondary">#FFAFA5C3</color>
-    <color name="setting_accent">#FFF1CBB7</color>
-    <color name="setting_divider">#FF322D41</color>
+    <color name="setting_accent">#FFD65A98</color>
+    <color name="setting_icon_tint">#FFD65A98</color>
+    <color name="setting_chevron">#FFAFA5C3</color>
+    <color name="setting_divider">#FF271E38</color>
+    <color name="setting_back_tint">#FFE25798</color>
 
 </resources>

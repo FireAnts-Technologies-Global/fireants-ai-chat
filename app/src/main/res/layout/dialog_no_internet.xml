@@ -50,7 +50,7 @@
                 android:gravity="center"
                 android:includeFontPadding="false"
                 android:text="@string/no_internet_title"
-                android:textColor="@color/setting_text_primary"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_18ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

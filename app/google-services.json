@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "38257601541",
-    "project_id": "r013-aigirlfriend",
-    "storage_bucket": "r013-aigirlfriend.firebasestorage.app"
+    "project_number": "948379355929",
+    "project_id": "r018-aichat-5d971",
+    "storage_bucket": "r018-aichat-5d971.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:38257601541:android:454ac677f573273094c06c",
+        "mobilesdk_app_id": "1:948379355929:android:738aa8b533b23b59db5388",
         "android_client_info": {
-          "package_name": "com.pegas.yuki.virtual.chat.dev"
+          "package_name": "com.pegas.yuki.virtual.chat"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDnsbU_8N-mfT45EycmKpDeZtTyhmZFFKU"
+          "current_key": "AIzaSyAWsmkApPSJtuzDXWHAexWbiYkkt0fA0ZQ"
         }
       ],
       "services": {

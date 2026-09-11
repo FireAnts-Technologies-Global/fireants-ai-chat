@@ -194,7 +194,7 @@ private fun StoreContent(
                     if (state.coinPackages.isNotEmpty()) {
                         items(state.coinPackages) { pkg ->
                             CoinPackageItem(
-                                displayName = pkg.displayName ?: "${pkg.coinAmount} Gems",
+                                displayName = pkg.displayName ?: stringResource(id = R.string.store_coins_format, pkg.coinAmount),
                                 price = pkg.priceText,
                                 badge = pkg.bonusBadgeText,
                                 isSelected = state.selectedPackageId == pkg.id,
@@ -366,12 +366,12 @@ private fun StoreContentPreview() {
                 isLoading = false,
                 coinBalance = 480,
                 coinPackages = listOf(
-                    CoinPackageUiModel("1", 100, "100 Gems", null, "52.000 đ"),
-                    CoinPackageUiModel("2", 220, "220 Gems", "+20 (9%)", "105.000 đ"),
-                    CoinPackageUiModel("3", 550, "550 Gems", "+50 (9%)", "184.000 đ"),
-                    CoinPackageUiModel("4", 1200, "1200 Gems", "+200 (17%)", "263.000 đ"),
-                    CoinPackageUiModel("5", 2400, "2400 Gems", "+400 (17%)", "526.000 đ"),
-                    CoinPackageUiModel("6", 5200, "5200 Gems", "+1200 (23%)", "789.000 đ")
+                    CoinPackageUiModel("1", 100, "100 Coins", null, "52.000 đ"),
+                    CoinPackageUiModel("2", 220, "220 Coins", "+20 (9%)", "105.000 đ"),
+                    CoinPackageUiModel("3", 550, "550 Coins", "+50 (9%)", "184.000 đ"),
+                    CoinPackageUiModel("4", 1200, "1200 Coins", "+200 (17%)", "263.000 đ"),
+                    CoinPackageUiModel("5", 2400, "2400 Coins", "+400 (17%)", "526.000 đ"),
+                    CoinPackageUiModel("6", 5200, "5200 Coins", "+1200 (23%)", "789.000 đ")
                 ),
                 membershipPlans = listOf(
                     MembershipPlanUiModel(

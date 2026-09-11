@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Começar</string>
+    <string name="next">Próximo</string>
+    <string name="txt_thanks_you_for_rating">Obrigado pela sua avaliação!</string>
+    <string name="onboarding_title_1">Conheça alguém que entende você</string>
+    <string name="onboarding_des_1">Conheça companheiros de IA com personalidades e histórias únicas, prontos a qualquer momento.</string>
+    <string name="onboarding_title_2">Conversas que parecem pessoais</string>
+    <string name="onboarding_des_2">Compartilhe seus pensamentos, explore novas histórias ou simplesmente aproveite uma conversa feita para você.</string>
+    <string name="onboarding_title_3">Crie seu companheiro perfeito</string>
+    <string name="onboarding_des_3">Escolha a aparência, personalidade e interesses para criar seu companheiro de IA perfeito.</string>
+    <string name="onboarding_title_4">Sua história começa aqui</string>
+    <string name="onboarding_des_4">Conecte-se, converse e descubra algo novo todos os dias.</string>
+    <string name="close">Fechar</string>
+    <string name="try_again">Tentar novamente</string>
+    <string name="txt_cancel">Cancelar</string>
+    <string name="loading_label">Carregando</string>
+    <string name="no_internet_title">Sem conexão com a Internet</string>
+    <string name="no_internet_message">Verifique as configurações de rede para continuar usando o aplicativo.</string>
+    <string name="open_settings">Abrir Configurações</string>
+    <string name="force_update_message">Uma nova versão está disponível. Atualize para continuar usando o aplicativo.</string>
+    <string name="update_now">Atualizar agora</string>
+    <string name="setting">Configurações</string>
+    <string name="main_tab_discover">Descobrir</string>
+    <string name="main_tab_reward">Recompensas</string>
+    <string name="main_tab_add">Adicionar</string>
+    <string name="main_tab_chats">Conversas</string>
+    <string name="main_tab_mission">Missões</string>
+    <string name="rate">Avaliar</string>
+    <string name="share_with_friend">Compartilhar com amigos</string>
+    <string name="privacy_policy">Política de Privacidade</string>
+    <string name="let_me_recommend">Deixe-me recomendar este aplicativo</string>
+    <string name="share_to">Compartilhar com</string>
+    <string name="we_re_better_than_ever">O aplicativo continua melhorando</string>
+    <string name="error_generic">Algo deu errado. Por favor, tente novamente.</string>
+    <string name="error_network_unavailable">Verifique sua conexão com a Internet e tente novamente.</string>
+    <string name="error_auth_session_expired">Sua sessão expirou. Por favor, tente novamente.</string>
+    <string name="error_auth_unavailable">Não foi possível concluir a autenticação agora. Tente novamente.</string>
+    <string name="create_error_title">Não foi possível criar o personagem</string>
+    <string name="error_insufficient_coins">Moedas insuficientes</string>
+    <string name="no_credits_left">Nenhum crédito restante</string>
+    <string name="balance_format">Saldo: %1$d</string>
+    <string name="buy_coins">Comprar moedas</string>
+    <string name="coins">MOEDAS</string>
+    <string name="upgrade_pro">Atualizar para o Pro</string>
+    <string name="reward_error_title">Não foi possível carregar as recompensas</string>
+    <string name="home_error_title">Não foi possível carregar o conteúdo</string>
+    <string name="home_empty_characters">Nenhum personagem disponível no momento.</string>
+    <string name="home_create_assistant_title">Encontre alguém\nque te entenda</string>
+    <string name="home_create_assistant_subtitle">Crie seu próprio companheiro de IA e\nconstrua uma conexão significativa.</string>
+    <string name="home_create_assistant_action">Crie sua IA</string>
+    <string name="home_top_assistants">Melhores assistentes</string>
+    <string name="home_recommend_for_you">Recomendados para você</string>
+    <string name="home_see_all">Ver tudo</string>
+    <string name="setting_back">Voltar</string>
+    <string name="character_detail_error_title">Não foi possível carregar o personagem</string>
+    <string name="character_detail_start_chat">Converse comigo</string>
+    <string name="chat_error_title">Não foi possível carregar a conversa</string>
+    <string name="chat_starter_title">Iniciar uma conversa</string>
+    <string name="chat_starter_subtitle">Não tem certeza do que dizer? Experimente uma destas sugestões.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>Olá! Conte-me um pouco sobre você.</item>
+        <item>O que tornaria o dia de hoje mais interessante?</item>
+        <item>Vamos jogar um jogo rápido de perguntas e respostas.</item>
+    </string-array>
+    <string name="chat_input_hint">Pergunte qualquer coisa...</string>
+    <string name="today">Hoje</string>
+    <string name="yesterday">Ontem</string>
+    <string name="chat_send">Enviar</string>
+    <string name="chat_more_title">Mais</string>
+    <string name="chat_more_custom_background">Plano de fundo personalizado</string>
+    <string name="chat_more_delete">Excluir conversa</string>
+    <string name="chat_more_report">Denunciar</string>
+    <string name="chat_role_assistant">Assistente</string>
+    <string name="chat_message_just_now">Agora mesmo</string>
+    <string name="chat_delete_title">Excluir conversa?</string>
+    <string name="chat_delete_message">Tem certeza de que deseja excluir esta conversa? Esta ação não pode ser desfeita.</string>
+    <string name="chat_delete_confirm">Excluir</string>
+    <string name="chat_delete_success">Conversa excluída com sucesso</string>
+    <string name="chat_report_title">Denunciar</string>
+    <string name="chat_report_message">Tem certeza de que deseja denunciar este usuário? Analisaremos seu relatório e tomaremos as medidas cabíveis.</string>
+    <string name="chat_report_confirm">Denunciar</string>
+    <string name="chat_report_success">Obrigado pela sua denúncia.</string>
+    <string name="chat_report_hint">Explique o problema (opcional)...</string>
+    <string name="chat_empty_title">Nenhuma conversa ainda</string>
+    <string name="chat_empty_subtitle">Inicie uma nova conversa para ver seus bate-papos aparecerem aqui.</string>
+    <string name="chat_empty_start_chat">Iniciar conversa</string>
+    <string name="actions">Ações</string>
+    <string name="store_title">Loja</string>
+    <string name="store_top_up_coins">RECARREGAR MOEDAS</string>
+    <string name="store_unlock_storylines">Desbloqueie histórias e ações</string>
+    <string name="store_membership_plans">PLANOS DE ASSINATURA</string>
+    <string name="store_unlimited_vip">Experiência VIP premium</string>
+    <string name="store_restore_purchases">Restaurar compras</string>
+    <string name="store_terms_policies">Termos e Políticas</string>
+    <string name="store_transactions_info">As transações serão processadas por meio da sua conta do Google Play.\nAs assinaturas são renovadas automaticamente, a menos que sejam canceladas pelo menos 24 horas antes do final do período atual.</string>
+    <string name="store_terms_privacy">Termos de Serviço   •   Política de Privacidade</string>
+    <string name="store_product_not_found">Produto não encontrado</string>
+    <string name="store_purchase_cancelled">Compra cancelada</string>
+    <string name="store_restoring_purchases">Restaurando compras...</string>
+    <string name="store_restore_success">Compras restauradas com sucesso!</string>
+    <string name="store_coins_credited">Moedas creditadas com sucesso! Saldo: %1$d</string>
+    <string name="store_purchase_processing">Compra bem-sucedida. As moedas estão sendo processadas, atualize em instantes.</string>
+    <string name="store_vip_activated">Assinatura VIP ativada com sucesso!</string>
+    <string name="store_vip_processing">Compra bem-sucedida. O status VIP está sendo processado, atualize em instantes.</string>
+    <string name="store_duration_month">por mês</string>
+    <string name="store_duration_year">por ano</string>
+    <string name="store_vip_desc_month">Acesso VIP mensal com recompensas diárias em moedas</string>
+    <string name="store_vip_desc_year">Acesso VIP anual com recompensas diárias e recursos premium</string>
+    <string name="store_vip_benefit_1">Bônus de 500 moedas para cada login diário</string>
+    <string name="store_vip_benefit_2">Bônus de 750 moedas para cada login diário</string>
+    <string name="store_vip_benefit_3">Aproveite todos os benefícios da sua assinatura VIP</string>
+    <string name="store_vip_footer_month">Renovação automática mensal. Cancele quando quiser.</string>
+    <string name="store_vip_footer_year">Renovação automática anual. Cancele a qualquer momento no Google Play.</string>
+    <string name="store_empty_title">Nenhum pacote disponível</string>
+    <string name="store_empty_subtitle">Os produtos não estão disponíveis no momento. Por favor, volte mais tarde.</string>
+    <string name="store_empty_retry">Tentar novamente</string>
+    <string name="store_empty_vip_plans">Os planos de assinatura não estão disponíveis no momento.</string>
+    <string name="store_empty_coin_packages">Os pacotes de moedas não estão disponíveis no momento.</string>
+    <string name="sub_empty_plans">Os planos de assinatura não estão disponíveis no momento. Volte mais tarde.</string>
+    <string name="coins_empty_packages">Os pacotes de moedas não estão disponíveis no momento. Volte mais tarde.</string>
+    <string name="character_detail_hot">DESTAQUE</string>
+    <string name="character_badge_new">NOVO</string>
+    <string name="histories_title">Histórico</string>
+    <string name="character_detail_intimacy_title">Progresso da conexão</string>
+    <string name="character_detail_level_format">Nível %1$d</string>
+    <string name="character_detail_intimacy_hint">Cada mensagem adiciona até +%1$d pontos de conexão</string>
+    <string name="character_detail_exclusive_photo_gallery">Galeria de fotos exclusiva</string>
+    <string name="character_detail_about">Sobre %1$s</string>
+    <string name="character_detail_chats">Conversas</string>
+    <string name="character_detail_rating">Avaliação</string>
+    <string name="character_detail_most_popular">Mais populares</string>
+    <string name="character_detail_rank_format">Top %1$d</string>
+    <string name="character_detail_personality_traits">Personalidade e traços</string>
+    <string name="character_detail_purchase_success">Plano de fundo desbloqueado com sucesso!</string>
+    <string name="continue_">Continuar</string>
+    <string name="sub_price_month_format">%1$s/ mês</string>
+    <string name="sub_price_year_format">%1$s/ ano</string>
+    <string name="sub_feature_outfits">Acesse histórias premium e momentos exclusivos</string>
+    <string name="sub_plan_monthly">Mensal</string>
+    <string name="sub_plan_yearly">Anual</string>
+    <string name="sub_subscribe_now">Assinar agora</string>
+    <string name="sub_current_plan">PLANO ATUAL</string>
+    <string name="sub_fine_print_1">O pagamento será cobrado na sua conta do Google Play após a confirmação\nda compra.</string>
+    <string name="sub_fine_print_2">Sua assinatura será renovada automaticamente de acordo com o plano escolhido,\na menos que seja cancelada pelo menos 24 horas antes do término do período atual.</string>
+    <string name="sub_fine_print_3">Usuários não assinantes ainda podem usar o serviço, porém alguns recursos pagos podem ser limitados.</string>
+    <string name="sub_fine_print_4">Você pode gerenciar ou cancelar sua assinatura a qualquer momento na seção Assinaturas do Google Play.</string>
+    <string name="sub_restore_purchase">Restaurar compras</string>
+    <string name="sub_paywall_title">Desbloqueie mais com o AURA+</string>
+    <string name="sub_paywall_subtitle">Conversas mais profundas. Mais maneiras de criar.</string>
+    <string name="sub_feature_unlimited_messages">Histórias Premium</string>
+    <string name="sub_feature_exclusive_companions">Vínculos mais profundos</string>
+    <string name="sub_feature_create_characters">Moedas diárias</string>
+    <string name="sub_feature_chat_backgrounds">Sem anúncios</string>
+    <string name="sub_cancel_anytime">Cancele a qualquer momento</string>
+    <string name="sub_best_value_arrow">Melhor valor &gt;</string>
+    <string name="sub_terms">Termos</string>
+    <string name="sub_privacy">Privacidade</string>
+    <string name="sub_save_percent_format">ECONOMIZE %1$d%%</string>
+    <string name="sub_save_badge_format">ECONOMIZE %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/mês, cobrado anualmente</string>
+    <string name="sub_billed_annually_fallback">%1$s, cobrado anualmente</string>
+    <string name="sub_billed_monthly_format">%1$s/mês, cobrado mensalmente</string>
+    <string name="sub_billed_monthly_fallback">%1$s, cobrado mensalmente</string>
+    <string name="store_coins_format">%1$d Moedas</string>
+    <string name="feedback_subject">Feedback</string>
+    <string name="send_feedback_chooser">Enviar feedback:</string>
+    <string name="send_email_via">Enviar e-mail via:</string>
+    <string name="no_email_client_found">Nenhum aplicativo de e-mail encontrado</string>
+    <string name="select_a_language">Selecione um idioma</string>
+    <string name="reward_your_progress">Seu progresso</string>
+    <string name="reward_check_in_today">Check-in de hoje</string>
+    <string name="reward_checked_in_today">Check-in realizado hoje</string>
+    <string name="reward_earn_rewards">Ganhe recompensas</string>
+    <string name="reward_daily_ads">Anúncios com recompensa diária</string>
+    <string name="reward_daily_ads_desc">+%1$d Moedas por anúncio</string>
+    <string name="reward_watch_ads_format">Assistir a anúncios (%1$d/10)</string>
+    <string name="reward_ads_unavailable">Não há anúncios disponíveis no momento. Tente novamente em alguns minutos.</string>
+    <string name="reward_vip_unlocked">Membro VIP</string>
+    <string name="reward_vip_unlocked_desc">Experiência sem anúncios ativa</string>
+    <string name="reward_claimed_title">Recompensa resgatada!</string>
+    <string name="reward_claimed_desc">Sua recompensa de check-in diário foi adicionada ao seu inventário.</string>
+    <string name="reward_claimed_coin_format">+%1$d Moedas</string>
+    <string name="reward_processing">Processando recompensa. Seu saldo será atualizado em breve.</string>
+    <string name="reward_day_format">Dia %1$d</string>
+    <string name="mission_tab_mission">Missão</string>
+    <string name="mission_tab_history">Histórico</string>
+    <string name="mission_no_active">Nenhuma missão ativa no momento.</string>
+    <string name="mission_coins_earned_format">+%1$d Moedas</string>
+    <string name="mission_type_daily_login">Login diário</string>
+    <string name="mission_type_watch_ad">Assistir ao anúncio</string>
+    <string name="mission_type_play_game">Jogar partida</string>
+    <string name="mission_type_online">Online por 5 min</string>
+    <string name="mission_type_share">Compartilhar com amigo</string>
+    <string name="mission_type_reward_claim">Resgatar recompensa</string>
+    <string name="mission_type_iap_purchase">Moedas adicionadas</string>
+    <string name="mission_type_promo_code">Código promocional</string>
+    <string name="mission_history_footer_stardust">Ações com mais de 30 dias se dissolvem em poeira estelar</string>
+    <string name="next_step">Próximo passo</string>
+    <string name="create_screen_title">Criar personagem</string>
+    <string name="create_generate_cost">Gerar com %1$d</string>
+    <string name="create_step_label_format">PASSO %1$d DE %2$d: %3$s</string>
+    <string name="create_step_general_setup">CONFIGURAÇÃO GERAL</string>
+    <string name="create_step_appearance_details">DETALHES DA APARÊNCIA</string>
+    <string name="create_step_hair_customization">PERSONALIZAÇÃO DE CABELO</string>
+    <string name="create_step_personality_identity">PERSONALIDADE E IDENTIDADE</string>
+    <string name="create_companion_gender">Identidade</string>
+    <string name="create_gender_girls">Mulher</string>
+    <string name="create_gender_guys">Homem</string>
+    <string name="create_gender_trans">Não-binário</string>
+    <string name="create_inspire_me">Inspire-me</string>
+    <string name="create_visual_style">Estilo visual</string>
+    <string name="create_style_realistic">Realista</string>
+    <string name="create_style_anime">Anime</string>
+    <string name="create_describe_to_create">Descreva para criar</string>
+    <string name="create_prompt_hint">Ex.: “Uma companheira doce e acolhedora que adora observar as estrelas à meia-noite, poesia e chá quente...”</string>
+    <string name="create_companion_ethnicity">Etnia do companheiro</string>
+    <string name="create_ethnicity_east_asian">Leste Asiático</string>
+    <string name="create_ethnicity_south_asian">Sul Asiático</string>
+    <string name="create_ethnicity_black">Negro</string>
+    <string name="create_ethnicity_white">Branco</string>
+    <string name="create_ethnicity_asian">Asiático</string>
+    <string name="create_ethnicity_latina">Latino</string>
+    <string name="create_age">Idade</string>
+    <string name="create_skin_tone">Tom de pele</string>
+    <string name="create_hair_color">Cor do cabelo</string>
+    <string name="create_hair_blonde">Loiro</string>
+    <string name="create_hair_black">Preto</string>
+    <string name="create_hair_copper">Acobreado</string>
+    <string name="create_hair_blue">Azul</string>
+    <string name="create_hair_purple">Roxo</string>
+    <string name="create_hair_red">Ruivo</string>
+    <string name="create_companion_name">Nome do companheiro</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Personalidade e origem social</string>
+    <string name="create_personality">Personalidade</string>
+    <string name="create_occupation">Profissão</string>
+    <string name="create_hobbies">Hobbies</string>
+    <string name="create_relationships">Relação</string>
+    <string name="option_none">Nenhum</string>
+    <string name="options_done">Concluído</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Amigável</item>
+        <item>Atencioso</item>
+        <item>Tímido</item>
+        <item>Extrovertido</item>
+        <item>Misterioso</item>
+        <item>Inteligente</item>
+        <item>Bem-humorado</item>
+        <item>Afetuoso</item>
+        <item>Aventureiro</item>
+        <item>Confiante</item>
+        <item>Enérgico</item>
+        <item>Calmo</item>
+        <item>Criativo</item>
+        <item>Ambicioso</item>
+        <item>Empático</item>
+        <item>Leal</item>
+        <item>Otimista</item>
+        <item>Pessimista</item>
+        <item>Sarcástico</item>
+        <item>Teimoso</item>
+        <item>Sensual</item>
+        <item>Brincalhão</item>
+        <item>Dominante</item>
+        <item>Submisso</item>
+        <item>Espiritual</item>
+        <item>Prático</item>
+        <item>Sonhador</item>
+        <item>Rebelde</item>
+        <item>Tradicional</item>
+        <item>Protetor</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Designer</item>
+        <item>Consultor</item>
+        <item>Médico</item>
+        <item>Enfermeiro</item>
+        <item>Engenheiro</item>
+        <item>Artista</item>
+        <item>Músico</item>
+        <item>Chef</item>
+        <item>Policial</item>
+        <item>Empreendedor</item>
+        <item>CEO Bilionário</item>
+        <item>Modelo</item>
+        <item>Ator</item>
+        <item>Escritor</item>
+        <item>Atleta</item>
+        <item>Cientista</item>
+        <item>Programador</item>
+        <item>Advogado</item>
+        <item>Arquiteto</item>
+        <item>Estilista</item>
+        <item>Fotógrafo</item>
+        <item>Jornalista</item>
+        <item>Piloto</item>
+        <item>Comissário de bordo</item>
+        <item>Barista</item>
+        <item>Bibliotecário</item>
+        <item>Freelancer</item>
+        <item>Influenciador</item>
+        <item>Desempregado</item>
+        <item>Detetive</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Leitura</item>
+        <item>Jogos</item>
+        <item>Viagens</item>
+        <item>Culinária</item>
+        <item>Esportes</item>
+        <item>Música</item>
+        <item>Fotografia</item>
+        <item>Pintura</item>
+        <item>Jardinagem</item>
+        <item>Filmes</item>
+        <item>Anime</item>
+        <item>Cosplay</item>
+        <item>Dança</item>
+        <item>Canto</item>
+        <item>Escrita</item>
+        <item>Compras</item>
+        <item>Academia</item>
+        <item>Yoga</item>
+        <item>Meditação</item>
+        <item>Trilha</item>
+        <item>Acampamento</item>
+        <item>Pesca</item>
+        <item>Artesanato</item>
+        <item>Moda</item>
+        <item>Tecnologia</item>
+        <item>Astrologia</item>
+        <item>Horta</item>
+        <item>Voluntariado</item>
+        <item>Carros</item>
+        <item>História</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Amigo</item>
+        <item>Melhor amigo</item>
+        <item>Namorada</item>
+        <item>Namorado</item>
+        <item>Esposa</item>
+        <item>Marido</item>
+        <item>Irmã</item>
+        <item>Irmão</item>
+        <item>Parceiro de viagem</item>
+        <item>Parceiro de aventuras</item>
+        <item>Mentor</item>
+        <item>Colega de trabalho</item>
+        <item>Chefe</item>
+        <item>Funcionário</item>
+        <item>Colega de classe</item>
+        <item>Guia</item>
+        <item>Aprendiz</item>
+        <item>Estranho</item>
+        <item>Colega de quarto</item>
+        <item>Vizinho</item>
+        <item>Ex-parceiro</item>
+        <item>Amigo de infância</item>
+        <item>Admirador secreto</item>
+        <item>Rival</item>
+        <item>Empregada</item>
+        <item>Mordomo</item>
+        <item>Anfitrião</item>
+        <item>Companheiro</item>
+        <item>Alma gêmea</item>
+        <item>Conhecido</item>
+    </string-array>
+    <string name="store_best_value">MELHOR VALOR</string>
+    <string name="setting_privacy_not_configured">O URL da Política de Privacidade não está configurado</string>
+    <string name="setting_no_app_open_link">Nenhum aplicativo disponível para abrir este link</string>
+    <string name="setting_unable_open_privacy">Não foi possível abrir a Política de Privacidade</string>
+    <string name="chat_status_online">Online</string>
+    <string name="create_enter_description">Insira a descrição do personagem</string>
+    <string name="create_enter_name">Insira o nome do personagem</string>
+    <string name="create_select_personality_hobby">Selecione personalidade e hobbies</string>
+    <string name="image_generation_failed">Falha na geração da imagem</string>
+    <string name="enjoying_hd_camera">Gostando da Namorada IA?</string>
+    <string name="rate_us_on_the_google_play">Avalie-nos no Google Play!</string>
+    <string name="rate_now">Avaliar agora</string>
+    <string name="not_now">Agora não</string>
+    <string name="chat_relationship_stranger">Estranho</string>
+    <string name="chat_subtitle_format">%1$s • Nível %2$d</string>
+    <string name="chat_title_format">Conversa #%1$s</string>
+    <string name="first_day">Primeiro dia</string>
+    <string name="feedback_reason_hint">Motivo (ex: travamento, lentidão, interface...)</string>
+    <string name="feedback_description_hint">Detalhes ou sugestões...</string>
+    <string name="send_feedback">Enviar feedback</string>
+</resources>

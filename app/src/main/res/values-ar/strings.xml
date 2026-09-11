@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">ابدأ الآن</string>
+    <string name="next">التالي</string>
+    <string name="txt_thanks_you_for_rating">شكراً لتقييمك!</string>
+    <string name="onboarding_title_1">قابل شخصاً يفهَمك حقاً</string>
+    <string name="onboarding_des_1">تعرّف على رفقاء ذكاء اصطناعي بشخصيات وقصص فريدة، جاهزون في أي وقت.</string>
+    <string name="onboarding_title_2">محادثات مفعمة بالمشاعر</string>
+    <string name="onboarding_des_2">شارك أفكارك، واستكشف قصصاً جديدة، أو ببساطة استمتع بمحادثة مصممة خصيصاً لك.</string>
+    <string name="onboarding_title_3">أنشئ رفيقك المثالي</string>
+    <string name="onboarding_des_3">اختر المظهر والشخصية والاهتمامات لتصميم رفيق الذكاء الاصطناعي المثالي لك.</string>
+    <string name="onboarding_title_4">قصتك تبدأ هنا</string>
+    <string name="onboarding_des_4">تواصل ودردش واكتشف شيئاً جديداً كل يوم.</string>
+    <string name="close">إغلاق</string>
+    <string name="try_again">إعادة المحاولة</string>
+    <string name="txt_cancel">إلغاء</string>
+    <string name="loading_label">جارٍ التحميل</string>
+    <string name="no_internet_title">لا يوجد اتصال بالإنترنت</string>
+    <string name="no_internet_message">يرجى التحقق من إعدادات الشبكة لمواصلة استخدام التطبيق.</string>
+    <string name="open_settings">فتح الإعدادات</string>
+    <string name="force_update_message">يتوفر إصدار جديد. يرجى التحديث لمواصلة الاستخدام.</string>
+    <string name="update_now">تحديث الآن</string>
+    <string name="setting">الإعدادات</string>
+    <string name="main_tab_discover">استكشاف</string>
+    <string name="main_tab_reward">المكافآت</string>
+    <string name="main_tab_add">إضافة</string>
+    <string name="main_tab_chats">الدردشات</string>
+    <string name="main_tab_mission">المهام</string>
+    <string name="rate">تقييم</string>
+    <string name="share_with_friend">مشاركة مع الأصدقاء</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="let_me_recommend">أود أن أرشح هذا التطبيق</string>
+    <string name="share_to">مشاركة إلى</string>
+    <string name="we_re_better_than_ever">التطبيق يتحسن باستمرار</string>
+    <string name="error_generic">حدث خطأ ما. يرجى المحاولة مرة أخرى.</string>
+    <string name="error_network_unavailable">يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى.</string>
+    <string name="error_auth_session_expired">انتهت جلستك. يرجى المحاولة مرة أخرى.</string>
+    <string name="error_auth_unavailable">تعذر إكمال المصادقة حالياً. يرجى المحاولة مرة أخرى.</string>
+    <string name="create_error_title">تعذر إنشاء الشخصية</string>
+    <string name="error_insufficient_coins">رصيد العملات غير كافٍ</string>
+    <string name="no_credits_left">لا توجد محاولات متبقية</string>
+    <string name="balance_format">الرصيد: %1$d</string>
+    <string name="buy_coins">شراء عملات</string>
+    <string name="coins">عملات</string>
+    <string name="upgrade_pro">ترقية إلى Pro</string>
+    <string name="reward_error_title">تعذر تحميل المكافآت</string>
+    <string name="home_error_title">تعذر تحميل المحتوى</string>
+    <string name="home_empty_characters">لا توجد شخصيات متاحة حالياً.</string>
+    <string name="home_create_assistant_title">ابحث عن شخص\nيفهمك حقاً</string>
+    <string name="home_create_assistant_subtitle">أنشئ رفيقك بالذكاء الاصطناعي\nوابنِ رابطة عميقة.</string>
+    <string name="home_create_assistant_action">أنشئ ذكاءك الاصطناعي</string>
+    <string name="home_top_assistants">أفضل المساعدين</string>
+    <string name="home_recommend_for_you">موصى به لك</string>
+    <string name="home_see_all">عرض الكل</string>
+    <string name="setting_back">رجوع</string>
+    <string name="character_detail_error_title">تعذر تحميل الشخصية</string>
+    <string name="character_detail_start_chat">تحدث معي الآن</string>
+    <string name="chat_error_title">تعذر تحميل الدردشة</string>
+    <string name="chat_starter_title">ابدأ محادثة</string>
+    <string name="chat_starter_subtitle">لست متأكداً مما تقوله؟ جرّب أحد هذه الاقتراحات.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>مرحباً! أخبرني القليل عن نفسك.</item>
+        <item>ما الذي يجعل هذا اليوم أكثر إثارة؟</item>
+        <item>لنلعب لعبة أسئلة وأجوبة سريعة.</item>
+    </string-array>
+    <string name="chat_input_hint">اسأل أي شيء...</string>
+    <string name="today">اليوم</string>
+    <string name="yesterday">أمس</string>
+    <string name="chat_send">إرسال</string>
+    <string name="chat_more_title">المزيد</string>
+    <string name="chat_more_custom_background">خلفية مخصصة</string>
+    <string name="chat_more_delete">حذف الدردشة</string>
+    <string name="chat_more_report">إبلاغ</string>
+    <string name="chat_role_assistant">المساعد</string>
+    <string name="chat_message_just_now">الآن</string>
+    <string name="chat_delete_title">حذف الدردشة؟</string>
+    <string name="chat_delete_message">هل أنت متأكد من رغبتك في حذف هذه الدردشة؟ لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="chat_delete_confirm">حذف</string>
+    <string name="chat_delete_success">تم حذف الدردشة بنجاح</string>
+    <string name="chat_report_title">إبلاغ</string>
+    <string name="chat_report_message">هل أنت متأكد من رغبتك في الإبلاغ عن هذا المستخدم؟ سنراجع البلاغ ونتخذ الإجراء المناسب.</string>
+    <string name="chat_report_confirm">إبلاغ</string>
+    <string name="chat_report_success">شكراً على إبلاغك.</string>
+    <string name="chat_report_hint">اشرح المشكلة (اختياري)...</string>
+    <string name="chat_empty_title">لا توجد دردشات بعد</string>
+    <string name="chat_empty_subtitle">ابدأ محادثة جديدة لتظهر محادثاتك هنا.</string>
+    <string name="chat_empty_start_chat">بدء دردشة</string>
+    <string name="actions">الإجراءات</string>
+    <string name="store_title">المتجر</string>
+    <string name="store_top_up_coins">شحن العملات</string>
+    <string name="store_unlock_storylines">فتح القصص والإجراءات</string>
+    <string name="store_membership_plans">خطط العضوية</string>
+    <string name="store_unlimited_vip">تجربة VIP مميزة</string>
+    <string name="store_restore_purchases">استعادة المشتريات</string>
+    <string name="store_terms_policies">الشروط والسياسات</string>
+    <string name="store_transactions_info">ستتم معالجة المعاملات عبر حساب Google Play الخاص بك.\nتتجدد الاشتراكات تلقائياً ما لم يتم الإلغاء قبل 24 ساعة على الأقل من نهاية الفترة الحالية.</string>
+    <string name="store_terms_privacy">شروط الخدمة   •   سياسة الخصوصية</string>
+    <string name="store_product_not_found">المنتج غير موجود</string>
+    <string name="store_purchase_cancelled">تم إلغاء الشراء</string>
+    <string name="store_restoring_purchases">جارٍ استعادة المشتريات...</string>
+    <string name="store_restore_success">تمت استعادة المشتريات بنجاح!</string>
+    <string name="store_coins_credited">تمت إضافة العملات بنجاح! الرصيد: %1$d</string>
+    <string name="store_purchase_processing">تم الشراء بنجاح. جارٍ معالجة العملات، يرجى التحديث بعد لحظات.</string>
+    <string name="store_vip_activated">تم تفعيل عضوية VIP بنجاح!</string>
+    <string name="store_vip_processing">تم الشراء بنجاح. جارٍ معالجة حالة VIP، يرجى التحديث بعد لحظات.</string>
+    <string name="store_duration_month">شهرياً</string>
+    <string name="store_duration_year">سنوياً</string>
+    <string name="store_vip_desc_month">وصول VIP شهري مع مكافآت عملات يومية</string>
+    <string name="store_vip_desc_year">وصول VIP سنوي مع مكافآت يومية وميزات حصرية</string>
+    <string name="store_vip_benefit_1">مكافأة 500 عملة إضافية لكل تسجيل دخول يومي</string>
+    <string name="store_vip_benefit_2">مكافأة 750 عملة إضافية لكل تسجيل دخول يومي</string>
+    <string name="store_vip_benefit_3">استمتع بجميع مزايا عضوية VIP</string>
+    <string name="store_vip_footer_month">يتجدد تلقائياً كل شهر. يمكنك الإلغاء في أي وقت.</string>
+    <string name="store_vip_footer_year">يتجدد تلقائياً كل عام. يمكنك الإلغاء في أي وقت عبر Google Play.</string>
+    <string name="store_empty_title">لا توجد باقات متاحة</string>
+    <string name="store_empty_subtitle">المنتجات غير متوفرة حالياً. يرجى التحقق مرة أخرى لاحقاً.</string>
+    <string name="store_empty_retry">إعادة المحاولة</string>
+    <string name="store_empty_vip_plans">خطط العضوية غير متاحة حالياً.</string>
+    <string name="store_empty_coin_packages">باقات العملات غير متاحة حالياً.</string>
+    <string name="sub_empty_plans">خطط العضوية غير متوفرة حالياً. يرجى التحقق لاحقاً.</string>
+    <string name="coins_empty_packages">باقات العملات غير متوفرة حالياً. يرجى التحقق لاحقاً.</string>
+    <string name="character_detail_hot">رائج</string>
+    <string name="character_badge_new">جديد</string>
+    <string name="histories_title">السجل</string>
+    <string name="character_detail_intimacy_title">مستوى التقارب</string>
+    <string name="character_detail_level_format">المستوى %1$d</string>
+    <string name="character_detail_intimacy_hint">كل رسالة تضيف حتى +%1$d نقطة تقارب</string>
+    <string name="character_detail_exclusive_photo_gallery">معرض صور حصري</string>
+    <string name="character_detail_about">حول %1$s</string>
+    <string name="character_detail_chats">الدردشات</string>
+    <string name="character_detail_rating">التقييم</string>
+    <string name="character_detail_most_popular">الأكثر شهرة</string>
+    <string name="character_detail_rank_format">أفضل %1$d</string>
+    <string name="character_detail_personality_traits">الشخصية والسمات</string>
+    <string name="character_detail_purchase_success">تم إلغاء قفل الخلفية بنجاح!</string>
+    <string name="continue_">متابعة</string>
+    <string name="sub_price_month_format">%1$s/ شهرياً</string>
+    <string name="sub_price_year_format">%1$s/ سنوياً</string>
+    <string name="sub_feature_outfits">الوصول إلى قصص مميزة ولحظات حصرية</string>
+    <string name="sub_plan_monthly">شهري</string>
+    <string name="sub_plan_yearly">سنوي</string>
+    <string name="sub_subscribe_now">اشترك الآن</string>
+    <string name="sub_current_plan">الخطة الحالية</string>
+    <string name="sub_fine_print_1">سيتم خصم الدفعة من حساب Google Play الخاص بك بعد تأكيد الشراء.</string>
+    <string name="sub_fine_print_2">سيتجدد اشتراكك تلقائياً وفقاً لخطتك ما لم يتم إلغاؤه قبل 24 ساعة على الأقل من نهاية الفترة الحالية.</string>
+    <string name="sub_fine_print_3">يمكن لغير المشتركين الاستمرار في استخدام الخدمة، إلا أن بعض الميزات المدفوعة قد تكون محدودة.</string>
+    <string name="sub_fine_print_4">يمكنك إدارة اشتراكك أو إلغاؤه في أي وقت في قسم الاشتراكات في Google Play.</string>
+    <string name="sub_restore_purchase">استعادة المشتريات</string>
+    <string name="sub_paywall_title">افتح المزيد مع AURA+</string>
+    <string name="sub_paywall_subtitle">محادثات أكثر عمقاً. طرق أكثر للإبداع.</string>
+    <string name="sub_feature_unlimited_messages">قصص مميزة</string>
+    <string name="sub_feature_exclusive_companions">روابط أعمق</string>
+    <string name="sub_feature_create_characters">عملات يومية</string>
+    <string name="sub_feature_chat_backgrounds">بدون إعلانات</string>
+    <string name="sub_cancel_anytime">إلغاء في أي وقت</string>
+    <string name="sub_best_value_arrow">أفضل قيمة &gt;</string>
+    <string name="sub_terms">الشروط</string>
+    <string name="sub_privacy">الخصوصية</string>
+    <string name="sub_save_percent_format">وفر %1$d%%</string>
+    <string name="sub_save_badge_format">وفر %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/شهرياً، تدفع سنوياً</string>
+    <string name="sub_billed_annually_fallback">%1$s، تدفع سنوياً</string>
+    <string name="sub_billed_monthly_format">%1$s/شهرياً، تدفع شهرياً</string>
+    <string name="sub_billed_monthly_fallback">%1$s، تدفع شهرياً</string>
+    <string name="store_coins_format">%1$d عملة</string>
+    <string name="feedback_subject">الملاحظات والآراء</string>
+    <string name="send_feedback_chooser">إرسال الملاحظات:</string>
+    <string name="send_email_via">إرسال البريد الإلكتروني عبر:</string>
+    <string name="no_email_client_found">لم يتم العثور على تطبيق بريد إلكتروني</string>
+    <string name="select_a_language">اختر لغة</string>
+    <string name="reward_your_progress">تقدمك</string>
+    <string name="reward_check_in_today">تسجيل الحضور اليوم</string>
+    <string name="reward_checked_in_today">تم تسجيل الحضور اليوم</string>
+    <string name="reward_earn_rewards">كسب المكافآت</string>
+    <string name="reward_daily_ads">إعلانات المكافآت اليومية</string>
+    <string name="reward_daily_ads_desc">+%1$d عملة لكل إعلان</string>
+    <string name="reward_watch_ads_format">مشاهدة الإعلانات (%1$d/10)</string>
+    <string name="reward_ads_unavailable">لا توجد إعلانات متاحة حالياً. يرجى المحاولة بعد بضع دقائق.</string>
+    <string name="reward_vip_unlocked">عضو VIP</string>
+    <string name="reward_vip_unlocked_desc">تجربة خالية من الإعلانات مفعلة</string>
+    <string name="reward_claimed_title">تم استلام المكافأة!</string>
+    <string name="reward_claimed_desc">تمت إضافة مكافأة تسجيل الدخول اليومية إلى مخزونك.</string>
+    <string name="reward_claimed_coin_format">+%1$d عملة</string>
+    <string name="reward_processing">جارٍ معالجة المكافأة. سيتم تحديث رصيدك قريباً.</string>
+    <string name="reward_day_format">اليوم %1$d</string>
+    <string name="mission_tab_mission">المهام</string>
+    <string name="mission_tab_history">السجل</string>
+    <string name="mission_no_active">لا توجد مهام نشطة حالياً.</string>
+    <string name="mission_coins_earned_format">+%1$d عملة</string>
+    <string name="mission_type_daily_login">تسجيل الدخول اليومي</string>
+    <string name="mission_type_watch_ad">مشاهدة إعلان</string>
+    <string name="mission_type_play_game">لعب لعبة</string>
+    <string name="mission_type_online">متصل لمدة 5 دقائق</string>
+    <string name="mission_type_share">مشاركة مع صديق</string>
+    <string name="mission_type_reward_claim">المطالبة بالمكافأة</string>
+    <string name="mission_type_iap_purchase">إضافة عملات</string>
+    <string name="mission_type_promo_code">رمز ترويجي</string>
+    <string name="mission_history_footer_stardust">الأنشطة التي تزيد عن 30 يوماً تتحول إلى غبار نجوم</string>
+    <string name="next_step">الخطوة التالية</string>
+    <string name="create_screen_title">إنشاء شخصية</string>
+    <string name="create_generate_cost">توليد بـ %1$d</string>
+    <string name="create_step_label_format">الخطوة %1$d من %2$d: %3$s</string>
+    <string name="create_step_general_setup">الإعداد العام</string>
+    <string name="create_step_appearance_details">تفاصيل المظهر</string>
+    <string name="create_step_hair_customization">تخصيص الشعر</string>
+    <string name="create_step_personality_identity">الشخصية والهوية</string>
+    <string name="create_companion_gender">الهوية</string>
+    <string name="create_gender_girls">أنثى</string>
+    <string name="create_gender_guys">ذكر</string>
+    <string name="create_gender_trans">غير ثنائي</string>
+    <string name="create_inspire_me">ألهمني</string>
+    <string name="create_visual_style">النمط البصري</string>
+    <string name="create_style_realistic">واقعي</string>
+    <string name="create_style_anime">أنمي</string>
+    <string name="create_describe_to_create">صف لإنشاء</string>
+    <string name="create_prompt_hint">مثال: “رفيقة لطيفة ومؤنسة تحب تأمل النجوم في منتصف الليل وكتابة الشعر وتحضير الشاي الدافئ...”</string>
+    <string name="create_companion_ethnicity">العرق / الأصل</string>
+    <string name="create_ethnicity_east_asian">شرق آسيوي</string>
+    <string name="create_ethnicity_south_asian">جنوب آسيوي</string>
+    <string name="create_ethnicity_black">بشرة سمراء</string>
+    <string name="create_ethnicity_white">بشرة بيضاء</string>
+    <string name="create_ethnicity_asian">آسيوي</string>
+    <string name="create_ethnicity_latina">لاتيني</string>
+    <string name="create_age">العمر</string>
+    <string name="create_skin_tone">لون البشرة</string>
+    <string name="create_hair_color">لون الشعر</string>
+    <string name="create_hair_blonde">أشقر</string>
+    <string name="create_hair_black">أسود</string>
+    <string name="create_hair_copper">نحاسي</string>
+    <string name="create_hair_blue">أزرق</string>
+    <string name="create_hair_purple">أرجواني</string>
+    <string name="create_hair_red">أحمر</string>
+    <string name="create_companion_name">اسم الرفيق</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">الشخصية والخلفية الاجتماعية</string>
+    <string name="create_personality">الشخصية</string>
+    <string name="create_occupation">المهنة</string>
+    <string name="create_hobbies">الهوايات</string>
+    <string name="create_relationships">نوع العلاقة</string>
+    <string name="option_none">لا شيء</string>
+    <string name="options_done">تم</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>ودود</item>
+        <item>مهتم</item>
+        <item>خجول</item>
+        <item>اجتماعي</item>
+        <item>غامض</item>
+        <item>ذكي</item>
+        <item>مرح</item>
+        <item>حنون</item>
+        <item>مغامر</item>
+        <item>واثق</item>
+        <item>نشيط</item>
+        <item>هادئ</item>
+        <item>مبدع</item>
+        <item>طموح</item>
+        <item>متعاطف</item>
+        <item>مخلص</item>
+        <item>متفائل</item>
+        <item>متشائم</item>
+        <item>ساخر</item>
+        <item>عنيد</item>
+        <item>جذاب</item>
+        <item>لعوب</item>
+        <item>مسيطر</item>
+        <item>مطيع</item>
+        <item>روحاني</item>
+        <item>عملي</item>
+        <item>حالم</item>
+        <item>متمرد</item>
+        <item>تقليدي</item>
+        <item>حامٍ</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>مصمم</item>
+        <item>مستشار</item>
+        <item>طبيب</item>
+        <item>ممرض</item>
+        <item>مهندس</item>
+        <item>فنان</item>
+        <item>موسيقي</item>
+        <item>طاهٍ</item>
+        <item>ضابط شرطة</item>
+        <item>رائد أعمال</item>
+        <item>رئيس تنفيذي ملياردير</item>
+        <item>عارض أزياء</item>
+        <item>ممثل</item>
+        <item>كاتب</item>
+        <item>رياضي</item>
+        <item>عالم</item>
+        <item>مبرمج</item>
+        <item>محامٍ</item>
+        <item>مهندس معماري</item>
+        <item>خبير أزياء</item>
+        <item>مصور</item>
+        <item>صحفي</item>
+        <item>طيار</item>
+        <item>مضيف طيران</item>
+        <item>باريستا</item>
+        <item>أمين مكتبة</item>
+        <item>مستقل</item>
+        <item>مؤثر</item>
+        <item>عاطل عن العمل</item>
+        <item>محقق</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>القراءة</item>
+        <item>ألعاب الفيديو</item>
+        <item>السفر</item>
+        <item>الطهي</item>
+        <item>الرياضة</item>
+        <item>الموسيقى</item>
+        <item>التصوير</item>
+        <item>الرسم</item>
+        <item>البستنة</item>
+        <item>الأفلام</item>
+        <item>الأنمي</item>
+        <item>الكوسبلاي</item>
+        <item>الرقص</item>
+        <item>الغناء</item>
+        <item>الكتابة</item>
+        <item>التسوق</item>
+        <item>اللياقة البدنية</item>
+        <item>اليوغا</item>
+        <item>التأمل</item>
+        <item>تسلق الجبال</item>
+        <item>التخييم</item>
+        <item>صيد السمك</item>
+        <item>الأعمال اليدوية</item>
+        <item>الموضة</item>
+        <item>التكنولوجيا</item>
+        <item>علم التنجيم</item>
+        <item>الزراعة المنزلية</item>
+        <item>العمل التطوعي</item>
+        <item>السيارات</item>
+        <item>التاريخ</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>صديق</item>
+        <item>أفضل صديق</item>
+        <item>حبيبة</item>
+        <item>حبيب</item>
+        <item>زوجة</item>
+        <item>زوج</item>
+        <item>أخت</item>
+        <item>أخ</item>
+        <item>رفيق سفر</item>
+        <item>رفيق مغامرة</item>
+        <item>مرشد</item>
+        <item>زميل عمل</item>
+        <item>مدير</item>
+        <item>موظف</item>
+        <item>زميل دراسة</item>
+        <item>دليل</item>
+        <item>متعلم</item>
+        <item>شخص غريب</item>
+        <item>شريك سكن</item>
+        <item>جار</item>
+        <item>شريك سابق</item>
+        <item>صديق الطفولة</item>
+        <item>معجب سري</item>
+        <item>منافس</item>
+        <item>خادمة</item>
+        <item>كبير الخدم</item>
+        <item>مضيف</item>
+        <item>رفيق</item>
+        <item>توأم الروح</item>
+        <item>معارف</item>
+    </string-array>
+    <string name="store_best_value">أفضل قيمة</string>
+    <string name="setting_privacy_not_configured">لم يتم تكوين رابط سياسة الخصوصية</string>
+    <string name="setting_no_app_open_link">لا يوجد تطبيق متاح لفتح هذا الرابط</string>
+    <string name="setting_unable_open_privacy">تعذر فتح سياسة الخصوصية</string>
+    <string name="chat_status_online">متصل الآن</string>
+    <string name="create_enter_description">أدخل وصف الشخصية</string>
+    <string name="create_enter_name">أدخل اسم الشخصية</string>
+    <string name="create_select_personality_hobby">اختر الشخصية والهوايات</string>
+    <string name="image_generation_failed">فشل إنشاء الصورة</string>
+    <string name="enjoying_hd_camera">هل تستمتع بصديقة الذكاء الاصطناعي؟</string>
+    <string name="rate_us_on_the_google_play">قيّمنا على متجر Google Play!</string>
+    <string name="rate_now">تقييم الآن</string>
+    <string name="not_now">ليس الآن</string>
+    <string name="chat_relationship_stranger">شخص غريب</string>
+    <string name="chat_subtitle_format">%1$s • المستوى %2$d</string>
+    <string name="chat_title_format">الدردشة #%1$s</string>
+    <string name="first_day">اليوم الأول</string>
+    <string name="feedback_reason_hint">السبب (مثل: تعطل، بطء، واجهة غير مناسبة...)</string>
+    <string name="feedback_description_hint">التفاصيل أو الاقتراحات...</string>
+    <string name="send_feedback">إرسال الملاحظات</string>
+</resources>

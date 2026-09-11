@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Başla</string>
+    <string name="next">İleri</string>
+    <string name="txt_thanks_you_for_rating">Değerlendirmeniz için teşekkürler!</string>
+    <string name="onboarding_title_1">Seni gerçekten anlayan biriyle tanış</string>
+    <string name="onboarding_des_1">Her an hazır, benzersiz kişiliklere ve hikayelere sahip yapay zeka arkadaşlarıyla tanış.</string>
+    <string name="onboarding_title_2">Samimi ve özel hissettiren sohbetler</string>
+    <string name="onboarding_des_2">Düşüncelerini paylaş, yeni hikayeler keşfet ya da sadece sana özel bir sohbetin tadını çıkar.</string>
+    <string name="onboarding_title_3">Mükemmel arkadaşını oluştur</string>
+    <string name="onboarding_des_3">Mükemmel yapay zeka arkadaşını oluşturmak için görünüşünü, kişiliğini ve ilgi alanlarını seç.</string>
+    <string name="onboarding_title_4">Hikayen burada başlıyor</string>
+    <string name="onboarding_des_4">Bağ kur, sohbet et ve her gün yeni bir şeyler keşfet.</string>
+    <string name="close">Kapat</string>
+    <string name="try_again">Tekrar Dene</string>
+    <string name="txt_cancel">İptal</string>
+    <string name="loading_label">Yükleniyor</string>
+    <string name="no_internet_title">İnternet Bağlantısı Yok</string>
+    <string name="no_internet_message">Uygulamayı kullanmaya devam etmek için lütfen ağ ayarlarınızı kontrol edin.</string>
+    <string name="open_settings">Ayarları Aç</string>
+    <string name="force_update_message">Yeni bir sürüm mevcut. Devam etmek için lütfen uygulamayı güncelleyin.</string>
+    <string name="update_now">Şimdi Güncelle</string>
+    <string name="setting">Ayarlar</string>
+    <string name="main_tab_discover">Keşfet</string>
+    <string name="main_tab_reward">Ödüller</string>
+    <string name="main_tab_add">Ekle</string>
+    <string name="main_tab_chats">Sohbetler</string>
+    <string name="main_tab_mission">Görevler</string>
+    <string name="rate">Puanla</string>
+    <string name="share_with_friend">Arkadaşlarla Paylaş</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+    <string name="let_me_recommend">Bu uygulamayı tavsiye etmek istiyorum</string>
+    <string name="share_to">Şurada Paylaş</string>
+    <string name="we_re_better_than_ever">Uygulama her geçen gün daha da gelişiyor</string>
+    <string name="error_generic">Bir şeyler ters gitti. Lütfen tekrar deneyin.</string>
+    <string name="error_network_unavailable">Lütfen internet bağlantınızı kontrol edip tekrar deneyin.</string>
+    <string name="error_auth_session_expired">Oturum süreniz doldu. Lütfen tekrar deneyin.</string>
+    <string name="error_auth_unavailable">Kimlik doğrulama şu anda tamamlanamadı. Lütfen tekrar deneyin.</string>
+    <string name="create_error_title">Karakter oluşturulamadı</string>
+    <string name="error_insufficient_coins">Yetersiz Coin</string>
+    <string name="no_credits_left">Kalan hak kalmadı</string>
+    <string name="balance_format">Bakiye: %1$d</string>
+    <string name="buy_coins">Coin satın al</string>
+    <string name="coins">COINLER</string>
+    <string name="upgrade_pro">Pro\'ya Yükselt</string>
+    <string name="reward_error_title">Ödüller yüklenemedi</string>
+    <string name="home_error_title">İçerik yüklenemedi</string>
+    <string name="home_empty_characters">Şu anda kullanılabilir karakter yok.</string>
+    <string name="home_create_assistant_title">Seni anlayan\nbirini bul</string>
+    <string name="home_create_assistant_subtitle">Kendi yapay zeka arkadaşını oluştur ve\nanlamlı bir bağ kur.</string>
+    <string name="home_create_assistant_action">Kendi Yapay Zekanı Oluştur</string>
+    <string name="home_top_assistants">En Popüler Asistanlar</string>
+    <string name="home_recommend_for_you">Sana Özel Önerilenler</string>
+    <string name="home_see_all">Tümünü gör</string>
+    <string name="setting_back">Geri</string>
+    <string name="character_detail_error_title">Karakter yüklenemedi</string>
+    <string name="character_detail_start_chat">Benimle sohbet et</string>
+    <string name="chat_error_title">Sohbet yüklenemedi</string>
+    <string name="chat_starter_title">Bir sohbet başlat</string>
+    <string name="chat_starter_subtitle">Ne diyeceğini bilmiyor musun? Bunlardan birini dene.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>Selam! Bana biraz kendinden bahset.</item>
+        <item>Bugünü daha ilginç kılacak ne olabilir?</item>
+        <item>Hadi hızlı bir soru-cevap oyunu oynayalım.</item>
+    </string-array>
+    <string name="chat_input_hint">İstediğini sor...</string>
+    <string name="today">Bugün</string>
+    <string name="yesterday">Dün</string>
+    <string name="chat_send">Gönder</string>
+    <string name="chat_more_title">Daha Fazla</string>
+    <string name="chat_more_custom_background">Özel arka plan</string>
+    <string name="chat_more_delete">Sohbeti sil</string>
+    <string name="chat_more_report">Bildir</string>
+    <string name="chat_role_assistant">Asistan</string>
+    <string name="chat_message_just_now">Az önce</string>
+    <string name="chat_delete_title">Sohbet silinsin mi?</string>
+    <string name="chat_delete_message">Bu sohbeti silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</string>
+    <string name="chat_delete_confirm">Sil</string>
+    <string name="chat_delete_success">Sohbet başarıyla silindi</string>
+    <string name="chat_report_title">Bildir</string>
+    <string name="chat_report_message">Bu kullanıcıyı bildirmek istediğinizden emin misiniz? Bildiriminizi inceleyip gerekli aksiyonu alacağız.</string>
+    <string name="chat_report_confirm">Bildir</string>
+    <string name="chat_report_success">Bildiriminiz için teşekkürler.</string>
+    <string name="chat_report_hint">Sorunu açıklayın (isteğe bağlı)...</string>
+    <string name="chat_empty_title">Henüz sohbet yok</string>
+    <string name="chat_empty_subtitle">Sohbetlerinizin burada görünmesi için yeni bir konuşma başlatın.</string>
+    <string name="chat_empty_start_chat">Sohbet başlat</string>
+    <string name="actions">Eylemler</string>
+    <string name="store_title">Mağaza</string>
+    <string name="store_top_up_coins">COIN YÜKLE</string>
+    <string name="store_unlock_storylines">Hikayelerin ve eylemlerin kilidini aç</string>
+    <string name="store_membership_plans">ÜYELİK PLANLARI</string>
+    <string name="store_unlimited_vip">Ayrıcalıklı VIP deneyimi</string>
+    <string name="store_restore_purchases">Satın alımları geri yükle</string>
+    <string name="store_terms_policies">Şartlar &amp; Politikalar</string>
+    <string name="store_transactions_info">İşlemler Google Play hesabınız üzerinden gerçekleştirilecektir.\nAbonelikler, geçerli dönemin bitiminden en az 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir.</string>
+    <string name="store_terms_privacy">Hizmet Şartları   •   Gizlilik Politikası</string>
+    <string name="store_product_not_found">Ürün bulunamadı</string>
+    <string name="store_purchase_cancelled">Satın alma iptal edildi</string>
+    <string name="store_restoring_purchases">Satın alımlar geri yükleniyor...</string>
+    <string name="store_restore_success">Satın alımlar başarıyla geri yüklendi!</string>
+    <string name="store_coins_credited">Coinler başarıyla yüklendi! Bakiye: %1$d</string>
+    <string name="store_purchase_processing">Satın alma başarılı. Coinler işleniyor, lütfen birazdan yenileyin.</string>
+    <string name="store_vip_activated">VIP Üyelik başarıyla etkinleştirildi!</string>
+    <string name="store_vip_processing">Satın alma başarılı. VIP durumu işleniyor, lütfen birazdan yenileyin.</string>
+    <string name="store_duration_month">aylık</string>
+    <string name="store_duration_year">yıllık</string>
+    <string name="store_vip_desc_month">Günlük coin ödülleriyle aylık VIP erişimi</string>
+    <string name="store_vip_desc_year">Günlük ödüller ve premium özelliklerle yıllık VIP erişimi</string>
+    <string name="store_vip_benefit_1">Her günlük giriş için 500 Coin bonusu</string>
+    <string name="store_vip_benefit_2">Her günlük giriş için 750 Coin bonusu</string>
+    <string name="store_vip_benefit_3">Tüm VIP üyelik avantajlarının keyfini çıkarın</string>
+    <string name="store_vip_footer_month">Her ay otomatik yenilenir. İstediğiniz zaman iptal edin.</string>
+    <string name="store_vip_footer_year">Her yıl otomatik yenilenir. Google Play\'den istediğiniz zaman iptal edebilirsiniz.</string>
+    <string name="store_empty_title">Kullanılabilir paket yok</string>
+    <string name="store_empty_subtitle">Ürünler şu anda mevcut değil. Lütfen daha sonra tekrar kontrol edin.</string>
+    <string name="store_empty_retry">Tekrar Dene</string>
+    <string name="store_empty_vip_plans">Üyelik planları şu anda mevcut değil.</string>
+    <string name="store_empty_coin_packages">Coin paketleri şu anda mevcut değil.</string>
+    <string name="sub_empty_plans">Üyelik planları şu anda mevcut değil. Lütfen daha sonra tekrar kontrol edin.</string>
+    <string name="coins_empty_packages">Coin paketleri şu anda mevcut değil. Lütfen daha sonra tekrar kontrol edin.</string>
+    <string name="character_detail_hot">POPÜLER</string>
+    <string name="character_badge_new">YENİ</string>
+    <string name="histories_title">Geçmiş</string>
+    <string name="character_detail_intimacy_title">Bağlılık İlerlemesi</string>
+    <string name="character_detail_level_format">Seviye %1$d</string>
+    <string name="character_detail_intimacy_hint">Her mesaj en fazla +%1$d bağlılık puanı kazandırır</string>
+    <string name="character_detail_exclusive_photo_gallery">Özel Fotoğraf Galerisi</string>
+    <string name="character_detail_about">%1$s Hakkında</string>
+    <string name="character_detail_chats">Sohbetler</string>
+    <string name="character_detail_rating">Puan</string>
+    <string name="character_detail_most_popular">En Popüler</string>
+    <string name="character_detail_rank_format">İlk %1$d</string>
+    <string name="character_detail_personality_traits">Kişilik &amp; Özellikler</string>
+    <string name="character_detail_purchase_success">Arka plan kilidi başarıyla açıldı!</string>
+    <string name="continue_">Devam Et</string>
+    <string name="sub_price_month_format">%1$s/ ay</string>
+    <string name="sub_price_year_format">%1$s/ yıl</string>
+    <string name="sub_feature_outfits">Ayrıcalıklı hikayelere &amp; özel anlara erişin</string>
+    <string name="sub_plan_monthly">Aylık</string>
+    <string name="sub_plan_yearly">Yıllık</string>
+    <string name="sub_subscribe_now">Şimdi Abone Ol</string>
+    <string name="sub_current_plan">MEVCUT PLAN</string>
+    <string name="sub_fine_print_1">Ödeme, satın alma onayından sonra Google Play hesabınızdan tahsil edilecektir.</string>
+    <string name="sub_fine_print_2">Geçerli abonelik döneminin bitiminden en az 24 saat önce iptal edilmediği sürece aboneliğiniz otomatik olarak yenilenecektir.</string>
+    <string name="sub_fine_print_3">Abone olmayan kullanıcılar hizmeti kullanmaya devam edebilir, ancak bazı ücretli özellikler kısıtlanabilir.</string>
+    <string name="sub_fine_print_4">Aboneliğinizi istediğiniz zaman Google Play\'deki Abonelikler bölümünden yönetebilir veya iptal edebilirsiniz.</string>
+    <string name="sub_restore_purchase">Satın alımları geri yükle</string>
+    <string name="sub_paywall_title">AURA+ ile Daha Fazlasının Kilidini Aç</string>
+    <string name="sub_paywall_subtitle">Daha derin sohbetler. Üretmek için daha fazla yol.</string>
+    <string name="sub_feature_unlimited_messages">Premium Hikayeler</string>
+    <string name="sub_feature_exclusive_companions">Daha Derin Bağlar</string>
+    <string name="sub_feature_create_characters">Günlük Coinler</string>
+    <string name="sub_feature_chat_backgrounds">Reklamsız</string>
+    <string name="sub_cancel_anytime">İstediğin zaman iptal et</string>
+    <string name="sub_best_value_arrow">En avantajlı &gt;</string>
+    <string name="sub_terms">Şartlar</string>
+    <string name="sub_privacy">Gizlilik</string>
+    <string name="sub_save_percent_format">%%%1$d TASARRUF</string>
+    <string name="sub_save_badge_format">%1$s TASARRUF</string>
+    <string name="sub_billed_annually_format">%1$s/ay, yıllık faturalandırılır</string>
+    <string name="sub_billed_annually_fallback">%1$s, yıllık faturalandırılır</string>
+    <string name="sub_billed_monthly_format">%1$s/ay, aylık faturalandırılır</string>
+    <string name="sub_billed_monthly_fallback">%1$s, aylık faturalandırılır</string>
+    <string name="store_coins_format">%1$d Coin</string>
+    <string name="feedback_subject">Geri Bildirim</string>
+    <string name="send_feedback_chooser">Geri Bildirim Gönder:</string>
+    <string name="send_email_via">E-postayı şununla gönder:</string>
+    <string name="no_email_client_found">E-posta uygulaması bulunamadı</string>
+    <string name="select_a_language">Bir dil seçin</string>
+    <string name="reward_your_progress">İlerlemeniz</string>
+    <string name="reward_check_in_today">Bugün Giriş Yap</string>
+    <string name="reward_checked_in_today">Bugün Giriş Yapıldı</string>
+    <string name="reward_earn_rewards">Ödüller Kazan</string>
+    <string name="reward_daily_ads">Günlük Ödüllü Reklamlar</string>
+    <string name="reward_daily_ads_desc">Reklam başına +%1$d Coin</string>
+    <string name="reward_watch_ads_format">Reklam İzle (%1$d/10)</string>
+    <string name="reward_ads_unavailable">Şu anda reklam bulunmamaktadır. Lütfen birkaç dakika sonra tekrar deneyin.</string>
+    <string name="reward_vip_unlocked">VIP Üye</string>
+    <string name="reward_vip_unlocked_desc">Reklamsız deneyim aktif</string>
+    <string name="reward_claimed_title">Ödül Alındı!</string>
+    <string name="reward_claimed_desc">Günlük giriş ödülünüz envanterinize eklendi.</string>
+    <string name="reward_claimed_coin_format">+%1$d Coin</string>
+    <string name="reward_processing">Ödül işleniyor. Bakiyeniz kısa süre içinde güncellenecektir.</string>
+    <string name="reward_day_format">%1$d. Gün</string>
+    <string name="mission_tab_mission">Görev</string>
+    <string name="mission_tab_history">Geçmiş</string>
+    <string name="mission_no_active">Şu anda aktif görev bulunmuyor.</string>
+    <string name="mission_coins_earned_format">+%1$d Coin</string>
+    <string name="mission_type_daily_login">Günlük Giriş</string>
+    <string name="mission_type_watch_ad">Reklam İzle</string>
+    <string name="mission_type_play_game">Oyun Oyna</string>
+    <string name="mission_type_online">5 Dk Çevrimiçi Ol</string>
+    <string name="mission_type_share">Arkadaşla Paylaş</string>
+    <string name="mission_type_reward_claim">Ödülü Al</string>
+    <string name="mission_type_iap_purchase">Coin Eklendi</string>
+    <string name="mission_type_promo_code">Promosyon Kodu</string>
+    <string name="mission_history_footer_stardust">30 günden eski kayıtlar yıldız tozuna dönüşür</string>
+    <string name="next_step">Sonraki Adım</string>
+    <string name="create_screen_title">Karakter Oluştur</string>
+    <string name="create_generate_cost">%1$d ile Oluştur</string>
+    <string name="create_step_label_format">ADIM %1$d / %2$d: %3$s</string>
+    <string name="create_step_general_setup">GENEL KURULUM</string>
+    <string name="create_step_appearance_details">GÖRÜNÜM DETAYLARI</string>
+    <string name="create_step_hair_customization">SAÇ ÖZELLEŞTİRME</string>
+    <string name="create_step_personality_identity">KİŞİLİK &amp; KİMLİK</string>
+    <string name="create_companion_gender">Cinsiyet</string>
+    <string name="create_gender_girls">Kadın</string>
+    <string name="create_gender_guys">Erkek</string>
+    <string name="create_gender_trans">İkili Olmayan</string>
+    <string name="create_inspire_me">Bana ilham ver</string>
+    <string name="create_visual_style">Görsel Tarz</string>
+    <string name="create_style_realistic">Gerçekçi</string>
+    <string name="create_style_anime">Anime</string>
+    <string name="create_describe_to_create">Oluşturmak için tarif et</string>
+    <string name="create_prompt_hint">Örn: “Gece yarısı yıldızları izlemeyi, şiir okumayı ve sıcak çay demlemeyi seven tatlı, sevecen bir arkadaş...”</string>
+    <string name="create_companion_ethnicity">Köken</string>
+    <string name="create_ethnicity_east_asian">Doğu Asyalı</string>
+    <string name="create_ethnicity_south_asian">Güney Asyalı</string>
+    <string name="create_ethnicity_black">Siyahi</string>
+    <string name="create_ethnicity_white">Beyaz</string>
+    <string name="create_ethnicity_asian">Asyalı</string>
+    <string name="create_ethnicity_latina">Latin</string>
+    <string name="create_age">Yaş</string>
+    <string name="create_skin_tone">Ten Rengi</string>
+    <string name="create_hair_color">Saç Rengi</string>
+    <string name="create_hair_blonde">Sarı</string>
+    <string name="create_hair_black">Siyah</string>
+    <string name="create_hair_copper">Bakır</string>
+    <string name="create_hair_blue">Mavi</string>
+    <string name="create_hair_purple">Mor</string>
+    <string name="create_hair_red">Kızıl</string>
+    <string name="create_companion_name">Arkadaşının Adı</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Kişilik &amp; Sosyal Geçmiş</string>
+    <string name="create_personality">Kişilik</string>
+    <string name="create_occupation">Meslek</string>
+    <string name="create_hobbies">Hobiler</string>
+    <string name="create_relationships">İlişki Türü</string>
+    <string name="option_none">Yok</string>
+    <string name="options_done">Tamam</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Dost Canlısı</item>
+        <item>Şefkatli</item>
+        <item>Utangaç</item>
+        <item>Dışa Dönük</item>
+        <item>Gizemli</item>
+        <item>Zeki</item>
+        <item>Esprili</item>
+        <item>Sevecen</item>
+        <item>Maceracı</item>
+        <item>Özgüvenli</item>
+        <item>Enerjik</item>
+        <item>Sakin</item>
+        <item>Yaratıcı</item>
+        <item>Hırslı</item>
+        <item>Empatik</item>
+        <item>Sadık</item>
+        <item>İyimser</item>
+        <item>Kötümser</item>
+        <item>Alaycı</item>
+        <item>İnatçı</item>
+        <item>Çekici</item>
+        <item>Oyuncu</item>
+        <item>Baskın</item>
+        <item>Uysal</item>
+        <item>Maneviyatçı</item>
+        <item>Pratik</item>
+        <item>Hayalperest</item>
+        <item>Asi</item>
+        <item>Geleneksel</item>
+        <item>Koruyucu</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Tasarımcı</item>
+        <item>Danışman</item>
+        <item>Doktor</item>
+        <item>Hemşire</item>
+        <item>Mühendis</item>
+        <item>Sanatçı</item>
+        <item>Müzisyen</item>
+        <item>Şef</item>
+        <item>Polis Memuru</item>
+        <item>Girişimci</item>
+        <item>Milyarder CEO</item>
+        <item>Model</item>
+        <item>Oyuncu</item>
+        <item>Yazar</item>
+        <item>Sporcu</item>
+        <item>Bilim İnsanı</item>
+        <item>Programcı</item>
+        <item>Avukat</item>
+        <item>Mimar</item>
+        <item>Modacı</item>
+        <item>Fotoğrafçı</item>
+        <item>Gazeteci</item>
+        <item>Pilot</item>
+        <item>Kabin Memuru</item>
+        <item>Barista</item>
+        <item>Kütüphaneci</item>
+        <item>Serbest Çalışan</item>
+        <item>İçerik Üreticisi</item>
+        <item>İşsiz</item>
+        <item>Dedektif</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Kitap Okuma</item>
+        <item>Oyun Oynama</item>
+        <item>Seyahat</item>
+        <item>Yemek Yapma</item>
+        <item>Spor</item>
+        <item>Müzik</item>
+        <item>Fotoğrafçılık</item>
+        <item>Resim Yapma</item>
+        <item>Bahçecilik</item>
+        <item>Sinema</item>
+        <item>Anime</item>
+        <item>Cosplay</item>
+        <item>Dans</item>
+        <item>Şarkı Söyleme</item>
+        <item>Yazarlık</item>
+        <item>Alışveriş</item>
+        <item>Fitness</item>
+        <item>Yoga</item>
+        <item>Meditasyon</item>
+        <item>Doğa Yürüyüşü</item>
+        <item>Kamp</item>
+        <item>Balık Tutma</item>
+        <item>El Sanatları</item>
+        <item>Moda</item>
+        <item>Teknoloji</item>
+        <item>Astroloji</item>
+        <item>Bitki Bakımı</item>
+        <item>Gönüllülük</item>
+        <item>Arabalar</item>
+        <item>Tarih</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Arkadaş</item>
+        <item>En İyi Arkadaş</item>
+        <item>Kız Arkadaş</item>
+        <item>Erkek Arkadaş</item>
+        <item>Eş (Kadın)</item>
+        <item>Eş (Erkek)</item>
+        <item>Kız Kardeş</item>
+        <item>Erkek Kardeş</item>
+        <item>Yol Arkadaşı</item>
+        <item>Macera Arkadaşı</item>
+        <item>Mentor</item>
+        <item>İş Arkadaşı</item>
+        <item>Patron</item>
+        <item>Çalışan</item>
+        <item>Sınıf Arkadaşı</item>
+        <item>Rehber</item>
+        <item>Öğrenci</item>
+        <item>Yabancı</item>
+        <item>Ev Arkadaşı</item>
+        <item>Komşu</item>
+        <item>Eski Sevgili</item>
+        <item>Çocukluk Arkadaşı</item>
+        <item>Gizli Hayran</item>
+        <item>Rakip</item>
+        <item>Hizmetçi</item>
+        <item>Uşak</item>
+        <item>Sunucu</item>
+        <item>Yoldaş</item>
+        <item>Ruh İkizi</item>
+        <item>Tanıdık</item>
+    </string-array>
+    <string name="store_best_value">EN İYİ FİYAT</string>
+    <string name="setting_privacy_not_configured">Gizlilik Politikası bağlantısı yapılandırılmadı</string>
+    <string name="setting_no_app_open_link">Bu bağlantıyı açacak uygun uygulama bulunamadı</string>
+    <string name="setting_unable_open_privacy">Gizlilik Politikası açılamıyor</string>
+    <string name="chat_status_online">Çevrimiçi</string>
+    <string name="create_enter_description">Açıklama girin</string>
+    <string name="create_enter_name">İsim girin</string>
+    <string name="create_select_personality_hobby">Kişilik ve hobileri seçin</string>
+    <string name="image_generation_failed">Görsel oluşturma başarısız oldu</string>
+    <string name="enjoying_hd_camera">Yapay Zeka Kız Arkadaşı beğendiniz mi?</string>
+    <string name="rate_us_on_the_google_play">Google Play\'de bizi değerlendirin!</string>
+    <string name="rate_now">Şimdi Değerlendir</string>
+    <string name="not_now">Şimdi Değil</string>
+    <string name="chat_relationship_stranger">Yabancı</string>
+    <string name="chat_subtitle_format">%1$s • Seviye %2$d</string>
+    <string name="chat_title_format">Sohbet #%1$s</string>
+    <string name="first_day">İlk Gün</string>
+    <string name="feedback_reason_hint">Neden (örn: çökme, yavaşlık, kötü arayüz...)</string>
+    <string name="feedback_description_hint">Detaylar veya öneriler...</string>
+    <string name="send_feedback">Geri Bildirim Gönder</string>
+</resources>

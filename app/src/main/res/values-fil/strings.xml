@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Magsimula</string>
+    <string name="next">Susunod</string>
+    <string name="txt_thanks_you_for_rating">Salamat sa iyong rating!</string>
+    <string name="onboarding_title_1">Kilalanin ang tunay na nakauunawa sa iyo</string>
+    <string name="onboarding_des_1">Kilalanin ang mga AI companion na may natatanging personalidad at kwento, handa anumang oras.</string>
+    <string name="onboarding_title_2">Mga pag-uusap na parang personal</string>
+    <string name="onboarding_des_2">Ibahagi ang iyong mga iniisip, tumuklas ng mga bagong kwento, o mag-enjoy sa usapang para lang sa iyo.</string>
+    <string name="onboarding_title_3">Likhain ang iyong perpektong kasama</string>
+    <string name="onboarding_des_3">Piliin ang kanilang itsura, personalidad, at interes upang mabuo ang iyong perpektong AI companion.</string>
+    <string name="onboarding_title_4">Dito nagsisimula ang iyong kwento</string>
+    <string name="onboarding_des_4">Kumonekta, makipag-chat, at tumuklas ng bago araw-araw.</string>
+    <string name="close">Isara</string>
+    <string name="try_again">Subukan Muli</string>
+    <string name="txt_cancel">Kanselahin</string>
+    <string name="loading_label">Naglo-load</string>
+    <string name="no_internet_title">Walang Koneksyon sa Internet</string>
+    <string name="no_internet_message">Pakisuri ang iyong mga setting ng network upang magpatuloy sa paggamit ng app.</string>
+    <string name="open_settings">Buksan ang Mga Setting</string>
+    <string name="force_update_message">May bagong bersyon na magagamit. Mangyaring mag-update upang magpatuloy.</string>
+    <string name="update_now">I-update Ngayon</string>
+    <string name="setting">Setting</string>
+    <string name="main_tab_discover">Tuklasin</string>
+    <string name="main_tab_reward">Gantimpala</string>
+    <string name="main_tab_add">Gumawa</string>
+    <string name="main_tab_chats">Mga Chat</string>
+    <string name="main_tab_mission">Misyon</string>
+    <string name="rate">I-rate</string>
+    <string name="share_with_friend">Ibahagi sa mga kaibigan</string>
+    <string name="privacy_policy">Patakaran sa Privacy</string>
+    <string name="let_me_recommend">Gusto kong irekomenda ang app na ito</string>
+    <string name="share_to">Ibahagi sa</string>
+    <string name="we_re_better_than_ever">Patuloy na nagiging mas mahusay ang app</string>
+    <string name="error_generic">May nagkaproblema. Pakisubukan muli.</string>
+    <string name="error_network_unavailable">Pakisuri ang iyong koneksyon sa internet at subukang muli.</string>
+    <string name="error_auth_session_expired">Nag-expire na ang iyong session. Pakisubukan muli.</string>
+    <string name="error_auth_unavailable">Hindi makumpleto ang pagpapatotoo ngayon. Pakisubukan muli.</string>
+    <string name="create_error_title">Hindi malikha ang karakter</string>
+    <string name="error_insufficient_coins">Kulang ang Coins</string>
+    <string name="no_credits_left">Wala nang natitirang credits</string>
+    <string name="balance_format">Balanse: %1$d</string>
+    <string name="buy_coins">Bumili ng coins</string>
+    <string name="coins">MGA COIN</string>
+    <string name="upgrade_pro">Mag-upgrade sa Pro</string>
+    <string name="reward_error_title">Hindi ma-load ang mga gantimpala</string>
+    <string name="home_error_title">Hindi ma-load ang nilalaman</string>
+    <string name="home_empty_characters">Walang magagamit na mga karakter sa ngayon.</string>
+    <string name="home_create_assistant_title">Humanap ng taong\nnakauunawa sa iyo</string>
+    <string name="home_create_assistant_subtitle">Likhain ang iyong sariling AI companion at\nbumuo ng makabuluhang ugnayan.</string>
+    <string name="home_create_assistant_action">Likhain ang Iyong AI</string>
+    <string name="home_top_assistants">Mga Nangungunang Assistant</string>
+    <string name="home_recommend_for_you">Inirerekomenda para sa iyo</string>
+    <string name="home_see_all">Tingnan lahat</string>
+    <string name="setting_back">Bumalik</string>
+    <string name="character_detail_error_title">Hindi ma-load ang karakter</string>
+    <string name="character_detail_start_chat">Makipag-usap sa akin</string>
+    <string name="chat_error_title">Hindi ma-load ang chat</string>
+    <string name="chat_starter_title">Magsimula ng pag-uusap</string>
+    <string name="chat_starter_subtitle">Hindi sigurado kung ano ang sasabihin? Subukan ang isa sa mga ito.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>Kumusta! Kwentuhan mo ako tungkol sa sarili mo.</item>
+        <item>Ano ang magpapasaya sa araw na ito?</item>
+        <item>Maglaro tayo ng mabilisang tanong at sagot.</item>
+    </string-array>
+    <string name="chat_input_hint">Magtanong ng kahit ano...</string>
+    <string name="today">Ngayon</string>
+    <string name="yesterday">Kahapon</string>
+    <string name="chat_send">Ipadala</string>
+    <string name="chat_more_title">Higit Pa</string>
+    <string name="chat_more_custom_background">Custom na background</string>
+    <string name="chat_more_delete">Burahin ang chat</string>
+    <string name="chat_more_report">I-report</string>
+    <string name="chat_role_assistant">Assistant</string>
+    <string name="chat_message_just_now">Kani-kanina lang</string>
+    <string name="chat_delete_title">Burahin ang chat?</string>
+    <string name="chat_delete_message">Sigurado ka bang gusto mong burahin ang chat na ito? Hindi na ito mababawi.</string>
+    <string name="chat_delete_confirm">Burahin</string>
+    <string name="chat_delete_success">Matagumpay na nabura ang chat</string>
+    <string name="chat_report_title">I-report</string>
+    <string name="chat_report_message">Sigurado ka bang gusto mong i-report ang user na ito? Susuriin namin ang iyong ulat at gagawa kami ng kaukulang aksyon.</string>
+    <string name="chat_report_confirm">I-report</string>
+    <string name="chat_report_success">Salamat sa iyong ulat.</string>
+    <string name="chat_report_hint">Ipaliwanag ang isyu (opsyonal)...</string>
+    <string name="chat_empty_title">Wala pang chat</string>
+    <string name="chat_empty_subtitle">Magsimula ng bagong pag-uusap upang makita ang iyong mga chat dito.</string>
+    <string name="chat_empty_start_chat">Magsimula ng chat</string>
+    <string name="actions">Mga Aksyon</string>
+    <string name="store_title">Tindahan</string>
+    <string name="store_top_up_coins">MAG-TOP UP NG COINS</string>
+    <string name="store_unlock_storylines">I-unlock ang mga storyline at aksyon</string>
+    <string name="store_membership_plans">MGA PLANO NG MEMBERSHIP</string>
+    <string name="store_unlimited_vip">Mataas na kalidad na karanasan sa VIP</string>
+    <string name="store_restore_purchases">Ibalik ang mga binili</string>
+    <string name="store_terms_policies">Mga Tuntunin at Patakaran</string>
+    <string name="store_transactions_info">Ipoproseso ang mga transaksyon sa pamamagitan ng iyong Google Play account.\nAwtomatikong nagre-renew ang mga subscription maliban kung kinansela nang hindi bababa sa 24 na oras bago matapos ang kasalukuyang panahon.</string>
+    <string name="store_terms_privacy">Mga Tuntunin ng Serbisyo   •   Patakaran sa Privacy</string>
+    <string name="store_product_not_found">Hindi nahanap ang produkto</string>
+    <string name="store_purchase_cancelled">Kinansela ang pagbili</string>
+    <string name="store_restoring_purchases">Ibinabalik ang mga binili...</string>
+    <string name="store_restore_success">Matagumpay na naibalik ang mga binili!</string>
+    <string name="store_coins_credited">Matagumpay na na-credit ang mga coin! Balanse: %1$d</string>
+    <string name="store_purchase_processing">Matagumpay ang pagbili. Pinoproseso pa ang mga coin, mangyaring i-refresh pagkaraan ng ilang sandali.</string>
+    <string name="store_vip_activated">Matagumpay na na-activate ang VIP Membership!</string>
+    <string name="store_vip_processing">Matagumpay ang pagbili. Pinoproseso pa ang VIP status, mangyaring i-refresh pagkaraan ng ilang sandali.</string>
+    <string name="store_duration_month">bawat buwan</string>
+    <string name="store_duration_year">bawat taon</string>
+    <string name="store_vip_desc_month">Buwanang VIP access na may pang-araw-araw na mga gantimpalang coin</string>
+    <string name="store_vip_desc_year">Taunang VIP access na may pang-araw-araw na mga gantimpala at premium na feature</string>
+    <string name="store_vip_benefit_1">Bonus na 500 Coins para sa bawat pang-araw-araw na pag-login</string>
+    <string name="store_vip_benefit_2">Bonus na 750 Coins para sa bawat pang-araw-araw na pag-login</string>
+    <string name="store_vip_benefit_3">Tangkilikin ang lahat ng iyong mga benepisyo sa VIP membership</string>
+    <string name="store_vip_footer_month">Awtomatikong nagre-renew buwan-buwan. Kanselahin anumang oras.</string>
+    <string name="store_vip_footer_year">Awtomatikong nagre-renew taon-taon. Kanselahin anumang oras sa Google Play.</string>
+    <string name="store_empty_title">Walang magagamit na mga package</string>
+    <string name="store_empty_subtitle">Kasalukuyang hindi magagamit ang mga produkto. Pakitingnan muli mamaya.</string>
+    <string name="store_empty_retry">Subukan Muli</string>
+    <string name="store_empty_vip_plans">Kasalukuyang hindi magagamit ang mga plano ng membership.</string>
+    <string name="store_empty_coin_packages">Kasalukuyang hindi magagamit ang mga coin package.</string>
+    <string name="sub_empty_plans">Kasalukuyang hindi magagamit ang mga plano ng membership. Pakitingnan muli mamaya.</string>
+    <string name="coins_empty_packages">Kasalukuyang hindi magagamit ang mga coin package. Pakitingnan muli mamaya.</string>
+    <string name="character_detail_hot">SIKAT</string>
+    <string name="character_badge_new">BAGO</string>
+    <string name="histories_title">Kasaysayan</string>
+    <string name="character_detail_intimacy_title">Pagsulong ng Ugnayan</string>
+    <string name="character_detail_level_format">Antas %1$d</string>
+    <string name="character_detail_intimacy_hint">Ang bawat mensahe ay nagdaragdag ng hanggang +%1$d na koneksyon points</string>
+    <string name="character_detail_exclusive_photo_gallery">Eksklusibong Photo Gallery</string>
+    <string name="character_detail_about">Tungkol kay %1$s</string>
+    <string name="character_detail_chats">Mga Chat</string>
+    <string name="character_detail_rating">Rating</string>
+    <string name="character_detail_most_popular">Pinakasikat</string>
+    <string name="character_detail_rank_format">Nangungunang %1$d</string>
+    <string name="character_detail_personality_traits">Personalidad at mga Katangian</string>
+    <string name="character_detail_purchase_success">Matagumpay na na-unlock ang background!</string>
+    <string name="continue_">Magpatuloy</string>
+    <string name="sub_price_month_format">%1$s/ buwan</string>
+    <string name="sub_price_year_format">%1$s/ taon</string>
+    <string name="sub_feature_outfits">I-access ang mga premium na kwento at eksklusibong sandali</string>
+    <string name="sub_plan_monthly">Buwanan</string>
+    <string name="sub_plan_yearly">Taunan</string>
+    <string name="sub_subscribe_now">Mag-subscribe Na</string>
+    <string name="sub_current_plan">KASALUKUYANG PLANO</string>
+    <string name="sub_fine_print_1">Sisingilin ang pagbabayad sa iyong Google Play account pagkatapos ng kumpirmasyon ng pagbili.</string>
+    <string name="sub_fine_print_2">Awtomatikong magre-renew ang iyong subscription ayon sa iyong plano maliban kung kinansela nang hindi bababa sa 24 na oras bago matapos ang kasalukuyang panahon.</string>
+    <string name="sub_fine_print_3">Maaari pa ring gamitin ng mga hindi subscriber ang serbisyo, ngunit maaaring limitado ang ilang bayad na feature.</string>
+    <string name="sub_fine_print_4">Maaari mong pamahalaan o kanselahin ang iyong subscription anumang oras sa seksyong Mga Subscription ng Google Play.</string>
+    <string name="sub_restore_purchase">Ibalik ang mga binili</string>
+    <string name="sub_paywall_title">I-unlock ang higit pa gamit ang AURA+</string>
+    <string name="sub_paywall_subtitle">Mas malalim na pag-uusap. Mas maraming paraan upang lumikha.</string>
+    <string name="sub_feature_unlimited_messages">Mga Premium na Kwento</string>
+    <string name="sub_feature_exclusive_companions">Mas Malalim na Ugnayan</string>
+    <string name="sub_feature_create_characters">Araw-araw na Coins</string>
+    <string name="sub_feature_chat_backgrounds">Walang Ads</string>
+    <string name="sub_cancel_anytime">Kanselahin anumang oras</string>
+    <string name="sub_best_value_arrow">Pinakamahusay na halaga &gt;</string>
+    <string name="sub_terms">Mga Tuntunin</string>
+    <string name="sub_privacy">Privacy</string>
+    <string name="sub_save_percent_format">MAKATIPID NG %1$d%%</string>
+    <string name="sub_save_badge_format">MAKATIPID NG %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/buwan, sinisingil taon-taon</string>
+    <string name="sub_billed_annually_fallback">%1$s, sinisingil taon-taon</string>
+    <string name="sub_billed_monthly_format">%1$s/buwan, sinisingil buwan-buwan</string>
+    <string name="sub_billed_monthly_fallback">%1$s, sinisingil buwan-buwan</string>
+    <string name="store_coins_format">%1$d Coins</string>
+    <string name="feedback_subject">Feedback</string>
+    <string name="send_feedback_chooser">Magpadala ng Feedback:</string>
+    <string name="send_email_via">Magpadala ng Email gamit ang:</string>
+    <string name="no_email_client_found">Walang nahanap na email app</string>
+    <string name="select_a_language">Pumili ng wika</string>
+    <string name="reward_your_progress">Iyong Pag-unlad</string>
+    <string name="reward_check_in_today">Mag-check In Ngayon</string>
+    <string name="reward_checked_in_today">Naka-check In Na Ngayon</string>
+    <string name="reward_earn_rewards">Makakuha ng Mga Gantimpala</string>
+    <string name="reward_daily_ads">Pang-araw-araw na Gantimpalang Ads</string>
+    <string name="reward_daily_ads_desc">+%1$d Coins bawat ad</string>
+    <string name="reward_watch_ads_format">Manood ng Ads (%1$d/10)</string>
+    <string name="reward_ads_unavailable">Walang magagamit na mga ad sa kasalukuyan. Pakisubukan muli pagkalipas ng ilang minuto.</string>
+    <string name="reward_vip_unlocked">Miyembro ng VIP</string>
+    <string name="reward_vip_unlocked_desc">Aktibo ang karanasang walang ad</string>
+    <string name="reward_claimed_title">Nakuha ang Gantimpala!</string>
+    <string name="reward_claimed_desc">Ang iyong pang-araw-araw na check-in na gantimpala ay naidagdag na sa iyong imbentaryo.</string>
+    <string name="reward_claimed_coin_format">+%1$d Coins</string>
+    <string name="reward_processing">Pinoproseso ang gantimpala. Mag-a-update ang iyong balanse sa ilang sandali.</string>
+    <string name="reward_day_format">Araw %1$d</string>
+    <string name="mission_tab_mission">Misyon</string>
+    <string name="mission_tab_history">Kasaysayan</string>
+    <string name="mission_no_active">Walang aktibong mga misyon ngayon.</string>
+    <string name="mission_coins_earned_format">+%1$d Coins</string>
+    <string name="mission_type_daily_login">Pang-araw-araw na Login</string>
+    <string name="mission_type_watch_ad">Manood ng Ad</string>
+    <string name="mission_type_play_game">Maglaro ng Laro</string>
+    <string name="mission_type_online">Online nang 5 Minuto</string>
+    <string name="mission_type_share">Ibahagi sa Kaibigan</string>
+    <string name="mission_type_reward_claim">Pagkuha ng Gantimpala</string>
+    <string name="mission_type_iap_purchase">Naidagdag ang Coins</string>
+    <string name="mission_type_promo_code">Promo Code</string>
+    <string name="mission_history_footer_stardust">Ang mga gawaing lampas 30 araw ay nagiging alikabok ng bituin</string>
+    <string name="next_step">Susunod na Hakbang</string>
+    <string name="create_screen_title">Likhain ang Karakter</string>
+    <string name="create_generate_cost">Likhain sa halagang %1$d</string>
+    <string name="create_step_label_format">HAKBANG %1$d NG %2$d: %3$s</string>
+    <string name="create_step_general_setup">PANGKALAHATANG SETUP</string>
+    <string name="create_step_appearance_details">MGA DETALYE NG ITSURA</string>
+    <string name="create_step_hair_customization">PAG-CUSTOMIZE NG BUHOK</string>
+    <string name="create_step_personality_identity">PERSONALIDAD AT PAGKILANLAN</string>
+    <string name="create_companion_gender">Pagkakakilanlan</string>
+    <string name="create_gender_girls">Babae</string>
+    <string name="create_gender_guys">Lalaki</string>
+    <string name="create_gender_trans">Hindi binary</string>
+    <string name="create_inspire_me">Bigyan mo ako ng inspirasyon</string>
+    <string name="create_visual_style">Estilo ng Visual</string>
+    <string name="create_style_realistic">Makatotohanan</string>
+    <string name="create_style_anime">Anime</string>
+    <string name="create_describe_to_create">Ilarawan upang malikha</string>
+    <string name="create_prompt_hint">Hal.: “Isang matamis at maalalahaning kasama na mahilig magmasid sa mga bituin sa hatinggabi, tula, at pagtimpla ng mainit na tsaa...”</string>
+    <string name="create_companion_ethnicity">Etnisidad ng Kasama</string>
+    <string name="create_ethnicity_east_asian">Silangang Asyano</string>
+    <string name="create_ethnicity_south_asian">Timog Asyano</string>
+    <string name="create_ethnicity_black">Maitim</string>
+    <string name="create_ethnicity_white">Puti</string>
+    <string name="create_ethnicity_asian">Asyano</string>
+    <string name="create_ethnicity_latina">Latino</string>
+    <string name="create_age">Edad</string>
+    <string name="create_skin_tone">Kulay ng Balat</string>
+    <string name="create_hair_color">Kulay ng Buhok</string>
+    <string name="create_hair_blonde">Blonde</string>
+    <string name="create_hair_black">Itim</string>
+    <string name="create_hair_copper">Tanso</string>
+    <string name="create_hair_blue">Asul</string>
+    <string name="create_hair_purple">Lila</string>
+    <string name="create_hair_red">Pula</string>
+    <string name="create_companion_name">Pangalan ng Kasama</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Personalidad at Pinagmulang Panlipunan</string>
+    <string name="create_personality">Personalidad</string>
+    <string name="create_occupation">Trabaho</string>
+    <string name="create_hobbies">Mga Libangan</string>
+    <string name="create_relationships">Ugnayan</string>
+    <string name="option_none">Wala</string>
+    <string name="options_done">Tapos na</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Palakaibigan</item>
+        <item>Maalalahanin</item>
+        <item>Mahiyain</item>
+        <item>Mabait makisama</item>
+        <item>Mahiwaga</item>
+        <item>Matalino</item>
+        <item>Masiyahin</item>
+        <item>Malambing</item>
+        <item>Mahilig sa pakikipagsapalaran</item>
+        <item>May tiwala sa sarili</item>
+        <item>Puno ng enerhiya</item>
+        <item>Mapanatag</item>
+        <item>Malikhain</item>
+        <item>May ambisyon</item>
+        <item>May malasakit</item>
+        <item>Tapat</item>
+        <item>Optimistiko</item>
+        <item>Pesimistiko</item>
+        <item>Sarkastiko</item>
+        <item>Matigas ang ulo</item>
+        <item>Kaakit-akit</item>
+        <item>Malaro</item>
+        <item>Nangingibabaw</item>
+        <item>Masunurin</item>
+        <item>Espiritwal</item>
+        <item>Praktikal</item>
+        <item>Mapanaginipin</item>
+        <item>Mapanghimagsik</item>
+        <item>Tradisyunal</item>
+        <item>Mapagprotekta</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Disenyador</item>
+        <item>Konsultant</item>
+        <item>Doktor</item>
+        <item>Nars</item>
+        <item>Inhinyero</item>
+        <item>Artista</item>
+        <item>Musikero</item>
+        <item>Kusinero</item>
+        <item>Pulis</item>
+        <item>Negosyante</item>
+        <item>Bilyonaryong CEO</item>
+        <item>Modelo</item>
+        <item>Aktor</item>
+        <item>Manunulat</item>
+        <item>Atleta</item>
+        <item>Siyentipiko</item>
+        <item>Programmer</item>
+        <item>Abogado</item>
+        <item>Arkitekto</item>
+        <item>Disenyador ng damit</item>
+        <item>Litratista</item>
+        <item>Mamamahayag</item>
+        <item>Piloto</item>
+        <item>Flight Attendant</item>
+        <item>Barista</item>
+        <item>Librarian</item>
+        <item>Freelancer</item>
+        <item>Influencer</item>
+        <item>Walang trabaho</item>
+        <item>Detektib</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Pagbabasa</item>
+        <item>Paglalaro ng video games</item>
+        <item>Paglalakbay</item>
+        <item>Pagluluto</item>
+        <item>Palakasan</item>
+        <item>Musika</item>
+        <item>Potograpiya</item>
+        <item>Pagpipinta</item>
+        <item>Paghahalaman</item>
+        <item>Pelikula</item>
+        <item>Anime</item>
+        <item>Cosplay</item>
+        <item>Pagsasayaw</item>
+        <item>Pag-awit</item>
+        <item>Pagsusulat</item>
+        <item>Pamimili</item>
+        <item>Fitness</item>
+        <item>Yoga</item>
+        <item>Meditasyon</item>
+        <item>Hiking</item>
+        <item>Camping</item>
+        <item>Pangingisda</item>
+        <item>Crafting</item>
+        <item>Moda</item>
+        <item>Teknolohiya</item>
+        <item>Astrolohiya</item>
+        <item>Pangangalaga ng halaman</item>
+        <item>Pagboboluntaryo</item>
+        <item>Mga Sasakyan</item>
+        <item>Kasaysayan</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Kaibigan</item>
+        <item>Matalik na kaibigan</item>
+        <item>Kasintahan (Babae)</item>
+        <item>Kasintahan (Lalaki)</item>
+        <item>Asawa (Babae)</item>
+        <item>Asawa (Lalaki)</item>
+        <item>Kapatid na babae</item>
+        <item>Kapatid na lalaki</item>
+        <item>Kasama sa paglalakbay</item>
+        <item>Kasosyo sa pakikipagsapalaran</item>
+        <item>Tagapayo</item>
+        <item>Katrabaho</item>
+        <item>Boss</item>
+        <item>Empleyado</item>
+        <item>Kaklase</item>
+        <item>Gabay</item>
+        <item>Mag-aaral</item>
+        <item>Estranghero</item>
+        <item>Kasama sa kwarto</item>
+        <item>Kapitbahay</item>
+        <item>Dating kasintahan</item>
+        <item>Kaibigan mula pagkabata</item>
+        <item>Lihim na tagahanga</item>
+        <item>Karibal</item>
+        <item>Kasambahay</item>
+        <item>Mayordomo</item>
+        <item>Host</item>
+        <item>Kasama</item>
+        <item>Soulmate</item>
+        <item>Kakilala</item>
+    </string-array>
+    <string name="store_best_value">PINAKAMAHUSAY NA HALAGA</string>
+    <string name="setting_privacy_not_configured">Hindi pa na-configure ang URL ng Patakaran sa Privacy</string>
+    <string name="setting_no_app_open_link">Walang magagamit na app upang buksan ang link na ito</string>
+    <string name="setting_unable_open_privacy">Hindi mabuksan ang Patakaran sa Privacy</string>
+    <string name="chat_status_online">Online</string>
+    <string name="create_enter_description">Ilagay ang deskripsyon ng karakter</string>
+    <string name="create_enter_name">Ilagay ang pangalan ng karakter</string>
+    <string name="create_select_personality_hobby">Pumili ng personalidad at mga libangan</string>
+    <string name="image_generation_failed">Nabigo ang pagbuo ng larawan</string>
+    <string name="enjoying_hd_camera">Nasisiyahan ka ba sa AI Girlfriend?</string>
+    <string name="rate_us_on_the_google_play">I-rate kami sa Google Play!</string>
+    <string name="rate_now">I-rate ngayon</string>
+    <string name="not_now">Huwag muna ngayon</string>
+    <string name="chat_relationship_stranger">Estranghero</string>
+    <string name="chat_subtitle_format">%1$s • Antas %2$d</string>
+    <string name="chat_title_format">Chat #%1$s</string>
+    <string name="first_day">Unang Araw</string>
+    <string name="feedback_reason_hint">Dahilan (hal. nag-crash, mabagal, hindi magandang UI...)</string>
+    <string name="feedback_description_hint">Mga detalye o mungkahi...</string>
+    <string name="send_feedback">Ipadala ang Feedback</string>
+</resources>

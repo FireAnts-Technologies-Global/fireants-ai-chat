@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Mula Sekarang</string>
+    <string name="next">Seterusnya</string>
+    <string name="txt_thanks_you_for_rating">Terima kasih atas penilaian anda!</string>
+    <string name="onboarding_title_1">Temui seseorang yang memahami anda</string>
+    <string name="onboarding_des_1">Kenali teman AI dengan personaliti dan kisah unik, bersedia pada bila-bila masa.</string>
+    <string name="onboarding_title_2">Perbualan yang terasa peribadi</string>
+    <string name="onboarding_des_2">Kongsi fikiran anda, terokai kisah baharu atau nikmati perbualan yang dicipta khas untuk anda.</string>
+    <string name="onboarding_title_3">Cipta teman sempurna anda</string>
+    <string name="onboarding_des_3">Pilih rupa, personaliti dan minat mereka untuk membina teman AI idaman anda.</string>
+    <string name="onboarding_title_4">Kisah anda bermula di sini</string>
+    <string name="onboarding_des_4">Berhubung, berbual dan terokai perkara baharu setiap hari.</string>
+    <string name="close">Tutup</string>
+    <string name="try_again">Cuba Lagi</string>
+    <string name="txt_cancel">Batal</string>
+    <string name="loading_label">Memuatkan</string>
+    <string name="no_internet_title">Tiada Sambungan Internet</string>
+    <string name="no_internet_message">Sila periksa tetapan rangkaian anda untuk terus menggunakan aplikasi.</string>
+    <string name="open_settings">Buka Tetapan</string>
+    <string name="force_update_message">Versi baharu telah tersedia. Sila kemas kini untuk terus menggunakan aplikasi.</string>
+    <string name="update_now">Kemas Kini Sekarang</string>
+    <string name="setting">Tetapan</string>
+    <string name="main_tab_discover">Teroka</string>
+    <string name="main_tab_reward">Ganjaran</string>
+    <string name="main_tab_add">Tambah</string>
+    <string name="main_tab_chats">Sembang</string>
+    <string name="main_tab_mission">Misi</string>
+    <string name="rate">Nilaikan</string>
+    <string name="share_with_friend">Kongsi dengan Rakan</string>
+    <string name="privacy_policy">Dasar Privasi</string>
+    <string name="let_me_recommend">Biar saya cadangkan aplikasi ini</string>
+    <string name="share_to">Kongsi ke</string>
+    <string name="we_re_better_than_ever">Aplikasi ini semakin hebat setiap hari</string>
+    <string name="error_generic">Sesuatu telah berlaku. Sila cuba lagi.</string>
+    <string name="error_network_unavailable">Sila semak sambungan internet anda dan cuba lagi.</string>
+    <string name="error_auth_session_expired">Sesi anda telah tamat. Sila cuba lagi.</string>
+    <string name="error_auth_unavailable">Pengesahan tidak dapat diselesaikan sekarang. Sila cuba lagi.</string>
+    <string name="create_error_title">Tidak dapat mencipta watak</string>
+    <string name="error_insufficient_coins">Syiling Tidak Mencukupi</string>
+    <string name="no_credits_left">Tiada baki percubaan lagi</string>
+    <string name="balance_format">Baki: %1$d</string>
+    <string name="buy_coins">Beli syiling</string>
+    <string name="coins">SYILING</string>
+    <string name="upgrade_pro">Naik Taraf ke Pro</string>
+    <string name="reward_error_title">Tidak dapat memuatkan ganjaran</string>
+    <string name="home_error_title">Tidak dapat memuatkan kandungan</string>
+    <string name="home_empty_characters">Tiada watak yang tersedia pada masa ini.</string>
+    <string name="home_create_assistant_title">Cari seseorang\nyang memahami anda</string>
+    <string name="home_create_assistant_subtitle">Cipta teman AI anda sendiri dan\nbina hubungan yang bermakna.</string>
+    <string name="home_create_assistant_action">Cipta AI Anda</string>
+    <string name="home_top_assistants">Pembantu Teratas</string>
+    <string name="home_recommend_for_you">Disyorkan untuk Anda</string>
+    <string name="home_see_all">Lihat semua</string>
+    <string name="setting_back">Kembali</string>
+    <string name="character_detail_error_title">Tidak dapat memuatkan watak</string>
+    <string name="character_detail_start_chat">Jom berbual dengan saya</string>
+    <string name="chat_error_title">Tidak dapat memuatkan sembang</string>
+    <string name="chat_starter_title">Mulakan perbualan</string>
+    <string name="chat_starter_subtitle">Tidak pasti apa yang hendak dikatakan? Cuba salah satu cadangan ini.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>Hai! Ceritakan sedikit tentang diri anda.</item>
+        <item>Apakah perkara menarik untuk hari ini?</item>
+        <item>Mari bermain permainan soal jawab pantas.</item>
+    </string-array>
+    <string name="chat_input_hint">Tanya apa sahaja...</string>
+    <string name="today">Hari Ini</string>
+    <string name="yesterday">Semalam</string>
+    <string name="chat_send">Hantar</string>
+    <string name="chat_more_title">Lagi</string>
+    <string name="chat_more_custom_background">Latar belakang tersuai</string>
+    <string name="chat_more_delete">Padam sembang</string>
+    <string name="chat_more_report">Lapor</string>
+    <string name="chat_role_assistant">Pembantu</string>
+    <string name="chat_message_just_now">Sebentar tadi</string>
+    <string name="chat_delete_title">Padamkan sembang?</string>
+    <string name="chat_delete_message">Adakah anda pasti ingin memadamkan sembang ini? Tindakan ini tidak boleh dibuat asal.</string>
+    <string name="chat_delete_confirm">Padam</string>
+    <string name="chat_delete_success">Sembang berjaya dipadamkan</string>
+    <string name="chat_report_title">Lapor</string>
+    <string name="chat_report_message">Adakah anda pasti ingin melaporkan pengguna ini? Kami akan menyemak laporan anda dan mengambil tindakan sewajarnya.</string>
+    <string name="chat_report_confirm">Lapor</string>
+    <string name="chat_report_success">Terima kasih atas laporan anda.</string>
+    <string name="chat_report_hint">Jelaskan isu tersebut (pilihan)...</string>
+    <string name="chat_empty_title">Tiada sembang lagi</string>
+    <string name="chat_empty_subtitle">Mulakan perbualan baharu untuk melihat mesej anda di sini.</string>
+    <string name="chat_empty_start_chat">Mulakan sembang</string>
+    <string name="actions">Tindakan</string>
+    <string name="store_title">Kedai</string>
+    <string name="store_top_up_coins">TAMBAH NILAI SYILING</string>
+    <string name="store_unlock_storylines">Buka jalan cerita &amp; aksi</string>
+    <string name="store_membership_plans">PELAN KEAHLIAN</string>
+    <string name="store_unlimited_vip">Pengalaman VIP premium</string>
+    <string name="store_restore_purchases">Pulihkan pembelian</string>
+    <string name="store_terms_policies">Terma &amp; Polisi</string>
+    <string name="store_transactions_info">Transaksi akan diproses melalui akaun Google Play anda.\nLangganan diperbaharui secara automatik melainkan dibatalkan sekurang-kurangnya 24 jam sebelum akhir tempoh semasa.</string>
+    <string name="store_terms_privacy">Syarat Perkhidmatan   •   Dasar Privasi</string>
+    <string name="store_product_not_found">Produk tidak ditemui</string>
+    <string name="store_purchase_cancelled">Pembelian dibatalkan</string>
+    <string name="store_restoring_purchases">Memulihkan pembelian...</string>
+    <string name="store_restore_success">Pembelian berjaya dipulihkan!</string>
+    <string name="store_coins_credited">Syiling berjaya dikreditkan! Baki: %1$d</string>
+    <string name="store_purchase_processing">Pembelian berjaya. Syiling sedang diproses, sila muat semula sebentar lagi.</string>
+    <string name="store_vip_activated">Keahlian VIP berjaya diaktifkan!</string>
+    <string name="store_vip_processing">Pembelian berjaya. Status VIP sedang diproses, sila muat semula sebentar lagi.</string>
+    <string name="store_duration_month">setiap bulan</string>
+    <string name="store_duration_year">setiap tahun</string>
+    <string name="store_vip_desc_month">Akses VIP bulanan dengan ganjaran syiling setiap hari</string>
+    <string name="store_vip_desc_year">Akses VIP tahunan dengan ganjaran harian dan ciri premium</string>
+    <string name="store_vip_benefit_1">Bonus 500 Syiling bagi setiap log masuk harian</string>
+    <string name="store_vip_benefit_2">Bonus 750 Syiling bagi setiap log masuk harian</string>
+    <string name="store_vip_benefit_3">Nikmati semua faedah keahlian VIP anda</string>
+    <string name="store_vip_footer_month">Diperbaharui secara automatik setiap bulan. Batal pada bila-bila masa.</string>
+    <string name="store_vip_footer_year">Diperbaharui secara automatik setiap tahun. Batal pada bila-bila masa di Google Play.</string>
+    <string name="store_empty_title">Tiada pakej tersedia</string>
+    <string name="store_empty_subtitle">Produk tidak tersedia pada masa ini. Sila semak semula kemudian.</string>
+    <string name="store_empty_retry">Cuba Lagi</string>
+    <string name="store_empty_vip_plans">Pelan keahlian tidak tersedia pada masa ini.</string>
+    <string name="store_empty_coin_packages">Pakej syiling tidak tersedia pada masa ini.</string>
+    <string name="sub_empty_plans">Pelan keahlian tidak tersedia pada masa ini. Sila semak semula kemudian.</string>
+    <string name="coins_empty_packages">Pakej syiling tidak tersedia pada masa ini. Sila semak semula kemudian.</string>
+    <string name="character_detail_hot">HANGAT</string>
+    <string name="character_badge_new">BAHARU</string>
+    <string name="histories_title">Sejarah</string>
+    <string name="character_detail_intimacy_title">Kemajuan Hubungan</string>
+    <string name="character_detail_level_format">Tahap %1$d</string>
+    <string name="character_detail_intimacy_hint">Setiap mesej menambah sehingga +%1$d mata hubungan</string>
+    <string name="character_detail_exclusive_photo_gallery">Galeri Foto Eksklusif</string>
+    <string name="character_detail_about">Tentang %1$s</string>
+    <string name="character_detail_chats">Sembang</string>
+    <string name="character_detail_rating">Penilaian</string>
+    <string name="character_detail_most_popular">Paling Popular</string>
+    <string name="character_detail_rank_format">Top %1$d</string>
+    <string name="character_detail_personality_traits">Personaliti &amp; Ciri-ciri</string>
+    <string name="character_detail_purchase_success">Latar belakang berjaya dibuka kunci!</string>
+    <string name="continue_">Teruskan</string>
+    <string name="sub_price_month_format">%1$s/ bulan</string>
+    <string name="sub_price_year_format">%1$s/ tahun</string>
+    <string name="sub_feature_outfits">Akses kisah premium &amp; detik eksklusif</string>
+    <string name="sub_plan_monthly">Bulanan</string>
+    <string name="sub_plan_yearly">Tahunan</string>
+    <string name="sub_subscribe_now">Langgan Sekarang</string>
+    <string name="sub_current_plan">PELAN SEMASA</string>
+    <string name="sub_fine_print_1">Bayaran akan dicaj ke akaun Google Play anda selepas pengesahan pembelian.</string>
+    <string name="sub_fine_print_2">Langganan anda akan diperbaharui secara automatik mengikut pelan anda melainkan dibatalkan sekurang-kurangnya 24 jam sebelum tamat tempoh semasa.</string>
+    <string name="sub_fine_print_3">Bukan pelanggan masih boleh menggunakan perkhidmatan ini, namun sesetengah ciri berbayar mungkin terhad.</string>
+    <string name="sub_fine_print_4">Anda boleh mengurus atau membatalkan langganan anda pada bila-bila masa dalam bahagian Langganan Google Play.</string>
+    <string name="sub_restore_purchase">Pulihkan pembelian</string>
+    <string name="sub_paywall_title">Buka lebih banyak dengan AURA+</string>
+    <string name="sub_paywall_subtitle">Perbualan lebih mendalam. Lebih banyak cara untuk mencipta.</string>
+    <string name="sub_feature_unlimited_messages">Kisah Premium</string>
+    <string name="sub_feature_exclusive_companions">Ikatan Lebih Erat</string>
+    <string name="sub_feature_create_characters">Syiling Harian</string>
+    <string name="sub_feature_chat_backgrounds">Bebas Iklan</string>
+    <string name="sub_cancel_anytime">Batal pada bila-bila masa</string>
+    <string name="sub_best_value_arrow">Nilai terbaik &gt;</string>
+    <string name="sub_terms">Syarat</string>
+    <string name="sub_privacy">Privasi</string>
+    <string name="sub_save_percent_format">JIMAT %1$d%%</string>
+    <string name="sub_save_badge_format">JIMAT %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/bulan, dibilkan setiap tahun</string>
+    <string name="sub_billed_annually_fallback">%1$s, dibilkan setiap tahun</string>
+    <string name="sub_billed_monthly_format">%1$s/bulan, dibilkan setiap bulan</string>
+    <string name="sub_billed_monthly_fallback">%1$s, dibilkan setiap bulan</string>
+    <string name="store_coins_format">%1$d Syiling</string>
+    <string name="feedback_subject">Maklum Balas</string>
+    <string name="send_feedback_chooser">Hantar Maklum Balas:</string>
+    <string name="send_email_via">Hantar E-mel melalui:</string>
+    <string name="no_email_client_found">Aplikasi e-mel tidak ditemui</string>
+    <string name="select_a_language">Pilih bahasa</string>
+    <string name="reward_your_progress">Kemajuan Anda</string>
+    <string name="reward_check_in_today">Daftar Masuk Hari Ini</string>
+    <string name="reward_checked_in_today">Telah Daftar Masuk Hari Ini</string>
+    <string name="reward_earn_rewards">Dapatkan Ganjaran</string>
+    <string name="reward_daily_ads">Iklan Ganjaran Harian</string>
+    <string name="reward_daily_ads_desc">+%1$d Syiling setiap iklan</string>
+    <string name="reward_watch_ads_format">Tonton Iklan (%1$d/10)</string>
+    <string name="reward_ads_unavailable">Tiada iklan tersedia buat masa ini. Sila cuba lagi sebentar lagi.</string>
+    <string name="reward_vip_unlocked">Ahli VIP</string>
+    <string name="reward_vip_unlocked_desc">Pengalaman bebas iklan aktif</string>
+    <string name="reward_claimed_title">Ganjaran Dituntut!</string>
+    <string name="reward_claimed_desc">Ganjaran daftar masuk harian anda telah dimasukkan ke inventori.</string>
+    <string name="reward_claimed_coin_format">+%1$d Syiling</string>
+    <string name="reward_processing">Ganjaran sedang diproses. Baki anda akan dikemas kini tidak lama lagi.</string>
+    <string name="reward_day_format">Hari ke-%1$d</string>
+    <string name="mission_tab_mission">Misi</string>
+    <string name="mission_tab_history">Sejarah</string>
+    <string name="mission_no_active">Tiada misi aktif buat masa ini.</string>
+    <string name="mission_coins_earned_format">+%1$d Syiling</string>
+    <string name="mission_type_daily_login">Log Masuk Harian</string>
+    <string name="mission_type_watch_ad">Tonton Iklan</string>
+    <string name="mission_type_play_game">Main Permainan</string>
+    <string name="mission_type_online">Dalam Talian 5 Minit</string>
+    <string name="mission_type_share">Kongsi kepada Rakan</string>
+    <string name="mission_type_reward_claim">Tuntut Ganjaran</string>
+    <string name="mission_type_iap_purchase">Syiling Ditambah</string>
+    <string name="mission_type_promo_code">Kod Promosi</string>
+    <string name="mission_history_footer_stardust">Aktiviti yang melebihi 30 hari akan lebur menjadi debu bintang</string>
+    <string name="next_step">Langkah Seterusnya</string>
+    <string name="create_screen_title">Cipta Watak</string>
+    <string name="create_generate_cost">Jana dengan %1$d</string>
+    <string name="create_step_label_format">LANGKAH %1$d DARIPADA %2$d: %3$s</string>
+    <string name="create_step_general_setup">TETAPAN UMUM</string>
+    <string name="create_step_appearance_details">BUTIRAN RUPA</string>
+    <string name="create_step_hair_customization">PENYESUAIAN RAMBUT</string>
+    <string name="create_step_personality_identity">PERSONALITI &amp; IDENTITI</string>
+    <string name="create_companion_gender">Identiti</string>
+    <string name="create_gender_girls">Perempuan</string>
+    <string name="create_gender_guys">Lelaki</string>
+    <string name="create_gender_trans">Bukan binari</string>
+    <string name="create_inspire_me">Beri saya inspirasi</string>
+    <string name="create_visual_style">Gaya Visual</string>
+    <string name="create_style_realistic">Realistik</string>
+    <string name="create_style_anime">Anime</string>
+    <string name="create_describe_to_create">Huraikan untuk mencipta</string>
+    <string name="create_prompt_hint">Cth: “Teman manis dan prihatin yang gemar melihat bintang tengah malam, berpuisi dan membancuh teh hangat...”</string>
+    <string name="create_companion_ethnicity">Etnik Teman</string>
+    <string name="create_ethnicity_east_asian">Asia Timur</string>
+    <string name="create_ethnicity_south_asian">Asia Selatan</string>
+    <string name="create_ethnicity_black">Kulit Hitam</string>
+    <string name="create_ethnicity_white">Kulit Putih</string>
+    <string name="create_ethnicity_asian">Asia</string>
+    <string name="create_ethnicity_latina">Latin</string>
+    <string name="create_age">Umur</string>
+    <string name="create_skin_tone">Tona Kulit</string>
+    <string name="create_hair_color">Warna Rambut</string>
+    <string name="create_hair_blonde">Perang</string>
+    <string name="create_hair_black">Hitam</string>
+    <string name="create_hair_copper">Tembaga</string>
+    <string name="create_hair_blue">Biru</string>
+    <string name="create_hair_purple">Ungu</string>
+    <string name="create_hair_red">Merah</string>
+    <string name="create_companion_name">Nama Teman</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Personaliti &amp; Latar Belakang Sosial</string>
+    <string name="create_personality">Personaliti</string>
+    <string name="create_occupation">Pekerjaan</string>
+    <string name="create_hobbies">Hobi</string>
+    <string name="create_relationships">Hubungan</string>
+    <string name="option_none">Tiada</string>
+    <string name="options_done">Selesai</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Mesra</item>
+        <item>Prihatin</item>
+        <item>Pemalu</item>
+        <item>Ramah</item>
+        <item>Misteri</item>
+        <item>Pintar</item>
+        <item>Lucu</item>
+        <item>Penyayang</item>
+        <item>Suka mengembara</item>
+        <item>Yakin</item>
+        <item>Bertenaga</item>
+        <item>Tenang</item>
+        <item>Kreatif</item>
+        <item>Beraspirasi tinggi</item>
+        <item>Empatik</item>
+        <item>Setia</item>
+        <item>Optimis</item>
+        <item>Pesimis</item>
+        <item>Sarkastik</item>
+        <item>Degil</item>
+        <item>Sensual</item>
+        <item>Nakal</item>
+        <item>Dominan</item>
+        <item>Patuh</item>
+        <item>Spiritual</item>
+        <item>Praktikal</item>
+        <item>Pemimpi</item>
+        <item>Pemberontak</item>
+        <item>Tradisional</item>
+        <item>Pelindung</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Pereka</item>
+        <item>Perunding</item>
+        <item>Doktor</item>
+        <item>Jururawat</item>
+        <item>Jurutera</item>
+        <item>Artis</item>
+        <item>Pemuzik</item>
+        <item>Tukang masak</item>
+        <item>Pegawai Polis</item>
+        <item>Usahawan</item>
+        <item>CEO Bilionair</item>
+        <item>Model</item>
+        <item>Pelakon</item>
+        <item>Penulis</item>
+        <item>Atlet</item>
+        <item>Saintis</item>
+        <item>Pengaturcara</item>
+        <item>Peguam</item>
+        <item>Arkitek</item>
+        <item>Pereka Fesyen</item>
+        <item>Jurugambar</item>
+        <item>Wartawan</item>
+        <item>Juruterbang</item>
+        <item>Pramugari</item>
+        <item>Barista</item>
+        <item>Pustakawan</item>
+        <item>Pekerja bebas</item>
+        <item>Pempengaruh</item>
+        <item>Menganggur</item>
+        <item>Detektif</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Membaca</item>
+        <item>Bermain permainan video</item>
+        <item>Melancong</item>
+        <item>Memasak</item>
+        <item>Sukan</item>
+        <item>Muzik</item>
+        <item>Fotografi</item>
+        <item>Melukis</item>
+        <item>Berkebun</item>
+        <item>Menonton filem</item>
+        <item>Anime</item>
+        <item>Cosplay</item>
+        <item>Menari</item>
+        <item>Menyanyi</item>
+        <item>Menulis</item>
+        <item>Membeli-belah</item>
+        <item>Kecergasan</item>
+        <item>Yoga</item>
+        <item>Meditasi</item>
+        <item>Kembara jalan kaki</item>
+        <item>Berkhemah</item>
+        <item>Memancing</item>
+        <item>Kraftangan</item>
+        <item>Fesyen</item>
+        <item>Teknologi</item>
+        <item>Astrologi</item>
+        <item>Menanam pokok</item>
+        <item>Sukarelawan</item>
+        <item>Kereta</item>
+        <item>Sejarah</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Kawan</item>
+        <item>Sahabat karib</item>
+        <item>Teman wanita</item>
+        <item>Teman lelaki</item>
+        <item>Isteri</item>
+        <item>Suami</item>
+        <item>Kakak/Adik perempuan</item>
+        <item>Abang/Adik lelaki</item>
+        <item>Rakan pengembaraan</item>
+        <item>Rakan kembara</item>
+        <item>Mentor</item>
+        <item>Rakan sekerja</item>
+        <item>Majikan</item>
+        <item>Pekerja</item>
+        <item>Rakan sekelas</item>
+        <item>Pemandu</item>
+        <item>Pelajar</item>
+        <item>Orang asing</item>
+        <item>Rakan sebilik</item>
+        <item>Jiran</item>
+        <item>Bekas kekasih</item>
+        <item>Kawan zaman kanak-kanak</item>
+        <item>Peminat rahsia</item>
+        <item>Pesaing</item>
+        <item>Pembantu rumah</item>
+        <item>Butler</item>
+        <item>Hos</item>
+        <item>Pendamping</item>
+        <item>Pasangan jiwa</item>
+        <item>Kenalan</item>
+    </string-array>
+    <string name="store_best_value">NILAI TERBAIK</string>
+    <string name="setting_privacy_not_configured">Pautan Dasar Privasi belum dikonfigurasikan</string>
+    <string name="setting_no_app_open_link">Tiada aplikasi untuk membuka pautan ini</string>
+    <string name="setting_unable_open_privacy">Tidak dapat membuka Dasar Privasi</string>
+    <string name="chat_status_online">Dalam talian</string>
+    <string name="create_enter_description">Masukkan penerangan watak</string>
+    <string name="create_enter_name">Masukkan nama watak</string>
+    <string name="create_select_personality_hobby">Pilih personaliti dan hobi</string>
+    <string name="image_generation_failed">Penjanaan imej gagal</string>
+    <string name="enjoying_hd_camera">Gembira dengan Teman Wanita AI?</string>
+    <string name="rate_us_on_the_google_play">Nilaikan kami di Google Play!</string>
+    <string name="rate_now">Nilaikan Sekarang</string>
+    <string name="not_now">Bukan sekarang</string>
+    <string name="chat_relationship_stranger">Orang asing</string>
+    <string name="chat_subtitle_format">%1$s • Tahap %2$d</string>
+    <string name="chat_title_format">Sembang #%1$s</string>
+    <string name="first_day">Hari Pertama</string>
+    <string name="feedback_reason_hint">Sebab (cth: ranap, lambat, UI buruk...)</string>
+    <string name="feedback_description_hint">Butiran atau cadangan...</string>
+    <string name="send_feedback">Hantar Maklum Balas</string>
+</resources>

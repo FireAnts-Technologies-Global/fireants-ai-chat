@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Почати</string>
+    <string name="next">Далі</string>
+    <string name="txt_thanks_you_for_rating">Дякуємо за вашу оцінку!</string>
+    <string name="onboarding_title_1">Зустріньте того, хто вас розуміє</string>
+    <string name="onboarding_des_1">Познайомтеся зі штучними інтелектуальними друзями з унікальними характерами та історіями, готовими до спілкування будь-коли.</string>
+    <string name="onboarding_title_2">Розмови, сповнені тепла й щирості</string>
+    <string name="onboarding_des_2">Діліться думками, відкривайте нові історії або просто насолоджуйтеся спілкуванням, створеним саме для вас.</string>
+    <string name="onboarding_title_3">Створіть ідеального супутника</string>
+    <string name="onboarding_des_3">Обирайте зовнішність, характер та інтереси, щоб створити ідеального ШІ-друга.</string>
+    <string name="onboarding_title_4">Ваша історія починається тут</string>
+    <string name="onboarding_des_4">Спілкуйтеся, знаходьте спільну мову та щодня відкривайте для себе щось нове.</string>
+    <string name="close">Закрити</string>
+    <string name="try_again">Спробувати знову</string>
+    <string name="txt_cancel">Скасувати</string>
+    <string name="loading_label">Завантаження</string>
+    <string name="no_internet_title">Немає підключення до Інтернету</string>
+    <string name="no_internet_message">Будь ласка, перевірте налаштування мережі, щоб продовжити користуватися додатком.</string>
+    <string name="open_settings">Відкрити налаштування</string>
+    <string name="force_update_message">Доступна нова версія. Будь ласка, оновіть додаток, щоб продовжити.</string>
+    <string name="update_now">Оновити зараз</string>
+    <string name="setting">Налаштування</string>
+    <string name="main_tab_discover">Огляд</string>
+    <string name="main_tab_reward">Нагороди</string>
+    <string name="main_tab_add">Створити</string>
+    <string name="main_tab_chats">Чати</string>
+    <string name="main_tab_mission">Завдання</string>
+    <string name="rate">Оцінити</string>
+    <string name="share_with_friend">Поділитися з друзями</string>
+    <string name="privacy_policy">Політика конфіденційності</string>
+    <string name="let_me_recommend">Хочу порекомендувати цей додаток</string>
+    <string name="share_to">Поділитися в</string>
+    <string name="we_re_better_than_ever">Додаток стає кращим щодня</string>
+    <string name="error_generic">Щось пішло не так. Будь ласка, спробуйте знову.</string>
+    <string name="error_network_unavailable">Будь ласка, перевірте інтернет-з\'єднання та спробуйте знову.</string>
+    <string name="error_auth_session_expired">Термін дії сесії закінчився. Будь ласка, увійдіть знову.</string>
+    <string name="error_auth_unavailable">Наразі не вдалося виконати автентифікацію. Спробуйте пізніше.</string>
+    <string name="create_error_title">Не вдалося створити персонажа</string>
+    <string name="error_insufficient_coins">Недостатньо монет</string>
+    <string name="no_credits_left">Не залишилося спроб</string>
+    <string name="balance_format">Баланс: %1$d</string>
+    <string name="buy_coins">Купити монети</string>
+    <string name="coins">МОНЕТИ</string>
+    <string name="upgrade_pro">Оновити до Pro</string>
+    <string name="reward_error_title">Не вдалося завантажити нагороди</string>
+    <string name="home_error_title">Не вдалося завантажити вміст</string>
+    <string name="home_empty_characters">Наразі немає доступних персонажів.</string>
+    <string name="home_create_assistant_title">Знайдіть того,\nхто вас розуміє</string>
+    <string name="home_create_assistant_subtitle">Створіть власного ШІ-супутника та\nпобудуйте щирий зв\'язок.</string>
+    <string name="home_create_assistant_action">Створити свого ШІ</string>
+    <string name="home_top_assistants">Найкращі асистенти</string>
+    <string name="home_recommend_for_you">Рекомендовано вам</string>
+    <string name="home_see_all">Переглянути всі</string>
+    <string name="setting_back">Назад</string>
+    <string name="character_detail_error_title">Не вдалося завантажити персонажа</string>
+    <string name="character_detail_start_chat">Поговори зі мною</string>
+    <string name="chat_error_title">Не вдалося завантажити чат</string>
+    <string name="chat_starter_title">Почати розмову</string>
+    <string name="chat_starter_subtitle">Не знаєте, про що поговорити? Спробуйте одне з цих питань.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>Привіт! Розкажи трохи про себе.</item>
+        <item>Що могло б зробити сьогоднішній день яскравішим?</item>
+        <item>Зіграймо у швидке бліц-опитування.</item>
+    </string-array>
+    <string name="chat_input_hint">Запитайте про що завгодно...</string>
+    <string name="today">Сьогодні</string>
+    <string name="yesterday">Вчора</string>
+    <string name="chat_send">Надіслати</string>
+    <string name="chat_more_title">Більше</string>
+    <string name="chat_more_custom_background">Власний фон</string>
+    <string name="chat_more_delete">Видалити чат</string>
+    <string name="chat_more_report">Поскаржитися</string>
+    <string name="chat_role_assistant">Асистент</string>
+    <string name="chat_message_just_now">Щойно</string>
+    <string name="chat_delete_title">Видалити чат?</string>
+    <string name="chat_delete_message">Ви впевнені, що хочете видалити цей чат? Цю дію неможливо скасувати.</string>
+    <string name="chat_delete_confirm">Видалити</string>
+    <string name="chat_delete_success">Чат успішно видалено</string>
+    <string name="chat_report_title">Поскаржитися</string>
+    <string name="chat_report_message">Ви впевнені, що хочете поскаржитися на цього користувача? Ми перевіримо скаргу та вживемо відповідних заходів.</string>
+    <string name="chat_report_confirm">Поскаржитися</string>
+    <string name="chat_report_success">Дякуємо за ваше повідомлення.</string>
+    <string name="chat_report_hint">Опишіть проблему (необов\'язково)...</string>
+    <string name="chat_empty_title">Поки що немає чатів</string>
+    <string name="chat_empty_subtitle">Почніть нову розмову, і ваші чати з\'являться тут.</string>
+    <string name="chat_empty_start_chat">Почати чат</string>
+    <string name="actions">Дії</string>
+    <string name="store_title">Магазин</string>
+    <string name="store_top_up_coins">ПОПОВНИТИ МОНЕТИ</string>
+    <string name="store_unlock_storylines">Розблокуйте сюжети та дії</string>
+    <string name="store_membership_plans">ТАРИФНІ ПЛАНИ</string>
+    <string name="store_unlimited_vip">Преміальний VIP-досвід</string>
+    <string name="store_restore_purchases">Відновити покупки</string>
+    <string name="store_terms_policies">Умови та політика</string>
+    <string name="store_transactions_info">Транзакції обробляються через ваш обліковий запис Google Play.\nПідписки поновлюються автоматично, якщо їх не скасовано принаймні за 24 години до кінця поточного періоду.</string>
+    <string name="store_terms_privacy">Умови використання   •   Політика конфіденційності</string>
+    <string name="store_product_not_found">Товар не знайдено</string>
+    <string name="store_purchase_cancelled">Покупку скасовано</string>
+    <string name="store_restoring_purchases">Відновлення покупок...</string>
+    <string name="store_restore_success">Покупки успішно відновлено!</string>
+    <string name="store_coins_credited">Монети успішно зараховано! Баланс: %1$d</string>
+    <string name="store_purchase_processing">Покупка успішна. Монети обробляються, оновіть за мить.</string>
+    <string name="store_vip_activated">VIP-підписку успішно активовано!</string>
+    <string name="store_vip_processing">Покупка успішна. Статус VIP обробляється, оновіть за мить.</string>
+    <string name="store_duration_month">на місяць</string>
+    <string name="store_duration_year">на рік</string>
+    <string name="store_vip_desc_month">Щомісячний VIP-доступ із щоденними монетами в подарунок</string>
+    <string name="store_vip_desc_year">Річний VIP-доступ із щоденними нагородами та преміум-функціями</string>
+    <string name="store_vip_benefit_1">Бонус 500 монет за кожен щоденний вхід</string>
+    <string name="store_vip_benefit_2">Бонус 750 монет за кожен щоденний вхід</string>
+    <string name="store_vip_benefit_3">Усі привілеї ексклюзивного членства VIP</string>
+    <string name="store_vip_footer_month">Автопоновлення щомісяця. Скасування будь-коли.</string>
+    <string name="store_vip_footer_year">Автопоновлення щороку. Скасування будь-коли в Google Play.</string>
+    <string name="store_empty_title">Немає доступних пакетів</string>
+    <string name="store_empty_subtitle">Товари наразі недоступні. Будь ласка, перевірте пізніше.</string>
+    <string name="store_empty_retry">Повторити</string>
+    <string name="store_empty_vip_plans">Тарифні плани наразі недоступні.</string>
+    <string name="store_empty_coin_packages">Пакети монет наразі недоступні.</string>
+    <string name="sub_empty_plans">Тарифні плани наразі недоступні. Будь ласка, перевірте пізніше.</string>
+    <string name="coins_empty_packages">Пакети монет наразі недоступні. Будь ласка, перевірте пізніше.</string>
+    <string name="character_detail_hot">ПОПУЛЯРНЕ</string>
+    <string name="character_badge_new">НОВЕ</string>
+    <string name="histories_title">Історія</string>
+    <string name="character_detail_intimacy_title">Рівень близькості</string>
+    <string name="character_detail_level_format">Рівень %1$d</string>
+    <string name="character_detail_intimacy_hint">Кожне повідомлення додає до +%1$d очок близькості</string>
+    <string name="character_detail_exclusive_photo_gallery">Ексклюзивна фотогалерея</string>
+    <string name="character_detail_about">Про %1$s</string>
+    <string name="character_detail_chats">Чати</string>
+    <string name="character_detail_rating">Оцінка</string>
+    <string name="character_detail_most_popular">Найпопулярніші</string>
+    <string name="character_detail_rank_format">Топ %1$d</string>
+    <string name="character_detail_personality_traits">Характер і риси</string>
+    <string name="character_detail_purchase_success">Фон успішно розблоковано!</string>
+    <string name="continue_">Продовжити</string>
+    <string name="sub_price_month_format">%1$s/ місяць</string>
+    <string name="sub_price_year_format">%1$s/ рік</string>
+    <string name="sub_feature_outfits">Доступ до преміум-історій та ексклюзивних моментів</string>
+    <string name="sub_plan_monthly">Щомісяця</string>
+    <string name="sub_plan_yearly">Щорічно</string>
+    <string name="sub_subscribe_now">Підписатися зараз</string>
+    <string name="sub_current_plan">ПОТОЧНИЙ ПЛАН</string>
+    <string name="sub_fine_print_1">Оплата списується з вашого облікового запису Google Play після підтвердження покупки.</string>
+    <string name="sub_fine_print_2">Підписка поновлюється автоматично відповідно до вашого плану, якщо її не скасовано принаймні за 24 години до завершення поточного періоду.</string>
+    <string name="sub_fine_print_3">Користувачі без підписки можуть користуватися додатком, але деякі платні функції можуть бути обмежені.</string>
+    <string name="sub_fine_print_4">Ви можете керувати підпискою або скасувати її в будь-який час у розділі «Підписки» в Google Play.</string>
+    <string name="sub_restore_purchase">Відновити покупки</string>
+    <string name="sub_paywall_title">Відкрийте більше можливостей з AURA+</string>
+    <string name="sub_paywall_subtitle">Глибші розмови. Більше творчої свободи.</string>
+    <string name="sub_feature_unlimited_messages">Преміум-історії</string>
+    <string name="sub_feature_exclusive_companions">Глибокий зв\'язок</string>
+    <string name="sub_feature_create_characters">Щоденні монети</string>
+    <string name="sub_feature_chat_backgrounds">Без реклами</string>
+    <string name="sub_cancel_anytime">Скасування будь-коли</string>
+    <string name="sub_best_value_arrow">Найвигідніше &gt;</string>
+    <string name="sub_terms">Умови</string>
+    <string name="sub_privacy">Конфіденційність</string>
+    <string name="sub_save_percent_format">ЕКОНОМІЯ %1$d%%</string>
+    <string name="sub_save_badge_format">ЕКОНОМІЯ %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/місяць, рахунок виставляється щорічно</string>
+    <string name="sub_billed_annually_fallback">%1$s, рахунок виставляється щорічно</string>
+    <string name="sub_billed_monthly_format">%1$s/місяць, рахунок виставляється щомісяця</string>
+    <string name="sub_billed_monthly_fallback">%1$s, рахунок виставляється щомісяця</string>
+    <string name="store_coins_format">%1$d Монет</string>
+    <string name="feedback_subject">Відгук</string>
+    <string name="send_feedback_chooser">Надіслати відгук:</string>
+    <string name="send_email_via">Надіслати листа через:</string>
+    <string name="no_email_client_found">Поштовий клієнт не знайдено</string>
+    <string name="select_a_language">Оберіть мову</string>
+    <string name="reward_your_progress">Ваш прогрес</string>
+    <string name="reward_check_in_today">Відмітитися сьогодні</string>
+    <string name="reward_checked_in_today">Відмітка виконана</string>
+    <string name="reward_earn_rewards">Отримати нагороди</string>
+    <string name="reward_daily_ads">Щоденна реклама з нагородою</string>
+    <string name="reward_daily_ads_desc">+%1$d монет за рекламу</string>
+    <string name="reward_watch_ads_format">Дивитися рекламу (%1$d/10)</string>
+    <string name="reward_ads_unavailable">Наразі немає доступної реклами. Спробуйте через декілька хвилин.</string>
+    <string name="reward_vip_unlocked">VIP-учасник</string>
+    <string name="reward_vip_unlocked_desc">Режим без реклами активний</string>
+    <string name="reward_claimed_title">Нагороду отримано!</string>
+    <string name="reward_claimed_desc">Вашу нагороду за щоденний вхід додано до інвентарю.</string>
+    <string name="reward_claimed_coin_format">+%1$d Монет</string>
+    <string name="reward_processing">Нагорода обробляється. Баланс незабаром оновиться.</string>
+    <string name="reward_day_format">День %1$d</string>
+    <string name="mission_tab_mission">Завдання</string>
+    <string name="mission_tab_history">Історія</string>
+    <string name="mission_no_active">Наразі немає активних завдань.</string>
+    <string name="mission_coins_earned_format">+%1$d Монет</string>
+    <string name="mission_type_daily_login">Щоденний вхід</string>
+    <string name="mission_type_watch_ad">Перегляд реклами</string>
+    <string name="mission_type_play_game">Зіграти в гру</string>
+    <string name="mission_type_online">У мережі 5 хвилин</string>
+    <string name="mission_type_share">Поділитися з другом</string>
+    <string name="mission_type_reward_claim">Отримати нагороду</string>
+    <string name="mission_type_iap_purchase">Поповнення монет</string>
+    <string name="mission_type_promo_code">Промокод</string>
+    <string name="mission_history_footer_stardust">Події, старші за 30 днів, перетворюються на зоряний пил</string>
+    <string name="next_step">Наступний крок</string>
+    <string name="create_screen_title">Створити персонажа</string>
+    <string name="create_generate_cost">Створити за %1$d</string>
+    <string name="create_step_label_format">КРОК %1$d З %2$d: %3$s</string>
+    <string name="create_step_general_setup">ЗАГАЛЬНІ НАЛАШТУВАННЯ</string>
+    <string name="create_step_appearance_details">ДЕТАЛІ ЗОВНІШНОСТІ</string>
+    <string name="create_step_hair_customization">НАЛАШТУВАННЯ ЗАЧІСКИ</string>
+    <string name="create_step_personality_identity">ХАРАКТЕР ТА ОСОБИСТІСТЬ</string>
+    <string name="create_companion_gender">Стать</string>
+    <string name="create_gender_girls">Дівчина</string>
+    <string name="create_gender_guys">Хлопець</string>
+    <string name="create_gender_trans">Небінарний</string>
+    <string name="create_inspire_me">Підкажи ідею</string>
+    <string name="create_visual_style">Візуальний стиль</string>
+    <string name="create_style_realistic">Реалістичний</string>
+    <string name="create_style_anime">Аніме</string>
+    <string name="create_describe_to_create">Опишіть для створення</string>
+    <string name="create_prompt_hint">Наприклад: «Мила, турботлива подруга, яка любить дивитися на зорі опівночі, читати вірші та пити теплий чай...»</string>
+    <string name="create_companion_ethnicity">Походження супутника</string>
+    <string name="create_ethnicity_east_asian">Східноазійське</string>
+    <string name="create_ethnicity_south_asian">Південноазійське</string>
+    <string name="create_ethnicity_black">Темношкірий</string>
+    <string name="create_ethnicity_white">Світлошкірий</string>
+    <string name="create_ethnicity_asian">Азіатське</string>
+    <string name="create_ethnicity_latina">Латиноамериканське</string>
+    <string name="create_age">Вік</string>
+    <string name="create_skin_tone">Тон шкіри</string>
+    <string name="create_hair_color">Колір волосся</string>
+    <string name="create_hair_blonde">Блонд</string>
+    <string name="create_hair_black">Чорний</string>
+    <string name="create_hair_copper">Мідний</string>
+    <string name="create_hair_blue">Синій</string>
+    <string name="create_hair_purple">Фіолетовий</string>
+    <string name="create_hair_red">Рудий</string>
+    <string name="create_companion_name">Ім\'я супутника</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Характер та соціальне походження</string>
+    <string name="create_personality">Характер</string>
+    <string name="create_occupation">Професія</string>
+    <string name="create_hobbies">Хобі</string>
+    <string name="create_relationships">Стосунки</string>
+    <string name="option_none">Немає</string>
+    <string name="options_done">Готово</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Дружній</item>
+        <item>Турботливий</item>
+        <item>Сором\'язливий</item>
+        <item>Товариський</item>
+        <item>Таємничий</item>
+        <item>Розумний</item>
+        <item>З почуттям гумору</item>
+        <item>Ніжний</item>
+        <item>Любить пригоди</item>
+        <item>Впевнений</item>
+        <item>Енергійний</item>
+        <item>Спокійний</item>
+        <item>Творчий</item>
+        <item>Амбітний</item>
+        <item>Чуйний</item>
+        <item>Вірний</item>
+        <item>Оптимістичний</item>
+        <item>Песимістичний</item>
+        <item>Саркастичний</item>
+        <item>Впертий</item>
+        <item>Чуттєвий</item>
+        <item>Грайливий</item>
+        <item>Домінантний</item>
+        <item>Покірний</item>
+        <item>Духовний</item>
+        <item>Практичний</item>
+        <item>Мрійливий</item>
+        <item>Бунтівний</item>
+        <item>Традиційний</item>
+        <item>Захисний</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Дизайнер</item>
+        <item>Консультант</item>
+        <item>Лікар</item>
+        <item>Медбрат/Медсестра</item>
+        <item>Інженер</item>
+        <item>Художник</item>
+        <item>Музикант</item>
+        <item>Шеф-кухар</item>
+        <item>Поліцейський</item>
+        <item>Підприємець</item>
+        <item>CEO-мільярдер</item>
+        <item>Модель</item>
+        <item>Актор</item>
+        <item>Письменник</item>
+        <item>Спортсмен</item>
+        <item>Науковець</item>
+        <item>Програміст</item>
+        <item>Юрист</item>
+        <item>Архітектор</item>
+        <item>Модельєр</item>
+        <item>Фотограф</item>
+        <item>Журналіст</item>
+        <item>Пілот</item>
+        <item>Бортпровідник</item>
+        <item>Бариста</item>
+        <item>Бібліотекар</item>
+        <item>Фрилансер</item>
+        <item>Інфлюенсер</item>
+        <item>Безробітний</item>
+        <item>Детектив</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Читання</item>
+        <item>Відеоігри</item>
+        <item>Подорожі</item>
+        <item>Кулінарія</item>
+        <item>Спорт</item>
+        <item>Музика</item>
+        <item>Фотографія</item>
+        <item>Живопис</item>
+        <item>Садівництво</item>
+        <item>Фільми</item>
+        <item>Аніме</item>
+        <item>Косплей</item>
+        <item>Танці</item>
+        <item>Спів</item>
+        <item>Письменництво</item>
+        <item>Шопінг</item>
+        <item>Фітнес</item>
+        <item>Йога</item>
+        <item>Медитація</item>
+        <item>Піші походи</item>
+        <item>Кемпінг</item>
+        <item>Риболовля</item>
+        <item>Рукоділля</item>
+        <item>Мода</item>
+        <item>Технології</item>
+        <item>Астрологія</item>
+        <item>Догляд за рослинами</item>
+        <item>Волонтерство</item>
+        <item>Автомобілі</item>
+        <item>Історія</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Друг</item>
+        <item>Найкращий друг</item>
+        <item>Дівчина</item>
+        <item>Хлопець</item>
+        <item>Дружина</item>
+        <item>Чоловік</item>
+        <item>Сестра</item>
+        <item>Брат</item>
+        <item>Супутник у подорожі</item>
+        <item>Партнер у пригодах</item>
+        <item>Наставник</item>
+        <item>Колега</item>
+        <item>Бос</item>
+        <item>Співробітник</item>
+        <item>Однокласник</item>
+        <item>Гід</item>
+        <item>Учень</item>
+        <item>Незнайомець</item>
+        <item>Сусід по кімнаті</item>
+        <item>Сусід</item>
+        <item>Колишній партнер</item>
+        <item>Друг дитинства</item>
+        <item>Таємний шанувальник</item>
+        <item>Суперник</item>
+        <item>Покоївка</item>
+        <item>Дворецький</item>
+        <item>Господар</item>
+        <item>Компаньйон</item>
+        <item>Споріднена душа</item>
+        <item>Знайомий</item>
+    </string-array>
+    <string name="store_best_value">НАЙВИГІДНІША ЦІНА</string>
+    <string name="setting_privacy_not_configured">Посилання на Політику конфіденційності не налаштоване</string>
+    <string name="setting_no_app_open_link">Немає додатків для відкриття цього посилання</string>
+    <string name="setting_unable_open_privacy">Не вдалося відкрити Політику конфіденційності</string>
+    <string name="chat_status_online">В мережі</string>
+    <string name="create_enter_description">Введіть опис персонажа</string>
+    <string name="create_enter_name">Введіть ім\'я персонажа</string>
+    <string name="create_select_personality_hobby">Виберіть характер та хобі</string>
+    <string name="image_generation_failed">Помилка генерації зображення</string>
+    <string name="enjoying_hd_camera">Подобається ШІ-дівчина?</string>
+    <string name="rate_us_on_the_google_play">Оцініть нас у Google Play!</string>
+    <string name="rate_now">Оцінити зараз</string>
+    <string name="not_now">Не зараз</string>
+    <string name="chat_relationship_stranger">Незнайомець</string>
+    <string name="chat_subtitle_format">%1$s • Рівень %2$d</string>
+    <string name="chat_title_format">Чат #%1$s</string>
+    <string name="first_day">Перший день</string>
+    <string name="feedback_reason_hint">Причина (наприклад, збій, повільно, незручний інтерфейс...)</string>
+    <string name="feedback_description_hint">Деталі або пропозиції...</string>
+    <string name="send_feedback">Надіслати відгук</string>
+</resources>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Aan de slag</string>
+    <string name="next">Volgende</string>
+    <string name="txt_thanks_you_for_rating">Bedankt voor je beoordeling!</string>
+    <string name="onboarding_title_1">Ontmoet iemand die je begrijpt</string>
+    <string name="onboarding_des_1">Ontmoet AI-metgezellen met unieke persoonlijkheden en verhalen, altijd klaar om te praten.</string>
+    <string name="onboarding_title_2">Gesprekken die echt en persoonlijk voelen</string>
+    <string name="onboarding_des_2">Deel je gedachten, ontdek nieuwe verhalen of geniet gewoon van een gesprek speciaal voor jou.</string>
+    <string name="onboarding_title_3">Creëer je perfecte metgezel</string>
+    <string name="onboarding_des_3">Kies uiterlijk, persoonlijkheid en interesses om je ideale AI-metgezel te ontwerpen.</string>
+    <string name="onboarding_title_4">Jouw verhaal begint hier</string>
+    <string name="onboarding_des_4">Maak contact, chat en ontdek elke dag iets nieuws.</string>
+    <string name="close">Sluiten</string>
+    <string name="try_again">Opnieuw proberen</string>
+    <string name="txt_cancel">Annuleren</string>
+    <string name="loading_label">Laden</string>
+    <string name="no_internet_title">Geen internetverbinding</string>
+    <string name="no_internet_message">Controleer je netwerkinstellingen om de app te blijven gebruiken.</string>
+    <string name="open_settings">Instellingen openen</string>
+    <string name="force_update_message">Er is een nieuwe versie beschikbaar. Werk bij om de app te blijven gebruiken.</string>
+    <string name="update_now">Nu bijwerken</string>
+    <string name="setting">Instellingen</string>
+    <string name="main_tab_discover">Ontdekken</string>
+    <string name="main_tab_reward">Beloningen</string>
+    <string name="main_tab_add">Toevoegen</string>
+    <string name="main_tab_chats">Chats</string>
+    <string name="main_tab_mission">Missies</string>
+    <string name="rate">Beoordelen</string>
+    <string name="share_with_friend">Delen met vrienden</string>
+    <string name="privacy_policy">Privacybeleid</string>
+    <string name="let_me_recommend">Ik raad deze app aan</string>
+    <string name="share_to">Delen via</string>
+    <string name="we_re_better_than_ever">De app wordt steeds beter</string>
+    <string name="error_generic">Er is iets misgegaan. Probeer het opnieuw.</string>
+    <string name="error_network_unavailable">Controleer je internetverbinding en probeer het opnieuw.</string>
+    <string name="error_auth_session_expired">Je sessie is verlopen. Probeer het opnieuw.</string>
+    <string name="error_auth_unavailable">Authenticatie kon niet worden voltooid. Probeer het later opnieuw.</string>
+    <string name="create_error_title">Kan personage niet maken</string>
+    <string name="error_insufficient_coins">Onvoldoende munten</string>
+    <string name="no_credits_left">Geen tegoed meer over</string>
+    <string name="balance_format">Saldo: %1$d</string>
+    <string name="buy_coins">Munten kopen</string>
+    <string name="coins">MUNTEN</string>
+    <string name="upgrade_pro">Upgraden naar Pro</string>
+    <string name="reward_error_title">Kan beloningen niet laden</string>
+    <string name="home_error_title">Kan inhoud niet laden</string>
+    <string name="home_empty_characters">Er zijn momenteel geen personages beschikbaar.</string>
+    <string name="home_create_assistant_title">Vind iemand\ndie je begrijpt</string>
+    <string name="home_create_assistant_subtitle">Maak je eigen AI-metgezel en\nbouw een betekenisvolle band op.</string>
+    <string name="home_create_assistant_action">Maak je AI</string>
+    <string name="home_top_assistants">Populairste assistenten</string>
+    <string name="home_recommend_for_you">Aanbevolen voor jou</string>
+    <string name="home_see_all">Alles weergeven</string>
+    <string name="setting_back">Terug</string>
+    <string name="character_detail_error_title">Kan personage niet laden</string>
+    <string name="character_detail_start_chat">Chat met mij</string>
+    <string name="chat_error_title">Kan chat niet laden</string>
+    <string name="chat_starter_title">Start een gesprek</string>
+    <string name="chat_starter_subtitle">Weet je niet wat je moet zeggen? Probeer een van deze suggesties.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>Hoi! Vertel me eens wat over jezelf.</item>
+        <item>Wat zou deze dag nóg interessanter maken?</item>
+        <item>Laten we een snel vraag-en-antwoordspel spelen.</item>
+    </string-array>
+    <string name="chat_input_hint">Vraag maar raak...</string>
+    <string name="today">Vandaag</string>
+    <string name="yesterday">Gisteren</string>
+    <string name="chat_send">Versturen</string>
+    <string name="chat_more_title">Meer</string>
+    <string name="chat_more_custom_background">Aangepaste achtergrond</string>
+    <string name="chat_more_delete">Chat verwijderen</string>
+    <string name="chat_more_report">Melden</string>
+    <string name="chat_role_assistant">Assistent</string>
+    <string name="chat_message_just_now">Zojuist</string>
+    <string name="chat_delete_title">Chat verwijderen?</string>
+    <string name="chat_delete_message">Weet je zeker dat je deze chat wilt verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
+    <string name="chat_delete_confirm">Verwijderen</string>
+    <string name="chat_delete_success">Chat succesvol verwijderd</string>
+    <string name="chat_report_title">Melden</string>
+    <string name="chat_report_message">Weet je zeker dat je deze gebruiker wilt melden? We zullen je melding beoordelen en passende actie ondernemen.</string>
+    <string name="chat_report_confirm">Melden</string>
+    <string name="chat_report_success">Bedankt voor je melding.</string>
+    <string name="chat_report_hint">Licht het probleem toe (optioneel)...</string>
+    <string name="chat_empty_title">Nog geen chats</string>
+    <string name="chat_empty_subtitle">Start een nieuw gesprek om je chats hier te zien verschijnen.</string>
+    <string name="chat_empty_start_chat">Start een chat</string>
+    <string name="actions">Acties</string>
+    <string name="store_title">Winkel</string>
+    <string name="store_top_up_coins">MUNTEN OPLADEN</string>
+    <string name="store_unlock_storylines">Ontgrendel verhaallijnen &amp; acties</string>
+    <string name="store_membership_plans">LIDMAATSCHAPPEN</string>
+    <string name="store_unlimited_vip">Premium VIP-ervaring</string>
+    <string name="store_restore_purchases">Aankopen herstellen</string>
+    <string name="store_terms_policies">Voorwaarden &amp; Beleid</string>
+    <string name="store_transactions_info">Transacties worden verwerkt via je Google Play-account.\nAbonnementen worden automatisch verlengd, tenzij ze ten minste 24 uur voor het einde van de huidige periode worden opgezegd.</string>
+    <string name="store_terms_privacy">Servicevoorwaarden   •   Privacybeleid</string>
+    <string name="store_product_not_found">Product niet gevonden</string>
+    <string name="store_purchase_cancelled">Aankoop geannuleerd</string>
+    <string name="store_restoring_purchases">Aankopen herstellen...</string>
+    <string name="store_restore_success">Aankopen succesvol hersteld!</string>
+    <string name="store_coins_credited">Munten succesvol bijgeschreven! Saldo: %1$d</string>
+    <string name="store_purchase_processing">Aankoop geslaagd. Munten worden verwerkt, vernieuw over een ogenblik.</string>
+    <string name="store_vip_activated">VIP-lidmaatschap succesvol geactiveerd!</string>
+    <string name="store_vip_processing">Aankoop geslaagd. VIP-status wordt verwerkt, vernieuw over een ogenblik.</string>
+    <string name="store_duration_month">per maand</string>
+    <string name="store_duration_year">per jaar</string>
+    <string name="store_vip_desc_month">Maandelijkse VIP-toegang met dagelijkse muntbeloningen</string>
+    <string name="store_vip_desc_year">Jaarlijkse VIP-toegang met dagelijkse beloningen en premium functies</string>
+    <string name="store_vip_benefit_1">Bonus van 500 munten bij elke dagelijkse login</string>
+    <string name="store_vip_benefit_2">Bonus van 750 munten bij elke dagelijkse login</string>
+    <string name="store_vip_benefit_3">Geniet van alle voordelen van je VIP-lidmaatschap</string>
+    <string name="store_vip_footer_month">Wordt maandelijks automatisch verlengd. Altijd opzegbaar.</string>
+    <string name="store_vip_footer_year">Wordt jaarlijks automatisch verlengd. Altijd opzegbaar in Google Play.</string>
+    <string name="store_empty_title">Geen pakketten beschikbaar</string>
+    <string name="store_empty_subtitle">Producten zijn momenteel niet beschikbaar. Kom later terug.</string>
+    <string name="store_empty_retry">Opnieuw proberen</string>
+    <string name="store_empty_vip_plans">Lidmaatschapsplannen zijn momenteel niet beschikbaar.</string>
+    <string name="store_empty_coin_packages">Muntpakketten zijn momenteel niet beschikbaar.</string>
+    <string name="sub_empty_plans">Lidmaatschapsplannen zijn momenteel niet beschikbaar. Controleer later opnieuw.</string>
+    <string name="coins_empty_packages">Muntpakketten zijn momenteel niet beschikbaar. Controleer later opnieuw.</string>
+    <string name="character_detail_hot">POPULAIR</string>
+    <string name="character_badge_new">NIEUW</string>
+    <string name="histories_title">Geschiedenis</string>
+    <string name="character_detail_intimacy_title">Voortgang relatie</string>
+    <string name="character_detail_level_format">Niveau %1$d</string>
+    <string name="character_detail_intimacy_hint">Elk bericht levert tot +%1$d connectiepunten op</string>
+    <string name="character_detail_exclusive_photo_gallery">Exclusieve fotogalerij</string>
+    <string name="character_detail_about">Over %1$s</string>
+    <string name="character_detail_chats">Chats</string>
+    <string name="character_detail_rating">Beoordeling</string>
+    <string name="character_detail_most_popular">Populairst</string>
+    <string name="character_detail_rank_format">Top %1$d</string>
+    <string name="character_detail_personality_traits">Persoonlijkheid &amp; Eigenschappen</string>
+    <string name="character_detail_purchase_success">Achtergrond succesvol ontgrendeld!</string>
+    <string name="continue_">Doorgaan</string>
+    <string name="sub_price_month_format">%1$s/ maand</string>
+    <string name="sub_price_year_format">%1$s/ jaar</string>
+    <string name="sub_feature_outfits">Toegang tot premium verhalen en exclusieve momenten</string>
+    <string name="sub_plan_monthly">Maandelijks</string>
+    <string name="sub_plan_yearly">Jaarlijks</string>
+    <string name="sub_subscribe_now">Nu abonneren</string>
+    <string name="sub_current_plan">HUIDIG PLAN</string>
+    <string name="sub_fine_print_1">De betaling wordt na aankoopbevestiging in rekening gebracht op je Google Play-account.</string>
+    <string name="sub_fine_print_2">Je abonnement wordt automatisch verlengd volgens je plan, tenzij het ten minste 24 uur voor het einde van de huidige periode wordt opgezegd.</string>
+    <string name="sub_fine_print_3">Niet-abonnees kunnen de service nog steeds gebruiken, maar sommige betaalde functies kunnen beperkt zijn.</string>
+    <string name="sub_fine_print_4">Je kunt je abonnement op elk moment beheren of opzeggen in het gedeelte Abonnementen op Google Play.</string>
+    <string name="sub_restore_purchase">Aankopen herstellen</string>
+    <string name="sub_paywall_title">Ontgrendel meer met AURA+</string>
+    <string name="sub_paywall_subtitle">Diepgaandere gesprekken. Meer creatieve mogelijkheden.</string>
+    <string name="sub_feature_unlimited_messages">Premium verhalen</string>
+    <string name="sub_feature_exclusive_companions">Hechtere band</string>
+    <string name="sub_feature_create_characters">Dagelijkse munten</string>
+    <string name="sub_feature_chat_backgrounds">Geen advertenties</string>
+    <string name="sub_cancel_anytime">Altijd opzegbaar</string>
+    <string name="sub_best_value_arrow">Beste deal &gt;</string>
+    <string name="sub_terms">Voorwaarden</string>
+    <string name="sub_privacy">Privacy</string>
+    <string name="sub_save_percent_format">BESPAAR %1$d%%</string>
+    <string name="sub_save_badge_format">BESPAAR %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/maand, jaarlijks gefactureerd</string>
+    <string name="sub_billed_annually_fallback">%1$s, jaarlijks gefactureerd</string>
+    <string name="sub_billed_monthly_format">%1$s/maand, maandelijks gefactureerd</string>
+    <string name="sub_billed_monthly_fallback">%1$s, maandelijks gefactureerd</string>
+    <string name="store_coins_format">%1$d Munten</string>
+    <string name="feedback_subject">Feedback</string>
+    <string name="send_feedback_chooser">Feedback versturen:</string>
+    <string name="send_email_via">E-mail versturen via:</string>
+    <string name="no_email_client_found">Geen e-mailapp gevonden</string>
+    <string name="select_a_language">Selecteer een taal</string>
+    <string name="reward_your_progress">Je voortgang</string>
+    <string name="reward_check_in_today">Vandaag inchecken</string>
+    <string name="reward_checked_in_today">Vandaag ingecheckt</string>
+    <string name="reward_earn_rewards">Beloningen verdienen</string>
+    <string name="reward_daily_ads">Dagelijkse beloningsadvertenties</string>
+    <string name="reward_daily_ads_desc">+%1$d munten per advertentie</string>
+    <string name="reward_watch_ads_format">Advertenties bekijken (%1$d/10)</string>
+    <string name="reward_ads_unavailable">Momenteel zijn er geen advertenties beschikbaar. Probeer het over een paar minuten opnieuw.</string>
+    <string name="reward_vip_unlocked">VIP-lid</string>
+    <string name="reward_vip_unlocked_desc">Advertentievrije ervaring actief</string>
+    <string name="reward_claimed_title">Beloning geclaimd!</string>
+    <string name="reward_claimed_desc">Je dagelijkse check-in beloning is toegevoegd aan je inventaris.</string>
+    <string name="reward_claimed_coin_format">+%1$d Munten</string>
+    <string name="reward_processing">Beloning wordt verwerkt. Je saldo wordt spoedig bijgewerkt.</string>
+    <string name="reward_day_format">Dag %1$d</string>
+    <string name="mission_tab_mission">Missies</string>
+    <string name="mission_tab_history">Geschiedenis</string>
+    <string name="mission_no_active">Geen actieve missies op dit moment.</string>
+    <string name="mission_coins_earned_format">+%1$d Munten</string>
+    <string name="mission_type_daily_login">Dagelijkse login</string>
+    <string name="mission_type_watch_ad">Advertentie bekijken</string>
+    <string name="mission_type_play_game">Spel spelen</string>
+    <string name="mission_type_online">5 min online</string>
+    <string name="mission_type_share">Delen met een vriend</string>
+    <string name="mission_type_reward_claim">Beloning claimen</string>
+    <string name="mission_type_iap_purchase">Munten toegevoegd</string>
+    <string name="mission_type_promo_code">Promocode</string>
+    <string name="mission_history_footer_stardust">Daden ouder dan 30 dagen lossen op in sterrenstof</string>
+    <string name="next_step">Volgende stap</string>
+    <string name="create_screen_title">Personage maken</string>
+    <string name="create_generate_cost">Genereren voor %1$d</string>
+    <string name="create_step_label_format">STAP %1$d VAN %2$d: %3$s</string>
+    <string name="create_step_general_setup">ALGEMENE INSTELLINGEN</string>
+    <string name="create_step_appearance_details">UITERLIJKE DETAILS</string>
+    <string name="create_step_hair_customization">HAAR AANPASSEN</string>
+    <string name="create_step_personality_identity">PERSOONLIJKHEID &amp; IDENTITEIT</string>
+    <string name="create_companion_gender">Identiteit</string>
+    <string name="create_gender_girls">Vrouw</string>
+    <string name="create_gender_guys">Man</string>
+    <string name="create_gender_trans">Non-binair</string>
+    <string name="create_inspire_me">Inspireer mij</string>
+    <string name="create_visual_style">Visuele stijl</string>
+    <string name="create_style_realistic">Realistisch</string>
+    <string name="create_style_anime">Anime</string>
+    <string name="create_describe_to_create">Beschrijf om te maken</string>
+    <string name="create_prompt_hint">Bijv.: “Een lieve, zorgzame vriendin die houdt van sterrenkijken om middernacht, poëzie en warme thee zetten...”</string>
+    <string name="create_companion_ethnicity">Etniciteit van metgezel</string>
+    <string name="create_ethnicity_east_asian">Oost-Aziatisch</string>
+    <string name="create_ethnicity_south_asian">Zuid-Aziatisch</string>
+    <string name="create_ethnicity_black">Zwart</string>
+    <string name="create_ethnicity_white">Wit</string>
+    <string name="create_ethnicity_asian">Aziatisch</string>
+    <string name="create_ethnicity_latina">Latino</string>
+    <string name="create_age">Leeftijd</string>
+    <string name="create_skin_tone">Huidskleur</string>
+    <string name="create_hair_color">Haarkleur</string>
+    <string name="create_hair_blonde">Blond</string>
+    <string name="create_hair_black">Zwart</string>
+    <string name="create_hair_copper">Koper</string>
+    <string name="create_hair_blue">Blauw</string>
+    <string name="create_hair_purple">Paars</string>
+    <string name="create_hair_red">Rood</string>
+    <string name="create_companion_name">Naam van metgezel</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Persoonlijkheid &amp; Sociale achtergrond</string>
+    <string name="create_personality">Persoonlijkheid</string>
+    <string name="create_occupation">Beroep</string>
+    <string name="create_hobbies">Hobby\'s</string>
+    <string name="create_relationships">Relatie</string>
+    <string name="option_none">Geen</string>
+    <string name="options_done">Klaar</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Vriendelijk</item>
+        <item>Zorgzaam</item>
+        <item>Verlegen</item>
+        <item>Extravert</item>
+        <item>Mysterieus</item>
+        <item>Intelligent</item>
+        <item>Humoristisch</item>
+        <item>Aanhankelijk</item>
+        <item>Avontuurlijk</item>
+        <item>Zelfverzekerd</item>
+        <item>Energiek</item>
+        <item>Rustig</item>
+        <item>Creatief</item>
+        <item>Ambitieus</item>
+        <item>Empathisch</item>
+        <item>Loyaal</item>
+        <item>Optimistisch</item>
+        <item>Pessimistisch</item>
+        <item>Sarcastisch</item>
+        <item>Koppig</item>
+        <item>Sensueel</item>
+        <item>Speels</item>
+        <item>Dominant</item>
+        <item>Onderdanig</item>
+        <item>Spiritueel</item>
+        <item>Praktisch</item>
+        <item>Dromerig</item>
+        <item>Rebels</item>
+        <item>Traditioneel</item>
+        <item>Beschermend</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Ontwerper</item>
+        <item>Consultant</item>
+        <item>Arts</item>
+        <item>Verpleegkundige</item>
+        <item>Ingenieur</item>
+        <item>Kunstenaar</item>
+        <item>Muzikant</item>
+        <item>Chef-kok</item>
+        <item>Politieagent</item>
+        <item>Ondernemer</item>
+        <item>Miljardair CEO</item>
+        <item>Model</item>
+        <item>Acteur</item>
+        <item>Schrijver</item>
+        <item>Atleet</item>
+        <item>Wetenschapper</item>
+        <item>Programmeur</item>
+        <item>Advocaat</item>
+        <item>Architect</item>
+        <item>Modeontwerper</item>
+        <item>Fotograaf</item>
+        <item>Journalist</item>
+        <item>Piloot</item>
+        <item>Steward/Stewardess</item>
+        <item>Barista</item>
+        <item>Bibliothecaris</item>
+        <item>Freelancer</item>
+        <item>Influencer</item>
+        <item>Werkloos</item>
+        <item>Detective</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Lezen</item>
+        <item>Gamen</item>
+        <item>Reizen</item>
+        <item>Koken</item>
+        <item>Sport</item>
+        <item>Muziek</item>
+        <item>Fotografie</item>
+        <item>Schilderen</item>
+        <item>Tuinieren</item>
+        <item>Films</item>
+        <item>Anime</item>
+        <item>Cosplay</item>
+        <item>Dansen</item>
+        <item>Zingen</item>
+        <item>Schrijven</item>
+        <item>Winkelen</item>
+        <item>Fitness</item>
+        <item>Yoga</item>
+        <item>Meditatie</item>
+        <item>Wandelen</item>
+        <item>Kamperen</item>
+        <item>Vissen</item>
+        <item>Knutselen</item>
+        <item>Mode</item>
+        <item>Technologie</item>
+        <item>Astrologie</item>
+        <item>Planten verzorgen</item>
+        <item>Vrijwilligerswerk</item>
+        <item>Auto\'s</item>
+        <item>Geschiedenis</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Vriend</item>
+        <item>Beste vriend</item>
+        <item>Vriendin</item>
+        <item>Vriend</item>
+        <item>Vrouw</item>
+        <item>Man</item>
+        <item>Zus</item>
+        <item>Broer</item>
+        <item>Reismaatje</item>
+        <item>Avontuurpartner</item>
+        <item>Mentor</item>
+        <item>Collega</item>
+        <item>Baas</item>
+        <item>Werknemer</item>
+        <item>Klasgenoot</item>
+        <item>Gids</item>
+        <item>Leerling</item>
+        <item>Vreemde</item>
+        <item>Kamergenoot</item>
+        <item>Buur</item>
+        <item>Ex-partner</item>
+        <item>Jeugdvriend</item>
+        <item>Geheime aanbidder</item>
+        <item>Rivaal</item>
+        <item>Dienstmeisje</item>
+        <item>Butler</item>
+        <item>Gastheer</item>
+        <item>Metgezel</item>
+        <item>Zielsverwant</item>
+        <item>Kennis</item>
+    </string-array>
+    <string name="store_best_value">BESTE DEAL</string>
+    <string name="setting_privacy_not_configured">Privacybeleid-URL is niet geconfigureerd</string>
+    <string name="setting_no_app_open_link">Geen app beschikbaar om deze link te openen</string>
+    <string name="setting_unable_open_privacy">Kan Privacybeleid niet openen</string>
+    <string name="chat_status_online">Online</string>
+    <string name="create_enter_description">Voer personagebeschrijving in</string>
+    <string name="create_enter_name">Voer personagenaam in</string>
+    <string name="create_select_personality_hobby">Kies persoonlijkheid en hobby\'s</string>
+    <string name="image_generation_failed">Afbeelding genereren mislukt</string>
+    <string name="enjoying_hd_camera">Bevalt AI Vriendin je?</string>
+    <string name="rate_us_on_the_google_play">Beoordeel ons op Google Play!</string>
+    <string name="rate_now">Nu beoordelen</string>
+    <string name="not_now">Niet nu</string>
+    <string name="chat_relationship_stranger">Vreemde</string>
+    <string name="chat_subtitle_format">%1$s • Niveau %2$d</string>
+    <string name="chat_title_format">Chat #%1$s</string>
+    <string name="first_day">Eerste dag</string>
+    <string name="feedback_reason_hint">Reden (bijv. crash, traag, interface...)</string>
+    <string name="feedback_description_hint">Details of suggesties...</string>
+    <string name="send_feedback">Feedback verzenden</string>
+</resources>

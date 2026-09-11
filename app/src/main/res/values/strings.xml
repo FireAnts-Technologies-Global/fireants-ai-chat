@@ -165,6 +165,17 @@
     <string name="sub_best_value_arrow">Best value &gt;</string>
     <string name="sub_terms">Terms</string>
     <string name="sub_privacy">Privacy</string>
+    <string name="sub_save_percent_format">SAVE %1$d%%</string>
+    <string name="sub_save_badge_format">SAVE %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/month, billed annually</string>
+    <string name="sub_billed_annually_fallback">%1$s, billed annually</string>
+    <string name="sub_billed_monthly_format">%1$s/month, billed monthly</string>
+    <string name="sub_billed_monthly_fallback">%1$s, billed monthly</string>
+    <string name="store_coins_format">%1$d Coins</string>
+    <string name="feedback_subject">Feedback</string>
+    <string name="send_feedback_chooser">Send Feedback:</string>
+    <string name="send_email_via">Send Email via:</string>
+    <string name="no_email_client_found">No email client found</string>
     <string name="select_a_language">Select a language</string>
     <string name="reward_your_progress">Your Progress</string>
     <string name="reward_check_in_today">Check In Today</string>

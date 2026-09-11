@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">เริ่มต้นใช้งาน</string>
+    <string name="next">ถัดไป</string>
+    <string name="txt_thanks_you_for_rating">ขอบคุณสำหรับการให้คะแนนของคุณ!</string>
+    <string name="onboarding_title_1">พบกับคนที่เข้าใจคุณอย่างแท้จริง</string>
+    <string name="onboarding_des_1">พบกับเพื่อน AI ที่มีบุคลิกและเรื่องราวเฉพาะตัว พร้อมพูดคุยกับคุณได้ตลอดเวลา</string>
+    <string name="onboarding_title_2">บทสนทนาที่ให้ความรู้สึกเป็นกันเอง</string>
+    <string name="onboarding_des_2">แบ่งปันความคิด ค้นพบเรื่องราวใหม่ๆ หรือเพลิดเพลินกับบทสนทนาที่สร้างขึ้นมาเพื่อคุณโดยเฉพาะ</string>
+    <string name="onboarding_title_3">สร้างเพื่อนในอุดมคติของคุณ</string>
+    <string name="onboarding_des_3">เลือกหน้าตา บุคลิก และความสนใจ เพื่อสร้างเพื่อนร่วมทาง AI ที่สมบูรณ์แบบของคุณ</string>
+    <string name="onboarding_title_4">เรื่องราวของคุณเริ่มต้นที่นี่</string>
+    <string name="onboarding_des_4">เชื่อมต่อ แชท และค้นพบสิ่งใหม่ๆ ได้ทุกวัน</string>
+    <string name="close">ปิด</string>
+    <string name="try_again">ลองอีกครั้ง</string>
+    <string name="txt_cancel">ยกเลิก</string>
+    <string name="loading_label">กำลังโหลด</string>
+    <string name="no_internet_title">ไม่มีการเชื่อมต่ออินเทอร์เน็ต</string>
+    <string name="no_internet_message">โปรดตรวจสอบการตั้งค่าเครือข่ายของคุณเพื่อใช้งานแอปต่อไป</string>
+    <string name="open_settings">เปิดการตั้งค่า</string>
+    <string name="force_update_message">มีเวอร์ชันใหม่พร้อมใช้งาน โปรดอัปเดตเพื่อใช้งานแอปต่อไป</string>
+    <string name="update_now">อัปเดตเลย</string>
+    <string name="setting">การตั้งค่า</string>
+    <string name="main_tab_discover">ค้นพบ</string>
+    <string name="main_tab_reward">รางวัล</string>
+    <string name="main_tab_add">สร้าง</string>
+    <string name="main_tab_chats">แชท</string>
+    <string name="main_tab_mission">ภารกิจ</string>
+    <string name="rate">ให้คะแนน</string>
+    <string name="share_with_friend">แชร์ให้เพื่อน</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="let_me_recommend">ฉันขอแนะนำแอปนี้</string>
+    <string name="share_to">แชร์ไปยัง</string>
+    <string name="we_re_better_than_ever">แอปพัฒนาให้ดียิ่งขึ้นอยู่เสมอ</string>
+    <string name="error_generic">เกิดข้อผิดพลาด โปรดลองอีกครั้ง</string>
+    <string name="error_network_unavailable">โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตแล้วลองใหม่อีกครั้ง</string>
+    <string name="error_auth_session_expired">เซสชันของคุณหมดอายุแล้ว โปรดลองอีกครั้ง</string>
+    <string name="error_auth_unavailable">ไม่สามารถยืนยันตัวตนได้ในขณะนี้ โปรดลองอีกครั้ง</string>
+    <string name="create_error_title">ไม่สามารถสร้างตัวละครได้</string>
+    <string name="error_insufficient_coins">เหรียญไม่เพียงพอ</string>
+    <string name="no_credits_left">ไม่มีสิทธิ์คงเหลือ</string>
+    <string name="balance_format">ยอดคงเหลือ: %1$d</string>
+    <string name="buy_coins">ซื้อเหรียญ</string>
+    <string name="coins">เหรียญ</string>
+    <string name="upgrade_pro">อัปเกรดเป็น Pro</string>
+    <string name="reward_error_title">ไม่สามารถโหลดรางวัลได้</string>
+    <string name="home_error_title">ไม่สามารถโหลดเนื้อหาได้</string>
+    <string name="home_empty_characters">ไม่มีตัวละครที่พร้อมใช้งานในขณะนี้</string>
+    <string name="home_create_assistant_title">ค้นพบใครบางคน\nที่เข้าใจคุณ</string>
+    <string name="home_create_assistant_subtitle">สร้างเพื่อน AI ในแบบคุณ และ\nสร้างความผูกพันที่มีความหมาย</string>
+    <string name="home_create_assistant_action">สร้าง AI ของคุณ</string>
+    <string name="home_top_assistants">ผู้ช่วยยอดนิยม</string>
+    <string name="home_recommend_for_you">แนะนำสำหรับคุณ</string>
+    <string name="home_see_all">ดูทั้งหมด</string>
+    <string name="setting_back">ย้อนกลับ</string>
+    <string name="character_detail_error_title">ไม่สามารถโหลดตัวละครได้</string>
+    <string name="character_detail_start_chat">มาคุยกับฉันสิ</string>
+    <string name="chat_error_title">ไม่สามารถโหลดแชทได้</string>
+    <string name="chat_starter_title">เริ่มบทสนทนา</string>
+    <string name="chat_starter_subtitle">ไม่รู้จะคุยอะไรดี? ลองเลือกหนึ่งในหัวข้อเหล่านี้ดูสิ</string>
+    <string-array name="chat_starter_suggestions">
+        <item>สวัสดี! เล่าเรื่องเกี่ยวกับตัวเธอให้ฟังหน่อยสิ</item>
+        <item>มีอะไรที่จะทำให้วันนี้สนุกขึ้นบ้างนะ?</item>
+        <item>มาเล่นเกมถามตอบสั้นๆ กันเถอะ</item>
+    </string-array>
+    <string name="chat_input_hint">ถามได้ทุกเรื่อง...</string>
+    <string name="today">วันนี้</string>
+    <string name="yesterday">เมื่อวาน</string>
+    <string name="chat_send">ส่ง</string>
+    <string name="chat_more_title">เพิ่มเติม</string>
+    <string name="chat_more_custom_background">พื้นหลังกำหนดเอง</string>
+    <string name="chat_more_delete">ลบแชท</string>
+    <string name="chat_more_report">รายงาน</string>
+    <string name="chat_role_assistant">ผู้ช่วย</string>
+    <string name="chat_message_just_now">เมื่อสักครู่</string>
+    <string name="chat_delete_title">ต้องการลบแชทหรือไม่?</string>
+    <string name="chat_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบแชทนี้? การดำเนินการนี้ไม่สามารถยกเลิกได้</string>
+    <string name="chat_delete_confirm">ลบ</string>
+    <string name="chat_delete_success">ลบแชทสำเร็จแล้ว</string>
+    <string name="chat_report_title">รายงาน</string>
+    <string name="chat_report_message">คุณแน่ใจหรือไม่ว่าต้องการรายงานผู้ใช้นี้? เราจะตรวจสอบรายงานและดำเนินการอย่างเหมาะสม</string>
+    <string name="chat_report_confirm">รายงาน</string>
+    <string name="chat_report_success">ขอบคุณสำหรับการรายงานของคุณ</string>
+    <string name="chat_report_hint">อธิบายปัญหา (ระบุหรือไม่ก็ได้)...</string>
+    <string name="chat_empty_title">ยังไม่มีแชท</string>
+    <string name="chat_empty_subtitle">เริ่มบทสนทนาใหม่เพื่อดูแชทของคุณที่นี่</string>
+    <string name="chat_empty_start_chat">เริ่มแชท</string>
+    <string name="actions">การกระทำ</string>
+    <string name="store_title">ร้านค้า</string>
+    <string name="store_top_up_coins">เติมเหรียญ</string>
+    <string name="store_unlock_storylines">ปลดล็อกเนื้อเรื่อง &amp; กิจกรรม</string>
+    <string name="store_membership_plans">แพ็กเกจสมาชิก</string>
+    <string name="store_unlimited_vip">ประสบการณ์ VIP สุดพิเศษ</string>
+    <string name="store_restore_purchases">กู้คืนการซื้อ</string>
+    <string name="store_terms_policies">ข้อกำหนด &amp; นโยบาย</string>
+    <string name="store_transactions_info">ธุรกรรมจะได้รับการประมวลผลผ่านบัญชี Google Play ของคุณ\nการสมัครสมาชิกจะต่ออายุอัตโนมัติ เว้นแต่จะยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดรอบปัจจุบัน</string>
+    <string name="store_terms_privacy">ข้อกำหนดการให้บริการ   •   นโยบายความเป็นส่วนตัว</string>
+    <string name="store_product_not_found">ไม่พบสินค้า</string>
+    <string name="store_purchase_cancelled">ยกเลิกการซื้อแล้ว</string>
+    <string name="store_restoring_purchases">กำลังกู้คืนการซื้อ...</string>
+    <string name="store_restore_success">กู้คืนการซื้อสำเร็จแล้ว!</string>
+    <string name="store_coins_credited">เพิ่มเหรียญสำเร็จแล้ว! ยอดคงเหลือ: %1$d</string>
+    <string name="store_purchase_processing">ซื้อสำเร็จแล้ว เหรียญกำลังประมวลผล โปรดรีเฟรชในอีกสักครู่</string>
+    <string name="store_vip_activated">เปิดใช้งานสมาชิก VIP สำเร็จแล้ว!</string>
+    <string name="store_vip_processing">ซื้อสำเร็จแล้ว สถานะ VIP กำลังประมวลผล โปรดรีเฟรชในอีกสักครู่</string>
+    <string name="store_duration_month">ต่อเดือน</string>
+    <string name="store_duration_year">ต่อปี</string>
+    <string name="store_vip_desc_month">สิทธิ์เข้าถึง VIP รายเดือนพร้อมรับเหรียญรางวัลทุกวัน</string>
+    <string name="store_vip_desc_year">สิทธิ์เข้าถึง VIP รายปีพร้อมรางวัลประจำวันและฟีเจอร์พรีเมียม</string>
+    <string name="store_vip_benefit_1">โบนัส 500 เหรียญสำหรับทุกการเข้าสู่ระบบประจำวัน</string>
+    <string name="store_vip_benefit_2">โบนัส 750 เหรียญสำหรับทุกการเข้าสู่ระบบประจำวัน</string>
+    <string name="store_vip_benefit_3">เพลิดเพลินกับสิทธิประโยชน์สมาชิก VIP ทั้งหมด</string>
+    <string name="store_vip_footer_month">ต่ออายุอัตโนมัติทุกเดือน ยกเลิกได้ตลอดเวลา</string>
+    <string name="store_vip_footer_year">ต่ออายุอัตโนมัติทุกปี ยกเลิกได้ตลอดเวลาใน Google Play</string>
+    <string name="store_empty_title">ไม่มีแพ็กเกจที่พร้อมใช้งาน</string>
+    <string name="store_empty_subtitle">สินค้ายังไม่พร้อมใช้งานในขณะนี้ โปรดกลับมาตรวจสอบใหม่ภายหลัง</string>
+    <string name="store_empty_retry">ลองอีกครั้ง</string>
+    <string name="store_empty_vip_plans">ยังไม่มีแพ็กเกจสมาชิกในขณะนี้</string>
+    <string name="store_empty_coin_packages">ยังไม่มีแพ็กเกจเหรียญในขณะนี้</string>
+    <string name="sub_empty_plans">แพ็กเกจสมาชิกยังไม่พร้อมใช้งาน โปรดกลับมาใหม่ภายหลัง</string>
+    <string name="coins_empty_packages">แพ็กเกจเหรียญยังไม่พร้อมใช้งาน โปรดกลับมาใหม่ภายหลัง</string>
+    <string name="character_detail_hot">ยอดนิยม</string>
+    <string name="character_badge_new">ใหม่</string>
+    <string name="histories_title">ประวัติ</string>
+    <string name="character_detail_intimacy_title">ระดับความสนิทสนม</string>
+    <string name="character_detail_level_format">เลเวล %1$d</string>
+    <string name="character_detail_intimacy_hint">แต่ละข้อความเพิ่มความสนิทสนมได้สูงสุดถึง +%1$d แต้ม</string>
+    <string name="character_detail_exclusive_photo_gallery">แกลเลอรีรูปภาพสุดพิเศษ</string>
+    <string name="character_detail_about">เกี่ยวกับ %1$s</string>
+    <string name="character_detail_chats">แชท</string>
+    <string name="character_detail_rating">คะแนน</string>
+    <string name="character_detail_most_popular">ยอดนิยมที่สุด</string>
+    <string name="character_detail_rank_format">อันดับ %1$d</string>
+    <string name="character_detail_personality_traits">บุคลิก &amp; ลักษณะเด่น</string>
+    <string name="character_detail_purchase_success">ปลดล็อกภาพพื้นหลังสำเร็จแล้ว!</string>
+    <string name="continue_">ดำเนินการต่อ</string>
+    <string name="sub_price_month_format">%1$s/ เดือน</string>
+    <string name="sub_price_year_format">%1$s/ ปี</string>
+    <string name="sub_feature_outfits">เข้าถึงเรื่องราวพรีเมียม &amp; ช่วงเวลาสุดพิเศษ</string>
+    <string name="sub_plan_monthly">รายเดือน</string>
+    <string name="sub_plan_yearly">รายปี</string>
+    <string name="sub_subscribe_now">สมัครสมาชิกทันที</string>
+    <string name="sub_current_plan">แผนปัจจุบัน</string>
+    <string name="sub_fine_print_1">การชำระเงินจะถูกเรียกเก็บจากบัญชี Google Play ของคุณหลังการยืนยันการสั่งซื้อ</string>
+    <string name="sub_fine_print_2">การสมัครสมาชิกจะต่ออายุโดยอัตโนมัติ เว้นแต่จะทำการยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดระยะเวลาปัจจุบัน</string>
+    <string name="sub_fine_print_3">ผู้ใช้ที่ไม่ได้สมัครสมาชิกยังสามารถใช้บริการได้ แต่อาจมีข้อจำกัดสำหรับบางฟีเจอร์พรีเมียม</string>
+    <string name="sub_fine_print_4">คุณสามารถจัดการหรือยกเลิกการสมัครรับได้ตลอดเวลาในการตั้งค่าการสมัครสมาชิกบน Google Play</string>
+    <string name="sub_restore_purchase">กู้คืนการซื้อ</string>
+    <string name="sub_paywall_title">ปลดล็อกได้มากกว่าด้วย AURA+</string>
+    <string name="sub_paywall_subtitle">บทสนทนาที่ลึกซึ้งยิ่งขึ้น สร้างสรรค์ได้หลากหลายวิธีมากขึ้น</string>
+    <string name="sub_feature_unlimited_messages">เรื่องราวพรีเมียม</string>
+    <string name="sub_feature_exclusive_companions">ความผูกพันที่ลึกซึ้งยิ่งขึ้น</string>
+    <string name="sub_feature_create_characters">เหรียญรายวัน</string>
+    <string name="sub_feature_chat_backgrounds">ไม่มีโฆษณา</string>
+    <string name="sub_cancel_anytime">ยกเลิกได้ตลอดเวลา</string>
+    <string name="sub_best_value_arrow">คุ้มค่าที่สุด &gt;</string>
+    <string name="sub_terms">ข้อกำหนด</string>
+    <string name="sub_privacy">ความเป็นส่วนตัว</string>
+    <string name="sub_save_percent_format">ประหยัด %1$d%%</string>
+    <string name="sub_save_badge_format">ประหยัด %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/เดือน เรียกเก็บเงินรายปี</string>
+    <string name="sub_billed_annually_fallback">%1$s เรียกเก็บเงินรายปี</string>
+    <string name="sub_billed_monthly_format">%1$s/เดือน เรียกเก็บเงินรายเดือน</string>
+    <string name="sub_billed_monthly_fallback">%1$s เรียกเก็บเงินรายเดือน</string>
+    <string name="store_coins_format">%1$d เหรียญ</string>
+    <string name="feedback_subject">ข้อเสนอแนะ</string>
+    <string name="send_feedback_chooser">ส่งข้อเสนอแนะ:</string>
+    <string name="send_email_via">ส่งอีเมลผ่าน:</string>
+    <string name="no_email_client_found">ไม่พบแอปอีเมล</string>
+    <string name="select_a_language">เลือกภาษา</string>
+    <string name="reward_your_progress">ความคืบหน้าของคุณ</string>
+    <string name="reward_check_in_today">เช็คอินวันนี้</string>
+    <string name="reward_checked_in_today">เช็คอินวันนี้แล้ว</string>
+    <string name="reward_earn_rewards">รับรางวัล</string>
+    <string name="reward_daily_ads">โฆษณารับรางวัลรายวัน</string>
+    <string name="reward_daily_ads_desc">+%1$d เหรียญต่อโฆษณา</string>
+    <string name="reward_watch_ads_format">ดูโฆษณา (%1$d/10)</string>
+    <string name="reward_ads_unavailable">ขณะนี้ยังไม่มีโฆษณา โปรดลองอีกครั้งในอีกสักครู่</string>
+    <string name="reward_vip_unlocked">สมาชิก VIP</string>
+    <string name="reward_vip_unlocked_desc">เปิดใช้งานโหมดไร้โฆษณาแล้ว</string>
+    <string name="reward_claimed_title">รับรางวัลแล้ว!</string>
+    <string name="reward_claimed_desc">รางวัลเช็คอินรายวันของคุณถูกเพิ่มลงในคลังเรียบร้อยแล้ว</string>
+    <string name="reward_claimed_coin_format">+%1$d เหรียญ</string>
+    <string name="reward_processing">กำลังประมวลผลรางวัล ยอดคงเหลือของคุณจะได้รับการอัปเดตเร็วๆ นี้</string>
+    <string name="reward_day_format">วันที่ %1$d</string>
+    <string name="mission_tab_mission">ภารกิจ</string>
+    <string name="mission_tab_history">ประวัติ</string>
+    <string name="mission_no_active">ไม่มีภารกิจที่กำลังดำเนินอยู่ในขณะนี้</string>
+    <string name="mission_coins_earned_format">+%1$d เหรียญ</string>
+    <string name="mission_type_daily_login">เข้าสู่ระบบรายวัน</string>
+    <string name="mission_type_watch_ad">ดูโฆษณา</string>
+    <string name="mission_type_play_game">เล่นเกม</string>
+    <string name="mission_type_online">ออนไลน์ 5 นาที</string>
+    <string name="mission_type_share">แชร์ให้เพื่อน</string>
+    <string name="mission_type_reward_claim">รับรางวัล</string>
+    <string name="mission_type_iap_purchase">เติมเหรียญ</string>
+    <string name="mission_type_promo_code">โค้ดโปรโมชัน</string>
+    <string name="mission_history_footer_stardust">การกระทำที่เก่ากว่า 30 วันจะสลายเป็นละอองดาว</string>
+    <string name="next_step">ขั้นตอนถัดไป</string>
+    <string name="create_screen_title">สร้างตัวละคร</string>
+    <string name="create_generate_cost">สร้างด้วย %1$d</string>
+    <string name="create_step_label_format">ขั้นตอนที่ %1$d จาก %2$d: %3$s</string>
+    <string name="create_step_general_setup">การตั้งค่าทั่วไป</string>
+    <string name="create_step_appearance_details">รายละเอียดรูปลักษณ์</string>
+    <string name="create_step_hair_customization">ปรับแต่งทรงผม</string>
+    <string name="create_step_personality_identity">บุคลิกภาพและตัวตน</string>
+    <string name="create_companion_gender">เพศสภาพ</string>
+    <string name="create_gender_girls">ผู้หญิง</string>
+    <string name="create_gender_guys">ผู้ชาย</string>
+    <string name="create_gender_trans">นอนไบนารี</string>
+    <string name="create_inspire_me">แนะนำไอเดียให้ฉัน</string>
+    <string name="create_visual_style">สไตล์ภาพ</string>
+    <string name="create_style_realistic">สมจริง</string>
+    <string name="create_style_anime">อนิเมะ</string>
+    <string name="create_describe_to_create">อธิบายเพื่อสร้าง</string>
+    <string name="create_prompt_hint">เช่น: “เพื่อนสาวผู้อ่อนหวาน อบอุ่น ชอบดูดาวตอนเที่ยงคืน เขียนบทกวี และชงชาอุ่นๆ...”</string>
+    <string name="create_companion_ethnicity">เชื้อชาติ</string>
+    <string name="create_ethnicity_east_asian">เอเชียตะวันออก</string>
+    <string name="create_ethnicity_south_asian">เอเชียใต้</string>
+    <string name="create_ethnicity_black">ผิวดำ</string>
+    <string name="create_ethnicity_white">ผิวขาว</string>
+    <string name="create_ethnicity_asian">เอเชีย</string>
+    <string name="create_ethnicity_latina">ละติน</string>
+    <string name="create_age">อายุ</string>
+    <string name="create_skin_tone">โทนสีผิว</string>
+    <string name="create_hair_color">สีผม</string>
+    <string name="create_hair_blonde">บลอนด์</string>
+    <string name="create_hair_black">ดำ</string>
+    <string name="create_hair_copper">ทองแดง</string>
+    <string name="create_hair_blue">น้ำเงิน</string>
+    <string name="create_hair_purple">ม่วง</string>
+    <string name="create_hair_red">แดง</string>
+    <string name="create_companion_name">ชื่อเพื่อนร่วมทาง</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">บุคลิกและภูมิหลังทางสังคม</string>
+    <string name="create_personality">บุคลิกภาพ</string>
+    <string name="create_occupation">อาชีพ</string>
+    <string name="create_hobbies">งานอดิเรก</string>
+    <string name="create_relationships">ความสัมพันธ์</string>
+    <string name="option_none">ไม่มี</string>
+    <string name="options_done">เสร็จสิ้น</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>เป็นมิตร</item>
+        <item>เอาใจใส่</item>
+        <item>ขี้อาย</item>
+        <item>เปิดเผย</item>
+        <item>ลึกลับ</item>
+        <item>ฉลาด</item>
+        <item>อารมณ์ขัน</item>
+        <item>อบอุ่นและรักใคร่</item>
+        <item>ชอบการผจญภัย</item>
+        <item>มั่นใจในตัวเอง</item>
+        <item>กระตือรือร้น</item>
+        <item>สงบนิ่ง</item>
+        <item>มีความคิดสร้างสรรค์</item>
+        <item>ทะเยอทะยาน</item>
+        <item>เห็นอกเห็นใจผู้อื่น</item>
+        <item>ซื่อสัตย์</item>
+        <item>มองโลกในแง่ดี</item>
+        <item>มองโลกในแง่ร้าย</item>
+        <item>ประชดประชัน</item>
+        <item>ดื้อรั้น</item>
+        <item>เย้ายวน</item>
+        <item>ขี้เล่น</item>
+        <item>เป็นผู้นำ</item>
+        <item>ว่าง่าย</item>
+        <item>จิตวิญญาณ</item>
+        <item>อยู่กับความเป็นจริง</item>
+        <item>ช่างฝัน</item>
+        <item>ขบถ</item>
+        <item>อนุรักษนิยม</item>
+        <item>ปกป้องดูแล</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>นักออกแบบ</item>
+        <item>ที่ปรึกษา</item>
+        <item>แพทย์</item>
+        <item>พยาบาล</item>
+        <item>วิศวกร</item>
+        <item>ศิลปิน</item>
+        <item>นักดนตรี</item>
+        <item>เชฟ</item>
+        <item>เจ้าหน้าที่ตำรวจ</item>
+        <item>ผู้ประกอบการ</item>
+        <item>ซีอีโอมหาเศรษฐี</item>
+        <item>นางแบบ/นายแบบ</item>
+        <item>นักแสดง</item>
+        <item>นักเขียน</item>
+        <item>นักกีฬา</item>
+        <item>นักวิทยาศาสตร์</item>
+        <item>โปรแกรมเมอร์</item>
+        <item>ทนายความ</item>
+        <item>สถาปนิก</item>
+        <item>ดีไซเนอร์</item>
+        <item>ช่างภาพ</item>
+        <item>นักข่าว</item>
+        <item>นักบิน</item>
+        <item>พนักงานต้อนรับบนเครื่องบิน</item>
+        <item>บาริสต้า</item>
+        <item>บรรณารักษ์</item>
+        <item>ฟรีแลนซ์</item>
+        <item>อินฟลูเอนเซอร์</item>
+        <item>ว่างงาน</item>
+        <item>นักสืบ</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>อ่านหนังสือ</item>
+        <item>เล่นเกม</item>
+        <item>ท่องเที่ยว</item>
+        <item>ทำอาหาร</item>
+        <item>กีฬา</item>
+        <item>ดนตรี</item>
+        <item>ถ่ายภาพ</item>
+        <item>วาดภาพ</item>
+        <item>ทำสวน</item>
+        <item>ดูภาพยนตร์</item>
+        <item>อนิเมะ</item>
+        <item>คอสเพลย์</item>
+        <item>เต้นรำ</item>
+        <item>ร้องเพลง</item>
+        <item>เขียนหนังสือ</item>
+        <item>ช้อปปิ้ง</item>
+        <item>ฟิตเนส</item>
+        <item>โยคะ</item>
+        <item>ทำสมาธิ</item>
+        <item>เดินป่า</item>
+        <item>ตั้งแคมป์</item>
+        <item>ตกปลา</item>
+        <item>งานประดิษฐ์</item>
+        <item>แฟชั่น</item>
+        <item>เทคโนโลยี</item>
+        <item>โหราศาสตร์</item>
+        <item>ปลูกต้นไม้</item>
+        <item>งานอาสาสมัคร</item>
+        <item>ยานยนต์</item>
+        <item>ประวัติศาสตร์</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>เพื่อน</item>
+        <item>เพื่อนสนิท</item>
+        <item>แฟนสาว</item>
+        <item>แฟนหนุ่ม</item>
+        <item>ภรรยา</item>
+        <item>สามี</item>
+        <item>พี่สาว/น้องสาว</item>
+        <item>พี่ชาย/น้องชาย</item>
+        <item>เพื่อนร่วมเดินทาง</item>
+        <item>คู่หูผจญภัย</item>
+        <item>ที่ปรึกษา</item>
+        <item>เพื่อนร่วมงาน</item>
+        <item>เจ้านาย</item>
+        <item>พนักงาน</item>
+        <item>เพื่อนร่วมชั้น</item>
+        <item>มัคคุเทศก์</item>
+        <item>ผู้เรียน</item>
+        <item>คนแปลกหน้า</item>
+        <item>รูมเมท</item>
+        <item>เพื่อนบ้าน</item>
+        <item>แฟนเก่า</item>
+        <item>เพื่อนสมัยเด็ก</item>
+        <item>คนแอบชอบ</item>
+        <item>คู่แข่ง</item>
+        <item>เมด</item>
+        <item>พ่อบ้าน</item>
+        <item>เจ้าบ้าน</item>
+        <item>คู่หู</item>
+        <item>เนื้อคู่</item>
+        <item>คนรู้จัก</item>
+    </string-array>
+    <string name="store_best_value">คุ้มค่าที่สุด</string>
+    <string name="setting_privacy_not_configured">ไม่ได้กำหนดค่า URL นโยบายความเป็นส่วนตัว</string>
+    <string name="setting_no_app_open_link">ไม่มีแอปที่สามารถเปิดลิงก์นี้ได้</string>
+    <string name="setting_unable_open_privacy">ไม่สามารถเปิดนโยบายความเป็นส่วนตัวได้</string>
+    <string name="chat_status_online">ออนไลน์</string>
+    <string name="create_enter_description">ป้อนคำอธิบาย</string>
+    <string name="create_enter_name">ป้อนชื่อ</string>
+    <string name="create_select_personality_hobby">เลือกบุคลิกและงานอดิเรก</string>
+    <string name="image_generation_failed">การสร้างรูปภาพล้มเหลว</string>
+    <string name="enjoying_hd_camera">ชอบแฟนสาว AI หรือไม่?</string>
+    <string name="rate_us_on_the_google_play">ให้คะแนนเราบน Google Play!</string>
+    <string name="rate_now">ให้คะแนนเลย</string>
+    <string name="not_now">ไว้คราวหน้า</string>
+    <string name="chat_relationship_stranger">คนแปลกหน้า</string>
+    <string name="chat_subtitle_format">%1$s • เลเวล %2$d</string>
+    <string name="chat_title_format">แชท #%1$s</string>
+    <string name="first_day">วันแรก</string>
+    <string name="feedback_reason_hint">เหตุผล (เช่น แอปเด้ง, ช้า, หน้าตาไม่สวย...)</string>
+    <string name="feedback_description_hint">รายละเอียดหรือข้อเสนอแนะ...</string>
+    <string name="send_feedback">ส่งข้อเสนอแนะ</string>
+</resources>

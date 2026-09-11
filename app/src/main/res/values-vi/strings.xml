@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Bắt đầu</string>
+    <string name="next">Tiếp theo</string>
+    <string name="txt_thanks_you_for_rating">Cảm ơn bạn đã đánh giá!</string>
+    <string name="onboarding_title_1">Gặp gỡ người thấu hiểu bạn</string>
+    <string name="onboarding_des_1">Gặp gỡ những người bạn AI với tính cách và câu chuyện độc đáo, luôn sẵn sàng mọi lúc.</string>
+    <string name="onboarding_title_2">Trò chuyện mang đậm dấu ấn cá nhân</string>
+    <string name="onboarding_des_2">Chia sẻ suy nghĩ của bạn, khám phá những câu chuyện mới hoặc đơn giản là tận hưởng cuộc trò chuyện dành riêng cho bạn.</string>
+    <string name="onboarding_title_3">Tạo người bạn đồng hành hoàn hảo</string>
+    <string name="onboarding_des_3">Chọn ngoại hình, tính cách và sở thích để tạo nên người bạn đồng hành AI hoàn hảo của bạn.</string>
+    <string name="onboarding_title_4">Câu chuyện của bạn bắt đầu tại đây</string>
+    <string name="onboarding_des_4">Kết nối, trò chuyện và khám phá điều mới mẻ mỗi ngày.</string>
+    <string name="close">Đóng</string>
+    <string name="try_again">Thử lại</string>
+    <string name="txt_cancel">Hủy</string>
+    <string name="loading_label">Đang tải</string>
+    <string name="no_internet_title">Không có kết nối Internet</string>
+    <string name="no_internet_message">Vui lòng kiểm tra cài đặt mạng để tiếp tục sử dụng ứng dụng.</string>
+    <string name="open_settings">Mở Cài đặt</string>
+    <string name="force_update_message">Đã có phiên bản mới. Vui lòng cập nhật để tiếp tục sử dụng ứng dụng.</string>
+    <string name="update_now">Cập nhật ngay</string>
+    <string name="setting">Cài đặt</string>
+    <string name="main_tab_discover">Khám phá</string>
+    <string name="main_tab_reward">Phần thưởng</string>
+    <string name="main_tab_add">Thêm</string>
+    <string name="main_tab_chats">Đoạn chat</string>
+    <string name="main_tab_mission">Nhiệm vụ</string>
+    <string name="rate">Đánh giá</string>
+    <string name="share_with_friend">Chia sẻ với bạn bè</string>
+    <string name="privacy_policy">Chính sách quyền riêng tư</string>
+    <string name="let_me_recommend">Hãy để tôi giới thiệu ứng dụng này</string>
+    <string name="share_to">Chia sẻ tới</string>
+    <string name="we_re_better_than_ever">Ứng dụng ngày càng hoàn thiện hơn</string>
+    <string name="error_generic">Đã xảy ra lỗi. Vui lòng thử lại.</string>
+    <string name="error_network_unavailable">Vui lòng kiểm tra kết nối mạng và thử lại.</string>
+    <string name="error_auth_session_expired">Phiên của bạn đã hết hạn. Vui lòng thử lại.</string>
+    <string name="error_auth_unavailable">Hiện tại không thể hoàn tất xác thực. Vui lòng thử lại.</string>
+    <string name="create_error_title">Không thể tạo nhân vật</string>
+    <string name="error_insufficient_coins">Không đủ Coins</string>
+    <string name="no_credits_left">Đã hết lượt</string>
+    <string name="balance_format">Số dư: %1$d</string>
+    <string name="buy_coins">Mua coins</string>
+    <string name="coins">COINS</string>
+    <string name="upgrade_pro">Nâng cấp Pro</string>
+    <string name="reward_error_title">Không thể tải phần thưởng</string>
+    <string name="home_error_title">Không thể tải nội dung</string>
+    <string name="home_empty_characters">Hiện tại không có nhân vật nào.</string>
+    <string name="home_create_assistant_title">Tìm người\nthấu hiểu bạn</string>
+    <string name="home_create_assistant_subtitle">Tạo người bạn AI của riêng bạn và\nxây dựng mối quan hệ ý nghĩa.</string>
+    <string name="home_create_assistant_action">Tạo AI của bạn</string>
+    <string name="home_top_assistants">Trợ lý hàng đầu</string>
+    <string name="home_recommend_for_you">Gợi ý cho bạn</string>
+    <string name="home_see_all">Xem tất cả</string>
+    <string name="setting_back">Quay lại</string>
+    <string name="character_detail_error_title">Không thể tải nhân vật</string>
+    <string name="character_detail_start_chat">Trò chuyện cùng tôi nào</string>
+    <string name="chat_error_title">Không thể tải cuộc trò chuyện</string>
+    <string name="chat_starter_title">Bắt đầu trò chuyện</string>
+    <string name="chat_starter_subtitle">Chưa biết nói gì? Hãy thử một trong những câu này.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>Xin chào! Kể cho mình nghe một chút về bạn đi.</item>
+        <item>Điều gì sẽ làm cho ngày hôm nay thú vị hơn?</item>
+        <item>Hãy cùng chơi một trò chơi hỏi đáp nhanh nhé.</item>
+    </string-array>
+    <string name="chat_input_hint">Hỏi bất cứ điều gì...</string>
+    <string name="today">Hôm nay</string>
+    <string name="yesterday">Hôm qua</string>
+    <string name="chat_send">Gửi</string>
+    <string name="chat_more_title">Thêm</string>
+    <string name="chat_more_custom_background">Hình nền tùy chỉnh</string>
+    <string name="chat_more_delete">Xóa đoạn chat</string>
+    <string name="chat_more_report">Báo cáo</string>
+    <string name="chat_role_assistant">Trợ lý</string>
+    <string name="chat_message_just_now">Vừa xong</string>
+    <string name="chat_delete_title">Xóa đoạn chat?</string>
+    <string name="chat_delete_message">Bạn có chắc chắn muốn xóa cuộc trò chuyện này không? Hành động này không thể hoàn tác.</string>
+    <string name="chat_delete_confirm">Xóa</string>
+    <string name="chat_delete_success">Đã xóa đoạn chat thành công</string>
+    <string name="chat_report_title">Báo cáo</string>
+    <string name="chat_report_message">Bạn có chắc chắn muốn báo cáo người dùng này không? Chúng tôi sẽ xem xét báo cáo và xử lý thích hợp.</string>
+    <string name="chat_report_confirm">Báo cáo</string>
+    <string name="chat_report_success">Cảm ơn bạn đã báo cáo.</string>
+    <string name="chat_report_hint">Giải thích sự cố (tùy chọn)...</string>
+    <string name="chat_empty_title">Chưa có đoạn chat nào</string>
+    <string name="chat_empty_subtitle">Bắt đầu một cuộc trò chuyện mới để các đoạn chat xuất hiện tại đây.</string>
+    <string name="chat_empty_start_chat">Bắt đầu chat</string>
+    <string name="actions">Hành động</string>
+    <string name="store_title">Cửa hàng</string>
+    <string name="store_top_up_coins">NẠP COINS</string>
+    <string name="store_unlock_storylines">Mở khóa cốt truyện &amp; hành động</string>
+    <string name="store_membership_plans">GÓI THÀNH VIÊN</string>
+    <string name="store_unlimited_vip">Trải nghiệm VIP cao cấp</string>
+    <string name="store_restore_purchases">Khôi phục giao dịch</string>
+    <string name="store_terms_policies">Điều khoản &amp; Chính sách</string>
+    <string name="store_transactions_info">Giao dịch sẽ được xử lý qua tài khoản Google Play của bạn.\nGói đăng ký tự động gia hạn trừ khi hủy ít nhất 24 giờ trước khi kết thúc kỳ hiện tại.</string>
+    <string name="store_terms_privacy">Điều khoản dịch vụ   •   Chính sách quyền riêng tư</string>
+    <string name="store_product_not_found">Không tìm thấy sản phẩm</string>
+    <string name="store_purchase_cancelled">Đã hủy giao dịch</string>
+    <string name="store_restoring_purchases">Đang khôi phục giao dịch...</string>
+    <string name="store_restore_success">Khôi phục giao dịch thành công!</string>
+    <string name="store_coins_credited">Đã cộng Coins thành công! Số dư: %1$d</string>
+    <string name="store_purchase_processing">Mua thành công. Coins đang được xử lý, vui lòng tải lại sau giây lát.</string>
+    <string name="store_vip_activated">Đã kích hoạt gói VIP thành công!</string>
+    <string name="store_vip_processing">Mua thành công. Trạng thái VIP đang được xử lý, vui lòng tải lại sau giây lát.</string>
+    <string name="store_duration_month">mỗi tháng</string>
+    <string name="store_duration_year">mỗi năm</string>
+    <string name="store_vip_desc_month">Quyền truy cập VIP hàng tháng cùng phần thưởng Coin mỗi ngày</string>
+    <string name="store_vip_desc_year">Quyền truy cập VIP hàng năm cùng phần thưởng mỗi ngày và tính năng cao cấp</string>
+    <string name="store_vip_benefit_1">Tặng thêm 500 Coins cho mỗi lần đăng nhập hàng ngày</string>
+    <string name="store_vip_benefit_2">Tặng thêm 750 Coins cho mỗi lần đăng nhập hàng ngày</string>
+    <string name="store_vip_benefit_3">Tận hưởng trọn vẹn đặc quyền thành viên VIP</string>
+    <string name="store_vip_footer_month">Tự động gia hạn hàng tháng. Hủy bất cứ lúc nào.</string>
+    <string name="store_vip_footer_year">Tự động gia hạn hàng năm. Hủy bất cứ lúc nào trong Google Play.</string>
+    <string name="store_empty_title">Không có gói nào</string>
+    <string name="store_empty_subtitle">Hiện tại không có sản phẩm nào. Vui lòng quay lại sau.</string>
+    <string name="store_empty_retry">Thử lại</string>
+    <string name="store_empty_vip_plans">Hiện tại không có gói thành viên nào.</string>
+    <string name="store_empty_coin_packages">Hiện tại không có gói Coins nào.</string>
+    <string name="sub_empty_plans">Hiện tại không có gói thành viên nào. Vui lòng quay lại sau.</string>
+    <string name="coins_empty_packages">Hiện tại không có gói Coins nào. Vui lòng quay lại sau.</string>
+    <string name="character_detail_hot">HOT</string>
+    <string name="character_badge_new">MỚI</string>
+    <string name="histories_title">Lịch sử</string>
+    <string name="character_detail_intimacy_title">Tiến trình kết nối</string>
+    <string name="character_detail_level_format">Cấp độ %1$d</string>
+    <string name="character_detail_intimacy_hint">Mỗi tin nhắn cộng tối đa +%1$d điểm kết nối</string>
+    <string name="character_detail_exclusive_photo_gallery">Bộ sưu tập ảnh độc quyền</string>
+    <string name="character_detail_about">Giới thiệu %1$s</string>
+    <string name="character_detail_chats">Đoạn chat</string>
+    <string name="character_detail_rating">Đánh giá</string>
+    <string name="character_detail_most_popular">Phổ biến nhất</string>
+    <string name="character_detail_rank_format">Top %1$d</string>
+    <string name="character_detail_personality_traits">Tính cách &amp; Đặc điểm</string>
+    <string name="character_detail_purchase_success">Đã mở khóa hình nền thành công!</string>
+    <string name="continue_">Tiếp tục</string>
+    <string name="sub_price_month_format">%1$s/ tháng</string>
+    <string name="sub_price_year_format">%1$s/ năm</string>
+    <string name="sub_feature_outfits">Truy cập cốt truyện cao cấp &amp; khoảnh khắc độc quyền</string>
+    <string name="sub_plan_monthly">Hàng tháng</string>
+    <string name="sub_plan_yearly">Hàng năm</string>
+    <string name="sub_subscribe_now">Đăng ký ngay</string>
+    <string name="sub_current_plan">GÓI HIỆN TẠI</string>
+    <string name="sub_fine_print_1">Khoản thanh toán sẽ được tính vào tài khoản Google Play của bạn sau khi\nxác nhận mua.</string>
+    <string name="sub_fine_print_2">Gói đăng ký sẽ tự động gia hạn theo gói bạn chọn trừ khi được hủy\nít nhất 24 giờ trước khi kết thúc thời hạn đăng ký hiện tại.</string>
+    <string name="sub_fine_print_3">Người chưa đăng ký vẫn có thể dùng dịch vụ, tuy nhiên, một số tính năng trả phí có thể bị giới hạn.</string>
+    <string name="sub_fine_print_4">Bạn có thể quản lý hoặc hủy gói bất kỳ lúc nào trong mục Đăng ký của Google Play.</string>
+    <string name="sub_restore_purchase">Khôi phục giao dịch</string>
+    <string name="sub_paywall_title">Mở khóa nhiều hơn cùng AURA+</string>
+    <string name="sub_paywall_subtitle">Trò chuyện sâu sắc hơn. Nhiều cách sáng tạo hơn.</string>
+    <string name="sub_feature_unlimited_messages">Cốt truyện cao cấp</string>
+    <string name="sub_feature_exclusive_companions">Gắn kết sâu sắc hơn</string>
+    <string name="sub_feature_create_characters">Coins mỗi ngày</string>
+    <string name="sub_feature_chat_backgrounds">Không quảng cáo</string>
+    <string name="sub_cancel_anytime">Hủy bất cứ lúc nào</string>
+    <string name="sub_best_value_arrow">Tiết kiệm nhất &gt;</string>
+    <string name="sub_terms">Điều khoản</string>
+    <string name="sub_privacy">Quyền riêng tư</string>
+    <string name="sub_save_percent_format">TIẾT KIỆM %1$d%%</string>
+    <string name="sub_save_badge_format">TIẾT KIỆM %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/tháng, thanh toán hàng năm</string>
+    <string name="sub_billed_annually_fallback">%1$s, thanh toán hàng năm</string>
+    <string name="sub_billed_monthly_format">%1$s/tháng, thanh toán hàng tháng</string>
+    <string name="sub_billed_monthly_fallback">%1$s, thanh toán hàng tháng</string>
+    <string name="store_coins_format">%1$d Coins</string>
+    <string name="feedback_subject">Góp ý</string>
+    <string name="send_feedback_chooser">Gửi phản hồi:</string>
+    <string name="send_email_via">Gửi email qua:</string>
+    <string name="no_email_client_found">Không tìm thấy ứng dụng email</string>
+    <string name="select_a_language">Chọn ngôn ngữ</string>
+    <string name="reward_your_progress">Tiến trình của bạn</string>
+    <string name="reward_check_in_today">Điểm danh hôm nay</string>
+    <string name="reward_checked_in_today">Đã điểm danh hôm nay</string>
+    <string name="reward_earn_rewards">Nhận phần thưởng</string>
+    <string name="reward_daily_ads">Quảng cáo nhận thưởng mỗi ngày</string>
+    <string name="reward_daily_ads_desc">+%1$d Coins mỗi quảng cáo</string>
+    <string name="reward_watch_ads_format">Xem quảng cáo (%1$d/10)</string>
+    <string name="reward_ads_unavailable">Hiện tại không có quảng cáo. Vui lòng thử lại sau vài phút.</string>
+    <string name="reward_vip_unlocked">Thành viên VIP</string>
+    <string name="reward_vip_unlocked_desc">Đang kích hoạt trải nghiệm không quảng cáo</string>
+    <string name="reward_claimed_title">Đã nhận thưởng!</string>
+    <string name="reward_claimed_desc">Phần thưởng điểm danh hàng ngày đã được thêm vào túi đồ của bạn.</string>
+    <string name="reward_claimed_coin_format">+%1$d Coins</string>
+    <string name="reward_processing">Phần thưởng đang được xử lý. Số dư sẽ sớm được cập nhật.</string>
+    <string name="reward_day_format">Ngày %1$d</string>
+    <string name="mission_tab_mission">Nhiệm vụ</string>
+    <string name="mission_tab_history">Lịch sử</string>
+    <string name="mission_no_active">Hiện không có nhiệm vụ nào.</string>
+    <string name="mission_coins_earned_format">+%1$d Coins</string>
+    <string name="mission_type_daily_login">Đăng nhập hàng ngày</string>
+    <string name="mission_type_watch_ad">Xem quảng cáo</string>
+    <string name="mission_type_play_game">Chơi game</string>
+    <string name="mission_type_online">Trực tuyến 5 phút</string>
+    <string name="mission_type_share">Chia sẻ cho bạn bè</string>
+    <string name="mission_type_reward_claim">Nhận thưởng</string>
+    <string name="mission_type_iap_purchase">Đã nạp Coins</string>
+    <string name="mission_type_promo_code">Mã khuyến mãi</string>
+    <string name="mission_history_footer_stardust">Những việc đã làm quá 30 ngày sẽ tan thành bụi sao</string>
+    <string name="next_step">Bước tiếp theo</string>
+    <string name="create_screen_title">Tạo nhân vật</string>
+    <string name="create_generate_cost">Tạo %1$d</string>
+    <string name="create_step_label_format">BƯỚC %1$d TRÊN %2$d: %3$s</string>
+    <string name="create_step_general_setup">THIẾT LẬP CHUNG</string>
+    <string name="create_step_appearance_details">CHI TIẾT NGOẠI HÌNH</string>
+    <string name="create_step_hair_customization">TÙY CHỈNH MÁI TÓC</string>
+    <string name="create_step_personality_identity">TÍNH CÁCH &amp; DANH TÍNH</string>
+    <string name="create_companion_gender">Giới tính</string>
+    <string name="create_gender_girls">Nữ</string>
+    <string name="create_gender_guys">Nam</string>
+    <string name="create_gender_trans">Phi nhị nguyên giới</string>
+    <string name="create_inspire_me">Gợi ý cho tôi</string>
+    <string name="create_visual_style">Phong cách hình ảnh</string>
+    <string name="create_style_realistic">Chân thực</string>
+    <string name="create_style_anime">Anime</string>
+    <string name="create_describe_to_create">Mô tả để tạo</string>
+    <string name="create_prompt_hint">Ví dụ: “Một người bạn đồng hành ngọt ngào, ấm áp, thích ngắm sao lúc nửa đêm, làm thơ và pha trà nóng...”</string>
+    <string name="create_companion_ethnicity">Sắc tộc</string>
+    <string name="create_ethnicity_east_asian">Đông Á</string>
+    <string name="create_ethnicity_south_asian">Nam Á</string>
+    <string name="create_ethnicity_black">Da đen</string>
+    <string name="create_ethnicity_white">Da trắng</string>
+    <string name="create_ethnicity_asian">Châu Á</string>
+    <string name="create_ethnicity_latina">Mỹ Latinh</string>
+    <string name="create_age">Tuổi</string>
+    <string name="create_skin_tone">Màu da</string>
+    <string name="create_hair_color">Màu tóc</string>
+    <string name="create_hair_blonde">Vàng hoe</string>
+    <string name="create_hair_black">Đen</string>
+    <string name="create_hair_copper">Đồng</string>
+    <string name="create_hair_blue">Xanh dương</string>
+    <string name="create_hair_purple">Tím</string>
+    <string name="create_hair_red">Đỏ</string>
+    <string name="create_companion_name">Tên người đồng hành</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Tính cách &amp; Xuất thân xã hội</string>
+    <string name="create_personality">Tính cách</string>
+    <string name="create_occupation">Nghề nghiệp</string>
+    <string name="create_hobbies">Sở thích</string>
+    <string name="create_relationships">Mối quan hệ</string>
+    <string name="option_none">Không có</string>
+    <string name="options_done">Xong</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Thân thiện</item>
+        <item>Chu đáo</item>
+        <item>Nhút nhát</item>
+        <item>Cởi mở</item>
+        <item>Bí ẩn</item>
+        <item>Thông minh</item>
+        <item>Hài hước</item>
+        <item>Tình cảm</item>
+        <item>Thích phiêu lưu</item>
+        <item>Tự tin</item>
+        <item>Năng động</item>
+        <item>Điềm tĩnh</item>
+        <item>Sáng tạo</item>
+        <item>Tham vọng</item>
+        <item>Đồng cảm</item>
+        <item>Trung thành</item>
+        <item>Lạc quan</item>
+        <item>Bi quan</item>
+        <item>Mỉa mai</item>
+        <item>Bướng bỉnh</item>
+        <item>Gợi cảm</item>
+        <item>Tinh nghịch</item>
+        <item>Thống trị</item>
+        <item>Phục tùng</item>
+        <item>Tâm linh</item>
+        <item>Thực tế</item>
+        <item>Mơ mộng</item>
+        <item>Nổi loạn</item>
+        <item>Truyền thống</item>
+        <item>Bảo bọc</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Nhà thiết kế</item>
+        <item>Tư vấn viên</item>
+        <item>Bác sĩ</item>
+        <item>Y tá</item>
+        <item>Kỹ sư</item>
+        <item>Nghệ sĩ</item>
+        <item>Nhạc sĩ</item>
+        <item>Đầu bếp</item>
+        <item>Cảnh sát</item>
+        <item>Doanh nhân</item>
+        <item>CEO Tỷ phú</item>
+        <item>Người mẫu</item>
+        <item>Diễn viên</item>
+        <item>Nhà văn</item>
+        <item>Vận động viên</item>
+        <item>Nhà khoa học</item>
+        <item>Lập trình viên</item>
+        <item>Luật sư</item>
+        <item>Kiến trúc sư</item>
+        <item>Nhà thiết kế</item>
+        <item>Nhiếp ảnh gia</item>
+        <item>Nhà báo</item>
+        <item>Phi công</item>
+        <item>Tiếp viên hàng không</item>
+        <item>Barista</item>
+        <item>Thủ thư</item>
+        <item>Freelancer</item>
+        <item>Influencer</item>
+        <item>Thất nghiệp</item>
+        <item>Thám tử</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Đọc sách</item>
+        <item>Chơi game</item>
+        <item>Du lịch</item>
+        <item>Nấu ăn</item>
+        <item>Thể thao</item>
+        <item>Âm nhạc</item>
+        <item>Nhiếp ảnh</item>
+        <item>Hội họa</item>
+        <item>Làm vườn</item>
+        <item>Xem phim</item>
+        <item>Anime</item>
+        <item>Cosplay</item>
+        <item>Nhảy múa</item>
+        <item>Ca hát</item>
+        <item>Viết lách</item>
+        <item>Mua sắm</item>
+        <item>Thể hình</item>
+        <item>Yoga</item>
+        <item>Thiền</item>
+        <item>Leo núi</item>
+        <item>Cắm trại</item>
+        <item>Câu cá</item>
+        <item>Thủ công</item>
+        <item>Thời trang</item>
+        <item>Công nghệ</item>
+        <item>Chiêm tinh</item>
+        <item>Làm vườn</item>
+        <item>Tình nguyện</item>
+        <item>Xe cộ</item>
+        <item>Lịch sử</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Bạn bè</item>
+        <item>Bạn thân</item>
+        <item>Bạn gái</item>
+        <item>Bạn trai</item>
+        <item>Vợ</item>
+        <item>Chồng</item>
+        <item>Chị/Em gái</item>
+        <item>Anh/Em trai</item>
+        <item>Bạn đồng hành du lịch</item>
+        <item>Bạn đồng hành phiêu lưu</item>
+        <item>Người cố vấn</item>
+        <item>Đồng nghiệp</item>
+        <item>Sếp</item>
+        <item>Nhân viên</item>
+        <item>Bạn cùng lớp</item>
+        <item>Người hướng dẫn</item>
+        <item>Học viên</item>
+        <item>Người lạ</item>
+        <item>Bạn cùng phòng</item>
+        <item>Hàng xóm</item>
+        <item>Người yêu cũ</item>
+        <item>Bạn thời thơ ấu</item>
+        <item>Người thầm thương</item>
+        <item>Đối thủ</item>
+        <item>Hầu gái</item>
+        <item>Quản gia</item>
+        <item>Chủ tiệc</item>
+        <item>Bạn đồng hành</item>
+        <item>Tri kỷ</item>
+        <item>Người quen</item>
+    </string-array>
+    <string name="store_best_value">GIÁ TỐT NHẤT</string>
+    <string name="setting_privacy_not_configured">Chưa cấu hình liên kết Chính sách riêng tư</string>
+    <string name="setting_no_app_open_link">Không có ứng dụng nào mở được liên kết này</string>
+    <string name="setting_unable_open_privacy">Không thể mở Chính sách riêng tư</string>
+    <string name="chat_status_online">Đang hoạt động</string>
+    <string name="create_enter_description">Nhập mô tả tạo nhân vật</string>
+    <string name="create_enter_name">Nhập tên tạo nhân vật</string>
+    <string name="create_select_personality_hobby">Chọn tính cách và sở thích</string>
+    <string name="image_generation_failed">Tạo ảnh thất bại</string>
+    <string name="enjoying_hd_camera">Bạn có thích Bạn Gái AI không?</string>
+    <string name="rate_us_on_the_google_play">Đánh giá chúng tôi trên Google Play!</string>
+    <string name="rate_now">Đánh giá ngay</string>
+    <string name="not_now">Để sau</string>
+    <string name="chat_relationship_stranger">Người lạ</string>
+    <string name="chat_subtitle_format">%1$s • Cấp %2$d</string>
+    <string name="chat_title_format">Cuộc trò chuyện #%1$s</string>
+    <string name="first_day">Ngày đầu tiên</string>
+    <string name="feedback_reason_hint">Lý do (ví dụ: bị văng, chậm, giao diện xấu...)</string>
+    <string name="feedback_description_hint">Chi tiết hoặc đề xuất...</string>
+    <string name="send_feedback">Gửi phản hồi</string>
+</resources>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">使ってみる</string>
+    <string name="next">次へ</string>
+    <string name="txt_thanks_you_for_rating">評価ありがとうございます！</string>
+    <string name="onboarding_title_1">あなたを理解してくれる人に出会う</string>
+    <string name="onboarding_des_1">個性とストーリーを持つAIパートナーといつでもつながることができます。</string>
+    <string name="onboarding_title_2">心を通わせるリアルな会話</string>
+    <string name="onboarding_des_2">想いを打ち明けたり、新しい物語を紡いだり、あなただけの会話を楽しみましょう。</string>
+    <string name="onboarding_title_3">理想のパートナーを作ろう</string>
+    <string name="onboarding_des_3">外見、性格、趣味をカスタマイズして、理想のAIパートナーを創り出せます。</string>
+    <string name="onboarding_title_4">あなたの物語はここから始まる</string>
+    <string name="onboarding_des_4">心を通わせ、チャットし、毎日新しい発見をしましょう。</string>
+    <string name="close">閉じる</string>
+    <string name="try_again">再試行</string>
+    <string name="txt_cancel">キャンセル</string>
+    <string name="loading_label">読み込み中</string>
+    <string name="no_internet_title">インターネット未接続</string>
+    <string name="no_internet_message">アプリを引き続き利用するには、ネットワーク接続を確認してください。</string>
+    <string name="open_settings">設定を開く</string>
+    <string name="force_update_message">新しいバージョンが利用可能です。アップデートしてご利用ください。</string>
+    <string name="update_now">今すぐアップデート</string>
+    <string name="setting">設定</string>
+    <string name="main_tab_discover">見つける</string>
+    <string name="main_tab_reward">リワード</string>
+    <string name="main_tab_add">作成</string>
+    <string name="main_tab_chats">チャット</string>
+    <string name="main_tab_mission">ミッション</string>
+    <string name="rate">評価する</string>
+    <string name="share_with_friend">友達にシェア</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="let_me_recommend">おすすめのアプリを共有</string>
+    <string name="share_to">シェア先</string>
+    <string name="we_re_better_than_ever">アプリは常に進化しています</string>
+    <string name="error_generic">問題が発生しました。もう一度お試しください。</string>
+    <string name="error_network_unavailable">インターネット接続を確認して、もう一度お試しください。</string>
+    <string name="error_auth_session_expired">セッションの有効期限が切れました。もう一度お試しください。</string>
+    <string name="error_auth_unavailable">現在認証を完了できません。もう一度お試しください。</string>
+    <string name="create_error_title">キャラクターを作成できません</string>
+    <string name="error_insufficient_coins">コインが不足しています</string>
+    <string name="no_credits_left">残り回数がありません</string>
+    <string name="balance_format">残高：%1$d</string>
+    <string name="buy_coins">コインを購入</string>
+    <string name="coins">コイン</string>
+    <string name="upgrade_pro">Proにアップグレード</string>
+    <string name="reward_error_title">リワードを読み込めません</string>
+    <string name="home_error_title">コンテンツを読み込めません</string>
+    <string name="home_empty_characters">現在利用可能なキャラクターはいません。</string>
+    <string name="home_create_assistant_title">あなたを理解する\n誰かに出会おう</string>
+    <string name="home_create_assistant_subtitle">あなただけのAIパートナーを作って、\n特別な絆を育みましょう。</string>
+    <string name="home_create_assistant_action">AIを作成する</string>
+    <string name="home_top_assistants">人気のアシスタント</string>
+    <string name="home_recommend_for_you">あなたへのおすすめ</string>
+    <string name="home_see_all">すべて見る</string>
+    <string name="setting_back">戻る</string>
+    <string name="character_detail_error_title">キャラクターを読み込めません</string>
+    <string name="character_detail_start_chat">私と話そう</string>
+    <string name="chat_error_title">チャットを読み込めません</string>
+    <string name="chat_starter_title">会話を始めよう</string>
+    <string name="chat_starter_subtitle">何を話せばいいかわからない？おすすめの質問です。</string>
+    <string-array name="chat_starter_suggestions">
+        <item>こんにちは！あなたのことを少し教えて。</item>
+        <item>今日一日を楽しくするには何がいいかな？</item>
+        <item>簡単な質問ゲームをしようよ。</item>
+    </string-array>
+    <string name="chat_input_hint">何でも聞いてください...</string>
+    <string name="today">今日</string>
+    <string name="yesterday">昨日</string>
+    <string name="chat_send">送信</string>
+    <string name="chat_more_title">その他</string>
+    <string name="chat_more_custom_background">カスタム背景</string>
+    <string name="chat_more_delete">チャットを削除</string>
+    <string name="chat_more_report">通報</string>
+    <string name="chat_role_assistant">アシスタント</string>
+    <string name="chat_message_just_now">たった今</string>
+    <string name="chat_delete_title">チャットを削除しますか？</string>
+    <string name="chat_delete_message">このチャットを削除してもよろしいですか？この操作は取り消せません。</string>
+    <string name="chat_delete_confirm">削除</string>
+    <string name="chat_delete_success">チャットを削除しました</string>
+    <string name="chat_report_title">通報</string>
+    <string name="chat_report_message">このユーザーを通報してもよろしいですか？内容を確認の上、適切に対処いたします。</string>
+    <string name="chat_report_confirm">通報</string>
+    <string name="chat_report_success">通報を受け付けました。</string>
+    <string name="chat_report_hint">問題の詳細を入力（任意）...</string>
+    <string name="chat_empty_title">まだチャットがありません</string>
+    <string name="chat_empty_subtitle">新しい会話を始めると、ここにチャットが表示されます。</string>
+    <string name="chat_empty_start_chat">チャットを始める</string>
+    <string name="actions">アクション</string>
+    <string name="store_title">ストア</string>
+    <string name="store_top_up_coins">コインをチャージ</string>
+    <string name="store_unlock_storylines">ストーリーとアクションを解放</string>
+    <string name="store_membership_plans">メンバーシッププラン</string>
+    <string name="store_unlimited_vip">プレミアムVIP体験</string>
+    <string name="store_restore_purchases">購入を復元</string>
+    <string name="store_terms_policies">規約とポリシー</string>
+    <string name="store_transactions_info">取引はお客様のGoogle Playアカウントを通じて処理されます。\n現在の期間が終了する24時間前までに解約されない限り、定期購入は自動更新されます。</string>
+    <string name="store_terms_privacy">利用規約   •   プライバシーポリシー</string>
+    <string name="store_product_not_found">商品が見つかりません</string>
+    <string name="store_purchase_cancelled">購入がキャンセルされました</string>
+    <string name="store_restoring_purchases">購入を復元中...</string>
+    <string name="store_restore_success">購入の復元が完了しました！</string>
+    <string name="store_coins_credited">コインが付与されました！残高：%1$d</string>
+    <string name="store_purchase_processing">購入が完了しました。コインを処理中のため、しばらくしてから更新してください。</string>
+    <string name="store_vip_activated">VIPメンバーシップが有効になりました！</string>
+    <string name="store_vip_processing">購入が完了しました。VIPステータスを処理中のため、少しお待ちください。</string>
+    <string name="store_duration_month">月額</string>
+    <string name="store_duration_year">年額</string>
+    <string name="store_vip_desc_month">毎日のコイン報酬付きマンスリーVIPアクセス</string>
+    <string name="store_vip_desc_year">毎日の報酬とプレミアム機能が使い放題の年間VIPアクセス</string>
+    <string name="store_vip_benefit_1">毎日のログインごとにボーナス500コイン</string>
+    <string name="store_vip_benefit_2">毎日のログインごとにボーナス750コイン</string>
+    <string name="store_vip_benefit_3">VIPメンバーの全特典をお楽しみいただけます</string>
+    <string name="store_vip_footer_month">月次自動更新。いつでも解約可能。</string>
+    <string name="store_vip_footer_year">年次自動更新。Google Playでいつでも解約可能。</string>
+    <string name="store_empty_title">利用可能なパッケージがありません</string>
+    <string name="store_empty_subtitle">現在商品はご利用いただけません。後でもう一度ご確認ください。</string>
+    <string name="store_empty_retry">再試行</string>
+    <string name="store_empty_vip_plans">現在利用可能なメンバーシッププランはありません。</string>
+    <string name="store_empty_coin_packages">現在利用可能なコインパッケージはありません。</string>
+    <string name="sub_empty_plans">現在プランをご利用いただけません。後ほどお試しください。</string>
+    <string name="coins_empty_packages">現在コインパッケージをご利用いただけません。後ほどお試しください。</string>
+    <string name="character_detail_hot">人気</string>
+    <string name="character_badge_new">NEW</string>
+    <string name="histories_title">履歴</string>
+    <string name="character_detail_intimacy_title">親密度レベル</string>
+    <string name="character_detail_level_format">レベル %1$d</string>
+    <string name="character_detail_intimacy_hint">1メッセージごとに最大+%1$dの親密度ポイント獲得</string>
+    <string name="character_detail_exclusive_photo_gallery">限定フォトギャラリー</string>
+    <string name="character_detail_about">%1$s について</string>
+    <string name="character_detail_chats">チャット</string>
+    <string name="character_detail_rating">評価</string>
+    <string name="character_detail_most_popular">一番人気</string>
+    <string name="character_detail_rank_format">Top %1$d</string>
+    <string name="character_detail_personality_traits">性格と特徴</string>
+    <string name="character_detail_purchase_success">背景のロックを解除しました！</string>
+    <string name="continue_">続ける</string>
+    <string name="sub_price_month_format">%1$s/月</string>
+    <string name="sub_price_year_format">%1$s/年</string>
+    <string name="sub_feature_outfits">限定ストーリー＆特別な瞬間を楽しめる</string>
+    <string name="sub_plan_monthly">月間プラン</string>
+    <string name="sub_plan_yearly">年間プラン</string>
+    <string name="sub_subscribe_now">今すぐ登録</string>
+    <string name="sub_current_plan">現在のプラン</string>
+    <string name="sub_fine_print_1">購入確認後、Google Playアカウントに請求されます。</string>
+    <string name="sub_fine_print_2">現在の期間が終了する24時間前までにキャンセルされない限り、\nサブスクリプションは自動的に更新されます。</string>
+    <string name="sub_fine_print_3">未登録でもアプリを利用できますが、一部の機能が制限される場合があります。</string>
+    <string name="sub_fine_print_4">Google Playの「定期購入」からいつでも解約または管理が可能です。</string>
+    <string name="sub_restore_purchase">購入を復元</string>
+    <string name="sub_paywall_title">AURA+ でさらに可能性を広げよう</string>
+    <string name="sub_paywall_subtitle">もっと深い対話を。もっと自由なクリエイティビティを。</string>
+    <string name="sub_feature_unlimited_messages">プレミアムストーリー</string>
+    <string name="sub_feature_exclusive_companions">より深い絆</string>
+    <string name="sub_feature_create_characters">毎日のコイン</string>
+    <string name="sub_feature_chat_backgrounds">広告なし</string>
+    <string name="sub_cancel_anytime">いつでも解約可能</string>
+    <string name="sub_best_value_arrow">お得なプラン &gt;</string>
+    <string name="sub_terms">利用規約</string>
+    <string name="sub_privacy">プライバシー</string>
+    <string name="sub_save_percent_format">%1$d%% お得</string>
+    <string name="sub_save_badge_format">%1$s お得</string>
+    <string name="sub_billed_annually_format">%1$s/月（年額一括払い）</string>
+    <string name="sub_billed_annually_fallback">%1$s（年額一括払い）</string>
+    <string name="sub_billed_monthly_format">%1$s/月（月額払い）</string>
+    <string name="sub_billed_monthly_fallback">%1$s（月額払い）</string>
+    <string name="store_coins_format">%1$d コイン</string>
+    <string name="feedback_subject">ご意見・ご要望</string>
+    <string name="send_feedback_chooser">フィードバックを送信：</string>
+    <string name="send_email_via">メールで送信：</string>
+    <string name="no_email_client_found">メールアプリが見つかりません</string>
+    <string name="select_a_language">言語を選択</string>
+    <string name="reward_your_progress">進捗状況</string>
+    <string name="reward_check_in_today">今日のチェックイン</string>
+    <string name="reward_checked_in_today">チェックイン済み</string>
+    <string name="reward_earn_rewards">リワードを獲得</string>
+    <string name="reward_daily_ads">デイリー広告リワード</string>
+    <string name="reward_daily_ads_desc">広告1回につき +%1$d コイン</string>
+    <string name="reward_watch_ads_format">広告を見る (%1$d/10)</string>
+    <string name="reward_ads_unavailable">現在広告がありません。数分後に再度お試しください。</string>
+    <string name="reward_vip_unlocked">VIPメンバー</string>
+    <string name="reward_vip_unlocked_desc">広告非表示モード有効</string>
+    <string name="reward_claimed_title">リワード獲得！</string>
+    <string name="reward_claimed_desc">毎日のチェックインリワードが受け取られました。</string>
+    <string name="reward_claimed_coin_format">+%1$d コイン</string>
+    <string name="reward_processing">リワード処理中。残高は間もなく更新されます。</string>
+    <string name="reward_day_format">%1$d 日目</string>
+    <string name="mission_tab_mission">ミッション</string>
+    <string name="mission_tab_history">履歴</string>
+    <string name="mission_no_active">現在進行中のミッションはありません。</string>
+    <string name="mission_coins_earned_format">+%1$d コイン</string>
+    <string name="mission_type_daily_login">デイリーログイン</string>
+    <string name="mission_type_watch_ad">広告を見る</string>
+    <string name="mission_type_play_game">ミニゲームを遊ぶ</string>
+    <string name="mission_type_online">5分間オンライン</string>
+    <string name="mission_type_share">友達にシェア</string>
+    <string name="mission_type_reward_claim">リワード受け取り</string>
+    <string name="mission_type_iap_purchase">コインチャージ</string>
+    <string name="mission_type_promo_code">プロモーションコード</string>
+    <string name="mission_history_footer_stardust">30日以上前の行動記録は星屑となって消え去ります</string>
+    <string name="next_step">次のステップ</string>
+    <string name="create_screen_title">キャラクター作成</string>
+    <string name="create_generate_cost">%1$d で生成</string>
+    <string name="create_step_label_format">ステップ %1$d / %2$d：%3$s</string>
+    <string name="create_step_general_setup">基本設定</string>
+    <string name="create_step_appearance_details">外見の詳細</string>
+    <string name="create_step_hair_customization">髪型のカスタマイズ</string>
+    <string name="create_step_personality_identity">性格とアイデンティティ</string>
+    <string name="create_companion_gender">性別</string>
+    <string name="create_gender_girls">女性</string>
+    <string name="create_gender_guys">男性</string>
+    <string name="create_gender_trans">ノンバイナリー</string>
+    <string name="create_inspire_me">おまかせ生成</string>
+    <string name="create_visual_style">ビジュアルスタイル</string>
+    <string name="create_style_realistic">リアル調</string>
+    <string name="create_style_anime">アニメ調</string>
+    <string name="create_describe_to_create">言葉で指定して作成</string>
+    <string name="create_prompt_hint">例：「真夜中の星空観察や詩が好きで、温かいお茶を淹れてくれる優しいパートナー...」</string>
+    <string name="create_companion_ethnicity">ルーツ・地域</string>
+    <string name="create_ethnicity_east_asian">東アジア</string>
+    <string name="create_ethnicity_south_asian">南アジア</string>
+    <string name="create_ethnicity_black">ブラック</string>
+    <string name="create_ethnicity_white">ホワイト</string>
+    <string name="create_ethnicity_asian">アジア系</string>
+    <string name="create_ethnicity_latina">ラテン系</string>
+    <string name="create_age">年齢</string>
+    <string name="create_skin_tone">肌のトーン</string>
+    <string name="create_hair_color">髪の色</string>
+    <string name="create_hair_blonde">ブロンド</string>
+    <string name="create_hair_black">ブラック</string>
+    <string name="create_hair_copper">カッパー</string>
+    <string name="create_hair_blue">ブルー</string>
+    <string name="create_hair_purple">パープル</string>
+    <string name="create_hair_red">レッド</string>
+    <string name="create_companion_name">パートナーの名前</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">性格とバックグラウンド</string>
+    <string name="create_personality">性格</string>
+    <string name="create_occupation">職業</string>
+    <string name="create_hobbies">趣味</string>
+    <string name="create_relationships">関係性</string>
+    <string name="option_none">なし</string>
+    <string name="options_done">完了</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>フレンドリー</item>
+        <item>思いやりがある</item>
+        <item>内気</item>
+        <item>社交的</item>
+        <item>ミステリアス</item>
+        <item>知的</item>
+        <item>ユーモアがある</item>
+        <item>愛情深い</item>
+        <item>冒険好き</item>
+        <item>自信家</item>
+        <item>エネルギッシュ</item>
+        <item>穏やか</item>
+        <item>クリエイティブ</item>
+        <item>野心的</item>
+        <item>共感力が高い</item>
+        <item>忠実</item>
+        <item>楽観的</item>
+        <item>悲観的</item>
+        <item>皮肉屋</item>
+        <item>頑固</item>
+        <item>魅力的</item>
+        <item>お茶目</item>
+        <item>主導権を握る</item>
+        <item>従順</item>
+        <item>スピリチュアル</item>
+        <item>現実的</item>
+        <item>夢見がち</item>
+        <item>反逆的</item>
+        <item>伝統的</item>
+        <item>過保護</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>デザイナー</item>
+        <item>コンサルタント</item>
+        <item>医師</item>
+        <item>看護師</item>
+        <item>エンジニア</item>
+        <item>アーティスト</item>
+        <item>ミュージシャン</item>
+        <item>シェフ</item>
+        <item>警察官</item>
+        <item>起業家</item>
+        <item>億万長者CEO</item>
+        <item>モデル</item>
+        <item>俳優</item>
+        <item>作家</item>
+        <item>アスリート</item>
+        <item>科学者</item>
+        <item>プログラマー</item>
+        <item>弁護士</item>
+        <item>建築家</item>
+        <item>スタイリスト</item>
+        <item>写真家</item>
+        <item>ジャーナリスト</item>
+        <item>パイロット</item>
+        <item>フライトアテンダント</item>
+        <item>バリスタ</item>
+        <item>図書館司書</item>
+        <item>フリーランサー</item>
+        <item>インフルエンサー</item>
+        <item>無職</item>
+        <item>探偵</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>読書</item>
+        <item>ゲーム</item>
+        <item>旅行</item>
+        <item>料理</item>
+        <item>スポーツ</item>
+        <item>音楽</item>
+        <item>写真</item>
+        <item>絵画</item>
+        <item>ガーデニング</item>
+        <item>映画鑑賞</item>
+        <item>アニメ</item>
+        <item>コスプレ</item>
+        <item>ダンス</item>
+        <item>歌</item>
+        <item>執筆</item>
+        <item>ショッピング</item>
+        <item>フィットネス</item>
+        <item>ヨガ</item>
+        <item>瞑想</item>
+        <item>ハイキング</item>
+        <item>キャンプ</item>
+        <item>釣り</item>
+        <item>ハンドクラフト</item>
+        <item>ファッション</item>
+        <item>テクノロジー</item>
+        <item>占星術</item>
+        <item>家庭菜園</item>
+        <item>ボランティア</item>
+        <item>ドライブ</item>
+        <item>歴史探訪</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>友人</item>
+        <item>親友</item>
+        <item>彼女</item>
+        <item>彼氏</item>
+        <item>妻</item>
+        <item>夫</item>
+        <item>姉/妹</item>
+        <item>兄/弟</item>
+        <item>旅仲間</item>
+        <item>冒険の仲間</item>
+        <item>恩師</item>
+        <item>同僚</item>
+        <item>上司</item>
+        <item>部下</item>
+        <item>同級生</item>
+        <item>案内人</item>
+        <item>後輩</item>
+        <item>見知らぬ人</item>
+        <item>ルームメイト</item>
+        <item>隣人</item>
+        <item>元恋人</item>
+        <item>幼馴染</item>
+        <item>秘密の憧れ</item>
+        <item>ライバル</item>
+        <item>メイド</item>
+        <item>執事</item>
+        <item>ホスト</item>
+        <item>パートナー</item>
+        <item>ソウルメイト</item>
+        <item>知人</item>
+    </string-array>
+    <string name="store_best_value">一番お得</string>
+    <string name="setting_privacy_not_configured">プライバシーポリシーのURLが設定されていません</string>
+    <string name="setting_no_app_open_link">このリンクを開けるアプリが見つかりません</string>
+    <string name="setting_unable_open_privacy">プライバシーポリシーを開けません</string>
+    <string name="chat_status_online">オンライン</string>
+    <string name="create_enter_description">説明を入力してください</string>
+    <string name="create_enter_name">名前を入力してください</string>
+    <string name="create_select_personality_hobby">性格と趣味を選択してください</string>
+    <string name="image_generation_failed">画像生成に失敗しました</string>
+    <string name="enjoying_hd_camera">AIガールフレンドを楽しんでいますか？</string>
+    <string name="rate_us_on_the_google_play">Google Playで評価をお願いします！</string>
+    <string name="rate_now">今すぐ評価</string>
+    <string name="not_now">後で</string>
+    <string name="chat_relationship_stranger">見知らぬ人</string>
+    <string name="chat_subtitle_format">%1$s • レベル %2$d</string>
+    <string name="chat_title_format">チャット #%1$s</string>
+    <string name="first_day">初日</string>
+    <string name="feedback_reason_hint">理由（クラッシュ、動作が重い、UIなど...）</string>
+    <string name="feedback_description_hint">詳細またはご提案...</string>
+    <string name="send_feedback">フィードバックを送信</string>
+</resources>

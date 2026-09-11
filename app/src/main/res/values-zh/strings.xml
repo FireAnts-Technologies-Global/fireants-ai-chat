@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">开始体验</string>
+    <string name="next">下一步</string>
+    <string name="txt_thanks_you_for_rating">感谢您的评价！</string>
+    <string name="onboarding_title_1">遇见懂你的那个人</string>
+    <string name="onboarding_des_1">结识拥有独特个性和故事的AI伴侣，随时随地陪伴在你身边。</string>
+    <string name="onboarding_title_2">充满温度与真实的对话</string>
+    <string name="onboarding_des_2">分享你的心声，探索全新的故事，或者享受专属于你的畅聊时光。</string>
+    <string name="onboarding_title_3">打造你的专属伴侣</string>
+    <string name="onboarding_des_3">自选外貌、性格与兴趣，打造专属于你的完美AI伴侣。</string>
+    <string name="onboarding_title_4">你的故事从这里开始</string>
+    <string name="onboarding_des_4">心动连接，畅快畅聊，每天发现新精彩。</string>
+    <string name="close">关闭</string>
+    <string name="try_again">重试</string>
+    <string name="txt_cancel">取消</string>
+    <string name="loading_label">加载中</string>
+    <string name="no_internet_title">无网络连接</string>
+    <string name="no_internet_message">请检查网络设置以继续使用应用。</string>
+    <string name="open_settings">打开设置</string>
+    <string name="force_update_message">新版本现已推出，请更新以继续使用。</string>
+    <string name="update_now">立即更新</string>
+    <string name="setting">设置</string>
+    <string name="main_tab_discover">发现</string>
+    <string name="main_tab_reward">奖励</string>
+    <string name="main_tab_add">添加</string>
+    <string name="main_tab_chats">聊天</string>
+    <string name="main_tab_mission">任务</string>
+    <string name="rate">评分</string>
+    <string name="share_with_friend">分享给好友</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="let_me_recommend">向您推荐这款应用</string>
+    <string name="share_to">分享至</string>
+    <string name="we_re_better_than_ever">应用在不断变得更好</string>
+    <string name="error_generic">出错了，请稍后重试。</string>
+    <string name="error_network_unavailable">请检查网络连接并重试。</string>
+    <string name="error_auth_session_expired">登录状态已过期，请重试。</string>
+    <string name="error_auth_unavailable">目前无法完成身份验证，请重试。</string>
+    <string name="create_error_title">无法创建角色</string>
+    <string name="error_insufficient_coins">金币不足</string>
+    <string name="no_credits_left">次数已用尽</string>
+    <string name="balance_format">余额：%1$d</string>
+    <string name="buy_coins">购买金币</string>
+    <string name="coins">金币</string>
+    <string name="upgrade_pro">升级至 Pro</string>
+    <string name="reward_error_title">无法加载奖励</string>
+    <string name="home_error_title">无法加载内容</string>
+    <string name="home_empty_characters">暂无可用角色。</string>
+    <string name="home_create_assistant_title">寻找懂你\n的那个人</string>
+    <string name="home_create_assistant_subtitle">创建专属AI伴侣，\n建立深厚心动连接。</string>
+    <string name="home_create_assistant_action">创建专属AI</string>
+    <string name="home_top_assistants">热门助手</string>
+    <string name="home_recommend_for_you">为你推荐</string>
+    <string name="home_see_all">查看全部</string>
+    <string name="setting_back">返回</string>
+    <string name="character_detail_error_title">无法加载角色</string>
+    <string name="character_detail_start_chat">和我聊聊吧</string>
+    <string name="chat_error_title">无法加载聊天</string>
+    <string name="chat_starter_title">开启对话</string>
+    <string name="chat_starter_subtitle">不知道聊什么？试试这些话题吧。</string>
+    <string-array name="chat_starter_suggestions">
+        <item>嗨！能跟我聊聊你自己吗？</item>
+        <item>今天有什么能让心情变得更好的事？</item>
+        <item>我们来玩个快问快答游戏吧！</item>
+    </string-array>
+    <string name="chat_input_hint">随便聊聊...</string>
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="chat_send">发送</string>
+    <string name="chat_more_title">更多</string>
+    <string name="chat_more_custom_background">自定义背景</string>
+    <string name="chat_more_delete">删除对话</string>
+    <string name="chat_more_report">举报</string>
+    <string name="chat_role_assistant">助手</string>
+    <string name="chat_message_just_now">刚刚</string>
+    <string name="chat_delete_title">删除对话？</string>
+    <string name="chat_delete_message">确定要删除此对话吗？此操作无法撤销。</string>
+    <string name="chat_delete_confirm">删除</string>
+    <string name="chat_delete_success">对话已成功删除</string>
+    <string name="chat_report_title">举报</string>
+    <string name="chat_report_message">确定要举报此用户吗？我们将仔细审核并采取相应措施。</string>
+    <string name="chat_report_confirm">举报</string>
+    <string name="chat_report_success">感谢您的反馈与举报。</string>
+    <string name="chat_report_hint">说明问题（选填）...</string>
+    <string name="chat_empty_title">暂无聊天记录</string>
+    <string name="chat_empty_subtitle">开启新对话后，您的聊天记录将显示在此处。</string>
+    <string name="chat_empty_start_chat">发起聊天</string>
+    <string name="actions">动作</string>
+    <string name="store_title">商店</string>
+    <string name="store_top_up_coins">充值金币</string>
+    <string name="store_unlock_storylines">解锁剧情 &amp; 互动动作</string>
+    <string name="store_membership_plans">会员计划</string>
+    <string name="store_unlimited_vip">尊享 VIP 体验</string>
+    <string name="store_restore_purchases">恢复购买</string>
+    <string name="store_terms_policies">条款与政策</string>
+    <string name="store_transactions_info">交易将通过您的 Google Play 账户处理。\n除非在当前周期结束前至少 24 小时取消，否则订阅将自动续订。</string>
+    <string name="store_terms_privacy">服务条款   •   隐私政策</string>
+    <string name="store_product_not_found">未找到商品</string>
+    <string name="store_purchase_cancelled">已取消购买</string>
+    <string name="store_restoring_purchases">正在恢复购买...</string>
+    <string name="store_restore_success">购买恢复成功！</string>
+    <string name="store_coins_credited">金币已成功到账！余额：%1$d</string>
+    <string name="store_purchase_processing">购买成功。金币正在处理中，请稍后刷新查看。</string>
+    <string name="store_vip_activated">VIP 会员已成功激活！</string>
+    <string name="store_vip_processing">购买成功。VIP 状态正在处理中，请稍后刷新查看。</string>
+    <string name="store_duration_month">每月</string>
+    <string name="store_duration_year">每年</string>
+    <string name="store_vip_desc_month">按月畅享 VIP 权益及每日金币奖励</string>
+    <string name="store_vip_desc_year">按年畅享 VIP 权益、每日奖励与高级特权</string>
+    <string name="store_vip_benefit_1">每日登录额外奖励 500 金币</string>
+    <string name="store_vip_benefit_2">每日登录额外奖励 750 金币</string>
+    <string name="store_vip_benefit_3">畅享所有 VIP 会员专属权益</string>
+    <string name="store_vip_footer_month">每月自动续订，可随时取消。</string>
+    <string name="store_vip_footer_year">每年自动续订，可在 Google Play 中随时取消。</string>
+    <string name="store_empty_title">暂无可用套餐</string>
+    <string name="store_empty_subtitle">当前商品暂不可用，请稍后再试。</string>
+    <string name="store_empty_retry">重试</string>
+    <string name="store_empty_vip_plans">当前暂无可用会员计划。</string>
+    <string name="store_empty_coin_packages">当前暂无可用金币套餐。</string>
+    <string name="sub_empty_plans">当前暂无可用会员计划，请稍后再试。</string>
+    <string name="coins_empty_packages">当前暂无可用金币套餐，请稍后再试。</string>
+    <string name="character_detail_hot">热门</string>
+    <string name="character_badge_new">最新</string>
+    <string name="histories_title">历史</string>
+    <string name="character_detail_intimacy_title">亲密度进度</string>
+    <string name="character_detail_level_format">等级 %1$d</string>
+    <string name="character_detail_intimacy_hint">每条消息最多可增加 +%1$d 亲密度点数</string>
+    <string name="character_detail_exclusive_photo_gallery">独家相册</string>
+    <string name="character_detail_about">关于 %1$s</string>
+    <string name="character_detail_chats">聊天</string>
+    <string name="character_detail_rating">评分</string>
+    <string name="character_detail_most_popular">最受欢迎</string>
+    <string name="character_detail_rank_format">Top %1$d</string>
+    <string name="character_detail_personality_traits">性格与特点</string>
+    <string name="character_detail_purchase_success">背景已成功解锁！</string>
+    <string name="continue_">继续</string>
+    <string name="sub_price_month_format">%1$s/月</string>
+    <string name="sub_price_year_format">%1$s/年</string>
+    <string name="sub_feature_outfits">解锁高级故事 &amp; 独家瞬间</string>
+    <string name="sub_plan_monthly">按月订阅</string>
+    <string name="sub_plan_yearly">按年订阅</string>
+    <string name="sub_subscribe_now">立即订阅</string>
+    <string name="sub_current_plan">当前计划</string>
+    <string name="sub_fine_print_1">确认购买后，费用将从您的 Google Play 账户扣除。</string>
+    <string name="sub_fine_print_2">订阅将根据您的计划自动续订，除非在当前订阅期结束前至少 24 小时取消。</string>
+    <string name="sub_fine_print_3">未订阅用户仍可使用基础服务，但部分付费功能可能会受限。</string>
+    <string name="sub_fine_print_4">您可以随时在 Google Play 的“订阅”管理中取消订阅。</string>
+    <string name="sub_restore_purchase">恢复购买</string>
+    <string name="sub_paywall_title">升级 AURA+ 解锁更多精彩</string>
+    <string name="sub_paywall_subtitle">更深度的交流，更多元化的创作。</string>
+    <string name="sub_feature_unlimited_messages">尊享故事</string>
+    <string name="sub_feature_exclusive_companions">更深羁绊</string>
+    <string name="sub_feature_create_characters">每日金币</string>
+    <string name="sub_feature_chat_backgrounds">无广告干扰</string>
+    <string name="sub_cancel_anytime">随时可取消</string>
+    <string name="sub_best_value_arrow">最划算 &gt;</string>
+    <string name="sub_terms">条款</string>
+    <string name="sub_privacy">隐私</string>
+    <string name="sub_save_percent_format">立省 %1$d%%</string>
+    <string name="sub_save_badge_format">立省 %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/月，按年计费</string>
+    <string name="sub_billed_annually_fallback">%1$s，按年计费</string>
+    <string name="sub_billed_monthly_format">%1$s/月，按月计费</string>
+    <string name="sub_billed_monthly_fallback">%1$s，按月计费</string>
+    <string name="store_coins_format">%1$d 金币</string>
+    <string name="feedback_subject">意见反馈</string>
+    <string name="send_feedback_chooser">发送反馈：</string>
+    <string name="send_email_via">通过以下方式发送邮件：</string>
+    <string name="no_email_client_found">未找到邮件客户端</string>
+    <string name="select_a_language">选择语言</string>
+    <string name="reward_your_progress">您的进度</string>
+    <string name="reward_check_in_today">今日签到</string>
+    <string name="reward_checked_in_today">今日已签到</string>
+    <string name="reward_earn_rewards">赚取奖励</string>
+    <string name="reward_daily_ads">每日奖励广告</string>
+    <string name="reward_daily_ads_desc">每个广告 +%1$d 金币</string>
+    <string name="reward_watch_ads_format">观看广告 (%1$d/10)</string>
+    <string name="reward_ads_unavailable">当前暂无广告，请几分钟后再试。</string>
+    <string name="reward_vip_unlocked">VIP 会员</string>
+    <string name="reward_vip_unlocked_desc">无广告特权生效中</string>
+    <string name="reward_claimed_title">奖励已领取！</string>
+    <string name="reward_claimed_desc">您的每日签到奖励已存入您的账户。</string>
+    <string name="reward_claimed_coin_format">+%1$d 金币</string>
+    <string name="reward_processing">奖励正在处理中，余额即将更新。</string>
+    <string name="reward_day_format">第 %1$d 天</string>
+    <string name="mission_tab_mission">任务</string>
+    <string name="mission_tab_history">历史</string>
+    <string name="mission_no_active">当前暂无进行中的任务。</string>
+    <string name="mission_coins_earned_format">+%1$d 金币</string>
+    <string name="mission_type_daily_login">每日登录</string>
+    <string name="mission_type_watch_ad">观看广告</string>
+    <string name="mission_type_play_game">体验小游戏</string>
+    <string name="mission_type_online">在线 5 分钟</string>
+    <string name="mission_type_share">分享给好友</string>
+    <string name="mission_type_reward_claim">领取奖励</string>
+    <string name="mission_type_iap_purchase">金币充值</string>
+    <string name="mission_type_promo_code">兑换码</string>
+    <string name="mission_history_footer_stardust">超过 30 天的历史记录将化为星尘消散</string>
+    <string name="next_step">下一步</string>
+    <string name="create_screen_title">创建角色</string>
+    <string name="create_generate_cost">消耗 %1$d 生成</string>
+    <string name="create_step_label_format">步骤 %1$d / %2$d：%3$s</string>
+    <string name="create_step_general_setup">基础设置</string>
+    <string name="create_step_appearance_details">外貌细节</string>
+    <string name="create_step_hair_customization">发型定制</string>
+    <string name="create_step_personality_identity">性格与身份</string>
+    <string name="create_companion_gender">性别身份</string>
+    <string name="create_gender_girls">女性</string>
+    <string name="create_gender_guys">男性</string>
+    <string name="create_gender_trans">非二元性别</string>
+    <string name="create_inspire_me">给我灵感</string>
+    <string name="create_visual_style">视觉风格</string>
+    <string name="create_style_realistic">写实风格</string>
+    <string name="create_style_anime">动漫风格</string>
+    <string name="create_describe_to_create">描述并生成</string>
+    <string name="create_prompt_hint">例如：“一位温柔体贴的伴侣，喜欢深夜看星星、写诗并泡热茶……”</string>
+    <string name="create_companion_ethnicity">伴侣族裔</string>
+    <string name="create_ethnicity_east_asian">东亚</string>
+    <string name="create_ethnicity_south_asian">南亚</string>
+    <string name="create_ethnicity_black">黑人</string>
+    <string name="create_ethnicity_white">白人</string>
+    <string name="create_ethnicity_asian">亚裔</string>
+    <string name="create_ethnicity_latina">拉丁裔</string>
+    <string name="create_age">年龄</string>
+    <string name="create_skin_tone">肤色</string>
+    <string name="create_hair_color">发色</string>
+    <string name="create_hair_blonde">金发</string>
+    <string name="create_hair_black">黑发</string>
+    <string name="create_hair_copper">古铜色</string>
+    <string name="create_hair_blue">蓝色</string>
+    <string name="create_hair_purple">紫色</string>
+    <string name="create_hair_red">红色</string>
+    <string name="create_companion_name">伴侣姓名</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">性格与社会背景</string>
+    <string name="create_personality">性格</string>
+    <string name="create_occupation">职业</string>
+    <string name="create_hobbies">兴趣爱好</string>
+    <string name="create_relationships">关系类型</string>
+    <string name="option_none">无</string>
+    <string name="options_done">完成</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>友善</item>
+        <item>贴心</item>
+        <item>害羞</item>
+        <item>外向</item>
+        <item>神秘</item>
+        <item>聪颖</item>
+        <item>幽默</item>
+        <item>深情</item>
+        <item>爱冒险</item>
+        <item>自信</item>
+        <item>活力满满</item>
+        <item>沉稳</item>
+        <item>富有创意</item>
+        <item>雄心勃勃</item>
+        <item>富有共情心</item>
+        <item>忠诚</item>
+        <item>乐观</item>
+        <item>悲观</item>
+        <item>毒舌</item>
+        <item>固执</item>
+        <item>性感</item>
+        <item>顽皮</item>
+        <item>强势</item>
+        <item>顺从</item>
+        <item>崇尚心灵</item>
+        <item>务实</item>
+        <item>爱做梦</item>
+        <item>叛逆</item>
+        <item>传统</item>
+        <item>护短</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>设计师</item>
+        <item>顾问</item>
+        <item>医生</item>
+        <item>护士</item>
+        <item>工程师</item>
+        <item>艺术家</item>
+        <item>音乐家</item>
+        <item>厨师</item>
+        <item>警官</item>
+        <item>企业家</item>
+        <item>亿万富翁CEO</item>
+        <item>模特</item>
+        <item>演员</item>
+        <item>作家</item>
+        <item>运动员</item>
+        <item>科学家</item>
+        <item>程序员</item>
+        <item>律师</item>
+        <item>建筑师</item>
+        <item>服装设计师</item>
+        <item>摄影师</item>
+        <item>记者</item>
+        <item>飞行员</item>
+        <item>空中乘务员</item>
+        <item>咖啡师</item>
+        <item>图书管理员</item>
+        <item>自由职业者</item>
+        <item>网红</item>
+        <item>待业</item>
+        <item>侦探</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>阅读</item>
+        <item>游戏</item>
+        <item>旅行</item>
+        <item>烹饪</item>
+        <item>运动</item>
+        <item>音乐</item>
+        <item>摄影</item>
+        <item>绘画</item>
+        <item>园艺</item>
+        <item>电影</item>
+        <item>动漫</item>
+        <item>Cosplay</item>
+        <item>舞蹈</item>
+        <item>唱歌</item>
+        <item>写作</item>
+        <item>购物</item>
+        <item>健身</item>
+        <item>瑜伽</item>
+        <item>冥想</item>
+        <item>徒步</item>
+        <item>露营</item>
+        <item>钓鱼</item>
+        <item>手工制作</item>
+        <item>时尚</item>
+        <item>数码科技</item>
+        <item>占星学</item>
+        <item>种植</item>
+        <item>志愿者</item>
+        <item>汽车</item>
+        <item>历史</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>朋友</item>
+        <item>挚友</item>
+        <item>女友</item>
+        <item>男友</item>
+        <item>妻子</item>
+        <item>丈夫</item>
+        <item>姐妹</item>
+        <item>兄弟</item>
+        <item>旅伴</item>
+        <item>冒险伙伴</item>
+        <item>导师</item>
+        <item>同事</item>
+        <item>老板</item>
+        <item>员工</item>
+        <item>同学</item>
+        <item>向导</item>
+        <item>学员</item>
+        <item>陌生人</item>
+        <item>室友</item>
+        <item>邻居</item>
+        <item>前任</item>
+        <item>青梅竹马</item>
+        <item>暗恋者</item>
+        <item>竞争对手</item>
+        <item>女仆</item>
+        <item>管家</item>
+        <item>主持人</item>
+        <item>伴侣</item>
+        <item>灵魂伴侣</item>
+        <item>熟人</item>
+    </string-array>
+    <string name="store_best_value">超值首选</string>
+    <string name="setting_privacy_not_configured">隐私政策链接未配置</string>
+    <string name="setting_no_app_open_link">未找到可打开此链接的应用</string>
+    <string name="setting_unable_open_privacy">无法打开隐私政策</string>
+    <string name="chat_status_online">在线</string>
+    <string name="create_enter_description">输入角色描述</string>
+    <string name="create_enter_name">输入角色名字</string>
+    <string name="create_select_personality_hobby">选择性格和兴趣</string>
+    <string name="image_generation_failed">生成图片失败</string>
+    <string name="enjoying_hd_camera">喜欢 AI 虚拟女友吗？</string>
+    <string name="rate_us_on_the_google_play">在 Google Play 上为我们评分！</string>
+    <string name="rate_now">立即评价</string>
+    <string name="not_now">以后再说</string>
+    <string name="chat_relationship_stranger">陌生人</string>
+    <string name="chat_subtitle_format">%1$s • 等级 %2$d</string>
+    <string name="chat_title_format">对话 #%1$s</string>
+    <string name="first_day">第一天</string>
+    <string name="feedback_reason_hint">原因（如：闪退、卡顿、界面不好看...）</string>
+    <string name="feedback_description_hint">详细描述或建议...</string>
+    <string name="send_feedback">发送反馈</string>
+</resources>

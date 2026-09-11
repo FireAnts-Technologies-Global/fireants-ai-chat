@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">시작하기</string>
+    <string name="next">다음</string>
+    <string name="txt_thanks_you_for_rating">평가해 주셔서 감사합니다!</string>
+    <string name="onboarding_title_1">나를 진심으로 이해해 주는 만남</string>
+    <string name="onboarding_des_1">독특한 개성과 이야기를 지닌 AI 친구들을 언제 어디서나 만나보세요.</string>
+    <string name="onboarding_title_2">마음을 나누는 진솔한 대화</string>
+    <string name="onboarding_des_2">생각을 나누고 새로운 이야기를 탐험하거나, 나만을 위한 대화를 즐겨보세요.</string>
+    <string name="onboarding_title_3">나만의 완벽한 동반자 만들기</string>
+    <string name="onboarding_des_3">외모, 성격, 관심사를 직접 선택하여 이상적인 AI 친구를 만들어보세요.</string>
+    <string name="onboarding_title_4">당신의 이야기가 시작되는 곳</string>
+    <string name="onboarding_des_4">마음을 잇고 대화하며 매일 새로운 설렘을 발견하세요.</string>
+    <string name="close">닫기</string>
+    <string name="try_again">다시 시도</string>
+    <string name="txt_cancel">취소</string>
+    <string name="loading_label">로딩 중</string>
+    <string name="no_internet_title">인터넷 연결 없음</string>
+    <string name="no_internet_message">앱을 계속 사용하려면 네트워크 설정을 확인해 주세요.</string>
+    <string name="open_settings">설정 열기</string>
+    <string name="force_update_message">새 버전이 출시되었습니다. 계속 이용하려면 앱을 업데이트해 주세요.</string>
+    <string name="update_now">지금 업데이트</string>
+    <string name="setting">설정</string>
+    <string name="main_tab_discover">탐색</string>
+    <string name="main_tab_reward">보상</string>
+    <string name="main_tab_add">추가</string>
+    <string name="main_tab_chats">채팅</string>
+    <string name="main_tab_mission">미션</string>
+    <string name="rate">평가하기</string>
+    <string name="share_with_friend">친구에게 공유하기</string>
+    <string name="privacy_policy">개인정보 처리방침</string>
+    <string name="let_me_recommend">이 앱을 추천합니다</string>
+    <string name="share_to">공유 대상</string>
+    <string name="we_re_better_than_ever">앱이 계속해서 새로워지고 있습니다</string>
+    <string name="error_generic">오류가 발생했습니다. 다시 시도해 주세요.</string>
+    <string name="error_network_unavailable">인터넷 연결을 확인하고 다시 시도해 주세요.</string>
+    <string name="error_auth_session_expired">세션이 만료되었습니다. 다시 시도해 주세요.</string>
+    <string name="error_auth_unavailable">지금은 인증을 완료할 수 없습니다. 다시 시도해 주세요.</string>
+    <string name="create_error_title">캐릭터를 생성할 수 없습니다</string>
+    <string name="error_insufficient_coins">코인이 부족합니다</string>
+    <string name="no_credits_left">남은 이용 횟수가 없습니다</string>
+    <string name="balance_format">잔액: %1$d</string>
+    <string name="buy_coins">코인 구매</string>
+    <string name="coins">코인</string>
+    <string name="upgrade_pro">Pro 업그레이드</string>
+    <string name="reward_error_title">보상을 불러올 수 없습니다</string>
+    <string name="home_error_title">콘텐츠를 불러올 수 없습니다</string>
+    <string name="home_empty_characters">현재 이용 가능한 캐릭터가 없습니다.</string>
+    <string name="home_create_assistant_title">나를 알아주는\n소중한 인연 찾기</string>
+    <string name="home_create_assistant_subtitle">나만의 AI 동반자를 만들고\n깊은 유대감을 쌓아보세요.</string>
+    <string name="home_create_assistant_action">나만의 AI 만들기</string>
+    <string name="home_top_assistants">인기 어시스턴트</string>
+    <string name="home_recommend_for_you">회원님을 위한 추천</string>
+    <string name="home_see_all">모두 보기</string>
+    <string name="setting_back">뒤로</string>
+    <string name="character_detail_error_title">캐릭터를 불러올 수 없습니다</string>
+    <string name="character_detail_start_chat">나랑 대화하자</string>
+    <string name="chat_error_title">채팅을 불러올 수 없습니다</string>
+    <string name="chat_starter_title">대화 시작하기</string>
+    <string name="chat_starter_subtitle">무슨 말을 해야 할지 고민되시나요? 이렇게 시작해 보세요.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>안녕! 너에 대해 조금 들려줘.</item>
+        <item>오늘 하루를 더 흥미롭게 만들 방법이 있을까?</item>
+        <item>간단한 문답 게임 해볼래?</item>
+    </string-array>
+    <string name="chat_input_hint">무엇이든 물어보세요...</string>
+    <string name="today">오늘</string>
+    <string name="yesterday">어제</string>
+    <string name="chat_send">전송</string>
+    <string name="chat_more_title">더 보기</string>
+    <string name="chat_more_custom_background">맞춤 배경화면</string>
+    <string name="chat_more_delete">채팅 삭제</string>
+    <string name="chat_more_report">신고하기</string>
+    <string name="chat_role_assistant">어시스턴트</string>
+    <string name="chat_message_just_now">방금 전</string>
+    <string name="chat_delete_title">채팅을 삭제하시겠습니까?</string>
+    <string name="chat_delete_message">이 채팅을 삭제하시겠습니까? 삭제된 대화는 되돌릴 수 없습니다.</string>
+    <string name="chat_delete_confirm">삭제</string>
+    <string name="chat_delete_success">채팅이 삭제되었습니다</string>
+    <string name="chat_report_title">신고하기</string>
+    <string name="chat_report_message">이 사용자를 신고하시겠습니까? 신고 내용을 신속히 검토하여 조치하겠습니다.</string>
+    <string name="chat_report_confirm">신고</string>
+    <string name="chat_report_success">신고해 주셔서 감사합니다.</string>
+    <string name="chat_report_hint">문제 내용을 입력해 주세요 (선택 사항)...</string>
+    <string name="chat_empty_title">아직 채팅 내역이 없습니다</string>
+    <string name="chat_empty_subtitle">새 대화를 시작하면 여기에 표시됩니다.</string>
+    <string name="chat_empty_start_chat">대화 시작하기</string>
+    <string name="actions">동작</string>
+    <string name="store_title">상점</string>
+    <string name="store_top_up_coins">코인 충전</string>
+    <string name="store_unlock_storylines">스토리 &amp; 액션 잠금 해제</string>
+    <string name="store_membership_plans">멤버십 플랜</string>
+    <string name="store_unlimited_vip">프리미엄 VIP 혜택</string>
+    <string name="store_restore_purchases">구매 내역 복원</string>
+    <string name="store_terms_policies">이용약관 &amp; 정책</string>
+    <string name="store_transactions_info">결제는 Google Play 계정을 통해 진행됩니다.\n현재 구독 기간 종료 최소 24시간 전에 취소하지 않으면 자동으로 갱신됩니다.</string>
+    <string name="store_terms_privacy">서비스 이용약관   •   개인정보 처리방침</string>
+    <string name="store_product_not_found">상품을 찾을 수 없습니다</string>
+    <string name="store_purchase_cancelled">구매가 취소되었습니다</string>
+    <string name="store_restoring_purchases">구매 내역 복원 중...</string>
+    <string name="store_restore_success">구매 내역이 성공적으로 복원되었습니다!</string>
+    <string name="store_coins_credited">코인이 지급되었습니다! 잔액: %1$d</string>
+    <string name="store_purchase_processing">구매가 완료되었습니다. 코인 처리가 진행 중이니 잠시 후 새로고침해 주세요.</string>
+    <string name="store_vip_activated">VIP 멤버십이 성공적으로 활성화되었습니다!</string>
+    <string name="store_vip_processing">구매가 완료되었습니다. VIP 상태가 곧 반영되니 잠시 후 새로고침해 주세요.</string>
+    <string name="store_duration_month">월</string>
+    <string name="store_duration_year">년</string>
+    <string name="store_vip_desc_month">매일 코인 보상이 제공되는 월간 VIP 이용권</string>
+    <string name="store_vip_desc_year">매일 보상과 프리미엄 기능을 즐기는 연간 VIP 이용권</string>
+    <string name="store_vip_benefit_1">매일 로그인할 때마다 보너스 500 코인 지급</string>
+    <string name="store_vip_benefit_2">매일 로그인할 때마다 보너스 750 코인 지급</string>
+    <string name="store_vip_benefit_3">모든 VIP 멤버십 혜택 무제한 이용</string>
+    <string name="store_vip_footer_month">매월 자동 갱신됩니다. 언제든지 취소 가능합니다.</string>
+    <string name="store_vip_footer_year">매년 자동 갱신됩니다. Google Play에서 언제든지 해지할 수 있습니다.</string>
+    <string name="store_empty_title">이용 가능한 패키지가 없습니다</string>
+    <string name="store_empty_subtitle">현재 상품을 이용할 수 없습니다. 나중에 다시 확인해 주세요.</string>
+    <string name="store_empty_retry">다시 시도</string>
+    <string name="store_empty_vip_plans">현재 이용 가능한 멤버십 플랜이 없습니다.</string>
+    <string name="store_empty_coin_packages">현재 이용 가능한 코인 패키지가 없습니다.</string>
+    <string name="sub_empty_plans">현재 멤버십 플랜을 이용할 수 없습니다. 나중에 다시 확인해 주세요.</string>
+    <string name="coins_empty_packages">현재 코인 패키지를 이용할 수 없습니다. 나중에 다시 확인해 주세요.</string>
+    <string name="character_detail_hot">인기</string>
+    <string name="character_badge_new">NEW</string>
+    <string name="histories_title">히스토리</string>
+    <string name="character_detail_intimacy_title">친밀도 진행률</string>
+    <string name="character_detail_level_format">레벨 %1$d</string>
+    <string name="character_detail_intimacy_hint">메시지 1회당 최대 +%1$d 친밀도 포인트 증가</string>
+    <string name="character_detail_exclusive_photo_gallery">단독 포토 갤러리</string>
+    <string name="character_detail_about">%1$s 소개</string>
+    <string name="character_detail_chats">채팅</string>
+    <string name="character_detail_rating">평점</string>
+    <string name="character_detail_most_popular">최고 인기</string>
+    <string name="character_detail_rank_format">Top %1$d</string>
+    <string name="character_detail_personality_traits">성격 &amp; 특징</string>
+    <string name="character_detail_purchase_success">배경이 성공적으로 잠금 해제되었습니다!</string>
+    <string name="continue_">계속하기</string>
+    <string name="sub_price_month_format">%1$s/ 월</string>
+    <string name="sub_price_year_format">%1$s/ 년</string>
+    <string name="sub_feature_outfits">프리미엄 스토리 &amp; 단독 순간 해제</string>
+    <string name="sub_plan_monthly">월간 구독</string>
+    <string name="sub_plan_yearly">연간 구독</string>
+    <string name="sub_subscribe_now">지금 구독하기</string>
+    <string name="sub_current_plan">현재 구독 중인 플랜</string>
+    <string name="sub_fine_print_1">구매 확인 시 요금이 Google Play 계정으로 청구됩니다.</string>
+    <string name="sub_fine_print_2">현재 구독 기간 종료 최소 24시간 전에 취소하지 않으면\n구독이 자동으로 갱신됩니다.</string>
+    <string name="sub_fine_print_3">미구독 사용자도 계속 이용할 수 있으나 일부 유료 기능은 제한될 수 있습니다.</string>
+    <string name="sub_fine_print_4">Google Play 정기 결제 메뉴에서 언제든지 구독을 관리하거나 취소할 수 있습니다.</string>
+    <string name="sub_restore_purchase">구매 내역 복원</string>
+    <string name="sub_paywall_title">AURA+로 더 다채로운 경험을 즐겨보세요</string>
+    <string name="sub_paywall_subtitle">더 깊어지는 대화. 더욱 풍부해지는 창작의 즐거움.</string>
+    <string name="sub_feature_unlimited_messages">프리미엄 스토리</string>
+    <string name="sub_feature_exclusive_companions">더 깊은 유대감</string>
+    <string name="sub_feature_create_characters">매일 코인 지급</string>
+    <string name="sub_feature_chat_backgrounds">광고 없는 환경</string>
+    <string name="sub_cancel_anytime">언제든지 취소 가능</string>
+    <string name="sub_best_value_arrow">최고의 가치 &gt;</string>
+    <string name="sub_terms">이용약관</string>
+    <string name="sub_privacy">개인정보</string>
+    <string name="sub_save_percent_format">%1$d%% 할인</string>
+    <string name="sub_save_badge_format">%1$s 절약</string>
+    <string name="sub_billed_annually_format">%1$s/월, 연 단위 청구</string>
+    <string name="sub_billed_annually_fallback">%1$s, 연 단위 청구</string>
+    <string name="sub_billed_monthly_format">%1$s/월, 월 단위 청구</string>
+    <string name="sub_billed_monthly_fallback">%1$s, 월 단위 청구</string>
+    <string name="store_coins_format">%1$d 코인</string>
+    <string name="feedback_subject">피드백</string>
+    <string name="send_feedback_chooser">피드백 보내기:</string>
+    <string name="send_email_via">이메일 앱 선택:</string>
+    <string name="no_email_client_found">이메일 앱을 찾을 수 없습니다</string>
+    <string name="select_a_language">언어 선택</string>
+    <string name="reward_your_progress">내 진행 상황</string>
+    <string name="reward_check_in_today">오늘 출석체크</string>
+    <string name="reward_checked_in_today">오늘 출석 완료</string>
+    <string name="reward_earn_rewards">보상 받기</string>
+    <string name="reward_daily_ads">일일 보상형 광고</string>
+    <string name="reward_daily_ads_desc">광고 1회당 +%1$d 코인</string>
+    <string name="reward_watch_ads_format">광고 시청 (%1$d/10)</string>
+    <string name="reward_ads_unavailable">현재 시청 가능한 광고가 없습니다. 잠시 후 다시 시도해 주세요.</string>
+    <string name="reward_vip_unlocked">VIP 회원</string>
+    <string name="reward_vip_unlocked_desc">광고 없는 환경 이용 중</string>
+    <string name="reward_claimed_title">보상 획득!</string>
+    <string name="reward_claimed_desc">일일 출석 보상이 보관함에 지급되었습니다.</string>
+    <string name="reward_claimed_coin_format">+%1$d 코인</string>
+    <string name="reward_processing">보상 처리 중입니다. 잔액이 곧 업데이트됩니다.</string>
+    <string name="reward_day_format">%1$d일 차</string>
+    <string name="mission_tab_mission">미션</string>
+    <string name="mission_tab_history">히스토리</string>
+    <string name="mission_no_active">현재 진행 중인 미션이 없습니다.</string>
+    <string name="mission_coins_earned_format">+%1$d 코인</string>
+    <string name="mission_type_daily_login">일일 로그인</string>
+    <string name="mission_type_watch_ad">광고 시청</string>
+    <string name="mission_type_play_game">게임 플레이</string>
+    <string name="mission_type_online">5분 접속 유지</string>
+    <string name="mission_type_share">친구에게 공유</string>
+    <string name="mission_type_reward_claim">보상 수령</string>
+    <string name="mission_type_iap_purchase">코인 충전</string>
+    <string name="mission_type_promo_code">프로모션 코드</string>
+    <string name="mission_history_footer_stardust">30일이 지난 기록은 별빛 먼지가 되어 사라집니다</string>
+    <string name="next_step">다음 단계</string>
+    <string name="create_screen_title">캐릭터 만들기</string>
+    <string name="create_generate_cost">%1$d 소모하여 생성</string>
+    <string name="create_step_label_format">%1$d단계 / 총 %2$d단계: %3$s</string>
+    <string name="create_step_general_setup">기본 설정</string>
+    <string name="create_step_appearance_details">외모 세부사항</string>
+    <string name="create_step_hair_customization">헤어스타일 맞춤 설정</string>
+    <string name="create_step_personality_identity">성격 &amp; 정체성</string>
+    <string name="create_companion_gender">성별</string>
+    <string name="create_gender_girls">여성</string>
+    <string name="create_gender_guys">남성</string>
+    <string name="create_gender_trans">논바이너리</string>
+    <string name="create_inspire_me">아이디어 추천</string>
+    <string name="create_visual_style">비주얼 스타일</string>
+    <string name="create_style_realistic">실사풍</string>
+    <string name="create_style_anime">애니풍</string>
+    <string name="create_describe_to_create">설명으로 생성하기</string>
+    <string name="create_prompt_hint">예: “한밤중에 별 보기를 좋아하고, 시를 쓰고 따뜻한 차를 끓여주는 다정한 친구...”</string>
+    <string name="create_companion_ethnicity">출신 / 인종</string>
+    <string name="create_ethnicity_east_asian">동아시아</string>
+    <string name="create_ethnicity_south_asian">남아시아</string>
+    <string name="create_ethnicity_black">흑인</string>
+    <string name="create_ethnicity_white">백인</string>
+    <string name="create_ethnicity_asian">아시아계</string>
+    <string name="create_ethnicity_latina">라틴계</string>
+    <string name="create_age">나이</string>
+    <string name="create_skin_tone">피부 톤</string>
+    <string name="create_hair_color">머리 색상</string>
+    <string name="create_hair_blonde">금발</string>
+    <string name="create_hair_black">흑발</string>
+    <string name="create_hair_copper">구릿빛</string>
+    <string name="create_hair_blue">파란색</string>
+    <string name="create_hair_purple">보라색</string>
+    <string name="create_hair_red">빨간색</string>
+    <string name="create_companion_name">친구 이름</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">성격 &amp; 사회적 배경</string>
+    <string name="create_personality">성격</string>
+    <string name="create_occupation">직업</string>
+    <string name="create_hobbies">취미</string>
+    <string name="create_relationships">관계</string>
+    <string name="option_none">선택 안 함</string>
+    <string name="options_done">완료</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>다정한</item>
+        <item>배려심 깊은</item>
+        <item>수줍은</item>
+        <item>외향적인</item>
+        <item>신비로운</item>
+        <item>지적인</item>
+        <item>유머러스한</item>
+        <item>애정이 넘치는</item>
+        <item>모험을 즐기는</item>
+        <item>자신감 있는</item>
+        <item>활기찬</item>
+        <item>차분한</item>
+        <item>창의적인</item>
+        <item>야심 찬</item>
+        <item>공감 능력이 좋은</item>
+        <item>충직한</item>
+        <item>낙천적인</item>
+        <item>비관적인</item>
+        <item>시니컬한</item>
+        <item>고집 있는</item>
+        <item>매혹적인</item>
+        <item>장난기 많은</item>
+        <item>주도적인</item>
+        <item>순종적인</item>
+        <item>영적인</item>
+        <item>현실적인</item>
+        <item>몽상적인</item>
+        <item>반항적인</item>
+        <item>전통적인</item>
+        <item>보호적인</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>디자이너</item>
+        <item>컨설턴트</item>
+        <item>의사</item>
+        <item>간호사</item>
+        <item>엔지니어</item>
+        <item>예술가</item>
+        <item>음악가</item>
+        <item>요리사</item>
+        <item>경찰관</item>
+        <item>사업가</item>
+        <item>억만장자 CEO</item>
+        <item>모델</item>
+        <item>배우</item>
+        <item>작가</item>
+        <item>운동선수</item>
+        <item>과학자</item>
+        <item>프로그래머</item>
+        <item>변호사</item>
+        <item>건축가</item>
+        <item>스타일리스트</item>
+        <item>사진작가</item>
+        <item>기자</item>
+        <item>조종사</item>
+        <item>승무원</item>
+        <item>바리스타</item>
+        <item>사서</item>
+        <item>프리랜서</item>
+        <item>인플루언서</item>
+        <item>무직</item>
+        <item>탐정</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>독서</item>
+        <item>게임</item>
+        <item>여행</item>
+        <item>요리</item>
+        <item>스포츠</item>
+        <item>음악</item>
+        <item>사진</item>
+        <item>그림</item>
+        <item>원예</item>
+        <item>영화</item>
+        <item>애니메이션</item>
+        <item>코스프레</item>
+        <item>춤</item>
+        <item>노래</item>
+        <item>글쓰기</item>
+        <item>쇼핑</item>
+        <item>헬스</item>
+        <item>요가</item>
+        <item>명상</item>
+        <item>등산</item>
+        <item>캠핑</item>
+        <item>낚시</item>
+        <item>공예</item>
+        <item>패션</item>
+        <item>기술</item>
+        <item>점성술</item>
+        <item>가드닝</item>
+        <item>봉사활동</item>
+        <item>자동차</item>
+        <item>역사</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>친구</item>
+        <item>절친</item>
+        <item>여자친구</item>
+        <item>남자친구</item>
+        <item>아내</item>
+        <item>남편</item>
+        <item>자매</item>
+        <item>형제</item>
+        <item>여행 메이트</item>
+        <item>모험 파트너</item>
+        <item>멘토</item>
+        <item>직장 동료</item>
+        <item>상사</item>
+        <item>부하 직원</item>
+        <item>동창</item>
+        <item>가이드</item>
+        <item>수강생</item>
+        <item>낯선 사람</item>
+        <item>룸메이트</item>
+        <item>이웃</item>
+        <item>전 연인</item>
+        <item>소꿉친구</item>
+        <item>비밀 팬</item>
+        <item>라이벌</item>
+        <item>메이드</item>
+        <item>집사</item>
+        <item>호스트</item>
+        <item>동반자</item>
+        <item>소울메이트</item>
+        <item>지인</item>
+    </string-array>
+    <string name="store_best_value">최고의 가치</string>
+    <string name="setting_privacy_not_configured">개인정보 처리방침 URL이 설정되지 않았습니다</string>
+    <string name="setting_no_app_open_link">이 링크를 열 수 있는 앱이 없습니다</string>
+    <string name="setting_unable_open_privacy">개인정보 처리방침을 열 수 없습니다</string>
+    <string name="chat_status_online">온라인</string>
+    <string name="create_enter_description">캐릭터 설명을 입력하세요</string>
+    <string name="create_enter_name">캐릭터 이름을 입력하세요</string>
+    <string name="create_select_personality_hobby">성격과 취미를 선택하세요</string>
+    <string name="image_generation_failed">이미지 생성 실패</string>
+    <string name="enjoying_hd_camera">AI 여자친구를 즐기고 계신가요?</string>
+    <string name="rate_us_on_the_google_play">Google Play에서 저희 앱을 평가해 주세요!</string>
+    <string name="rate_now">지금 평가</string>
+    <string name="not_now">나중에</string>
+    <string name="chat_relationship_stranger">낯선 사람</string>
+    <string name="chat_subtitle_format">%1$s • 레벨 %2$d</string>
+    <string name="chat_title_format">대화 #%1$s</string>
+    <string name="first_day">첫 번째 날</string>
+    <string name="feedback_reason_hint">이유 (예: 튕김 현상, 느림, UI 불편 등...)</string>
+    <string name="feedback_description_hint">상세 내용이나 건의사항...</string>
+    <string name="send_feedback">피드백 보내기</string>
+</resources>

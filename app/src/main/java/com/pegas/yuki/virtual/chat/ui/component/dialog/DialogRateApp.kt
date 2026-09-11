@@ -66,7 +66,7 @@ class DialogRateApp(
 
     private fun sendFeedbackEmail(rating: Float, reason: String, description: String) {
         val email = BuildConfig.email_feedback
-        val subject = "Feedback for AI Girlfriend (Rating: ${rating.toInt()} stars)"
+        val subject = "${context.getString(R.string.app_name)} ${context.getString(R.string.feedback_subject)} (Rating: ${rating.toInt()} stars)"
         val deviceModel = android.os.Build.MODEL
         val androidVersion = android.os.Build.VERSION.RELEASE
         val appVersion = try {
@@ -103,9 +103,9 @@ class DialogRateApp(
             context.startActivity(gmailIntent)
         } catch (e: Exception) {
             try {
-                context.startActivity(Intent.createChooser(intent, "Send Email via:"))
+                context.startActivity(Intent.createChooser(intent, context.getString(R.string.send_email_via)))
             } catch (ex: Exception) {
-                Toast.makeText(context, "No email client found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, context.getString(R.string.no_email_client_found), Toast.LENGTH_SHORT).show()
             }
         }
     }

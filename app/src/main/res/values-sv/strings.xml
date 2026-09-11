@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Kom igång</string>
+    <string name="next">Nästa</string>
+    <string name="txt_thanks_you_for_rating">Tack för ditt betyg!</string>
+    <string name="onboarding_title_1">Träffa någon som förstår dig</string>
+    <string name="onboarding_des_1">Möt AI-följeslagare med unika personligheter och berättelser, redo när som helst.</string>
+    <string name="onboarding_title_2">Samtal som känns personliga</string>
+    <string name="onboarding_des_2">Dela dina tankar, utforska nya berättelser eller njut bara av ett samtal skapat för dig.</string>
+    <string name="onboarding_title_3">Skapa din perfekta följeslagare</string>
+    <string name="onboarding_des_3">Välj utseende, personlighet och intressen för att skapa din ideala AI-vän.</string>
+    <string name="onboarding_title_4">Din berättelse börjar här</string>
+    <string name="onboarding_des_4">Anslut, chatta och upptäck något nytt varje dag.</string>
+    <string name="close">Stäng</string>
+    <string name="try_again">Försök igen</string>
+    <string name="txt_cancel">Avbryt</string>
+    <string name="loading_label">Laddar</string>
+    <string name="no_internet_title">Ingen internetanslutning</string>
+    <string name="no_internet_message">Kontrollera dina nätverksinställningar för att fortsätta använda appen.</string>
+    <string name="open_settings">Öppna inställningar</string>
+    <string name="force_update_message">En ny version finns tillgänglig. Uppdatera för att fortsätta använda appen.</string>
+    <string name="update_now">Uppdatera nu</string>
+    <string name="setting">Inställningar</string>
+    <string name="main_tab_discover">Upptäck</string>
+    <string name="main_tab_reward">Belöning</string>
+    <string name="main_tab_add">Skapa</string>
+    <string name="main_tab_chats">Chattar</string>
+    <string name="main_tab_mission">Uppdrag</string>
+    <string name="rate">Betygsätt</string>
+    <string name="share_with_friend">Dela med vänner</string>
+    <string name="privacy_policy">Integritetspolicy</string>
+    <string name="let_me_recommend">Låt mig rekommendera den här appen</string>
+    <string name="share_to">Dela till</string>
+    <string name="we_re_better_than_ever">Appen blir hela tiden bättre</string>
+    <string name="error_generic">Något gick fel. Försök igen.</string>
+    <string name="error_network_unavailable">Kontrollera din internetanslutning och försök igen.</string>
+    <string name="error_auth_session_expired">Din session har gått ut. Försök igen.</string>
+    <string name="error_auth_unavailable">Det gick inte att slutföra autentiseringen just nu. Försök igen.</string>
+    <string name="create_error_title">Det gick inte att skapa karaktären</string>
+    <string name="error_insufficient_coins">Otillräckligt med mynt</string>
+    <string name="no_credits_left">Inga försök kvar</string>
+    <string name="balance_format">Saldo: %1$d</string>
+    <string name="buy_coins">Köp mynt</string>
+    <string name="coins">MYNT</string>
+    <string name="upgrade_pro">Uppgradera till Pro</string>
+    <string name="reward_error_title">Det gick inte att ladda belöningar</string>
+    <string name="home_error_title">Det gick inte att ladda innehåll</string>
+    <string name="home_empty_characters">Inga karaktärer är tillgängliga just nu.</string>
+    <string name="home_create_assistant_title">Hitta någon\nsom förstår dig</string>
+    <string name="home_create_assistant_subtitle">Skapa din egen AI-följeslagare och\nbygg ett meningsfullt band.</string>
+    <string name="home_create_assistant_action">Skapa din AI</string>
+    <string name="home_top_assistants">Toppassistenter</string>
+    <string name="home_recommend_for_you">Rekommenderas för dig</string>
+    <string name="home_see_all">Visa alla</string>
+    <string name="setting_back">Tillbaka</string>
+    <string name="character_detail_error_title">Det gick inte att ladda karaktären</string>
+    <string name="character_detail_start_chat">Chatta med mig</string>
+    <string name="chat_error_title">Det gick inte att ladda chatten</string>
+    <string name="chat_starter_title">Starta ett samtal</string>
+    <string name="chat_starter_subtitle">Osäker på vad du ska säga? Prova något av detta.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>Hej! Berätta lite om dig själv.</item>
+        <item>Vad skulle göra den här dagen mer intressant?</item>
+        <item>Låt oss spela en snabb frågesport.</item>
+    </string-array>
+    <string name="chat_input_hint">Fråga vad som helst...</string>
+    <string name="today">Idag</string>
+    <string name="yesterday">Igår</string>
+    <string name="chat_send">Skicka</string>
+    <string name="chat_more_title">Mer</string>
+    <string name="chat_more_custom_background">Anpassad bakgrund</string>
+    <string name="chat_more_delete">Radera chatt</string>
+    <string name="chat_more_report">Rapportera</string>
+    <string name="chat_role_assistant">Assistent</string>
+    <string name="chat_message_just_now">Just nu</string>
+    <string name="chat_delete_title">Radera chatt?</string>
+    <string name="chat_delete_message">Är du säker på att du vill radera den här chatten? Denna åtgärd kan inte ångras.</string>
+    <string name="chat_delete_confirm">Radera</string>
+    <string name="chat_delete_success">Chatten raderades</string>
+    <string name="chat_report_title">Rapportera</string>
+    <string name="chat_report_message">Är du säker på att du vill anmäla den här användaren? Vi kommer att granska din anmälan och vidta lämpliga åtgärder.</string>
+    <string name="chat_report_confirm">Rapportera</string>
+    <string name="chat_report_success">Tack för din rapport.</string>
+    <string name="chat_report_hint">Förklara problemet (valfritt)...</string>
+    <string name="chat_empty_title">Inga chattar ännu</string>
+    <string name="chat_empty_subtitle">Starta ett nytt samtal för att se dina meddelanden här.</string>
+    <string name="chat_empty_start_chat">Starta en chatt</string>
+    <string name="actions">Åtgärder</string>
+    <string name="store_title">Butik</string>
+    <string name="store_top_up_coins">FYLL PÅ MYNT</string>
+    <string name="store_unlock_storylines">Lås upp berättelser &amp; handlingar</string>
+    <string name="store_membership_plans">MEDLEMSKAPSPLANER</string>
+    <string name="store_unlimited_vip">Förstklassig VIP-upplevelse</string>
+    <string name="store_restore_purchases">Återställ köp</string>
+    <string name="store_terms_policies">Villkor &amp; policyer</string>
+    <string name="store_transactions_info">Transaktioner behandlas via ditt Google Play-konto.\nPrenumerationer förnyas automatiskt om de inte sägs upp minst 24 timmar före slutet av den aktuella perioden.</string>
+    <string name="store_terms_privacy">Användarvillkor   •   Integritetspolicy</string>
+    <string name="store_product_not_found">Produkten hittades inte</string>
+    <string name="store_purchase_cancelled">Köp avbrutet</string>
+    <string name="store_restoring_purchases">Återställer köp...</string>
+    <string name="store_restore_success">Köp har återställts!</string>
+    <string name="store_coins_credited">Mynt har krediterats! Saldo: %1$d</string>
+    <string name="store_purchase_processing">Köp genomfört. Mynt behandlas, uppdatera om en stund.</string>
+    <string name="store_vip_activated">VIP-medlemskap har aktiverats!</string>
+    <string name="store_vip_processing">Köp genomfört. VIP-status behandlas, uppdatera om en stund.</string>
+    <string name="store_duration_month">per månad</string>
+    <string name="store_duration_year">per år</string>
+    <string name="store_vip_desc_month">Månatlig VIP-åtkomst med dagliga myntbelöningar</string>
+    <string name="store_vip_desc_year">Årlig VIP-åtkomst med dagliga belöningar och premiumfunktioner</string>
+    <string name="store_vip_benefit_1">Bonus på 500 mynt för varje daglig inloggning</string>
+    <string name="store_vip_benefit_2">Bonus på 750 mynt för varje daglig inloggning</string>
+    <string name="store_vip_benefit_3">Njut av alla fördelar med ditt VIP-medlemskap</string>
+    <string name="store_vip_footer_month">Förnyas automatiskt varje månad. Avbryt när som helst.</string>
+    <string name="store_vip_footer_year">Förnyas automatiskt varje år. Avbryt när som helst i Google Play.</string>
+    <string name="store_empty_title">Inga paket tillgängliga</string>
+    <string name="store_empty_subtitle">Produkter är inte tillgängliga just nu. Kom tillbaka senare.</string>
+    <string name="store_empty_retry">Försök igen</string>
+    <string name="store_empty_vip_plans">Medlemskapsplaner är inte tillgängliga just nu.</string>
+    <string name="store_empty_coin_packages">Myntpaket är inte tillgängliga just nu.</string>
+    <string name="sub_empty_plans">Medlemskapsplaner är inte tillgängliga för närvarande. Återkom senare.</string>
+    <string name="coins_empty_packages">Myntpaket är inte tillgängliga för närvarande. Återkom senare.</string>
+    <string name="character_detail_hot">HETAST</string>
+    <string name="character_badge_new">NY</string>
+    <string name="histories_title">Historik</string>
+    <string name="character_detail_intimacy_title">Relationsutveckling</string>
+    <string name="character_detail_level_format">Nivå %1$d</string>
+    <string name="character_detail_intimacy_hint">Varje meddelande ger upp till +%1$d närhetspoäng</string>
+    <string name="character_detail_exclusive_photo_gallery">Exklusivt fotogalleri</string>
+    <string name="character_detail_about">Om %1$s</string>
+    <string name="character_detail_chats">Chattar</string>
+    <string name="character_detail_rating">Betyg</string>
+    <string name="character_detail_most_popular">Mest populära</string>
+    <string name="character_detail_rank_format">Topp %1$d</string>
+    <string name="character_detail_personality_traits">Personlighet och drag</string>
+    <string name="character_detail_purchase_success">Bakgrunden har låsts upp!</string>
+    <string name="continue_">Fortsätt</string>
+    <string name="sub_price_month_format">%1$s/ månad</string>
+    <string name="sub_price_year_format">%1$s/ år</string>
+    <string name="sub_feature_outfits">Tillgång till premiumhistorier och exklusiva ögonblick</string>
+    <string name="sub_plan_monthly">Månadsvis</string>
+    <string name="sub_plan_yearly">Årligen</string>
+    <string name="sub_subscribe_now">Prenumerera nu</string>
+    <string name="sub_current_plan">NUVARANDE PLAN</string>
+    <string name="sub_fine_print_1">Betalningen debiteras ditt Google Play-konto efter köpbekräftelse.</string>
+    <string name="sub_fine_print_2">Din prenumeration förnyas automatiskt enligt vald plan såvida den inte sägs upp minst 24 timmar före slutet av den aktuella perioden.</string>
+    <string name="sub_fine_print_3">Användare utan prenumeration kan fortfarande använda tjänsten, men vissa betalfunktioner kan vara begränsade.</string>
+    <string name="sub_fine_print_4">Du kan hantera eller säga upp din prenumeration när som helst under Prenumerationer i Google Play.</string>
+    <string name="sub_restore_purchase">Återställ köp</string>
+    <string name="sub_paywall_title">Lås upp mer med AURA+</string>
+    <string name="sub_paywall_subtitle">Djupare samtal. Fler kreativa möjligheter.</string>
+    <string name="sub_feature_unlimited_messages">Premiumhistorier</string>
+    <string name="sub_feature_exclusive_companions">Djupare band</string>
+    <string name="sub_feature_create_characters">Dagliga mynt</string>
+    <string name="sub_feature_chat_backgrounds">Ingen reklam</string>
+    <string name="sub_cancel_anytime">Avsluta när som helst</string>
+    <string name="sub_best_value_arrow">Bästa värde &gt;</string>
+    <string name="sub_terms">Villkor</string>
+    <string name="sub_privacy">Integritet</string>
+    <string name="sub_save_percent_format">SPARA %1$d%%</string>
+    <string name="sub_save_badge_format">SPARA %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/månad, debiteras årligen</string>
+    <string name="sub_billed_annually_fallback">%1$s, debiteras årligen</string>
+    <string name="sub_billed_monthly_format">%1$s/månad, debiteras månadsvis</string>
+    <string name="sub_billed_monthly_fallback">%1$s, debiteras månadsvis</string>
+    <string name="store_coins_format">%1$d Mynt</string>
+    <string name="feedback_subject">Feedback</string>
+    <string name="send_feedback_chooser">Skicka feedback:</string>
+    <string name="send_email_via">Skicka e-post via:</string>
+    <string name="no_email_client_found">Ingen e-postapp hittades</string>
+    <string name="select_a_language">Välj ett språk</string>
+    <string name="reward_your_progress">Dina framsteg</string>
+    <string name="reward_check_in_today">Checka in idag</string>
+    <string name="reward_checked_in_today">Incheckad idag</string>
+    <string name="reward_earn_rewards">Tjäna belöningar</string>
+    <string name="reward_daily_ads">Dagliga belöningsannonser</string>
+    <string name="reward_daily_ads_desc">+%1$d mynt per annons</string>
+    <string name="reward_watch_ads_format">Titta på annonser (%1$d/10)</string>
+    <string name="reward_ads_unavailable">Det finns inga annonser tillgängliga för tillfället. Försök igen om några minuter.</string>
+    <string name="reward_vip_unlocked">VIP-medlem</string>
+    <string name="reward_vip_unlocked_desc">Annonsfri upplevelse aktiv</string>
+    <string name="reward_claimed_title">Belöning hämtad!</string>
+    <string name="reward_claimed_desc">Din dagliga incheckningsbelöning har lagts till i ditt lager.</string>
+    <string name="reward_claimed_coin_format">+%1$d Mynt</string>
+    <string name="reward_processing">Belöningen behandlas. Ditt saldo uppdateras strax.</string>
+    <string name="reward_day_format">Dag %1$d</string>
+    <string name="mission_tab_mission">Uppdrag</string>
+    <string name="mission_tab_history">Historik</string>
+    <string name="mission_no_active">Inga aktiva uppdrag just nu.</string>
+    <string name="mission_coins_earned_format">+%1$d Mynt</string>
+    <string name="mission_type_daily_login">Daglig inloggning</string>
+    <string name="mission_type_watch_ad">Titta på annons</string>
+    <string name="mission_type_play_game">Spela spel</string>
+    <string name="mission_type_online">Online i 5 minuter</string>
+    <string name="mission_type_share">Dela med en vän</string>
+    <string name="mission_type_reward_claim">Hämta belöning</string>
+    <string name="mission_type_iap_purchase">Mynt tillagda</string>
+    <string name="mission_type_promo_code">Kampanjkod</string>
+    <string name="mission_history_footer_stardust">Händelser äldre än 30 dagar löses upp till stjärnstoft</string>
+    <string name="next_step">Nästa steg</string>
+    <string name="create_screen_title">Skapa karaktär</string>
+    <string name="create_generate_cost">Generera för %1$d</string>
+    <string name="create_step_label_format">STEG %1$d AV %2$d: %3$s</string>
+    <string name="create_step_general_setup">ALLMÄNNA INSTÄLLNINGAR</string>
+    <string name="create_step_appearance_details">UTSEENDEDETALJER</string>
+    <string name="create_step_hair_customization">HÅRANPASSNING</string>
+    <string name="create_step_personality_identity">PERSONLIGHET OCH IDENTITET</string>
+    <string name="create_companion_gender">Identitet</string>
+    <string name="create_gender_girls">Kvinna</string>
+    <string name="create_gender_guys">Man</string>
+    <string name="create_gender_trans">Icke-binär</string>
+    <string name="create_inspire_me">Inspirera mig</string>
+    <string name="create_visual_style">Visuell stil</string>
+    <string name="create_style_realistic">Realistisk</string>
+    <string name="create_style_anime">Anime</string>
+    <string name="create_describe_to_create">Beskriv för att skapa</string>
+    <string name="create_prompt_hint">T.ex.: ”En söt, omtänksam vän som älskar att titta på stjärnorna vid midnatt, poesi och varmt te...”</string>
+    <string name="create_companion_ethnicity">Härkomst</string>
+    <string name="create_ethnicity_east_asian">Östasiatisk</string>
+    <string name="create_ethnicity_south_asian">Sydasiatisk</string>
+    <string name="create_ethnicity_black">Mörkhyad</string>
+    <string name="create_ethnicity_white">Ljushyad</string>
+    <string name="create_ethnicity_asian">Asiatisk</string>
+    <string name="create_ethnicity_latina">Latino</string>
+    <string name="create_age">Ålder</string>
+    <string name="create_skin_tone">Hudton</string>
+    <string name="create_hair_color">Hårfärg</string>
+    <string name="create_hair_blonde">Blont</string>
+    <string name="create_hair_black">Svart</string>
+    <string name="create_hair_copper">Koppar</string>
+    <string name="create_hair_blue">Blått</string>
+    <string name="create_hair_purple">Lila</string>
+    <string name="create_hair_red">Rött</string>
+    <string name="create_companion_name">Följeslagarens namn</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Personlighet &amp; social bakgrund</string>
+    <string name="create_personality">Personlighet</string>
+    <string name="create_occupation">Yrke</string>
+    <string name="create_hobbies">Hobbys</string>
+    <string name="create_relationships">Relation</string>
+    <string name="option_none">Ingen</string>
+    <string name="options_done">Klar</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Vänlig</item>
+        <item>Omtänksam</item>
+        <item>Blyg</item>
+        <item>Utåtriktad</item>
+        <item>Mystisk</item>
+        <item>Intelligent</item>
+        <item>Humoristisk</item>
+        <item>Kärleksfull</item>
+        <item>Äventyrlig</item>
+        <item>Självsäker</item>
+        <item>Energisk</item>
+        <item>Lugn</item>
+        <item>Kreativ</item>
+        <item>Ambitiös</item>
+        <item>Empatisk</item>
+        <item>Lojal</item>
+        <item>Optimistisk</item>
+        <item>Pessimistisk</item>
+        <item>Sarkastisk</item>
+        <item>Envis</item>
+        <item>Sensuell</item>
+        <item>Lekfull</item>
+        <item>Dominant</item>
+        <item>Undergiven</item>
+        <item>Andlig</item>
+        <item>Praktisk</item>
+        <item>Drömmande</item>
+        <item>Rebellisk</item>
+        <item>Traditionell</item>
+        <item>Beskyddande</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Designer</item>
+        <item>Konsult</item>
+        <item>Läkare</item>
+        <item>Sjuksköterska</item>
+        <item>Ingenjör</item>
+        <item>Konstnär</item>
+        <item>Musiker</item>
+        <item>Kock</item>
+        <item>Polis</item>
+        <item>Entreprenör</item>
+        <item>Miljardär-VD</item>
+        <item>Modell</item>
+        <item>Skådespelare</item>
+        <item>Författare</item>
+        <item>Idrottare</item>
+        <item>Forskare</item>
+        <item>Programmerare</item>
+        <item>Advokat</item>
+        <item>Arkitekt</item>
+        <item>Modedesigner</item>
+        <item>Fotograf</item>
+        <item>Journalist</item>
+        <item>Pilot</item>
+        <item>Flygvärdinna</item>
+        <item>Barista</item>
+        <item>Bibliotekarie</item>
+        <item>Frilansare</item>
+        <item>Influencer</item>
+        <item>Arbetslös</item>
+        <item>Detektiv</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Läsa</item>
+        <item>Spela</item>
+        <item>Resa</item>
+        <item>Laga mat</item>
+        <item>Sport</item>
+        <item>Musik</item>
+        <item>Fotografering</item>
+        <item>Måla</item>
+        <item>Trädgårdsskötsel</item>
+        <item>Film</item>
+        <item>Anime</item>
+        <item>Cosplay</item>
+        <item>Dansa</item>
+        <item>Sjunga</item>
+        <item>Skriva</item>
+        <item>Shoppa</item>
+        <item>Träning</item>
+        <item>Yoga</item>
+        <item>Meditation</item>
+        <item>Vandring</item>
+        <item>Camping</item>
+        <item>Fiska</item>
+        <item>Hantverk</item>
+        <item>Mode</item>
+        <item>Teknik</item>
+        <item>Astrologi</item>
+        <item>Odling</item>
+        <item>Volontärarbete</item>
+        <item>Bilar</item>
+        <item>Historia</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Vän</item>
+        <item>Bästa vän</item>
+        <item>Flickvän</item>
+        <item>Pojkvän</item>
+        <item>Fru</item>
+        <item>Make</item>
+        <item>Syster</item>
+        <item>Bror</item>
+        <item>Resekompis</item>
+        <item>Äventyrspartner</item>
+        <item>Mentor</item>
+        <item>Kollega</item>
+        <item>Chef</item>
+        <item>Anställd</item>
+        <item>Klasskamrat</item>
+        <item>Guide</item>
+        <item>Elev</item>
+        <item>Främling</item>
+        <item>Rumskompis</item>
+        <item>Granne</item>
+        <item>Ex-partner</item>
+        <item>Barndomsvän</item>
+        <item>Hemlig beundrare</item>
+        <item>Rival</item>
+        <item>Hembiträde</item>
+        <item>Betjänt</item>
+        <item>Värd</item>
+        <item>Följeslagare</item>
+        <item>Själsfrände</item>
+        <item>Bekant</item>
+    </string-array>
+    <string name="store_best_value">BÄSTA VÄRDE</string>
+    <string name="setting_privacy_not_configured">URL för integritetspolicy har inte konfigurerats</string>
+    <string name="setting_no_app_open_link">Ingen app tillgänglig för att öppna länken</string>
+    <string name="setting_unable_open_privacy">Det gick inte att öppna Integritetspolicyn</string>
+    <string name="chat_status_online">Online</string>
+    <string name="create_enter_description">Ange beskrivning</string>
+    <string name="create_enter_name">Ange namn</string>
+    <string name="create_select_personality_hobby">Välj personlighet och hobbys</string>
+    <string name="image_generation_failed">Kunde inte skapa bild</string>
+    <string name="enjoying_hd_camera">Gillar du AI-flickvän?</string>
+    <string name="rate_us_on_the_google_play">Betygsätt oss på Google Play!</string>
+    <string name="rate_now">Betygsätt nu</string>
+    <string name="not_now">Inte nu</string>
+    <string name="chat_relationship_stranger">Främling</string>
+    <string name="chat_subtitle_format">%1$s • Nivå %2$d</string>
+    <string name="chat_title_format">Chatt #%1$s</string>
+    <string name="first_day">Första dagen</string>
+    <string name="feedback_reason_hint">Anledning (t.ex. krasch, långsam, dåligt UI...)</string>
+    <string name="feedback_description_hint">Detaljer eller förslag...</string>
+    <string name="send_feedback">Skicka feedback</string>
+</resources>

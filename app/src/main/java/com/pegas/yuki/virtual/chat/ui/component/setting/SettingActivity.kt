@@ -173,9 +173,9 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
         val intentFeedBack = Intent(Intent.ACTION_SEND)
         intentFeedBack.type = "text/email"
         intentFeedBack.putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
-        intentFeedBack.putExtra(Intent.EXTRA_SUBJECT, "Feedback")
+        intentFeedBack.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.feedback_subject))
         intentFeedBack.putExtra(Intent.EXTRA_TEXT, "" + "")
-        startActivity(Intent.createChooser(intentFeedBack, "Send Feedback:"))
+        startActivity(Intent.createChooser(intentFeedBack, getString(R.string.send_feedback_chooser)))
     }
 
     override fun onResume() {

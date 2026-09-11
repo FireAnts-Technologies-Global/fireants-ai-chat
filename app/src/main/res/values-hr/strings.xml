@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Započni</string>
+    <string name="next">Dalje</string>
+    <string name="txt_thanks_you_for_rating">Hvala na vašoj ocjeni!</string>
+    <string name="onboarding_title_1">Upoznaj nekoga tko te razumije</string>
+    <string name="onboarding_des_1">Upoznaj AI suputnike s jedinstvenim osobnostima i pričama, dostupne u svakom trenutku.</string>
+    <string name="onboarding_title_2">Razgovori koji djeluju osobno</string>
+    <string name="onboarding_des_2">Podijeli svoje misli, istraži nove priče ili jednostavno uživaj u razgovoru skrojenom za tebe.</string>
+    <string name="onboarding_title_3">Stvori svog savršenog suputnika</string>
+    <string name="onboarding_des_3">Odaberi izgled, osobnost i interese kako bi stvorio svog idealnog AI prijatelja.</string>
+    <string name="onboarding_title_4">Tvoja priča počinje ovdje</string>
+    <string name="onboarding_des_4">Poveži se, razgovaraj i otkrij nešto novo svakoga dana.</string>
+    <string name="close">Zatvori</string>
+    <string name="try_again">Pokušaj ponovno</string>
+    <string name="txt_cancel">Odustani</string>
+    <string name="loading_label">Učitavanje</string>
+    <string name="no_internet_title">Nema internetske veze</string>
+    <string name="no_internet_message">Provjerite mrežne postavke kako biste nastavili koristiti aplikaciju.</string>
+    <string name="open_settings">Otvori postavke</string>
+    <string name="force_update_message">Dostupna je nova verzija. Ažurirajte aplikaciju za nastavak.</string>
+    <string name="update_now">Ažuriraj sada</string>
+    <string name="setting">Postavke</string>
+    <string name="main_tab_discover">Otkrij</string>
+    <string name="main_tab_reward">Nagrade</string>
+    <string name="main_tab_add">Dodaj</string>
+    <string name="main_tab_chats">Razgovori</string>
+    <string name="main_tab_mission">Zadaci</string>
+    <string name="rate">Ocijeni</string>
+    <string name="share_with_friend">Podijeli s prijateljima</string>
+    <string name="privacy_policy">Pravila privatnosti</string>
+    <string name="let_me_recommend">Preporučujem ovu aplikaciju</string>
+    <string name="share_to">Podijeli na</string>
+    <string name="we_re_better_than_ever">Aplikacija je svakim danom sve bolja</string>
+    <string name="error_generic">Došlo je do pogreške. Pokušajte ponovno.</string>
+    <string name="error_network_unavailable">Provjerite internetsku vezu i pokušajte ponovno.</string>
+    <string name="error_auth_session_expired">Vaša sesija je istekla. Prijavite se ponovno.</string>
+    <string name="error_auth_unavailable">Trenutno nije moguće dovršiti provjeru autentičnosti. Pokušajte ponovno.</string>
+    <string name="create_error_title">Nije moguće stvoriti lik</string>
+    <string name="error_insufficient_coins">Nedovoljno novčića</string>
+    <string name="no_credits_left">Nema preostalih pokušaja</string>
+    <string name="balance_format">Stanje: %1$d</string>
+    <string name="buy_coins">Kupi novčiće</string>
+    <string name="coins">NOVČIĆI</string>
+    <string name="upgrade_pro">Nadogradi na Pro</string>
+    <string name="reward_error_title">Nije moguće učitati nagrade</string>
+    <string name="home_error_title">Nije moguće učitati sadržaj</string>
+    <string name="home_empty_characters">Trenutno nema dostupnih likova.</string>
+    <string name="home_create_assistant_title">Pronađi nekoga\ntko te razumije</string>
+    <string name="home_create_assistant_subtitle">Stvori vlastitog AI suputnika i\nizgradi iskrenu povezanost.</string>
+    <string name="home_create_assistant_action">Stvori svoj AI</string>
+    <string name="home_top_assistants">Najbolji asistenti</string>
+    <string name="home_recommend_for_you">Preporučeno za tebe</string>
+    <string name="home_see_all">Prikaži sve</string>
+    <string name="setting_back">Natrag</string>
+    <string name="character_detail_error_title">Nije moguće učitati lik</string>
+    <string name="character_detail_start_chat">Razgovaraj sa mnom</string>
+    <string name="chat_error_title">Nije moguće učitati razgovor</string>
+    <string name="chat_starter_title">Započni razgovor</string>
+    <string name="chat_starter_subtitle">Ne znaš što reći? Isprobaj jedan od ovih prijedloga.</string>
+    <string-array name="chat_starter_suggestions">
+        <item>Bok! Reci mi nešto o sebi.</item>
+        <item>Što bi moglo učiniti današnji dan zanimljivijim?</item>
+        <item>Zaigrajmo brzu igru pitanja i odgovora.</item>
+    </string-array>
+    <string name="chat_input_hint">Pitaj bilo što...</string>
+    <string name="today">Danas</string>
+    <string name="yesterday">Jučer</string>
+    <string name="chat_send">Pošalji</string>
+    <string name="chat_more_title">Više</string>
+    <string name="chat_more_custom_background">Prilagođena pozadina</string>
+    <string name="chat_more_delete">Izbriši razgovor</string>
+    <string name="chat_more_report">Prijavi</string>
+    <string name="chat_role_assistant">Asistent</string>
+    <string name="chat_message_just_now">Upravo sada</string>
+    <string name="chat_delete_title">Izbrisati razgovor?</string>
+    <string name="chat_delete_message">Jeste li sigurni da želite izbrisati ovaj razgovor? Ova se radnja ne može poništiti.</string>
+    <string name="chat_delete_confirm">Izbriši</string>
+    <string name="chat_delete_success">Razgovor je uspješno izbrisan</string>
+    <string name="chat_report_title">Prijavi</string>
+    <string name="chat_report_message">Jeste li sigurni da želite prijaviti ovog korisnika? Pregledat ćemo vašu prijavu i poduzeti odgovarajuće mjere.</string>
+    <string name="chat_report_confirm">Prijavi</string>
+    <string name="chat_report_success">Hvala na prijavi.</string>
+    <string name="chat_report_hint">Opišite problem (neobavezno)...</string>
+    <string name="chat_empty_title">Još nema razgovora</string>
+    <string name="chat_empty_subtitle">Započnite novi razgovor kako bi se vaše poruke pojavile ovdje.</string>
+    <string name="chat_empty_start_chat">Započni razgovor</string>
+    <string name="actions">Radnje</string>
+    <string name="store_title">Trgovina</string>
+    <string name="store_top_up_coins">DOPUNI NOVČIĆE</string>
+    <string name="store_unlock_storylines">Otključaj priče &amp; radnje</string>
+    <string name="store_membership_plans">PLANOVI ČLANSTVA</string>
+    <string name="store_unlimited_vip">Vrhunsko VIP iskustvo</string>
+    <string name="store_restore_purchases">Vrati kupnje</string>
+    <string name="store_terms_policies">Uvjeti i pravila</string>
+    <string name="store_transactions_info">Transakcije se obrađuju putem vašeg Google Play računa.\nPretplate se automatski obnavljaju osim ako se ne otkažu najmanje 24 sata prije kraja trenutnog razdoblja.</string>
+    <string name="store_terms_privacy">Uvjeti pružanja usluge   •   Pravila privatnosti</string>
+    <string name="store_product_not_found">Proizvod nije pronađen</string>
+    <string name="store_purchase_cancelled">Kupnja je otkazana</string>
+    <string name="store_restoring_purchases">Vraćanje kupnji u tijeku...</string>
+    <string name="store_restore_success">Kupnje su uspješno vraćene!</string>
+    <string name="store_coins_credited">Novčići su uspješno dodani! Stanje: %1$d</string>
+    <string name="store_purchase_processing">Kupnja uspješna. Novčići se obrađuju, osvježite za trenutak.</string>
+    <string name="store_vip_activated">VIP članstvo je uspješno aktivirano!</string>
+    <string name="store_vip_processing">Kupnja uspješna. VIP status se obrađuje, osvježite za trenutak.</string>
+    <string name="store_duration_month">mjesečno</string>
+    <string name="store_duration_year">godišnje</string>
+    <string name="store_vip_desc_month">Mjesečni VIP pristup s dnevnim nagradama u novčićima</string>
+    <string name="store_vip_desc_year">Godišnji VIP pristup s dnevnim nagradama i premium značajkama</string>
+    <string name="store_vip_benefit_1">Bonus od 500 novčića za svaku dnevnu prijavu</string>
+    <string name="store_vip_benefit_2">Bonus od 750 novčića za svaku dnevnu prijavu</string>
+    <string name="store_vip_benefit_3">Uživajte u svim pogodnostima VIP članstva</string>
+    <string name="store_vip_footer_month">Automatski se obnavlja svakog mjeseca. Otkažite bilo kada.</string>
+    <string name="store_vip_footer_year">Automatski se obnavlja svake godine. Otkažite bilo kada na Google Playu.</string>
+    <string name="store_empty_title">Nema dostupnih paketa</string>
+    <string name="store_empty_subtitle">Proizvodi trenutno nisu dostupni. Provjerite ponovno kasnije.</string>
+    <string name="store_empty_retry">Pokušaj ponovno</string>
+    <string name="store_empty_vip_plans">Planovi članstva trenutno nisu dostupni.</string>
+    <string name="store_empty_coin_packages">Paketi novčića trenutno nisu dostupni.</string>
+    <string name="sub_empty_plans">Planovi članstva trenutno nisu dostupni. Provjerite kasnije.</string>
+    <string name="coins_empty_packages">Paketi novčića trenutno nisu dostupni. Provjerite kasnije.</string>
+    <string name="character_detail_hot">POPULARNO</string>
+    <string name="character_badge_new">NOVO</string>
+    <string name="histories_title">Povijest</string>
+    <string name="character_detail_intimacy_title">Napredak odnosa</string>
+    <string name="character_detail_level_format">Razina %1$d</string>
+    <string name="character_detail_intimacy_hint">Svaka poruka dodaje do +%1$d bodova bliskosti</string>
+    <string name="character_detail_exclusive_photo_gallery">Ekskluzivna fotogalerija</string>
+    <string name="character_detail_about">O liku %1$s</string>
+    <string name="character_detail_chats">Razgovori</string>
+    <string name="character_detail_rating">Ocjena</string>
+    <string name="character_detail_most_popular">Najpopularnije</string>
+    <string name="character_detail_rank_format">Top %1$d</string>
+    <string name="character_detail_personality_traits">Osobnost &amp; Osobine</string>
+    <string name="character_detail_purchase_success">Pozadina je uspješno otključana!</string>
+    <string name="continue_">Nastavi</string>
+    <string name="sub_price_month_format">%1$s/ mjesečno</string>
+    <string name="sub_price_year_format">%1$s/ godišnje</string>
+    <string name="sub_feature_outfits">Pristup premium pričama i ekskluzivnim trenucima</string>
+    <string name="sub_plan_monthly">Mjesečno</string>
+    <string name="sub_plan_yearly">Godišnje</string>
+    <string name="sub_subscribe_now">Pretplati se odmah</string>
+    <string name="sub_current_plan">TRENUTNI PLAN</string>
+    <string name="sub_fine_print_1">Plaćanje će biti naplaćeno s vašeg Google Play računa nakon potvrde kupnje.</string>
+    <string name="sub_fine_print_2">Pretplata se automatski obnavlja prema vašem planu, osim ako se ne otkaže najmanje 24 sata prije kraja trenutnog razdoblja.</string>
+    <string name="sub_fine_print_3">Korisnici bez pretplate i dalje mogu koristiti uslugu, ali neke plaćene značajke mogu biti ograničene.</string>
+    <string name="sub_fine_print_4">Pretplatom možete upravljati ili je otkazati u bilo kojem trenutku u odjeljku Pretplate na Google Playu.</string>
+    <string name="sub_restore_purchase">Vrati kupnje</string>
+    <string name="sub_paywall_title">Otključaj više uz AURA+</string>
+    <string name="sub_paywall_subtitle">Dublji razgovori. Više načina za stvaranje.</string>
+    <string name="sub_feature_unlimited_messages">Premium priče</string>
+    <string name="sub_feature_exclusive_companions">Dublja povezanost</string>
+    <string name="sub_feature_create_characters">Dnevni novčići</string>
+    <string name="sub_feature_chat_backgrounds">Bez oglasa</string>
+    <string name="sub_cancel_anytime">Otkaži u bilo kojem trenutku</string>
+    <string name="sub_best_value_arrow">Najbolja vrijednost &gt;</string>
+    <string name="sub_terms">Uvjeti</string>
+    <string name="sub_privacy">Privatnost</string>
+    <string name="sub_save_percent_format">UŠTEDA %1$d%%</string>
+    <string name="sub_save_badge_format">UŠTEDA %1$s</string>
+    <string name="sub_billed_annually_format">%1$s/mjesečno, naplaćuje se godišnje</string>
+    <string name="sub_billed_annually_fallback">%1$s, naplaćuje se godišnje</string>
+    <string name="sub_billed_monthly_format">%1$s/mjesečno, naplaćuje se mjesečno</string>
+    <string name="sub_billed_monthly_fallback">%1$s, naplaćuje se mjesečno</string>
+    <string name="store_coins_format">%1$d Novčića</string>
+    <string name="feedback_subject">Povratne informacije</string>
+    <string name="send_feedback_chooser">Pošalji povratne informacije:</string>
+    <string name="send_email_via">Pošalji e-poštu putem:</string>
+    <string name="no_email_client_found">Nije pronađena aplikacija za e-poštu</string>
+    <string name="select_a_language">Odaberi jezik</string>
+    <string name="reward_your_progress">Vaš napredak</string>
+    <string name="reward_check_in_today">Prijava danas</string>
+    <string name="reward_checked_in_today">Prijavljeno danas</string>
+    <string name="reward_earn_rewards">Zaradi nagrade</string>
+    <string name="reward_daily_ads">Dnevni nagradni oglasi</string>
+    <string name="reward_daily_ads_desc">+%1$d novčića po oglasu</string>
+    <string name="reward_watch_ads_format">Gledaj oglase (%1$d/10)</string>
+    <string name="reward_ads_unavailable">Trenutno nema dostupnih oglasa. Pokušajte ponovno za nekoliko minuta.</string>
+    <string name="reward_vip_unlocked">VIP član</string>
+    <string name="reward_vip_unlocked_desc">Iskustvo bez oglasa je aktivno</string>
+    <string name="reward_claimed_title">Nagrada preuzeta!</string>
+    <string name="reward_claimed_desc">Vaša nagrada za dnevnu prijavu dodana je u vaš inventar.</string>
+    <string name="reward_claimed_coin_format">+%1$d Novčića</string>
+    <string name="reward_processing">Nagrada se obrađuje. Vaše stanje uskoro će se ažurirati.</string>
+    <string name="reward_day_format">%1$d. dan</string>
+    <string name="mission_tab_mission">Zadaci</string>
+    <string name="mission_tab_history">Povijest</string>
+    <string name="mission_no_active">Trenutno nema aktivnih zadataka.</string>
+    <string name="mission_coins_earned_format">+%1$d Novčića</string>
+    <string name="mission_type_daily_login">Dnevna prijava</string>
+    <string name="mission_type_watch_ad">Pogledaj oglas</string>
+    <string name="mission_type_play_game">Igraj igru</string>
+    <string name="mission_type_online">Na mreži 5 min</string>
+    <string name="mission_type_share">Podijeli s prijateljem</string>
+    <string name="mission_type_reward_claim">Preuzmi nagradu</string>
+    <string name="mission_type_iap_purchase">Novčići dodani</string>
+    <string name="mission_type_promo_code">Promotivni kod</string>
+    <string name="mission_history_footer_stardust">Aktivnosti starije od 30 dana pretvaraju se u zvjezdanu prašinu</string>
+    <string name="next_step">Sljedeći korak</string>
+    <string name="create_screen_title">Stvori lik</string>
+    <string name="create_generate_cost">Generiraj za %1$d</string>
+    <string name="create_step_label_format">KORAK %1$d OD %2$d: %3$s</string>
+    <string name="create_step_general_setup">OPĆE POSTAVKE</string>
+    <string name="create_step_appearance_details">DETALJI IZGLEDA</string>
+    <string name="create_step_hair_customization">PRILAGODBA KOSE</string>
+    <string name="create_step_personality_identity">OSOBNOST I IDENTITET</string>
+    <string name="create_companion_gender">Spol</string>
+    <string name="create_gender_girls">Žensko</string>
+    <string name="create_gender_guys">Muško</string>
+    <string name="create_gender_trans">Nebinarno</string>
+    <string name="create_inspire_me">Inspiriraj me</string>
+    <string name="create_visual_style">Vizualni stil</string>
+    <string name="create_style_realistic">Realistično</string>
+    <string name="create_style_anime">Anime</string>
+    <string name="create_describe_to_create">Opiši za stvaranje</string>
+    <string name="create_prompt_hint">Npr.: „Nježna, brižna prijateljica koja voli promatrati zvijezde u ponoć, poeziju i kuhanje toplog čaja...”</string>
+    <string name="create_companion_ethnicity">Podrijetlo suputnika</string>
+    <string name="create_ethnicity_east_asian">Istočnoazijsko</string>
+    <string name="create_ethnicity_south_asian">Južnoazijsko</string>
+    <string name="create_ethnicity_black">Tamnoputo</string>
+    <string name="create_ethnicity_white">Svijetloputo</string>
+    <string name="create_ethnicity_asian">Azijsko</string>
+    <string name="create_ethnicity_latina">Latino</string>
+    <string name="create_age">Dob</string>
+    <string name="create_skin_tone">Ton kože</string>
+    <string name="create_hair_color">Boja kose</string>
+    <string name="create_hair_blonde">Plava</string>
+    <string name="create_hair_black">Crna</string>
+    <string name="create_hair_copper">Bakrena</string>
+    <string name="create_hair_blue">Plava</string>
+    <string name="create_hair_purple">Ljubičasta</string>
+    <string name="create_hair_red">Crvena</string>
+    <string name="create_companion_name">Ime suputnika</string>
+    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_personality_social_background">Osobnost &amp; društveno podrijetlo</string>
+    <string name="create_personality">Osobnost</string>
+    <string name="create_occupation">Zanimanje</string>
+    <string name="create_hobbies">Hobiji</string>
+    <string name="create_relationships">Odnos</string>
+    <string name="option_none">Nijedno</string>
+    <string name="options_done">Gotovo</string>
+    <string-array name="create_personality_options">
+        <item>@string/option_none</item>
+        <item>Prijateljski</item>
+        <item>Brižan</item>
+        <item>Sramežljiv</item>
+        <item>Otvoren</item>
+        <item>Tajanstven</item>
+        <item>Inteligentan</item>
+        <item>Duhovit</item>
+        <item>Privržen</item>
+        <item>Pustolovan</item>
+        <item>Samouvjeren</item>
+        <item>Energičan</item>
+        <item>Miran</item>
+        <item>Kreativan</item>
+        <item>Ambiciozan</item>
+        <item>Empatičan</item>
+        <item>Odan</item>
+        <item>Optimističan</item>
+        <item>Pesimističan</item>
+        <item>Sarkastičan</item>
+        <item>Tvrdoglav</item>
+        <item>Senzualan</item>
+        <item>Razigran</item>
+        <item>Dominantan</item>
+        <item>Pokoran</item>
+        <item>Duhovan</item>
+        <item>Praktičan</item>
+        <item>Sanjarski</item>
+        <item>Buntovan</item>
+        <item>Tradicionalan</item>
+        <item>Zaštitnički</item>
+    </string-array>
+    <string-array name="create_occupation_options">
+        <item>@string/option_none</item>
+        <item>Dizajner</item>
+        <item>Savjetnik</item>
+        <item>Liječnik</item>
+        <item>Medicinska sestra</item>
+        <item>Inženjer</item>
+        <item>Umjetnik</item>
+        <item>Glazbenik</item>
+        <item>Kuhar</item>
+        <item>Policajac</item>
+        <item>Poduzetnik</item>
+        <item>Milijarder CEO</item>
+        <item>Model</item>
+        <item>Glumac</item>
+        <item>Pisac</item>
+        <item>Sportaš</item>
+        <item>Znanstvenik</item>
+        <item>Programer</item>
+        <item>Odvjetnik</item>
+        <item>Arhitekt</item>
+        <item>Modni dizajner</item>
+        <item>Fotograf</item>
+        <item>Novinar</item>
+        <item>Pilot</item>
+        <item>Stjuardesa</item>
+        <item>Barista</item>
+        <item>Knjižničar</item>
+        <item>Slobodnjak</item>
+        <item>Influencer</item>
+        <item>Nezaposlen</item>
+        <item>Detektiv</item>
+    </string-array>
+    <string-array name="create_hobbies_options">
+        <item>@string/option_none</item>
+        <item>Čitanje</item>
+        <item>Videoigre</item>
+        <item>Putovanja</item>
+        <item>Kuhanje</item>
+        <item>Sport</item>
+        <item>Glazba</item>
+        <item>Fotografija</item>
+        <item>Slikanje</item>
+        <item>Vrtlarstvo</item>
+        <item>Filmovi</item>
+        <item>Anime</item>
+        <item>Cosplay</item>
+        <item>Ples</item>
+        <item>Pjevanje</item>
+        <item>Pisanje</item>
+        <item>Kupovina</item>
+        <item>Fitness</item>
+        <item>Joga</item>
+        <item>Meditacija</item>
+        <item>Planinarenje</item>
+        <item>Kampiranje</item>
+        <item>Ribolov</item>
+        <item>Rukotvorine</item>
+        <item>Moda</item>
+        <item>Tehnologija</item>
+        <item>Astrologija</item>
+        <item>Uzgajanje biljaka</item>
+        <item>Volontiranje</item>
+        <item>Automobili</item>
+        <item>Povijest</item>
+    </string-array>
+    <string-array name="create_relationships_options">
+        <item>@string/option_none</item>
+        <item>Prijatelj</item>
+        <item>Najbolji prijatelj</item>
+        <item>Djevojka</item>
+        <item>Dečko</item>
+        <item>Supruga</item>
+        <item>Suprug</item>
+        <item>Sestra</item>
+        <item>Brat</item>
+        <item>Partner na putovanju</item>
+        <item>Partner u pustolovinama</item>
+        <item>Mentor</item>
+        <item>Kolega</item>
+        <item>Šef</item>
+        <item>Zaposlenik</item>
+        <item>Kolega iz razreda</item>
+        <item>Vodič</item>
+        <item>Učenik</item>
+        <item>Stranac</item>
+        <item>Cimer</item>
+        <item>Susjed</item>
+        <item>Bivši partner</item>
+        <item>Prijatelj iz djetinjstva</item>
+        <item>Tajni obožavatelj</item>
+        <item>Rival</item>
+        <item>Sluškinja</item>
+        <item>Batić</item>
+        <item>Domaćin</item>
+        <item>Suputnik</item>
+        <item>Srodna duša</item>
+        <item>Poznanik</item>
+    </string-array>
+    <string name="store_best_value">NAJBOLJA VRIJEDNOST</string>
+    <string name="setting_privacy_not_configured">URL Pravila privatnosti nije postavljen</string>
+    <string name="setting_no_app_open_link">Nema aplikacije za otvaranje ove veze</string>
+    <string name="setting_unable_open_privacy">Nije moguće otvoriti Pravila privatnosti</string>
+    <string name="chat_status_online">Na mreži</string>
+    <string name="create_enter_description">Unesite opis lika</string>
+    <string name="create_enter_name">Unesite ime lika</string>
+    <string name="create_select_personality_hobby">Odaberite osobnost i hobije</string>
+    <string name="image_generation_failed">Generiranje slike nije uspjelo</string>
+    <string name="enjoying_hd_camera">Sviđa li vam se AI Djevojka?</string>
+    <string name="rate_us_on_the_google_play">Ocijenite nas na Google Playu!</string>
+    <string name="rate_now">Ocijeni sada</string>
+    <string name="not_now">Ne sada</string>
+    <string name="chat_relationship_stranger">Stranac</string>
+    <string name="chat_subtitle_format">%1$s • Razina %2$d</string>
+    <string name="chat_title_format">Razgovor #%1$s</string>
+    <string name="first_day">Prvi dan</string>
+    <string name="feedback_reason_hint">Razlog (npr. rušenje, sporo, loš izgled...)</string>
+    <string name="feedback_description_hint">Pojedinosti ili prijedlozi...</string>
+    <string name="send_feedback">Pošalji povratne informacije</string>
+</resources>

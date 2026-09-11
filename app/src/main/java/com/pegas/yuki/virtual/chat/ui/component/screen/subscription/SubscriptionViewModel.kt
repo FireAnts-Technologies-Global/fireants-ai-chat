@@ -1,6 +1,7 @@
 package com.pegas.yuki.virtual.chat.ui.component.screen.subscription
 
 import android.app.Activity
+import android.content.Context
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.domain.model.billing.VipProduct
 import com.pegas.yuki.virtual.chat.domain.model.common.AppResult
@@ -13,10 +14,12 @@ import com.pegas.yuki.virtual.chat.ui.bases.compose.mvi.BaseComposeViewModel
 import com.pegas.yuki.virtual.chat.ui.billing.BillingPurchaseCoordinator
 import com.pegas.yuki.virtual.chat.ui.billing.PurchaseFlowResult
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
 @HiltViewModel
 class SubscriptionViewModel @Inject constructor(
+    @ApplicationContext private val context: Context,
     private val getVipProductsUseCase: GetVipProductsUseCase,
     private val billingRepository: BillingRepository,
     private val revenueCatRepository: RevenueCatRepository,
@@ -198,7 +201,7 @@ class SubscriptionViewModel @Inject constructor(
         val dynamicSavePercentageText = when {
             !annualVip?.badge.isNullOrBlank() -> {
                 val b = annualVip!!.badge!!.trim()
-                if (b.startsWith("SAVE", ignoreCase = true)) b else "SAVE $b"
+                if (b.startsWith("SAVE", ignoreCase = true)) b else context.getString(R.string.sub_save_badge_format, b)
             }
 
             monthlyRc != null && annualRc != null && monthlyRc.priceAmountMicros > 0 && annualRc.priceAmountMicros > 0 -> {
@@ -207,7 +210,7 @@ class SubscriptionViewModel @Inject constructor(
                 if (monthlyTotal > annualTotal) {
                     val percent =
                         (((monthlyTotal - annualTotal).toDouble() / monthlyTotal) * 100).toInt()
-                    if (percent > 0) "SAVE $percent%" else null
+                    if (percent > 0) context.getString(R.string.sub_save_percent_format, percent) else null
                 } else null
             }
 
@@ -231,9 +234,9 @@ class SubscriptionViewModel @Inject constructor(
                     "%.2f %s".format(amount, annualRc.currencyCode)
                 }
             }
-            "$formatted/month, billed annually"
+            context.getString(R.string.sub_billed_annually_format, formatted)
         } else if (annualVip != null) {
-            "${annualVip.displayName}, billed annually"
+            context.getString(R.string.sub_billed_annually_fallback, annualVip.displayName)
         } else null
 
         val dynamicMonthlyBreakdownText =
@@ -248,9 +251,9 @@ class SubscriptionViewModel @Inject constructor(
                 } catch (e: Exception) {
                     monthlyRc.priceFormatted
                 }
-                "$formatted/month, billed monthly"
+                context.getString(R.string.sub_billed_monthly_format, formatted)
             } else if (monthlyVip != null) {
-                "${monthlyVip.displayName}, billed monthly"
+                context.getString(R.string.sub_billed_monthly_fallback, monthlyVip.displayName)
             } else null
 
         return vips.map { vip ->

@@ -65,7 +65,7 @@ android {
 
         debug {
             buildConfigField "String", "email_feedback", "\"longtq2609@gmail.com\""
-            manifestPlaceholders = [app_id: "ca-app-pub-3940256099942544~3347511713"]
+            manifestPlaceholders = [app_id: "ca-app-pub-7988764211742191~6344476054"]
             buildConfigField "Boolean", "build_debug", "true"
             buildConfigField(BOOLEAN, DEV_MODE, TRUE)
             versionNameSuffix '-dev'

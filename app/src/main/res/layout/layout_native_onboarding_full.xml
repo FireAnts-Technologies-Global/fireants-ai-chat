@@ -106,7 +106,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/bg_btn_native_cta"
             android:textAllCaps="false"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16dp"
             tools:text="Install" />
     </LinearLayout>

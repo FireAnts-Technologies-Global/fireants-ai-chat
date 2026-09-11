@@ -73,7 +73,7 @@ class MissionViewModel @Inject constructor(
     private fun mapTransactionTypeToTitleRes(type: String): Pair<Int?, String?> {
         return when (type.lowercase()) {
             "checkin", "check_in" -> R.string.mission_type_daily_login to null
-            "ad", "watch_ad" -> R.string.mission_type_watch_ad to null
+            "ad", "watch_ad", "ads" -> R.string.mission_type_watch_ad to null
             "game", "play_game" -> R.string.mission_type_play_game to null
             "online" -> R.string.mission_type_online to null
             "share" -> R.string.mission_type_share to null

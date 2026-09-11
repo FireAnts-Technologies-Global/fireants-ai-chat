@@ -29,7 +29,6 @@
     <string name="main_tab_chats">Chats</string>
     <string name="main_tab_mission">Mission</string>
     <string name="rate">Rate</string>
-    <string name="feedback">Feedback</string>
     <string name="share_with_friend">Share with friends</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="let_me_recommend">Let me recommend this app</string>
@@ -55,7 +54,6 @@
     <string name="home_top_assistants">Top Assistants</string>
     <string name="home_recommend_for_you">Recommend for you</string>
     <string name="home_see_all">See all</string>
-    <string name="home_all_characters">All Characters</string>
     <string name="setting_back">Back</string>
     <string name="promo_code_title" translatable="false">Redeem Code</string>
     <string name="promo_code_description" translatable="false">Enter your code to claim free coins.</string>
@@ -75,7 +73,6 @@
         <item>Let\'s play a quick game of questions.</item>
     </string-array>
     <string name="chat_input_hint">Ask anything...</string>
-    <string name="chat_cost_format">Cost %1$d</string>
     <string name="today">Today</string>
     <string name="yesterday">Yesterday</string>
     <string name="chat_send">Send</string>
@@ -97,9 +94,6 @@
     <string name="chat_empty_title">No chats yet</string>
     <string name="chat_empty_subtitle">Start a new conversation to see your chats appear here.</string>
     <string name="chat_empty_start_chat">Start a chat</string>
-    <string name="you_don_have_any_AI_assistant_yet">No chats yet</string>
-    <string name="create_now">Start a chat</string>
-    <string name="explore_custom_assistants_or_create_a_unique_soulmate_specifically_tailored_to_you.">Start a new conversation to see your chats appear here.</string>
     <string name="actions">Actions</string>
     <string name="store_title">Store</string>
     <string name="store_top_up_coins">TOP UP COINS</string>
@@ -140,7 +134,6 @@
     <string name="character_detail_intimacy_title">Connection Progress</string>
     <string name="character_detail_level_format">Level %1$d</string>
     <string name="character_detail_intimacy_hint">Each message adds up to +%1$d connection points</string>
-    <string name="character_detail_exclusive_gallery">Character Gallery</string>
     <string name="character_detail_exclusive_photo_gallery">Exclusive Photo Gallery</string>
     <string name="character_detail_about">About %1$s</string>
     <string name="character_detail_chats">Chats</string>
@@ -148,23 +141,13 @@
     <string name="character_detail_most_popular">Most Popular</string>
     <string name="character_detail_rank_format">Top %1$d</string>
     <string name="character_detail_personality_traits">Personality &amp; Traits</string>
-    <string name="character_detail_coins_format">%1$d COINS</string>
     <string name="character_detail_purchase_success">Background unlocked successfully!</string>
     <string name="continue_">Continue</string>
-    <string name="sub_vip_member">VIP MEMBER</string>
-    <string name="sub_get_premium_access">Get Premium Access</string>
     <string name="sub_price_month_format">%1$s/ month</string>
     <string name="sub_price_year_format">%1$s/ year</string>
-    <string name="sub_bonus_gems_format"> •   %1$s Coins/day bonus</string>
     <string name="sub_feature_outfits">Access premium stories &amp; exclusive moments</string>
-    <string name="sub_feature_action">Daily bonus coins for every conversation</string>
-    <string name="sub_feature_personality">Deeper connection &amp; unique relationship moments</string>
-    <string name="sub_feature_ad_free">Ad-free experience</string>
-    <string name="sub_feature_support">Priority support</string>
     <string name="sub_plan_monthly">Monthly</string>
-    <string name="sub_plan_monthly_desc">Flexible subscription option</string>
     <string name="sub_plan_yearly">Yearly</string>
-    <string name="sub_plan_yearly_desc">Full celestial access &amp; priority response</string>
     <string name="sub_subscribe_now">Subscribe Now</string>
     <string name="sub_current_plan">CURRENT PLAN</string>
     <string name="sub_fine_print_1">Payment will be charged to your Google Play account after\npurchase confirmation.</string>
@@ -172,8 +155,6 @@
     <string name="sub_fine_print_3">Non-subscribers can still use the service, however, some paid\nfeatures may be limited.</string>
     <string name="sub_fine_print_4">You can manage or cancel your subscription at any time in the\nSubscriptions section of Google Play.</string>
     <string name="sub_restore_purchase">Restore purchases</string>
-    <string name="sub_terms_of_use">Terms of Use</string>
-    <string name="sub_privacy_policy">Privacy Policy</string>
     <string name="sub_paywall_title">Unlock more with AURA+</string>
     <string name="sub_paywall_subtitle">Deeper conversations. More ways to create.</string>
     <string name="sub_feature_unlimited_messages">Premium Stories</string>
@@ -181,8 +162,6 @@
     <string name="sub_feature_create_characters">Daily Coins</string>
     <string name="sub_feature_chat_backgrounds">No Ads</string>
     <string name="sub_cancel_anytime">Cancel anytime</string>
-    <string name="sub_billed_annually_format">%1$s/month, billed annually</string>
-    <string name="sub_save_percent_format">SAVE %1$s</string>
     <string name="sub_best_value_arrow">Best value &gt;</string>
     <string name="sub_terms">Terms</string>
     <string name="sub_privacy">Privacy</string>
@@ -202,11 +181,6 @@
     <string name="reward_claimed_coin_format">+%1$d Coins</string>
     <string name="reward_processing">Reward is processing. Your balance will update shortly.</string>
     <string name="reward_day_format">Day %1$d</string>
-    <string name="mission_ritual_chronicle">Ritual Chronicle</string>
-    <string name="mission_ritual_chronicle_desc">Review your completed cosmic alignments and accumulated coin payouts.</string>
-    <string name="mission_total_quests">TOTAL QUESTS</string>
-    <string name="mission_completed_format">%1$d Completed</string>
-    <string name="mission_coin_obtained">COINS OBTAINED</string>
     <string name="mission_tab_mission">Mission</string>
     <string name="mission_tab_history">History</string>
     <string name="mission_no_active">No active missions right now.</string>
@@ -406,7 +380,6 @@
     <string name="create_enter_description">Create enter description</string>
     <string name="create_enter_name">Create enter name</string>
     <string name="create_select_personality_hobby">Create select personality hobby</string>
-    <string name="image_task_was_not_created">Image task was not created</string>
     <string name="image_generation_failed">Image generation failed</string>
     <string name="enjoying_hd_camera">Enjoying AI Girlfriend?</string>
     <string name="rate_us_on_the_google_play">Rate us on the Google Play!</string>
@@ -415,7 +388,6 @@
     <string name="chat_relationship_stranger">Stranger</string>
     <string name="chat_subtitle_format">%1$s • Level %2$d</string>
     <string name="chat_title_format">Chat #%1$s</string>
-    <string name="chat_list_my_ai">My AI</string>
     <string name="first_day">First Day</string>
     <string name="feedback_reason_hint">Reason (e.g. crash, slow, bad UI...)</string>
     <string name="feedback_description_hint">Details or suggestions...</string>

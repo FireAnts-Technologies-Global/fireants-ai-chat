@@ -1,7 +1,7 @@
 package com.pegas.yuki.virtual.chat.ads
 
-import android.content.Context
 import com.pegas.yuki.virtual.chat.BuildConfig
+import android.content.Context
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import timber.log.Timber
@@ -26,8 +26,7 @@ data class AdRemoteConfig(
 
         fun getInstance(): AdRemoteConfig {
             return instance ?: synchronized(this) {
-                instance
-                    ?: throw IllegalStateException("AdRemoteConfig not initialized. Call initialize() first.")
+                instance ?: throw IllegalStateException("AdRemoteConfig not initialized. Call initialize() first.")
             }
         }
 
@@ -76,15 +75,11 @@ data class AdRemoteConfig(
 
         private fun fromInputStream(inputStream: InputStream): AdRemoteConfig {
             return inputStream.bufferedReader().use { reader ->
-                adapter.fromJson(reader.readText())
-                    ?: throw IllegalArgumentException("Invalid JSON")
+                adapter.fromJson(reader.readText()) ?: throw IllegalArgumentException("Invalid JSON")
             }
         }
 
-        private fun fromAssets(
-            context: Context,
-            fileName: String = RELEASE_FILE_NAME
-        ): AdRemoteConfig {
+        private fun fromAssets(context: Context, fileName: String = RELEASE_FILE_NAME): AdRemoteConfig {
             return context.assets.open(fileName).use { inputStream ->
                 fromInputStream(inputStream)
             }
@@ -96,11 +91,7 @@ data class AdRemoteConfig(
             }
         }
 
-        private fun fromJsonOrAssets(
-            context: Context,
-            json: String?,
-            fileName: String = RELEASE_FILE_NAME
-        ): AdRemoteConfig {
+        private fun fromJsonOrAssets(context: Context, json: String?, fileName: String = RELEASE_FILE_NAME): AdRemoteConfig {
             if (!json.isNullOrBlank()) {
                 try {
                     return fromJson(json)
@@ -111,11 +102,7 @@ data class AdRemoteConfig(
             return fromAssets(context, fileName)
         }
 
-        fun fromInputStreamOrAssets(
-            context: Context,
-            inputStream: InputStream?,
-            fileName: String = RELEASE_FILE_NAME
-        ): AdRemoteConfig {
+        fun fromInputStreamOrAssets(context: Context, inputStream: InputStream?, fileName: String = RELEASE_FILE_NAME): AdRemoteConfig {
             if (BuildConfig.DEBUG) {
                 return fromAssets(context, DEBUG_FILE_NAME)
             }
@@ -165,9 +152,6 @@ data class AdRemoteConfig(
 
     val banner_all: AdUnitConfig
         get() = getAdUnit("banner_all")
-
-    val native_full_all: AdUnitConfig
-        get() = getAdUnit("native_full_all")
 
     val native_welcome_back: AdUnitConfig
         get() = getAdUnit("native_welcome_back")

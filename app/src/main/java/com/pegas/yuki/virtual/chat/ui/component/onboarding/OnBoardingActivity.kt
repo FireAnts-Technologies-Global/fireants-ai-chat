@@ -52,26 +52,21 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 return@postDelayed
             }
 
-            if (appSharedPref.firstOnBoarding)
-                AdRemoteConfig.native_onboarding_fullscreen12 else AdRemoteConfig.native_onboarding_fullscreen12
             if (FireAntsAdSdk.getInstance()
                     .shouldDisplayNativeOnboardingFull1
             ) {
                 AdsManager.loadNativeOnboardingFullAfterPage1(
                     this,
-                    appSharedPref.firstOnBoarding,
                     R.layout.layout_native_onboarding_full
                 )
             }
 
-            if (appSharedPref.firstOnBoarding)
-                AdRemoteConfig.native_onboarding_fullscreen23 else AdRemoteConfig.native_onboarding_fullscreen23
+
             if (FireAntsAdSdk.getInstance()
                     .shouldDisplayNativeOnboardingFull2
             ) {
                 AdsManager.loadNativeOnboardingFullAfterPage3(
                     this,
-                    appSharedPref.firstOnBoarding,
                     R.layout.layout_native_onboarding_full
                 )
             }

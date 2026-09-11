@@ -10,7 +10,7 @@
         android:id="@+id/ad_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000101"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <!-- Block 3: Media -->
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginEnd="8dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/ad_icon"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="2dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/ad_headline"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:layout_marginBottom="12dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="12sp"
             tools:text="ad body" />
 
@@ -106,7 +106,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/bg_btn_native_cta"
             android:textAllCaps="false"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16dp"
             tools:text="Install" />
     </LinearLayout>

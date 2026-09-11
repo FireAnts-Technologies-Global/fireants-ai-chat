@@ -1,18 +1,18 @@
 {
   "inter_splash": {
-    "id": "ca-app-pub-7988764211742191/7113188310",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/9278112800",
+    "isEnable": true,
     "enable_ua_check": false
   },
   "banner_splash": {
-    "id": "ca-app-pub-7988764211742191/8234698290",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/3610853154",
+    "isEnable": true,
     "reloadIntervalSeconds": 30,
     "enable_ua_check": false
   },
   "native_language": {
-    "id": "ca-app-pub-7988764211742191/4042769473",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/7965031139",
+    "isEnable": true,
     "colorCTA": "default",
     "heightCTA": 45,
     "positionCTA": "BOTTOM",
@@ -25,8 +25,8 @@
     "enable_ua_check": false
   },
   "native_language_click": {
-    "id": "ca-app-pub-7988764211742191/1477718259",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/9984689819",
+    "isEnable": true,
     "colorCTA": "default",
     "heightCTA": 45,
     "positionCTA": "BOTTOM",
@@ -39,8 +39,8 @@
     "enable_ua_check": false
   },
   "native_onboarding_fullscreen12": {
-    "id": "ca-app-pub-7988764211742191/2729687805",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/5338867792",
+    "isEnable": true,
     "colorCTA": "default",
     "heightCTA": 45,
     "positionCTA": "BOTTOM",
@@ -53,8 +53,8 @@
     "enable_ua_check": true
   },
   "native_onboarding_fullscreen23": {
-    "id": "ca-app-pub-7988764211742191/5225391578",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/4025786125",
+    "isEnable": true,
     "colorCTA": "default",
     "heightCTA": 45,
     "positionCTA": "BOTTOM",
@@ -67,13 +67,13 @@
     "enable_ua_check": true
   },
   "inter_home": {
-    "id": "ca-app-pub-7988764211742191/8903233977",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/1200312230",
+    "isEnable": true,
     "enable_ua_check": false
   },
   "native_onboarding_page4": {
-    "id": "ca-app-pub-7988764211742191/2599228238",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/7002951607",
+    "isEnable": true,
     "colorCTA": "default",
     "heightCTA": 45,
     "positionCTA": "BOTTOM",
@@ -86,28 +86,14 @@
     "enable_ua_check": false
   },
   "banner_all": {
-    "id": "ca-app-pub-7988764211742191/8973064890",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/6160643221",
+    "isEnable": true,
     "reloadIntervalSeconds": 30,
     "enable_ua_check": false
   },
-  "native_full_all": {
-    "id": "ca-app-pub-7988764211742191/5802427912",
-    "isEnable": false,
-    "colorCTA": "default",
-    "heightCTA": 45,
-    "positionCTA": "BOTTOM",
-    "components": [
-      "media",
-      "icon_headline",
-      "body",
-      "cta"
-    ],
-    "enable_ua_check": false
-  },
   "native_welcome_back": {
-    "id": "ca-app-pub-7988764211742191/1094574875",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/7339556621",
+    "isEnable": true,
     "colorCTA": "default",
     "heightCTA": 45,
     "positionCTA": "BOTTOM",
@@ -120,29 +106,29 @@
     "enable_ua_check": false
   },
   "inter_welcome_back": {
-    "id": "ca-app-pub-7988764211742191/8781493203",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/6026474959",
+    "isEnable": true,
     "enable_ua_check": false
   },
   "inter_back": {
-    "id": "ca-app-pub-7988764211742191/6155329867",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/8887230563",
+    "isEnable": true,
     "enable_ua_check": false
   },
   "banner_chat": {
-    "id": "ca-app-pub-7988764211742191/4842248195",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/4847561550",
+    "isEnable": true,
     "reloadIntervalSeconds": 30,
     "enable_ua_check": false
   },
   "reward_checkin": {
-    "id": "ca-app-pub-7988764211742191/5610022070",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/2712704456",
+    "isEnable": true,
     "enable_ua_check": false
   },
   "reward_addcoin": {
-    "id": "ca-app-pub-7988764211742191/4650676506",
-    "isEnable": false,
+    "id": "ca-app-pub-7988764211742191/3534479888",
+    "isEnable": true,
     "enable_ua_check": false
   }
 }

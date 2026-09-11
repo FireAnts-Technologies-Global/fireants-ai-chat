@@ -132,7 +132,7 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
             mBinding.frBanner.goneView()
         }
         AdRemoteConfig.initialize(this, RemoteConfigUtils.getAdRemoteConfig())
-        loadNativeLanguage(this, appSharedPref.firstLanguage, R.layout.layout_native_language)
+        loadNativeLanguage(this,  R.layout.layout_native_language)
 
         if (AdRemoteConfig.inter_splash.isEnable && isNetwork(this@SplashActivity)) {
             Admob.getInstance().setOpenActivityAfterShowInterAds(false)
@@ -149,7 +149,6 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
                     override fun onAdClosed() {
                         super.onAdClosed()
-                        AdsManager.setupTimeShowAd()
                     }
                 })
         } else {

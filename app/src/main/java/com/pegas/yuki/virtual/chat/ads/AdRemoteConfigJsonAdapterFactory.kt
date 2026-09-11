@@ -9,11 +9,7 @@ import java.lang.reflect.Type
 import java.util.Locale
 
 class AdRemoteConfigJsonAdapterFactory : JsonAdapter.Factory {
-    override fun create(
-        type: Type,
-        annotations: MutableSet<out Annotation>,
-        moshi: Moshi
-    ): JsonAdapter<*>? {
+    override fun create(type: Type, annotations: MutableSet<out Annotation>, moshi: Moshi): JsonAdapter<*>? {
         if (Types.getRawType(type) != AdRemoteConfig::class.java) {
             return null
         }
@@ -67,8 +63,7 @@ class AdRemoteConfigJsonAdapterFactory : JsonAdapter.Factory {
                         "reloadIntervalSeconds" -> reloadIntervalSeconds = reader.nextInt()
                         "colorCTA" -> colorCTA = safeNextString(reader, "default")
                         "heightCTA" -> heightCTA = readHeightValue(reader)
-                        "positionCTA" -> positionCTA =
-                            safeNextString(reader, "BOTTOM").uppercase(Locale.US)
+                        "positionCTA" -> positionCTA = safeNextString(reader, "BOTTOM").uppercase(Locale.US)
                         "components" -> components = readComponentsList(reader)
                         else -> reader.skipValue()
                     }
@@ -109,8 +104,7 @@ class AdRemoteConfigJsonAdapterFactory : JsonAdapter.Factory {
                     JsonReader.Token.NUMBER -> reader.nextInt()
                     JsonReader.Token.STRING -> {
                         val value = reader.nextString()
-                        if (value.equals("default", ignoreCase = true)) 45 else value.toIntOrNull()
-                            ?: 45
+                        if (value.equals("default", ignoreCase = true)) 45 else value.toIntOrNull() ?: 45
                     }
                     JsonReader.Token.NULL -> {
                         reader.nextNull<Unit>()

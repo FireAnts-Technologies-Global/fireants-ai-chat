@@ -1,6 +1,7 @@
 package com.pegas.yuki.virtual.chat.ui.component.language
 
 import com.fireants.adsdk.ads.wrapper.ApNativeAd
+import com.fireants.devconfig.utils.setOnAdminAdToggleListener
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ads.AdsManager
 import com.pegas.yuki.virtual.chat.ads.AdsManager.loadNativeLanguageClick
@@ -63,7 +64,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
             if (!fromSetting) {
                 loadNativeLanguageClick(
                     this,
-                    appSharedPref.firstLanguage,
                     R.layout.layout_native_language_click
                 )
             }
@@ -116,7 +116,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
         } else {
             AdsManager.loadNativeOnboarding4(
                 this,
-                appSharedPref.firstOnBoarding,
                 R.layout.layout_native_onboarding
             )
         }
@@ -216,9 +215,9 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
     }
 
     private fun forceEnableShowAd() {
-//        mBinding.tvTitle.setOnAdminAdToggleListener {
-//            Routes.startSplashActivity(this@LanguageActivity)
-//            finish()
-//        }
+        mBinding.tvTitle.setOnAdminAdToggleListener {
+            Routes.startSplashActivity(this@LanguageActivity)
+            finish()
+        }
     }
 }

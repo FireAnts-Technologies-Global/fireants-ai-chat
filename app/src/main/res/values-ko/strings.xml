@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">언어</string>
     <string name="get_started">시작하기</string>
     <string name="next">다음</string>
     <string name="txt_thanks_you_for_rating">평가해 주셔서 감사합니다!</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">Taal</string>
     <string name="get_started">Aan de slag</string>
     <string name="next">Volgende</string>
     <string name="txt_thanks_you_for_rating">Bedankt voor je beoordeling!</string>

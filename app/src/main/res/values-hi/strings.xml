@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">भाषा</string>
     <string name="get_started">शुरू करें</string>
     <string name="next">आगे बढ़ें</string>
     <string name="txt_thanks_you_for_rating">आपकी रेटिंग के लिए धन्यवाद!</string>

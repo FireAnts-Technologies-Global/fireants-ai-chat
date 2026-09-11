@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">Lingua</string>
     <string name="get_started">Inizia</string>
     <string name="next">Avanti</string>
     <string name="txt_thanks_you_for_rating">Grazie per la tua valutazione!</string>

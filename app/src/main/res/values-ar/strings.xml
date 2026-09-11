@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">اللغة</string>
     <string name="get_started">ابدأ الآن</string>
     <string name="next">التالي</string>
     <string name="txt_thanks_you_for_rating">شكراً لتقييمك!</string>

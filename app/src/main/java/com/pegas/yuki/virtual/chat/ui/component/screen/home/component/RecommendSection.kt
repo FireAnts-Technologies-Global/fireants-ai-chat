@@ -35,7 +35,6 @@ import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.domain.model.character.Character
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color08030F
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color110640
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color161127
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorB440F2
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorD9D9D9
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorFDFDFD
@@ -147,7 +146,7 @@ private fun RecommendCharacterCard(
                 onClick = onClick
             ),
         shape = RoundedCornerShape(SdpR_20),
-        colors = CardDefaults.cardColors(containerColor = Color161127),
+        colors = CardDefaults.cardColors(containerColor = ColorD9D9D9),
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             LoadingAsyncImage(

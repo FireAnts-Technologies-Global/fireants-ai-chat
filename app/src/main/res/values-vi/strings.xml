@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">Ngôn ngữ</string>
     <string name="get_started">Bắt đầu</string>
     <string name="next">Tiếp theo</string>
     <string name="txt_thanks_you_for_rating">Cảm ơn bạn đã đánh giá!</string>

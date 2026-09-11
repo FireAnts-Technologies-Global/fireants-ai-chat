@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">语言</string>
     <string name="get_started">开始体验</string>
     <string name="next">下一步</string>
     <string name="txt_thanks_you_for_rating">感谢您的评价！</string>

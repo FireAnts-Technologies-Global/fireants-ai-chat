@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">ภาษา</string>
     <string name="get_started">เริ่มต้นใช้งาน</string>
     <string name="next">ถัดไป</string>
     <string name="txt_thanks_you_for_rating">ขอบคุณสำหรับการให้คะแนนของคุณ!</string>

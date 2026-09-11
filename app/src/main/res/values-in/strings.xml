@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">Bahasa</string>
     <string name="get_started">Mulai</string>
     <string name="next">Berikutnya</string>
     <string name="txt_thanks_you_for_rating">Terima kasih atas penilaian Anda!</string>

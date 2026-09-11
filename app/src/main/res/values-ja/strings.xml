@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">言語</string>
     <string name="get_started">使ってみる</string>
     <string name="next">次へ</string>
     <string name="txt_thanks_you_for_rating">評価ありがとうございます！</string>

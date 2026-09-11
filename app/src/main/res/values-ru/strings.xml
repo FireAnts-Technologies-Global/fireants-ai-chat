@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">Язык</string>
     <string name="get_started">Начать</string>
     <string name="next">Далее</string>
     <string name="txt_thanks_you_for_rating">Спасибо за вашу оценку!</string>

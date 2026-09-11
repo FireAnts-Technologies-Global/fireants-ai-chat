@@ -42,7 +42,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/img_splash" />
 
-        <com.pegas.aura.aigirlfriend.soul.ui.component.custom.LoadingDotsTextView
+        <com.pegas.yuki.virtual.chat.ui.component.custom.LoadingDotsTextView
             android:id="@+id/txtAds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

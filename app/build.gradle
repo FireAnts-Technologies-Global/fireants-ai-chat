@@ -34,11 +34,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.pegas.aura.aigirlfriend.soul"
+        applicationId "com.pegas.yuki.virtual.chat"
         minSdkVersion min_sdk_version
         targetSdk target_sdk_version
-        versionCode 107
-        versionName "1.0.7"
+        versionCode 100
+        versionName "1.0.0"
 
         def formattedDate = new Date().format('MM.dd.yyyy')
         archivesBaseName = "AI_Girl_Friend_Project_v${versionName}_v${versionCode}_${formattedDate}"
@@ -68,6 +68,7 @@ android {
             manifestPlaceholders = [app_id: "ca-app-pub-3940256099942544~3347511713"]
             buildConfigField "Boolean", "build_debug", "true"
             buildConfigField(BOOLEAN, DEV_MODE, TRUE)
+            versionNameSuffix '-dev'
             minifyEnabled false
             if (hasCustomSigning) {
                 signingConfig signingConfigs.fireants
@@ -114,7 +115,7 @@ android {
         buildConfig = true
         compose = true
     }
-    namespace 'com.pegas.aura.aigirlfriend.soul'
+    namespace 'com.pegas.yuki.virtual.chat'
 }
 
 dependencies {

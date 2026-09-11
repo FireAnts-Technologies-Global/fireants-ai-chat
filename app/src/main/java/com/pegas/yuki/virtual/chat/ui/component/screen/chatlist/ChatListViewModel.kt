@@ -1,0 +1,121 @@
+package com.pegas.yuki.virtual.chat.ui.component.screen.chatlist
+
+import com.pegas.yuki.virtual.chat.domain.model.common.AppResult
+import com.pegas.yuki.virtual.chat.domain.usecase.conversation.DeleteConversationUseCase
+import com.pegas.yuki.virtual.chat.domain.usecase.conversation.ObserveConversationsUseCase
+import com.pegas.yuki.virtual.chat.domain.usecase.conversation.SyncConversationsUseCase
+import com.pegas.yuki.virtual.chat.ui.bases.compose.mvi.BaseComposeViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+
+@HiltViewModel
+class ChatListViewModel @Inject constructor(
+    private val observeConversationsUseCase: ObserveConversationsUseCase,
+    private val syncConversationsUseCase: SyncConversationsUseCase,
+    private val deleteConversationUseCase: DeleteConversationUseCase
+) : BaseComposeViewModel<ChatListUiState, ChatListIntent, ChatListEffect>(ChatListUiState()) {
+
+    init {
+        launchIO {
+            observeConversationsUseCase().collect { conversations ->
+                updateState {
+                    copy(conversations = conversations)
+                }
+            }
+        }
+    }
+
+    override fun handleIntent(intent: ChatListIntent) {
+        when (intent) {
+            ChatListIntent.Initialize -> {
+                if (currentState.hasLoadedInitialData || currentState.isLoading) return
+                loadConversations()
+            }
+
+            is ChatListIntent.OpenConversation -> {
+                if (intent.conversationId.isBlank()) return
+                sendEffect(ChatListEffect.NavigateToConversation(intent.conversationId))
+            }
+
+            is ChatListIntent.DeleteConversation -> {
+                if (intent.conversationId.isBlank() || currentState.deletingConversationId != null) return
+                deleteConversation(intent.conversationId)
+            }
+
+            is ChatListIntent.CreateAssistant -> {
+                sendEffect(ChatListEffect.CreateAssistant)
+            }
+
+            ChatListIntent.Retry -> loadConversations(forceReload = true)
+        }
+    }
+
+    override fun dismissError() {
+        updateState { copy(error = null) }
+    }
+
+    private fun loadConversations(forceReload: Boolean = false) {
+        if (!forceReload && currentState.hasLoadedInitialData) return
+
+        launchIO {
+            updateState { copy(isLoading = true, error = null) }
+
+            when (val result = syncConversationsUseCase()) {
+                is AppResult.Failure -> {
+                    updateState {
+                        copy(
+                            isLoading = false,
+                            error = result.error,
+                            hasLoadedInitialData = false
+                        )
+                    }
+                }
+
+                is AppResult.Success -> {
+                    updateState {
+                        copy(
+                            isLoading = false,
+                            deletingConversationId = null,
+                            hasLoadedInitialData = true,
+                            error = null
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    private fun deleteConversation(conversationId: String) {
+        launchIO {
+            updateState { copy(deletingConversationId = conversationId, error = null) }
+
+            when (val result = deleteConversationUseCase(conversationId)) {
+                is AppResult.Failure -> {
+                    updateState { copy(deletingConversationId = null, error = result.error) }
+                }
+
+                is AppResult.Success -> {
+                    if (result.data) {
+                        updateState {
+                            copy(
+                                deletingConversationId = null,
+                                conversations = conversations.filterNot { it.id == conversationId },
+                                error = null
+                            )
+                        }
+                        sendEffect(ChatListEffect.ConversationDeleted)
+                    } else {
+                        updateState {
+                            copy(
+                                deletingConversationId = null,
+                                error = com.pegas.yuki.virtual.chat.domain.model.common.PublicError(
+                                    com.pegas.yuki.virtual.chat.domain.model.common.PublicMessageKey.GENERIC_ERROR
+                                )
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

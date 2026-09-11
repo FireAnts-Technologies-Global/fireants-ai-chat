@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appsflyer_key" translatable="false">123456789</string>
-    <string name="facebook_app_id" translatable="false">123456789</string>
-    <string name="facebook_client_token" translatable="false">123456789</string>
+    <string name="appsflyer_key" translatable="false">X6Kiaov2ZqhCk3fc7dGnCd</string>
+    <string name="facebook_app_id" translatable="false">3040619669618475</string>
+    <string name="facebook_client_token" translatable="false">9e3254ef1b63ebecd4173b277ed8b5aa</string>
 </resources>

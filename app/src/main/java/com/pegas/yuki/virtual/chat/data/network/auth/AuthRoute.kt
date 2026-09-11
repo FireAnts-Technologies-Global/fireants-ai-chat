@@ -8,6 +8,5 @@ object AuthRoute {
 
     fun isGuest(path: String): Boolean = path.endsWith("/auth/guest")
     fun isRefresh(path: String): Boolean = path.endsWith("/auth/refresh")
-    fun isLogout(path: String): Boolean = path.endsWith("/auth/logout")
     fun isAppConfig(path: String): Boolean = path.contains("/app-configs/by-package/")
 }

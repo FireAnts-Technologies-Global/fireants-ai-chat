@@ -1,7 +1,5 @@
 package com.pegas.yuki.virtual.chat.ui.bases
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -14,7 +12,6 @@ open class BaseViewModel : ViewModel() {
     var viewModelJob = SupervisorJob()
     var uiDispatchers = Dispatchers.Main
     var ioDispatchers = Dispatchers.IO
-    var defaultDispatchers = Dispatchers.Default
     var uiScope = CoroutineScope(uiDispatchers + viewModelJob)
     var bgScope = CoroutineScope(ioDispatchers + viewModelJob)
 
@@ -24,6 +21,4 @@ open class BaseViewModel : ViewModel() {
         uiScope.coroutineContext.cancelChildren()
         bgScope.coroutineContext.cancelChildren()
     }
-
-    fun <T> MutableLiveData<T>.toLiveData(): LiveData<T> = this
 }

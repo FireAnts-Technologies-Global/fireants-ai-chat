@@ -34,14 +34,11 @@ object RemoteConfigUtils {
         INTER_INTERVAL to DEFAULT_INTER_INTERVAL_SECONDS,
     )
 
-    //Default layout
-    private const val AD_LANGUAGE_LAYOUT_FILE = "ad_language_layout.json"
     private const val AD_REMOTE_CONFIG_FILE_DEBUG = "ad_config_debug.json"
     private const val AD_REMOTE_CONFIG_FILE_RELEASE = "ad_config.json"
     private const val FORCE_UPDATE_CONFIG_FILE = "force_update_config.json"
 
     fun getOnShowNavigationButton(): Boolean = getBoolean(ON_SHOW_NAVIGATION_BUTTON)
-    fun getOnEnableUninstallWidget(): Boolean = getBoolean(ON_ENABLE_UNINSTALL_WIDGET, true)
     fun getOnShowDialogConsent(): Boolean = getBoolean(ON_SHOW_DIALOG_CONSENT)
     interface Listener {
         fun loadSuccess()
@@ -147,16 +144,6 @@ object RemoteConfigUtils {
         } catch (ex: Exception) {
             ex.printStackTrace()
             null
-        }
-    }
-
-    private fun loadDefaultAdLanguageLayout(): String {
-        return try {
-            GlobalApp.instance.assets.open(AD_LANGUAGE_LAYOUT_FILE).bufferedReader().use { reader ->
-                reader.readText()
-            }
-        } catch (ex: Exception) {
-            "{}"
         }
     }
 

@@ -1,7 +1,6 @@
 package com.pegas.yuki.virtual.chat.ui.component.screen.subscription.component
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,24 +24,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import com.pegas.yuki.virtual.chat.R
-import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppText
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ManropeMedium
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ManropeRegular
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_1
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_10
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_13
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_16
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_20
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_24
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_42
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_44
-import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_6
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_8
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.nonScaledSp
 
 private val IconCircleBg = Color(0xFFF8ECFF)
-private val IconTint = Color(0xFFE8287A)
-private val CardBorderColor = Color(0xFFEDE7F6)
 private val FeatureTextColor = Color(0xFF4C2878)
 
 @Composable

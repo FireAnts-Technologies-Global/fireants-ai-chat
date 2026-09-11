@@ -169,15 +169,6 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
         }
     }
 
-    private fun sendFeedback(email: String) {
-        val intentFeedBack = Intent(Intent.ACTION_SEND)
-        intentFeedBack.type = "text/email"
-        intentFeedBack.putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
-        intentFeedBack.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.feedback_subject))
-        intentFeedBack.putExtra(Intent.EXTRA_TEXT, "" + "")
-        startActivity(Intent.createChooser(intentFeedBack, getString(R.string.send_feedback_chooser)))
-    }
-
     override fun onResume() {
         super.onResume()
 

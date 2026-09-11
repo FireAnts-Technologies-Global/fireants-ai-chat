@@ -29,13 +29,6 @@ import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_20
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_32
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_56
 
-private val LoadingGradientColors = listOf(
-    ColorDC60FF,
-    ColorFF41BC,
-    ColorFF8040,
-    ColorDC60FF
-)
-
 @Composable
 fun CircularProgressIndicator3Colors(
     size: Dp = SdpR_20,

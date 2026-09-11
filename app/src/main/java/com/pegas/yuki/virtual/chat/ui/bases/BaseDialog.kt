@@ -6,10 +6,8 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.Window
-import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.pegas.yuki.virtual.chat.R
@@ -62,16 +60,6 @@ abstract class BaseDialog<VB : ViewDataBinding>(
 
     open fun onClickViews() {}
 
-
-    fun setDialogBottom() {
-        window?.run {
-            setLayout(
-                WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.WRAP_CONTENT
-            )
-            setGravity(Gravity.BOTTOM)
-        }
-    }
 
     private fun setLocal() {
         val languageCode = appSharedPref.languageCode

@@ -64,32 +64,15 @@ class AuthPayloadFactory @Inject constructor(
     fun buildRefreshBearer(method: String, path: String, refreshToken: String = authInfoProvider.refreshToken): String? =
         buildRefreshBearerResult(method, path, refreshToken).bearer
 
-    fun buildAccessBearer(method: String, path: String, accessToken: String = authInfoProvider.accessToken): String? =
-        buildAccessBearerResult(method, path, accessToken).bearer
-
-    @Volatile
-    var lastPayloadJson: String? = null
-
-    @Volatile
-    var lastSignature: String? = null
-
-    @Volatile
-    var lastEncryptedBearer: String? = null
-
     private fun encryptWithResult(payload: Map<String, Any?>): AuthBearerResult {
         val json = adapter.toJson(payload)
         val context = com.pegas.yuki.virtual.chat.app.GlobalApp.instance
         val signature = AppSignatureHelper.getSignatureHash(context)
 
-        lastPayloadJson = json
-        lastSignature = signature
-
         if (signature.isNullOrBlank() || signature == "null" || signature == "error") {
-            lastEncryptedBearer = null
             return AuthBearerResult(null, json, signature)
         }
         val encrypted = AuthAesEncryptor.encryptPayload(json, signature)
-        lastEncryptedBearer = encrypted
         return AuthBearerResult(encrypted, json, signature)
     }
 }

@@ -35,16 +35,6 @@ object FireAntsTrackingHelper {
     const val REFUSE_CONSENT_3 = "refuse_consent_3"
 
 
-    private var mFirebaseAnalytics: FirebaseAnalytics = Firebase.analytics
-
-    /**
-     * Khi gắn cái này cần trao đổi với PM, PO, BA
-     */
-    fun userProperty(name: String, value: String): FireAntsTrackingHelper {
-        Firebase.analytics.setUserProperty(name, value)
-        return this
-    }
-
 
     /**
      * Tracking theo sự kiên được lên kịch bản.
@@ -55,15 +45,6 @@ object FireAntsTrackingHelper {
         return this
     }
 
-    fun logEventClick(
-        activityName: String,
-        eventName: String,
-        params: Bundle?
-    ): FireAntsTrackingHelper {
-        Log.d("FireAntsTrackingHelper", "logEvent: $activityName click $eventName")
-        Firebase.analytics.logEvent("${activityName}_click_$eventName", params)
-        return this
-    }
 
     /**
      * Chỉ gắn cho tracking theo màn hình theo yêu cầu của PM, PO, BA

@@ -1,7 +1,7 @@
 package com.pegas.yuki.virtual.chat.ads
 
-import com.pegas.yuki.virtual.chat.BuildConfig
 import android.content.Context
+import com.pegas.yuki.virtual.chat.BuildConfig
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import timber.log.Timber
@@ -47,27 +47,11 @@ data class AdRemoteConfig(
             }
         }
 
-        fun initializeFromJson(json: String) {
-            synchronized(this) {
-                instance = fromJson(json)
-            }
-        }
-
-        fun updateInstance(newConfig: AdRemoteConfig) {
-            synchronized(this) {
-                instance = newConfig
-            }
-        }
 
         fun isInitialized(): Boolean {
             return instance != null
         }
 
-        fun reset() {
-            synchronized(this) {
-                instance = null
-            }
-        }
 
         private fun fromJson(json: String): AdRemoteConfig {
             return adapter.fromJson(json) ?: throw IllegalArgumentException("Invalid JSON")
@@ -85,11 +69,6 @@ data class AdRemoteConfig(
             }
         }
 
-        fun fromRawResource(context: Context, resId: Int): AdRemoteConfig {
-            return context.resources.openRawResource(resId).use { inputStream ->
-                fromInputStream(inputStream)
-            }
-        }
 
         private fun fromJsonOrAssets(context: Context, json: String?, fileName: String = RELEASE_FILE_NAME): AdRemoteConfig {
             if (!json.isNullOrBlank()) {
@@ -102,19 +81,6 @@ data class AdRemoteConfig(
             return fromAssets(context, fileName)
         }
 
-        fun fromInputStreamOrAssets(context: Context, inputStream: InputStream?, fileName: String = RELEASE_FILE_NAME): AdRemoteConfig {
-            if (BuildConfig.DEBUG) {
-                return fromAssets(context, DEBUG_FILE_NAME)
-            }
-            if (inputStream != null) {
-                try {
-                    return fromInputStream(inputStream)
-                } catch (e: Exception) {
-                    // Fallback to assets if InputStream parsing fails
-                }
-            }
-            return fromAssets(context, fileName)
-        }
     }
 
     private fun getAdUnit(key: String): AdUnitConfig {

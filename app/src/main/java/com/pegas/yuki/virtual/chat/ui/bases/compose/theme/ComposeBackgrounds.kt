@@ -1,6 +1,5 @@
 package com.pegas.yuki.virtual.chat.ui.bases.compose.theme
 
-import androidx.compose.foundation.background
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
@@ -17,15 +16,6 @@ fun Modifier.appSplashBackground(): Modifier = this.paint(
     contentScale = ContentScale.Crop
 )
 
-fun Modifier.appVerticalGradientBackground(): Modifier = background(
-    brush = Brush.verticalGradient(
-        colors = listOf(
-            Color0F0817,
-            Color150F25,
-            Color0D0713
-        )
-    )
-)
 
 val AppButtonVerticalGradient = Brush.linearGradient(
     colors = listOf(

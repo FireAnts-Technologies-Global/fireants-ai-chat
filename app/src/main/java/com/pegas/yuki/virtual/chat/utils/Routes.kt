@@ -7,7 +7,6 @@ import com.pegas.yuki.virtual.chat.app.AppConstants
 import com.pegas.yuki.virtual.chat.ui.component.language.LanguageActivity
 import com.pegas.yuki.virtual.chat.ui.component.main.MainActivity
 import com.pegas.yuki.virtual.chat.ui.component.onboarding.OnBoardingActivity
-import com.pegas.yuki.virtual.chat.ui.component.setting.SettingActivity
 import com.pegas.yuki.virtual.chat.ui.component.splash.SplashActivity
 import com.pegas.yuki.virtual.chat.ui.component.welcome.WelcomeActivity
 
@@ -16,7 +15,6 @@ object Routes {
         Intent(fromActivity, MainActivity::class.java).apply {
             putExtra(AppConstants.KEY_TRACKING_SCREEN_FROM, fromActivity::class.java.simpleName)
             fromActivity.startActivity(this)
-            fromActivity.applyOpenTransition()
         }
 
     fun startWelcomeActivity(fromActivity: Activity) {
@@ -29,7 +27,6 @@ object Routes {
         Intent(fromActivity, OnBoardingActivity::class.java).apply {
             putExtra(AppConstants.KEY_TRACKING_SCREEN_FROM, fromActivity::class.java.simpleName)
             fromActivity.startActivity(this)
-            fromActivity.applyOpenTransition()
         }
 
     fun startLanguageActivity(fromActivity: Activity, bundle: Bundle?) =
@@ -37,7 +34,6 @@ object Routes {
             putExtra(AppConstants.KEY_TRACKING_SCREEN_FROM, fromActivity::class.java.simpleName)
             bundle?.let { putExtras(it) }
             fromActivity.startActivity(this)
-            fromActivity.applyOpenTransition()
         }
 
     fun startSplashActivity(fromActivity: Activity) =
@@ -46,24 +42,7 @@ object Routes {
             fromActivity.startActivity(this)
         }
 
-    fun startSettingActivity(fromActivity: Activity) =
-        Intent(fromActivity, SettingActivity::class.java).apply {
-            putExtra(AppConstants.KEY_TRACKING_SCREEN_FROM, fromActivity::class.java.simpleName)
-            fromActivity.startActivity(this)
-            fromActivity.applyOpenTransition()
-        }
-
     fun addTrackingMoveScreen(fromActivity: String, toActivity: String) {
         FireAntsTrackingHelper.fromScreenToScreen(fromActivity, toActivity)
     }
-
-}
-
-fun Activity.applyOpenTransition() {
-//    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-//        overrideActivityTransition(Activity.OVERRIDE_TRANSITION_OPEN, R.anim.slide_in_right, R.anim.slide_out_left)
-//    } else {
-//        @Suppress("DEPRECATION")
-//        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-//    }
 }

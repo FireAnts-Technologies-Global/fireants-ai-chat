@@ -14,8 +14,6 @@ import com.pegas.yuki.virtual.chat.ui.component.dialog.DialogRateApp
 import com.pegas.yuki.virtual.chat.utils.EasyPreferences.set
 import com.pegas.yuki.virtual.chat.utils.LocalStorageUtils
 
-internal const val DISPLAY = 1080
-
 fun View.goneView() {
     visibility = View.GONE
 }
@@ -51,17 +49,6 @@ fun ViewDataBinding.isVisible() = this.root.visibility == View.VISIBLE
 fun ViewDataBinding.isInvisible() = this.root.visibility == View.INVISIBLE
 
 fun ViewDataBinding.isGone() = this.root.visibility == View.GONE
-
-/*Resize View*/
-fun View.resizeView(width: Int, height: Int = 0) {
-    val pW = context.getWidthScreenPx() * width / DISPLAY
-    val pH = if (height == 0) pW else pW * height / width
-    val params = layoutParams
-    params.let {
-        it.width = pW
-        it.height = pH
-    }
-}
 
 
 private var lastClickTime: Long = 0

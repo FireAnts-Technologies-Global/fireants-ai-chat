@@ -68,6 +68,14 @@ import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_48
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_56
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_6
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_8
+import androidx.compose.ui.text.style.TextAlign
+import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppButton
+import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppTextHorizontalGradient
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color271E38
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitRegular
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_20
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_36
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_80
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.nonScaledSp
 import com.pegas.yuki.virtual.chat.ui.bases.ext.findActivity
 import com.pegas.yuki.virtual.chat.ui.component.dialog.LoadingDialog
@@ -127,6 +135,9 @@ fun SubscriptionScreen(
                 },
                 onRestoreClick = {
                     onIntent(SubscriptionIntent.RestorePurchases)
+                },
+                onRetry = {
+                    onIntent(SubscriptionIntent.Retry)
                 }
             )
 
@@ -143,7 +154,8 @@ fun SubscriptionScreenContent(
     onBackClick: () -> Unit,
     onPlanSelect: (String) -> Unit,
     onSubscribeClick: () -> Unit,
-    onRestoreClick: () -> Unit
+    onRestoreClick: () -> Unit,
+    onRetry: () -> Unit = {}
 ) {
     val uriHandler = LocalUriHandler.current
     Box(
@@ -274,46 +286,48 @@ fun SubscriptionScreenContent(
 
                     Spacer(modifier = Modifier.height(SdpR_8))
 
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.img_coin),
-                            contentDescription = null,
-                            modifier = Modifier.size(SdpR_13)
-                        )
-                        Spacer(modifier = Modifier.width(SdpR_6))
+                    if (state.plans.isNotEmpty()) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.img_coin),
+                                contentDescription = null,
+                                modifier = Modifier.size(SdpR_13)
+                            )
+                            Spacer(modifier = Modifier.width(SdpR_6))
 
-                        val selectedPlan =
-                            state.plans.firstOrNull { it.id == state.selectedPlanId } ?: monthlyPlan
-                        val isAnnual = selectedPlan?.isAnnual == true
-                        val bonusGems = selectedPlan?.dailyBonusGems ?: "500"
-                        val dailyBonusInt = bonusGems.toIntOrNull() ?: 500
-                        val (totalGems, formatRes) = if (isAnnual) {
-                            (dailyBonusInt * 365) to R.string.sub_price_year_format
-                        } else {
-                            (dailyBonusInt * 30) to R.string.sub_price_month_format
+                            val selectedPlan =
+                                state.plans.firstOrNull { it.id == state.selectedPlanId } ?: monthlyPlan
+                            val isAnnual = selectedPlan?.isAnnual == true
+                            val bonusGems = selectedPlan?.dailyBonusGems ?: "500"
+                            val dailyBonusInt = bonusGems.toIntOrNull() ?: 500
+                            val (totalGems, formatRes) = if (isAnnual) {
+                                (dailyBonusInt * 365) to R.string.sub_price_year_format
+                            } else {
+                                (dailyBonusInt * 30) to R.string.sub_price_month_format
+                            }
+                            val totalGemsFormatted = "%,d".format(java.util.Locale.US, totalGems)
+
+                            Text(
+                                text = stringResource(id = formatRes, totalGemsFormatted),
+                                color = ColorE8C3AC,
+                                fontFamily = OutfitBold,
+                                fontSize = SdpR_13.nonScaledSp
+                            )
+                            Spacer(modifier = Modifier.width(SdpR_3))
+
+                            Text(
+                                text = stringResource(id = R.string.sub_bonus_gems_format, bonusGems),
+                                color = ColorAFA5C3,
+                                fontFamily = OutfitSemiBold,
+                                fontSize = SdpR_13.nonScaledSp
+                            )
                         }
-                        val totalGemsFormatted = "%,d".format(java.util.Locale.US, totalGems)
 
-                        Text(
-                            text = stringResource(id = formatRes, totalGemsFormatted),
-                            color = ColorE8C3AC,
-                            fontFamily = OutfitBold,
-                            fontSize = SdpR_13.nonScaledSp
-                        )
-                        Spacer(modifier = Modifier.width(SdpR_3))
-
-                        Text(
-                            text = stringResource(id = R.string.sub_bonus_gems_format, bonusGems),
-                            color = ColorAFA5C3,
-                            fontFamily = OutfitSemiBold,
-                            fontSize = SdpR_13.nonScaledSp
-                        )
+                        Spacer(modifier = Modifier.height(SdpR_12))
                     }
-
-                    Spacer(modifier = Modifier.height(SdpR_12))
 
                     SubscriptionFeatureItem(
                         iconRes = R.drawable.ic_sparkles,
@@ -347,6 +361,45 @@ fun SubscriptionScreenContent(
                         ) {
                             ImageLoadingLottie(size = SdpR_40)
                         }
+                    } else if (state.plans.isEmpty()) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .background(
+                                    color = Color(0x33161127),
+                                    shape = RoundedCornerShape(SdpR_16)
+                                )
+                                .border(
+                                    width = SdpR_1,
+                                    color = Color271E38,
+                                    shape = RoundedCornerShape(SdpR_16)
+                                )
+                                .padding(vertical = SdpR_24, horizontal = SdpR_16),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.img_empty),
+                                contentDescription = null,
+                                modifier = Modifier.size(SdpR_80)
+                            )
+                            Spacer(modifier = Modifier.height(SdpR_12))
+                            Text(
+                                text = stringResource(id = R.string.sub_empty_plans),
+                                color = ColorAFA5C3,
+                                fontFamily = OutfitRegular,
+                                fontSize = SdpR_13.nonScaledSp,
+                                textAlign = TextAlign.Center
+                            )
+                            Spacer(modifier = Modifier.height(SdpR_16))
+                            AppButton(
+                                text = stringResource(id = R.string.store_empty_retry),
+                                gradient = AppTextHorizontalGradient,
+                                shape = RoundedCornerShape(SdpR_20),
+                                minHeight = SdpR_36,
+                                modifier = Modifier.padding(horizontal = SdpR_24),
+                                onClick = onRetry
+                            )
+                        }
                     } else {
                         monthlyPlan?.let {
                             SubscriptionPlanCard(
@@ -366,27 +419,29 @@ fun SubscriptionScreenContent(
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(SdpR_16))
+                    if (state.plans.isNotEmpty()) {
+                        Spacer(modifier = Modifier.height(SdpR_16))
 
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(SdpR_48)
-                            .clip(RoundedCornerShape(SdpR_24))
-                            .background(
-                                brush = Brush.horizontalGradient(
-                                    colors = listOf(ColorD25A9F, ColorBE5AD2)
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(SdpR_48)
+                                .clip(RoundedCornerShape(SdpR_24))
+                                .background(
+                                    brush = Brush.horizontalGradient(
+                                        colors = listOf(ColorD25A9F, ColorBE5AD2)
+                                    )
                                 )
+                                .clickable { onSubscribeClick() },
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = stringResource(id = R.string.sub_subscribe_now),
+                                color = ColorFDFDFD,
+                                fontFamily = OutfitExtraBold,
+                                fontSize = SdpR_13.nonScaledSp
                             )
-                            .clickable { onSubscribeClick() },
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = stringResource(id = R.string.sub_subscribe_now),
-                            color = ColorFDFDFD,
-                            fontFamily = OutfitExtraBold,
-                            fontSize = SdpR_13.nonScaledSp
-                        )
+                        }
                     }
 
                     Spacer(modifier = Modifier.height(SdpR_24))

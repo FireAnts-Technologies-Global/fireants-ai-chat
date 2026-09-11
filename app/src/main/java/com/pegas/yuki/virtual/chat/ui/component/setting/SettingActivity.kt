@@ -107,8 +107,9 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
                 Toast.LENGTH_SHORT
             ).show()
         } else {
-            appSharedPref.isRate = true
-            showRateDialog(this@SettingActivity, false)
+            showRateDialog(this@SettingActivity, false) {
+                appSharedPref.isRate = true
+            }
         }
     }
 

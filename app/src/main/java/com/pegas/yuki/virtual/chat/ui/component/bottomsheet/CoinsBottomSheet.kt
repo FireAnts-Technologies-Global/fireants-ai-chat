@@ -42,6 +42,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -52,10 +53,13 @@ import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppText
 import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppTextHorizontalGradient
 import com.pegas.yuki.virtual.chat.ui.bases.compose.component.ImageLoadingLottie
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ManropeBold
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ManropeMedium
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ManropeSemiBold
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_1
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_10
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_12
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_36
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_80
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_13
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_14
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_16
@@ -153,6 +157,9 @@ fun CoinsBottomSheet(
                 onUpgradeProClick = {
                     onDismiss()
                     navController.navigate(AppRoutes.SUBSCRIPTION)
+                },
+                onRetry = {
+                    viewModel.handleIntent(StoreIntent.Retry)
                 }
             )
         }
@@ -165,7 +172,8 @@ fun CoinsBottomSheetContent(
     selectedPackageId: String?,
     onPackageSelected: (String) -> Unit,
     onBuyClick: (String) -> Unit,
-    onUpgradeProClick: () -> Unit
+    onUpgradeProClick: () -> Unit,
+    onRetry: () -> Unit = {}
 ) {
     Column(
         modifier = Modifier
@@ -259,6 +267,41 @@ fun CoinsBottomSheetContent(
                 contentAlignment = Alignment.Center
             ) {
                 ImageLoadingLottie(size = SdpR_32)
+            }
+        } else if (state.coinPackages.isEmpty()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = SdpR_32, horizontal = SdpR_16),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.img_empty),
+                    contentDescription = null,
+                    modifier = Modifier.size(SdpR_80)
+                )
+
+                Spacer(modifier = Modifier.height(SdpR_12))
+
+                Text(
+                    text = stringResource(id = R.string.coins_empty_packages),
+                    fontFamily = ManropeMedium,
+                    fontSize = SdpR_13.nonScaledSp,
+                    color = Color(0xFF8E889B),
+                    textAlign = TextAlign.Center
+                )
+
+                Spacer(modifier = Modifier.height(SdpR_16))
+
+                AppButton(
+                    text = stringResource(id = R.string.store_empty_retry),
+                    gradient = AppTextHorizontalGradient,
+                    shape = RoundedCornerShape(SdpR_20),
+                    minHeight = SdpR_36,
+                    modifier = Modifier.padding(horizontal = SdpR_32),
+                    onClick = onRetry
+                )
             }
         } else {
             LazyVerticalGrid(

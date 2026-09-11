@@ -127,6 +127,13 @@
     <string name="store_vip_benefit_3">Enjoy all your VIP membership benefits</string>
     <string name="store_vip_footer_month">Auto-renews monthly. Cancel anytime.</string>
     <string name="store_vip_footer_year">Auto-renews annually. Cancel anytime in Google Play.</string>
+    <string name="store_empty_title">No packages available</string>
+    <string name="store_empty_subtitle">Products are currently unavailable. Please check back later.</string>
+    <string name="store_empty_retry">Retry</string>
+    <string name="store_empty_vip_plans">Membership plans are currently unavailable.</string>
+    <string name="store_empty_coin_packages">Coin packages are currently unavailable.</string>
+    <string name="sub_empty_plans">Membership plans are currently unavailable. Please check back later.</string>
+    <string name="coins_empty_packages">Coin packages are currently unavailable. Please check back later.</string>
     <string name="character_detail_hot">HOT</string>
     <string name="character_badge_new">NEW</string>
     <string name="histories_title">Histories</string>

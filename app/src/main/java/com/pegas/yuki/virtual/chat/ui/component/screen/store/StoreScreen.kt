@@ -40,6 +40,34 @@ import com.pegas.yuki.virtual.chat.ui.component.screen.store.component.StoreFoot
 import com.pegas.yuki.virtual.chat.ui.component.screen.store.component.StoreTopBar
 import com.pegas.yuki.virtual.chat.ui.model.asString
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
+import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppButton
+import com.pegas.yuki.virtual.chat.ui.bases.compose.component.AppTextHorizontalGradient
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color161127
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color271E38
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorAFA5C3
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorFDFDFD
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitBold
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.OutfitRegular
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_1
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_120
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_13
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_16
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_18
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_20
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_40
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_48
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.nonScaledSp
+
 @Composable
 fun StoreScreen(
     fromScreen: String? = null,
@@ -82,6 +110,7 @@ fun StoreScreen(
             StoreContent(
                 state = state,
                 onBackClick = onNavigateBack,
+                onRetry = { onIntent(StoreIntent.Retry) },
                 onPurchaseGem = { packageId ->
                     val activity = context.findActivity()
                     if (activity != null) {
@@ -113,6 +142,7 @@ fun StoreScreen(
 private fun StoreContent(
     state: StoreUiState,
     onBackClick: () -> Unit,
+    onRetry: () -> Unit = {},
     onPurchaseGem: (String) -> Unit,
     onPurchaseMembership: (String) -> Unit,
     onRestorePurchases: () -> Unit
@@ -138,6 +168,11 @@ private fun StoreContent(
                 ) {
                     ImageLoadingLottie(size = SdpR_56)
                 }
+            } else if (state.coinPackages.isEmpty() && state.membershipPlans.isEmpty()) {
+                StoreEmptyContent(
+                    onRetry = onRetry,
+                    onRestorePurchases = onRestorePurchases
+                )
             } else {
                 LazyVerticalGrid(
                     columns = GridCells.Fixed(2),
@@ -158,14 +193,22 @@ private fun StoreContent(
                         )
                     }
 
-                    items(state.coinPackages) { pkg ->
-                        CoinPackageItem(
-                            displayName = pkg.displayName ?: "${pkg.coinAmount} Gems",
-                            price = pkg.priceText,
-                            badge = pkg.bonusBadgeText,
-                            isSelected = state.selectedPackageId == pkg.id,
-                            onClick = { onPurchaseGem(pkg.id) }
-                        )
+                    if (state.coinPackages.isNotEmpty()) {
+                        items(state.coinPackages) { pkg ->
+                            CoinPackageItem(
+                                displayName = pkg.displayName ?: "${pkg.coinAmount} Gems",
+                                price = pkg.priceText,
+                                badge = pkg.bonusBadgeText,
+                                isSelected = state.selectedPackageId == pkg.id,
+                                onClick = { onPurchaseGem(pkg.id) }
+                            )
+                        }
+                    } else {
+                        item(span = { GridItemSpan(maxLineSpan) }) {
+                            StoreSectionEmptyCard(
+                                message = stringResource(id = R.string.store_empty_coin_packages)
+                            )
+                        }
                     }
 
                     item(span = { GridItemSpan(maxLineSpan) }) {
@@ -176,21 +219,29 @@ private fun StoreContent(
                         )
                     }
 
-                    items(
-                        items = state.membershipPlans,
-                        span = { GridItemSpan(maxLineSpan) }
-                    ) { plan ->
-                        MembershipPlanItem(
-                            title = plan.title,
-                            price = plan.price,
-                            durationLabelRes = plan.durationLabelRes,
-                            descriptionRes = plan.descriptionRes,
-                            benefitsRes = plan.benefitsRes,
-                            footerTextRes = plan.footerTextRes,
-                            isBestValue = plan.isBestValue,
-                            isSelected = state.selectedPlanId == plan.id,
-                            onClick = { onPurchaseMembership(plan.id) }
-                        )
+                    if (state.membershipPlans.isNotEmpty()) {
+                        items(
+                            items = state.membershipPlans,
+                            span = { GridItemSpan(maxLineSpan) }
+                        ) { plan ->
+                            MembershipPlanItem(
+                                title = plan.title,
+                                price = plan.price,
+                                durationLabelRes = plan.durationLabelRes,
+                                descriptionRes = plan.descriptionRes,
+                                benefitsRes = plan.benefitsRes,
+                                footerTextRes = plan.footerTextRes,
+                                isBestValue = plan.isBestValue,
+                                isSelected = state.selectedPlanId == plan.id,
+                                onClick = { onPurchaseMembership(plan.id) }
+                            )
+                        }
+                    } else {
+                        item(span = { GridItemSpan(maxLineSpan) }) {
+                            StoreSectionEmptyCard(
+                                message = stringResource(id = R.string.store_empty_vip_plans)
+                            )
+                        }
                     }
 
                     item(span = { GridItemSpan(maxLineSpan) }) {
@@ -202,6 +253,97 @@ private fun StoreContent(
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun StoreEmptyContent(
+    onRetry: () -> Unit,
+    onRestorePurchases: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .padding(horizontal = SdpR_24)
+            .padding(top = SdpR_40, bottom = SdpR_24),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Spacer(modifier = Modifier.weight(1f))
+
+        Image(
+            painter = painterResource(id = R.drawable.img_empty),
+            contentDescription = null,
+            modifier = Modifier.size(SdpR_120)
+        )
+
+        Spacer(modifier = Modifier.height(SdpR_16))
+
+        Text(
+            text = stringResource(id = R.string.store_empty_title),
+            color = ColorFDFDFD,
+            fontFamily = OutfitBold,
+            fontSize = SdpR_18.nonScaledSp,
+            textAlign = TextAlign.Center
+        )
+
+        Spacer(modifier = Modifier.height(SdpR_8))
+
+        Text(
+            text = stringResource(id = R.string.store_empty_subtitle),
+            color = ColorAFA5C3,
+            fontFamily = OutfitRegular,
+            fontSize = SdpR_13.nonScaledSp,
+            textAlign = TextAlign.Center
+        )
+
+        Spacer(modifier = Modifier.height(SdpR_24))
+
+        AppButton(
+            text = stringResource(id = R.string.store_empty_retry),
+            gradient = AppTextHorizontalGradient,
+            shape = RoundedCornerShape(SdpR_24),
+            minHeight = SdpR_48,
+            modifier = Modifier.padding(horizontal = SdpR_48),
+            onClick = onRetry
+        )
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        StoreFooter(
+            onRestorePurchasesClick = onRestorePurchases
+        )
+    }
+}
+
+@Composable
+private fun StoreSectionEmptyCard(
+    message: String,
+    modifier: Modifier = Modifier
+) {
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .background(
+                color = Color161127,
+                shape = RoundedCornerShape(SdpR_12)
+            )
+            .border(
+                width = SdpR_1,
+                color = Color271E38,
+                shape = RoundedCornerShape(SdpR_12)
+            )
+            .padding(horizontal = SdpR_16, vertical = SdpR_20),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = message,
+            color = ColorAFA5C3,
+            fontFamily = OutfitRegular,
+            fontSize = SdpR_13.nonScaledSp,
+            textAlign = TextAlign.Center
+        )
     }
 }
 

@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">ผู้ใช้ที่ไม่ได้สมัครสมาชิกยังสามารถใช้บริการได้ แต่อาจมีข้อจำกัดสำหรับบางฟีเจอร์พรีเมียม</string>
     <string name="sub_fine_print_4">คุณสามารถจัดการหรือยกเลิกการสมัครรับได้ตลอดเวลาในการตั้งค่าการสมัครสมาชิกบน Google Play</string>
     <string name="sub_restore_purchase">กู้คืนการซื้อ</string>
-    <string name="sub_paywall_title">ปลดล็อกได้มากกว่าด้วย AURA+</string>
+    <string name="sub_paywall_title">ปลดล็อกได้มากกว่าด้วย Yuki+</string>
     <string name="sub_paywall_subtitle">บทสนทนาที่ลึกซึ้งยิ่งขึ้น สร้างสรรค์ได้หลากหลายวิธีมากขึ้น</string>
     <string name="sub_feature_unlimited_messages">เรื่องราวพรีเมียม</string>
     <string name="sub_feature_exclusive_companions">ความผูกพันที่ลึกซึ้งยิ่งขึ้น</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">ป้อนชื่อ</string>
     <string name="create_select_personality_hobby">เลือกบุคลิกและงานอดิเรก</string>
     <string name="image_generation_failed">การสร้างรูปภาพล้มเหลว</string>
-    <string name="enjoying_hd_camera">ชอบแฟนสาว AI หรือไม่?</string>
+    <string name="enjoying_hd_camera">ชอบ Yuki หรือไม่?</string>
     <string name="rate_us_on_the_google_play">ให้คะแนนเราบน Google Play!</string>
     <string name="rate_now">ให้คะแนนเลย</string>
     <string name="not_now">ไว้คราวหน้า</string>

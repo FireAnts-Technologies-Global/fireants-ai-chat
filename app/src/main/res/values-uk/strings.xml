@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Користувачі без підписки можуть користуватися додатком, але деякі платні функції можуть бути обмежені.</string>
     <string name="sub_fine_print_4">Ви можете керувати підпискою або скасувати її в будь-який час у розділі «Підписки» в Google Play.</string>
     <string name="sub_restore_purchase">Відновити покупки</string>
-    <string name="sub_paywall_title">Відкрийте більше можливостей з AURA+</string>
+    <string name="sub_paywall_title">Відкрийте більше можливостей з Yuki+</string>
     <string name="sub_paywall_subtitle">Глибші розмови. Більше творчої свободи.</string>
     <string name="sub_feature_unlimited_messages">Преміум-історії</string>
     <string name="sub_feature_exclusive_companions">Глибокий зв\'язок</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Введіть ім\'я персонажа</string>
     <string name="create_select_personality_hobby">Виберіть характер та хобі</string>
     <string name="image_generation_failed">Помилка генерації зображення</string>
-    <string name="enjoying_hd_camera">Подобається ШІ-дівчина?</string>
+    <string name="enjoying_hd_camera">Подобається Yuki?</string>
     <string name="rate_us_on_the_google_play">Оцініть нас у Google Play!</string>
     <string name="rate_now">Оцінити зараз</string>
     <string name="not_now">Не зараз</string>

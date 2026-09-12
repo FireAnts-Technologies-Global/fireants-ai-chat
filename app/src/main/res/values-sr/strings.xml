@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Korisnici bez pretplate i dalje mogu da koriste uslugu, ali neke plaćene funkcije mogu biti ograničene.</string>
     <string name="sub_fine_print_4">Pretplatom možete upravljati ili je otkazati u bilo kom trenutku u odeljku Pretplate na Google Play-u.</string>
     <string name="sub_restore_purchase">Vrati kupovine</string>
-    <string name="sub_paywall_title">Otključaj više uz AURA+</string>
+    <string name="sub_paywall_title">Otključaj više uz Yuki+</string>
     <string name="sub_paywall_subtitle">Dublji razgovori. Više načina za stvaranje.</string>
     <string name="sub_feature_unlimited_messages">Premium priče</string>
     <string name="sub_feature_exclusive_companions">Dublja povezanost</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Unesite ime lika</string>
     <string name="create_select_personality_hobby">Izaberite ličnost i hobije</string>
     <string name="image_generation_failed">Generisanje slike nije uspelo</string>
-    <string name="enjoying_hd_camera">Da li vam se dopada AI Devojka?</string>
+    <string name="enjoying_hd_camera">Da li vam se dopada Yuki?</string>
     <string name="rate_us_on_the_google_play">Ocenite nas na Google Play-u!</string>
     <string name="rate_now">Oceni sada</string>
     <string name="not_now">Ne sada</string>

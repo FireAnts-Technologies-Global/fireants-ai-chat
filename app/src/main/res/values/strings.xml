@@ -155,7 +155,7 @@
     <string name="sub_fine_print_3">Non-subscribers can still use the service, however, some paid\nfeatures may be limited.</string>
     <string name="sub_fine_print_4">You can manage or cancel your subscription at any time in the\nSubscriptions section of Google Play.</string>
     <string name="sub_restore_purchase">Restore purchases</string>
-    <string name="sub_paywall_title">Unlock more with AURA+</string>
+    <string name="sub_paywall_title">Unlock more with Yuki+</string>
     <string name="sub_paywall_subtitle">Deeper conversations. More ways to create.</string>
     <string name="sub_feature_unlimited_messages">Premium Stories</string>
     <string name="sub_feature_exclusive_companions">Deeper Bonds</string>
@@ -363,7 +363,7 @@
     <string name="create_enter_name">Create enter name</string>
     <string name="create_select_personality_hobby">Create select personality hobby</string>
     <string name="image_generation_failed">Image generation failed</string>
-    <string name="enjoying_hd_camera">Enjoying AI Girlfriend?</string>
+    <string name="enjoying_hd_camera">Enjoying Yuki?</string>
     <string name="rate_us_on_the_google_play">Rate us on the Google Play!</string>
     <string name="rate_now">Rate now</string>
     <string name="not_now">Not now</string>

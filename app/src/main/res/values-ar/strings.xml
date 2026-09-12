@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">يمكن لغير المشتركين الاستمرار في استخدام الخدمة، إلا أن بعض الميزات المدفوعة قد تكون محدودة.</string>
     <string name="sub_fine_print_4">يمكنك إدارة اشتراكك أو إلغاؤه في أي وقت في قسم الاشتراكات في Google Play.</string>
     <string name="sub_restore_purchase">استعادة المشتريات</string>
-    <string name="sub_paywall_title">افتح المزيد مع AURA+</string>
+    <string name="sub_paywall_title">افتح المزيد مع Yuki+</string>
     <string name="sub_paywall_subtitle">محادثات أكثر عمقاً. طرق أكثر للإبداع.</string>
     <string name="sub_feature_unlimited_messages">قصص مميزة</string>
     <string name="sub_feature_exclusive_companions">روابط أعمق</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">أدخل اسم الشخصية</string>
     <string name="create_select_personality_hobby">اختر الشخصية والهوايات</string>
     <string name="image_generation_failed">فشل إنشاء الصورة</string>
-    <string name="enjoying_hd_camera">هل تستمتع بصديقة الذكاء الاصطناعي؟</string>
+    <string name="enjoying_hd_camera">هل تستمتع بـ Yuki؟</string>
     <string name="rate_us_on_the_google_play">قيّمنا على متجر Google Play!</string>
     <string name="rate_now">تقييم الآن</string>
     <string name="not_now">ليس الآن</string>

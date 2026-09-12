@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">미구독 사용자도 계속 이용할 수 있으나 일부 유료 기능은 제한될 수 있습니다.</string>
     <string name="sub_fine_print_4">Google Play 정기 결제 메뉴에서 언제든지 구독을 관리하거나 취소할 수 있습니다.</string>
     <string name="sub_restore_purchase">구매 내역 복원</string>
-    <string name="sub_paywall_title">AURA+로 더 다채로운 경험을 즐겨보세요</string>
+    <string name="sub_paywall_title">Yuki+로 더 다채로운 경험을 즐겨보세요</string>
     <string name="sub_paywall_subtitle">더 깊어지는 대화. 더욱 풍부해지는 창작의 즐거움.</string>
     <string name="sub_feature_unlimited_messages">프리미엄 스토리</string>
     <string name="sub_feature_exclusive_companions">더 깊은 유대감</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">캐릭터 이름을 입력하세요</string>
     <string name="create_select_personality_hobby">성격과 취미를 선택하세요</string>
     <string name="image_generation_failed">이미지 생성 실패</string>
-    <string name="enjoying_hd_camera">AI 여자친구를 즐기고 계신가요?</string>
+    <string name="enjoying_hd_camera">Yuki를 즐기고 계신가요?</string>
     <string name="rate_us_on_the_google_play">Google Play에서 저희 앱을 평가해 주세요!</string>
     <string name="rate_now">지금 평가</string>
     <string name="not_now">나중에</string>

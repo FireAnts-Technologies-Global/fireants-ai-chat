@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Abone olmayan kullanıcılar hizmeti kullanmaya devam edebilir, ancak bazı ücretli özellikler kısıtlanabilir.</string>
     <string name="sub_fine_print_4">Aboneliğinizi istediğiniz zaman Google Play\'deki Abonelikler bölümünden yönetebilir veya iptal edebilirsiniz.</string>
     <string name="sub_restore_purchase">Satın alımları geri yükle</string>
-    <string name="sub_paywall_title">AURA+ ile Daha Fazlasının Kilidini Aç</string>
+    <string name="sub_paywall_title">Yuki+ ile Daha Fazlasının Kilidini Aç</string>
     <string name="sub_paywall_subtitle">Daha derin sohbetler. Üretmek için daha fazla yol.</string>
     <string name="sub_feature_unlimited_messages">Premium Hikayeler</string>
     <string name="sub_feature_exclusive_companions">Daha Derin Bağlar</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">İsim girin</string>
     <string name="create_select_personality_hobby">Kişilik ve hobileri seçin</string>
     <string name="image_generation_failed">Görsel oluşturma başarısız oldu</string>
-    <string name="enjoying_hd_camera">Yapay Zeka Kız Arkadaşı beğendiniz mi?</string>
+    <string name="enjoying_hd_camera">Yuki\'yi beğendiniz mi?</string>
     <string name="rate_us_on_the_google_play">Google Play\'de bizi değerlendirin!</string>
     <string name="rate_now">Şimdi Değerlendir</string>
     <string name="not_now">Şimdi Değil</string>

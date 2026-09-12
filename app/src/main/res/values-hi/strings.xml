@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">गैर-सब्सक्राइबर अभी भी सेवा का उपयोग कर सकते हैं, हालांकि कुछ सशुल्क सुविधाएं सीमित हो सकती हैं।</string>
     <string name="sub_fine_print_4">आप Google Play के सदस्यता अनुभाग में किसी भी समय अपनी सदस्यता का प्रबंधन या रद्दीकरण कर सकते हैं।</string>
     <string name="sub_restore_purchase">खरीदारी पुनर्स्थापित करें</string>
-    <string name="sub_paywall_title">AURA+ के साथ और भी बहुत कुछ अनलॉक करें</string>
+    <string name="sub_paywall_title">Yuki+ के साथ और भी बहुत कुछ अनलॉक करें</string>
     <string name="sub_paywall_subtitle">गहरी बातचीत। रचना करने के और अधिक तरीके।</string>
     <string name="sub_feature_unlimited_messages">प्रीमियम कहानियां</string>
     <string name="sub_feature_exclusive_companions">गहरा रिश्ता</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">किरदार का नाम दर्ज करें</string>
     <string name="create_select_personality_hobby">व्यक्तित्व और शौक चुनें</string>
     <string name="image_generation_failed">छवि निर्माण विफल रहा</string>
-    <string name="enjoying_hd_camera">क्या आपको AI गर्लफ्रेंड पसंद आ रही है?</string>
+    <string name="enjoying_hd_camera">क्या आपको Yuki पसंद आ रही है?</string>
     <string name="rate_us_on_the_google_play">Google Play पर हमें रेट करें!</string>
     <string name="rate_now">अभी रेट करें</string>
     <string name="not_now">अभी नहीं</string>

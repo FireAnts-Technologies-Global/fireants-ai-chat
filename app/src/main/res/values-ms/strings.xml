@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Bukan pelanggan masih boleh menggunakan perkhidmatan ini, namun sesetengah ciri berbayar mungkin terhad.</string>
     <string name="sub_fine_print_4">Anda boleh mengurus atau membatalkan langganan anda pada bila-bila masa dalam bahagian Langganan Google Play.</string>
     <string name="sub_restore_purchase">Pulihkan pembelian</string>
-    <string name="sub_paywall_title">Buka lebih banyak dengan AURA+</string>
+    <string name="sub_paywall_title">Buka lebih banyak dengan Yuki+</string>
     <string name="sub_paywall_subtitle">Perbualan lebih mendalam. Lebih banyak cara untuk mencipta.</string>
     <string name="sub_feature_unlimited_messages">Kisah Premium</string>
     <string name="sub_feature_exclusive_companions">Ikatan Lebih Erat</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Masukkan nama watak</string>
     <string name="create_select_personality_hobby">Pilih personaliti dan hobi</string>
     <string name="image_generation_failed">Penjanaan imej gagal</string>
-    <string name="enjoying_hd_camera">Gembira dengan Teman Wanita AI?</string>
+    <string name="enjoying_hd_camera">Gembira dengan Yuki?</string>
     <string name="rate_us_on_the_google_play">Nilaikan kami di Google Play!</string>
     <string name="rate_now">Nilaikan Sekarang</string>
     <string name="not_now">Bukan sekarang</string>

@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Les utilisateurs non abonnés peuvent toujours profiter du service, toutefois certaines fonctionnalités premium peuvent être limitées.</string>
     <string name="sub_fine_print_4">Vous pouvez gérer ou résilier votre abonnement à tout moment dans la rubrique Abonnements de Google Play.</string>
     <string name="sub_restore_purchase">Restaurer les achats</string>
-    <string name="sub_paywall_title">Débloquez tout le potentiel avec AURA+</string>
+    <string name="sub_paywall_title">Débloquez tout le potentiel avec Yuki+</string>
     <string name="sub_paywall_subtitle">Des échanges plus profonds. Davantage de créativité.</string>
     <string name="sub_feature_unlimited_messages">Histoires Premium</string>
     <string name="sub_feature_exclusive_companions">Liens renforcés</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Saisir un nom</string>
     <string name="create_select_personality_hobby">Sélectionner la personnalité et les loisirs</string>
     <string name="image_generation_failed">Échec de la génération d\'image</string>
-    <string name="enjoying_hd_camera">Vous appréciez Copine IA\u00A0?</string>
+    <string name="enjoying_hd_camera">Vous appréciez Yuki\u00A0?</string>
     <string name="rate_us_on_the_google_play">Évaluez-nous sur Google Play\u00A0!</string>
     <string name="rate_now">Noter maintenant</string>
     <string name="not_now">Pas maintenant</string>

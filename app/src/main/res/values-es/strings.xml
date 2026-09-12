@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Los no suscriptores aún pueden usar el servicio, aunque algunas funciones\nde pago pueden estar limitadas.</string>
     <string name="sub_fine_print_4">Puedes administrar o cancelar tu suscripción en cualquier momento en la\nsección Suscripciones de Google Play.</string>
     <string name="sub_restore_purchase">Restaurar compras</string>
-    <string name="sub_paywall_title">Desbloquea más con AURA+</string>
+    <string name="sub_paywall_title">Desbloquea más con Yuki+</string>
     <string name="sub_paywall_subtitle">Conversaciones más profundas. Más formas de crear.</string>
     <string name="sub_feature_unlimited_messages">Historias prémium</string>
     <string name="sub_feature_exclusive_companions">Vínculos más profundos</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Introduce el nombre</string>
     <string name="create_select_personality_hobby">Selecciona personalidad y pasatiempos</string>
     <string name="image_generation_failed">Error al generar la imagen</string>
-    <string name="enjoying_hd_camera">¿Te gusta Novia IA?</string>
+    <string name="enjoying_hd_camera">¿Te gusta Yuki?</string>
     <string name="rate_us_on_the_google_play">¡Califícanos en Google Play!</string>
     <string name="rate_now">Calificar ahora</string>
     <string name="not_now">Ahora no</string>

@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Nicht-Abonnenten können den Dienst weiterhin nutzen, einige kostenpflichtige Funktionen können jedoch eingeschränkt sein.</string>
     <string name="sub_fine_print_4">Du kannst dein Abonnement jederzeit im Bereich Abonnements bei Google Play verwalten oder kündigen.</string>
     <string name="sub_restore_purchase">Käufe wiederherstellen</string>
-    <string name="sub_paywall_title">Mehr freischalten mit AURA+</string>
+    <string name="sub_paywall_title">Mehr freischalten mit Yuki+</string>
     <string name="sub_paywall_subtitle">Tiefgründigere Gespräche. Mehr kreative Möglichkeiten.</string>
     <string name="sub_feature_unlimited_messages">Premium-Geschichten</string>
     <string name="sub_feature_exclusive_companions">Tiefere Verbundenheit</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Namen eingeben</string>
     <string name="create_select_personality_hobby">Persönlichkeit und Hobbys auswählen</string>
     <string name="image_generation_failed">Bilderzeugung fehlgeschlagen</string>
-    <string name="enjoying_hd_camera">Gefällt dir KI-Freundin?</string>
+    <string name="enjoying_hd_camera">Gefällt dir Yuki?</string>
     <string name="rate_us_on_the_google_play">Bewerte uns im Google Play Store!</string>
     <string name="rate_now">Jetzt bewerten</string>
     <string name="not_now">Nicht jetzt</string>

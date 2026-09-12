@@ -114,7 +114,7 @@ private fun MainTopBar(
     val coinBalance = viewModel.coinBalance.collectAsStateWithLifecycle().value
 
     CommonTopBar(
-        title = "AURA",
+        title = "AI Chat",
         coinCount = coinBalance,
         onAddCoinClick = {
             rootNavController.navigate(AppRoutes.MAIN_STORE)

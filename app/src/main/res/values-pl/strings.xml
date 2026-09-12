@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Użytkownicy bez subskrypcji nadal mogą korzystać z usługi, jednak niektóre funkcje płatne mogą być ograniczone.</string>
     <string name="sub_fine_print_4">Możesz zarządzać subskrypcją lub ją anulować w dowolnym momencie w sekcji Subskrypcje w Google Play.</string>
     <string name="sub_restore_purchase">Przywróć zakupy</string>
-    <string name="sub_paywall_title">Odblokuj więcej dzięki AURA+</string>
+    <string name="sub_paywall_title">Odblokuj więcej dzięki Yuki+</string>
     <string name="sub_paywall_subtitle">Głębsze rozmowy. Więcej możliwości kreacji.</string>
     <string name="sub_feature_unlimited_messages">Historie Premium</string>
     <string name="sub_feature_exclusive_companions">Głębsze relacje</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Wprowadź imię postaci</string>
     <string name="create_select_personality_hobby">Wybierz osobowość i hobby</string>
     <string name="image_generation_failed">Nie udało się wygenerować obrazu</string>
-    <string name="enjoying_hd_camera">Podoba Ci się Dziewczyna AI?</string>
+    <string name="enjoying_hd_camera">Podoba Ci się Yuki?</string>
     <string name="rate_us_on_the_google_play">Oceń nas w Google Play!</string>
     <string name="rate_now">Oceń teraz</string>
     <string name="not_now">Nie teraz</string>

@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Användare utan prenumeration kan fortfarande använda tjänsten, men vissa betalfunktioner kan vara begränsade.</string>
     <string name="sub_fine_print_4">Du kan hantera eller säga upp din prenumeration när som helst under Prenumerationer i Google Play.</string>
     <string name="sub_restore_purchase">Återställ köp</string>
-    <string name="sub_paywall_title">Lås upp mer med AURA+</string>
+    <string name="sub_paywall_title">Lås upp mer med Yuki+</string>
     <string name="sub_paywall_subtitle">Djupare samtal. Fler kreativa möjligheter.</string>
     <string name="sub_feature_unlimited_messages">Premiumhistorier</string>
     <string name="sub_feature_exclusive_companions">Djupare band</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Ange namn</string>
     <string name="create_select_personality_hobby">Välj personlighet och hobbys</string>
     <string name="image_generation_failed">Kunde inte skapa bild</string>
-    <string name="enjoying_hd_camera">Gillar du AI-flickvän?</string>
+    <string name="enjoying_hd_camera">Gillar du Yuki?</string>
     <string name="rate_us_on_the_google_play">Betygsätt oss på Google Play!</string>
     <string name="rate_now">Betygsätt nu</string>
     <string name="not_now">Inte nu</string>

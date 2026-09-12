@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">未订阅用户仍可使用基础服务，但部分付费功能可能会受限。</string>
     <string name="sub_fine_print_4">您可以随时在 Google Play 的“订阅”管理中取消订阅。</string>
     <string name="sub_restore_purchase">恢复购买</string>
-    <string name="sub_paywall_title">升级 AURA+ 解锁更多精彩</string>
+    <string name="sub_paywall_title">升级 Yuki+ 解锁更多精彩</string>
     <string name="sub_paywall_subtitle">更深度的交流，更多元化的创作。</string>
     <string name="sub_feature_unlimited_messages">尊享故事</string>
     <string name="sub_feature_exclusive_companions">更深羁绊</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">输入角色名字</string>
     <string name="create_select_personality_hobby">选择性格和兴趣</string>
     <string name="image_generation_failed">生成图片失败</string>
-    <string name="enjoying_hd_camera">喜欢 AI 虚拟女友吗？</string>
+    <string name="enjoying_hd_camera">喜欢 Yuki 吗？</string>
     <string name="rate_us_on_the_google_play">在 Google Play 上为我们评分！</string>
     <string name="rate_now">立即评价</string>
     <string name="not_now">以后再说</string>

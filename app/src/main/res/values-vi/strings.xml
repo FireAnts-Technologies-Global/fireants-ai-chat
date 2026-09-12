@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Người chưa đăng ký vẫn có thể dùng dịch vụ, tuy nhiên, một số tính năng trả phí có thể bị giới hạn.</string>
     <string name="sub_fine_print_4">Bạn có thể quản lý hoặc hủy gói bất kỳ lúc nào trong mục Đăng ký của Google Play.</string>
     <string name="sub_restore_purchase">Khôi phục giao dịch</string>
-    <string name="sub_paywall_title">Mở khóa nhiều hơn cùng AURA+</string>
+    <string name="sub_paywall_title">Mở khóa nhiều hơn cùng Yuki+</string>
     <string name="sub_paywall_subtitle">Trò chuyện sâu sắc hơn. Nhiều cách sáng tạo hơn.</string>
     <string name="sub_feature_unlimited_messages">Cốt truyện cao cấp</string>
     <string name="sub_feature_exclusive_companions">Gắn kết sâu sắc hơn</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Nhập tên tạo nhân vật</string>
     <string name="create_select_personality_hobby">Chọn tính cách và sở thích</string>
     <string name="image_generation_failed">Tạo ảnh thất bại</string>
-    <string name="enjoying_hd_camera">Bạn có thích Bạn Gái AI không?</string>
+    <string name="enjoying_hd_camera">Bạn có thích Yuki không?</string>
     <string name="rate_us_on_the_google_play">Đánh giá chúng tôi trên Google Play!</string>
     <string name="rate_now">Đánh giá ngay</string>
     <string name="not_now">Để sau</string>

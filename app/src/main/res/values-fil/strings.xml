@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Maaari pa ring gamitin ng mga hindi subscriber ang serbisyo, ngunit maaaring limitado ang ilang bayad na feature.</string>
     <string name="sub_fine_print_4">Maaari mong pamahalaan o kanselahin ang iyong subscription anumang oras sa seksyong Mga Subscription ng Google Play.</string>
     <string name="sub_restore_purchase">Ibalik ang mga binili</string>
-    <string name="sub_paywall_title">I-unlock ang higit pa gamit ang AURA+</string>
+    <string name="sub_paywall_title">I-unlock ang higit pa gamit ang Yuki+</string>
     <string name="sub_paywall_subtitle">Mas malalim na pag-uusap. Mas maraming paraan upang lumikha.</string>
     <string name="sub_feature_unlimited_messages">Mga Premium na Kwento</string>
     <string name="sub_feature_exclusive_companions">Mas Malalim na Ugnayan</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Ilagay ang pangalan ng karakter</string>
     <string name="create_select_personality_hobby">Pumili ng personalidad at mga libangan</string>
     <string name="image_generation_failed">Nabigo ang pagbuo ng larawan</string>
-    <string name="enjoying_hd_camera">Nasisiyahan ka ba sa AI Girlfriend?</string>
+    <string name="enjoying_hd_camera">Nasisiyahan ka ba sa Yuki?</string>
     <string name="rate_us_on_the_google_play">I-rate kami sa Google Play!</string>
     <string name="rate_now">I-rate ngayon</string>
     <string name="not_now">Huwag muna ngayon</string>

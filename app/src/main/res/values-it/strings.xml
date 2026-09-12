@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Gli utenti non abbonati possono comunque utilizzare il servizio, sebbene alcune funzionalità a pagamento potrebbero essere limitate.</string>
     <string name="sub_fine_print_4">Puoi gestire o annullare l\'abbonamento in qualsiasi momento nella sezione Abbonamenti di Google Play.</string>
     <string name="sub_restore_purchase">Ripristina acquisti</string>
-    <string name="sub_paywall_title">Sblocca di più con AURA+</string>
+    <string name="sub_paywall_title">Sblocca di più con Yuki+</string>
     <string name="sub_paywall_subtitle">Conversazioni più profonde. Più modi per creare.</string>
     <string name="sub_feature_unlimited_messages">Storie premium</string>
     <string name="sub_feature_exclusive_companions">Legami più profondi</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Inserisci il nome</string>
     <string name="create_select_personality_hobby">Seleziona personalità e hobby</string>
     <string name="image_generation_failed">Generazione immagine non riuscita</string>
-    <string name="enjoying_hd_camera">Ti piace Ragazza IA?</string>
+    <string name="enjoying_hd_camera">Ti piace Yuki?</string>
     <string name="rate_us_on_the_google_play">Valutaci su Google Play!</string>
     <string name="rate_now">Valuta ora</string>
     <string name="not_now">Non ora</string>

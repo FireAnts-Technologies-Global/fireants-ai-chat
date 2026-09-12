@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">未登録でもアプリを利用できますが、一部の機能が制限される場合があります。</string>
     <string name="sub_fine_print_4">Google Playの「定期購入」からいつでも解約または管理が可能です。</string>
     <string name="sub_restore_purchase">購入を復元</string>
-    <string name="sub_paywall_title">AURA+ でさらに可能性を広げよう</string>
+    <string name="sub_paywall_title">Yuki+ でさらに可能性を広げよう</string>
     <string name="sub_paywall_subtitle">もっと深い対話を。もっと自由なクリエイティビティを。</string>
     <string name="sub_feature_unlimited_messages">プレミアムストーリー</string>
     <string name="sub_feature_exclusive_companions">より深い絆</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">名前を入力してください</string>
     <string name="create_select_personality_hobby">性格と趣味を選択してください</string>
     <string name="image_generation_failed">画像生成に失敗しました</string>
-    <string name="enjoying_hd_camera">AIガールフレンドを楽しんでいますか？</string>
+    <string name="enjoying_hd_camera">Yukiを楽しんでいますか？</string>
     <string name="rate_us_on_the_google_play">Google Playで評価をお願いします！</string>
     <string name="rate_now">今すぐ評価</string>
     <string name="not_now">後で</string>

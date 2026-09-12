@@ -147,7 +147,7 @@
     <string name="sub_fine_print_3">Niet-abonnees kunnen de service nog steeds gebruiken, maar sommige betaalde functies kunnen beperkt zijn.</string>
     <string name="sub_fine_print_4">Je kunt je abonnement op elk moment beheren of opzeggen in het gedeelte Abonnementen op Google Play.</string>
     <string name="sub_restore_purchase">Aankopen herstellen</string>
-    <string name="sub_paywall_title">Ontgrendel meer met AURA+</string>
+    <string name="sub_paywall_title">Ontgrendel meer met Yuki+</string>
     <string name="sub_paywall_subtitle">Diepgaandere gesprekken. Meer creatieve mogelijkheden.</string>
     <string name="sub_feature_unlimited_messages">Premium verhalen</string>
     <string name="sub_feature_exclusive_companions">Hechtere band</string>
@@ -355,7 +355,7 @@
     <string name="create_enter_name">Voer personagenaam in</string>
     <string name="create_select_personality_hobby">Kies persoonlijkheid en hobby\'s</string>
     <string name="image_generation_failed">Afbeelding genereren mislukt</string>
-    <string name="enjoying_hd_camera">Bevalt AI Vriendin je?</string>
+    <string name="enjoying_hd_camera">Bevalt Yuki je?</string>
     <string name="rate_us_on_the_google_play">Beoordeel ons op Google Play!</string>
     <string name="rate_now">Nu beoordelen</string>
     <string name="not_now">Niet nu</string>

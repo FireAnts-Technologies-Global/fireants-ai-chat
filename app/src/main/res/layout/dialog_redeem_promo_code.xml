@@ -115,7 +115,7 @@
                         android:layout_height="@dimen/_22sdp"
                         android:layout_gravity="center"
                         android:indeterminate="true"
-                        android:indeterminateTint="@color/white"
+                        android:indeterminateTint="@color/black"
                         android:visibility="gone" />
                 </FrameLayout>
             </LinearLayout>

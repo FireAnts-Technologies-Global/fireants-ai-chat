@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Mor</string>
     <string name="create_hair_red">Kızıl</string>
     <string name="create_companion_name">Arkadaşının Adı</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Kişilik &amp; Sosyal Geçmiş</string>
     <string name="create_personality">Kişilik</string>
     <string name="create_occupation">Meslek</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Tamam</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Dost Canlısı</item>
-        <item>Şefkatli</item>
-        <item>Utangaç</item>
-        <item>Dışa Dönük</item>
+        <item>Tsundere</item>
+        <item>Kuudere</item>
+        <item>Dandere</item>
+        <item>Yandere</item>
         <item>Gizemli</item>
-        <item>Zeki</item>
-        <item>Esprili</item>
-        <item>Sevecen</item>
-        <item>Maceracı</item>
-        <item>Özgüvenli</item>
-        <item>Enerjik</item>
-        <item>Sakin</item>
-        <item>Yaratıcı</item>
-        <item>Hırslı</item>
-        <item>Empatik</item>
-        <item>Sadık</item>
-        <item>İyimser</item>
-        <item>Kötümser</item>
-        <item>Alaycı</item>
-        <item>İnatçı</item>
-        <item>Çekici</item>
-        <item>Oyuncu</item>
-        <item>Baskın</item>
-        <item>Uysal</item>
-        <item>Maneviyatçı</item>
-        <item>Pratik</item>
+        <item>Büyüleyici</item>
+        <item>Yaramaz</item>
+        <item>Tutkulu</item>
+        <item>Baştan çıkarıcı</item>
+        <item>Cesur</item>
+        <item>Melankolik</item>
+        <item>Felsefi</item>
         <item>Hayalperest</item>
-        <item>Asi</item>
-        <item>Geleneksel</item>
-        <item>Koruyucu</item>
+        <item>Hırçın ve tatlı</item>
+        <item>Diplomatik</item>
+        <item>Metanetli</item>
+        <item>Sakar ve sevimli</item>
+        <item>Gösterişli</item>
+        <item>Samimi</item>
+        <item>Karizmatik</item>
+        <item>Hazırcevap</item>
+        <item>Asil</item>
+        <item>Yırtıcı</item>
+        <item>Kırılgan</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Tasarımcı</item>
-        <item>Danışman</item>
-        <item>Doktor</item>
-        <item>Hemşire</item>
-        <item>Mühendis</item>
-        <item>Sanatçı</item>
-        <item>Müzisyen</item>
-        <item>Şef</item>
-        <item>Polis Memuru</item>
-        <item>Girişimci</item>
-        <item>Milyarder CEO</item>
-        <item>Model</item>
-        <item>Oyuncu</item>
-        <item>Yazar</item>
-        <item>Sporcu</item>
-        <item>Bilim İnsanı</item>
-        <item>Programcı</item>
-        <item>Avukat</item>
-        <item>Mimar</item>
-        <item>Modacı</item>
-        <item>Fotoğrafçı</item>
-        <item>Gazeteci</item>
-        <item>Pilot</item>
-        <item>Kabin Memuru</item>
-        <item>Barista</item>
-        <item>Kütüphaneci</item>
-        <item>Serbest Çalışan</item>
-        <item>İçerik Üreticisi</item>
-        <item>İşsiz</item>
-        <item>Dedektif</item>
+        <item>Siber güvenlik korsanı</item>
+        <item>Gizli ajan</item>
+        <item>Astrofizikçi</item>
+        <item>Oyun geliştiricisi</item>
+        <item>Botanikçi ve çiçekçi</item>
+        <item>Miksolog</item>
+        <item>Sanat küratörü</item>
+        <item>Veteriner</item>
+        <item>Yarış pilotu</item>
+        <item>Antikacı</item>
+        <item>DJ ve müzik yapımcısı</item>
+        <item>Üniversite profesörü</item>
+        <item>Kişisel antrenör</item>
+        <item>Sommelier ve şarap tadımcısı</item>
+        <item>Arkeolog</item>
+        <item>Ödül avcısı</item>
+        <item>Kraliyet varisi</item>
+        <item>VTuber ve yayıncı</item>
+        <item>Çikolatacı</item>
+        <item>Moda stilisti</item>
+        <item>Astronot</item>
+        <item>Deniz biyoloğu</item>
+        <item>Klinik terapist</item>
+        <item>Paranormal araştırmacı</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Kitap Okuma</item>
-        <item>Oyun Oynama</item>
-        <item>Seyahat</item>
-        <item>Yemek Yapma</item>
-        <item>Spor</item>
-        <item>Müzik</item>
-        <item>Fotoğrafçılık</item>
-        <item>Resim Yapma</item>
-        <item>Bahçecilik</item>
-        <item>Sinema</item>
-        <item>Anime</item>
-        <item>Cosplay</item>
-        <item>Dans</item>
-        <item>Şarkı Söyleme</item>
-        <item>Yazarlık</item>
-        <item>Alışveriş</item>
-        <item>Fitness</item>
-        <item>Yoga</item>
-        <item>Meditasyon</item>
-        <item>Doğa Yürüyüşü</item>
-        <item>Kamp</item>
-        <item>Balık Tutma</item>
-        <item>El Sanatları</item>
-        <item>Moda</item>
-        <item>Teknoloji</item>
-        <item>Astroloji</item>
-        <item>Bitki Bakımı</item>
-        <item>Gönüllülük</item>
-        <item>Arabalar</item>
-        <item>Tarih</item>
+        <item>Tatlı ve pasta pişirme</item>
+        <item>Kutu oyunları ve RYO</item>
+        <item>Tüplü dalış ve şnorkelle yüzme</item>
+        <item>Karaoke ve atari salonları</item>
+        <item>Kaykay ve paten sürme</item>
+        <item>Tarot ve falcılık</item>
+        <item>Çömlekçilik ve seramik</item>
+        <item>Kaya tırmanışı ve bouldering</item>
+        <item>Kafe gezintisi ve gurmelik</item>
+        <item>Plak koleksiyonculuğu</item>
+        <item>Yıldız gözlemi ve astronomi</item>
+        <item>Gerçek suç ve korku izleme</item>
+        <item>Dövüş sanatları ve kick boks</item>
+        <item>Bonsai ve iç mekan bitkileri</item>
+        <item>Kaligrafi ve yazı sanatı</item>
+        <item>Vintage avı ve ikinci el</item>
+        <item>Okçuluk</item>
+        <item>Yol gezileri ve karavan hayatı</item>
+        <item>Dijital heykel ve 3D modelleme</item>
+        <item>Dizi maratonu</item>
+        <item>Miksikoloji ve kokteyl sanatı</item>
+        <item>Drone ve FPV uçurma</item>
+        <item>Pilates ve esneme</item>
+        <item>Motosiklet turları</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Arkadaş</item>
-        <item>En İyi Arkadaş</item>
-        <item>Kız Arkadaş</item>
-        <item>Erkek Arkadaş</item>
-        <item>Eş (Kadın)</item>
-        <item>Eş (Erkek)</item>
-        <item>Kız Kardeş</item>
-        <item>Erkek Kardeş</item>
-        <item>Yol Arkadaşı</item>
-        <item>Macera Arkadaşı</item>
-        <item>Mentor</item>
-        <item>İş Arkadaşı</item>
-        <item>Patron</item>
-        <item>Çalışan</item>
-        <item>Sınıf Arkadaşı</item>
-        <item>Rehber</item>
-        <item>Öğrenci</item>
-        <item>Yabancı</item>
-        <item>Ev Arkadaşı</item>
-        <item>Komşu</item>
-        <item>Eski Sevgili</item>
-        <item>Çocukluk Arkadaşı</item>
-        <item>Gizli Hayran</item>
-        <item>Rakip</item>
-        <item>Hizmetçi</item>
-        <item>Uşak</item>
-        <item>Sunucu</item>
-        <item>Yoldaş</item>
-        <item>Ruh İkizi</item>
-        <item>Tanıdık</item>
+        <item>Nişanlı</item>
+        <item>Lise aşkı</item>
+        <item>Yeminli muhafız</item>
+        <item>Suç ortağı ve yoldaş</item>
+        <item>Müttefiğe dönüşen düşman</item>
+        <item>Gizli hayran</item>
+        <item>Özel ders öğretmeni</item>
+        <item>Kişisel asistan</item>
+        <item>Hükümdar / Efendi</item>
+        <item>Hizmetkâr / Sadık bağlı</item>
+        <item>Mektup arkadaşı</item>
+        <item>Kaderin cilvesi</item>
+        <item>Özel koruma</item>
+        <item>Sözleşmeli ortak</item>
+        <item>Sırdaş dost</item>
+        <item>Gözde çırak</item>
+        <item>Çocukluk rakibi</item>
+        <item>İlk aşk</item>
+        <item>Hami ve hayırsever</item>
     </string-array>
     <string name="store_best_value">EN İYİ FİYAT</string>
     <string name="setting_privacy_not_configured">Gizlilik Politikası bağlantısı yapılandırılmadı</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Yabancı</string>
     <string name="chat_subtitle_format">%1$s • Seviye %2$d</string>
     <string name="chat_title_format">Sohbet #%1$s</string>
+    <string name="chat_list_my_ai">Yapay Zekam</string>
     <string name="first_day">İlk Gün</string>
     <string name="feedback_reason_hint">Neden (örn: çökme, yavaşlık, kötü arayüz...)</string>
     <string name="feedback_description_hint">Detaylar veya öneriler...</string>

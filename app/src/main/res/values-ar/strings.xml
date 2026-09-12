@@ -232,7 +232,7 @@
     <string name="create_hair_purple">أرجواني</string>
     <string name="create_hair_red">أحمر</string>
     <string name="create_companion_name">اسم الرفيق</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">الشخصية والخلفية الاجتماعية</string>
     <string name="create_personality">الشخصية</string>
     <string name="create_occupation">المهنة</string>
@@ -242,135 +242,109 @@
     <string name="options_done">تم</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>ودود</item>
-        <item>مهتم</item>
-        <item>خجول</item>
-        <item>اجتماعي</item>
+        <item>تسونيدري</item>
+        <item>كوديري</item>
+        <item>دانديري</item>
+        <item>يانديري</item>
         <item>غامض</item>
-        <item>ذكي</item>
-        <item>مرح</item>
-        <item>حنون</item>
-        <item>مغامر</item>
-        <item>واثق</item>
-        <item>نشيط</item>
-        <item>هادئ</item>
-        <item>مبدع</item>
-        <item>طموح</item>
-        <item>متعاطف</item>
-        <item>مخلص</item>
-        <item>متفائل</item>
-        <item>متشائم</item>
-        <item>ساخر</item>
-        <item>عنيد</item>
-        <item>جذاب</item>
-        <item>لعوب</item>
-        <item>مسيطر</item>
-        <item>مطيع</item>
-        <item>روحاني</item>
-        <item>عملي</item>
-        <item>حالم</item>
-        <item>متمرد</item>
-        <item>تقليدي</item>
-        <item>حامٍ</item>
+        <item>ساحر</item>
+        <item>مشاكس</item>
+        <item>شغوف</item>
+        <item>فاتن</item>
+        <item>جريء</item>
+        <item>شجي وحزين</item>
+        <item>فلسفي</item>
+        <item>خيالي وغريب الأطوار</item>
+        <item>حماسي</item>
+        <item>دبلوماسي</item>
+        <item>صامد ورزين</item>
+        <item>عفوي ومحبوب</item>
+        <item>مبهر</item>
+        <item>صادق</item>
+        <item>كاريزمي</item>
+        <item>ذكي وبارع</item>
+        <item>نبيل</item>
+        <item>شديد الحماس</item>
+        <item>مرهف الإحساس</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>مصمم</item>
-        <item>مستشار</item>
-        <item>طبيب</item>
-        <item>ممرض</item>
-        <item>مهندس</item>
-        <item>فنان</item>
-        <item>موسيقي</item>
-        <item>طاهٍ</item>
-        <item>ضابط شرطة</item>
-        <item>رائد أعمال</item>
-        <item>رئيس تنفيذي ملياردير</item>
-        <item>عارض أزياء</item>
-        <item>ممثل</item>
-        <item>كاتب</item>
-        <item>رياضي</item>
-        <item>عالم</item>
-        <item>مبرمج</item>
-        <item>محامٍ</item>
-        <item>مهندس معماري</item>
-        <item>خبير أزياء</item>
-        <item>مصور</item>
-        <item>صحفي</item>
-        <item>طيار</item>
-        <item>مضيف طيران</item>
-        <item>باريستا</item>
-        <item>أمين مكتبة</item>
-        <item>مستقل</item>
-        <item>مؤثر</item>
-        <item>عاطل عن العمل</item>
-        <item>محقق</item>
+        <item>قرصان أمن سيبراني</item>
+        <item>عميل سري</item>
+        <item>عالم فيزياء فلكية</item>
+        <item>مطور ألعاب</item>
+        <item>عالم نبات ومنسق زهور</item>
+        <item>خبير مشروبات (ميكسولوجيست)</item>
+        <item>منسق معارض فنية</item>
+        <item>طبيب بيطري</item>
+        <item>سائق سباقات</item>
+        <item>تاجر تحف وأثريات</item>
+        <item>دي جي ومنتج موسيقي</item>
+        <item>أستاذ جامعي</item>
+        <item>مدرب لياقة شخصي</item>
+        <item>خبير تذوق</item>
+        <item>عالم آثار</item>
+        <item>صائد جوائز</item>
+        <item>وريث عرش ملكي</item>
+        <item>صانع محتوى افتراضي (VTuber)</item>
+        <item>صانع شوكولاتة ماهر</item>
+        <item>خبير أزياء ومظهر</item>
+        <item>رائد فضاء</item>
+        <item>عالم أحياء بحرية</item>
+        <item>معالج نفسي إكلينيكي</item>
+        <item>محقق في الظواهر الخارقة</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>القراءة</item>
-        <item>ألعاب الفيديو</item>
-        <item>السفر</item>
-        <item>الطهي</item>
-        <item>الرياضة</item>
-        <item>الموسيقى</item>
-        <item>التصوير</item>
-        <item>الرسم</item>
-        <item>البستنة</item>
-        <item>الأفلام</item>
-        <item>الأنمي</item>
-        <item>الكوسبلاي</item>
-        <item>الرقص</item>
-        <item>الغناء</item>
-        <item>الكتابة</item>
-        <item>التسوق</item>
-        <item>اللياقة البدنية</item>
-        <item>اليوغا</item>
-        <item>التأمل</item>
-        <item>تسلق الجبال</item>
-        <item>التخييم</item>
-        <item>صيد السمك</item>
-        <item>الأعمال اليدوية</item>
-        <item>الموضة</item>
-        <item>التكنولوجيا</item>
-        <item>علم التنجيم</item>
-        <item>الزراعة المنزلية</item>
-        <item>العمل التطوعي</item>
-        <item>السيارات</item>
-        <item>التاريخ</item>
+        <item>خبز الحلويات والمعجنات</item>
+        <item>ألعاب الطاولة وتقمص الأدوار</item>
+        <item>الغوص والغطس السطحي</item>
+        <item>الكاريوكي وصالات الألعاب</item>
+        <item>التزلج على الألواح والزلاجات</item>
+        <item>قراءة التاروت والتنجيم</item>
+        <item>صناعة الفخار والخزف</item>
+        <item>تسلق الصخور والجدران</item>
+        <item>زيارة المقاهي وتذوق الأطعمة</item>
+        <item>جمع أسطوانات الفينيل القديمة</item>
+        <item>تأمل النجوم وعلم الفلك</item>
+        <item>مشاهدة الجرائم الحقيقية والرعب</item>
+        <item>الفنون القتالية والكيك بوكسينغ</item>
+        <item>زراعة أشجار البونساي والنباتات</item>
+        <item>الخط وفنون الكتابة</item>
+        <item>تسوق المقتنيات الكلاسيكية والأنتيك</item>
+        <item>الرماية بالقوس</item>
+        <item>رحلات الطريق البرية والتخييم</item>
+        <item>النحت الرقمي والتصميم ثلاثي الأبعاد</item>
+        <item>مشاهدة المسلسلات المتتابعة</item>
+        <item>ابتكار المشروبات الفاخرة</item>
+        <item>تطيير الطائرات المسيرة (الدرون)</item>
+        <item>البيلاتس وتمارين الإطالة</item>
+        <item>قيادة الدراجات النارية</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>صديق</item>
-        <item>أفضل صديق</item>
-        <item>حبيبة</item>
-        <item>حبيب</item>
-        <item>زوجة</item>
-        <item>زوج</item>
-        <item>أخت</item>
-        <item>أخ</item>
-        <item>رفيق سفر</item>
-        <item>رفيق مغامرة</item>
-        <item>مرشد</item>
-        <item>زميل عمل</item>
-        <item>مدير</item>
-        <item>موظف</item>
-        <item>زميل دراسة</item>
-        <item>دليل</item>
-        <item>متعلم</item>
-        <item>شخص غريب</item>
-        <item>شريك سكن</item>
-        <item>جار</item>
-        <item>شريك سابق</item>
-        <item>صديق الطفولة</item>
-        <item>معجب سري</item>
-        <item>منافس</item>
-        <item>خادمة</item>
-        <item>كبير الخدم</item>
-        <item>مضيف</item>
-        <item>رفيق</item>
-        <item>توأم الروح</item>
-        <item>معارف</item>
+        <item>خطيب / خطيبة</item>
+        <item>حب أيام الدراسة</item>
+        <item>حارس أقسم على حمايتك</item>
+        <item>شريكك في المغامرات</item>
+        <item>عدو تحول لحليف مخلص</item>
+        <item>إعجاب سري</item>
+        <item>معلم وموجه شخصي</item>
+        <item>مساعد خاص</item>
+        <item>سيد مطاع / حاكم</item>
+        <item>تابع وفيّ</item>
+        <item>صديق بالمراسلة</item>
+        <item>لقاء مقدر بالصدفة</item>
+        <item>حارس شخصي مقرب</item>
+        <item>شريك بموجب اتفاق</item>
+        <item>مستودع الأسرار</item>
+        <item>تلميذ نجيب</item>
+        <item>غريم الطفولة</item>
+        <item>الحب الأول</item>
+        <item>راعي وداعم مخلص</item>
     </string-array>
     <string name="store_best_value">أفضل قيمة</string>
     <string name="setting_privacy_not_configured">لم يتم تكوين رابط سياسة الخصوصية</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">شخص غريب</string>
     <string name="chat_subtitle_format">%1$s • المستوى %2$d</string>
     <string name="chat_title_format">الدردشة #%1$s</string>
+    <string name="chat_list_my_ai">ذكائي الاصطناعي</string>
     <string name="first_day">اليوم الأول</string>
     <string name="feedback_reason_hint">السبب (مثل: تعطل، بطء، واجهة غير مناسبة...)</string>
     <string name="feedback_description_hint">التفاصيل أو الاقتراحات...</string>

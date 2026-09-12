@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Фиолетовый</string>
     <string name="create_hair_red">Рыжий</string>
     <string name="create_companion_name">Имя спутника</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Характер и социальный статус</string>
     <string name="create_personality">Характер</string>
     <string name="create_occupation">Профессия</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Готово</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Дружелюбный</item>
-        <item>Заботливый</item>
-        <item>Застенчивый</item>
-        <item>Общительный</item>
+        <item>Цундэрэ</item>
+        <item>Кудэрэ</item>
+        <item>Дандэрэ</item>
+        <item>Яндэрэ</item>
         <item>Загадочный</item>
-        <item>Умный</item>
-        <item>С юмором</item>
-        <item>Любящий</item>
-        <item>Авантюрный</item>
-        <item>Уверенный</item>
-        <item>Энергичный</item>
-        <item>Спокойный</item>
-        <item>Творческий</item>
-        <item>Амбициозный</item>
-        <item>Чуткий</item>
-        <item>Преданный</item>
-        <item>Оптимистичный</item>
-        <item>Пессимистичный</item>
-        <item>Саркастичный</item>
-        <item>Упрямый</item>
-        <item>Чувственный</item>
-        <item>Игривый</item>
-        <item>Доминантный</item>
-        <item>Покорный</item>
-        <item>Духовный</item>
-        <item>Практичный</item>
-        <item>Мечтательный</item>
-        <item>Бунтарский</item>
-        <item>Традиционный</item>
-        <item>Защищающий</item>
+        <item>Очаровательный</item>
+        <item>Озорной</item>
+        <item>Страстный</item>
+        <item>Соблазнительный</item>
+        <item>Смелый</item>
+        <item>Меланхоличный</item>
+        <item>Философский</item>
+        <item>Причудливый</item>
+        <item>Бойкий</item>
+        <item>Дипломатичный</item>
+        <item>Стойкий</item>
+        <item>Неуклюже-милый</item>
+        <item>Яркий</item>
+        <item>Искренний</item>
+        <item>Харизматичный</item>
+        <item>Остроумный</item>
+        <item>Благородный</item>
+        <item>Пылкий</item>
+        <item>Уязвимый</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Дизайнер</item>
-        <item>Консультант</item>
-        <item>Врач</item>
-        <item>Медбрат/Медсестра</item>
-        <item>Инженер</item>
-        <item>Художник</item>
-        <item>Музыкант</item>
-        <item>Шеф-повар</item>
-        <item>Полицейский</item>
-        <item>Предприниматель</item>
-        <item>CEO-миллиардер</item>
-        <item>Модель</item>
-        <item>Актер</item>
-        <item>Писатель</item>
-        <item>Спортсмен</item>
-        <item>Ученый</item>
-        <item>Программист</item>
-        <item>Юрист</item>
-        <item>Архитектор</item>
-        <item>Модельер</item>
-        <item>Фотограф</item>
-        <item>Журналист</item>
-        <item>Пилот</item>
-        <item>Бортпроводник</item>
-        <item>Бариста</item>
-        <item>Библиотекарь</item>
-        <item>Фрилансер</item>
-        <item>Блогер</item>
-        <item>Безработный</item>
-        <item>Детектив</item>
+        <item>Хакер по кибербезопасности</item>
+        <item>Секретный агент</item>
+        <item>Астрофизик</item>
+        <item>Разработчик видеоигр</item>
+        <item>Ботаник и флорист</item>
+        <item>Миксолог</item>
+        <item>Арт-куратор</item>
+        <item>Ветеринар</item>
+        <item>Автогонщик</item>
+        <item>Торговец антиквариатом</item>
+        <item>DJ и саунд-продюсер</item>
+        <item>Профессор университета</item>
+        <item>Персональный тренер</item>
+        <item>Сомелье</item>
+        <item>Археолог</item>
+        <item>Охотник за головами</item>
+        <item>Наследник престола</item>
+        <item>VTuber и стример</item>
+        <item>Шоколатье</item>
+        <item>Стилист одежды</item>
+        <item>Космонавт</item>
+        <item>Морской биолог</item>
+        <item>Клинический терапевт</item>
+        <item>Исследователь паранормального</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Чтение</item>
-        <item>Видеоигры</item>
-        <item>Путешествия</item>
-        <item>Кулинария</item>
-        <item>Спорт</item>
-        <item>Музыка</item>
-        <item>Фотография</item>
-        <item>Живопись</item>
-        <item>Садоводство</item>
-        <item>Кино</item>
-        <item>Аниме</item>
-        <item>Косплей</item>
-        <item>Танцы</item>
-        <item>Пение</item>
-        <item>Писательство</item>
-        <item>Шопинг</item>
-        <item>Фитнес</item>
-        <item>Йога</item>
-        <item>Медитация</item>
-        <item>Пешие походы</item>
-        <item>Кемпинг</item>
-        <item>Рыбалка</item>
-        <item>Рукоделие</item>
-        <item>Мода</item>
-        <item>Технологии</item>
-        <item>Астрология</item>
-        <item>Растения</item>
-        <item>Волонтерство</item>
-        <item>Автомобили</item>
-        <item>История</item>
+        <item>Выпечка и десерты</item>
+        <item>Настольные игры и НРИ</item>
+        <item>Дайвинг и снорклинг</item>
+        <item>Караоке и аркады</item>
+        <item>Скейтбординг и ролики</item>
+        <item>Таро и гадание</item>
+        <item>Гончарное дело</item>
+        <item>Скалолазание и боулдеринг</item>
+        <item>Кафе и гастротуры</item>
+        <item>Коллекционирование винила</item>
+        <item>Астрономия и наблюдение за звездами</item>
+        <item>Тру-крайм и хорроры</item>
+        <item>Боевые искусства и кикбоксинг</item>
+        <item>Бонсай и комнатные растения</item>
+        <item>Каллиграфия и леттеринг</item>
+        <item>Винтаж и секонд-хенды</item>
+        <item>Стрельба из лука</item>
+        <item>Автопутешествия и вэнлайф</item>
+        <item>3D-моделирование и цифровой скульптинг</item>
+        <item>Запойный просмотр сериалов</item>
+        <item>Приготовление коктейлей</item>
+        <item>Полеты на дронах FPV</item>
+        <item>Пилатес и растяжка</item>
+        <item>Езда на мотоцикле</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Друг</item>
-        <item>Лучший друг</item>
-        <item>Девушка</item>
-        <item>Парень</item>
-        <item>Жена</item>
-        <item>Муж</item>
-        <item>Сестра</item>
-        <item>Брат</item>
-        <item>Попутчик</item>
-        <item>Партнер по приключениям</item>
-        <item>Наставник</item>
-        <item>Коллега</item>
-        <item>Босс</item>
-        <item>Сотрудник</item>
-        <item>Одноклассник</item>
-        <item>Гид</item>
-        <item>Ученик</item>
-        <item>Незнакомец</item>
-        <item>Сосед по комнате</item>
-        <item>Сосед</item>
-        <item>Бывший партнер</item>
-        <item>Друг детства</item>
-        <item>Тайный поклонник</item>
-        <item>Соперник</item>
-        <item>Горничная</item>
-        <item>Дворецкий</item>
-        <item>Хозяин</item>
-        <item>Компаньон</item>
-        <item>Родственная душа</item>
-        <item>Знакомый</item>
+        <item>Жених / Невеста</item>
+        <item>Школьная любовь</item>
+        <item>Клятвенный страж</item>
+        <item>Сообщник и партнер</item>
+        <item>Враг, ставший союзником</item>
+        <item>Тайный воздыхатель</item>
+        <item>Академический наставник</item>
+        <item>Личный ассистент</item>
+        <item>Повелитель / Господин</item>
+        <item>Слуга / Подданный</item>
+        <item>Друг по переписке</item>
+        <item>Судьбоносная встреча</item>
+        <item>Телохранитель</item>
+        <item>Партнер по контракту</item>
+        <item>Доверенное лицо</item>
+        <item>Ученик / Протеже</item>
+        <item>Соперник с детства</item>
+        <item>Первая любовь</item>
+        <item>Покровитель и меценат</item>
     </string-array>
     <string name="store_best_value">САМАЯ ВЫГОДНАЯ ЦЕНА</string>
     <string name="setting_privacy_not_configured">Ссылка на Политику конфиденциальности не настроена</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Незнакомец</string>
     <string name="chat_subtitle_format">%1$s • Уровень %2$d</string>
     <string name="chat_title_format">Чат #%1$s</string>
+    <string name="chat_list_my_ai">Мой ИИ</string>
     <string name="first_day">Первый день</string>
     <string name="feedback_reason_hint">Причина (напр.: вылет, медленно, плохой интерфейс...)</string>
     <string name="feedback_description_hint">Подробности или предложения...</string>

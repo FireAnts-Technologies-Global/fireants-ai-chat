@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Tím</string>
     <string name="create_hair_red">Đỏ</string>
     <string name="create_companion_name">Tên người đồng hành</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Tính cách &amp; Xuất thân xã hội</string>
     <string name="create_personality">Tính cách</string>
     <string name="create_occupation">Nghề nghiệp</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Xong</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Thân thiện</item>
-        <item>Chu đáo</item>
-        <item>Nhút nhát</item>
-        <item>Cởi mở</item>
-        <item>Bí ẩn</item>
-        <item>Thông minh</item>
-        <item>Hài hước</item>
-        <item>Tình cảm</item>
-        <item>Thích phiêu lưu</item>
-        <item>Tự tin</item>
-        <item>Năng động</item>
-        <item>Điềm tĩnh</item>
-        <item>Sáng tạo</item>
-        <item>Tham vọng</item>
-        <item>Đồng cảm</item>
-        <item>Trung thành</item>
-        <item>Lạc quan</item>
-        <item>Bi quan</item>
-        <item>Mỉa mai</item>
-        <item>Bướng bỉnh</item>
-        <item>Gợi cảm</item>
+        <item>Tsundere</item>
+        <item>Kuudere</item>
+        <item>Dandere</item>
+        <item>Yandere</item>
+        <item>Bí ẩn khó đoán</item>
+        <item>Duyên dáng</item>
         <item>Tinh nghịch</item>
-        <item>Thống trị</item>
-        <item>Phục tùng</item>
-        <item>Tâm linh</item>
-        <item>Thực tế</item>
-        <item>Mơ mộng</item>
-        <item>Nổi loạn</item>
-        <item>Truyền thống</item>
-        <item>Bảo bọc</item>
+        <item>Nhiệt huyết</item>
+        <item>Quyến rũ</item>
+        <item>Táo bạo</item>
+        <item>U trầm sâu lắng</item>
+        <item>Triết lý</item>
+        <item>Bay bổng kỳ ảo</item>
+        <item>Sôi nổi cá tính</item>
+        <item>Khéo léo hòa nhã</item>
+        <item>Kiên định bất biến</item>
+        <item>Hậu đậu đáng yêu</item>
+        <item>Rực rỡ nổi bật</item>
+        <item>Chân thành</item>
+        <item>Khí chất cuốn hút</item>
+        <item>Sắc sảo nhanh trí</item>
+        <item>Quý phái thanh cao</item>
+        <item>Mạnh mẽ quyết liệt</item>
+        <item>Dễ rung động</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Nhà thiết kế</item>
-        <item>Tư vấn viên</item>
-        <item>Bác sĩ</item>
-        <item>Y tá</item>
-        <item>Kỹ sư</item>
-        <item>Nghệ sĩ</item>
-        <item>Nhạc sĩ</item>
-        <item>Đầu bếp</item>
-        <item>Cảnh sát</item>
-        <item>Doanh nhân</item>
-        <item>CEO Tỷ phú</item>
-        <item>Người mẫu</item>
-        <item>Diễn viên</item>
-        <item>Nhà văn</item>
-        <item>Vận động viên</item>
-        <item>Nhà khoa học</item>
-        <item>Lập trình viên</item>
-        <item>Luật sư</item>
-        <item>Kiến trúc sư</item>
-        <item>Nhà thiết kế</item>
-        <item>Nhiếp ảnh gia</item>
-        <item>Nhà báo</item>
-        <item>Phi công</item>
-        <item>Tiếp viên hàng không</item>
-        <item>Barista</item>
-        <item>Thủ thư</item>
-        <item>Freelancer</item>
-        <item>Influencer</item>
-        <item>Thất nghiệp</item>
-        <item>Thám tử</item>
+        <item>Hacker an ninh mạng</item>
+        <item>Điệp viên bí mật</item>
+        <item>Nhà vật lý thiên văn</item>
+        <item>Lập trình viên game</item>
+        <item>Nhà thực vật &amp; Nghệ nhân cắm hoa</item>
+        <item>Nghệ nhân pha chế (Mixologist)</item>
+        <item>Người phụ trách giám tuyển nghệ thuật</item>
+        <item>Bác sĩ thú y</item>
+        <item>Tay đua xe thể thao</item>
+        <item>Nhà buôn cổ vật</item>
+        <item>DJ &amp; Nhà sản xuất âm nhạc</item>
+        <item>Giáo sư đại học</item>
+        <item>Huấn luyện viên cá nhân (PT)</item>
+        <item>Chuyên gia thử nếm rượu vang</item>
+        <item>Nhà khảo cổ học</item>
+        <item>Thợ săn tiền thưởng</item>
+        <item>Người thừa kế hoàng gia</item>
+        <item>VTuber &amp; Streamer</item>
+        <item>Nghệ nhân làm socola</item>
+        <item>Nhà tạo mẫu thời trang</item>
+        <item>Phi hành gia vũ trụ</item>
+        <item>Nhà sinh vật biển</item>
+        <item>Nhà trị liệu tâm lý</item>
+        <item>Nhà điều tra hiện tượng siêu nhiên</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Đọc sách</item>
-        <item>Chơi game</item>
-        <item>Du lịch</item>
-        <item>Nấu ăn</item>
-        <item>Thể thao</item>
-        <item>Âm nhạc</item>
-        <item>Nhiếp ảnh</item>
-        <item>Hội họa</item>
-        <item>Làm vườn</item>
-        <item>Xem phim</item>
-        <item>Anime</item>
-        <item>Cosplay</item>
-        <item>Nhảy múa</item>
-        <item>Ca hát</item>
-        <item>Viết lách</item>
-        <item>Mua sắm</item>
-        <item>Thể hình</item>
-        <item>Yoga</item>
-        <item>Thiền</item>
-        <item>Leo núi</item>
-        <item>Cắm trại</item>
-        <item>Câu cá</item>
-        <item>Thủ công</item>
-        <item>Thời trang</item>
-        <item>Công nghệ</item>
-        <item>Chiêm tinh</item>
-        <item>Làm vườn</item>
-        <item>Tình nguyện</item>
-        <item>Xe cộ</item>
-        <item>Lịch sử</item>
+        <item>Làm bánh ngọt &amp; Đồ tráng miệng</item>
+        <item>Board game &amp; Nhập vai TTRPG</item>
+        <item>Lặn biển bình khí &amp; Ống thở</item>
+        <item>Hát Karaoke &amp; Chơi máy gắp game</item>
+        <item>Trượt ván &amp; Giày trượt bánh xe</item>
+        <item>Bói bài Tarot &amp; Xem quẻ</item>
+        <item>Làm gốm sứ thủ công</item>
+        <item>Leo núi &amp; Leo vách đá nhân tạo</item>
+        <item>Đi cà phê &amp; Trải nghiệm ẩm thực</item>
+        <item>Sưu tầm đĩa than Vinyl</item>
+        <item>Ngắm sao &amp; Chiêm tinh học</item>
+        <item>Xem phim trinh thám &amp; Kinh dị</item>
+        <item>Võ thuật &amp; Kickboxing</item>
+        <item>Trồng cây cảnh Bonsai</item>
+        <item>Viết thư pháp mỹ tự</item>
+        <item>Săn đồ Vintage &amp; Đồ cũ</item>
+        <item>Bắn cung</item>
+        <item>Đi phượt dã ngoại Road Trip</item>
+        <item>Điêu khắc số &amp; Thiết kế 3D</item>
+        <item>Cày phim dài tập</item>
+        <item>Pha chế Cocktail nghệ thuật</item>
+        <item>Lái máy bay không người lái Drone/FPV</item>
+        <item>Tập Pilates &amp; Giãn cơ</item>
+        <item>Lái xe mô tô phân khối lớn</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Bạn bè</item>
-        <item>Bạn thân</item>
-        <item>Bạn gái</item>
-        <item>Bạn trai</item>
-        <item>Vợ</item>
-        <item>Chồng</item>
-        <item>Chị/Em gái</item>
-        <item>Anh/Em trai</item>
-        <item>Bạn đồng hành du lịch</item>
-        <item>Bạn đồng hành phiêu lưu</item>
-        <item>Người cố vấn</item>
-        <item>Đồng nghiệp</item>
-        <item>Sếp</item>
-        <item>Nhân viên</item>
-        <item>Bạn cùng lớp</item>
-        <item>Người hướng dẫn</item>
-        <item>Học viên</item>
-        <item>Người lạ</item>
-        <item>Bạn cùng phòng</item>
-        <item>Hàng xóm</item>
-        <item>Người yêu cũ</item>
-        <item>Bạn thời thơ ấu</item>
-        <item>Người thầm thương</item>
-        <item>Đối thủ</item>
-        <item>Hầu gái</item>
-        <item>Quản gia</item>
-        <item>Chủ tiệc</item>
-        <item>Bạn đồng hành</item>
-        <item>Tri kỷ</item>
-        <item>Người quen</item>
+        <item>Vị hôn thê / Vị hôn phu</item>
+        <item>Mối tình thời thanh xuân học trò</item>
+        <item>Hộ vệ &amp; Đấng bảo hộ</item>
+        <item>Bạn đồng hành chí cốt</item>
+        <item>Kẻ thù cũ hóa đồng minh</item>
+        <item>Người thầm thương trộm nhớ</item>
+        <item>Gia sư kèm học</item>
+        <item>Trợ lý riêng</item>
+        <item>Quân vương / Chủ nhân</item>
+        <item>Cận thần / Thuộc hạ</item>
+        <item>Bạn trao đổi qua thư</item>
+        <item>Duyên phận tao ngộ</item>
+        <item>Vệ sĩ thân cận</item>
+        <item>Đối tác ký kết hợp đồng</item>
+        <item>Tri kỷ sẻ chia</item>
+        <item>Đệ tử truyền nhân</item>
+        <item>Kình địch từ thuở nhỏ</item>
+        <item>Mối tình đầu khó phai</item>
+        <item>Ân nhân bảo trợ</item>
     </string-array>
     <string name="store_best_value">GIÁ TỐT NHẤT</string>
     <string name="setting_privacy_not_configured">Chưa cấu hình liên kết Chính sách riêng tư</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Người lạ</string>
     <string name="chat_subtitle_format">%1$s • Cấp %2$d</string>
     <string name="chat_title_format">Cuộc trò chuyện #%1$s</string>
+    <string name="chat_list_my_ai">My AI</string>
     <string name="first_day">Ngày đầu tiên</string>
     <string name="feedback_reason_hint">Lý do (ví dụ: bị văng, chậm, giao diện xấu...)</string>
     <string name="feedback_description_hint">Chi tiết hoặc đề xuất...</string>

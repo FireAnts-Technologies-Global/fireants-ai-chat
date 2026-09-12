@@ -240,7 +240,7 @@
     <string name="create_hair_purple">Purple</string>
     <string name="create_hair_red">Red</string>
     <string name="create_companion_name">Companion Name</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Personality &amp; Social background</string>
     <string name="create_personality">Personality</string>
     <string name="create_occupation">Occupation</string>
@@ -250,138 +250,109 @@
     <string name="options_done">Done</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Friendly</item>
-        <item>Caring</item>
-        <item>Shy</item>
-        <item>Outgoing</item>
-        <item>Mysterious</item>
-        <item>Intelligent</item>
-        <item>Humorous</item>
-        <item>Affectionate</item>
-        <item>Adventurous</item>
-        <item>Confident</item>
-        <item>Energetic</item>
-        <item>Calm</item>
-        <item>Creative</item>
-        <item>Ambitious</item>
-        <item>Empathetic</item>
-        <item>Loyal</item>
-        <item>Optimistic</item>
-        <item>Pessimistic</item>
-        <item>Sarcastic</item>
-        <item>Stubborn</item>
-        <item>Sensual</item>
-        <item>Playful</item>
-        <item>Dominant</item>
-        <item>Submissive</item>
-        <item>Spiritual</item>
-        <item>Practical</item>
-        <item>Dreamy</item>
-        <item>Rebellious</item>
-        <item>Traditional</item>
-        <item>Protective</item>
+        <item>Tsundere</item>
+        <item>Kuudere</item>
+        <item>Dandere</item>
+        <item>Yandere</item>
+        <item>Enigmatic</item>
+        <item>Charming</item>
+        <item>Mischievous</item>
+        <item>Passionate</item>
+        <item>Seductive</item>
+        <item>Bold</item>
+        <item>Melancholic</item>
+        <item>Philosophical</item>
+        <item>Whimsical</item>
+        <item>Feisty</item>
+        <item>Diplomatic</item>
+        <item>Stoic</item>
+        <item>Clumsy</item>
+        <item>Flamboyant</item>
+        <item>Sincere</item>
+        <item>Charismatic</item>
+        <item>Witty</item>
+        <item>Noble</item>
+        <item>Fierce</item>
+        <item>Vulnerable</item>
     </string-array>
 
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Designer</item>
-        <item>Consultant</item>
-        <item>Doctor</item>
-        <item>Nurse</item>
-        <item>Engineer</item>
-        <item>Artist</item>
-        <item>Musician</item>
-        <item>Chef</item>
-        <item>Police Officer</item>
-        <item>Entrepreneur</item>
-        <item>Billionaire CEO</item>
-        <item>Model</item>
-        <item>Actor</item>
-        <item>Writer</item>
-        <item>Athlete</item>
-        <item>Scientist</item>
-        <item>Programmer</item>
-        <item>Lawyer</item>
-        <item>Architect</item>
-        <item>Designer</item>
-        <item>Photographer</item>
-        <item>Journalist</item>
-        <item>Pilot</item>
-        <item>Flight Attendant</item>
-        <item>Barista</item>
-        <item>Librarian</item>
-        <item>Freelancer</item>
-        <item>Influencer</item>
-        <item>Unemployed</item>
-        <item>Detective</item>
+        <item>Cybersecurity Hacker</item>
+        <item>Secret Agent</item>
+        <item>Astrophysicist</item>
+        <item>Game Developer</item>
+        <item>Botanist &amp; Florist</item>
+        <item>Mixologist</item>
+        <item>Art Curator</item>
+        <item>Veterinarian</item>
+        <item>Race Car Driver</item>
+        <item>Antiquities Dealer</item>
+        <item>DJ &amp; Audio Producer</item>
+        <item>University Professor</item>
+        <item>Personal Trainer</item>
+        <item>Sommelier &amp; Wine Taster</item>
+        <item>Archaeologist</item>
+        <item>Bounty Hunter</item>
+        <item>Royal Heir</item>
+        <item>VTuber &amp; Streamer</item>
+        <item>Chocolatier</item>
+        <item>Wardrobe Stylist</item>
+        <item>Astronaut</item>
+        <item>Marine Biologist</item>
+        <item>Clinical Therapist</item>
+        <item>Paranormal Investigator</item>
     </string-array>
 
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Reading</item>
-        <item>Gaming</item>
-        <item>Traveling</item>
-        <item>Cooking</item>
-        <item>Sports</item>
-        <item>Music</item>
-        <item>Photography</item>
-        <item>Painting</item>
-        <item>Gardening</item>
-        <item>Movies</item>
-        <item>Anime</item>
-        <item>Cosplay</item>
-        <item>Dancing</item>
-        <item>Singing</item>
-        <item>Writing</item>
-        <item>Shopping</item>
-        <item>Fitness</item>
-        <item>Yoga</item>
-        <item>Meditation</item>
-        <item>Hiking</item>
-        <item>Camping</item>
-        <item>Fishing</item>
-        <item>Crafting</item>
-        <item>Fashion</item>
-        <item>Technology</item>
-        <item>Astrology</item>
-        <item>Gardening</item>
-        <item>Volunteering</item>
-        <item>Cars</item>
-        <item>History</item>
+        <item>Baking Sweets &amp; Pastries</item>
+        <item>Board Games &amp; TTRPG</item>
+        <item>Scuba Diving &amp; Snorkeling</item>
+        <item>Karaoke &amp; Arcades</item>
+        <item>Skateboarding &amp; Rollerblading</item>
+        <item>Tarot &amp; Fortune Telling</item>
+        <item>Pottery &amp; Ceramics</item>
+        <item>Rock Climbing &amp; Bouldering</item>
+        <item>Cafe Hopping &amp; Food Tasting</item>
+        <item>Collecting Vinyl Records</item>
+        <item>Stargazing &amp; Astronomy</item>
+        <item>Watching True Crime &amp; Horror</item>
+        <item>Martial Arts &amp; Kickboxing</item>
+        <item>Bonsai &amp; Houseplants Cultivation</item>
+        <item>Calligraphy &amp; Lettering</item>
+        <item>Thrifting &amp; Vintage Hunting</item>
+        <item>Archery</item>
+        <item>Road Trips &amp; Van Life</item>
+        <item>Digital Sculpting &amp; 3D Modeling</item>
+        <item>Binge-watching Dramas</item>
+        <item>Mixology &amp; Cocktail Crafting</item>
+        <item>Drone Flying &amp; FPV</item>
+        <item>Pilates &amp; Stretching</item>
+        <item>Motorcycle Riding</item>
     </string-array>
 
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Friend</item>
-        <item>Best Friend</item>
-        <item>Girlfriend</item>
-        <item>Boyfriend</item>
-        <item>Wife</item>
-        <item>Husband</item>
-        <item>Sister</item>
-        <item>Brother</item>
-        <item>Travel Partner</item>
-        <item>Adventure Partner</item>
-        <item>Mentor</item>
-        <item>Coworker</item>
-        <item>Boss</item>
-        <item>Employee</item>
-        <item>Classmate</item>
-        <item>Guide</item>
-        <item>Learner</item>
-        <item>Stranger</item>
-        <item>Roommate</item>
-        <item>Neighbor</item>
-        <item>Ex-Partner</item>
-        <item>Childhood Friend</item>
-        <item>Secret Admirer</item>
-        <item>Rival</item>
-        <item>Maid</item>
-        <item>Butler</item>
-        <item>Host</item>
-        <item>Companion</item>
-        <item>Soulmate</item>
-        <item>Acquaintance</item>
+        <item>Fiancée / Fiancé</item>
+        <item>High School Sweetheart</item>
+        <item>Sworn Guardian &amp; Protector</item>
+        <item>Partner in Crime</item>
+        <item>Nemesis Turned Ally</item>
+        <item>Secret Crush</item>
+        <item>Academic Tutor</item>
+        <item>Personal Assistant</item>
+        <item>Master / Sovereign</item>
+        <item>Servant / Vassal</item>
+        <item>Pen Pal</item>
+        <item>Fated Encounter</item>
+        <item>Bodyguard</item>
+        <item>Contract Partner</item>
+        <item>Confidant</item>
+        <item>Protege / Apprentice</item>
+        <item>Childhood Rival</item>
+        <item>First Love</item>
+        <item>Patron &amp; Benefactor</item>
     </string-array>
     <string name="store_best_value">BEST VALUE</string>
     <string name="setting_privacy_not_configured">Privacy Policy URL is not configured</string>
@@ -399,6 +370,7 @@
     <string name="chat_relationship_stranger">Stranger</string>
     <string name="chat_subtitle_format">%1$s • Level %2$d</string>
     <string name="chat_title_format">Chat #%1$s</string>
+    <string name="chat_list_my_ai">My AI</string>
     <string name="first_day">First Day</string>
     <string name="feedback_reason_hint">Reason (e.g. crash, slow, bad UI...)</string>
     <string name="feedback_description_hint">Details or suggestions...</string>

@@ -232,7 +232,7 @@
     <string name="create_hair_purple">ม่วง</string>
     <string name="create_hair_red">แดง</string>
     <string name="create_companion_name">ชื่อเพื่อนร่วมทาง</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">บุคลิกและภูมิหลังทางสังคม</string>
     <string name="create_personality">บุคลิกภาพ</string>
     <string name="create_occupation">อาชีพ</string>
@@ -242,135 +242,109 @@
     <string name="options_done">เสร็จสิ้น</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>เป็นมิตร</item>
-        <item>เอาใจใส่</item>
-        <item>ขี้อาย</item>
-        <item>เปิดเผย</item>
-        <item>ลึกลับ</item>
-        <item>ฉลาด</item>
-        <item>อารมณ์ขัน</item>
-        <item>อบอุ่นและรักใคร่</item>
-        <item>ชอบการผจญภัย</item>
-        <item>มั่นใจในตัวเอง</item>
-        <item>กระตือรือร้น</item>
-        <item>สงบนิ่ง</item>
-        <item>มีความคิดสร้างสรรค์</item>
-        <item>ทะเยอทะยาน</item>
-        <item>เห็นอกเห็นใจผู้อื่น</item>
-        <item>ซื่อสัตย์</item>
-        <item>มองโลกในแง่ดี</item>
-        <item>มองโลกในแง่ร้าย</item>
-        <item>ประชดประชัน</item>
-        <item>ดื้อรั้น</item>
-        <item>เย้ายวน</item>
-        <item>ขี้เล่น</item>
-        <item>เป็นผู้นำ</item>
-        <item>ว่าง่าย</item>
-        <item>จิตวิญญาณ</item>
-        <item>อยู่กับความเป็นจริง</item>
-        <item>ช่างฝัน</item>
-        <item>ขบถ</item>
-        <item>อนุรักษนิยม</item>
-        <item>ปกป้องดูแล</item>
+        <item>ซึนเดเระ</item>
+        <item>คูเดเระ</item>
+        <item>ดันเดเระ</item>
+        <item>ยันเดเระ</item>
+        <item>ลึกลับน่าค้นหา</item>
+        <item>มีเสน่ห์ดึงดูด</item>
+        <item>ซุกซนขี้เล่น</item>
+        <item>เปี่ยมด้วยแพชชั่น</item>
+        <item>เย้ายวนใจ</item>
+        <item>กล้าหาญเด็ดเดี่ยว</item>
+        <item>เศร้าซึ้งลึกซึ้ง</item>
+        <item>มีมุมปรัชญา</item>
+        <item>เพ้อฝันแปลกใหม่</item>
+        <item>แสบซ่ามั่นใจ</item>
+        <item>ประนีประนอม</item>
+        <item>สุขุมเยือกเย็น</item>
+        <item>ซุ่มซ่ามน่าเอ็นดู</item>
+        <item>โดดเด่นมีสไตล์</item>
+        <item>จริงใจบริสุทธิ์</item>
+        <item>ทรงเสน่ห์น่าเกรงขาม</item>
+        <item>ฉลาดหลักแหลม</item>
+        <item>สูงส่งสง่างาม</item>
+        <item>เข้มแข็งดุดัน</item>
+        <item>อ่อนไหวง่าย</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>นักออกแบบ</item>
-        <item>ที่ปรึกษา</item>
-        <item>แพทย์</item>
-        <item>พยาบาล</item>
-        <item>วิศวกร</item>
-        <item>ศิลปิน</item>
-        <item>นักดนตรี</item>
-        <item>เชฟ</item>
-        <item>เจ้าหน้าที่ตำรวจ</item>
-        <item>ผู้ประกอบการ</item>
-        <item>ซีอีโอมหาเศรษฐี</item>
-        <item>นางแบบ/นายแบบ</item>
-        <item>นักแสดง</item>
-        <item>นักเขียน</item>
-        <item>นักกีฬา</item>
-        <item>นักวิทยาศาสตร์</item>
-        <item>โปรแกรมเมอร์</item>
-        <item>ทนายความ</item>
-        <item>สถาปนิก</item>
-        <item>ดีไซเนอร์</item>
-        <item>ช่างภาพ</item>
-        <item>นักข่าว</item>
-        <item>นักบิน</item>
-        <item>พนักงานต้อนรับบนเครื่องบิน</item>
-        <item>บาริสต้า</item>
-        <item>บรรณารักษ์</item>
-        <item>ฟรีแลนซ์</item>
-        <item>อินฟลูเอนเซอร์</item>
-        <item>ว่างงาน</item>
-        <item>นักสืบ</item>
+        <item>แฮกเกอร์ความปลอดภัยไซเบอร์</item>
+        <item>สายลับพิเศษ</item>
+        <item>นักฟิสิกส์ดาราศาสตร์</item>
+        <item>นักพัฒนาเกม</item>
+        <item>นักพฤกษศาสตร์และนักจัดดอกไม้</item>
+        <item>มิกโซโลจิสต์ (บาร์เทนเดอร์ศิลปะ)</item>
+        <item>ภัณฑารักษ์ศิลปะ</item>
+        <item>สัตวแพทย์</item>
+        <item>นักแข่งรถมืออาชีพ</item>
+        <item>พ่อค้าของโบราณ</item>
+        <item>ดีเจและโปรดิวเซอร์เพลง</item>
+        <item>อาจารย์มหาวิทยาลัย</item>
+        <item>เทรนเนอร์ส่วนตัว</item>
+        <item>ซอมเมอลิเยร์ (ผู้เชี่ยวชาญไวน์)</item>
+        <item>นักโบราณคดี</item>
+        <item>นักล่าค่าหัว</item>
+        <item>ทายาทราชวงศ์</item>
+        <item>วีทูบเบอร์และสตรีมเมอร์</item>
+        <item>ช็อกโกลาติเยร์</item>
+        <item>สไตลิสต์แฟชั่น</item>
+        <item>นักบินอวกาศ</item>
+        <item>นักชีววิทยาทางทะเล</item>
+        <item>นักบำบัดทางจิตวิทยา</item>
+        <item>นักสืบเรื่องเหนือธรรมชาติ</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>อ่านหนังสือ</item>
-        <item>เล่นเกม</item>
-        <item>ท่องเที่ยว</item>
-        <item>ทำอาหาร</item>
-        <item>กีฬา</item>
-        <item>ดนตรี</item>
-        <item>ถ่ายภาพ</item>
-        <item>วาดภาพ</item>
-        <item>ทำสวน</item>
-        <item>ดูภาพยนตร์</item>
-        <item>อนิเมะ</item>
-        <item>คอสเพลย์</item>
-        <item>เต้นรำ</item>
-        <item>ร้องเพลง</item>
-        <item>เขียนหนังสือ</item>
-        <item>ช้อปปิ้ง</item>
-        <item>ฟิตเนส</item>
-        <item>โยคะ</item>
-        <item>ทำสมาธิ</item>
-        <item>เดินป่า</item>
-        <item>ตั้งแคมป์</item>
-        <item>ตกปลา</item>
-        <item>งานประดิษฐ์</item>
-        <item>แฟชั่น</item>
-        <item>เทคโนโลยี</item>
-        <item>โหราศาสตร์</item>
-        <item>ปลูกต้นไม้</item>
-        <item>งานอาสาสมัคร</item>
-        <item>ยานยนต์</item>
-        <item>ประวัติศาสตร์</item>
+        <item>อบขนมหวานและเบเกอรี่</item>
+        <item>บอร์ดเกมและเกมเล่นตามบทบาท</item>
+        <item>ดำน้ำลึกและดำน้ำตื้น</item>
+        <item>ร้องคาราโอเกะและเกมตู้</item>
+        <item>เล่นสเก็ตบอร์ดและโรลเลอร์เบลด</item>
+        <item>ดูไพ่ทาโรต์และพยากรณ์</item>
+        <item>ปั้นเซรามิกและเครื่องปั้นดินเผา</item>
+        <item>ปีนผาจำลองและปีนหน้าผา</item>
+        <item>ตระเวนคาเฟ่และชิมอาหาร</item>
+        <item>สะสมแผ่นเสียงไวนิล</item>
+        <item>ดูดาวและดาราศาสตร์</item>
+        <item>ดูคดีอาชญากรรมและสยองขวัญ</item>
+        <item>ศิลปะการต่อสู้และคิกบ็อกซิ่ง</item>
+        <item>เพาะบอนไซและดูแลต้นไม้</item>
+        <item>เขียนอักษรวิจิตร</item>
+        <item>ช้อปปิ้งของวินเทจและมือสอง</item>
+        <item>ยิงธนู</item>
+        <item>โรดทริปและแคมป์ปิ้งรถบ้าน</item>
+        <item>ปั้นโมเดล 3D ดิจิทัล</item>
+        <item>ดูซีรีส์มาราธอน</item>
+        <item>ปรุงค็อกเทลและเครื่องดื่ม</item>
+        <item>บินโดรน FPV</item>
+        <item>พิลาทิสและยืดเหยียด</item>
+        <item>ขี่บิ๊กไบค์</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>เพื่อน</item>
-        <item>เพื่อนสนิท</item>
-        <item>แฟนสาว</item>
-        <item>แฟนหนุ่ม</item>
-        <item>ภรรยา</item>
-        <item>สามี</item>
-        <item>พี่สาว/น้องสาว</item>
-        <item>พี่ชาย/น้องชาย</item>
-        <item>เพื่อนร่วมเดินทาง</item>
-        <item>คู่หูผจญภัย</item>
-        <item>ที่ปรึกษา</item>
-        <item>เพื่อนร่วมงาน</item>
-        <item>เจ้านาย</item>
-        <item>พนักงาน</item>
-        <item>เพื่อนร่วมชั้น</item>
-        <item>มัคคุเทศก์</item>
-        <item>ผู้เรียน</item>
-        <item>คนแปลกหน้า</item>
-        <item>รูมเมท</item>
-        <item>เพื่อนบ้าน</item>
-        <item>แฟนเก่า</item>
-        <item>เพื่อนสมัยเด็ก</item>
-        <item>คนแอบชอบ</item>
-        <item>คู่แข่ง</item>
-        <item>เมด</item>
-        <item>พ่อบ้าน</item>
-        <item>เจ้าบ้าน</item>
-        <item>คู่หู</item>
-        <item>เนื้อคู่</item>
-        <item>คนรู้จัก</item>
+        <item>คู่หมั้น</item>
+        <item>รักแรกสมัยมัธยม</item>
+        <item>ผู้พิทักษ์ที่สาบานตน</item>
+        <item>คู่หูรู้ใจร่วมก่อการ</item>
+        <item>จากศัตรูกลายเป็นมิตร</item>
+        <item>คนที่แอบชอบ</item>
+        <item>ติวเตอร์ส่วนตัว</item>
+        <item>ผู้ช่วยส่วนตัว</item>
+        <item>นายท่าน / ผู้ปกครอง</item>
+        <item>ผู้รับใช้ / บริวาร</item>
+        <item>เพื่อนทางจดหมาย</item>
+        <item>พรหมลิขิตชักนำ</item>
+        <item>บอดี้การ์ดคนสนิท</item>
+        <item>คู่สัญญา</item>
+        <item>เพื่อนคู่คิดคนสนิท</item>
+        <item>ศิษย์เอก</item>
+        <item>คู่แข่งวัยเด็ก</item>
+        <item>รักแรกในความทรงจำ</item>
+        <item>ผู้อุปถัมภ์ใจดี</item>
     </string-array>
     <string name="store_best_value">คุ้มค่าที่สุด</string>
     <string name="setting_privacy_not_configured">ไม่ได้กำหนดค่า URL นโยบายความเป็นส่วนตัว</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">คนแปลกหน้า</string>
     <string name="chat_subtitle_format">%1$s • เลเวล %2$d</string>
     <string name="chat_title_format">แชท #%1$s</string>
+    <string name="chat_list_my_ai">AI ของฉัน</string>
     <string name="first_day">วันแรก</string>
     <string name="feedback_reason_hint">เหตุผล (เช่น แอปเด้ง, ช้า, หน้าตาไม่สวย...)</string>
     <string name="feedback_description_hint">รายละเอียดหรือข้อเสนอแนะ...</string>

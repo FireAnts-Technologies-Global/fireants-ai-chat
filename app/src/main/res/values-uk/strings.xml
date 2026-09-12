@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Фіолетовий</string>
     <string name="create_hair_red">Рудий</string>
     <string name="create_companion_name">Ім\'я супутника</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Характер та соціальне походження</string>
     <string name="create_personality">Характер</string>
     <string name="create_occupation">Професія</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Готово</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Дружній</item>
-        <item>Турботливий</item>
-        <item>Сором\'язливий</item>
-        <item>Товариський</item>
-        <item>Таємничий</item>
-        <item>Розумний</item>
-        <item>З почуттям гумору</item>
-        <item>Ніжний</item>
-        <item>Любить пригоди</item>
-        <item>Впевнений</item>
-        <item>Енергійний</item>
-        <item>Спокійний</item>
-        <item>Творчий</item>
-        <item>Амбітний</item>
-        <item>Чуйний</item>
-        <item>Вірний</item>
-        <item>Оптимістичний</item>
-        <item>Песимістичний</item>
-        <item>Саркастичний</item>
-        <item>Впертий</item>
-        <item>Чуттєвий</item>
-        <item>Грайливий</item>
-        <item>Домінантний</item>
-        <item>Покірний</item>
-        <item>Духовний</item>
-        <item>Практичний</item>
-        <item>Мрійливий</item>
-        <item>Бунтівний</item>
-        <item>Традиційний</item>
-        <item>Захисний</item>
+        <item>Цундере</item>
+        <item>Кудере</item>
+        <item>Дандере</item>
+        <item>Яндере</item>
+        <item>Загадковий</item>
+        <item>Чарівний</item>
+        <item>Пустотливий</item>
+        <item>Пристрасний</item>
+        <item>Звабливий</item>
+        <item>Сміливий</item>
+        <item>Меланхолійний</item>
+        <item>Філософський</item>
+        <item>Химерний</item>
+        <item>Жвавий</item>
+        <item>Дипломатичний</item>
+        <item>Стоїчний</item>
+        <item>Незграбно-милий</item>
+        <item>Яскравий</item>
+        <item>Щирий</item>
+        <item>Харизматичний</item>
+        <item>Дотепний</item>
+        <item>Шляхетний</item>
+        <item>Запеклий</item>
+        <item>Вразливий</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Дизайнер</item>
-        <item>Консультант</item>
-        <item>Лікар</item>
-        <item>Медбрат/Медсестра</item>
-        <item>Інженер</item>
-        <item>Художник</item>
-        <item>Музикант</item>
-        <item>Шеф-кухар</item>
-        <item>Поліцейський</item>
-        <item>Підприємець</item>
-        <item>CEO-мільярдер</item>
-        <item>Модель</item>
-        <item>Актор</item>
-        <item>Письменник</item>
-        <item>Спортсмен</item>
-        <item>Науковець</item>
-        <item>Програміст</item>
-        <item>Юрист</item>
-        <item>Архітектор</item>
-        <item>Модельєр</item>
-        <item>Фотограф</item>
-        <item>Журналіст</item>
-        <item>Пілот</item>
-        <item>Бортпровідник</item>
-        <item>Бариста</item>
-        <item>Бібліотекар</item>
-        <item>Фрилансер</item>
-        <item>Інфлюенсер</item>
-        <item>Безробітний</item>
-        <item>Детектив</item>
+        <item>Хакер з кібербезпеки</item>
+        <item>Таємний агент</item>
+        <item>Астрофізик</item>
+        <item>Розробник відеоігор</item>
+        <item>Ботанік та флорист</item>
+        <item>Міксолог</item>
+        <item>Арт-куратор</item>
+        <item>Ветеринар</item>
+        <item>Автогонщик</item>
+        <item>Торговець антикваріатом</item>
+        <item>DJ та музичний продюсер</item>
+        <item>Професор університету</item>
+        <item>Персональний тренер</item>
+        <item>Сомельє</item>
+        <item>Археолог</item>
+        <item>Мисливець за головами</item>
+        <item>Королівський спадкоємець</item>
+        <item>VTuber та стрімер</item>
+        <item>Шоколатьє</item>
+        <item>Стиліст моди</item>
+        <item>Астронавт</item>
+        <item>Морський біолог</item>
+        <item>Клінічний терапевт</item>
+        <item>Дослідник паранормального</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Читання</item>
-        <item>Відеоігри</item>
-        <item>Подорожі</item>
-        <item>Кулінарія</item>
-        <item>Спорт</item>
-        <item>Музика</item>
-        <item>Фотографія</item>
-        <item>Живопис</item>
-        <item>Садівництво</item>
-        <item>Фільми</item>
-        <item>Аніме</item>
-        <item>Косплей</item>
-        <item>Танці</item>
-        <item>Спів</item>
-        <item>Письменництво</item>
-        <item>Шопінг</item>
-        <item>Фітнес</item>
-        <item>Йога</item>
-        <item>Медитація</item>
-        <item>Піші походи</item>
-        <item>Кемпінг</item>
-        <item>Риболовля</item>
-        <item>Рукоділля</item>
-        <item>Мода</item>
-        <item>Технології</item>
-        <item>Астрологія</item>
-        <item>Догляд за рослинами</item>
-        <item>Волонтерство</item>
-        <item>Автомобілі</item>
-        <item>Історія</item>
+        <item>Випічка солодощів</item>
+        <item>Настільні ігри та TTRPG</item>
+        <item>Дайвінг та снорклінг</item>
+        <item>Караоке та аркади</item>
+        <item>Скейтбординг та ролики</item>
+        <item>Таро та ворожіння</item>
+        <item>Гончарство та кераміка</item>
+        <item>Скелелазіння та боулдеринг</item>
+        <item>Кав\'ярні та дегустація їжі</item>
+        <item>Колекціонування вінілу</item>
+        <item>Астрономія та спостереження за зірками</item>
+        <item>Перегляд тру-крайму та жахів</item>
+        <item>Бойові мистецтва та кікбоксинг</item>
+        <item>Бонсай та кімнатні рослини</item>
+        <item>Каліграфія та летеринг</item>
+        <item>Вінтаж та секонд-хенд</item>
+        <item>Стрільба з лука</item>
+        <item>Автоподорожі та венлайф</item>
+        <item>3D-моделювання та цифровий скульптинг</item>
+        <item>Запійний перегляд серіалів</item>
+        <item>Міксологія та створення коктейлів</item>
+        <item>Польоти на дронах FPV</item>
+        <item>Пілатес та розтяжка</item>
+        <item>Їзда на мотоциклі</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Друг</item>
-        <item>Найкращий друг</item>
-        <item>Дівчина</item>
-        <item>Хлопець</item>
-        <item>Дружина</item>
-        <item>Чоловік</item>
-        <item>Сестра</item>
-        <item>Брат</item>
-        <item>Супутник у подорожі</item>
-        <item>Партнер у пригодах</item>
-        <item>Наставник</item>
-        <item>Колега</item>
-        <item>Бос</item>
-        <item>Співробітник</item>
-        <item>Однокласник</item>
-        <item>Гід</item>
-        <item>Учень</item>
-        <item>Незнайомець</item>
-        <item>Сусід по кімнаті</item>
-        <item>Сусід</item>
-        <item>Колишній партнер</item>
-        <item>Друг дитинства</item>
-        <item>Таємний шанувальник</item>
-        <item>Суперник</item>
-        <item>Покоївка</item>
-        <item>Дворецький</item>
-        <item>Господар</item>
-        <item>Компаньйон</item>
-        <item>Споріднена душа</item>
-        <item>Знайомий</item>
+        <item>Наречений / Наречена</item>
+        <item>Шкільне кохання</item>
+        <item>Присяжний захисник</item>
+        <item>Спільник та соратник</item>
+        <item>Ворог, що став союзником</item>
+        <item>Таємна закоханість</item>
+        <item>Академічний наставник</item>
+        <item>Особистий асистент</item>
+        <item>Володар / Правитель</item>
+        <item>Слуга / Вірний підданий</item>
+        <item>Друг по переписці</item>
+        <item>Доленосна зустріч</item>
+        <item>Особистий охоронець</item>
+        <item>Партнер за контрактом</item>
+        <item>Довірена особа</item>
+        <item>Учень / Протеже</item>
+        <item>Суперник з дитинства</item>
+        <item>Перше кохання</item>
+        <item>Покровитель та благодійник</item>
     </string-array>
     <string name="store_best_value">НАЙВИГІДНІША ЦІНА</string>
     <string name="setting_privacy_not_configured">Посилання на Політику конфіденційності не налаштоване</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Незнайомець</string>
     <string name="chat_subtitle_format">%1$s • Рівень %2$d</string>
     <string name="chat_title_format">Чат #%1$s</string>
+    <string name="chat_list_my_ai">Мій ШІ</string>
     <string name="first_day">Перший день</string>
     <string name="feedback_reason_hint">Причина (наприклад, збій, повільно, незручний інтерфейс...)</string>
     <string name="feedback_description_hint">Деталі або пропозиції...</string>

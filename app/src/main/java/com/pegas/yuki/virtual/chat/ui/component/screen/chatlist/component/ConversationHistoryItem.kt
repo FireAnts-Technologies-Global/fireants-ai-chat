@@ -33,10 +33,13 @@ import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color756582
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorFFFFFF
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ManropeBold
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ManropeRegular
+import androidx.compose.ui.res.stringResource
+import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_10
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_12
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_14
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_16
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_2
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_4
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_48
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_6
@@ -104,18 +107,44 @@ internal fun ConversationHistoryItem(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                val characterName = conversation.character?.name ?: conversation.title ?: conversation.id
-                Text(
-                    text = characterName,
+                Row(
                     modifier = Modifier.weight(1f, fill = false),
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    fontFamily = ManropeBold,
-                    fontSize = SdpR_16.nonScaledSp,
-                    color = Color000000,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(SdpR_6)
+                ) {
+                    val characterName = conversation.character?.name ?: conversation.title ?: conversation.id
+                    Text(
+                        text = characterName,
+                        modifier = Modifier.weight(1f, fill = false),
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = ManropeBold,
+                        fontSize = SdpR_16.nonScaledSp,
+                        color = Color000000,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+
+                    if (conversation.backgroundId.isNullOrBlank()) {
+                        Box(
+                            modifier = Modifier
+                                .background(
+                                    color = Color(0x1FB440F2),
+                                    shape = RoundedCornerShape(SdpR_4)
+                                )
+                                .padding(horizontal = SdpR_6, vertical = SdpR_2)
+                        ) {
+                            Text(
+                                text = stringResource(R.string.chat_list_my_ai),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = Color(0xFFB440F2),
+                                fontSize = SdpR_10.nonScaledSp,
+                                fontWeight = FontWeight.Bold,
+                                maxLines = 1
+                            )
+                        }
+                    }
+                }
 
                 Row(
                     verticalAlignment = Alignment.CenterVertically,

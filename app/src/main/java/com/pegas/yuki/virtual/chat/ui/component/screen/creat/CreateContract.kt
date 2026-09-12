@@ -46,10 +46,10 @@ data class CreateUiState(
     val selectedSkinTone: Int = 0,
     val selectedHair: CreateHairColor = CreateHairColor.BLONDE,
     val companionName: String = "",
-    val selectedPersonality: String = "Spiritual",
-    val selectedOccupation: String = "Billionaire CEO",
-    val selectedHobbies: List<String> = listOf("Music"),
-    val selectedRelationship: String = "Stranger",
+    val selectedPersonality: String = "Tsundere",
+    val selectedOccupation: String = "Game Developer",
+    val selectedHobbies: List<String> = listOf("Board Games & TTRPG"),
+    val selectedRelationship: String = "Partner in Crime",
     val imageGenCoinCost: Int = 0
 ) : BaseUiState
 

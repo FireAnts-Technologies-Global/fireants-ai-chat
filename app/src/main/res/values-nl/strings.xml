@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Paars</string>
     <string name="create_hair_red">Rood</string>
     <string name="create_companion_name">Naam van metgezel</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Persoonlijkheid &amp; Sociale achtergrond</string>
     <string name="create_personality">Persoonlijkheid</string>
     <string name="create_occupation">Beroep</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Klaar</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Vriendelijk</item>
-        <item>Zorgzaam</item>
-        <item>Verlegen</item>
-        <item>Extravert</item>
-        <item>Mysterieus</item>
-        <item>Intelligent</item>
-        <item>Humoristisch</item>
-        <item>Aanhankelijk</item>
-        <item>Avontuurlijk</item>
-        <item>Zelfverzekerd</item>
-        <item>Energiek</item>
-        <item>Rustig</item>
-        <item>Creatief</item>
-        <item>Ambitieus</item>
-        <item>Empathisch</item>
-        <item>Loyaal</item>
-        <item>Optimistisch</item>
-        <item>Pessimistisch</item>
-        <item>Sarcastisch</item>
-        <item>Koppig</item>
-        <item>Sensueel</item>
-        <item>Speels</item>
-        <item>Dominant</item>
-        <item>Onderdanig</item>
-        <item>Spiritueel</item>
-        <item>Praktisch</item>
-        <item>Dromerig</item>
-        <item>Rebels</item>
-        <item>Traditioneel</item>
-        <item>Beschermend</item>
+        <item>Tsundere</item>
+        <item>Kuudere</item>
+        <item>Dandere</item>
+        <item>Yandere</item>
+        <item>Raadselachtig</item>
+        <item>Charmant</item>
+        <item>Ondeugend</item>
+        <item>Gepassioneerd</item>
+        <item>Verleidelijk</item>
+        <item>Gewaagd</item>
+        <item>Melancholiek</item>
+        <item>Filosofisch</item>
+        <item>Eigenzinnig</item>
+        <item>Pittig</item>
+        <item>Diplomatiek</item>
+        <item>Stoïcijns</item>
+        <item>Onhandig schattig</item>
+        <item>Flamboyant</item>
+        <item>Oprecht</item>
+        <item>Charismatisch</item>
+        <item>Gevat</item>
+        <item>Nobel</item>
+        <item>Vurig</item>
+        <item>Kwetsbaar</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Ontwerper</item>
-        <item>Consultant</item>
-        <item>Arts</item>
-        <item>Verpleegkundige</item>
-        <item>Ingenieur</item>
-        <item>Kunstenaar</item>
-        <item>Muzikant</item>
-        <item>Chef-kok</item>
-        <item>Politieagent</item>
-        <item>Ondernemer</item>
-        <item>Miljardair CEO</item>
-        <item>Model</item>
-        <item>Acteur</item>
-        <item>Schrijver</item>
-        <item>Atleet</item>
-        <item>Wetenschapper</item>
-        <item>Programmeur</item>
-        <item>Advocaat</item>
-        <item>Architect</item>
-        <item>Modeontwerper</item>
-        <item>Fotograaf</item>
-        <item>Journalist</item>
-        <item>Piloot</item>
-        <item>Steward/Stewardess</item>
-        <item>Barista</item>
-        <item>Bibliothecaris</item>
-        <item>Freelancer</item>
-        <item>Influencer</item>
-        <item>Werkloos</item>
-        <item>Detective</item>
+        <item>Cybersecurity-hacker</item>
+        <item>Geheim agent</item>
+        <item>Astrofysicus</item>
+        <item>Game-ontwikkelaar</item>
+        <item>Botanicus &amp; bloemist</item>
+        <item>Mixoloog</item>
+        <item>Kunstcurator</item>
+        <item>Dierenarts</item>
+        <item>Coureur</item>
+        <item>Antiquair</item>
+        <item>DJ &amp; muziekproducent</item>
+        <item>Universiteitsprofessor</item>
+        <item>Personal trainer</item>
+        <item>Sommelier &amp; wijnproever</item>
+        <item>Archeoloog</item>
+        <item>Premiejager</item>
+        <item>Koninklijke erfgenaam</item>
+        <item>VTuber &amp; streamer</item>
+        <item>Chocolatier</item>
+        <item>Modestylist</item>
+        <item>Astronaut</item>
+        <item>Marien bioloog</item>
+        <item>Klinisch therapeut</item>
+        <item>Onderzoeker van het paranormale</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Lezen</item>
-        <item>Gamen</item>
-        <item>Reizen</item>
-        <item>Koken</item>
-        <item>Sport</item>
-        <item>Muziek</item>
-        <item>Fotografie</item>
-        <item>Schilderen</item>
-        <item>Tuinieren</item>
-        <item>Films</item>
-        <item>Anime</item>
-        <item>Cosplay</item>
-        <item>Dansen</item>
-        <item>Zingen</item>
-        <item>Schrijven</item>
-        <item>Winkelen</item>
-        <item>Fitness</item>
-        <item>Yoga</item>
-        <item>Meditatie</item>
-        <item>Wandelen</item>
-        <item>Kamperen</item>
-        <item>Vissen</item>
-        <item>Knutselen</item>
-        <item>Mode</item>
-        <item>Technologie</item>
-        <item>Astrologie</item>
-        <item>Planten verzorgen</item>
-        <item>Vrijwilligerswerk</item>
-        <item>Auto\'s</item>
-        <item>Geschiedenis</item>
+        <item>Bakken van zoetigheden</item>
+        <item>Bordspellen &amp; TTRPG</item>
+        <item>Scubaduiken &amp; snorkelen</item>
+        <item>Karaoke &amp; speelhallen</item>
+        <item>Skateboarden &amp; rolschaatsen</item>
+        <item>Tarot &amp; waarzeggerij</item>
+        <item>Pottenbakken &amp; keramiek</item>
+        <item>Rotsklimmen &amp; boulderen</item>
+        <item>Cafés bezoeken &amp; proeven</item>
+        <item>Vinylplaten verzamelen</item>
+        <item>Sterrenkijken &amp; astronomie</item>
+        <item>True crime &amp; horror kijken</item>
+        <item>Vechtsporten &amp; kickboksen</item>
+        <item>Bonsai &amp; kamerplanten</item>
+        <item>Kalligrafie &amp; handlettering</item>
+        <item>Vintage &amp; kringloop shoppen</item>
+        <item>Boogschieten</item>
+        <item>Roadtrips &amp; vanlife</item>
+        <item>Digitaal beeldhouwen &amp; 3D-modellering</item>
+        <item>Series bingen</item>
+        <item>Mixologie &amp; cocktails maken</item>
+        <item>Dronevliegen &amp; FPV</item>
+        <item>Pilates &amp; stretchen</item>
+        <item>Motorrijden</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Vriend</item>
-        <item>Beste vriend</item>
-        <item>Vriendin</item>
-        <item>Vriend</item>
-        <item>Vrouw</item>
-        <item>Man</item>
-        <item>Zus</item>
-        <item>Broer</item>
-        <item>Reismaatje</item>
-        <item>Avontuurpartner</item>
-        <item>Mentor</item>
-        <item>Collega</item>
-        <item>Baas</item>
-        <item>Werknemer</item>
-        <item>Klasgenoot</item>
-        <item>Gids</item>
-        <item>Leerling</item>
-        <item>Vreemde</item>
-        <item>Kamergenoot</item>
-        <item>Buur</item>
-        <item>Ex-partner</item>
-        <item>Jeugdvriend</item>
-        <item>Geheime aanbidder</item>
-        <item>Rivaal</item>
-        <item>Dienstmeisje</item>
-        <item>Butler</item>
-        <item>Gastheer</item>
-        <item>Metgezel</item>
-        <item>Zielsverwant</item>
-        <item>Kennis</item>
+        <item>Verloofde</item>
+        <item>Middelbareschoolliefde</item>
+        <item>Geheiligde beschermer</item>
+        <item>Partner in crime</item>
+        <item>Van aartsvijand tot bondgenoot</item>
+        <item>Geheime vlam</item>
+        <item>Academisch tutor</item>
+        <item>Persoonlijk assistent</item>
+        <item>Heerser / Meester</item>
+        <item>Dienaar / Volgeling</item>
+        <item>Penvriend</item>
+        <item>Voorbestemde ontmoeting</item>
+        <item>Bodyguard</item>
+        <item>Contractuele partner</item>
+        <item>Vertrouweling</item>
+        <item>Beschermeling / Leerling</item>
+        <item>Jeugdrivaal</item>
+        <item>Eerste liefde</item>
+        <item>Patroon &amp; weldoener</item>
     </string-array>
     <string name="store_best_value">BESTE DEAL</string>
     <string name="setting_privacy_not_configured">Privacybeleid-URL is niet geconfigureerd</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Vreemde</string>
     <string name="chat_subtitle_format">%1$s • Niveau %2$d</string>
     <string name="chat_title_format">Chat #%1$s</string>
+    <string name="chat_list_my_ai">Mijn AI</string>
     <string name="first_day">Eerste dag</string>
     <string name="feedback_reason_hint">Reden (bijv. crash, traag, interface...)</string>
     <string name="feedback_description_hint">Details of suggesties...</string>

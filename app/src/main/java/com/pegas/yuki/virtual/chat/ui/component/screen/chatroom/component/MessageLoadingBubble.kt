@@ -25,6 +25,8 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color433440
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.Color990C051A
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorD9FFFFFF
+import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.ColorE8C3AC
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_1
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_10
 import com.pegas.yuki.virtual.chat.ui.bases.compose.theme.SdpR_12
@@ -50,8 +52,8 @@ internal fun MessageLoadingBubble(
                 max = LocalConfiguration.current.screenWidthDp.dp * 0.82f
             ),
             shape = RoundedCornerShape(SdpR_16),
-            colors = CardDefaults.cardColors(containerColor = Color990C051A),
-            border = BorderStroke(SdpR_1, Color433440)
+            colors = CardDefaults.cardColors(containerColor = ColorD9FFFFFF),
+            border = BorderStroke(SdpR_1, ColorE8C3AC)
         ) {
             Column(
                 modifier = Modifier.padding(

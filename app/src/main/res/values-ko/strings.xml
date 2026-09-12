@@ -232,7 +232,7 @@
     <string name="create_hair_purple">보라색</string>
     <string name="create_hair_red">빨간색</string>
     <string name="create_companion_name">친구 이름</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">성격 &amp; 사회적 배경</string>
     <string name="create_personality">성격</string>
     <string name="create_occupation">직업</string>
@@ -242,135 +242,109 @@
     <string name="options_done">완료</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>다정한</item>
-        <item>배려심 깊은</item>
-        <item>수줍은</item>
-        <item>외향적인</item>
+        <item>츤데레</item>
+        <item>쿨데레</item>
+        <item>단데레</item>
+        <item>얀데레</item>
         <item>신비로운</item>
-        <item>지적인</item>
-        <item>유머러스한</item>
-        <item>애정이 넘치는</item>
-        <item>모험을 즐기는</item>
-        <item>자신감 있는</item>
-        <item>활기찬</item>
-        <item>차분한</item>
-        <item>창의적인</item>
-        <item>야심 찬</item>
-        <item>공감 능력이 좋은</item>
-        <item>충직한</item>
-        <item>낙천적인</item>
-        <item>비관적인</item>
-        <item>시니컬한</item>
-        <item>고집 있는</item>
-        <item>매혹적인</item>
-        <item>장난기 많은</item>
-        <item>주도적인</item>
-        <item>순종적인</item>
-        <item>영적인</item>
-        <item>현실적인</item>
-        <item>몽상적인</item>
-        <item>반항적인</item>
-        <item>전통적인</item>
-        <item>보호적인</item>
+        <item>매력적인</item>
+        <item>장난기 넘치는</item>
+        <item>열정적인</item>
+        <item>유혹적인</item>
+        <item>대담한</item>
+        <item>우수 어린</item>
+        <item>철학적인</item>
+        <item>엉뚱발랄한</item>
+        <item>당찬</item>
+        <item>원만한</item>
+        <item>냉철한</item>
+        <item>허당미 넘치는</item>
+        <item>화려한</item>
+        <item>진솔한</item>
+        <item>카리스마 넘치는</item>
+        <item>재치 있는</item>
+        <item>고결한</item>
+        <item>강인한</item>
+        <item>여린</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>디자이너</item>
-        <item>컨설턴트</item>
-        <item>의사</item>
-        <item>간호사</item>
-        <item>엔지니어</item>
-        <item>예술가</item>
-        <item>음악가</item>
-        <item>요리사</item>
-        <item>경찰관</item>
-        <item>사업가</item>
-        <item>억만장자 CEO</item>
-        <item>모델</item>
-        <item>배우</item>
-        <item>작가</item>
-        <item>운동선수</item>
-        <item>과학자</item>
-        <item>프로그래머</item>
-        <item>변호사</item>
-        <item>건축가</item>
-        <item>스타일리스트</item>
-        <item>사진작가</item>
-        <item>기자</item>
-        <item>조종사</item>
-        <item>승무원</item>
-        <item>바리스타</item>
-        <item>사서</item>
-        <item>프리랜서</item>
-        <item>인플루언서</item>
-        <item>무직</item>
-        <item>탐정</item>
+        <item>사이버 보안 해커</item>
+        <item>비밀 요원</item>
+        <item>천체물리학자</item>
+        <item>게임 개발자</item>
+        <item>식물학자 &amp; 플로리스트</item>
+        <item>믹솔로지스트</item>
+        <item>아트 큐레이터</item>
+        <item>수의사</item>
+        <item>카레이서</item>
+        <item>골동품 딜러</item>
+        <item>DJ &amp; 음악 프로듀서</item>
+        <item>대학교수</item>
+        <item>개인 트레이너</item>
+        <item>소믈리에</item>
+        <item>고고학자</item>
+        <item>현상금 사냥꾼</item>
+        <item>왕실 후계자</item>
+        <item>버튜버 &amp; 스트리머</item>
+        <item>쇼콜라티에</item>
+        <item>패션 스타일리스트</item>
+        <item>우주비행사</item>
+        <item>해양생물학자</item>
+        <item>임상 심리치료사</item>
+        <item>초자연현상 조사관</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>독서</item>
-        <item>게임</item>
-        <item>여행</item>
-        <item>요리</item>
-        <item>스포츠</item>
-        <item>음악</item>
-        <item>사진</item>
-        <item>그림</item>
-        <item>원예</item>
-        <item>영화</item>
-        <item>애니메이션</item>
-        <item>코스프레</item>
-        <item>춤</item>
-        <item>노래</item>
-        <item>글쓰기</item>
-        <item>쇼핑</item>
-        <item>헬스</item>
-        <item>요가</item>
-        <item>명상</item>
-        <item>등산</item>
-        <item>캠핑</item>
-        <item>낚시</item>
-        <item>공예</item>
-        <item>패션</item>
-        <item>기술</item>
-        <item>점성술</item>
-        <item>가드닝</item>
-        <item>봉사활동</item>
-        <item>자동차</item>
-        <item>역사</item>
+        <item>디저트 &amp; 베이킹</item>
+        <item>보드게임 &amp; TRPG</item>
+        <item>스쿠버다이빙 &amp; 스노클링</item>
+        <item>노래방 &amp; 아케이드</item>
+        <item>스케이트보드 &amp; 롤러블레이드</item>
+        <item>타로 &amp; 점술</item>
+        <item>도예 &amp; 도자기</item>
+        <item>클라이밍 &amp; 볼더링</item>
+        <item>카페 투어 &amp; 맛집 탐방</item>
+        <item>바이닐 LP 수집</item>
+        <item>별보기 &amp; 천문 관측</item>
+        <item>추리 &amp; 공포물 감상</item>
+        <item>격투기 &amp; 킥복싱</item>
+        <item>분재 &amp; 반려식물 키우기</item>
+        <item>캘리그라피</item>
+        <item>빈티지 숍 쇼핑</item>
+        <item>양궁</item>
+        <item>로드 트립 &amp; 차박</item>
+        <item>3D 모델링 &amp; 디지털 조형</item>
+        <item>드라마 정주행</item>
+        <item>칵테일 만들기</item>
+        <item>드론 레이싱 &amp; FPV</item>
+        <item>필라테스 &amp; 스트레칭</item>
+        <item>오토바이 라이딩</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>친구</item>
-        <item>절친</item>
-        <item>여자친구</item>
-        <item>남자친구</item>
-        <item>아내</item>
-        <item>남편</item>
-        <item>자매</item>
-        <item>형제</item>
-        <item>여행 메이트</item>
-        <item>모험 파트너</item>
-        <item>멘토</item>
-        <item>직장 동료</item>
-        <item>상사</item>
-        <item>부하 직원</item>
-        <item>동창</item>
-        <item>가이드</item>
-        <item>수강생</item>
-        <item>낯선 사람</item>
-        <item>룸메이트</item>
-        <item>이웃</item>
-        <item>전 연인</item>
-        <item>소꿉친구</item>
-        <item>비밀 팬</item>
-        <item>라이벌</item>
-        <item>메이드</item>
-        <item>집사</item>
-        <item>호스트</item>
-        <item>동반자</item>
-        <item>소울메이트</item>
-        <item>지인</item>
+        <item>약혼자</item>
+        <item>학창 시절 첫사랑</item>
+        <item>수호자 &amp; 보호자</item>
+        <item>공범이자 파트너</item>
+        <item>적에서 아군으로</item>
+        <item>짝사랑 상대</item>
+        <item>개인 튜터</item>
+        <item>개인 비서</item>
+        <item>주인 / 군주</item>
+        <item>수하 / 신하</item>
+        <item>펜팔 친구</item>
+        <item>운명적인 인연</item>
+        <item>전담 경호원</item>
+        <item>계약 관계</item>
+        <item>비밀을 나누는 친구</item>
+        <item>수제자</item>
+        <item>소꿉친구 라이벌</item>
+        <item>잊지 못할 첫사랑</item>
+        <item>후원자 &amp; 은인</item>
     </string-array>
     <string name="store_best_value">최고의 가치</string>
     <string name="setting_privacy_not_configured">개인정보 처리방침 URL이 설정되지 않았습니다</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">낯선 사람</string>
     <string name="chat_subtitle_format">%1$s • 레벨 %2$d</string>
     <string name="chat_title_format">대화 #%1$s</string>
+    <string name="chat_list_my_ai">마이 AI</string>
     <string name="first_day">첫 번째 날</string>
     <string name="feedback_reason_hint">이유 (예: 튕김 현상, 느림, UI 불편 등...)</string>
     <string name="feedback_description_hint">상세 내용이나 건의사항...</string>

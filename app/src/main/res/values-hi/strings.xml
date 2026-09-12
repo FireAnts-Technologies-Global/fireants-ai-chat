@@ -232,7 +232,7 @@
     <string name="create_hair_purple">बैंगनी</string>
     <string name="create_hair_red">लाल</string>
     <string name="create_companion_name">साथी का नाम</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">व्यक्तित्व और सामाजिक पृष्ठभूमि</string>
     <string name="create_personality">व्यक्तित्व</string>
     <string name="create_occupation">पेशा</string>
@@ -242,135 +242,109 @@
     <string name="options_done">पूर्ण</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>मिलनसार</item>
-        <item>परवाह करने वाला</item>
-        <item>शर्मीला</item>
-        <item>बहिर्मुखी</item>
+        <item>त्सुंडेरे</item>
+        <item>कूडेरे</item>
+        <item>दांडेरे</item>
+        <item>यांडेरे</item>
         <item>रहस्यमयी</item>
-        <item>बुद्धिमान</item>
-        <item>मजाकिया</item>
-        <item>स्नेही</item>
+        <item>आकर्षक</item>
+        <item>शरारती</item>
+        <item>उत्साही</item>
+        <item>मनमोहक</item>
         <item>साहसी</item>
-        <item>आत्मविश्वासी</item>
-        <item>ऊर्जावान</item>
-        <item>शांत</item>
-        <item>रचनात्मक</item>
-        <item>महत्वाकांक्षी</item>
+        <item>भावुक</item>
+        <item>दार्शनिक</item>
+        <item>अनोखा</item>
+        <item>तेज-तर्रार</item>
+        <item>कूटनीतिक</item>
+        <item>शांत और स्थिर</item>
+        <item>भोला-भाला प्यारा</item>
+        <item>शानदार</item>
+        <item>सच्चा</item>
+        <item>प्रभावशाली</item>
+        <item>हाजिरजवाब</item>
+        <item>कुलीन</item>
+        <item>प्रचंड</item>
         <item>संवेदनशील</item>
-        <item>वफादार</item>
-        <item>आशावादी</item>
-        <item>निराशावादी</item>
-        <item>व्यंग्यात्मक</item>
-        <item>जिद्दी</item>
-        <item>कामुक</item>
-        <item>चंचल</item>
-        <item>प्रभुत्वशाली</item>
-        <item>विनम्र</item>
-        <item>आध्यात्मिक</item>
-        <item>व्यावहारिक</item>
-        <item>सपनों में खोया</item>
-        <item>विद्रोही</item>
-        <item>पारंपरिक</item>
-        <item>सुरक्षात्मक</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>डिजाइनर</item>
-        <item>सलाहकार</item>
-        <item>डॉक्टर</item>
-        <item>नर्स</item>
-        <item>इंजीनियर</item>
-        <item>कलाकार</item>
-        <item>संगीतकार</item>
-        <item>शेफ</item>
-        <item>पुलिस अधिकारी</item>
-        <item>उद्यमी</item>
-        <item>अरबपति CEO</item>
-        <item>मॉडल</item>
-        <item>अभिनेता</item>
-        <item>लेखक</item>
-        <item>खिलाड़ी</item>
-        <item>वैज्ञानिक</item>
-        <item>प्रोग्रामर</item>
-        <item>वकील</item>
-        <item>वास्तुकार</item>
-        <item>फ़ैशन डिज़ाइनर</item>
-        <item>फ़ोटोग्राफ़र</item>
-        <item>पत्रकार</item>
-        <item>पायलट</item>
-        <item>फ़्लाइट अटेंडेंट</item>
-        <item>बरिस्ता</item>
-        <item>पुस्तकालय अध्यक्ष</item>
-        <item>फ्रीलांसर</item>
-        <item>इन्फ्लुएंसर</item>
-        <item>बेरोज़गार</item>
-        <item>जासूस</item>
+        <item>साइबर सुरक्षा हैकर</item>
+        <item>सीक्रेट एजेंट</item>
+        <item>खगोल भौतिक विज्ञानी</item>
+        <item>गेम डेवलपर</item>
+        <item>वनस्पतिशास्त्री और फ्लोरिस्ट</item>
+        <item>मिक्सोलॉजिस्ट</item>
+        <item>कला क्यूरेटर</item>
+        <item>पशु चिकित्सक</item>
+        <item>कार रेसर</item>
+        <item>प्राचीन वस्तुओं के व्यापारी</item>
+        <item>डीजे और संगीत निर्माता</item>
+        <item>विश्वविद्यालय के प्रोफेसर</item>
+        <item>व्यक्तिगत प्रशिक्षक</item>
+        <item>पेय विशेषज्ञ</item>
+        <item>पुरातत्वविद्</item>
+        <item>बाउंटी हंटर</item>
+        <item>शाही उत्तराधिकारी</item>
+        <item>वीट्यूबर और स्ट्रीमर</item>
+        <item>चॉकलेट निर्माता</item>
+        <item>फैशन स्टाइलिस्ट</item>
+        <item>अंतरिक्ष यात्री</item>
+        <item>समुद्री जीवविज्ञानी</item>
+        <item>चिकित्सीय चिकित्सक</item>
+        <item>अलौकिक अन्वेषक</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>किताबें पढ़ना</item>
-        <item>गेमिंग</item>
-        <item>यात्रा</item>
-        <item>खाना पकाना</item>
-        <item>खेलकूद</item>
-        <item>संगीत</item>
-        <item>फ़ोटोग्राफ़ी</item>
-        <item>पेंटिंग</item>
-        <item>बागवानी</item>
-        <item>फ़िल्में</item>
-        <item>एनीमे</item>
-        <item>कॉसप्ले</item>
-        <item>डांस</item>
-        <item>गाना</item>
-        <item>लेखन</item>
-        <item>शॉपिंग</item>
-        <item>फिटनेस</item>
-        <item>योग</item>
-        <item>ध्यान</item>
-        <item>ट्रेकिंग</item>
-        <item>कैंपिंग</item>
-        <item>मछली पकड़ना</item>
-        <item>हस्तशिल्प</item>
-        <item>फ़ैशन</item>
-        <item>तकनीक</item>
-        <item>ज्योतिष</item>
-        <item>पौधे लगाना</item>
-        <item>स्वयंसेवा</item>
-        <item>कारें</item>
-        <item>इतिहास</item>
+        <item>मिठाई और पेस्ट्री बेकिंग</item>
+        <item>बोर्ड गेम्स और आरपीजी</item>
+        <item>स्कूबा डाइविंग और स्नोर्केलिंग</item>
+        <item>कराओके और आर्केड गेम्स</item>
+        <item>स्केटबोर्डिंग और रोलरब्लेडिंग</item>
+        <item>टैरो और भविष्यफल</item>
+        <item>मिट्टी के बर्तन और सिरेमिक कला</item>
+        <item>रॉक क्लाइम्बिंग और बोल्डरिंग</item>
+        <item>कैफे घूमना और नए व्यंजनों का स्वाद</item>
+        <item>विनाइल रिकॉर्ड्स संग्रह</item>
+        <item>सितारों को देखना और खगोल विज्ञान</item>
+        <item>क्राइम और हॉरर शो देखना</item>
+        <item>मार्शल आर्ट्स और किकबॉक्सिंग</item>
+        <item>बोनसाई और पौधों की देखभाल</item>
+        <item>कैलिग्राफी और सुलेख कला</item>
+        <item>विंटेज खरीदारी</item>
+        <item>तीरंदाजी</item>
+        <item>रोड ट्रिप और वैन लाइफ</item>
+        <item>डिजिटल मूर्तिकला और 3D मॉडलिंग</item>
+        <item>सीरीज देखना</item>
+        <item>कॉकटेल बनाना</item>
+        <item>ड्रोन उड़ाना और FPV</item>
+        <item>पिलेट्स और स्ट्रेचिंग</item>
+        <item>मोटरसाइकिल की सवारी</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>दोस्त</item>
-        <item>सबसे अच्छा दोस्त</item>
-        <item>गर्लफ्रेंड</item>
-        <item>बॉयफ्रेंड</item>
-        <item>पत्नी</item>
-        <item>पति</item>
-        <item>बहन</item>
-        <item>भाई</item>
-        <item>सफ़र का साथी</item>
-        <item>एडवेंचर पार्टनर</item>
-        <item>मार्गदर्शक</item>
-        <item>सहकर्मी</item>
-        <item>बॉस</item>
-        <item>कर्मचारी</item>
-        <item>सहपाठी</item>
-        <item>गाइड</item>
-        <item>शिक्षार्थी</item>
-        <item>अजनबी</item>
-        <item>रूममेट</item>
-        <item>पड़ोसी</item>
-        <item>पूर्व साथी</item>
-        <item>बचपन का दोस्त</item>
-        <item>गुप्त प्रशंसक</item>
-        <item>प्रतिद्वंद्वी</item>
-        <item>नौकरानी</item>
-        <item>बटलर</item>
-        <item>मेजबान</item>
-        <item>साथी</item>
-        <item>हमसफ़र</item>
-        <item>परिचित</item>
+        <item>मंगेतर</item>
+        <item>स्कूल का पहला प्यार</item>
+        <item>शपथबद्ध रक्षक</item>
+        <item>हर कदम का साथी</item>
+        <item>दुश्मन से बना दोस्त</item>
+        <item>सीक्रेट क्रश</item>
+        <item>अकादमिक शिक्षक</item>
+        <item>निजी सहायक</item>
+        <item>स्वामी / अधिपति</item>
+        <item>समर्पित साथी</item>
+        <item>पत्र मित्र</item>
+        <item>भाग्य से हुई मुलाकात</item>
+        <item>निजी अंगरक्षक</item>
+        <item>अनुबंध साथी</item>
+        <item>राजदार दोस्त</item>
+        <item>शिष्य</item>
+        <item>बचपन का प्रतिद्वंद्वी</item>
+        <item>पहला प्यार</item>
+        <item>संरक्षक और उपकारक</item>
     </string-array>
     <string name="store_best_value">सर्वोत्तम मूल्य</string>
     <string name="setting_privacy_not_configured">गोपनीयता नीति URL कॉन्फ़िगर नहीं है</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">अजनबी</string>
     <string name="chat_subtitle_format">%1$s • स्तर %2$d</string>
     <string name="chat_title_format">चैट #%1$s</string>
+    <string name="chat_list_my_ai">माई एआई</string>
     <string name="first_day">पहला दिन</string>
     <string name="feedback_reason_hint">कारण (उदा. क्रैश, धीमा, खराब इंटरफ़ेस...)</string>
     <string name="feedback_description_hint">विवरण या सुझाव...</string>

@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Roxo</string>
     <string name="create_hair_red">Ruivo</string>
     <string name="create_companion_name">Nome do companheiro</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Personalidade e origem social</string>
     <string name="create_personality">Personalidade</string>
     <string name="create_occupation">Profissão</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Concluído</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Amigável</item>
-        <item>Atencioso</item>
-        <item>Tímido</item>
-        <item>Extrovertido</item>
-        <item>Misterioso</item>
-        <item>Inteligente</item>
-        <item>Bem-humorado</item>
-        <item>Afetuoso</item>
-        <item>Aventureiro</item>
-        <item>Confiante</item>
-        <item>Enérgico</item>
-        <item>Calmo</item>
-        <item>Criativo</item>
-        <item>Ambicioso</item>
-        <item>Empático</item>
-        <item>Leal</item>
-        <item>Otimista</item>
-        <item>Pessimista</item>
-        <item>Sarcástico</item>
-        <item>Teimoso</item>
-        <item>Sensual</item>
-        <item>Brincalhão</item>
-        <item>Dominante</item>
-        <item>Submisso</item>
-        <item>Espiritual</item>
-        <item>Prático</item>
-        <item>Sonhador</item>
-        <item>Rebelde</item>
-        <item>Tradicional</item>
-        <item>Protetor</item>
+        <item>Tsundere</item>
+        <item>Kuudere</item>
+        <item>Dandere</item>
+        <item>Yandere</item>
+        <item>Enigmático</item>
+        <item>Charmoso</item>
+        <item>Travesso</item>
+        <item>Apaixonado</item>
+        <item>Sedutor</item>
+        <item>Audacioso</item>
+        <item>Melancólico</item>
+        <item>Filosófico</item>
+        <item>Caprichoso</item>
+        <item>Esquentado</item>
+        <item>Diplomático</item>
+        <item>Estoico</item>
+        <item>Desajeitado e fofo</item>
+        <item>Extravagante</item>
+        <item>Sincero</item>
+        <item>Carismático</item>
+        <item>Sagaz</item>
+        <item>Nobre</item>
+        <item>Feroz</item>
+        <item>Vulnerável</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Designer</item>
-        <item>Consultor</item>
-        <item>Médico</item>
-        <item>Enfermeiro</item>
-        <item>Engenheiro</item>
-        <item>Artista</item>
-        <item>Músico</item>
-        <item>Chef</item>
-        <item>Policial</item>
-        <item>Empreendedor</item>
-        <item>CEO Bilionário</item>
-        <item>Modelo</item>
-        <item>Ator</item>
-        <item>Escritor</item>
-        <item>Atleta</item>
-        <item>Cientista</item>
-        <item>Programador</item>
-        <item>Advogado</item>
-        <item>Arquiteto</item>
-        <item>Estilista</item>
-        <item>Fotógrafo</item>
-        <item>Jornalista</item>
-        <item>Piloto</item>
-        <item>Comissário de bordo</item>
-        <item>Barista</item>
-        <item>Bibliotecário</item>
-        <item>Freelancer</item>
-        <item>Influenciador</item>
-        <item>Desempregado</item>
-        <item>Detetive</item>
+        <item>Hacker de segurança cibernética</item>
+        <item>Agente secreto</item>
+        <item>Astrofísico</item>
+        <item>Desenvolvedor de jogos</item>
+        <item>Botânico e florista</item>
+        <item>Mixologista</item>
+        <item>Curador de arte</item>
+        <item>Veterinário</item>
+        <item>Piloto de corrida</item>
+        <item>Antiquário</item>
+        <item>DJ e produtor musical</item>
+        <item>Professor universitário</item>
+        <item>Personal trainer</item>
+        <item>Sommelier e degustador</item>
+        <item>Arqueólogo</item>
+        <item>Caçador de recompensas</item>
+        <item>Herdeiro real</item>
+        <item>VTuber e streamer</item>
+        <item>Chocolatier</item>
+        <item>Estilista de moda</item>
+        <item>Astronauta</item>
+        <item>Biólogo marinho</item>
+        <item>Terapeuta clínico</item>
+        <item>Investigador paranormal</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Leitura</item>
-        <item>Jogos</item>
-        <item>Viagens</item>
-        <item>Culinária</item>
-        <item>Esportes</item>
-        <item>Música</item>
-        <item>Fotografia</item>
-        <item>Pintura</item>
-        <item>Jardinagem</item>
-        <item>Filmes</item>
-        <item>Anime</item>
-        <item>Cosplay</item>
-        <item>Dança</item>
-        <item>Canto</item>
-        <item>Escrita</item>
-        <item>Compras</item>
-        <item>Academia</item>
-        <item>Yoga</item>
-        <item>Meditação</item>
-        <item>Trilha</item>
-        <item>Acampamento</item>
-        <item>Pesca</item>
-        <item>Artesanato</item>
-        <item>Moda</item>
-        <item>Tecnologia</item>
-        <item>Astrologia</item>
-        <item>Horta</item>
-        <item>Voluntariado</item>
-        <item>Carros</item>
-        <item>História</item>
+        <item>Confeitaria e doces</item>
+        <item>Jogos de tabuleiro e RPG</item>
+        <item>Mergulho e snorkel</item>
+        <item>Karaokê e fliperamas</item>
+        <item>Skate e patins</item>
+        <item>Tarô e adivinhação</item>
+        <item>Cerâmica e olaria</item>
+        <item>Escalada e bouldering</item>
+        <item>Explorar cafés e gastronomia</item>
+        <item>Colecionar discos de vinil</item>
+        <item>Observação de estrelas e astronomia</item>
+        <item>Ver true crime e terror</item>
+        <item>Artes marciais e kickboxing</item>
+        <item>Cultivo de bonsais e plantas</item>
+        <item>Caligrafia e lettering</item>
+        <item>Garimpo vintage e brechó</item>
+        <item>Tiro com arco</item>
+        <item>Viagens de carro e van life</item>
+        <item>Modelagem 3D e escultura digital</item>
+        <item>Maratonar séries</item>
+        <item>Mixologia e coquetelaria</item>
+        <item>Pilotagem de drones e FPV</item>
+        <item>Pilates e alongamento</item>
+        <item>Passeios de moto</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Amigo</item>
-        <item>Melhor amigo</item>
-        <item>Namorada</item>
-        <item>Namorado</item>
-        <item>Esposa</item>
-        <item>Marido</item>
-        <item>Irmã</item>
-        <item>Irmão</item>
-        <item>Parceiro de viagem</item>
-        <item>Parceiro de aventuras</item>
-        <item>Mentor</item>
-        <item>Colega de trabalho</item>
-        <item>Chefe</item>
-        <item>Funcionário</item>
-        <item>Colega de classe</item>
-        <item>Guia</item>
-        <item>Aprendiz</item>
-        <item>Estranho</item>
-        <item>Colega de quarto</item>
-        <item>Vizinho</item>
-        <item>Ex-parceiro</item>
-        <item>Amigo de infância</item>
-        <item>Admirador secreto</item>
-        <item>Rival</item>
-        <item>Empregada</item>
-        <item>Mordomo</item>
-        <item>Anfitrião</item>
-        <item>Companheiro</item>
-        <item>Alma gêmea</item>
-        <item>Conhecido</item>
+        <item>Noivo(a)</item>
+        <item>Amor de escola</item>
+        <item>Guardião jurado</item>
+        <item>Cúmplice e parceiro</item>
+        <item>Inimigo que virou aliado</item>
+        <item>Paixão secreta</item>
+        <item>Tutor acadêmico</item>
+        <item>Assistente pessoal</item>
+        <item>Mestre / Soberano</item>
+        <item>Servo / Vassalo</item>
+        <item>Amigo por correspondência</item>
+        <item>Encontro do destino</item>
+        <item>Guarda-costas</item>
+        <item>Parceiro contratual</item>
+        <item>Confidente</item>
+        <item>Protegido / Aprendiz</item>
+        <item>Rival de infância</item>
+        <item>Primeiro amor</item>
+        <item>Patrono e benfeitor</item>
     </string-array>
     <string name="store_best_value">MELHOR VALOR</string>
     <string name="setting_privacy_not_configured">O URL da Política de Privacidade não está configurado</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Estranho</string>
     <string name="chat_subtitle_format">%1$s • Nível %2$d</string>
     <string name="chat_title_format">Conversa #%1$s</string>
+    <string name="chat_list_my_ai">Minha IA</string>
     <string name="first_day">Primeiro dia</string>
     <string name="feedback_reason_hint">Motivo (ex: travamento, lentidão, interface...)</string>
     <string name="feedback_description_hint">Detalhes ou sugestões...</string>

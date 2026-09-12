@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Ljubičasta</string>
     <string name="create_hair_red">Crvena</string>
     <string name="create_companion_name">Ime saputnika</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Ličnost &amp; društveno poreklo</string>
     <string name="create_personality">Ličnost</string>
     <string name="create_occupation">Zanimanje</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Gotovo</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Prijateljski</item>
-        <item>Brižan</item>
-        <item>Stidljiv</item>
-        <item>Otvoren</item>
-        <item>Misteriozan</item>
-        <item>Inteligentan</item>
-        <item>Duhovit</item>
-        <item>Privržen</item>
-        <item>Pustolovan</item>
-        <item>Samouveren</item>
-        <item>Energičan</item>
-        <item>Miran</item>
-        <item>Kreativan</item>
-        <item>Ambiciozan</item>
-        <item>Empatičan</item>
-        <item>Odan</item>
-        <item>Optimističan</item>
-        <item>Pesimističan</item>
-        <item>Sarkastičan</item>
-        <item>Tvrdoglav</item>
-        <item>Senzualan</item>
-        <item>Razigran</item>
-        <item>Dominantan</item>
-        <item>Pokoran</item>
-        <item>Duhovan</item>
-        <item>Praktičan</item>
-        <item>Sanjarski</item>
-        <item>Buntovan</item>
-        <item>Tradicionalan</item>
-        <item>Zaštitnički</item>
+        <item>Tsundere</item>
+        <item>Kuudere</item>
+        <item>Dandere</item>
+        <item>Yandere</item>
+        <item>Zagonetan</item>
+        <item>Šarmantan</item>
+        <item>Nestašan</item>
+        <item>Strastven</item>
+        <item>Zavodljiv</item>
+        <item>Hrabar</item>
+        <item>Melanholičan</item>
+        <item>Filozofski</item>
+        <item>Hirovita</item>
+        <item>Borben</item>
+        <item>Diplomatski</item>
+        <item>Staložen</item>
+        <item>Nespretno sladak</item>
+        <item>Raskošan</item>
+        <item>Iskren</item>
+        <item>Harizmatičan</item>
+        <item>Domišljat</item>
+        <item>Plemenit</item>
+        <item>Žestok</item>
+        <item>Ranjiv</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Dizajner</item>
-        <item>Konsultant</item>
-        <item>Lekar</item>
-        <item>Medicinska sestra</item>
-        <item>Inženjer</item>
-        <item>Umetnik</item>
-        <item>Muzičar</item>
-        <item>Kuvar</item>
-        <item>Policajac</item>
-        <item>Preduzetnik</item>
-        <item>Milijarder CEO</item>
-        <item>Model</item>
-        <item>Glumac</item>
-        <item>Pisac</item>
-        <item>Sportista</item>
-        <item>Naučnik</item>
-        <item>Programer</item>
-        <item>Advokat</item>
-        <item>Arhitekta</item>
-        <item>Modni dizajner</item>
-        <item>Fotograf</item>
-        <item>Novinar</item>
-        <item>Pilot</item>
-        <item>Stjuardesa</item>
-        <item>Barista</item>
-        <item>Bibliotekar</item>
-        <item>Frilenser</item>
-        <item>Influenser</item>
-        <item>Nezaposlen</item>
-        <item>Detektiv</item>
+        <item>Haker za sajber bezbednost</item>
+        <item>Tajni agent</item>
+        <item>Astrofizičar</item>
+        <item>Programer video igara</item>
+        <item>Botaničar i cvećar</item>
+        <item>Miksolog</item>
+        <item>Kustos umetnosti</item>
+        <item>Veterinar</item>
+        <item>Vozač trka</item>
+        <item>Trgovac antikvitetima</item>
+        <item>DJ i muzički producent</item>
+        <item>Univerzitetski profesor</item>
+        <item>Personalni trener</item>
+        <item>Somelijer</item>
+        <item>Arheolog</item>
+        <item>Lovac na ucenjene glave</item>
+        <item>Kraljevski naslednik</item>
+        <item>VTuber i strimer</item>
+        <item>Čokoladijer</item>
+        <item>Modni stilista</item>
+        <item>Astronaut</item>
+        <item>Morski biolog</item>
+        <item>Klinički terapeut</item>
+        <item>Istraživač paranormalnog</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Čitanje</item>
-        <item>Video igre</item>
-        <item>Putovanja</item>
-        <item>Kuvanje</item>
-        <item>Sport</item>
-        <item>Muzika</item>
-        <item>Fotografija</item>
-        <item>Slikanje</item>
-        <item>Baštovanstvo</item>
-        <item>Filmovi</item>
-        <item>Anime</item>
-        <item>Cosplay</item>
-        <item>Ples</item>
-        <item>Pevanje</item>
-        <item>Pisanje</item>
-        <item>Kupovina</item>
-        <item>Fitnes</item>
-        <item>Joga</item>
-        <item>Meditacija</item>
-        <item>Planinarenje</item>
-        <item>Kampovanje</item>
-        <item>Ribolov</item>
-        <item>Rukotvorine</item>
-        <item>Moda</item>
-        <item>Tehnologija</item>
-        <item>Astrologija</item>
-        <item>Gajenje biljaka</item>
-        <item>Volontiranje</item>
-        <item>Automobili</item>
-        <item>Istorija</item>
+        <item>Pravljenje poslastica i kolača</item>
+        <item>Društvene igre i RPG</item>
+        <item>Ronjenje i gnjuranje</item>
+        <item>Karaoke i arkadne igre</item>
+        <item>Skejtbording i roleri</item>
+        <item>Tarot i gatanje</item>
+        <item>Grnčarstvo i keramika</item>
+        <item>Slobodno penjanje i bolderisanje</item>
+        <item>Istraživanje kafića i hrane</item>
+        <item>Kolekcionarstvo vinila</item>
+        <item>Posmatranje zvezda i astronomija</item>
+        <item>Gledanje krimi serija i horora</item>
+        <item>Borilačke veštine i kik-boks</item>
+        <item>Uzgajanje bonsaija i sobnih biljaka</item>
+        <item>Kaligrafija i lepo pisanje</item>
+        <item>Lov na vintidž komade</item>
+        <item>Streličarstvo</item>
+        <item>Putovanja kolima i van life</item>
+        <item>Digitalno vajanje i 3D modelovanje</item>
+        <item>Maratonsko gledanje serija</item>
+        <item>Miksologija i pravljenje koktela</item>
+        <item>Upravljanje dronovima i FPV</item>
+        <item>Pilates i istezanje</item>
+        <item>Vožnja motorom</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Prijatelj</item>
-        <item>Najbolji prijatelj</item>
-        <item>Devojka</item>
-        <item>Dečko</item>
-        <item>Supruga</item>
-        <item>Suprug</item>
-        <item>Sestra</item>
-        <item>Brat</item>
-        <item>Partner na putovanju</item>
-        <item>Partner u avanturama</item>
-        <item>Mentor</item>
-        <item>Kolega</item>
-        <item>Šef</item>
-        <item>Zaposleni</item>
-        <item>Drug iz razreda</item>
-        <item>Vodič</item>
-        <item>Učenik</item>
-        <item>Stranac</item>
-        <item>Cimer</item>
-        <item>Komšija</item>
-        <item>Bivši partner</item>
-        <item>Prijatelj iz detinjstva</item>
-        <item>Tajni obožavalac</item>
-        <item>Rival</item>
-        <item>Služavka</item>
-        <item>Batler</item>
-        <item>Domaćin</item>
-        <item>Saputnik</item>
-        <item>Srodna duša</item>
-        <item>Poznanik</item>
+        <item>Verenik / Verenica</item>
+        <item>Srednjoškolska ljubav</item>
+        <item>Zakleti zaštitnik</item>
+        <item>Saučesnik i verni partner</item>
+        <item>Od neprijatelja do saveznika</item>
+        <item>Tajna simpatija</item>
+        <item>Privatni profesor i mentor</item>
+        <item>Lični asistent</item>
+        <item>Gospodar / Vladar</item>
+        <item>Verni sluga / Pratilac</item>
+        <item>Prijatelj za dopisivanje</item>
+        <item>Sudbinski susret</item>
+        <item>Lični telohranitelj</item>
+        <item>Partner po ugovoru</item>
+        <item>Osoba od poverenja</item>
+        <item>Mladi štićenik</item>
+        <item>Rival iz detinjstva</item>
+        <item>Prva ljubav</item>
+        <item>Pokrovitelj i dobrotvor</item>
     </string-array>
     <string name="store_best_value">NAJBOLJA VREDNOST</string>
     <string name="setting_privacy_not_configured">URL Politike privatnosti nije konfigurisan</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Stranac</string>
     <string name="chat_subtitle_format">%1$s • Nivo %2$d</string>
     <string name="chat_title_format">Ćaskanje #%1$s</string>
+    <string name="chat_list_my_ai">Moj AI</string>
     <string name="first_day">Prvi dan</string>
     <string name="feedback_reason_hint">Razlog (npr. rušenje, sporo, loš interfejs...)</string>
     <string name="feedback_description_hint">Detalji ili predlozi...</string>

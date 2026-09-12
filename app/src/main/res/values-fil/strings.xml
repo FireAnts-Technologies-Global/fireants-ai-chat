@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Lila</string>
     <string name="create_hair_red">Pula</string>
     <string name="create_companion_name">Pangalan ng Kasama</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Personalidad at Pinagmulang Panlipunan</string>
     <string name="create_personality">Personalidad</string>
     <string name="create_occupation">Trabaho</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Tapos na</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Palakaibigan</item>
-        <item>Maalalahanin</item>
-        <item>Mahiyain</item>
-        <item>Mabait makisama</item>
+        <item>Tsundere</item>
+        <item>Kuudere</item>
+        <item>Dandere</item>
+        <item>Yandere</item>
         <item>Mahiwaga</item>
-        <item>Matalino</item>
-        <item>Masiyahin</item>
-        <item>Malambing</item>
-        <item>Mahilig sa pakikipagsapalaran</item>
-        <item>May tiwala sa sarili</item>
-        <item>Puno ng enerhiya</item>
-        <item>Mapanatag</item>
-        <item>Malikhain</item>
-        <item>May ambisyon</item>
-        <item>May malasakit</item>
-        <item>Tapat</item>
-        <item>Optimistiko</item>
-        <item>Pesimistiko</item>
-        <item>Sarkastiko</item>
-        <item>Matigas ang ulo</item>
         <item>Kaakit-akit</item>
-        <item>Malaro</item>
-        <item>Nangingibabaw</item>
-        <item>Masunurin</item>
-        <item>Espiritwal</item>
-        <item>Praktikal</item>
-        <item>Mapanaginipin</item>
-        <item>Mapanghimagsik</item>
-        <item>Tradisyunal</item>
-        <item>Mapagprotekta</item>
+        <item>Pilyo</item>
+        <item>Madamdamin</item>
+        <item>Mapanukso</item>
+        <item>Matapang</item>
+        <item>Malungkot at malalim</item>
+        <item>Pilosopo</item>
+        <item>Kakaiba at mapangarapin</item>
+        <item>Palaban</item>
+        <item>Diplomatiko</item>
+        <item>Kalmado at matatag</item>
+        <item>Lampa pero cute</item>
+        <item>Maringal</item>
+        <item>Tapat</item>
+        <item>Karismatiko</item>
+        <item>Matalas ang isip</item>
+        <item>Marangal</item>
+        <item>Mabangis</item>
+        <item>Sensitibo</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Disenyador</item>
-        <item>Konsultant</item>
-        <item>Doktor</item>
-        <item>Nars</item>
-        <item>Inhinyero</item>
-        <item>Artista</item>
-        <item>Musikero</item>
-        <item>Kusinero</item>
-        <item>Pulis</item>
-        <item>Negosyante</item>
-        <item>Bilyonaryong CEO</item>
-        <item>Modelo</item>
-        <item>Aktor</item>
-        <item>Manunulat</item>
-        <item>Atleta</item>
-        <item>Siyentipiko</item>
-        <item>Programmer</item>
-        <item>Abogado</item>
-        <item>Arkitekto</item>
-        <item>Disenyador ng damit</item>
-        <item>Litratista</item>
-        <item>Mamamahayag</item>
-        <item>Piloto</item>
-        <item>Flight Attendant</item>
-        <item>Barista</item>
-        <item>Librarian</item>
-        <item>Freelancer</item>
-        <item>Influencer</item>
-        <item>Walang trabaho</item>
-        <item>Detektib</item>
+        <item>Hacker sa cybersecurity</item>
+        <item>Lihim na ahente</item>
+        <item>Astrophysicist</item>
+        <item>Tagalikha ng laro</item>
+        <item>Botanist at florist</item>
+        <item>Mixologist</item>
+        <item>Curator ng sining</item>
+        <item>Beterinaryo</item>
+        <item>Karerista ng kotse</item>
+        <item>Negosyante ng antigo</item>
+        <item>DJ at producer ng musika</item>
+        <item>Propesor sa unibersidad</item>
+        <item>Personal trainer</item>
+        <item>Sommelier at tagatikim ng alak</item>
+        <item>Arkeologo</item>
+        <item>Bounty hunter</item>
+        <item>Tagapagmana ng kaharian</item>
+        <item>VTuber at streamer</item>
+        <item>Chocolatier</item>
+        <item>Stylist sa moda</item>
+        <item>Astronaut</item>
+        <item>Marine biologist</item>
+        <item>Klinikal na therapist</item>
+        <item>Imbestigador ng kababalaghan</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Pagbabasa</item>
-        <item>Paglalaro ng video games</item>
-        <item>Paglalakbay</item>
-        <item>Pagluluto</item>
-        <item>Palakasan</item>
-        <item>Musika</item>
-        <item>Potograpiya</item>
-        <item>Pagpipinta</item>
-        <item>Paghahalaman</item>
-        <item>Pelikula</item>
-        <item>Anime</item>
-        <item>Cosplay</item>
-        <item>Pagsasayaw</item>
-        <item>Pag-awit</item>
-        <item>Pagsusulat</item>
-        <item>Pamimili</item>
-        <item>Fitness</item>
-        <item>Yoga</item>
-        <item>Meditasyon</item>
-        <item>Hiking</item>
-        <item>Camping</item>
-        <item>Pangingisda</item>
-        <item>Crafting</item>
-        <item>Moda</item>
-        <item>Teknolohiya</item>
-        <item>Astrolohiya</item>
-        <item>Pangangalaga ng halaman</item>
-        <item>Pagboboluntaryo</item>
-        <item>Mga Sasakyan</item>
-        <item>Kasaysayan</item>
+        <item>Pagbe-bake ng matatamis</item>
+        <item>Board games at TTRPG</item>
+        <item>Scuba diving at snorkeling</item>
+        <item>Karaoke at arcade</item>
+        <item>Skateboarding at rollerblading</item>
+        <item>Tarot at paghula</item>
+        <item>Paggawa ng palayok at seramika</item>
+        <item>Pag-akyat sa bato at bouldering</item>
+        <item>Pagkape-kape at pagtikim ng pagkain</item>
+        <item>Koleksyon ng vinyl records</item>
+        <item>Pagninilay sa mga bituin at astronomiya</item>
+        <item>Panonood ng true crime at horror</item>
+        <item>Martial arts at kickboxing</item>
+        <item>Pag-aalaga ng bonsai at halaman</item>
+        <item>Kaligrapiya at magandang pagsulat</item>
+        <item>Paghahanap ng vintage at ukay-ukay</item>
+        <item>Pamamana</item>
+        <item>Road trip at van life</item>
+        <item>Digital sculpting at 3D modeling</item>
+        <item>Pagbababad sa panonood ng serye</item>
+        <item>Paghahalo ng cocktail</item>
+        <item>Pagpapalipad ng drone at FPV</item>
+        <item>Pilates at stretching</item>
+        <item>Pagmomotor</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Kaibigan</item>
-        <item>Matalik na kaibigan</item>
-        <item>Kasintahan (Babae)</item>
-        <item>Kasintahan (Lalaki)</item>
-        <item>Asawa (Babae)</item>
-        <item>Asawa (Lalaki)</item>
-        <item>Kapatid na babae</item>
-        <item>Kapatid na lalaki</item>
-        <item>Kasama sa paglalakbay</item>
-        <item>Kasosyo sa pakikipagsapalaran</item>
-        <item>Tagapayo</item>
-        <item>Katrabaho</item>
-        <item>Boss</item>
-        <item>Empleyado</item>
-        <item>Kaklase</item>
-        <item>Gabay</item>
-        <item>Mag-aaral</item>
-        <item>Estranghero</item>
-        <item>Kasama sa kwarto</item>
-        <item>Kapitbahay</item>
-        <item>Dating kasintahan</item>
-        <item>Kaibigan mula pagkabata</item>
-        <item>Lihim na tagahanga</item>
-        <item>Karibal</item>
-        <item>Kasambahay</item>
-        <item>Mayordomo</item>
-        <item>Host</item>
-        <item>Kasama</item>
-        <item>Soulmate</item>
-        <item>Kakilala</item>
+        <item>Kasintahan / Fiance</item>
+        <item>Pag-ibig sa hayskul</item>
+        <item>Sinumpaang tagapagtanggol</item>
+        <item>Kasamang subok sa lahat</item>
+        <item>Kaaway na naging kakampi</item>
+        <item>Lihim na minamahal</item>
+        <item>Guro at tutor</item>
+        <item>Personal na katulong</item>
+        <item>Panginoon / Pinuno</item>
+        <item>Tapat na tagasunod</item>
+        <item>Kasamang sumusulat (Pen pal)</item>
+        <item>Tadhana ang nagtagpo</item>
+        <item>Personal na bantay (Bodyguard)</item>
+        <item>Kasamang may kasunduan</item>
+        <item>Pinagkakatiwalaang kaibigan</item>
+        <item>Tinatanging mag-aaral</item>
+        <item>Karibal mula pagkabata</item>
+        <item>Unang pag-ibig</item>
+        <item>Tagatangkilik at tagapagpala</item>
     </string-array>
     <string name="store_best_value">PINAKAMAHUSAY NA HALAGA</string>
     <string name="setting_privacy_not_configured">Hindi pa na-configure ang URL ng Patakaran sa Privacy</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Estranghero</string>
     <string name="chat_subtitle_format">%1$s • Antas %2$d</string>
     <string name="chat_title_format">Chat #%1$s</string>
+    <string name="chat_list_my_ai">Aking AI</string>
     <string name="first_day">Unang Araw</string>
     <string name="feedback_reason_hint">Dahilan (hal. nag-crash, mabagal, hindi magandang UI...)</string>
     <string name="feedback_description_hint">Mga detalye o mungkahi...</string>

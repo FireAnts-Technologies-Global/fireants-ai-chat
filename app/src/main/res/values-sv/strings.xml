@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Lila</string>
     <string name="create_hair_red">Rött</string>
     <string name="create_companion_name">Följeslagarens namn</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Personlighet &amp; social bakgrund</string>
     <string name="create_personality">Personlighet</string>
     <string name="create_occupation">Yrke</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Klar</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Vänlig</item>
-        <item>Omtänksam</item>
-        <item>Blyg</item>
-        <item>Utåtriktad</item>
-        <item>Mystisk</item>
-        <item>Intelligent</item>
-        <item>Humoristisk</item>
-        <item>Kärleksfull</item>
-        <item>Äventyrlig</item>
-        <item>Självsäker</item>
-        <item>Energisk</item>
-        <item>Lugn</item>
-        <item>Kreativ</item>
-        <item>Ambitiös</item>
-        <item>Empatisk</item>
-        <item>Lojal</item>
-        <item>Optimistisk</item>
-        <item>Pessimistisk</item>
-        <item>Sarkastisk</item>
-        <item>Envis</item>
-        <item>Sensuell</item>
-        <item>Lekfull</item>
-        <item>Dominant</item>
-        <item>Undergiven</item>
-        <item>Andlig</item>
-        <item>Praktisk</item>
-        <item>Drömmande</item>
-        <item>Rebellisk</item>
-        <item>Traditionell</item>
-        <item>Beskyddande</item>
+        <item>Tsundere</item>
+        <item>Kuudere</item>
+        <item>Dandere</item>
+        <item>Yandere</item>
+        <item>Gåtfull</item>
+        <item>Charmig</item>
+        <item>Busig</item>
+        <item>Passionerad</item>
+        <item>Förförisk</item>
+        <item>Djärv</item>
+        <item>Melankolisk</item>
+        <item>Filosofisk</item>
+        <item>Nyckfull</item>
+        <item>Kaxig</item>
+        <item>Diplomatisk</item>
+        <item>Stoisk</item>
+        <item>Klumpigt söt</item>
+        <item>Flamboyant</item>
+        <item>Uppriktig</item>
+        <item>Karismatisk</item>
+        <item>Kvick</item>
+        <item>Ädel</item>
+        <item>Häftig</item>
+        <item>Sårbar</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Designer</item>
-        <item>Konsult</item>
-        <item>Läkare</item>
-        <item>Sjuksköterska</item>
-        <item>Ingenjör</item>
-        <item>Konstnär</item>
-        <item>Musiker</item>
-        <item>Kock</item>
-        <item>Polis</item>
-        <item>Entreprenör</item>
-        <item>Miljardär-VD</item>
-        <item>Modell</item>
-        <item>Skådespelare</item>
-        <item>Författare</item>
-        <item>Idrottare</item>
-        <item>Forskare</item>
-        <item>Programmerare</item>
-        <item>Advokat</item>
-        <item>Arkitekt</item>
-        <item>Modedesigner</item>
-        <item>Fotograf</item>
-        <item>Journalist</item>
-        <item>Pilot</item>
-        <item>Flygvärdinna</item>
-        <item>Barista</item>
-        <item>Bibliotekarie</item>
-        <item>Frilansare</item>
-        <item>Influencer</item>
-        <item>Arbetslös</item>
-        <item>Detektiv</item>
+        <item>Cybersäkerhetshackare</item>
+        <item>Hemlig agent</item>
+        <item>Astrofysiker</item>
+        <item>Spelutvecklare</item>
+        <item>Botaniker &amp; florist</item>
+        <item>Mixolog</item>
+        <item>Konstkurator</item>
+        <item>Veterinär</item>
+        <item>Racerförare</item>
+        <item>Antikhandlare</item>
+        <item>DJ &amp; musikproducent</item>
+        <item>Universitetsprofessor</item>
+        <item>Personlig tränare</item>
+        <item>Sommelier &amp; vinprovare</item>
+        <item>Arkeolog</item>
+        <item>Prisjägare</item>
+        <item>Kunglig tronarvinge</item>
+        <item>VTuber &amp; streamer</item>
+        <item>Chocolatier</item>
+        <item>Modestylist</item>
+        <item>Astronaut</item>
+        <item>Marinbiolog</item>
+        <item>Klinisk terapeut</item>
+        <item>Paranormal utredare</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Läsa</item>
-        <item>Spela</item>
-        <item>Resa</item>
-        <item>Laga mat</item>
-        <item>Sport</item>
-        <item>Musik</item>
-        <item>Fotografering</item>
-        <item>Måla</item>
-        <item>Trädgårdsskötsel</item>
-        <item>Film</item>
-        <item>Anime</item>
-        <item>Cosplay</item>
-        <item>Dansa</item>
-        <item>Sjunga</item>
-        <item>Skriva</item>
-        <item>Shoppa</item>
-        <item>Träning</item>
-        <item>Yoga</item>
-        <item>Meditation</item>
-        <item>Vandring</item>
-        <item>Camping</item>
-        <item>Fiska</item>
-        <item>Hantverk</item>
-        <item>Mode</item>
-        <item>Teknik</item>
-        <item>Astrologi</item>
-        <item>Odling</item>
-        <item>Volontärarbete</item>
-        <item>Bilar</item>
-        <item>Historia</item>
+        <item>Baka sötsaker &amp; bakverk</item>
+        <item>Brädspel &amp; rollspel</item>
+        <item>Dykning &amp; snorkling</item>
+        <item>Karaoke &amp; arkadhallar</item>
+        <item>Skateboard &amp; inlines</item>
+        <item>Tarot &amp; spådom</item>
+        <item>Krukmakeri &amp; keramik</item>
+        <item>Klippklättring &amp; bouldering</item>
+        <item>Kaférundor &amp; matupplevelser</item>
+        <item>Samla vinylskivor</item>
+        <item>Stjärnskådning &amp; astronomi</item>
+        <item>True crime &amp; skräck</item>
+        <item>Kampsport &amp; kickboxning</item>
+        <item>Bonsai &amp; krukväxter</item>
+        <item>Kalligrafi &amp; textning</item>
+        <item>Vintagejakt &amp; second hand</item>
+        <item>Bågskytte</item>
+        <item>Roadtrips &amp; vanlife</item>
+        <item>Digital skulptering &amp; 3D-modellering</item>
+        <item>Seriemaraton</item>
+        <item>Mixologi &amp; drinkblandning</item>
+        <item>Drönarflygning &amp; FPV</item>
+        <item>Pilates &amp; stretching</item>
+        <item>Motorcykelkörning</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Vän</item>
-        <item>Bästa vän</item>
-        <item>Flickvän</item>
-        <item>Pojkvän</item>
-        <item>Fru</item>
-        <item>Make</item>
-        <item>Syster</item>
-        <item>Bror</item>
-        <item>Resekompis</item>
-        <item>Äventyrspartner</item>
-        <item>Mentor</item>
-        <item>Kollega</item>
-        <item>Chef</item>
-        <item>Anställd</item>
-        <item>Klasskamrat</item>
-        <item>Guide</item>
-        <item>Elev</item>
-        <item>Främling</item>
-        <item>Rumskompis</item>
-        <item>Granne</item>
-        <item>Ex-partner</item>
-        <item>Barndomsvän</item>
-        <item>Hemlig beundrare</item>
-        <item>Rival</item>
-        <item>Hembiträde</item>
-        <item>Betjänt</item>
-        <item>Värd</item>
-        <item>Följeslagare</item>
-        <item>Själsfrände</item>
-        <item>Bekant</item>
+        <item>Fästman / Fästmö</item>
+        <item>Gymnasiekärlek</item>
+        <item>Svuren beskyddare</item>
+        <item>Kumpan &amp; medbrottsling</item>
+        <item>Fiende som blev allierad</item>
+        <item>Hemlig förälskelse</item>
+        <item>Privatlärare</item>
+        <item>Personlig assistent</item>
+        <item>Härskare / Mästare</item>
+        <item>Tjänare / Följeslagare</item>
+        <item>Brevvän</item>
+        <item>Ödesmättat möte</item>
+        <item>Livvakt</item>
+        <item>Avtalspartner</item>
+        <item>Förtrogen vän</item>
+        <item>Lärling / Skyddsling</item>
+        <item>Barndomsrival</item>
+        <item>Första kärleken</item>
+        <item>Gynnare &amp; välgörare</item>
     </string-array>
     <string name="store_best_value">BÄSTA VÄRDE</string>
     <string name="setting_privacy_not_configured">URL för integritetspolicy har inte konfigurerats</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Främling</string>
     <string name="chat_subtitle_format">%1$s • Nivå %2$d</string>
     <string name="chat_title_format">Chatt #%1$s</string>
+    <string name="chat_list_my_ai">Min AI</string>
     <string name="first_day">Första dagen</string>
     <string name="feedback_reason_hint">Anledning (t.ex. krasch, långsam, dåligt UI...)</string>
     <string name="feedback_description_hint">Detaljer eller förslag...</string>

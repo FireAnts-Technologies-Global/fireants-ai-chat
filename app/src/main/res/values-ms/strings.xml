@@ -232,7 +232,7 @@
     <string name="create_hair_purple">Ungu</string>
     <string name="create_hair_red">Merah</string>
     <string name="create_companion_name">Nama Teman</string>
-    <string name="create_default_name">Alex Thorne</string>
+    <string name="create_default_name">Aria Sterling</string>
     <string name="create_personality_social_background">Personaliti &amp; Latar Belakang Sosial</string>
     <string name="create_personality">Personaliti</string>
     <string name="create_occupation">Pekerjaan</string>
@@ -242,135 +242,109 @@
     <string name="options_done">Selesai</string>
     <string-array name="create_personality_options">
         <item>@string/option_none</item>
-        <item>Mesra</item>
-        <item>Prihatin</item>
-        <item>Pemalu</item>
-        <item>Ramah</item>
-        <item>Misteri</item>
-        <item>Pintar</item>
-        <item>Lucu</item>
-        <item>Penyayang</item>
-        <item>Suka mengembara</item>
-        <item>Yakin</item>
-        <item>Bertenaga</item>
-        <item>Tenang</item>
-        <item>Kreatif</item>
-        <item>Beraspirasi tinggi</item>
-        <item>Empatik</item>
-        <item>Setia</item>
-        <item>Optimis</item>
-        <item>Pesimis</item>
-        <item>Sarkastik</item>
-        <item>Degil</item>
-        <item>Sensual</item>
-        <item>Nakal</item>
-        <item>Dominan</item>
-        <item>Patuh</item>
-        <item>Spiritual</item>
-        <item>Praktikal</item>
-        <item>Pemimpi</item>
-        <item>Pemberontak</item>
-        <item>Tradisional</item>
-        <item>Pelindung</item>
+        <item>Tsundere</item>
+        <item>Kuudere</item>
+        <item>Dandere</item>
+        <item>Yandere</item>
+        <item>Penuh misteri</item>
+        <item>Menawan</item>
+        <item>Nakal &amp; mengusik</item>
+        <item>Penuh bersemangat</item>
+        <item>Menggoda</item>
+        <item>Berani</item>
+        <item>Melankolik</item>
+        <item>Falsafah</item>
+        <item>Penuh khayalan</item>
+        <item>Lincah &amp; tegas</item>
+        <item>Diplomatik</item>
+        <item>Tabah &amp; tenang</item>
+        <item>Cuai tetapi comel</item>
+        <item>Gah &amp; menyerlah</item>
+        <item>Ikhlas</item>
+        <item>Karismatik</item>
+        <item>Pintar &amp; jenaka</item>
+        <item>Mulia &amp; anggun</item>
+        <item>Garang &amp; berani</item>
+        <item>Rapuh &amp; sensitif</item>
     </string-array>
+
     <string-array name="create_occupation_options">
         <item>@string/option_none</item>
-        <item>Pereka</item>
-        <item>Perunding</item>
-        <item>Doktor</item>
-        <item>Jururawat</item>
-        <item>Jurutera</item>
-        <item>Artis</item>
-        <item>Pemuzik</item>
-        <item>Tukang masak</item>
-        <item>Pegawai Polis</item>
-        <item>Usahawan</item>
-        <item>CEO Bilionair</item>
-        <item>Model</item>
-        <item>Pelakon</item>
-        <item>Penulis</item>
-        <item>Atlet</item>
-        <item>Saintis</item>
-        <item>Pengaturcara</item>
-        <item>Peguam</item>
-        <item>Arkitek</item>
-        <item>Pereka Fesyen</item>
-        <item>Jurugambar</item>
-        <item>Wartawan</item>
-        <item>Juruterbang</item>
-        <item>Pramugari</item>
-        <item>Barista</item>
-        <item>Pustakawan</item>
-        <item>Pekerja bebas</item>
-        <item>Pempengaruh</item>
-        <item>Menganggur</item>
-        <item>Detektif</item>
+        <item>Penggodam keselamatan siber</item>
+        <item>Ejen rahsia</item>
+        <item>Ahli astrofizik</item>
+        <item>Pembangun permainan video</item>
+        <item>Ahli botani &amp; penggubah bunga</item>
+        <item>Pakar minuman (Mixologist)</item>
+        <item>Kurator seni</item>
+        <item>Doktor veterinar</item>
+        <item>Pemandu kereta lumba</item>
+        <item>Peniaga barang antik</item>
+        <item>DJ &amp; penerbit muzik</item>
+        <item>Profesor universiti</item>
+        <item>Jurulatih kecergasan peribadi</item>
+        <item>Sommelier wain</item>
+        <item>Ahli arkeologi</item>
+        <item>Pemburu ganjaran</item>
+        <item>Waris diraja</item>
+        <item>VTuber &amp; penstrim</item>
+        <item>Pembuat coklat</item>
+        <item>Penggaya fesyen</item>
+        <item>Angkasawan</item>
+        <item>Ahli biologi marin</item>
+        <item>Ahli terapi klinikal</item>
+        <item>Penyiasat paranormal</item>
     </string-array>
+
     <string-array name="create_hobbies_options">
         <item>@string/option_none</item>
-        <item>Membaca</item>
-        <item>Bermain permainan video</item>
-        <item>Melancong</item>
-        <item>Memasak</item>
-        <item>Sukan</item>
-        <item>Muzik</item>
-        <item>Fotografi</item>
-        <item>Melukis</item>
-        <item>Berkebun</item>
-        <item>Menonton filem</item>
-        <item>Anime</item>
-        <item>Cosplay</item>
-        <item>Menari</item>
-        <item>Menyanyi</item>
-        <item>Menulis</item>
-        <item>Membeli-belah</item>
-        <item>Kecergasan</item>
-        <item>Yoga</item>
-        <item>Meditasi</item>
-        <item>Kembara jalan kaki</item>
-        <item>Berkhemah</item>
-        <item>Memancing</item>
-        <item>Kraftangan</item>
-        <item>Fesyen</item>
-        <item>Teknologi</item>
-        <item>Astrologi</item>
-        <item>Menanam pokok</item>
-        <item>Sukarelawan</item>
-        <item>Kereta</item>
-        <item>Sejarah</item>
+        <item>Membuat kek &amp; pastri</item>
+        <item>Permainan papan &amp; TTRPG</item>
+        <item>Menyelam skuba &amp; snorkeling</item>
+        <item>Karaoke &amp; arked</item>
+        <item>Papan selaju &amp; kasut roda</item>
+        <item>Tarot &amp; ramalan</item>
+        <item>Tembikar &amp; seramik</item>
+        <item>Memanjat batu &amp; bouldering</item>
+        <item>Melawat kafe &amp; mencuba makanan</item>
+        <item>Mengumpul piring hitam</item>
+        <item>Melihat bintang &amp; astronomi</item>
+        <item>Menonton kisah jenayah &amp; seram</item>
+        <item>Seni mempertahankan diri &amp; kickboxing</item>
+        <item>Penanaman bonsai &amp; tumbuhan</item>
+        <item>Kaligrafi &amp; seni tulisan</item>
+        <item>Membeli-belah vintaj &amp; terpakai</item>
+        <item>Memanah</item>
+        <item>Kembara jalan raya &amp; van life</item>
+        <item>Arca digital &amp; pemodelan 3D</item>
+        <item>Menonton drama bersiri maraton</item>
+        <item>Seni bancuhan koktel</item>
+        <item>Menerbangkan dron &amp; FPV</item>
+        <item>Pilates &amp; regangan</item>
+        <item>Menunggang motosikal</item>
     </string-array>
+
     <string-array name="create_relationships_options">
         <item>@string/option_none</item>
-        <item>Kawan</item>
-        <item>Sahabat karib</item>
-        <item>Teman wanita</item>
-        <item>Teman lelaki</item>
-        <item>Isteri</item>
-        <item>Suami</item>
-        <item>Kakak/Adik perempuan</item>
-        <item>Abang/Adik lelaki</item>
-        <item>Rakan pengembaraan</item>
-        <item>Rakan kembara</item>
-        <item>Mentor</item>
-        <item>Rakan sekerja</item>
-        <item>Majikan</item>
-        <item>Pekerja</item>
-        <item>Rakan sekelas</item>
-        <item>Pemandu</item>
-        <item>Pelajar</item>
-        <item>Orang asing</item>
-        <item>Rakan sebilik</item>
-        <item>Jiran</item>
-        <item>Bekas kekasih</item>
-        <item>Kawan zaman kanak-kanak</item>
+        <item>Tunang</item>
+        <item>Kekasih zaman sekolah</item>
+        <item>Penjaga sumpah setia</item>
+        <item>Rakan subahat / Rakan kongsi</item>
+        <item>Bekas musuh menjadi sekutu</item>
         <item>Peminat rahsia</item>
-        <item>Pesaing</item>
-        <item>Pembantu rumah</item>
-        <item>Butler</item>
-        <item>Hos</item>
-        <item>Pendamping</item>
-        <item>Pasangan jiwa</item>
-        <item>Kenalan</item>
+        <item>Tutor akademik</item>
+        <item>Pembantu peribadi</item>
+        <item>Tuan / Pemerintah</item>
+        <item>Hamba / Pengikut setia</item>
+        <item>Sahabat pena</item>
+        <item>Pertemuan takdir</item>
+        <item>Pengawal peribadi</item>
+        <item>Rakan kongsi kontrak</item>
+        <item>Sahabat karib / Teman luahan</item>
+        <item>Anak murid kesayangan</item>
+        <item>Rival sejak kecil</item>
+        <item>Cinta pertama</item>
+        <item>Penaung &amp; dermawan</item>
     </string-array>
     <string name="store_best_value">NILAI TERBAIK</string>
     <string name="setting_privacy_not_configured">Pautan Dasar Privasi belum dikonfigurasikan</string>
@@ -388,6 +362,7 @@
     <string name="chat_relationship_stranger">Orang asing</string>
     <string name="chat_subtitle_format">%1$s • Tahap %2$d</string>
     <string name="chat_title_format">Sembang #%1$s</string>
+    <string name="chat_list_my_ai">AI Saya</string>
     <string name="first_day">Hari Pertama</string>
     <string name="feedback_reason_hint">Sebab (cth: ranap, lambat, UI buruk...)</string>
     <string name="feedback_description_hint">Butiran atau cadangan...</string>

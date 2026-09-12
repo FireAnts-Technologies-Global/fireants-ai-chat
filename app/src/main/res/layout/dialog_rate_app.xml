@@ -93,7 +93,7 @@
                     android:paddingHorizontal="@dimen/_12sdp"
                     android:paddingVertical="@dimen/_10sdp"
                     android:singleLine="true"
-                    android:textColor="#FFFDFDFD"
+                    android:textColor="@color/black"
                     android:textColorHint="#FF6F6794"
                     android:textSize="@dimen/_12ssp" />
 
@@ -110,7 +110,7 @@
                     android:minLines="3"
                     android:paddingHorizontal="@dimen/_12sdp"
                     android:paddingVertical="@dimen/_10sdp"
-                    android:textColor="#FFFDFDFD"
+                    android:textColor="@color/black"
                     android:textColorHint="#FF6F6794"
                     android:textSize="@dimen/_12ssp" />
             </LinearLayout>

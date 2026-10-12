@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import com.fireants.adsdk.ads.FireAntsAdSdk
-import com.fireants.adsdk.billing.AppPurchase
+import com.anrstudio.ads.ads.ANRAdSdk
+import com.anrstudio.ads.billing.AppPurchase
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ads.AdRemoteConfig
 import com.pegas.yuki.virtual.chat.ads.AdsManager
@@ -52,7 +52,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 return@postDelayed
             }
 
-            if (FireAntsAdSdk.getInstance()
+            if (ANRAdSdk.getInstance()
                     .shouldDisplayNativeOnboardingFull1
             ) {
                 AdsManager.loadNativeOnboardingFullAfterPage1(
@@ -62,7 +62,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
             }
 
 
-            if (FireAntsAdSdk.getInstance()
+            if (ANRAdSdk.getInstance()
                     .shouldDisplayNativeOnboardingFull2
             ) {
                 AdsManager.loadNativeOnboardingFullAfterPage3(
@@ -188,10 +188,10 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 else AdRemoteConfig.native_onboarding_fullscreen23
         }
         val shouldDisplay = when (placement) {
-            NativeFullPlacement.AFTER_PAGE_1 -> FireAntsAdSdk.getInstance()
+            NativeFullPlacement.AFTER_PAGE_1 -> ANRAdSdk.getInstance()
                 .shouldDisplayNativeOnboardingFull1
 
-            NativeFullPlacement.AFTER_PAGE_2 -> FireAntsAdSdk.getInstance()
+            NativeFullPlacement.AFTER_PAGE_2 -> ANRAdSdk.getInstance()
                 .shouldDisplayNativeOnboardingFull2
         }
         val isPurchased = AppPurchase.getInstance().isPurchased(this)

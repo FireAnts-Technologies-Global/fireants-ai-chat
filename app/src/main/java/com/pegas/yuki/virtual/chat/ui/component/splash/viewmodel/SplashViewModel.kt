@@ -2,7 +2,7 @@ package com.pegas.yuki.virtual.chat.ui.component.splash.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.fireants.adsdk.billing.AppPurchase
+import com.anrstudio.ads.billing.AppPurchase
 import com.pegas.yuki.virtual.chat.domain.model.common.AppResult
 import com.pegas.yuki.virtual.chat.domain.model.common.PublicError
 import com.pegas.yuki.virtual.chat.domain.model.common.PublicMessageKey

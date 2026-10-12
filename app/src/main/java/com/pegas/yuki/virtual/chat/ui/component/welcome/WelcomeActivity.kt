@@ -1,7 +1,7 @@
 package com.pegas.yuki.virtual.chat.ui.component.welcome
 
+import com.anrstudio.ads.ads.wrapper.ApNativeAd
 import com.bumptech.glide.Glide
-import com.fireants.adsdk.ads.wrapper.ApNativeAd
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ads.AdsManager
 import com.pegas.yuki.virtual.chat.ads.populateNativeAdView

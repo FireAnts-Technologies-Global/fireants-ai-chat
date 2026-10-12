@@ -2,7 +2,7 @@ package com.pegas.yuki.virtual.chat.ui.reward
 
 import android.app.Activity
 import android.content.Context
-import com.fireants.adsdk.billing.AppPurchase
+import com.anrstudio.ads.billing.AppPurchase
 import com.pegas.yuki.virtual.chat.ads.AdRemoteConfig
 import com.pegas.yuki.virtual.chat.ads.AdsManager
 import com.pegas.yuki.virtual.chat.ads.reward_addcoin

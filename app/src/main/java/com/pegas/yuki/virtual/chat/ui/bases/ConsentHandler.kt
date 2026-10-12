@@ -3,8 +3,8 @@ package com.pegas.yuki.virtual.chat.ui.bases
 import android.app.Activity
 import android.os.Handler
 import android.os.Looper
-import com.fireants.consent.FireAntsAdConsentCallback
-import com.fireants.consent.FireAntsAdConsentManager
+import com.anrstudio.consent.ANRConsentCallback
+import com.anrstudio.consent.ANRConsentManager
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.FormError
 import com.pegas.yuki.virtual.chat.BuildConfig
@@ -20,7 +20,7 @@ class ConsentHandler(
     private val onConsentFlowCompleted: (canPersonalized: Boolean) -> Unit,
     private val onConsentSuccess: ((canPersonalized: Boolean) -> Unit)? = null,
     private val onNotUsingAdConsent: (() -> Unit)? = null
-) : FireAntsAdConsentCallback {
+) : ANRConsentCallback {
     private var canPersonalized = true
     private var consentCallbackHandled = false
     private val consentTimeoutHandler = Handler(Looper.getMainLooper())
@@ -39,7 +39,7 @@ class ConsentHandler(
             consentTimeoutRunnable,
             AppConstants.DEFAULT_TIME_OUT_GDPR
         )
-        FireAntsAdConsentManager.loadAndShowConsent(true, this)
+        ANRConsentManager.loadAndShowConsent(true, this)
     }
 
     fun clear() {
@@ -100,7 +100,7 @@ class ConsentHandler(
             logEvent(getAgreeConsentEvent(), null)
             appSharedPref.isConfirmConsent = true
         } else {
-            FireAntsAdConsentManager.resetConsentDialog()
+            ANRConsentManager.resetConsentDialog()
             logEvent(getRefuseConsentEvent(), null)
         }
         onConsentSuccess?.invoke(canPersonalized) ?: onConsentFlowCompleted(canPersonalized)

@@ -1,7 +1,6 @@
 package com.pegas.yuki.virtual.chat.ui.component.language
 
-import com.fireants.adsdk.ads.wrapper.ApNativeAd
-import com.fireants.devconfig.utils.setOnAdminAdToggleListener
+import com.anrstudio.ads.ads.wrapper.ApNativeAd
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ads.AdsManager
 import com.pegas.yuki.virtual.chat.ads.AdsManager.loadNativeLanguageClick

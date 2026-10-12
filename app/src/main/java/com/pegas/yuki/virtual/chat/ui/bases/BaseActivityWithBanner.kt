@@ -5,7 +5,7 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.FrameLayout
 import androidx.databinding.ViewDataBinding
-import com.fireants.adsdk.billing.AppPurchase
+import com.anrstudio.ads.billing.AppPurchase
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ads.AdUnitConfig
 import com.pegas.yuki.virtual.chat.ads.AdsManager

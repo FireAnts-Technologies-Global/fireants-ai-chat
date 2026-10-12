@@ -76,8 +76,9 @@ ext {
     firebase_crashlytics_gradle_version = '3.0.5'
 
     // Ads & Billing
-    fireants_ads_sdk = '1.0.9'
-    fireants_consent = '1.0.0'
+    anr_ads_sdk = '1.1.6'
+    anr_consent = '1.0.7'
+    anr_config = '1.0.7'
     play_review_ktx_version = '2.0.2'
     play_services_ads_version = '24.7.0'
     billing_version = '8.0.0'

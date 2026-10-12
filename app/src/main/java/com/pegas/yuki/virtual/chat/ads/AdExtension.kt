@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import androidx.core.view.updateLayoutParams
+import com.anrstudio.ads.admob.Admob
+import com.anrstudio.ads.ads.wrapper.ApNativeAd
 import com.facebook.shimmer.ShimmerFrameLayout
-import com.fireants.adsdk.admob.Admob
-import com.fireants.adsdk.ads.wrapper.ApNativeAd
 import com.google.android.gms.ads.nativead.NativeAdView
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ui.bases.ext.dpToPx

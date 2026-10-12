@@ -8,7 +8,7 @@ import android.os.Handler
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
-import com.fireants.adsdk.admob.AppOpenManager
+import com.anrstudio.ads.admob.AppOpenManager
 import com.pegas.yuki.virtual.chat.BuildConfig
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.app.AppConstants

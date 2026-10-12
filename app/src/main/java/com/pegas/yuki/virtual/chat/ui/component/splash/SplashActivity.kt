@@ -3,10 +3,10 @@ package com.pegas.yuki.virtual.chat.ui.component.splash
 import android.annotation.SuppressLint
 import android.os.CountDownTimer
 import androidx.activity.viewModels
+import com.anrstudio.ads.admob.Admob
+import com.anrstudio.ads.ads.ANRAdSdk
+import com.anrstudio.ads.funtion.AdCallback
 import com.bumptech.glide.Glide
-import com.fireants.adsdk.admob.Admob
-import com.fireants.adsdk.ads.FireAntsAdSdk
-import com.fireants.adsdk.funtion.AdCallback
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ads.AdRemoteConfig
 import com.pegas.yuki.virtual.chat.ads.AdUnitConfig
@@ -136,7 +136,7 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
         if (AdRemoteConfig.inter_splash.isEnable && isNetwork(this@SplashActivity)) {
             Admob.getInstance().setOpenActivityAfterShowInterAds(false)
-            FireAntsAdSdk.getInstance().loadSplashInterstitialAds(
+            ANRAdSdk.getInstance().loadSplashInterstitialAds(
                 this,
                 AdRemoteConfig.inter_splash.id,
                 30000,
@@ -166,7 +166,7 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
     override fun onResume() {
         super.onResume()
-        FireAntsAdSdk.getInstance()
+        ANRAdSdk.getInstance()
             .onCheckShowSplashWhenFail(this@SplashActivity, object : AdCallback() {
                 override fun onNextAction() {
                     super.onNextAction()

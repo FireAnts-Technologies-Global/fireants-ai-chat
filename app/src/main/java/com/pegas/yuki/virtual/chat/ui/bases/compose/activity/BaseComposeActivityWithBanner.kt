@@ -7,7 +7,7 @@ import android.widget.FrameLayout
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
-import com.fireants.adsdk.billing.AppPurchase
+import com.anrstudio.ads.billing.AppPurchase
 import com.pegas.yuki.virtual.chat.ads.AdsManager
 import com.pegas.yuki.virtual.chat.ui.bases.BannerConfig
 

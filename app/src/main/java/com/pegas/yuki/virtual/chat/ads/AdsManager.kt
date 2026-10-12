@@ -13,16 +13,16 @@ import android.view.WindowManager
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
-import com.fireants.adsdk.ads.FireAntsAdSdk
-import com.fireants.adsdk.ads.wrapper.ApInterstitialAd
-import com.fireants.adsdk.ads.wrapper.ApNativeAd
-import com.fireants.adsdk.billing.AppPurchase
-import com.fireants.adsdk.dialog.PrepareLoadingAdsDialog
-import com.fireants.adsdk.funtion.AdCallback
-import com.fireants.adsdk.funtion.AdType
-import com.fireants.adsdk.funtion.RewardCallback
-import com.fireants.adsdk.util.AppConstant
-import com.fireants.adsdk.util.SharePreferenceUtils
+import com.anrstudio.ads.ads.ANRAdSdk
+import com.anrstudio.ads.ads.wrapper.ApInterstitialAd
+import com.anrstudio.ads.ads.wrapper.ApNativeAd
+import com.anrstudio.ads.billing.AppPurchase
+import com.anrstudio.ads.dialog.PrepareLoadingAdsDialog
+import com.anrstudio.ads.funtion.AdCallback
+import com.anrstudio.ads.funtion.AdType
+import com.anrstudio.ads.funtion.RewardCallback
+import com.anrstudio.ads.util.AppConstant
+import com.anrstudio.ads.util.SharePreferenceUtils
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdValue
 import com.google.android.gms.ads.AdView
@@ -90,7 +90,7 @@ object AdsManager {
             return
         }
         stateLiveData?.postValue(NativeAdLoadState.LOADING)
-        FireAntsAdSdk.getInstance()
+        ANRAdSdk.getInstance()
             .loadNativeAdResultCallback(activity, config.id, layoutRes, object : AdCallback() {
                 override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
                     super.onNativeAdLoaded(nativeAd)
@@ -136,7 +136,7 @@ object AdsManager {
           AdRemoteConfig.native_onboarding_page4
         loadNativeInternal(
             activity, config, layoutRes, nativeOnboarding4AdLive,
-            FireAntsAdSdk.getInstance()
+            ANRAdSdk.getInstance()
                 .shouldDisplayNativeOnboardingNormal2,
             nativeOnboarding4AdStateLive
         )
@@ -147,7 +147,7 @@ object AdsManager {
             AdRemoteConfig.native_onboarding_fullscreen12
         loadNativeInternal(
             activity, config, layoutRes, nativeOnboardingFullAfterPage1AdLive,
-            FireAntsAdSdk.getInstance().shouldDisplayNativeOnboardingFull1,
+            ANRAdSdk.getInstance().shouldDisplayNativeOnboardingFull1,
             nativeOnboardingFullAfterPage1AdStateLive
         )
     }
@@ -157,7 +157,7 @@ object AdsManager {
          AdRemoteConfig.native_onboarding_fullscreen23
         loadNativeInternal(
             activity, config, layoutRes, nativeOnboardingFullAfterPage3AdLive,
-            FireAntsAdSdk.getInstance().shouldDisplayNativeOnboardingFull2,
+            ANRAdSdk.getInstance().shouldDisplayNativeOnboardingFull2,
             nativeOnboardingFullAfterPage3AdStateLive
         )
     }
@@ -165,7 +165,7 @@ object AdsManager {
     fun loadNativeWelcome(activity: Activity, layoutRes: Int) {
         loadNativeInternal(
             activity, AdRemoteConfig.native_welcome_back, layoutRes, nativeWelcomeAdLive,
-            FireAntsAdSdk.getInstance()
+            ANRAdSdk.getInstance()
                 .shouldDisplayNativeWelcomeBack,
             nativeWelcomeAdStateLive
         )
@@ -175,14 +175,14 @@ object AdsManager {
         val config = AdRemoteConfig.inter_welcome_back
         if (!config.isEnable
             || AppPurchase.getInstance().isPurchased(context)
-            || (!ignoreLimit && !FireAntsAdSdk.getInstance()
+            || (!ignoreLimit && !ANRAdSdk.getInstance()
                 .shouldDisplayInterWelcomeBack)
         ) {
             interWelcomeBackAd = null
             return
         }
         interWelcomeBackAd =
-            FireAntsAdSdk.getInstance()
+            ANRAdSdk.getInstance()
                 .getInterstitialAds(context, config.id, object : AdCallback() {})
     }
 
@@ -190,10 +190,10 @@ object AdsManager {
         val interstitial = interWelcomeBackAd
         if (interstitial != null && interstitial.isReady && !AppPurchase.getInstance()
                 .isPurchased(context) && (ignoreLimit ||
-                    FireAntsAdSdk.getInstance()
+                    ANRAdSdk.getInstance()
                         .shouldDisplayInterWelcomeBack)
         ) {
-            FireAntsAdSdk.getInstance()
+            ANRAdSdk.getInstance()
                 .forceShowInterstitial(context, interstitial, object : AdCallback() {
                     override fun onNextAction() {
                         super.onNextAction()
@@ -209,7 +209,7 @@ object AdsManager {
         if (System.currentTimeMillis() - SharePreferenceUtils.getLastImpressionInterstitialTime(
                 context
             )
-            < FireAntsAdSdk.getInstance().adConfig.intervalInterstitialAd * 1000L
+            < ANRAdSdk.getInstance().adConfig.intervalInterstitialAd * 1000L
         ) {
             onAction()
             return
@@ -230,7 +230,7 @@ object AdsManager {
                     onAction()
                 }
             }
-            FireAntsAdSdk.getInstance()
+            ANRAdSdk.getInstance()
                 .forceShowInterstitial(
                     context,
                     readyAd,
@@ -273,7 +273,7 @@ object AdsManager {
         }
 
         handler.postDelayed(timeoutRunnable, 15_000)
-        FireAntsAdSdk.getInstance().getInterstitialAds(context, config.id, object : AdCallback() {
+        ANRAdSdk.getInstance().getInterstitialAds(context, config.id, object : AdCallback() {
             override fun onApInterstitialLoad(apInterstitialAd: ApInterstitialAd?) {
                 super.onApInterstitialLoad(apInterstitialAd)
                 interHomeAd = apInterstitialAd
@@ -283,7 +283,7 @@ object AdsManager {
                 } catch (_: Exception) {
                 }
                 if (apInterstitialAd != null && apInterstitialAd.isReady) {
-                    FireAntsAdSdk.getInstance()
+                    ANRAdSdk.getInstance()
                         .forceShowInterstitial(
                             context,
                             apInterstitialAd,
@@ -317,7 +317,7 @@ object AdsManager {
         if (System.currentTimeMillis() - SharePreferenceUtils.getLastImpressionInterstitialTime(
                 context
             )
-            < FireAntsAdSdk.getInstance().adConfig.intervalInterstitialAd * 1000L
+            < ANRAdSdk.getInstance().adConfig.intervalInterstitialAd * 1000L
         ) {
             onAction()
             return
@@ -338,7 +338,7 @@ object AdsManager {
                     onAction()
                 }
             }
-            FireAntsAdSdk.getInstance()
+            ANRAdSdk.getInstance()
                 .forceShowInterstitial(
                     context,
                     readyAd,
@@ -381,7 +381,7 @@ object AdsManager {
         }
 
         handler.postDelayed(timeoutRunnable, 15_000)
-        FireAntsAdSdk.getInstance().getInterstitialAds(context, config.id, object : AdCallback() {
+        ANRAdSdk.getInstance().getInterstitialAds(context, config.id, object : AdCallback() {
             override fun onApInterstitialLoad(apInterstitialAd: ApInterstitialAd?) {
                 super.onApInterstitialLoad(apInterstitialAd)
                 interBackAd = apInterstitialAd
@@ -391,7 +391,7 @@ object AdsManager {
                 } catch (_: Exception) {
                 }
                 if (apInterstitialAd != null && apInterstitialAd.isReady) {
-                    FireAntsAdSdk.getInstance()
+                    ANRAdSdk.getInstance()
                         .forceShowInterstitial(
                             context,
                             apInterstitialAd,
@@ -429,7 +429,7 @@ object AdsManager {
     ) {
         if (adUnitConfig.isEnable) {
             removeBannerView(activity, frAds)
-            if (isCollapse) FireAntsAdSdk.getInstance().loadCollapsibleBanner(
+            if (isCollapse) ANRAdSdk.getInstance().loadCollapsibleBanner(
                 activity,
                 adUnitConfig.id,
                 AppConstant.CollapsibleGravity.BOTTOM,
@@ -441,7 +441,7 @@ object AdsManager {
                             .d("Load banner on ${activity.javaClass.simpleName} failed by : ${i?.message}")
                     }
                 })
-            else FireAntsAdSdk.getInstance()
+            else ANRAdSdk.getInstance()
                 .loadBanner(activity, adUnitConfig.id, object : AdCallback() {
                     override fun onAdFailedToLoad(i: LoadAdError?) {
                         super.onAdFailedToLoad(i)
@@ -459,7 +459,7 @@ object AdsManager {
     @SuppressLint("InflateParams")
     private fun removeBannerView(activity: Activity, frAds: FrameLayout) {
         try {
-            val container = frAds.findViewById<FrameLayout>(com.fireants.adsdk.R.id.banner_container)
+            val container = frAds.findViewById<FrameLayout>(com.anrstudio.ads.R.id.banner_container)
             if (container != null) {
                 for (i in 0 until container.childCount) {
                     val view = container.getChildAt(i)
@@ -470,7 +470,7 @@ object AdsManager {
                 }
             }
             val shimmerFrameLayout = LayoutInflater.from(activity)
-                .inflate(com.fireants.adsdk.R.layout.layout_banner_control, null)
+                .inflate(com.anrstudio.ads.R.layout.layout_banner_control, null)
             frAds.removeAllViews()
             frAds.addView(shimmerFrameLayout)
         } catch (_: Exception) {
@@ -483,7 +483,7 @@ object AdsManager {
             listener.onLoadRewardFail()
             return
         }
-        FireAntsAdSdk.getInstance().initRewardAds(activity, config.id, object : AdCallback() {
+        ANRAdSdk.getInstance().initRewardAds(activity, config.id, object : AdCallback() {
             override fun onRewardAdLoaded(rewardedAd: RewardedAd) {
                 super.onRewardAdLoaded(rewardedAd)
                 rewardCheckinAd = rewardedAd
@@ -504,7 +504,7 @@ object AdsManager {
             return
         }
         var isEarned = false
-        FireAntsAdSdk.getInstance().showRewardAds(activity, rewardedAd, object : RewardCallback {
+        ANRAdSdk.getInstance().showRewardAds(activity, rewardedAd, object : RewardCallback {
             override fun onUserEarnedReward(var1: RewardItem?) {
                 isEarned = true
             }
@@ -551,7 +551,7 @@ object AdsManager {
             listener.onLoadRewardFail()
             return
         }
-        FireAntsAdSdk.getInstance().initRewardAds(activity, config.id, object : AdCallback() {
+        ANRAdSdk.getInstance().initRewardAds(activity, config.id, object : AdCallback() {
             override fun onRewardAdLoaded(rewardedAd: RewardedAd) {
                 super.onRewardAdLoaded(rewardedAd)
                 rewardAddcoinAd = rewardedAd
@@ -584,7 +584,7 @@ object AdsManager {
             )
         }
         var isEarned = false
-        FireAntsAdSdk.getInstance().showRewardAds(activity, rewardedAd, object : RewardCallback {
+        ANRAdSdk.getInstance().showRewardAds(activity, rewardedAd, object : RewardCallback {
             override fun onUserEarnedReward(var1: RewardItem?) {
                 isEarned = true
             }

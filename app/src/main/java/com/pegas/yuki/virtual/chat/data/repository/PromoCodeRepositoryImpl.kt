@@ -1,6 +1,6 @@
 package com.pegas.yuki.virtual.chat.data.repository
 
-import com.fireants.adsdk.billing.AppPurchase
+import com.anrstudio.ads.billing.AppPurchase
 import com.pegas.yuki.virtual.chat.data.auth.AuthInfoProvider
 import com.pegas.yuki.virtual.chat.data.network.model.base.requireData
 import com.pegas.yuki.virtual.chat.data.network.model.promo.RedeemPromoCodeRequestDto

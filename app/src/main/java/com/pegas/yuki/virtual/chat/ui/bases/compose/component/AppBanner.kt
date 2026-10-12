@@ -19,11 +19,11 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
+import com.anrstudio.ads.R
+import com.anrstudio.ads.ads.ANRAdSdk
 import com.facebook.shimmer.ShimmerFrameLayout
-import com.fireants.adsdk.R
-import com.fireants.adsdk.ads.FireAntsAdSdk
-import com.fireants.adsdk.billing.AppPurchase
-import com.fireants.adsdk.funtion.AdCallback
+import com.anrstudio.ads.billing.AppPurchase
+import com.anrstudio.ads.funtion.AdCallback
 import com.google.android.gms.ads.LoadAdError
 import kotlinx.coroutines.delay
 
@@ -136,7 +136,7 @@ fun BannerAdView(
         delay(200)
 
         try {
-            FireAntsAdSdk.getInstance().loadBannerFragment(
+            ANRAdSdk.getInstance().loadBannerFragment(
                 context,
                 adUnitId,
                 root,

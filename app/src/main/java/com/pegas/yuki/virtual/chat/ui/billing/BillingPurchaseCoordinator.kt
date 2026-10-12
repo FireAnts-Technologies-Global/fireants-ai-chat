@@ -1,7 +1,7 @@
 package com.pegas.yuki.virtual.chat.ui.billing
 
 import android.app.Activity
-import com.fireants.adsdk.billing.AppPurchase
+import com.anrstudio.ads.billing.AppPurchase
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.domain.model.billing.VipProduct
 import com.pegas.yuki.virtual.chat.domain.model.coins.CoinPackage

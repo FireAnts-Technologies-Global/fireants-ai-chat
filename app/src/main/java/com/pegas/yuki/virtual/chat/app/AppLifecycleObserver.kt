@@ -2,9 +2,9 @@ package com.pegas.yuki.virtual.chat.app
 
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import com.fireants.adsdk.admob.AppOpenManager
-import com.fireants.adsdk.ads.FireAntsAdSdk
-import com.fireants.adsdk.billing.AppPurchase
+import com.anrstudio.ads.admob.AppOpenManager
+import com.anrstudio.ads.ads.ANRAdSdk
+import com.anrstudio.ads.billing.AppPurchase
 import com.pegas.yuki.virtual.chat.ui.component.language.LanguageActivity
 import com.pegas.yuki.virtual.chat.ui.component.onboarding.OnBoardingActivity
 import com.pegas.yuki.virtual.chat.ui.component.splash.SplashActivity
@@ -27,7 +27,7 @@ class AppLifecycleObserver : DefaultLifecycleObserver {
                 clazz.name == currentActivity.javaClass.name
             } || !currentActivity.javaClass.name.startsWith("com.pegas.yuki.virtual.chat")
             if (!isDisable && ResumeAdsEntryRule.shouldShowWelcomeOnResume() && !AppOpenManager.getInstance().isInterstitialShowing && !AppPurchase.getInstance()
-                    .isPurchased(currentActivity.applicationContext) && FireAntsAdSdk.getInstance()
+                    .isPurchased(currentActivity.applicationContext) && ANRAdSdk.getInstance()
                     .shouldDisplayInterWelcomeBack
             ) {
                 Routes.startWelcomeActivity(currentActivity)

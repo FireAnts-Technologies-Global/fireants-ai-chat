@@ -1,9 +1,9 @@
 package com.pegas.yuki.virtual.chat.ui.component.language
 
 import com.anrstudio.ads.ads.wrapper.ApNativeAd
+import com.anrstudio.config.utils.setOnAdminAdToggleListener
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ads.AdsManager
-import com.pegas.yuki.virtual.chat.ads.AdsManager.loadNativeLanguageClick
 import com.pegas.yuki.virtual.chat.ads.RemoteConfigUtils
 import com.pegas.yuki.virtual.chat.ads.populateNativeAdView
 import com.pegas.yuki.virtual.chat.app.AppConstants
@@ -36,6 +36,9 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
         get() = intent.getBooleanExtra(AppConstants.KEY_SETTING, false)
     private var shouldDelayDoneButton = true
     private var selectedIso = LanguageData.defaultLanguage.iso
+    private var hasVisibleLanguageAd = false
+    private var isLanguageClickRequested = false
+    private var hasAppliedLanguageClickAd = false
 
     private val languageAdapter: LanguageAdapter by lazy {
         LanguageAdapter(
@@ -60,12 +63,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
         initLayout()
 
         mBinding.root.postDelayed({
-            if (!fromSetting) {
-                loadNativeLanguageClick(
-                    this,
-                    R.layout.layout_native_language_click
-                )
-            }
             initAds()
         }, 100L)
     }
@@ -121,36 +118,42 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
     }
 
     private fun listenLanguageAd() {
-        AdsManager.nativeLanguageClickAdLive.removeObservers(this)
-        AdsManager.nativeLanguageClickAdStateLive.removeObservers(this)
         AdsManager.nativeLanguageAdStateLive.observe(this) { state ->
-            renderLanguageAdState(state)
+            renderLanguageAdState(state, keepVisibleAd = isLanguageClickRequested)
         }
         AdsManager.nativeLanguageAdLive.observe(this) { ad ->
-            if (ad != null) showNativeLanguage(ad)
+            if (ad != null && !hasAppliedLanguageClickAd) showNativeLanguage(ad)
         }
     }
 
     private fun listenLanguageClickAd() {
-        AdsManager.nativeLanguageAdLive.removeObservers(this)
-        AdsManager.nativeLanguageAdStateLive.removeObservers(this)
+        isLanguageClickRequested = true
         AdsManager.nativeLanguageClickAdStateLive.removeObservers(this)
-        showLanguageAdLoading()
         AdsManager.nativeLanguageClickAdStateLive.observe(this) { state ->
-            renderLanguageAdState(state)
+            renderLanguageAdState(state, keepVisibleAd = true)
         }
         AdsManager.nativeLanguageClickAdLive.observe(this) { ad ->
-            if (ad != null) showNativeLanguage(ad)
+            if (ad != null) {
+                hasAppliedLanguageClickAd = true
+                showNativeLanguage(ad)
+            }
         }
     }
 
-    private fun renderLanguageAdState(state: AdsManager.NativeAdLoadState) {
+    private fun renderLanguageAdState(
+        state: AdsManager.NativeAdLoadState,
+        keepVisibleAd: Boolean,
+    ) {
         when (state) {
             AdsManager.NativeAdLoadState.IDLE,
-            AdsManager.NativeAdLoadState.LOADING -> showLanguageAdLoading()
+            AdsManager.NativeAdLoadState.LOADING -> {
+                if (!keepVisibleAd || !hasVisibleLanguageAd) showLanguageAdLoading()
+            }
 
             AdsManager.NativeAdLoadState.LOADED -> Unit
-            AdsManager.NativeAdLoadState.FAILED -> hideLanguageAd()
+            AdsManager.NativeAdLoadState.FAILED -> {
+                if (!keepVisibleAd || !hasVisibleLanguageAd) hideLanguageAd()
+            }
         }
     }
 
@@ -179,6 +182,7 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
         }
         mBinding.flAds.visibleView()
         mBinding.flAdContent.visibleView()
+        hasVisibleLanguageAd = true
         populateNativeAdView(
             this,
             ad,

@@ -68,7 +68,6 @@ class GlobalApp : AdsMultiDexApplication() {
         mANRAdSdkConfig.facebookClientToken =
             resources.getString(R.string.facebook_client_token)
         applyInterstitialInterval(RemoteConfigUtils.DEFAULT_INTER_INTERVAL_SECONDS)
-        mANRAdSdkConfig.idAdResume = ""
         ANRAdSdk.getInstance().init(this, mANRAdSdkConfig)
         Admob.getInstance().setDisableAdResumeWhenClickAds(true)
         Admob.getInstance().setOpenActivityAfterShowInterAds(true)

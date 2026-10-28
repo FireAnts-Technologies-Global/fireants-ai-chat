@@ -3,7 +3,6 @@ package com.pegas.yuki.virtual.chat.ui.component.splash
 import android.annotation.SuppressLint
 import android.os.CountDownTimer
 import androidx.activity.viewModels
-import com.anrstudio.ads.admob.Admob
 import com.anrstudio.ads.ads.ANRAdSdk
 import com.anrstudio.ads.funtion.AdCallback
 import com.bumptech.glide.Glide
@@ -12,6 +11,7 @@ import com.pegas.yuki.virtual.chat.ads.AdRemoteConfig
 import com.pegas.yuki.virtual.chat.ads.AdUnitConfig
 import com.pegas.yuki.virtual.chat.ads.AdsManager
 import com.pegas.yuki.virtual.chat.ads.AdsManager.loadNativeLanguage
+import com.pegas.yuki.virtual.chat.ads.AdsManager.loadNativeLanguageClick
 import com.pegas.yuki.virtual.chat.ads.RemoteConfigUtils
 import com.pegas.yuki.virtual.chat.ads.banner_splash
 import com.pegas.yuki.virtual.chat.ads.inter_splash
@@ -51,6 +51,7 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
         )
 
     private var getConfigSuccess = false
+    private var hasStartedSplashFlow = false
     private lateinit var consentHandler: ConsentHandler
 
     override fun getLayoutActivity() = R.layout.activity_splash
@@ -111,15 +112,16 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
 
             override fun onFinish() {
                 mBinding.progressSplash.progress = 100
-                if (!getConfigSuccess) {
-                    checkRemoteConfigResult()
-                }
+                checkRemoteConfigResult()
             }
         }.start()
     }
 
 
     private fun checkRemoteConfigResult() {
+        if (hasStartedSplashFlow) return
+        hasStartedSplashFlow = true
+
         (application as? GlobalApp)?.applyInterstitialInterval(RemoteConfigUtils.getInterInterval())
 
         if (AdRemoteConfig.banner_splash.isEnable) {
@@ -133,9 +135,9 @@ class SplashActivity : BaseActivityWithBanner<ActivitySplashBinding>(), RemoteCo
         }
         AdRemoteConfig.initialize(this, RemoteConfigUtils.getAdRemoteConfig())
         loadNativeLanguage(this,  R.layout.layout_native_language)
+        loadNativeLanguageClick(this, R.layout.layout_native_language_click)
 
         if (AdRemoteConfig.inter_splash.isEnable && isNetwork(this@SplashActivity)) {
-            Admob.getInstance().setOpenActivityAfterShowInterAds(false)
             ANRAdSdk.getInstance().loadSplashInterstitialAds(
                 this,
                 AdRemoteConfig.inter_splash.id,

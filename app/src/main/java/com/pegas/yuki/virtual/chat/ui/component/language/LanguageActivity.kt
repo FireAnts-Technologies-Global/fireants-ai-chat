@@ -1,13 +1,11 @@
 package com.pegas.yuki.virtual.chat.ui.component.language
 
 import com.anrstudio.ads.ads.wrapper.ApNativeAd
-import com.anrstudio.config.utils.setOnAdminAdToggleListener
 import com.pegas.yuki.virtual.chat.R
 import com.pegas.yuki.virtual.chat.ads.AdsManager
 import com.pegas.yuki.virtual.chat.ads.RemoteConfigUtils
 import com.pegas.yuki.virtual.chat.ads.populateNativeAdView
 import com.pegas.yuki.virtual.chat.app.AppConstants
-import com.pegas.yuki.virtual.chat.app.AppConstants.DEFAULT_TIME_DELAY_SHOW_LANGUAGE_DONE_BUTTON
 import com.pegas.yuki.virtual.chat.databinding.ActivityLanguageBinding
 import com.pegas.yuki.virtual.chat.ui.bases.BaseActivity
 import com.pegas.yuki.virtual.chat.ui.bases.NavigationBarConfig
@@ -22,8 +20,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
-    private var timeDelayDoneButton = DEFAULT_TIME_DELAY_SHOW_LANGUAGE_DONE_BUTTON
-
     override val navigationBarConfig: NavigationBarConfig
         get() = NavigationBarConfig(
             isVisible = RemoteConfigUtils.getOnShowNavigationButton(),
@@ -34,7 +30,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
 
     private val fromSetting
         get() = intent.getBooleanExtra(AppConstants.KEY_SETTING, false)
-    private var shouldDelayDoneButton = true
     private var selectedIso = LanguageData.defaultLanguage.iso
     private var hasVisibleLanguageAd = false
     private var isLanguageClickRequested = false
@@ -46,10 +41,10 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
                 if (!fromSetting) {
                     listenLanguageClickAd()
                 }
-                enableDoneButton()
                 selectedIso = it.iso
                 LanguageData.selectLanguage(it.iso)
                 resubmitLanguageData()
+                enableDoneButton()
             }
         )
     }
@@ -57,8 +52,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
     override fun initViews() {
         LanguageData.clearSelection()
         forceEnableShowAd()
-        shouldDelayDoneButton = RemoteConfigUtils.shouldDelayLanguageDoneButton()
-        timeDelayDoneButton = RemoteConfigUtils.getTimeDelayButtonDoneLanguage()
         initAdapter()
         initLayout()
 
@@ -94,14 +87,11 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
     }
 
     private fun initLayout() {
-        mBinding.tvDone.visibleView()
+        mBinding.tvDone.isEnabled = false
 
         if (fromSetting) {
-            mBinding.tvDone.isEnabled = true
-            timeDelayDoneButton = 0
             mBinding.imgBack.visibleView()
         } else {
-            mBinding.tvDone.isEnabled = false
             mBinding.imgBack.goneView()
         }
     }
@@ -192,15 +182,8 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
     }
 
     private fun enableDoneButton() {
-        if (mBinding.tvDone.isEnabled) return
-
-        if (shouldDelayDoneButton && timeDelayDoneButton > 0) {
-            mBinding.tvDone.postDelayed({
-                mBinding.tvDone.isEnabled = true
-            }, timeDelayDoneButton)
-        } else {
-            mBinding.tvDone.isEnabled = true
-        }
+        mBinding.tvDone.isEnabled = true
+        mBinding.tvDone.visibleView()
     }
 
     private fun resubmitLanguageData() {

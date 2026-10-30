@@ -37,8 +37,8 @@ android {
         applicationId "com.pegas.yuki.virtual.chat"
         minSdkVersion min_sdk_version
         targetSdk target_sdk_version
-        versionCode 107
-        versionName "1.0.7"
+        versionCode 108
+        versionName "1.0.8"
 
         def formattedDate = new Date().format('MM.dd.yyyy')
         archivesBaseName = "AI_Chat_Project_v${versionName}_v${versionCode}_${formattedDate}"
